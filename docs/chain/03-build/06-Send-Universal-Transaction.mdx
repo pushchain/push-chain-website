@@ -714,7 +714,7 @@ import \* as readline from 'node:readline/promises';
           setIsLoading(true);
           try {
             const res = await pushChainClient.universal.sendTransaction({
-              to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
+              to: '0x0000000000000000000000000000000000042101',
               value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
             });
             setTxnHash(res.hash);
