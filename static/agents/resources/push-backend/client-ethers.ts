@@ -33,7 +33,7 @@ async function main() {
   // ── Route 1: Push Chain target ────────────────────────────────────────────
   console.log('\n→ Route 1: Send 0.01 PC to Push Chain…');
   const tx1 = await client.universal.sendTransaction({
-    to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108', // replace with actual address
+    to: '0x0000000000000000000000000000000000042101', // replace with actual address
     value: PushChain.utils.helpers.parseUnits('0.01', 18),
   });
   console.log('  Tx hash:', tx1.hash);
