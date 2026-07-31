@@ -4,10 +4,15 @@
 // List of tweet URLs to fetch
 export const LFPushTweetsList: string[] = [
   // Jul 2026
+  'https://x.com/torettoj283/status/2082672823462416656?s=20',
+  'https://x.com/BlaqOnyemauche/status/2082524276201279684?s=20',
+  'https://x.com/mat_rash38998/status/2082511943227597245?s=20',
+  'https://x.com/0xhu7i/status/2082504074457411940?s=20',
+  // W3GF is a Web3/GameFi media account — kept under the media-account clause despite low likes
+  'https://x.com/Gamefi/status/2082284988763103595?s=20',
   'https://x.com/lordsgood/status/2082012315147542888?s=20',
   'https://x.com/0xKeng/status/2081802816612691984?s=20',
   'https://x.com/MATHEW_KINZY/status/2081777145672593745?s=20',
-  'https://x.com/Abba__80/status/2080359305656639952?s=20',
   'https://x.com/kefanss/status/2077768085155561513?s=20',
   'https://x.com/ZNSConnect/status/2077758128876048689?s=20',
   'https://x.com/sosogamex/status/2077635901669228994?s=20',
