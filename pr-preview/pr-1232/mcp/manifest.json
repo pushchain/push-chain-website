@@ -1,0 +1,742 @@
+{
+  "schemaVersion": "1.0.0",
+  "serverVersion": "1.0.0",
+  "generated": "2026-07-31T12:33:41.307Z",
+  "buildHash": "7000426795b1197996d1a01df0b342135e157a28e64991ca397a9228f2b6e13f",
+  "siteUrl": "https://pushchain.github.io",
+  "locale": "en",
+  "docsVersion": "current",
+  "docCount": 79,
+  "skippedCount": 0,
+  "indexBytes": 743198,
+  "sections": [
+    "build",
+    "chain",
+    "deep-dives",
+    "docs",
+    "node-and-system-tools",
+    "setup",
+    "tutorials",
+    "ui-kit"
+  ],
+  "pages": [
+    {
+      "id": "index",
+      "path": "/docs/",
+      "file": "docs/index.md",
+      "title": "Documentation Hub",
+      "section": "docs",
+      "lastUpdated": "2026-07-31T16:28:09+04:00"
+    },
+    {
+      "id": "chain",
+      "path": "/docs/chain/",
+      "file": "docs/chain.md",
+      "title": "Intro to Push Chain",
+      "section": "chain",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Introduction | Push Chain Docs"
+    },
+    {
+      "id": "chain-build",
+      "path": "/docs/chain/build/",
+      "file": "docs/chain-build.md",
+      "title": "Build Section",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Build Section | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-advanced",
+      "path": "/docs/chain/build/advanced/",
+      "file": "docs/chain-build-advanced.md",
+      "title": "Advanced Section",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Advanced Section | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-advanced-custom-universal-signer",
+      "path": "/docs/chain/build/advanced/custom-universal-signer/",
+      "file": "docs/chain-build-advanced-custom-universal-signer.md",
+      "title": "Custom Universal Signer",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Custom Universal Signer | Build | Advanced | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-advanced-upgrade-universal-account",
+      "path": "/docs/chain/build/advanced/upgrade-universal-account/",
+      "file": "docs/chain-build-advanced-upgrade-universal-account.md",
+      "title": "Upgrade Universal Account",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Upgrade Universal Account | Advanced | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-constants",
+      "path": "/docs/chain/build/constants/",
+      "file": "docs/chain-build-constants.md",
+      "title": "Constants Reference",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Constants Reference | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-helpers",
+      "path": "/docs/chain/build/contract-helpers/",
+      "file": "docs/chain-build-contract-helpers.md",
+      "title": "Contract Helpers",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Contract Helpers | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-initiated-examples",
+      "path": "/docs/chain/build/contract-initiated-examples/",
+      "file": "docs/chain-build-contract-initiated-examples.md",
+      "title": "Contract-Initiated Examples Section",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Contract-Initiated Examples Section | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-initiated-examples-advanced-patterns",
+      "path": "/docs/chain/build/contract-initiated-examples/advanced-patterns/",
+      "file": "docs/chain-build-contract-initiated-examples-advanced-patterns.md",
+      "title": "Advanced Patterns",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Advanced Patterns | Contract-Initiated Examples | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-initiated-examples-inbound-to-push-chain",
+      "path": "/docs/chain/build/contract-initiated-examples/inbound-to-push-chain/",
+      "file": "docs/chain-build-contract-initiated-examples-inbound-to-push-chain.md",
+      "title": "Inbound to Push Chain",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Inbound to Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-initiated-examples-outbound-from-push-chain",
+      "path": "/docs/chain/build/contract-initiated-examples/outbound-from-push-chain/",
+      "file": "docs/chain-build-contract-initiated-examples-outbound-from-push-chain.md",
+      "title": "Outbound from Push Chain",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Outbound from Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-initiated-examples-round-trip-auto-back-leg",
+      "path": "/docs/chain/build/contract-initiated-examples/round-trip-auto-back-leg/",
+      "file": "docs/chain-build-contract-initiated-examples-round-trip-auto-back-leg.md",
+      "title": "Round-Trip with Auto Back-Leg",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Round-Trip with Auto Back-Leg | Examples | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-contract-initiated-multichain-execution",
+      "path": "/docs/chain/build/contract-initiated-multichain-execution/",
+      "file": "docs/chain-build-contract-initiated-multichain-execution.md",
+      "title": "Contract-Initiated Multichain Execution",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Contract-Initiated Multichain Execution | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-create-universal-signer",
+      "path": "/docs/chain/build/create-universal-signer/",
+      "file": "docs/chain-build-create-universal-signer.md",
+      "title": "Create Universal Signer",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Create Universal Signer | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-initialize-evm-client",
+      "path": "/docs/chain/build/initialize-evm-client/",
+      "file": "docs/chain-build-initialize-evm-client.md",
+      "title": "Initialize EVM Client",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Initialize EVM Client | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-initialize-push-chain-client",
+      "path": "/docs/chain/build/initialize-push-chain-client/",
+      "file": "docs/chain-build-initialize-push-chain-client.md",
+      "title": "Initialize Push Chain Client",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Initialize Push Chain Client | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-reading-blockchain-state",
+      "path": "/docs/chain/build/reading-blockchain-state/",
+      "file": "docs/chain-build-reading-blockchain-state.md",
+      "title": "Reading Blockchain State",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Reading Blockchain State | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-recommended-practices",
+      "path": "/docs/chain/build/recommended-practices/",
+      "file": "docs/chain-build-recommended-practices.md",
+      "title": "Recommended Practices",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Recommended Practices | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-send-multichain-transactions",
+      "path": "/docs/chain/build/send-multichain-transactions/",
+      "file": "docs/chain-build-send-multichain-transactions.md",
+      "title": "Send Multichain Transactions",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Send Multichain Transactions | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-send-universal-transaction",
+      "path": "/docs/chain/build/send-universal-transaction/",
+      "file": "docs/chain-build-send-universal-transaction.md",
+      "title": "Send Universal Transaction",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Send Universal Transaction | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-sign-universal-message",
+      "path": "/docs/chain/build/sign-universal-message/",
+      "file": "docs/chain-build-sign-universal-message.md",
+      "title": "Sign Universal Message",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Sign Message | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-track-universal-transaction",
+      "path": "/docs/chain/build/track-universal-transaction/",
+      "file": "docs/chain-build-track-universal-transaction.md",
+      "title": "Track Universal Transaction",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Track Universal Transaction | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-understanding-universal-transactions",
+      "path": "/docs/chain/build/understanding-universal-transactions/",
+      "file": "docs/chain-build-understanding-universal-transactions.md",
+      "title": "Understanding Universal Transactions",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Understanding Universal Transactions | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-universal-transaction-scenarios",
+      "path": "/docs/chain/build/universal-transaction-scenarios/",
+      "file": "docs/chain-build-universal-transaction-scenarios.md",
+      "title": "Universal Transaction Scenarios",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Universal Transaction Scenarios | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-build-utility-functions",
+      "path": "/docs/chain/build/utility-functions/",
+      "file": "docs/chain-build-utility-functions.md",
+      "title": "Utility Functions",
+      "section": "build",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Utility Functions | Build | Push Chain Docs"
+    },
+    {
+      "id": "chain-changelog",
+      "path": "/docs/chain/changelog/",
+      "file": "docs/chain-changelog.md",
+      "title": "Changelog",
+      "section": "chain",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Changelog | Push Chain Docs"
+    },
+    {
+      "id": "chain-code-snippet",
+      "path": "/docs/chain/code-snippet/",
+      "file": "docs/chain-code-snippet.md",
+      "title": "Code Snippet Playground",
+      "section": "chain",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Interactive code playground for Push Chain docs"
+    },
+    {
+      "id": "chain-deep-dives",
+      "path": "/docs/chain/deep-dives/",
+      "file": "docs/chain-deep-dives.md",
+      "title": "Deep Dives Section",
+      "section": "deep-dives",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Deep Dives Section | Push Chain Docs"
+    },
+    {
+      "id": "chain-deep-dives-how-cea-works",
+      "path": "/docs/chain/deep-dives/how-cea-works/",
+      "file": "docs/chain-deep-dives-how-cea-works.md",
+      "title": "How Chain Executor Account (CEA) Works",
+      "section": "deep-dives",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "How Chain Executor Account (CEA) Works | Deep Dives | Push Chain Docs"
+    },
+    {
+      "id": "chain-deep-dives-how-uea-works",
+      "path": "/docs/chain/deep-dives/how-uea-works/",
+      "file": "docs/chain-deep-dives-how-uea-works.md",
+      "title": "How Universal Executor Account (UEA) Works",
+      "section": "deep-dives",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "How Universal Executor Account (UEA) Works | Deep Dives | Push Chain Docs"
+    },
+    {
+      "id": "chain-for-ai-agents",
+      "path": "/docs/chain/for-ai-agents/",
+      "file": "docs/chain-for-ai-agents.md",
+      "title": "For AI Agents & LLMs",
+      "section": "chain",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "For AI Agents & LLMs | Push Chain Docs"
+    },
+    {
+      "id": "chain-important-concepts",
+      "path": "/docs/chain/important-concepts/",
+      "file": "docs/chain-important-concepts.md",
+      "title": "Important Concepts",
+      "section": "chain",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Important Concepts | Push Chain Docs"
+    },
+    {
+      "id": "chain-node-and-system-tools",
+      "path": "/docs/chain/node-and-system-tools/",
+      "file": "docs/chain-node-and-system-tools.md",
+      "title": "Node & System Tools Section",
+      "section": "node-and-system-tools",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Node & System Tools Section | Push Chain Docs"
+    },
+    {
+      "id": "chain-node-and-system-tools-json-rpc-functions",
+      "path": "/docs/chain/node-and-system-tools/json-rpc-functions/",
+      "file": "docs/chain-node-and-system-tools-json-rpc-functions.md",
+      "title": "JSON-RPC Functions",
+      "section": "node-and-system-tools",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "JSON-RPC Functions | Deep Dives | Push Chain Docs"
+    },
+    {
+      "id": "chain-node-and-system-tools-localnet",
+      "path": "/docs/chain/node-and-system-tools/localnet/",
+      "file": "docs/chain-node-and-system-tools-localnet.md",
+      "title": "Running Localnet",
+      "section": "node-and-system-tools",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Localnet | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-node-and-system-tools-running-push-validator",
+      "path": "/docs/chain/node-and-system-tools/running-push-validator/",
+      "file": "docs/chain-node-and-system-tools-running-push-validator.md",
+      "title": "Running Push Validator",
+      "section": "node-and-system-tools",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Running Push Validators | Deep Dives | Push Chain Docs"
+    },
+    {
+      "id": "chain-quickstart",
+      "path": "/docs/chain/quickstart/",
+      "file": "docs/chain-quickstart.md",
+      "title": "Quickstart",
+      "section": "chain",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Quickstart | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup",
+      "path": "/docs/chain/setup/",
+      "file": "docs/chain-setup.md",
+      "title": "Setup Section",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Setup Section | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-chain-config",
+      "path": "/docs/chain/setup/chain-config/",
+      "file": "docs/chain-setup-chain-config.md",
+      "title": "Chain Configuration",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Chain Configuration | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-faucets",
+      "path": "/docs/chain/setup/faucets/",
+      "file": "docs/chain-setup-faucets.md",
+      "title": "Faucets",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Faucets | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-smart-contract-address-book",
+      "path": "/docs/chain/setup/smart-contract-address-book/",
+      "file": "docs/chain-setup-smart-contract-address-book.md",
+      "title": "Smart Contract Address Book",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Smart Contract Address Book | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-smart-contract-environment",
+      "path": "/docs/chain/setup/smart-contract-environment/",
+      "file": "docs/chain-setup-smart-contract-environment.md",
+      "title": "Smart Contract Environment Section",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Smart Contract Environment Section | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-smart-contract-environment-configure-foundry",
+      "path": "/docs/chain/setup/smart-contract-environment/configure-foundry/",
+      "file": "docs/chain-setup-smart-contract-environment-configure-foundry.md",
+      "title": "Configure Foundry",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Configure Foundry | Smart Contract Environment | Tooling | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-smart-contract-environment-configure-hardhat",
+      "path": "/docs/chain/setup/smart-contract-environment/configure-hardhat/",
+      "file": "docs/chain-setup-smart-contract-environment-configure-hardhat.md",
+      "title": "Configure Hardhat",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Configure Hardhat | Smart Contract Environment | Tooling | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-smart-contract-environment-configure-remix",
+      "path": "/docs/chain/setup/smart-contract-environment/configure-remix/",
+      "file": "docs/chain-setup-smart-contract-environment-configure-remix.md",
+      "title": "Remix IDE",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Remix IDE | Smart Contract Environment | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-tooling",
+      "path": "/docs/chain/setup/tooling/",
+      "file": "docs/chain-setup-tooling.md",
+      "title": "Tooling Section",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Tooling Section | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-tooling-block-explorer",
+      "path": "/docs/chain/setup/tooling/block-explorer/",
+      "file": "docs/chain-setup-tooling-block-explorer.md",
+      "title": "Block Explorer",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Block Explorer | Tooling | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-tooling-faucet",
+      "path": "/docs/chain/setup/tooling/faucet/",
+      "file": "docs/chain-setup-tooling-faucet.md",
+      "title": "Faucet",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Faucet | Tooling | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-setup-tooling-wallet-setup",
+      "path": "/docs/chain/setup/tooling/wallet-setup/",
+      "file": "docs/chain-setup-tooling-wallet-setup.md",
+      "title": "Wallet Setup",
+      "section": "setup",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Wallet Setup | Tooling | Setup | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials",
+      "path": "/docs/chain/tutorials/",
+      "file": "docs/chain-tutorials.md",
+      "title": "Tutorials Section",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Tutorials Section | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-basics",
+      "path": "/docs/chain/tutorials/basics/",
+      "file": "docs/chain-tutorials-basics.md",
+      "title": "Basics Section",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Basics Section | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-basics-tutorial-mint-erc-20-tokens",
+      "path": "/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/",
+      "file": "docs/chain-tutorials-basics-tutorial-mint-erc-20-tokens.md",
+      "title": "Mint Universal ERC-20 Tokens",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-basics-tutorial-simple-counter",
+      "path": "/docs/chain/tutorials/basics/tutorial-simple-counter/",
+      "file": "docs/chain-tutorials-basics-tutorial-simple-counter.md",
+      "title": "Build a Counter App",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Build a Counter App | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-basics-tutorial-universal-counter",
+      "path": "/docs/chain/tutorials/basics/tutorial-universal-counter/",
+      "file": "docs/chain-tutorials-basics-tutorial-universal-counter.md",
+      "title": "Build a Universal Counter App",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Build a Universal Counter App | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-integration-and-tooling",
+      "path": "/docs/chain/tutorials/integration-and-tooling/",
+      "file": "docs/chain-tutorials-integration-and-tooling.md",
+      "title": "Integration and Tooling Section",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Integration and Tooling Section | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-integration-and-tooling-tutorial-scaffoldeth2",
+      "path": "/docs/chain/tutorials/integration-and-tooling/tutorial-scaffoldeth2/",
+      "file": "docs/chain-tutorials-integration-and-tooling-tutorial-scaffoldeth2.md",
+      "title": "Setup Scaffold-ETH for Push",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "{Configure Scaffold‑ETH 2 for Push Chain: Deploy and Interact with a Contract | Tutorials | Push Chain Docs}"
+    },
+    {
+      "id": "chain-tutorials-power-features",
+      "path": "/docs/chain/tutorials/power-features/",
+      "file": "docs/chain-tutorials-power-features.md",
+      "title": "Power Features Section",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Power Features Section | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-power-features-tutorial-batch-transactions",
+      "path": "/docs/chain/tutorials/power-features/tutorial-batch-transactions/",
+      "file": "docs/chain-tutorials-power-features-tutorial-batch-transactions.md",
+      "title": "Batch Transactions (Multicall)",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Batch Transactions | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-power-features-tutorial-derive-chain-executor-account",
+      "path": "/docs/chain/tutorials/power-features/tutorial-derive-chain-executor-account/",
+      "file": "docs/chain-tutorials-power-features-tutorial-derive-chain-executor-account.md",
+      "title": "Derive Chain Executor Accounts (CEAs)",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Derive Chain Executor Accounts | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-power-features-tutorial-derive-universal-executor-account",
+      "path": "/docs/chain/tutorials/power-features/tutorial-derive-universal-executor-account/",
+      "file": "docs/chain-tutorials-power-features-tutorial-derive-universal-executor-account.md",
+      "title": "Derive Universal Executor Accounts (UEAs)",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Derive Universal Executor Accounts | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-power-features-tutorial-universal-cross-chain-counters",
+      "path": "/docs/chain/tutorials/power-features/tutorial-universal-cross-chain-counters/",
+      "file": "docs/chain-tutorials-power-features-tutorial-universal-cross-chain-counters.md",
+      "title": "Build Universal Cross-Chain Counters",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Build Universal Cross-Chain Counters | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-token-systems",
+      "path": "/docs/chain/tutorials/token-systems/",
+      "file": "docs/chain-tutorials-token-systems.md",
+      "title": "Token Systems Section",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Token Systems Section | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-tutorials-token-systems-tutorial-universal-airdrop",
+      "path": "/docs/chain/tutorials/token-systems/tutorial-universal-airdrop/",
+      "file": "docs/chain-tutorials-token-systems-tutorial-universal-airdrop.md",
+      "title": "Build a Universal Airdrop",
+      "section": "tutorials",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Build a Universal Airdrop | Tutorials | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit",
+      "path": "/docs/chain/ui-kit/",
+      "file": "docs/chain-ui-kit.md",
+      "title": "UI Kit Section",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "UI Kit Section | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-customizations",
+      "path": "/docs/chain/ui-kit/customizations/",
+      "file": "docs/chain-ui-kit-customizations.md",
+      "title": "Customizations Section",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Customizations Section | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-customizations-push-universal-account-button",
+      "path": "/docs/chain/ui-kit/customizations/push-universal-account-button/",
+      "file": "docs/chain-ui-kit-customizations-push-universal-account-button.md",
+      "title": "Push Universal Account Button",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Push Universal Account Button | Customizations | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-customizations-push-universal-wallet-provider",
+      "path": "/docs/chain/ui-kit/customizations/push-universal-wallet-provider/",
+      "file": "docs/chain-ui-kit-customizations-push-universal-wallet-provider.md",
+      "title": "Push Universal Wallet Provider",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "{Push Universal Wallet Provider | Customizations | UI Kit | Push Chain Docs}"
+    },
+    {
+      "id": "chain-ui-kit-customizations-theme-variables",
+      "path": "/docs/chain/ui-kit/customizations/theme-variables/",
+      "file": "docs/chain-ui-kit-customizations-theme-variables.md",
+      "title": "Theme Variables",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Theme Variables | Customizations | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-customizations-use-push-chain-client",
+      "path": "/docs/chain/ui-kit/customizations/use-push-chain-client/",
+      "file": "docs/chain-ui-kit-customizations-use-push-chain-client.md",
+      "title": "usePushChainClient",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "usePushChainClient | Customizations | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-customizations-use-push-chain",
+      "path": "/docs/chain/ui-kit/customizations/use-push-chain/",
+      "file": "docs/chain-ui-kit-customizations-use-push-chain.md",
+      "title": "usePushChain",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "usePushChain | Customizations | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-customizations-use-push-wallet-context",
+      "path": "/docs/chain/ui-kit/customizations/use-push-wallet-context/",
+      "file": "docs/chain-ui-kit-customizations-use-push-wallet-context.md",
+      "title": "usePushWalletContext",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "usePushWalletContext | Customizations | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-examples",
+      "path": "/docs/chain/ui-kit/examples/",
+      "file": "docs/chain-ui-kit-examples.md",
+      "title": "Examples Section",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Examples Section | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-examples-button-theme-overrides-example",
+      "path": "/docs/chain/ui-kit/examples/button-theme-overrides-example/",
+      "file": "docs/chain-ui-kit-examples-button-theme-overrides-example.md",
+      "title": "Button Theme Overrides Example",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Button Theme Overrides Example | Examples | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-examples-multiple-wallet-example",
+      "path": "/docs/chain/ui-kit/examples/multiple-wallet-example/",
+      "file": "docs/chain-ui-kit-examples-multiple-wallet-example.md",
+      "title": "Multiple Wallet Example",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Multiple Wallets Example | Examples | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-examples-send-transaction-example",
+      "path": "/docs/chain/ui-kit/examples/send-transaction-example/",
+      "file": "docs/chain-ui-kit-examples-send-transaction-example.md",
+      "title": "Send Transaction Example",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Send Transaction Example | Examples | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-examples-single-wallet-example",
+      "path": "/docs/chain/ui-kit/examples/single-wallet-example/",
+      "file": "docs/chain-ui-kit-examples-single-wallet-example.md",
+      "title": "Single Wallet Example",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Single Wallets Example | Examples | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-examples-theme-overrides-example",
+      "path": "/docs/chain/ui-kit/examples/theme-overrides-example/",
+      "file": "docs/chain-ui-kit-examples-theme-overrides-example.md",
+      "title": "Theme Overrides Example",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "Theme Overrides Example | Examples | UI Kit | Push Chain Docs"
+    },
+    {
+      "id": "chain-ui-kit-integrate-push-universal-wallet",
+      "path": "/docs/chain/ui-kit/integrate-push-universal-wallet/",
+      "file": "docs/chain-ui-kit-integrate-push-universal-wallet.md",
+      "title": "Integrate Push Universal Wallet",
+      "section": "ui-kit",
+      "lastUpdated": "2026-07-31T16:28:09+04:00",
+      "description": "{Integrate Push Universal Wallet | Customizations | UI Kit | Push Chain Docs}"
+    }
+  ],
+  "agentResources": {
+    "capabilities": "agents/capabilities.json",
+    "errors": "agents/errors.json",
+    "contract-addresses": "agents/contract-addresses.json",
+    "supported-chains": "agents/supported-chains.json",
+    "sdk-capabilities": "agents/sdk-capabilities.json",
+    "changelog": "agents/changelog.json"
+  }
+}

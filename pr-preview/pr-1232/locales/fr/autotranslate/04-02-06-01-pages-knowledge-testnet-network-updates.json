@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Mises à jour du réseau",
+          "description": "Mises à jour en temps réel de l'état du réseau pour Push Chain. Restez informé des pannes, de la maintenance et des problèmes résolus.",
+          "og-title": "Mises à jour du réseau Push Chain - Statut du réseau",
+          "og-description": "Suivez les mises à jour du réseau <Blockchain> Push Chain, les fenêtres de maintenance et les mises à jour de service. Obtenez des informations d'état en temps réel.",
+          "twitter-title": "Mises à jour du réseau Push Chain",
+          "twitter-description": "Mises à jour en direct sur l'état du réseau Push Chain et la maintenance."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Base de connaissances",
+            "donut-testnet": "Donut Testnet",
+            "report": "Mises à jour du réseau"
+          },
+          "blocks": {
+            "title": "Mises à jour du réseau",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "contenu"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "Mise à niveau de la Blockchain - Rééquilibrage des Tokens - 10 Milliards de PC Tokens",
+                "items": {
+                  "status-heading": "## Statut",
+                  "status-timeline": "25 février 2026 - Débuté<br />25 février 2026 - ✅ Terminé",
+                  "overview-heading": "## Aperçu",
+                  "overview-text": "Push Chain a exécuté une proposition de rééquilibrage de Token pour réduire l'offre totale de $PC de plus de 75T de tokens à environ 10 milliards de tokens. Cette mise à niveau corrige une dette technique des premiers jours du testnet et prépare la chaine pour un environnement de type mainnet.",
+                  "why-heading": "### Pourquoi cela a-t-il été fait ?",
+                  "why-text": "Au début de Push Chain testnet, il n'y avait pas de processus de burn et mint pour les Token PC. Cela a entraîné des calculs de prix extrêmement bas pour les transactions universal et a permis à une poignée de détenteurs de Token d'accumuler d'énormes quantités de Token (allant jusqu'à des billions). Cela a créé un déséquilibre dans l'économie du Token qui devait être corrigé avant le lancement du mainnet.",
+                  "why-necessary": "Le rééquilibrage était nécessaire pour :",
+                  "reason-mainnet": "- Préparer l'environnement de type mainnet",
+                  "reason-season3": "- Permettre la distribution des récompenses de la Saison 3",
+                  "reason-tech-debt": "- Supprimer la dette technique issue des premiers <testnet>",
+                  "reason-token-economy": "- Établir une économie de Token juste et durable",
+                  "what-changed-heading": "### Qu'est-ce qui a changé ?",
+                  "what-changed-text": "La proposition a affecté les 1 950 meilleurs <wallet> sur un total de 1 178 000 adresses. Les <wallet> détenant 1 100 <token> ou plus (y compris ceux avec des trillions) ont été rééquilibrés pour détenir entre 1 100 et 2 000 <token>.",
+                  "key-changes-heading": "**Principaux changements :**",
+                  "change-supply": "- L’offre totale réduite de 75T+ à environ 10B PC tokens",
+                  "change-wallets": "- Les 1 950 premiers portefeuilles rééquilibrés dans la fourchette de 1 100 à 2 000 PC token",
+                  "change-percentage": "- Affecte seulement 0,17 % des adresses totales (1 950 sur 1,178 million)",
+                  "change-unaffected": "- 99.83 % des utilisateurs ne sont pas concernés",
+                  "why-not-informed-heading": "### Pourquoi les utilisateurs n'ont-ils pas été informés à l'avance ?",
+                  "why-not-informed-text": "Les utilisateurs n'ont pas été prévenus à l'avance pour empêcher les acteurs malveillants de redistribuer les <token> vers d'autres <wallet> avant le rééquilibrage. Cette mesure de sécurité a garanti l'intégrité du processus de rééquilibrage et a empêché la manipulation du système.",
+                  "validator-period": "La période de proposition des validateurs du testnet est actuellement fixée à 5 minutes afin d'éliminer les cas limites comme celui-ci avant la mise en œuvre complète de la propriété décentralisée des validateurs.",
+                  "why-52t-heading": "### Pourquoi vois-je encore une offre de 52T ?",
+                  "why-52t-text": "Le rééquilibrage est une approche en deux phases. Les <token> sont maintenant collectés dans un portefeuille contrôlé par l'équipe et seront bientôt brûlés.",
+                  "how-affect-heading": "### Comment cela m'affecte-t-il ?",
+                  "affect-majority": "**Pour 99,83% des utilisateurs :** Ce changement ne vous affecte pas. Le solde de votre <wallet> reste inchangé.",
+                  "affect-top-wallets": "**Pour les wallets concernés (les 1 950 premiers) :** Si votre wallet détenait plus de 1 100 Token PC (ou des trillions), votre solde a été rééquilibré pour se situer entre 1 100 et 2 000 Token PC.",
+                  "need-help-heading": "**Besoin d'aide ?**",
+                  "need-help-text": "Si vous pensez être affecté par ce rééquilibrage et avez des questions ou des préoccupations, n'hésitez pas à contacter l'équipe Push Chain sur Discord pour obtenir de l'aide."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
