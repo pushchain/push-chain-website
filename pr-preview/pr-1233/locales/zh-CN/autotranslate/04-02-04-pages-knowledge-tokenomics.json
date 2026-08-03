@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "use-cases": "### 可以在 Push Chain 上构建什么？\n\nPush Chain 带来无缝的互操作性，并统一了所有 L1、L2 和 L3，因此有望成为创新和互操作的游乐场。您可以构建现有的 web3 用例，例如：\n\n![Push Chain 的主要用例](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\n或者您可以改进 web3 并创造创新：\n\n![Push Chain 的消费者用例](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\n或者您可以查看一些流行的 app 示例，并从中获得灵感：\n\n![Push Chain 上流行的 app 示例](/assets/website/chain/knowledge/tokenomics/popularapps.webp)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
