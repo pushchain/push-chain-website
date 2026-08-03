@@ -367,6 +367,87 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
 
 </Details>
 
+<Details summary="Move a PC20 Token to Push Chain (wrapper burn)" className="alert alert--live-play">
+
+Bring a [PC20](/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) token home. The wrapper on Sepolia is burned and the canonical Push-native token is unlocked to your UEA. Unlike an ERC-20 bridge, **no approval transaction is sent** — the gateway's PC20Factory burns via `burnFrom`.
+
+:::note Getting the test token
+
+These examples use `rain`, a test PC20 on Donut Testnet at `0x14693f665cE282A451ba9a86F2EC04B43F931145`. It has a public `mint(address,uint256)`, so you can mint yourself as much as you need on Push Chain.
+
+The **Sepolia wrapper** (`0x81E05001A1f3fB574E18c1B0b2596163c68144ae`) is a different matter — only the gateway can mint it, and it only comes into existence when a PC20 is exported. So to run this example, first mint `rain` on Push and run the [Route 2 export](#route-2--execute-on-external-chain) with `TARGET` set to **your own address**. That delivers the wrapper to you; then come back here to burn it.
+
+:::
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route1_pc20_import
+
+    // Route 1: burn a PC20 wrapper on Sepolia → unlock the canonical
+    // Push-native PC20 to your UEA on Push Chain.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // The PC20 wrapper deployed on Ethereum Sepolia.
+    const PC20_WRAPPER_SEPOLIA = '0x81E05001A1f3fB574E18c1B0b2596163c68144ae';
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      // Resolve the wrapper so we know the canonical token and its decimals.
+      const token = await PushChain.utils.tokens.getPC20Address(PC20_WRAPPER_SEPOLIA, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('🪙 Canonical PC20 on Push Chain:', token.address, '(' + token.symbol + ')');
+
+      await rl.question(':::prompt:::Fund the following, then press Enter:\\\\n  • Send at least 0.005 Sepolia ETH to your UOA: ' + wallet.address + ' (gas to sign).\\\\n  • Send at least 1 ' + token.symbol + ' wrapper to the same UOA at ' + PC20_WRAPPER_SEPOLIA + ' on Sepolia (this is what gets burned).\\\\n  • Send at least 1 PC to your UEA: ' + client.universal.account + ' on Push Chain (pays the inbound execution gas — a wrapper burn has no native funds leg to fee-lock against).\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      try {
+        const tx = await client.universal.sendTransaction({
+          to: client.universal.account, // unlock to self on Push Chain
+          funds: {
+            amount: PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals }),
+            // 'chain' is where the token IS — the wrapper's chain, not the destination.
+            token: {
+              chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+              address: PC20_WRAPPER_SEPOLIA,
+            },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+
+        console.log('✅ Push Chain tx hash:', tx.hash);
+        await tx.wait();
+        console.log('🎉 Wrapper burned — canonical PC20 unlocked to', client.universal.account);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
 
 ## Route 2 → Execute on External Chain
 
@@ -811,6 +892,88 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
         console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
         console.log('🌐 Solana tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<Details summary="Export a PC20 Token to an External Chain" className="alert alert--live-play">
+
+Send a Push-native [PC20](/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) outward. The canonical token is approved and locked into VaultPC20, and the wrapper is minted on the destination chain. If the token has never been exported to that chain, the wrapper is **deployed as part of this transaction** and its address is predicted before anything is locked.
+
+This is the example to run first — the test token's `mint(address,uint256)` is public on Push Chain, so you can self-serve the `rain` you need here. Set `TARGET` to your own address and this also delivers the Sepolia wrapper that the [Route 1](#route-1--execute-on-push-chain) and [Route 3](#route-3--execute-on-push-chain-from-cea) PC20 examples burn.
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route2_pc20_export
+
+    // Route 2: export a Push-native PC20 → mint/deliver its wrapper on Sepolia.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // The canonical Push-native PC20 on Donut Testnet.
+    const PUSH_PC20 = '0x14693f665cE282A451ba9a86F2EC04B43F931145';
+    const TARGET = '0x1234567890123456789012345678901234567890';
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      const token = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('🪙 Exporting', token.symbol, '— known deployments:');
+      for (const entry of token.registry) {
+        console.log('   -', entry.chainName, '→', entry.address);
+      }
+
+      await rl.question(':::prompt:::Fund the following, then press Enter:\\\\n  • Send at least 0.01 Sepolia ETH to your UOA: ' + wallet.address + ' (gas to sign — the export fee-lock needs more than a plain call).\\\\n  • Send at least 1 PC and 1 ' + token.symbol + ' to your UEA: ' + client.universal.account + ' on Push Chain (the PC20 is what gets locked and exported).\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      try {
+        const tx = await client.universal.sendTransaction({
+          to: {
+            address: TARGET,
+            chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // destination
+          },
+          funds: {
+            amount: PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals }),
+            // 'chain' is where the token IS — Push Chain, since this is an export.
+            token: {
+              chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+              address: PUSH_PC20,
+            },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+
+        console.log('✅ Push Chain tx hash:', tx.hash);
+        const receipt = await tx.wait();
+        console.log('🌐 External tx:', receipt.externalTxHash);
+        console.log('📦 Wrapper on Sepolia:', receipt.externalAssetAddr);
         console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
@@ -1301,6 +1464,90 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
         const receipt = await tx.wait();
         console.log('🌐 External TX Hash (Solana):', receipt.externalTxHash);
         console.log('🔍 Explorer:', receipt.externalExplorerUrl);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<Details summary="Bring a PC20 Back from your CEA" className="alert alert--live-play">
+
+Settle a [PC20](/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) wrapper held by your CEA on an external chain. The CEA burns its wrapper balance and the canonical Push-native token is unlocked to your UEA.
+
+As with [Route 1](#route-1--execute-on-push-chain), you need the Sepolia wrapper before you can burn it — run the Route 2 export to your own address first.
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route3_pc20_cea_burn
+
+    // Route 3: burn a PC20 wrapper held by your CEA on Sepolia → unlock the
+    // canonical Push-native token to your UEA on Push Chain.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // The PC20 wrapper deployed on Ethereum Sepolia.
+    const PC20_WRAPPER_SEPOLIA = '0x81E05001A1f3fB574E18c1B0b2596163c68144ae';
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      // Derive your CEA on Sepolia — this is the account that must hold the wrapper.
+      const uoa = PushChain.utils.account.toUniversal(wallet.address, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+      });
+      const sepoliaCEA = await PushChain.utils.account.deriveExecutorAccount(uoa, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+        skipNetworkCheck: true,
+      });
+      console.log('📍 CEA on Sepolia:', sepoliaCEA.address);
+
+      const token = await PushChain.utils.tokens.getPC20Address(PC20_WRAPPER_SEPOLIA, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      await rl.question(':::prompt:::Fund the following, then press Enter:\\\\n  • Send at least 0.01 Sepolia ETH to your UOA: ' + wallet.address + ' (powers the UEA for the inbound on Push Chain).\\\\n  • Send at least 1 ' + token.symbol + ' wrapper to your CEA on Sepolia: ' + sepoliaCEA.address + ' (this is what gets burned).\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      try {
+        const tx = await client.universal.sendTransaction({
+          from: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, // burn from the CEA
+          to: client.universal.account, // unlock back to self
+          funds: {
+            amount: PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals }),
+            token: {
+              chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+              address: PC20_WRAPPER_SEPOLIA,
+            },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+
+        console.log('✅ Push Chain TX Hash:', tx.hash);
+        const receipt = await tx.wait();
+        console.log('🌐 External TX Hash:', receipt.externalTxHash);
+        console.log('🎉', token.symbol, 'unlocked to', client.universal.account);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
       }

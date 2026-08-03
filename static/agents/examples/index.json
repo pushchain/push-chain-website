@@ -15,7 +15,9 @@
         "PushChain.utils.signer.toUniversal",
         "PushChain.initialize"
       ],
-      "chains_involved": ["eip155:11155111"],
+      "chains_involved": [
+        "eip155:11155111"
+      ],
       "prerequisite_examples": []
     },
     {
@@ -27,7 +29,9 @@
         "PushChain.utils.signer.toUniversalFromKeypair",
         "PushChain.initialize"
       ],
-      "chains_involved": ["solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"],
+      "chains_involved": [
+        "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
+      ],
       "prerequisite_examples": []
     },
     {
@@ -35,18 +39,31 @@
       "name": "Send Transaction on Push Chain",
       "file": "send-transaction-push-chain.md",
       "description": "Minimal example sending native value on Push Chain (Route 1)",
-      "sdk_methods_used": ["pushChainClient.universal.sendTransaction"],
-      "chains_involved": ["eip155:42101"],
-      "prerequisite_examples": ["initialize-client-ethers"]
+      "sdk_methods_used": [
+        "pushChainClient.universal.sendTransaction"
+      ],
+      "chains_involved": [
+        "eip155:42101"
+      ],
+      "prerequisite_examples": [
+        "initialize-client-ethers"
+      ]
     },
     {
       "id": "send-transaction-external-chain",
       "name": "Send Transaction to External Chain",
       "file": "send-transaction-external-chain.md",
       "description": "Minimal example sending transaction to external chain (Route 2) using {address, chain} target",
-      "sdk_methods_used": ["pushChainClient.universal.sendTransaction"],
-      "chains_involved": ["eip155:11155111", "eip155:42101"],
-      "prerequisite_examples": ["initialize-client-ethers"]
+      "sdk_methods_used": [
+        "pushChainClient.universal.sendTransaction"
+      ],
+      "chains_involved": [
+        "eip155:11155111",
+        "eip155:42101"
+      ],
+      "prerequisite_examples": [
+        "initialize-client-ethers"
+      ]
     },
     {
       "id": "track-transaction",
@@ -59,8 +76,12 @@
         "PushChain.utils.helpers.parseUnits",
         "pushChainClient.universal.sendTransaction"
       ],
-      "chains_involved": ["eip155:42101"],
-      "prerequisite_examples": ["send-transaction-push-chain"],
+      "chains_involved": [
+        "eip155:42101"
+      ],
+      "prerequisite_examples": [
+        "send-transaction-push-chain"
+      ],
       "status": "inferred"
     },
     {
@@ -81,9 +102,15 @@
       "name": "Sign Universal Message",
       "file": "sign-message.md",
       "description": "Minimal example using pushChainClient.universal.signMessage",
-      "sdk_methods_used": ["pushChainClient.universal.signMessage"],
-      "chains_involved": ["eip155:42101"],
-      "prerequisite_examples": ["initialize-client-ethers"]
+      "sdk_methods_used": [
+        "pushChainClient.universal.signMessage"
+      ],
+      "chains_involved": [
+        "eip155:42101"
+      ],
+      "prerequisite_examples": [
+        "initialize-client-ethers"
+      ]
     },
     {
       "id": "tutorial-simple-counter",
@@ -137,7 +164,9 @@
       "name": "Tutorial: Derive Universal Executor Account (UEA)",
       "file": "tutorial-derive-uea.md",
       "description": "Programmatically derive the UEA address for any wallet without deploying it first.",
-      "sdk_methods_used": ["PushChain.utils.account.toUniversal"],
+      "sdk_methods_used": [
+        "PushChain.utils.account.toUniversal"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "type": "tutorial",
@@ -162,7 +191,9 @@
       "name": "Create Universal Signer",
       "file": "convert-viem-to-universal-signer.md",
       "description": "Code example: Create Universal Signer — https://push.org/docs/chain/build/create-universal-signer/",
-      "sdk_methods_used": ["PushChain.utils.signer.toUniversal"],
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/create-universal-signer/"
@@ -198,7 +229,9 @@
       "name": "Read-only Mode",
       "file": "initialize-client-custom-signer.md",
       "description": "Code example: Read-only Mode — https://push.org/docs/chain/build/initialize-push-chain-client/",
-      "sdk_methods_used": ["PushChain.initialize"],
+      "sdk_methods_used": [
+        "PushChain.initialize"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/initialize-push-chain-client/"
@@ -491,7 +524,9 @@
       "name": "Parse Units",
       "file": "utility-parse-units.md",
       "description": "Code example: Parse Units — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": ["PushChain.utils.helpers.parseUnits"],
+      "sdk_methods_used": [
+        "PushChain.utils.helpers.parseUnits"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -501,7 +536,9 @@
       "name": "Format Units",
       "file": "utility-format-units.md",
       "description": "Code example: Format Units — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": ["PushChain.utils.helpers.formatUnits"],
+      "sdk_methods_used": [
+        "PushChain.utils.helpers.formatUnits"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -561,7 +598,9 @@
       "name": "Convert to Universal Account",
       "file": "utility-account-to-universal.md",
       "description": "Code example: Convert to Universal Account — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": ["PushChain.utils.account.toUniversal"],
+      "sdk_methods_used": [
+        "PushChain.utils.account.toUniversal"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -571,7 +610,9 @@
       "name": "Convert to Chain-Agnostic Address",
       "file": "utility-account-to-chain-agnostic.md",
       "description": "Code example: Convert to Chain-Agnostic Address — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": ["PushChain.utils.account.toChainAgnostic"],
+      "sdk_methods_used": [
+        "PushChain.utils.account.toChainAgnostic"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -604,7 +645,9 @@
       "name": "Resolve Controller Account",
       "file": "utility-resolve-controller-account.md",
       "description": "Code example: Resolve Controller Account — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": ["PushChain.utils.account.resolveControllerAccount"],
+      "sdk_methods_used": [
+        "PushChain.utils.account.resolveControllerAccount"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -757,6 +800,30 @@
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/advanced/upgrade-universal-account/"
+    },
+    {
+      "id": "utility-encode-tx-data-solana",
+      "name": "Encode Transaction Data",
+      "file": "utility-encode-tx-data-solana.md",
+      "description": "Code example: Encode Transaction Data — https://push.org/docs/chain/build/utility-functions/",
+      "sdk_methods_used": [
+        "PushChain.utils.helpers.encodeTxData"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/utility-functions/"
+    },
+    {
+      "id": "utility-get-pc20-address",
+      "name": "Get PC20 Address",
+      "file": "utility-get-pc20-address.md",
+      "description": "Code example: Get PC20 Address — https://push.org/docs/chain/build/utility-functions/",
+      "sdk_methods_used": [
+        "PushChain.utils.tokens.getPC20Address"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/utility-functions/"
     }
   ]
 }
