@@ -2,7 +2,7 @@
 title: "Initialize Push Chain Client"
 url: "https://pushchain.github.io/docs/chain/build/initialize-push-chain-client/"
 section: "build"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Initialize Push Chain Client | Build | Push Chain Docs"
 ---
 

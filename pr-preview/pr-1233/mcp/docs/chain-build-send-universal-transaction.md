@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -439,41 +439,19 @@ See [Universal Transaction Scenarios](/push-chain-website/pr-preview/pr-1233/doc
 -   **First export predicts the wrapper address.** Exporting a PC20 to a chain that has never seen it deploys the wrapper as part of the flow. On Solana, delivery falls back to the sender's CEA associated token account when the recipient has none — an ATA cannot exist before its mint does.
 -   **Funds plus a `data` payload transfer first, then call.** Tokens are transferred to `execute.to` and the call runs afterwards. No allowance is granted to the target, so calldata that uses `transferFrom` will revert. Use `transfer`\-style calldata, or have the target pull from a balance it already holds.
 
-PC20 Errors
-
-Every PC20 failure throws a subclass of `PC20Error`, exported from `@pushchain/core`. Each carries a stable `code`, plus `chain`, `address`, `expectedChain` (where relevant) and a `hint` describing the remediation.
+Every PC20 failure throws a subclass of `PC20Error`, exported from `@pushchain/core`. Each carries a stable `code` plus `chain`, `address` and a `hint` describing the remediation, so catching the base class is usually enough:
 
 ```typescript
-import { PC20Error, PC20TokenChainMismatchError } from '@pushchain/core';
+import { PC20Error } from '@pushchain/core';
 
 try {
   await pushChainClient.universal.sendTransaction({ /* … */ });
 } catch (err) {
-  if (err instanceof PC20TokenChainMismatchError) {
-    console.error(err.code, err.chain, err.expectedChain, err.hint);
-  } else if (err instanceof PC20Error) {
-    console.error(err.code, err.hint);
+  if (err instanceof PC20Error) {
+    console.error(err.code, err.hint); // e.g. 'PC20_TOKEN_CHAIN_MISMATCH'
   }
 }
 ```
-
-| **Class** | **`code`** | **Thrown when** |
-| --- | --- | --- |
-| `PC20Error` | — | Base class. Catch this to handle every PC20 failure. |
-| `InvalidPC20AddressError` | `PC20_INVALID_ADDRESS` | The address is malformed for its chain. Thrown before any network call. |
-| `PC20TokenChainMismatchError` | `PC20_TOKEN_CHAIN_MISMATCH` | `funds.token.chain` is not where the funds actually are. |
-| `PC20WrapperNotRegisteredError` | `PC20_WRAPPER_NOT_REGISTERED` | UniversalCore has no source mapping for this address on this chain. |
-| `PC20RegistryMismatchError` | `PC20_REGISTRY_MISMATCH` | Forward and reverse registry lookups disagree. A registry inconsistency — do not retry blindly. |
-| `PC20FactoryMismatchError` | `PC20_FACTORY_MISMATCH` | The live gateway's `pc20Factory` differs from UniversalCore's. The deployment is misconfigured; report it. |
-| `InvalidPC20MetadataError` | `PC20_INVALID_METADATA` | The token does not implement `pc20Metadata()`, or the metadata fails validation. This is what a synthetic PRC20 such as `pETH` or `USDC.eth` raises — move those with the `MoveableToken` API instead. |
-| `PC20ExpectedButPRC20Error` | `PC20_EXPECTED_BUT_PRC20` | The stricter variant of the above, raised when the token positively identifies itself as a synthetic PRC20 by exposing `CHAIN_NAMESPACE()`. Catch `InvalidPC20MetadataError` if you want to cover both. |
-| `PC20AmbiguousAddressError` | `PC20_AMBIGUOUS_ADDRESS` | The address is registered on several chains with different Push sources and no `chain` was given. Carries `candidates`. |
-| `UnsupportedPC20DestinationError` | `PC20_UNSUPPORTED_DESTINATION` | No PC20 factory is registered for the destination chain namespace. |
-| `InsufficientPC20BalanceError` | `PC20_INSUFFICIENT_BALANCE` | The wrapper (inbound) or Push source (export) balance is short. Carries `required` and `available`. |
-| `PC20UnknownChainNamespaceError` | `PC20_UNKNOWN_CHAIN_NAMESPACE` | A chain namespace could not be mapped in either direction. |
-| `PC20WrapperPredictionUnavailableError` | `PC20_WRAPPER_PREDICTION_UNAVAILABLE` | A first export's destination wrapper address could not be predicted. Thrown **before** approval, so nothing is locked. |
-| `PC20ExportRevertedError` | `PC20_EXPORT_REVERTED` | The export reverted after the source token was locked. Carries `outboundTxId`, `lockedAmount` and `revertRecipient`; funds return to the revert recipient on Push Chain. |
-| `PC20UnsafeEmptyPayloadError` | `PC20_UNSAFE_EMPTY_PAYLOAD` | A wrapper burn was about to be submitted with no Push-side forwarding payload. The SDK fails closed rather than risk locking the canonical token. |
 
 ## Send Batch Transactions (Multicall)
 

@@ -2,7 +2,7 @@
 title: "Token Systems Section"
 url: "https://pushchain.github.io/docs/chain/tutorials/token-systems/"
 section: "tutorials"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Token Systems Section | Tutorials | Push Chain Docs"
 ---
 

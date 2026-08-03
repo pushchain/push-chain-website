@@ -2,7 +2,7 @@
 title: "Tooling Section"
 url: "https://pushchain.github.io/docs/chain/setup/tooling/"
 section: "setup"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Tooling Section | Setup | Push Chain Docs"
 ---
 

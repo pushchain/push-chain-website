@@ -2,7 +2,7 @@
 title: "Push Universal Wallet Provider"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/push-universal-wallet-provider/"
 section: "ui-kit"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "{Push Universal Wallet Provider | Customizations | UI Kit | Push Chain Docs}"
 ---
 

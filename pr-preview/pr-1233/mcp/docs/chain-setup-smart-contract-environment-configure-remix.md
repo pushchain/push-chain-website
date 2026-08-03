@@ -2,7 +2,7 @@
 title: "Remix IDE"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-environment/configure-remix/"
 section: "setup"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Remix IDE | Smart Contract Environment | Setup | Push Chain Docs"
 ---
 

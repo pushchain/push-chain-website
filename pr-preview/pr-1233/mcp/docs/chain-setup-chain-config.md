@@ -2,7 +2,7 @@
 title: "Chain Configuration"
 url: "https://pushchain.github.io/docs/chain/setup/chain-config/"
 section: "setup"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Chain Configuration | Setup | Push Chain Docs"
 ---
 

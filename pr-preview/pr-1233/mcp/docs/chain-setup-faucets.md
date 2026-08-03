@@ -2,7 +2,7 @@
 title: "Faucets"
 url: "https://pushchain.github.io/docs/chain/setup/faucets/"
 section: "setup"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Faucets | Setup | Push Chain Docs"
 ---
 

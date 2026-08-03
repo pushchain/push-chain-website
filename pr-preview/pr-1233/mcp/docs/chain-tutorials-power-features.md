@@ -2,7 +2,7 @@
 title: "Power Features Section"
 url: "https://pushchain.github.io/docs/chain/tutorials/power-features/"
 section: "tutorials"
-lastUpdated: "2026-08-03T12:33:04Z"
+lastUpdated: "2026-08-03T12:48:54Z"
 description: "Power Features Section | Tutorials | Push Chain Docs"
 ---
 
