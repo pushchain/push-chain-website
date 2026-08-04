@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: "Find out how crypto AI agents transact autonomously and securely."
 text: "Find out how crypto AI agents transact autonomously and securely."
 tags: [Key Features, Deep Dives]
-twitterId: ""
+twitterId: "2084296038744219690"
 ---
 
 ![Cover Image of How do AI agents transact onchain](./cover-image.webp)
