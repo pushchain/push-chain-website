@@ -2,7 +2,7 @@
 title: "Integrate Push Universal Wallet"
 url: "https://pushchain.github.io/docs/chain/ui-kit/integrate-push-universal-wallet/"
 section: "ui-kit"
-lastUpdated: "2026-08-11T06:03:12Z"
+lastUpdated: "2026-08-11T07:08:59Z"
 description: "{Integrate Push Universal Wallet | Customizations | UI Kit | Push Chain Docs}"
 ---
 
@@ -335,7 +335,7 @@ Customize the parameters as per your need and the wallet functionality being use
 
 Below is a list of **minimum parameters** required to customize the Push Universal Wallet Provider. Check out [PushUniversalWalletProvider](/push-chain-website/pr-preview/pr-1233/docs/chain/ui-kit/customizations/push-universal-wallet-provider/) for more information on how to use and customize the Push Universal Wallet Provider.
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | Arguments | Type | Default | Description |
 | --- | --- | --- | --- |

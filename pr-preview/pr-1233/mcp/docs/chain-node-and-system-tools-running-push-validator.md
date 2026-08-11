@@ -2,7 +2,7 @@
 title: "Running Push Validator"
 url: "https://pushchain.github.io/docs/chain/node-and-system-tools/running-push-validator/"
 section: "node-and-system-tools"
-lastUpdated: "2026-08-11T06:03:12Z"
+lastUpdated: "2026-08-11T07:08:59Z"
 description: "Running Push Validators | Deep Dives | Push Chain Docs"
 ---
 

@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-08-11T06:03:12Z"
+lastUpdated: "2026-08-11T07:08:59Z"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -38,7 +38,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |

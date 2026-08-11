@@ -2,7 +2,7 @@
 title: "Send Multichain Transactions"
 url: "https://pushchain.github.io/docs/chain/build/send-multichain-transactions/"
 section: "build"
-lastUpdated: "2026-08-11T06:03:12Z"
+lastUpdated: "2026-08-11T07:08:59Z"
 description: "Send Multichain Transactions | Build | Push Chain Docs"
 ---
 
@@ -43,7 +43,7 @@ info
 
 **PreparedUniversalTx** is an intermediate object that you pass to `executeTransactions`. Most apps do not need to manually inspect or modify its fields.
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ const result = await pushChainClient.universal.executeTransactions([step1, step2
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |

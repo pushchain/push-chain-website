@@ -2,7 +2,7 @@
 title: "Upgrade Universal Account"
 url: "https://pushchain.github.io/docs/chain/build/advanced/upgrade-universal-account/"
 section: "build"
-lastUpdated: "2026-08-11T06:03:12Z"
+lastUpdated: "2026-08-11T07:08:59Z"
 description: "Upgrade Universal Account | Advanced | Build | Push Chain Docs"
 ---
 
@@ -28,7 +28,7 @@ await pushChainClient.upgradeAccount({
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |

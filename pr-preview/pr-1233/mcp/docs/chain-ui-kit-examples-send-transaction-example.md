@@ -2,7 +2,7 @@
 title: "Send Transaction Example"
 url: "https://pushchain.github.io/docs/chain/ui-kit/examples/send-transaction-example/"
 section: "ui-kit"
-lastUpdated: "2026-08-11T06:03:12Z"
+lastUpdated: "2026-08-11T07:08:59Z"
 description: "Send Transaction Example | Examples | UI Kit | Push Chain Docs"
 ---
 
