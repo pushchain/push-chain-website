@@ -202,6 +202,31 @@ Every external chain is represented as a particular constant on Push Chain. Ment
 
 > The namespaces are inspired from [caip-10](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md 'Link to caip-10 proposal') format.
 
+## Token Types on Push Chain
+
+Push Chain represents tokens in two directions. Which standard a token uses tells you which direction it came from.
+
+| Standard  | Native to         | Represented as                                       |
+| --------- | ----------------- | ---------------------------------------------------- |
+| **PRC20** | An external chain | A synthetic token on Push Chain (`USDC.eth`, `pETH`) |
+| **PC20**  | Push Chain        | A wrapper deployed on the external chain             |
+
+- **PRC20 → foreign tokens, mirrored inward**<br />
+  Synthetic Push Chain representations of tokens that live natively on an external chain. 
+  
+  For instance, USDC on Ethereum Sepolia becomes **USDC.eth** on Push Chain; native ETH becomes **pETH**. 
+  
+  Push Chain creates one PRC20 per source token, per origin chain. See the [Address Book](/docs/chain/setup/smart-contract-address-book) for every PRC20 and its source token.
+
+- **PC20 → Push-native tokens, mirrored outward**<br />
+  Tokens whose canonical version lives on Push Chain and which can be exported to external chains, where a wrapper is deployed to represent them.
+  
+  The canonical token stays on Push Chain; the wrapper is what travels.
+
+> **Mental model**  
+> PRC20 = a foreign token, wearing a Push jacket.  
+> PC20 = a Push token, wearing a foreign jacket.
+
 ## Next Steps
 
 - Setup your [Environment and Tooling](/docs/chain/setup/)

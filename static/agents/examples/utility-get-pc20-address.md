@@ -11,11 +11,10 @@ See the [source documentation](https://push.org/docs/chain/build/utility-functio
 ```typescript
 import { PushChain } from '@pushchain/core';
 
-    // A Push-native PC20 deployed on Donut Testnet.
+    // A PC20 deployed on Donut Testnet
     const PUSH_PC20 = '0x14693f665cE282A451ba9a86F2EC04B43F931145';
 
     async function main() {
-      // Resolve from the canonical Push-native token
       const token = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
         chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
@@ -24,12 +23,12 @@ import { PushChain } from '@pushchain/core';
       console.log('Canonical PC20:', token.address);
       console.log('Metadata:', token.symbol, '| decimals:', token.decimals);
 
-      // Every confirmed deployment — wrappers first, Push last
+      // Every chain it is deployed on
       for (const entry of token.registry) {
         console.log('  -', entry.chainName, '→', entry.address);
       }
 
-      // 'chain' is optional. Omit it and the SDK discovers where the address lives.
+      // chain is optional — the SDK will find it
       const discovered = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });

@@ -69,7 +69,9 @@ Custom precompiles deployed on Push Chain for universal transaction verification
 
 ### PRC-20 Supported Tokens (on Push Chain)
 
-Push-native representations of tokens bridged from external chains. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+Push Chain representations of tokens that live natively on an external chain. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+
+> See [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-push-chain) for how PRC-20 differs from PC20.
 
 | Token Name | Symbol    | Source Chain     | Token Address on Push Chain                                                                                                              |
 | ---------- | --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -91,7 +93,8 @@ Push-native representations of tokens bridged from external chains. Each PRC-20 
 | USDC.bsc   | USDC.bsc  | BNB_Testnet      | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) |
 | USDT.bnb   | USDT.bnb  | BNB_Testnet      | [0x731aF1Da5365259d27528557EE4aFBA4baC90ef2](https://donut.push.network/address/0x731aF1Da5365259d27528557EE4aFBA4baC90ef2?tab=contract) |
 
----
+> **PC20 wrappers are not listed here.** A PRC-20 is created by Push Chain, so it can be published as a fixed table. A PC20 wrapper is deployed on the external chain the first time its token is exported there, so the set changes over time and lives in UniversalCore's on-chain registry instead. Resolve one with [`getPC20Address`](/docs/chain/build/utility-functions/#get-pc20-address).
+
 
 ### Core AMM & Helpers
 

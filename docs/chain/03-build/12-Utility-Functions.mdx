@@ -1328,7 +1328,7 @@ import { PushChain } from '@pushchain/core';
 
 **_`PushChain.utils.tokens.getPRC20Address(token, options?): { address, chain, symbol, decimals, network }`_**
 
-Resolves the Push Chain synthetic PRC20 address for a supported origin-chain token. Accepts either a `MoveableToken` (for example from `getMoveableTokens`) or an object containing the origin `chain` and token `address`.
+Resolves the [synthetic PRC20 address](/docs/chain/important-concepts#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
 
 ```typescript
 const { address, chain, symbol, decimals, network } =
@@ -1413,21 +1413,23 @@ import { PushChain } from '@pushchain/core';
 
 **_`PushChain.utils.tokens.getPC20Address(address, options): Promise<PC20AddressResult>`_**
 
-Resolves a PC20 token against UniversalCore's on-chain registry and lists every confirmed address it has across chains. Accepts either end of the mapping — an external wrapper or the canonical Push-native token — and always returns the canonical token at `address`.
+Resolves a [PC20](/docs/chain/important-concepts#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
 
-Unlike [`getPRC20Address`](#get-prc20-address), this is **asynchronous**: PC20 mappings are dynamic and live on chain, so there is no static table to consult. It is never symbol-based — identity is address-and-chain only.
+PC20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol. 
+
+> **Note:** Synthetic PRC20s such as `pETH` and `USDC.eth` are not PC20s. Use [getPRC20Address()](#get-prc20-address) for those.
 
 ```typescript
-// From an external wrapper, naming the chain it lives on
+// From an external wrapper
 const token = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB574E18c1B0b2596163c68144ae', {
   chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
   network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
 });
 
-token.address; // canonical Push-native PC20
-token.registry; // [{ address, chain, chainName }, …] — wrappers first, Push last
+token.address; // canonical token on Push Chain
+token.registry; // every chain it is deployed on
 
-// `chain` is optional — omit it and the SDK works out where the address lives
+// chain is optional — the SDK will find it
 const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB574E18c1B0b2596163c68144ae', {
   network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
 });
@@ -1437,11 +1439,11 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
-| _`address`_ | `string` | Either end of the mapping — an external wrapper or the canonical Push-native token. Chain-native form: checksummed hex on EVM, base58 on Solana. |
+| _`address`_ | `string` | The external wrapper or the canonical token on Push Chain. Checksummed hex on EVM, base58 on Solana. |
 | _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` <ConstantsDropdown variant="PUSH_NETWORK" /> |
-| `options.chain` | `PushChain.CONSTANTS.CHAIN` | Where the address lives. Omit to have the SDK discover it. <br /><br />Throws `PC20AmbiguousAddressError` if several chains claim the address with different Push sources. <ConstantsDropdown variant="CHAIN" /> |
-| `options.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | Per-chain RPC overrides used while reading the registry. Defaults to the SDK's built-in endpoints. |
-| `options.strict` | `boolean` | Also run live factory-identity checks against the destination gateway. Slower; off by default. Use it to catch a misconfigured deployment. |
+| `options.chain` | `PushChain.CONSTANTS.CHAIN` | Where the address lives. Omit to let the SDK find it. Throws `PC20AmbiguousAddressError` if more than one chain claims it. <ConstantsDropdown variant="CHAIN" /> |
+| `options.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | Per-chain RPC overrides for reading the registry. Defaults to the SDK's endpoints. |
+| `options.strict` | `boolean` | Also verify factory identity against the live gateway. Slower; off by default. |
 
 </PushAPIReference>
 
@@ -1449,20 +1451,20 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 
 ```typescript
 {
-  address: `0x${string}`;  // Canonical Push-native PC20 address
-  name: string;            // Token name, read from pc20Metadata()
+  address: `0x${string}`;  // Canonical PC20 address on Push Chain
+  name: string;            // Token name
   symbol: string;          // Token symbol
   decimals: number;        // Token decimals
   network: PUSH_NETWORK;   // The Push network this PC20 belongs to
   registry: Array<{
-    address: string;       // Chain-native: checksummed hex on EVM, base58 on Solana
+    address: string;       // Checksummed hex on EVM, base58 on Solana
     chain: CHAIN;          // CAIP-2 chain id, e.g. 'eip155:11155111'
     chainName: string;     // Human-readable chain key, e.g. 'ETHEREUM_SEPOLIA'
   }>;
 }
 ```
 
-`registry` lists **confirmed deployments only** — external wrappers in SDK chain order, then the canonical Push entry last. A predicted first-export wrapper address never appears here, because publishing an address that does not exist yet invites callers to send to it.
+`registry` lists deployments that already exist — wrappers first, the Push Chain entry last. A wrapper address predicted for a first export is not included.
 
 </Details>
 
@@ -1475,11 +1477,10 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 // customPropGTagEvent=utility_get_pc20_address
 import { PushChain } from '@pushchain/core';
 
-    // A Push-native PC20 deployed on Donut Testnet.
+    // A PC20 deployed on Donut Testnet
     const PUSH_PC20 = '0x14693f665cE282A451ba9a86F2EC04B43F931145';
 
     async function main() {
-      // Resolve from the canonical Push-native token
       const token = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
         chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
@@ -1488,12 +1489,12 @@ import { PushChain } from '@pushchain/core';
       console.log('Canonical PC20:', token.address);
       console.log('Metadata:', token.symbol, '| decimals:', token.decimals);
 
-      // Every confirmed deployment — wrappers first, Push last
+      // Every chain it is deployed on
       for (const entry of token.registry) {
         console.log('  -', entry.chainName, '→', entry.address);
       }
 
-      // 'chain' is optional. Omit it and the SDK discovers where the address lives.
+      // chain is optional — the SDK will find it
       const discovered = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
@@ -1507,14 +1508,6 @@ import { PushChain } from '@pushchain/core';
 </NodeJSVirtualIDE>
 
 </Details>
-
-:::tip Lookup is lenient; spending is not
-
-`options.chain` is optional here, but [`funds.token`](/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) **requires** `chain` — and a send whose chain disagrees with where the funds actually are is rejected before any approval is signed.
-
-This method only resolves tokens that implement `pc20Metadata()`. Anything else — including synthetic PRC20s such as `pETH` or `USDC.eth` — throws `InvalidPC20MetadataError`. Use [`getPRC20Address`](#get-prc20-address) for those.
-
-:::
 
 {/* API Section Ends*/}
 
