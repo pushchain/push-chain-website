@@ -2,7 +2,7 @@
 title: "Changelog"
 url: "https://pushchain.github.io/docs/chain/changelog/"
 section: "chain"
-lastUpdated: "2026-08-03T12:48:54Z"
+lastUpdated: "2026-08-11T06:03:12Z"
 description: "Changelog | Push Chain Docs"
 ---
 
@@ -11,6 +11,31 @@ description: "Changelog | Push Chain Docs"
 Keep track of the latest changes and updates to the Push Chain Core and UI Kit SDKs.
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
+
+### 6.0.21 (2026-08-01)
+
+#### Features
+
+-   pc20 fixes
+
+#### Fixes
+
+-   pc20 bug fix
+-   bug fixes
+-   pc20 e2es and bug fixes
+-   pc20 plan
+
+### 6.1.0 (unreleased)
+
+#### Other Changes
+
+-   Added first-class PC20 support to the universal transaction API. PC20 tokens
+-   Added `PushChain.utils.tokens.getPC20Address()` for resolving either a
+-   Added PC20 execution across EVM and Solana for Route 1 (external wrapper burn
+-   Fixed funds-only PC20 returns and cascades producing a selector-only
+-   Fixed PC20 return tracking when a gateway transaction emits both a wrapper
+-   Fixed prepaid native gas credit on PC20 burns by using the sender's executor
+-   Realigned inbound protobuf fields with the chain, exposed PC20 inbound
 
 ### 6.0.20 (2026-07-10)
 

@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-08-03T12:48:54Z"
+lastUpdated: "2026-08-11T06:03:12Z"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -391,9 +391,12 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-### Moving PC20 Tokens
+### Moving PC20 Tokens (Tokens born on Push Chain)
 
-`funds.token` also accepts a **PC20 reference** — a token identified by `{ chain, address }` alone, resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
+`funds.token` also accepts a **PC20 reference**. a token born on Push Chain and is identified by `{ chain, address }` alone, resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
+
+> **Note**: funds transactions are only supported from external origin chains.  
+> Native Push Chain users should call ERC-20 `transfer` or `transferFrom` directly (instead of using funds).
 
 ```typescript
 const txResponse = await pushChainClient.universal.sendTransaction({
@@ -407,8 +410,6 @@ const txResponse = await pushChainClient.universal.sendTransaction({
   },
 });
 ```
-
-The same shape exports a Push-native PC20 outward — name the Push chain in `funds.token.chain` and the destination in `to.chain`.
 
 `chain` is where the token is, never where it is going
 
