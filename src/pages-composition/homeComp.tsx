@@ -29,6 +29,7 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import useSmoothScroll from '@site/src/hooks/useSmoothScroll';
 
 import QnA from '@site/src/components/QnA/QnA';
 import { getHomeAgentFAQsList } from '@site/src/config/HomeAgentFAQsList';
@@ -59,6 +60,10 @@ export default function HomeComp() {
 
   const isMobile = useMediaQuery(device.mobileL);
 
+  // Inertial scrolling for this page, wired into ScrollTrigger so the
+  // problem-narrative stack stays in step with it.
+  useSmoothScroll();
+
   return (
     <HomeWrapper showAlertBar={isHydrated ? shouldShowAlertBar : false}>
       {/* GLOW CIRCLE */}
@@ -85,8 +90,13 @@ export default function HomeComp() {
                   letterSpacing='-0.06em'
                   fontFamily={FONT_MONO}
                   color='var(--ifm-color-white)'
+                  maxWidth='970px'
                 >
-                  {t('pages.home.hero-section.title')}
+                  {/* Two fixed lines per Figma (node 49113:88). Left to wrap
+                      naturally this re-breaks as the window widens. */}
+                  <span>{t('pages.home.hero-section.title-line1')}</span>
+                  <br />
+                  <span>{t('pages.home.hero-section.title-line2')}</span>
                 </H1>
 
                 <Span
