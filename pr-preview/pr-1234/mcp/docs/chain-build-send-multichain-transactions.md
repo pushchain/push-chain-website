@@ -2,7 +2,7 @@
 title: "Send Multichain Transactions"
 url: "https://pushchain.github.io/docs/chain/build/send-multichain-transactions/"
 section: "build"
-lastUpdated: "2026-08-17T16:21:00+05:30"
+lastUpdated: "2026-08-17T16:17:48Z"
 description: "Send Multichain Transactions | Build | Push Chain Docs"
 ---
 
