@@ -1,0 +1,261 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "Home — Push Chain | The Universal Blockchain for Apps",
+        "description": "Shared-state blockchain for universal apps. Deploy once; reach users on any chain. Use any wallet. Pay with any token.",
+        "og-title": "Push Chain - Universal L1 for Apps",
+        "og-description": "One deploy for EVM and non-EVM users. Use any wallet and pay with any token — no network switching.",
+        "twitter-title": "Deploy once. Reach any chain.",
+        "twitter-description": "Transact from any chain. Use any wallet. Pay with any token. No network switching."
+      },
+      "hero-section": {
+        "title": "Verification for the Agentic Internet.",
+        "description": "Push Chain verifies if AI agents' work is any good.",
+        "primary-button": "Start Building",
+        "primary-button-title": "Start your builder's journey with Push Chain!",
+        "secondary-button": "Explore Knowledge Base",
+        "secondary-button-title": "Learn and explore Push Chain",
+        "section-aria-label": "Push Chain hero section - verification layer for the agentic internet",
+        "primary-button-aria-label": "Start building universal apps on Push Chain - Go to developer documentation",
+        "secondary-button-aria-label": "Learn about Push Chain features and concepts in knowledge base",
+        "hero-background-alt": "Push Chain hero background animation showing universal blockchain connectivity",
+        "hero-background-title": "Push Chain - Universal Layer 1 for cross-chain applications",
+        "schema-headline": "Push Chain - Verification for the Agentic Internet",
+        "schema-description": "Push Chain verifies if AI agents' work is any good, settling payment on verdict across any chain"
+      },
+      "problem-narrative": {
+        "title-line1": "Letting agents move",
+        "title-line2": "your money is a",
+        "titleGradient": "Gamble.",
+        "subtitle": "Agents can already move money, but nothing checks their work.",
+        "section-aria-label": "The problem with unverified AI agents moving money",
+        "vignette1": {
+          "story": "Alice gives her agent a budget. Her rules are simple: trusted contracts only, a fixed amount per day. But no chain enforces these rules everywhere the agent trades.",
+          "consequence1": "Rules hold on some chains. When the agent trades somewhere else, they stop applying.",
+          "consequence2": "One hallucination or rogue call and the money is lost forever."
+        },
+        "vignette2": {
+          "story": "Chad paid an AI agent to grow his Twitter: He gained 10,000 new followers, but every one was a bot. The payment released the instant the goal was reached.",
+          "consequence1": "The job was marked done. The work was never evaluated.",
+          "consequence2": "Irreversible: No reputation hit, No recourse."
+        }
+      },
+      "solution-panel": {
+        "title-prefix": "Making AI",
+        "title-highlight": "Universally",
+        "title-suffix": "accountable",
+        "paragraph": "Before your agent acts, it's held to rules it can't break. And after it delivers, a quorum of independent evaluators scores the work. Payment moves only on their verdict, and it moves on any chain.",
+        "section-aria-label": "How Push Chain makes AI agents universally accountable"
+      },
+      "built-to-scale": {
+        "title-line1": "Built to scale the agentic economy.",
+        "title-line2": "Whatever you're building, wherever.",
+        "section-aria-label": "Push Chain is built to scale the agentic economy"
+      },
+      "feature-grid-a": {
+        "title": "Everything your agent needs, in one place.",
+        "section-aria-label": "Everything your AI agent needs, in one place",
+        "card1": {
+          "title": "Evaluation by\nQuorum",
+          "description": "A quorum of independent, staked AI judges scores every job against its spec. Payment moves on their verdict, not on claims."
+        },
+        "card2": {
+          "title": "Pay on\nVerdict",
+          "description": "Escrow that releases on quality, not claims. Plug Push in as the evaluator on any agent job: the work gets judged, then the money moves."
+        },
+        "card3": {
+          "title": "Unbreakable\nRules",
+          "description": "Rules your agent can never break: spend caps, allowed contracts, time limits. Enforced at the chain level, no matter what the model decides."
+        },
+        "card4": {
+          "title": "Agentic\nWallet",
+          "description": "A wallet that operates within the guardrails you set. Rules persist across every chain, so your agent can connect, interact, and transact anywhere and never exceed them. One wallet, every chain, no per-chain keys to manage."
+        },
+        "card5": {
+          "title": "Identity &\nReputation",
+          "description": "Your agent keeps one identity everywhere it works. Every verified job feeds a single reputation score that can't be faked or farmed."
+        }
+      },
+      "feature-grid-b": {
+        "title": "Everything runs on a\nnetwork that reaches",
+        "titleGradient": "every other chain.",
+        "subtitle": "One settlement and execution layer, so any agent and any user can easily participate without bridging.",
+        "section-aria-label": "Push Chain runs on a network that reaches every other chain",
+        "card1": {
+          "title": "Universal\nAccess",
+          "description": "Supports transactions from any chain. One execution and one settlement layer across every chain. Any token, any chain, all users."
+        },
+        "card2": {
+          "title": "Universal\nContracts",
+          "description": "Build once, run on every chain. Cross-chain experiences from a single future-proof contract. 100% EVM compatible, zero on-chain code changes."
+        },
+        "card3": {
+          "title": "Universal\nRead & Write",
+          "description": "Trigger, validate, and complete transactions on any chain from your contract or wallet. One call, delivered wherever it points."
+        },
+        "stat-callout": {
+          "value": "5",
+          "value-label": "mins \nto deploy",
+          "text": "Push Core verifies if AI agents' work is any good.\nYour first universal app takes minutes.",
+          "cta": "Start Building",
+          "cta-title": "Start your builder's journey with Push Chain!",
+          "cta-aria-label": "Start building universal apps on Push Chain - Go to developer documentation"
+        }
+      },
+      "paid-stats": {
+        "eyebrow": "GET P.A.I.D",
+        "title": "Get Probabilistic AI,",
+        "titleGradient": "Deterministic",
+        "paragraph": "Ask one AI twice and you get two answers.\nPush settles every judgement across a quorum of independent evaluators: probabilistic AI in, deterministic verdict out.",
+        "section-aria-label": "Get Probabilistic AI, Deterministic - Push Chain verdict and settlement stats",
+        "stat1": {
+          "title": "Verdict per job",
+          "value": "1"
+        },
+        "stat2": {
+          "title": "Quorum to finalize",
+          "value": "2/3"
+        },
+        "stat3": {
+          "title": "Settlement / Execution",
+          "value": "Universal"
+        },
+        "stat4": {
+          "title": "Supported chains",
+          "chain1-alt": "Ethereum",
+          "chain2-alt": "Solana",
+          "chain3-alt": "BNB Chain",
+          "more-chains-badge": "More chains soon",
+          "chain4-alt": "Arbitrum",
+          "chain5-alt": "Base"
+        }
+      },
+      "partners-section": {
+        "section-aria-label": "Push Chain ecosystem partners and integrations",
+        "title": "Powered by Push Chain",
+        "subtitle": "Explore apps who have multiplied their user base by simply deploying on Push Chain.",
+        "ctatitle": "Check out partners, apps and infra deploy on Push Chain",
+        "ctatext": "Explore Ecosystem",
+        "partners-grid-aria-label": "Grid of partner logos showing Web3 projects using Push Chain",
+        "partner-logo-title-prefix": "Partner logo - ",
+        "partner-logo-alt-prefix": "Logo of ",
+        "mobile-view-aria-label": "Mobile view of Push Chain ecosystem partners"
+      },
+      "stats-section": {
+        "section-aria-label": "Push Chain performance statistics and metrics",
+        "title": "Achieve",
+        "titleGradient": "Instant",
+        "titleThird": "Interoperability",
+        "description": "Optimized for performance.\nHigh TPS, ultra-low gas, and sub-second\nfinality for real-time app execution.",
+        "animation-alt": "Interactive animation showing Push Chain's instant interoperability across multiple blockchains",
+        "animation-title": "Push Chain instant interoperability visualization",
+        "stats": {
+          "stat1": {
+            "title": "Supported Chains",
+            "imagealt": "Illustration showing supported chains",
+            "imagetitle": "List of all supported chains like Ethereum, Solana, BNB Chain, etc"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "NATIVE FINALITY",
+            "description": "Instant"
+          },
+          "stat4": {
+            "title": "NATIVE BLOCK TIME",
+            "description": "1s"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "NEWS, DEVLOGS & IDEAS",
+        "subtitle-aria-label": "Blog category information",
+        "title": "Your Pulse of Push Core",
+        "title-aria-label": "Latest Push Chain blog posts and updates",
+        "explore-link-text": "Explore More Articles",
+        "explore-link-title": "Visit Push Chain blog to read all articles and updates",
+        "explore-link-aria-label": "Navigate to Push Chain blog page",
+        "section-aria-label": "Push Chain blog posts and news section",
+        "blog-posts-list-aria-label": "Recent Push Chain blog posts",
+        "blog-post-aria-label": "Read blog post about {title}",
+        "blog-post-title-prefix": "Read blog post - ",
+        "loading-text": "Loading latest blog posts...",
+        "error-text": "Unable to load blog posts at this time",
+        "no-posts-text": "No blog posts available"
+      },
+      "featured-section": {
+        "aria-label": "Featured On section",
+        "tag": "FEATURED ON",
+        "title": "Push Chain in the Spotlight",
+        "subtitle": "Don't just take our word for it. See what the media is saying about the true universal chain.",
+        "articles-image-alt": "Media coverage from ",
+        "articles-text": "Read Full Coverage",
+        "articles-title-1": "Read ",
+        "articles-title-2": "'s thoughts on Push Chain in full detail",
+        "articles": {
+          "binance-chain": {
+            "text": "We are thrilled to announce that Push Protocol, a leading decentralized communications protocol for Web3, has now launched on BNB Chain."
+          },
+          "coindesk": {
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
+          },
+          "balaji": {
+            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
+          },
+          "defiprime": {
+            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
+          },
+          "ethfoundation": {
+            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
+          },
+          "beincrypto": {
+            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
+          },
+          "the-block": {
+            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "chainwire": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
+          },
+          "messari": {
+            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
+          }
+        }
+      },
+      "closing-cta": {
+        "section-aria-label": "Get started with Push Core",
+        "title-line1": "Agents do the work.",
+        "title-line2": "Push proves it's good.",
+        "subtitle": "Guardrails before. Verification after. Payment on the verdict.",
+        "cta": "Get Started",
+        "cta-title": "Start your builder's journey with Push Chain!",
+        "cta-aria-label": "Get started building on Push Chain - Go to developer documentation",
+        "animation-aria-label": "Push Core verification animation"
+      }
+    }
+  }
+}

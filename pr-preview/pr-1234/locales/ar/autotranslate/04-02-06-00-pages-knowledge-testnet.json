@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "network-updates": {
+                "title": "تحديثات الشبكة",
+                "items": {
+                  "chain-upgrade-token-rebalance": {
+                    "title": "ترقية البلوكشين - إعادة توازن التوكن - Donut Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

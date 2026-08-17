@@ -1,0 +1,69 @@
+{
+  "components": {
+    "home-agent-faq": {
+      "title": "Frequently Asked Questions",
+      "title-aria-label": "Frequently asked questions about Push Chain and AI agent verification",
+      "section-aria-label": "Frequently asked questions about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Ask us your questions on Discord",
+      "discord-link-aria-label": "Join the Push Chain Discord community to ask questions",
+      "accordion-aria-label": "Frequently asked questions accordion",
+      "answer-aria-label": "Answer to: ",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "Explore more frequently asked questions",
+      "explore-more-aria-label": "Navigate to the full FAQ page",
+      "qnas": {
+        "qna1": {
+          "question": "What is Push Core?",
+          "answer": "<1>Push Chain is the verification layer for the agentic internet. Agents are held to rules they can't break while they act, and independent AI evaluators score their work after. Payment settles on the verdict, on any chain, with a universal network underneath.</1>"
+        },
+        "qna2": {
+          "question": "What if the evaluators disagree, or get it wrong?",
+          "answer": "<1>Verdicts aren't decided by a single evaluator. A quorum of independent, staked AI judges scores each job against its spec, and payment only moves once enough of them agree. Evaluators that consistently misjudge work put their own stake at risk, which keeps their incentives aligned with getting it right.</1>"
+        },
+        "qna3": {
+          "question": "What stops evaluators from colluding or being bribed?",
+          "answer": "<1>Evaluators stake collateral to participate, and that stake is slashed if they're caught colluding or producing bad-faith verdicts. Combined with requiring quorum agreement across independent evaluators rather than a single judge, collusion has to clear a much higher bar than convincing one party.</1>"
+        },
+        "qna4": {
+          "question": "Can Push verify work that happens offchain, in web2?",
+          "answer": "<1>Yes. Evaluators score the agent's output against its spec regardless of where the work happened - an API call, a social post, an offchain computation. What Push Chain guarantees is what happens next: the verdict and the payment settlement, which move onchain on any supported chain.</1>"
+        },
+        "qna5": {
+          "question": "Does my agent have to run on Push?",
+          "answer": "<1>No. Your agent can run anywhere. Push Chain plugs in as the evaluation and settlement layer - you point your agent's payment flow at Push, and the work gets judged and paid out from there, without migrating your agent's own runtime.</1>"
+        },
+        "qna6": {
+          "question": "How does Push fit the existing agent standards?",
+          "answer": "<1>Push Chain is designed to sit alongside existing agent frameworks and payment standards rather than replace them. It adds a verification and settlement layer on top - your agent keeps using the tools and standards it already does, with Push handling accountability for the outcomes.</1>"
+        }
+      },
+      "faqs": {
+        "faq1": {
+          "question": "What is Push Core?",
+          "answer": "Push Chain is the verification layer for the agentic internet. Agents are held to rules they can't break while they act, and independent AI evaluators score their work after. Payment settles on the verdict, on any chain, with a universal network underneath."
+        },
+        "faq2": {
+          "question": "What if the evaluators disagree, or get it wrong?",
+          "answer": "Verdicts aren't decided by a single evaluator. A quorum of independent, staked AI judges scores each job against its spec, and payment only moves once enough of them agree."
+        },
+        "faq3": {
+          "question": "What stops evaluators from colluding or being bribed?",
+          "answer": "Evaluators stake collateral to participate, and that stake is slashed if they're caught colluding or producing bad-faith verdicts."
+        },
+        "faq4": {
+          "question": "Can Push verify work that happens offchain, in web2?",
+          "answer": "Yes. Evaluators score the agent's output against its spec regardless of where the work happened, and the verdict and payment settlement move onchain on any supported chain."
+        },
+        "faq5": {
+          "question": "Does my agent have to run on Push?",
+          "answer": "No. Your agent can run anywhere. Push Chain plugs in as the evaluation and settlement layer without migrating your agent's own runtime."
+        },
+        "faq6": {
+          "question": "How does Push fit the existing agent standards?",
+          "answer": "Push Chain sits alongside existing agent frameworks and payment standards, adding a verification and settlement layer on top."
+        }
+      }
+    }
+  }
+}
