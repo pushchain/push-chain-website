@@ -1,0 +1,20 @@
+{
+  "pages": {
+    "home": {
+      "chain-features-section": {
+        "box7": {
+          "texttitle": "Universal\nKatılımcılar",
+          "bodytext": "Tüm zincirlerdeki işlemleri tetikleyerek, doğrulayarak ve tamamlamak için sizin smart sözleşmenizi kullanın.",
+          "tags": {
+            "title1": "KETLERE YAZ"
+          },
+          "imagealt": "Tetris blokları farklı renklerde birleştirilerek değişen illüstrasyonunu gösteriyor.",
+          "imagetitle": "(Yol Haritası) Evrensel Validatorlar, kullanıcıların herhangi bir zincir üzerinde akışlarını tetikleyebilecek, onaylayabilecek ve tamamlayabilecek şekilde akışları işletebilmek için sizin için akıllı sözleşme kullanmasını sağlar."
+        },
+        "box8": {
+          "imagetitle": "(Rota Haritası) Paylaşılmış Durum, diğer zincirlerden hesaptan ve durum verisinden erişimi sağlayan akıllı sözleşmenize sağlar."
+        }
+      }
+    }
+  }
+}

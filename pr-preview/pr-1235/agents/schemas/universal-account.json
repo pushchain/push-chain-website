@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/universal-account.json",
+  "title": "UniversalAccount",
+  "description": "Chain-agnostic account representation in CAIP-10-inspired format. Represents a wallet address on any supported chain.",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string",
+      "description": "The wallet address. Format depends on chain: hex for EVM (0x...), base58 for Solana, etc.",
+      "examples": [
+        "0x32DE7d63C654d18F1382f5a30Ef69CB86b399ac7",
+        "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU"
+      ]
+    },
+    "chain": {
+      "type": "string",
+      "description": "CAIP-10 namespace chain identifier. Format: <namespace>:<reference>",
+      "pattern": "^[a-z0-9]+:[a-zA-Z0-9]+$",
+      "examples": [
+        "eip155:11155111",
+        "eip155:42101",
+        "eip155:1",
+        "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
+      ]
+    }
+  },
+  "required": ["address", "chain"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "address": "0x32DE7d63C654d18F1382f5a30Ef69CB86b399ac7",
+      "chain": "eip155:11155111"
+    },
+    {
+      "address": "0xC8AE31cF444CAB447921277c4DcF65128d5B25a8",
+      "chain": "eip155:42101"
+    }
+  ],
+  "chainIdentifiers": {
+    "description": "Common chain identifiers used in Push Chain SDK",
+    "values": {
+      "eip155:1": "Ethereum Mainnet",
+      "eip155:11155111": "Ethereum Sepolia Testnet",
+      "eip155:42101": "Push Chain Testnet (Donut)",
+      "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1": "Solana Devnet"
+    },
+    "status": "documented"
+  }
+}

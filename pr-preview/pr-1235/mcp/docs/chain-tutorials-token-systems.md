@@ -1,0 +1,21 @@
+---
+title: "Token Systems Section"
+url: "https://pushchain.github.io/docs/chain/tutorials/token-systems/"
+section: "tutorials"
+lastUpdated: "2026-08-17T22:18:42+05:30"
+description: "Token Systems Section | Tutorials | Push Chain Docs"
+---
+
+# Token Systems Section
+
+Learn how to create token systems that are universal, how to do claimable airdrops that are available for users of all chains and everything in between.
+
+  
+
+[
+
+## Build a Universal Airdrop
+
+Build a Universal Airdrop | Tutorials | Push Chain Docs
+
+](/push-chain-website/pr-preview/pr-1235/docs/chain/tutorials/token-systems/tutorial-universal-airdrop/)

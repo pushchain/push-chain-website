@@ -1,0 +1,331 @@
+---
+title: "Setup Scaffold-ETH for Push"
+url: "https://pushchain.github.io/docs/chain/tutorials/integration-and-tooling/tutorial-scaffoldeth2/"
+section: "tutorials"
+lastUpdated: "2026-08-17T22:18:42+05:30"
+description: "{Configure Scaffold‑ETH 2 for Push Chain: Deploy and Interact with a Contract | Tutorials | Push Chain Docs}"
+---
+
+# Setup Scaffold-ETH for Push
+
+Welcome! In this tutorial, you’ll set up a fresh **Scaffold‑ETH 2** project, **deploy a new smart contract to the Push Chain Donut Testnet**, and **interact with it from the Scaffold‑ETH 2 app**.
+
+We’ll cover:
+
+1.  Add Push Chain Donut Testnet to Scaffold‑ETH 2
+2.  Configure **Hardhat** for Push Chain
+3.  Create a new example contract (`Governance.sol`)
+4.  Write and run a **deploy script** to deploy on Push Chain
+5.  Interact with the deployed contract from the Scaffold‑ETH 2 app
+
+If you already use Scaffold‑ETH 2, this will feel familiar—you’ll point the template at a new network, add a contract, and deploy it. Let’s go 🤿.
+
+## Part 1: Configure Scaffold‑ETH 2 for Push Chain Donut Testnet
+
+### 1.1. Create a new Scaffold‑ETH 2 workspace
+
+```bash
+npx create-eth@latest
+```
+
+When prompted by the `create-eth` wizard, **select the Hardhat option** for your smart contract environment. This ensures your project is set up to deploy contracts to Push Chain using Hardhat.
+
+### 1.2. Add Push Chain Donut Testnet to `scaffold.config.ts`
+
+Open **`packages/nextjs/scaffold.config.ts`** and add a custom chain entry for **Push Chain Donut Testnet**, then include it in `targetNetworks` so the app knows about it.
+
+```ts
+import * as chains from 'viem/chains';
+
+export type BaseConfig = {
+  targetNetworks: readonly chains.Chain[];
+  pollingInterval: number;
+  alchemyApiKey: string;
+  rpcOverrides?: Record<number, string>;
+  walletConnectProjectId: string;
+  onlyLocalBurnerWallet: boolean;
+};
+
+export type ScaffoldConfig = BaseConfig;
+
+export const DEFAULT_ALCHEMY_API_KEY =
+  process.env.NEXT_PUBLIC_ALCHEMY_KEY ?? 'REPLACE_ME';
+
+// Push Chain Donut Testnet
+export const pushDonutChain: chains.Chain = {
+  id: 42101,
+  name: 'Push Chain Donut Testnet',
+  nativeCurrency: { name: 'Push', symbol: 'PC', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: [
+        'https://evm.donut.rpc.push.org/',
+      ],
+    },
+    public: {
+      http: [
+        'https://evm.donut.rpc.push.org/',
+      ],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Push Donut Explorer',
+      url: 'https://evm-explorer-testnet.push.org',
+    },
+  },
+};
+
+const scaffoldConfig = {
+  targetNetworks: [chains.hardhat, pushDonutChain],
+  pollingInterval: 30000,
+  alchemyApiKey: DEFAULT_ALCHEMY_API_KEY,
+  rpcOverrides: {},
+  walletConnectProjectId:
+    process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID ??
+    'YOUR_WALLETCONNECT_ID',
+  onlyLocalBurnerWallet: true,
+} as const satisfies ScaffoldConfig;
+
+export default scaffoldConfig;
+```
+
+> ✅ **Why this matters**: `targetNetworks` drives the chain list in the app and wagmi connectors. Adding `pushDonutChain` makes the UI aware of Push Chain.
+
+### 1.3. Configure Hardhat for Push Chain
+
+Edit **`packages/hardhat/hardhat.config.ts`** to add a Push Chain Donut Testnet network.
+
+```ts
+import * as dotenv from 'dotenv';
+dotenv.config();
+import { HardhatUserConfig } from 'hardhat/config';
+import '@nomicfoundation/hardhat-ethers';
+import '@nomicfoundation/hardhat-chai-matchers';
+import '@typechain/hardhat';
+import 'hardhat-gas-reporter';
+import 'solidity-coverage';
+import '@nomicfoundation/hardhat-verify';
+import 'hardhat-deploy';
+import 'hardhat-deploy-ethers';
+import { task } from 'hardhat/config';
+import generateTsAbis from './scripts/generateTsAbis';
+
+const providerApiKey =
+  process.env.ALCHEMY_API_KEY;
+const deployerPrivateKey =
+  process.env.__RUNTIME_DEPLOYER_PRIVATE_KEY
+const etherscanApiKey =
+  process.env.ETHERSCAN_V2_API_KEY;
+
+const config: HardhatUserConfig = {
+  solidity: {
+    compilers: [
+      {
+        version: '0.8.20',
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+    ],
+  },
+  defaultNetwork: 'localhost',
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
+  },
+  networks: {
+    hardhat: {
+      forking: {
+        url: `https://eth-mainnet.alchemyapi.io/v2/${providerApiKey}`,
+        enabled: process.env.MAINNET_FORKING_ENABLED === 'true',
+      },
+    },
+    // Push Chain Donut Testnet
+    pushDonut: {
+      url: 'https://evm.donut.rpc.push.org/',
+      chainId: 42101,
+      accounts: [deployerPrivateKey],
+    },
+  },
+  etherscan: {
+    apiKey: etherscanApiKey,
+  },
+  verify: {
+    etherscan: {
+      apiKey: etherscanApiKey,
+    },
+  },
+  sourcify: {
+    enabled: false,
+  },
+};
+
+task('deploy').setAction(async (args, hre, runSuper) => {
+  await runSuper(args);
+  await generateTsAbis(hre);
+});
+
+export default config;
+```
+
+### 1.4. Generate a deployer account and fund it
+
+You’ll need a funded testnet account to deploy contracts to Push Chain Donut.
+
+Generate a fresh account using the built‑in script:
+
+```bash
+# from the repo root
+yarn generate
+# This prints a new Address
+```
+
+Fund the generated address with Push Chain Donut testnet $PC using the Faucet. If you need funds, request them here:
+
+-   Faucet docs: [Faucet](https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/setup/tooling/faucet/)
+-   Direct faucet: `https://faucet.push.org/`
+
+## Part 2: Add and deploy the governance contract
+
+### 2.1. Add `Governance.sol`
+
+Place your contract at **`packages/hardhat/contracts/Governance.sol`**:
+
+#### What this sample contract does
+
+This is a minimal governance example to demonstrate deployment and app wiring:
+
+-   **Create proposals**: Anyone can call `createProposal(description, duration)` which assigns an incremental id, stores the description, and sets a deadline as `block.timestamp + duration`. Emits `ProposalCreated`.
+-   **Vote once per address**: Call `vote(id, support)` before the deadline to cast a yes/no vote. Each address can vote only once per proposal. Emits `Voted`.
+-   **Read state**: Use `getProposal(id)` to fetch description, deadline, yes/no counts, and `hasVoted(id, voter)` to check if an address has voted.
+-   **Purposely simple**: No token‑weighting, quorum, execution, or proposal states beyond open/closed. It’s for tutorial/demo purposes.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0 <0.9.0;
+
+contract SimpleGovernance {
+    /// @dev Emitted when a new proposal is created.
+    event ProposalCreated(uint256 indexed id, address indexed proposer, string description, uint256 deadline);
+    /// @dev Emitted when someone votes on a proposal.
+    event Voted(uint256 indexed id, address indexed voter, bool support);
+
+    struct Proposal {
+        string description;
+        uint256 deadline;
+        uint256 yesVotes;
+        uint256 noVotes;
+        mapping(address => bool) voted;
+        bool exists;
+    }
+
+    uint256 public proposalCount;
+    mapping(uint256 => Proposal) internal _proposals;
+
+    function createProposal(string calldata description, uint256 duration) external returns (uint256 id) {
+        require(duration > 0, "duration must be > 0");
+        id = ++proposalCount;
+        Proposal storage p = _proposals[id];
+        p.description = description;
+        p.deadline = block.timestamp + duration;
+        p.exists = true;
+        emit ProposalCreated(id, msg.sender, description, p.deadline);
+    }
+
+    function vote(uint256 id, bool support) external {
+        Proposal storage p = _getProposal(id);
+        require(block.timestamp < p.deadline, "voting closed");
+        require(!p.voted[msg.sender], "already voted");
+        p.voted[msg.sender] = true;
+        if (support) p.yesVotes += 1; else p.noVotes += 1;
+        emit Voted(id, msg.sender, support);
+    }
+
+    function getProposal(uint256 id) external view returns (string memory, uint256, uint256, uint256) {
+        Proposal storage p = _getProposal(id);
+        return (p.description, p.deadline, p.yesVotes, p.noVotes);
+    }
+
+    function hasVoted(uint256 id, address voter) external view returns (bool) {
+        return _getProposal(id).voted[voter];
+    }
+
+    function _getProposal(uint256 id) internal view returns (Proposal storage) {
+        require(id > 0 && id <= proposalCount, "Invalid proposal id");
+        Proposal storage p = _proposals[id];
+        require(p.exists, "Proposal does not exist");
+        return p;
+    }
+}
+```
+
+### 2.2. Create the deploy script
+
+Add **`packages/hardhat/deploy/00_deploy_your_contract.ts`**:
+
+```ts
+import { HardhatRuntimeEnvironment } from 'hardhat/types';
+import { DeployFunction } from 'hardhat-deploy/types';
+import { Contract } from 'ethers';
+
+const deployYourContract: DeployFunction = async function (
+  hre: HardhatRuntimeEnvironment
+) {
+  const { deployer } = await hre.getNamedAccounts();
+  const { deploy } = hre.deployments;
+
+  await deploy('SimpleGovernance', {
+    from: deployer,
+    args: [],
+    log: true,
+    autoMine: true,
+  });
+
+  const yourContract = await hre.ethers.getContract<Contract>(
+    'SimpleGovernance',
+    deployer
+  );
+  console.log('👋 Initial proposal count:', await yourContract.proposalCount());
+};
+
+export default deployYourContract;
+
+deployYourContract.tags = ['SimpleGovernance'];
+```
+
+### 2.3. Deploy to Push Chain Donut
+
+From the repo root, run:
+
+```bash
+yarn deploy --network pushDonut
+```
+
+You should see the contract address and the “Initial proposal count” log.
+
+## Part 3: Interact from the Debug UI
+
+After deployment, open your app and go to the `/debug` page. The **Debug Contracts** UI will automatically pick up your deployed contracts and expose handy actions. You can:
+
+-   Create a proposal using `createProposal(description, duration)`
+-   Vote on proposals with `vote(id, true|false)`
+-   Read current state via `getProposal(id)` and `hasVoted(id, address)`
+
+This gives you a ready‑made interface to test your contract on Push Chain without building a custom UI first.
+
+## Conclusion
+
+You’ve configured **Scaffold‑ETH 2** to recognize **Push Chain Donut Testnet**, added a new contract (**SimpleGovernance**), wired a **Hardhat** network, and **deployed**. From here, you can keep iterating on contracts and UI as usual—just keep the Push Chain network in your configs.
+
+### Next Steps
+
+-   **Explore universal transactions and cross‑chain UX** - Learn about [Universal Transactions](/push-chain-website/pr-preview/pr-1235/docs/chain/build/send-universal-transaction/) and [Universal Message Signing](/push-chain-website/pr-preview/pr-1235/docs/chain/build/sign-universal-message/) for seamless cross-chain interactions
+
+-   **Integrate Push Universal Wallet** - Add wallet abstraction to your app with our [UI Kit integration guide](/push-chain-website/pr-preview/pr-1235/docs/chain/ui-kit/integrate-push-universal-wallet/)
+
+For more about the framework used here, see the official Scaffold‑ETH 2 docs: `https://docs.scaffoldeth.io/`.

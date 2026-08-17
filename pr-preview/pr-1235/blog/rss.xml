@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Push Chain — Universal Blockchain for Apps Blog</title>
+        <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/</link>
+        <description>Push Chain — Universal Blockchain for Apps Blog</description>
+        <lastBuildDate>Mon, 17 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[AI Agent Identities in Crypto - Everything You Need To Know]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/</guid>
+            <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Learn what ERC8004 is and what makes it a revolutionary standard for defining, identifying and tracking the reputation of onchain AI agents]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of AI Agent Identities in Crypto" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-4929386a6e358f532e23bef72b859d5f.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Consider an open marketplace of thousands of AI agents. Where one agent can employ other agents to coordinate given tasks.</p>
+<p>Let's say agent A is looking for an agent that provides smart contract auditing services.</p>
+<p>Another agent, say agent B, says <em>"I can analyze this smart contract for $5."</em></p>
+<p>Now on what basis would Agent 'A' decide whether Agent 'B' is the best choice for the job?</p>
+<p>Can't just assume word for word, right !?</p>
+<p>Agent 'A' still needs answers to questions like:</p>
+<ul>
+<li class="">Is this the correct agent?</li>
+<li class="">Has anyone used it before?</li>
+<li class="">Did previous tasks succeed?</li>
+<li class="">Can another system verify its work?</li>
+</ul>
+<p>It all boils down to one empirical question: <strong>How should we (humans) and agents find and trust other agents?</strong></p>
+<p>This is exactly what ERC-8004 solves.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-erc-8004">What is ERC-8004?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#what-is-erc-8004" class="hash-link" aria-label="Direct link to What is ERC-8004?" title="Direct link to What is ERC-8004?" translate="no">​</a></h2>
+<p><a href="https://eips.ethereum.org/EIPS/eip-8004" target="_blank" rel="noopener noreferrer" class="">ERC-8004</a> is an Ethereum standard for discovering agents and creating trust signals about them.</p>
+<p>It gives AI agents a common on-chain system for identity, reputation, and validation. Its goal is to let agents work across different organizations without pre-existing trust.</p>
+<p>ERC-8004 consists of three main components (or registries):</p>
+<ol>
+<li class="">Identity Registry</li>
+<li class="">Reputation Registry</li>
+<li class="">Validation Registry</li>
+</ol>
+<p><strong>Caveat:</strong> ERC-8004 does not put a complete AI agent onchain. The agent can still run on a server, in a Trusted Execution Environment, or in another computing system.</p>
+<p>The blockchain stores the parts that need a common and public source of truth.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="decoding-erc-8004-registries">Decoding ERC-8004 Registries<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#decoding-erc-8004-registries" class="hash-link" aria-label="Direct link to Decoding ERC-8004 Registries" title="Direct link to Decoding ERC-8004 Registries" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="identity-registry">Identity Registry<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#identity-registry" class="hash-link" aria-label="Direct link to Identity Registry" title="Direct link to Identity Registry" translate="no">​</a></h3>
+<p>The Identity Registry gives each agent a unique on-chain identity. This identity is minted as an ERC-721 NFT.</p>
+<p>Each registered agent gets an <strong>agentId</strong>. The NFT owner controls the agent identity. The owner can also transfer the identity to another owner.</p>
+<p>This NFT points to a JSON file, also commonly known as an <strong>Agent Card</strong>, which includes all the metadata about the agent, including its name, service endpoints (A2A, MCP), payable address, functionalities and more.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="reputation-registry">Reputation Registry<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#reputation-registry" class="hash-link" aria-label="Direct link to Reputation Registry" title="Direct link to Reputation Registry" translate="no">​</a></h3>
+<p>The Reputation Registry stores feedback about an agent's past performance.</p>
+<p>Any client can submit feedback for a registered agentId. The agent owner and approved operators cannot review their own agent.</p>
+<p>Feedback can be provided in two ways: <strong>Numerical</strong> and <strong>Categorical (tags)</strong>.</p>
+<p>For numerical, example:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">Quality       = 87 / 100</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Uptime        = 99.77%</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Success Rate  = 89%</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Response Time = 560 ms</span><br></div></code></pre></div></div>
+<p>And categorical tags could be: <code>"uptime"</code>, <code>"month"</code></p>
+<p><strong>Caveat:</strong> ERC-8004 does not define one universal reputation score.</p>
+<p>It stores standardized feedback signals. Applications can decide how to filter, weight, and combine them.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="validation-registry">Validation Registry<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#validation-registry" class="hash-link" aria-label="Direct link to Validation Registry" title="Direct link to Validation Registry" translate="no">​</a></h3>
+<p>Provides a standardised mechanism for evaluating and recording the agent's work as an onchain verifiable evidence.</p>
+<p>The registry stores independent checks of an agent's work.</p>
+<p>The registry does not check the work itself. A separate validator does the check. The registry records: What was checked, who checked it and what the result was.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-erc-8004-work">How does ERC-8004 work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#how-does-erc-8004-work" class="hash-link" aria-label="Direct link to How does ERC-8004 work?" title="Direct link to How does ERC-8004 work?" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Diagram of the ERC-8004 agent trust layer" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/image-1-0a19f84b97c63d5ce31d697a6695ad17.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>A typical ERC-8004 flow has four stages:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-1-register-the-agent">Step 1: Register the agent<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#step-1-register-the-agent" class="hash-link" aria-label="Direct link to Step 1: Register the agent" title="Direct link to Step 1: Register the agent" translate="no">​</a></h3>
+<p>The agent owner registers an agent in the Identity Registry, which then creates an ERC-721 token and assigns an agentId. The owner also provides an <strong>agentURI</strong>.</p>
+<p>You can track and discover ERC-8004 registered agents at: <a href="https://8004scan.io/" target="_blank" rel="noopener noreferrer" class="">8004scan.io</a></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-2-use-the-agent">Step 2: Use the agent<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#step-2-use-the-agent" class="hash-link" aria-label="Direct link to Step 2: Use the agent" title="Direct link to Step 2: Use the agent" translate="no">​</a></h3>
+<p>A client discovers the agent.</p>
+<p>The client can then call its MCP endpoint, send an A2A task, use its web service, or interact through another supported method.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-3-add-reputation">Step 3: Add reputation<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#step-3-add-reputation" class="hash-link" aria-label="Direct link to Step 3: Add reputation" title="Direct link to Step 3: Add reputation" translate="no">​</a></h3>
+<p>After the interaction, the client can submit feedback to the Reputation Registry.</p>
+<p>As discussed in the article above, the Reputation Registry can accept feedback in both numerical and categorical forms.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-4-validate-important-work">Step 4: Validate important work<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#step-4-validate-important-work" class="hash-link" aria-label="Direct link to Step 4: Validate important work" title="Direct link to Step 4: Validate important work" translate="no">​</a></h3>
+<p>Here the agent can ask a validator of its choice to vet its work. Validators can use different verification methods.</p>
+<p>For example:</p>
+<ul>
+<li class="">Re-run the computation.</li>
+<li class="">Use stake-secured verification.</li>
+<li class="">Check a zkML proof.</li>
+<li class="">Check a TEE attestation.</li>
+</ul>
+<p>The validator returns a value from 0 to 100.</p>
+<p>A validator can use 0 for failure and 100 for success. It can also use values between them when the result is not binary.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-erc-8004-does-not-do">What ERC-8004 does not do<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#what-erc-8004-does-not-do" class="hash-link" aria-label="Direct link to What ERC-8004 does not do" title="Direct link to What ERC-8004 does not do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>ERC-8004 does not define payments.</strong> Payment systems such as x402 can work with ERC-8004, but payments remain outside the standard.</li>
+<li class=""><strong>ERC-8004 does not replace MCP or A2A.</strong> MCP provides access to tools and resources, whereas A2A supports communication and task coordination between agents. ERC-8004 adds discovery and trust around these systems.</li>
+<li class=""><strong>It does not guarantee an agent's safety.</strong></li>
+<li class=""><strong>Fake accounts can also try to create a false reputation.</strong></li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-does-it-matter">Why does it matter?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/ai-agent-identities-in-crypto/#why-does-it-matter" class="hash-link" aria-label="Direct link to Why does it matter?" title="Direct link to Why does it matter?" translate="no">​</a></h2>
+<p>The internet has many ways to identify people, websites, and companies.</p>
+<p>AI agents need a similar system. But agents also need something more. They need <strong>machine-readable trust</strong>.</p>
+<p>An agent cannot read hundreds of human reviews before every transaction. It needs structured data that software can inspect. ERC-8004 provides the foundation for this model.</p>
+<p>If you want to dig deeper into the AI x crypto rabbit hole, read about the <a href="https://push.org/blog/understanding-the-crypto-ai-agent-stack/" target="_blank" rel="noopener noreferrer" class="">AI agent stack</a> and <a href="https://push.org/blog/how-do-ai-agents-transact-onchain/" target="_blank" rel="noopener noreferrer" class="">how agents transact onchain</a>.</p>]]></content:encoded>
+            <category>Key Features</category>
+            <category>Deep Dives</category>
+        </item>
+        <item>
+            <title><![CDATA[Highest Revenue Generating Crypto AI Agent Protocols of 2026]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/</guid>
+            <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Find out the highest revenue generating crypto AI agent protocols of 2026]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Highest Revenue Generating Crypto AI Agent Protocols of 2026" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-185307d39d06c49ed2c66523ec9a8839.webp" width="1600" height="900" class="img_ev3q"></p>
+<ul>
+<li class=""><strong>35M+ x402 transactions</strong> processed on Solana since launch</li>
+<li class=""><strong>97%+ of tracked agentic transactions in Q2</strong> used x402</li>
+<li class=""><strong>90%+ of agentic stablecoin volume</strong> happened on Base</li>
+<li class=""><strong>99%+ of agentic commerce</strong> was settled in USDC</li>
+</ul>
+<p>It's needless to say that within the next few years. Scratch that…Within the next few quarters, the AI agent txn pie is about to grow exponentially.</p>
+<p>And driving this growth are some of the most talented teams in the industry.</p>
+<p>In this feature piece, we will spotlight some of the teams that continue to generate arguably the highest numbers in 2026 so far.</p>
+<p>Revenue here refers to the subset of fees the protocol keeps for itself after paying out to liquidity providers.</p>
+<p>Strictly NFA. For information purposes only.</p>
+<p>Starting with:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-virtuals-protocol">1. Virtuals Protocol<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#1-virtuals-protocol" class="hash-link" aria-label="Direct link to 1. Virtuals Protocol" title="Direct link to 1. Virtuals Protocol" translate="no">​</a></h3>
+<p>A launchpad where anyone can spin up an AI agent and give it its own token, so the agent can earn and be co-owned by holders. Built for creators monetizing agents and traders who want exposure to them.</p>
+<p>Operating across Base, Robinhood Chain, Solana, Ethereum</p>
+<p>Revenue in last 30 days -  **$2.0M + **
+Revenue to date - <strong>$73M</strong></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-clanker">2. Clanker<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#2-clanker" class="hash-link" aria-label="Direct link to 2. Clanker" title="Direct link to 2. Clanker" translate="no">​</a></h3>
+<p>An AI bot that deploys a token for you when you describe one in a post on X. The bot handles the contract, the liquidity pool and the fee split. Built for creators and communities who want to launch a token without touching code.</p>
+<p>Operates on Base</p>
+<p>Revenue in last 30 days - <strong>$45,000+</strong>
+Revenue to date - <strong>$15M</strong></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-bankr">3. Bankr<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#3-bankr" class="hash-link" aria-label="Direct link to 3. Bankr" title="Direct link to 3. Bankr" translate="no">​</a></h3>
+<p>A chat-based agent you talk to on X or Farcaster to swap tokens or launch one, with fees split between the creator, the protocol and a burn. Built for retail traders who don't want to open a DEX, and for agents deploying tokens programmatically.</p>
+<p>Revenue in last 30 days: <strong>$750K +</strong>  cumulative revenue: <strong>~$13M</strong></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-almanak">4. Almanak<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#4-almanak" class="hash-link" aria-label="Direct link to 4. Almanak" title="Direct link to 4. Almanak" translate="no">​</a></h3>
+<p>A platform where a swarm of AI agents researches, simulates and runs quant DeFi strategies inside secured vaults. Built for depositors who want automated yield and quants who want to ship strategies without running infra.</p>
+<p>Revenue to date: <strong>$500K+</strong> (peak quarter was Q4 2025 at $1.52M gross)</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-capx-ai">5. Capx AI<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#5-capx-ai" class="hash-link" aria-label="Direct link to 5. Capx AI" title="Direct link to 5. Capx AI" translate="no">​</a></h3>
+<p>Infrastructure for running whole companies on agents deployment, orchestration, governance and on-chain settlement in one stack.</p>
+<p>Capx Chain, an Ethereum L2</p>
+<p>Revenue, last 30 days: <strong>$30,000+</strong></p>
+<p>Primarily EVM</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="6-zyfai">6. ZyFAI<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#6-zyfai" class="hash-link" aria-label="Direct link to 6. ZyFAI" title="Direct link to 6. ZyFAI" translate="no">​</a></h3>
+<p>A yield agent that moves your stablecoins across whitelisted DeFi protocols to chase the best risk-adjusted APY, while you keep custody. Built for passive depositors and treasuries.</p>
+<p>Revenue, last 30 days:  <strong>$10,000+</strong></p>
+<p>Source: <a href="https://defillama.com/" target="_blank" rel="noopener noreferrer" class="">DefiLlama</a></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-tell-us">What does this tell us?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/#what-does-this-tell-us" class="hash-link" aria-label="Direct link to What does this tell us?" title="Direct link to What does this tell us?" translate="no">​</a></h2>
+<p><strong>The Onchain agentic economy is growing.</strong>
+And this is just one vertical of the broader Crypto × AI convergence.</p>
+<p>Micropayments, x402, ERC-8004, and other emerging mechanisms are being built to make onchain infrastructure capable of supporting potentially billions of autonomous agents.</p>
+<p><strong>The signals are already visible</strong></p>
+<p>As the infra becomes more reliable, interoperable and secure for high-intensity autonomous activity the volumes of agentic commerce will soar automatically.</p>
+<p><strong>Watch this space.</strong></p>
+<p>Want to know more about how AI agents operate? Read <a href="https://push.org/blog/understanding-the-crypto-ai-agent-stack/" target="_blank" rel="noopener noreferrer" class="">this</a> and <a href="https://push.org/blog/how-do-ai-agents-transact-onchain/" target="_blank" rel="noopener noreferrer" class="">this</a></p>]]></content:encoded>
+            <category>Key Features</category>
+            <category>Deep Dives</category>
+        </item>
+        <item>
+            <title><![CDATA[How Do AI Agents Transact Onchain?]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/</guid>
+            <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Find out how crypto AI agents transact autonomously and securely.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of How do AI agents transact onchain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-29986801e37704ec3c8662987c9b99af.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Today, crypto agents are initiating more than 25% of all onchain trades. <strong>3X JUMP from the last two years!!</strong></p>
+<p>These agents have already crossed <strong>$3 billion in market cap</strong> and are processing over <strong>$100 million</strong> in volume every week.</p>
+<p>So how is the infrastructure, which was originally built for manual human actions like browser wallets and manual txn signing is able to reliably support and power autonomous agents operating 24/7 across multiple chains??</p>
+<p>Time to find out how.</p>
+<p>Quick TL;DR:</p>
+<p><img decoding="async" loading="lazy" alt="AI model flow Diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/image-1-605f092e0b76e47d1dc841db3f02f034.webp" width="1080" height="1080" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-inside-a-typical-onchain-transaction">What Is Inside a typical onchain Transaction?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#what-is-inside-a-typical-onchain-transaction" class="hash-link" aria-label="Direct link to What Is Inside a typical onchain Transaction?" title="Direct link to What Is Inside a typical onchain Transaction?" translate="no">​</a></h2>
+<p>On an EVM chain, a standard transaction usually contains:</p>
+<ul>
+<li class=""><strong>to</strong> → Contract or recipient address</li>
+<li class=""><strong>value</strong> → Native asset being transferred</li>
+<li class=""><strong>data</strong> → Encoded smart-contract function call</li>
+<li class=""><strong>nonce</strong> → Sender’s transaction sequence number</li>
+<li class=""><strong>gasLimit</strong> → Maximum computation allowed</li>
+<li class=""><strong>maxFee</strong> → Maximum gas price the sender will pay</li>
+<li class=""><strong>chainId</strong> → Network on which the transaction is valid</li>
+<li class=""><strong>signature</strong> → Cryptographic authorization</li>
+</ul>
+<p>On non-EVM chains like Solana, the packaging is different. A transaction contains signatures and a message composed of account addresses, a recent blockhash and one or more program (smart contract)  instructions.</p>
+<p><strong>Let's walk through an example:</strong></p>
+<p><em>“Swap 0.4 ETH for USDC with a maximum slippage of 0.5%.”</em></p>
+<p>The AI model decides that a swap is required. A predefined swap tool then converts that decision into contract-compatible data.</p>
+<p>The tool identifies the relevant contract, calculates the minimum acceptable output and encodes the function call. The blockchain never sees the original prompt; it only receives transaction data.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-an-ai-agent-sign-transactions">How Does an AI Agent Sign Transactions?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#how-does-an-ai-agent-sign-transactions" class="hash-link" aria-label="Direct link to How Does an AI Agent Sign Transactions?" title="Direct link to How Does an AI Agent Sign Transactions?" translate="no">​</a></h2>
+<p>There are two common architectures.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-direct-wallet-signing">1. Direct wallet signing<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#1-direct-wallet-signing" class="hash-link" aria-label="Direct link to 1. Direct wallet signing" title="Direct link to 1. Direct wallet signing" translate="no">​</a></h3>
+<p>The agent controls an externally owned account or a managed wallet. The signing key may be stored in secure infrastructure rather than directly inside the AI model.
+The model proposes the action; the wallet system performs the cryptographic signing.</p>
+<p><strong>BUT THIS IS A VERY INSECURE METHOD!</strong></p>
+<p>An EOA private key grants unlimited, overarching spending authority.
+If an AI agent is given a raw private key and suffers a prompt injection attack, software bug, or dependency compromise, the attacker gains full access to drain the wallet.</p>
+<p>EOAs do not natively support spending limits, recipient whitelists, or time delays. To safely deploy agents that handle real value, the spending logic must be enforced at the blockchain level, not just within the application code.</p>
+<p>To give agents secure wallets, developers utilize <strong>ERC-4337 Account Abstraction</strong>. This standard replaces raw private keys with smart contract accounts.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-smart-account-execution">2. Smart-account execution<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#2-smart-account-execution" class="hash-link" aria-label="Direct link to 2. Smart-account execution" title="Direct link to 2. Smart-account execution" translate="no">​</a></h3>
+<p>Over 40 million of these smart accounts have been deployed across Ethereum and Layer 2 networks.
+Instead of broadcasting standard transactions to the mempool, agents generate <strong>UserOperations</strong>. A UserOperation is a pseudo-transaction object that contains the sender's details, the action to execute (calldata), gas limits, and custom validation fields. This architecture allows the smart account to run programmable verification logic before authorizing the spend.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="session-keys-for-granular-control">Session Keys for Granular Control<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#session-keys-for-granular-control" class="hash-link" aria-label="Direct link to Session Keys for Granular Control" title="Direct link to Session Keys for Granular Control" translate="no">​</a></h2>
+<p>To operate autonomously without requiring a human to sign every micro-transaction, an agent uses <strong>Session Keys</strong>. A session key authorizes specific transaction types without giving the agent root control of the wallet.</p>
+<p>A platform can provision a session key for an agent with strict parameters:</p>
+<ul>
+<li class=""><strong>Maximum spend per transaction:</strong> e.g., capped at $50.</li>
+<li class=""><strong>Approved recipient lists:</strong> The agent can only interact with pre-vetted smart contracts (like a specific DEX router or yield protocol).</li>
+<li class=""><strong>Time boundaries:</strong> The session key expires after exactly 24 hours.</li>
+<li class=""><strong>Total budget:</strong> The agent can only spend a cumulative $500 before requiring a human to re-authorize.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-agents-pay-for-apis-and-other-agents">How Agents Pay for APIs and Other Agents<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#how-agents-pay-for-apis-and-other-agents" class="hash-link" aria-label="Direct link to How Agents Pay for APIs and Other Agents" title="Direct link to How Agents Pay for APIs and Other Agents" translate="no">​</a></h2>
+<p>Machine-to-Machine Payments are enabled by the <a href="https://x402.org/wp-content/uploads/sites/10/2026/06/x402-whitepaper.pdf" target="_blank" rel="noopener noreferrer" class="">x402 Protocol</a></p>
+<p>Agents cannot realistically stop to navigate a checkout flow or input credit card details for every offchain purchases like API credits or online shopping.</p>
+<p>The x402 protocol solves this by repurposing the standard HTTP "402 Payment Required" status code for machine-to-machine crypto payments.</p>
+<p>The transaction flow works like this:</p>
+<ol>
+<li class=""><strong>Request:</strong> The agent requests a resource from a server.</li>
+<li class=""><strong>Payment Required:</strong> The server rejects the request with a 402 status, attaching a header that details accepted payment networks, token prices, and destination addresses.</li>
+<li class=""><strong>Payment Signature:</strong> The agent automatically builds and signs a payment payload matching one of the server's accepted options, then resubmits the request with the payload.</li>
+<li class=""><strong>Verification and Settlement:</strong> The server (often using automated payment facilitators) verifies the payload, settles the payment on-chain, and delivers the requested data to the agent.</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="summary">Summary:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/how-do-ai-agents-transact-onchain/#summary" class="hash-link" aria-label="Direct link to Summary:" title="Direct link to Summary:" translate="no">​</a></h2>
+<p>AI agents do not directly “talk” to blockchains.</p>
+<p>They:</p>
+<ol>
+<li class="">Interpret an objective</li>
+<li class="">select an approved tool</li>
+<li class="">construct a chain-specific transaction</li>
+<li class="">validate it against deterministic policies</li>
+<li class="">sign it through a wallet or smart account</li>
+<li class="">submit it through an RPC or bundler</li>
+<li class="">observe the resulting state change</li>
+</ol>]]></content:encoded>
+            <category>Key Features</category>
+            <category>Deep Dives</category>
+        </item>
+        <item>
+            <title><![CDATA[Understanding the Crypto AI Agent Stack (Layer by Layer)]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/</guid>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Understand what crypto AI agents are composed of and how they work behind the scenes in the simplest way possible.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Understanding the crypto ai agent stack" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-cc41a80bdefc97e7c2686fea58f4d567.webp" width="1600" height="900" class="img_ev3q"></p>
+<ul>
+<li class="">There are more than <strong>600,000 active agents</strong> currently operating on-chain across various ecosystems</li>
+<li class="">In april x402 ecosystem alone recorded: <strong>480,000+ transacting agents</strong></li>
+<li class=""><strong>That executed over 165 million+ transactions with over $50 million in payment volume</strong></li>
+</ul>
+<p>We are entering a period of massive opportunity for both developers and users. By building and using onchain AI systems, we can automate complex workflows, improve operational efficiency, and unlock entirely new revenue models.</p>
+<p>To participate in this shift, however, you need at least a high-level understanding of how onchain AI agents work.</p>
+<p>P.S. They are very different from the everyday AI tools and chatbots most of us currently use.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-makes-this-article-different">What makes this article different?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#what-makes-this-article-different" class="hash-link" aria-label="Direct link to What makes this article different?" title="Direct link to What makes this article different?" translate="no">​</a></h2>
+<ul>
+<li class="">A purely educational piece. No project or tool shilling. Strictly NFA</li>
+<li class="">A complete overview of the crypto AI agent stack in under 500 words.</li>
+<li class="">Written for both users and builders, regardless of technical background.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="crypto-ai-agent-stack-explained-layer-wise">Crypto AI Agent Stack Explained Layer-wise<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#crypto-ai-agent-stack-explained-layer-wise" class="hash-link" aria-label="Direct link to Crypto AI Agent Stack Explained Layer-wise" title="Direct link to Crypto AI Agent Stack Explained Layer-wise" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Crypto AI Agent Stack Layer-wise Diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/image-1-771466b7366b0f9218c94053fdbe5bd8.webp" width="3778" height="3453" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-1-user-and-application">Layer 1: User and application<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-1-user-and-application" class="hash-link" aria-label="Direct link to Layer 1: User and application" title="Direct link to Layer 1: User and application" translate="no">​</a></h3>
+<p>This is where a human or another application gives the agent a goal.
+Eg: “Always balance  my portfolio 60% ETH and 40% USDC.”
+“Pay for a market-data API and prepare a report.”
+“Find the best USDC lending yield on Solana and bridge and deposit the 100 USDC from my Base Metamask Wallet”</p>
+<p>User specifies intent through an interface like an app frontend or a messaging app, rather than manually executing every step on the blockchain.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-2-agent-runtime">Layer 2: Agent runtime<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-2-agent-runtime" class="hash-link" aria-label="Direct link to Layer 2: Agent runtime" title="Direct link to Layer 2: Agent runtime" translate="no">​</a></h3>
+<p>Think of the runtime as the operating system of the AI agent. It orchestrates the entire execution loop:
+Receive goal → Collect context → Ask the model to decide → Select a tool → Execute the tool → Observe the result → Stop or continue</p>
+<p>Frameworks such as elizaOS organize agents around runtimes, plugins, providers, actions and services. Providers give the agent information, while actions let it do something.</p>
+<p>Coinbase AgentKit focuses heavily on adding wallets and onchain actions to different agent frameworks.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-3-ai-model-and-planner">Layer 3: AI model and planner<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-3-ai-model-and-planner" class="hash-link" aria-label="Direct link to Layer 3: AI model and planner" title="Direct link to Layer 3: AI model and planner" translate="no">​</a></h3>
+<p>This is the agent's reasoning engine.
+It interprets natural language, breaks complex objectives into executable steps, decides which tools to call, and generates a plan.
+Models could include GPT-5, Claude, Gemini, DeepSeek or specialized home trained models.
+Eg:  Current ETH allocation: 70% Target ETH allocation: 60% Action required: Sell some ETH for USDC</p>
+<p>model doesn't execute transactions itself. It simply decides what should happen next. The runtime and tool layer translate those decisions into deterministic blockchain actions.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-4-memory-and-knowledge">Layer 4: Memory and knowledge<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-4-memory-and-knowledge" class="hash-link" aria-label="Direct link to Layer 4: Memory and knowledge" title="Direct link to Layer 4: Memory and knowledge" translate="no">​</a></h3>
+<p>Memory allows the agent to remain stateful instead of treating every request as a brand-new conversation.
+Most agents maintain three kinds of memory:</p>
+<ol>
+<li class=""><strong>Working Memory</strong>: temporary context for the current task.</li>
+<li class=""><strong>Long-term Memory</strong>:  persistent user preferences, transaction history, and learned behaviours.</li>
+<li class=""><strong>Knowledge Base</strong>: could include external references such as protocol documentation, governance rules, whitepapers, APIs or trading strategies.</li>
+</ol>
+<p>Agent frameworks commonly provide persistent conversation, knowledge and state storage so agents can retrieve past context before choosing an action.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-5-data-and-perception">Layer 5: Data and perception<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-5-data-and-perception" class="hash-link" aria-label="Direct link to Layer 5: Data and perception" title="Direct link to Layer 5: Data and perception" translate="no">​</a></h3>
+<p>This is how the agent observes the world.
+Reading raw blockchain history directly is difficult. Indexers organize events into queryable datasets.
+Depending on the task, it continuously consumes both onchain and offchain data:
+like balances, liquidity, market prices, active positions and news/social sentiments.
+This is where indexers and oracles come into play.
+This layer is typically powered by RPCs, indexers like The Graph, oracle price feeds like Chainlink, , external APIs and universal execution layers like Push Chain.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-6-tools-and-action-adapters">Layer 6: Tools and action adapters<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-6-tools-and-action-adapters" class="hash-link" aria-label="Direct link to Layer 6: Tools and action adapters" title="Direct link to Layer 6: Tools and action adapters" translate="no">​</a></h3>
+<p>If the model is the brain, tools are its hands.
+The AI never directly interacts with a blockchain. Instead, it invokes predefined tools that safely translate its decisions into deterministic operations.
+An abstract decision could look like: “Reduce ETH exposure.”
+Tool call: swap( token_in = ETH, token_out = USDC, amount = 0.4 ETH, max_slippage = 0.5% )</p>
+<p>Typical crypto tools include: Register an agent, Transfer tokens, Mint an NFT, Bridge assets, Create a limit order
+Push Chain’s TAP, Coinbase AgentKit, for example, exposes wallet operations and onchain actions through action providers and integrates with several agent frameworks</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-7-wallet-identity-and-policy-engine">Layer 7: Wallet, identity and policy engine<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-7-wallet-identity-and-policy-engine" class="hash-link" aria-label="Direct link to Layer 7: Wallet, identity and policy engine" title="Direct link to Layer 7: Wallet, identity and policy engine" translate="no">​</a></h3>
+<p>A wallet gives an agent the power to</p>
+<ul>
+<li class="">Hold assets</li>
+<li class="">Maintain an identity</li>
+<li class="">Sign Transactions</li>
+<li class="">Receive payments</li>
+</ul>
+<p>The policy engine sits between the AI and the wallet, enforcing deterministic guardrails such as:</p>
+<p>Maximum per transaction: $100
+Maximum per day: $500
+Allowed tokens: ETH, USDC
+Allowed protocols: Uniswap, Aave
+Maximum slippage: 0.5%</p>
+<p>There are more than 250,000 ai agent agents in crypto, but today NONE OF THEM can easily operate cross-chain because there isn't any way to:</p>
+<ul>
+<li class="">preserve an agents identity across chains</li>
+<li class="">have an aggregated reputation score</li>
+</ul>
+<p><a href="https://github.com/zaryab2000/create-8004-TAP-agent" target="_blank" rel="noopener noreferrer" class="">Trustless Agent Plus (TAP)</a> framework on Push Chain fixes this</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-8-blockchain-and-smart-contract-execution">Layer 8: Blockchain and smart-contract execution<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-8-blockchain-and-smart-contract-execution" class="hash-link" aria-label="Direct link to Layer 8: Blockchain and smart-contract execution" title="Direct link to Layer 8: Blockchain and smart-contract execution" translate="no">​</a></h3>
+<p>This is the execution and settlement layer.
+The AI usually thinks <strong>offchain</strong>, while the blockchain handles:</p>
+<ul>
+<li class="">Asset ownership</li>
+<li class="">Balances</li>
+<li class="">Transaction ordering</li>
+<li class="">Contract execution</li>
+<li class="">Settlement</li>
+<li class="">Receipts</li>
+</ul>
+<p>It is very crucial for the agent as well as the projects building such agents to measure their performance to ensure transparency.</p>
+<p>Moving forward, as crypto becomes an ai dominated industry, performance benchmarking will be an integral part of the industry. Assisting everyone, from retail to B2B as well as institutions.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="layer-9---agent-economies">Layer 9 - Agent Economies<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/understanding-the-crypto-ai-agent-stack/#layer-9---agent-economies" class="hash-link" aria-label="Direct link to Layer 9 - Agent Economies" title="Direct link to Layer 9 - Agent Economies" translate="no">​</a></h3>
+<p>This layer allows agents to participate in more complex economic activities beyond executing one-off transactions for a single user.
+Once an agent has a wallet, identity and access to tools, it can:</p>
+<ul>
+<li class="">Pay for APIs, data or compute.</li>
+<li class="">Receive payment for completing tasks.</li>
+<li class="">Hire another specialized agent.</li>
+<li class="">Participate in marketplaces or service networks.</li>
+</ul>
+<p>In the coming weeks we'll dive deeper into crypto ai agents and understand how they work behind the scenes, what are the untapped building opportunities in this space and how can you make the most of it, both as a dev and a user!</p>
+<p>Watch this space.</p>]]></content:encoded>
+            <category>Key Features</category>
+            <category>Deep Dives</category>
+        </item>
+        <item>
+            <title><![CDATA[What Happens When RWAs Scale Across Multiple Chains?]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/rwa-scale-across-multiple-chains/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/rwa-scale-across-multiple-chains/</guid>
+            <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Learn how RWA apps can become universally accessible to any user on any chain using Push Chain's Universal Execution Layer.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of What Happens When RWAs Scale Across Multiple Chains" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-1ad6c5d45c91a9d2aa8712ea452947d9.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Consider you’re building a tokenized treasury fund.</p>
+<p>Let's call it YieldVault.</p>
+<p>YieldVault launches on Ethereum. It tokenizes short-duration U.S. Treasuries, issues yield-bearing tokens, and reaches $200M in AUM within six months. (Bravo!!!)</p>
+<p>Then the requests start coming in.</p>
+<ul>
+<li class="">A DeFi lending protocol on Arbitrum wants YieldVault tokens as collateral.</li>
+<li class="">A payments company on Solana wants to integrate them into stablecoin yield strategies.</li>
+<li class="">An institutional desk running on Robinhood needs them for cross-border settlement.</li>
+</ul>
+<p>This sure sounds like the road to PMF, right?</p>
+<p>But do we (as an industry) have the right infra to fulfil all of the above requests? Without practically rewriting and re-deploying your product from the ground up?</p>
+<p>YieldVault now has a choice to make: do you stay on one chain and limit your addressable market, or do you go multi-chain and inherit a coordination problem that gets exponentially harder with every deployment?</p>
+<p>Let's assume YieldVault deploys on four different chains. Each deployment gets its own liquidity pool, which needs to be bootstrapped because the $200 AUM liquidity was localised to a single chain.</p>
+<p>This is where the liquidity fragmentation problem starts to kick in.</p>
+<ul>
+<li class="">Liquidity coordination</li>
+<li class="">Slippage issues</li>
+<li class="">Price discrepancies in assets now listed across different chains</li>
+</ul>
+<p>A fund manager running a $500M allocation across tokenized treasuries cannot tolerate a world where the same instrument prices differently depending on which chain they're looking at. That's not a market. That's four separate markets we say are one.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="every-deployment-is-a-separate-product">Every deployment is a separate product.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/rwa-scale-across-multiple-chains/#every-deployment-is-a-separate-product" class="hash-link" aria-label="Direct link to Every deployment is a separate product." title="Direct link to Every deployment is a separate product." translate="no">​</a></h2>
+<p>Four chains means four codebases, four audits, four oracle setups, four upgrade paths. When the yield rate updates or redemption logic changes, it has to land on all four.
+This is where Push Chain does it differently.</p>
+<p>Push Chain is a universal Layer 1 blockchain designed from the ground up to solve the exact problem of liquidity fragmentation and siloed execution across all chains, both EVM and non-EVM.</p>
+<p>YieldVault deploys once, on Push Chain and instantly becomes universally accessible to all EVM and Non-EVM chains like Solana.</p>
+<p>A wallet on Solana, Arbitrum, or Ethereum interacts with that single deployment directly from their own wallet, paying gas in their own token, in one signature. No wrapping, no bridging, no second deployment.</p>
+<p>And the contract doesn't see a bridge or a relayer as the sender. Push Chain maps every external wallet to a persistent account on Push Chain, so the contract sees a stable address that traces back to the origin wallet controlled by the user.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="does-yieldvault-need-to-forgo-its-200m-ethereum-liquidity-after-porting-to-push-chain">Does YieldVault need to forgo its $200M Ethereum Liquidity after porting to Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/rwa-scale-across-multiple-chains/#does-yieldvault-need-to-forgo-its-200m-ethereum-liquidity-after-porting-to-push-chain" class="hash-link" aria-label="Direct link to Does YieldVault need to forgo its $200M Ethereum Liquidity after porting to Push Chain?" title="Direct link to Does YieldVault need to forgo its $200M Ethereum Liquidity after porting to Push Chain?" translate="no">​</a></h2>
+<p>No. Not at all.</p>
+<p>This is where most of you get it wrong. Migrating to the Push Universal Chain does not mean that you need to wind up your current deployments and liquidity strength. Your app or in this case YieldVault can choose to exist on Ethereum with all of its liquidity + coexist on Push Chain with a new universal liquidity pool which can now be accessed by users of Ethereum, Arbitrum, Robinhood, Base and even Non-Evm chains like Solana.</p>
+<p>If you’re curious to know more about universal execution and a bridgeless cross-chain usage <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">experience universal apps</a> and <a href="https://push.org/knowledge/" target="_blank" rel="noopener noreferrer" class="">read more about Push Chain</a> here.</p>
+<p>Dive straight into the <a href="https://push.org/docs/" target="_blank" rel="noopener noreferrer" class="">docs</a> to know more about a single-deployment universal setup.</p>]]></content:encoded>
+            <category>Key Features</category>
+            <category>Product</category>
+        </item>
+        <item>
+            <title><![CDATA[Push Chain Completes Hacken Security Audit, $100,000 Bug Bounty Launching Soon]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/</guid>
+            <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Push Chain is a complex system, it lets users from *any* chain, settled in one place. No bridges, gas in any token.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Push Chain Completes Hacken Security Audit" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-9653b151e4dc016bec477925a12f4bd4.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Push Chain is a complex system - it lets users from <em>any</em> chain, settled in one place. No bridges, gas in any token. Behind the scenes it means coordinating contracts and infrastructure across several networks at once.</p>
+<p>A system with that many moving parts deserves rigorous, independent scrutiny to protect user funds, and launch with confidence. So we partnered with <a href="https://hacken.io/?utm_source=push_chain&amp;utm_medium=article&amp;utm_campaign=audits" target="_blank" rel="noopener noreferrer" class="">Hacken</a>, a leading web3 security firm that has audited major ecosystems including NEAR, Solana, MetaMask, BNB Chain, ByBit, Base and TON. Hacken’s smart contract audit combines senior-led code review, structured testing, and real-world exploit analysis – trusted by 1,500+ projects securing over $180B+ in digital assets.</p>
+<p>Between March and June 2026, Hacken conducted a full security audit program across Push Chain - covering our <em><strong>cross-chain gateway contracts on both EVM chains and Solana, our core contracts on Push Chain, and a protocol-level assessment of the Push Chain node itself.</strong></em></p>
+<p>Today we're sharing the results.</p>
+<p><strong>The most important result: no critical-severity findings were identified across any of the four audit engagements.</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="key-outcomes"><strong>Key Outcomes</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/#key-outcomes" class="hash-link" aria-label="Direct link to key-outcomes" title="Direct link to key-outcomes" translate="no">​</a></h2>
+<ul>
+<li class="">Zero critical-severity findings across any audit</li>
+<li class="">3 smart contract and full chain audit was completed across Push Chain infrastructure</li>
+<li class="">All High and Medium findings resolved, mitigated, or formally acknowledged</li>
+<li class="">Final audit reports delivered by Hacken</li>
+<li class="">Dual Defense bug bounty launching soon with rewards of up to <strong>$100,000</strong></li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-security-audit-scope"><strong>The Security Audit Scope</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/#the-security-audit-scope" class="hash-link" aria-label="Direct link to the-security-audit-scope" title="Direct link to the-security-audit-scope" translate="no">​</a></h2>
+<p>The audit program spanned four separate engagements, each with its own scope, methodology, and report:</p>
+<ol>
+<li class=""><strong>EVM Gateway contracts.</strong> The <code>UniversalGateway</code> and <code>Vault</code> contracts deployed on external EVM chains such as Ethereum, Base, Arbitrum, etc. These are the contracts that accept user deposits, hold bridged assets in custody, enforce per-transaction and per-block value caps, and release funds on TSS authorization. This is the highest-value custody surface in the system.</li>
+<li class=""><strong>SVM Gateway contracts.</strong> The Solana-side gateway program, written in Rust with the Anchor framework. It mirrors the EVM gateway's role for Solana users - locking deposits in a PDA-controlled vault and releasing them through TSS-signed outbound operations.</li>
+<li class=""><strong>Core contracts.</strong> The contracts deployed on Push Chain that make universal execution work, including <code>UniversalCore</code>, the <code>UEAFactory</code> and <code>CEAFactory</code>, the Universal and Chain Executor Account implementations, and the PRC20 synthetic token standard.</li>
+<li class=""><strong>Push Chain node.</strong> A protocol-level assessment of the Cosmos SDK and EVM node (<code>pchaind</code>), covering the custom universal modules - registry, validator voting, on-chain execution, and threshold-signing coordination - and the EVM precompiles that let Solidity verify signatures from other chains.</li>
+</ol>
+<p>Across these engagements Hacken applied manual review by senior security researchers alongside property-based fuzzing and fork testing.</p>
+<p>The smart-contract suites carried strong automated coverage going into the audit, with line coverage above 95% on the SVM gateway and high branch coverage on the core and EVM contracts.</p>
+<p>The protocol-level review followed recognized standards including NIST SP 800-115 and the Penetration Testing Execution Standard.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="audit-findings"><strong>Audit Findings</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/#audit-findings" class="hash-link" aria-label="Direct link to audit-findings" title="Direct link to audit-findings" translate="no">​</a></h2>
+<p>The most important result first: <strong>No critical-severity issues in any of the four audits.</strong></p>
+<p>Across the three finalized smart-contract audits - EVM Gateway, SVM Gateway, and Core Contracts and Push Chain Node - every High and Medium severity finding was resolved, mitigated, or formally acknowledged before the reports were finalized.</p>
+<p>We treat that distinction honestly: most findings were fixed in code and re-verified by Hacken; a small number of low or informational issues were formally accepted as intended design decisions, with the reasoning documented; and a few were mitigated where a complete fix sat outside the audited scope.</p>
+<p>We don't view the findings that surfaced as a problem to hide. We view them as the entire point of the exercise. A few examples of how the review made the system stronger:</p>
+<ul>
+<li class=""><strong>Granular role separation across the contract suite.</strong> The audits prompted us to move to a production-grade access-control model - a layered role hierarchy where role management, configuration, operations, and pause authority are held by distinct roles rather than a single key, limiting the blast radius if any one key is ever compromised.</li>
+<li class=""><strong>Stronger custody and authorization guarantees.</strong> Findings on the SVM gateway led us to enforce canonical vault token accounts so bridged liquidity can't be fragmented, to authenticate previously unsigned cross-chain revert data, and to separate pause authority from unpause authority so re-enabling the system after an incident requires higher assurance.</li>
+<li class=""><strong>Safer administrative operations.</strong> We introduced two-step authority transfers so a privileged role can never be handed to an uncontrollable address by a single mistaken transaction, and we bounded protocol-fee configuration to remove the possibility of an unbounded fee.</li>
+</ul>
+<p>The full reports document every finding, its severity, and its resolution. We're publishing them so that anyone - users, builders, or other auditors - can read the complete picture rather than take our summary on faith. Specifically for builders, it means you're deploying on a chain whose universality layer has been reviewed by people outside our team. The parts of Push Chain you can't audit yourself - the cross-chain custody, the signature verification, the executor account model - are exactly the parts Hacken focused on.</p>
+<p>The review of the fixes done by the Push Chain team is now complete.</p>
+<p>After a final re-verification and extensive review, Hacken has now provided the Final Audit Reports.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="beyond-the-audit-a-bug-bounty-of-up-to-100000"><strong>Beyond the Audit: A Bug Bounty of Up to $100,000</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/#beyond-the-audit-a-bug-bounty-of-up-to-100000" class="hash-link" aria-label="Direct link to beyond-the-audit-a-bug-bounty-of-up-to-100000" title="Direct link to beyond-the-audit-a-bug-bounty-of-up-to-100000" translate="no">​</a></h2>
+<p>An audit is a point-in-time review of a specific commit. It is necessary, but it is not sufficient - and Hacken's own guidance is explicit that no project should rely on an audit alone.</p>
+<p>So alongside the completion of this audit program, we'll soon be launching a <strong>Hacken-hosted bug bounty for Push Chain, with rewards of up to $100,000</strong> for qualifying vulnerabilities. This turns security from a milestone into a standing invitation: the more eyes we have on the code as we move toward mainnet, the safer the system becomes for everyone building and transacting on it.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="whats-next"><strong>What's Next</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-chain-completes-hacken-security-audit/#whats-next" class="hash-link" aria-label="Direct link to whats-next" title="Direct link to whats-next" translate="no">​</a></h2>
+<p>Now that the security audit program is complete, the work doesn't stop here.</p>
+<p>The audit and the bug bounty program that now sits alongside it are part of the same goal: ensuring that Push Chain's contracts and the chain itself remain secure, reliable, and dependable for everyone who builds and transacts on them.</p>
+<p>With security as a foundation, our focus now shifts to the ecosystem. We're working to onboard flagship applications so that when mainnet goes live, there are real products and use cases available from day one.</p>
+<p>The completion of this audit program marks an important milestone for Push Chain, bringing us one step closer toward our broader goal: making blockchain feel universal.</p>
+<p>The full audit reports are linked below - we encourage you to read them.</p>
+<p><em><a href="https://push.org/knowledge/audit" target="_blank" rel="noopener noreferrer" class="">Read the full Hacken audit reports</a></em></p>
+<ul>
+<li class=""><em><a href="https://hacken.io/audits/push-chain/sca-push-chain-evm-gateway-mar2026/" target="_blank" rel="noopener noreferrer" class="">EVM Gateway report</a></em></li>
+<li class=""><em><a href="https://hacken.io/audits/push-chain/sca-push-chain-svm-gateway-mar2026/" target="_blank" rel="noopener noreferrer" class="">SVM Gateway report</a></em></li>
+<li class=""><em><a href="https://hacken.io/audits/push-chain/sca-push-chain-core-contracts-mar2026/" target="_blank" rel="noopener noreferrer" class="">Core Contracts report</a></em></li>
+<li class=""><em><a href="https://hacken.io/audits/push-chain/l1-push-chain-blockchain-audit-apr2026/" target="_blank" rel="noopener noreferrer" class="">Push Chain node report </a></em></li>
+</ul>]]></content:encoded>
+            <category>Featured</category>
+            <category>Product</category>
+            <category>Partnerships</category>
+        </item>
+        <item>
+            <title><![CDATA[Introducing Zappi - First Universal Payments App on Push Chain]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-zappi/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-zappi/</guid>
+            <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Introducing Zappi an anychain to anychain stablecoin payments app for freelancers, merchants, and businesses. Powered by PUSD, the Universal Stablecoin. Built on Push Chain.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing Zappi - First Universal Payments App on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-a657799e8b65a2f08a078cbb74050ea1.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Meet <a href="http://zappi.to/" target="_blank" rel="noopener noreferrer" class="">Zappi</a>, our newest inductee in the Push Chain Universal App ecosystem!</p>
+<p><a href="http://zappi.to/" target="_blank" rel="noopener noreferrer" class="">Zappi</a> is an anychain to anychain payments app built for freelancers, creators, and business owners of all sizes to request, receive, and settle invoices onchain.</p>
+<p>Zappi is powered by PUSD - A universal stablecoin on Push Chain that unifies USDC and USDT liquidity across all major EVM, non EVM chains.</p>
+<p>Here’s what it unpacks…</p>
+<p>Under the hood, Zappi uses <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a> as its stablecoin layer.</p>
+<p><strong>PUSD is a universal stablecoin on Push Chain that provides a common dollar layer on top of crypto unifying fragmented liquidity from USDC, USDT across all popular chains.</strong></p>
+<p>Users can deposit supported stablecoins, mint PUSD 1:1, use it across Push Chain apps, and redeem into supported stablecoins.</p>
+<p>This matters because payments need a common dollar layer.</p>
+<p>Without PUSD, every payment app has to think through different versions of the same dollar: USDC on one chain, USDT on another, wrapped assets, bridge flows, liquidity routes, and withdrawal preferences.</p>
+<p>Read <a href="https://push.org/blog/introducing-pusd/" target="_blank" rel="noopener noreferrer" class="">more about PUSD here</a></p>
+<h1>What exactly does Zappi do?</h1>
+<p>Global digital payments are now being taken over by Stablecoins.</p>
+<p>These solutions are fast, secure, instant and incredibly cheaper than traditional SWIFT/ACH counterparts. And they run 24x7.</p>
+<p>But stablecoins are still isolated within chain boundaries. USDC on Solana and USDC on Ethereum may represent the same dollar value, but they are not automatically interchangeable in practice.</p>
+<p>And this is a huge bottleneck that very few teams are trying to solve.</p>
+<p><em>A user might have USDC on Base.</em>
+<em>The recipient might prefer USDT on another chain.</em>
+<em>The app might support only one network.</em>
+<em>The payment might need a bridge, a swap, multiple approvals, extra gas, and a lot of waiting.</em></p>
+<p>That is too much friction for something as simple as “send $100.”</p>
+<p>Stablecoin payments should feel simple: create a request, share a link, receive funds.</p>
+<p><strong>Paid from any supported stablecoin, through any chain.</strong></p>
+<p>That is what Zappi is designed for.</p>
+<h1>How can I use Zappi?</h1>
+<iframe width="100%" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/P8Y3wIrCN74" title="How to use Zappi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<h1>Where can I use Zappi?</h1>
+<p>Zappi makes stablecoin payments easier for:</p>
+<ul>
+<li class="">freelancers collecting payments from global clients</li>
+<li class="">businesses accepting crypto payments</li>
+<li class="">creators receiving tips or support</li>
+<li class="">teams splitting bills or collecting contributions</li>
+<li class="">apps and communities that need simple stablecoin checkout flows</li>
+</ul>
+<p>Join our <a href="https://zappi.to/m/register" target="_blank" rel="noopener noreferrer" class="">merchant network</a> today!</p>
+<h1>Start using Zappi</h1>
+<p>With <a href="http://zappi.to/" target="_blank" rel="noopener noreferrer" class="">Zappi</a>, users can create payment links, accept supported stablecoins, settle in PUSD, and earn safest yields through PUSD+.</p>
+<p>It is a simple idea: global payments should not break because the sender and receiver are on different chains.</p>
+<p>If you're a developer building in the payments or other cool industries and want to build using Push Chain and PUSD, <a href="https://t.me/+0PvJa9Kzfto5MWE9" target="_blank" rel="noopener noreferrer" class="">reach out to us here</a>.</p>]]></content:encoded>
+            <category>Featured</category>
+            <category>Product</category>
+            <category>Ecosystem</category>
+        </item>
+        <item>
+            <title><![CDATA[Introducing PUSD: A Universal Stablecoin Built for the Future of Onchain Payments.]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/</guid>
+            <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[PUSD is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing PUSD" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-b693a8437037ac590bc7f9ea9e8cf6d0.webp" width="1600" height="900" class="img_ev3q"></p>
+<!-- -->
+<p><a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a> is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1.</p>
+<p>This blog covers what PUSD is, why we need it, what it is not, its unique features, and how it aims to power the next generation of universal apps and blockchain-native payments, while also enabling passive income opportunities for users.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="challenges-users-and-businesses-face">Challenges users and businesses face<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#challenges-users-and-businesses-face" class="hash-link" aria-label="Direct link to Challenges users and businesses face" title="Direct link to Challenges users and businesses face" translate="no">​</a></h2>
+<p>Stablecoins are everywhere in crypto, but using them is still not as simple as holding a “digital dollar.”</p>
+<p>One has USDC on Base, USDT on Ethereum, or USDC on Solana, but the dilemma is always multifold</p>
+<ul>
+<li class="">Does the app support it?</li>
+<li class="">Do I need to bridge first?</li>
+<li class="">Will the recipient /vendor accept this version of the stablecoin?</li>
+<li class="">Can I withdraw into the chain I actually want to use?</li>
+<li class="">Are stablecoin yield platforms safe enough?</li>
+</ul>
+<p>So even when the user already has stablecoins, they still have to think about bridges, supported assets, approvals, destination chains, withdrawal routes, and whether the stablecoin in their wallet is the “right” one for the action they want to take.</p>
+<p>Now, if you zoom out and try to apply this workflow for bigger organizations, teams and events, the implications are massive: both in terms of time and resources wasted.</p>
+<p>That is the problem PUSD is built to solve.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="missed-opportunity">Missed opportunity:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#missed-opportunity" class="hash-link" aria-label="Direct link to Missed opportunity:" title="Direct link to Missed opportunity:" translate="no">​</a></h2>
+<p>PS: There's over $320 billion in stablecoin liquidity across 50+ chain-token pairs. But none of it is shared. An app on Arbitrum can't tap USDC liquidity sitting on Solana. A prediction market on Base can't settle with USDT locked on Ethereum.</p>
+<p>PUSD is designed to remove that problem at the application layer.</p>
+<p><strong>The goal is simple: make stablecoin usage feel less fragmented for users and easier to build around for developers by utilizing Push Chain’s  universal execution layer</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-pusd">What is PUSD?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#what-is-pusd" class="hash-link" aria-label="Direct link to What is PUSD?" title="Direct link to What is PUSD?" translate="no">​</a></h2>
+<p><strong>1:1 stablecoin minting</strong>
+Users deposit USDT, USDC from any supported EVM, non-EVM chain into the <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD App</a> and receive an equivalent amount of PUSD on Push Chain.</p>
+<p>Once minted, PUSD can be used for payments, trading, app interactions, or converted into PUSD+ for yield. <em>Read more use cases below</em>.</p>
+<p><strong>Backed by reserves, not printed from thin air</strong>
+Every PUSD is backed by reserve assets. The system is designed around reserve accounting, not speculative expansion.</p>
+<p><strong>Universal stablecoin liquidity for Push Chain apps</strong>
+Instead of every app needing to support every chain-specific version of USDC or USDT, apps can integrate PUSD as the common stablecoin layer.</p>
+<p>Integration takes a few hours, not months. <a href="https://pusd.push.org/docs/" target="_blank" rel="noopener noreferrer" class="">Refer the guide here</a>.</p>
+<p><strong>Instantly redeemable into chain-specific stablecoins</strong>
+Users can burn PUSD and redeem it back to required stablecoins.</p>
+<p><strong>Universal means Universal:</strong>
+PUSD is built for a multi-chain world. A user may enter with stablecoin liquidity from one chain and redeem into another supported chain, depending on available reserves and routing.</p>
+<p><strong>PUSD+ for yield-bearing exposure</strong>
+PUSD+ is the yield-bearing side of the system. Yield comes from activity around internal stablecoin swaps and rebalancing, with fees distributed back to PUSD+ holders.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-mint-pusd">How to mint PUSD?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#how-to-mint-pusd" class="hash-link" aria-label="Direct link to How to mint PUSD?" title="Direct link to How to mint PUSD?" translate="no">​</a></h2>
+<div style="width:100%;height:360px"></div>
+<p>Mint here: <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">http://pusd.push.org</a></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="safest-stablecoin-yield">Safest Stablecoin Yield<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#safest-stablecoin-yield" class="hash-link" aria-label="Direct link to Safest Stablecoin Yield" title="Direct link to Safest Stablecoin Yield" translate="no">​</a></h2>
+<p>PUSD+ is the yield-bearing version of PUSD. Because PUSD pools stablecoins from multiple chains, Push creates Uniswap-style swap pools (e.g., USDC.eth ↔ USDC.sol pairs) via <a href="https://www.ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">Ramen.fi</a>. Swap fees from these pools flow back to PUSD+ holders</p>
+<p>The yield is not based on aggressive farming, leverage, volatile collateral, or uncertain hidden DeFi strategies making it the safest yield strategy 100% backed by stablecoins.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-earn-yield-on-pusd">How to earn yield on PUSD?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#how-to-earn-yield-on-pusd" class="hash-link" aria-label="Direct link to How to earn yield on PUSD?" title="Direct link to How to earn yield on PUSD?" translate="no">​</a></h2>
+<div style="width:100%;height:360px"></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="early-usecases">Early Usecases<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#early-usecases" class="hash-link" aria-label="Direct link to Early Usecases" title="Direct link to Early Usecases" translate="no">​</a></h2>
+<p><strong>Pay anyone, on any chain:</strong> You have USDC on Solana. The person you're paying needs USDT on Arbitrum. With PUSD, the chains don't need to match and the stablecoins don't need to match. Deposit, send, the recipient redeems on their chain.</p>
+<p>Check out <a href="http://zappi.to/" target="_blank" rel="noopener noreferrer" class="">Zappi.to</a>: An instant payment app for inide hackers and freelancers. Receive payments in stablecoins in seconds instead of weeks.</p>
+<p><strong>Predict and trade across chains</strong>
+Prediction markets today only accept stablecoins on their native chain, which cuts out users on every other chain.</p>
+<p>A prediction market settling in PUSD lets anyone from any supported chain place a bet with whatever stablecoin they already hold. No bridging before every trade.</p>
+<p>This is just a glimpse. <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a> is more than a stablecoin, it’s the liquidity layer designed for a multi-chain, blockchain native payments future.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tldr">TLDR;<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-pusd/#tldr" class="hash-link" aria-label="Direct link to TLDR;" title="Direct link to TLDR;" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="What PUSD is and What PUSD is not" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/image-1-85d04e0f2234283f6e9aa086389dd293.webp" width="1600" height="900" class="img_ev3q"></p>]]></content:encoded>
+            <category>Featured</category>
+            <category>Product</category>
+            <category>Ecosystem</category>
+        </item>
+        <item>
+            <title><![CDATA[Push Rewards Program goes Public: Universal Network Meets Real Usage]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-rewards-program/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-rewards-program/</guid>
+            <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Following the launch of Donut Testnet and $PC ticker reveal, Push Chain has continued to gain strong momentum. Over the past few months,]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Push Rewards Program" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-33c3dc1f584eca7159cd0fefd9a405de.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Following the launch of Donut Testnet and $PC ticker reveal, Push Chain has continued to gain strong momentum. Over the past few months, we’ve seen increasing <a href="https://donut.push.network/stats" target="_blank" rel="noopener noreferrer" class="">activity</a> across users, developers, and validators as the ecosystem around universal apps begins to take shape.</p>
+<p>Push Chain has processed <strong>15M+ transactions across 400k+ active addresses, secured by 35+ validators.</strong> We’ve seen massive developer interest in building DeFi, RWAs, and AI Agents. With over 25 universal apps already <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">live</a>  like <a href="http://ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">RamenFi</a>, <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a>, and <a href="http://degenchess.fun/" target="_blank" rel="noopener noreferrer" class="">Degen Chess</a>, users from Ethereum, Solana, Arbitrum, BNB, and Base are interacting seamlessly without needing complex and unsafe bridging to get started.</p>
+<p>Rewards Portal <a href="https://portal.push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=s3launch" target="_blank" rel="noopener noreferrer" class="">https://portal.push.org/</a></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="a-program-beyond-social-farming">A program beyond social farming<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-rewards-program/#a-program-beyond-social-farming" class="hash-link" aria-label="Direct link to A program beyond social farming" title="Direct link to A program beyond social farming" translate="no">​</a></h2>
+<p><strong>With the launch of Season 3, we wanted to avoid the typical incentivized testnet playbook.</strong> Most campaigns often resort to social farming where users click buttons to join Discord or post on X for points that are pointless. Participating without ever meaningfully touching the network.</p>
+<p>Testnets exist to stress test real infrastructure with real users. With Push Chain S3 you are using the actual network with EVM and non EVM wallets on the exact same platform in realtime. Every point in Season 3 flows from on-chain activity and the usage of $PC.</p>
+<p>Leaderboards reflect who is actually putting the network through its paces and instead of a static points system, Season 3 introduces a fully gamified reward loop.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="enter-push-chain-pass-rareshinies">Enter Push Chain Pass (Rare/Shinies)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-rewards-program/#enter-push-chain-pass-rareshinies" class="hash-link" aria-label="Direct link to Enter Push Chain Pass (Rare/Shinies)" title="Direct link to Enter Push Chain Pass (Rare/Shinies)" translate="no">​</a></h2>
+<p>Rare Passes are collectibles earned purely through active testnet participation. They are your ticket to the endgame of Season 3. <strong>At TGE, users will burn their Rare Passes for a chance to mint and convert them into a Shiny Pass, maxed with rewards for Push Chain supporters.</strong> But even if you miss the Shiny, every burned pass guarantees a boost.</p>
+<p>Hit your daily spins, grind your levels, score $PC and stack as many passes as you can. The bigger your stash, the better your odds.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="season-3-is-open-heres-how-it-works">Season 3 is Open: Here’s how it works<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/push-rewards-program/#season-3-is-open-heres-how-it-works" class="hash-link" aria-label="Direct link to Season 3 is Open: Here’s how it works" title="Direct link to Season 3 is Open: Here’s how it works" translate="no">​</a></h2>
+<p>Season 3 is now open to everyone. <strong>No invite codes, no waitlists.</strong> Here is how you play the meta:</p>
+<ul>
+<li class=""><strong>Weekly Airdrops:</strong> Every week, a new universal app built on Push Chain drops into the rotation.</li>
+<li class=""><strong>Quest loops:</strong> Complete on-chain tasks on Push Chains <a href="https://portal.push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=s3launch" target="_blank" rel="noopener noreferrer" class="">testnet portal</a> (providing liquidity, swapping, playing, or predicting) to earn XP.</li>
+<li class=""><strong>Progresssion:</strong> Level up to score 2 Rare Passes, Points, Buffs, and more.</li>
+<li class=""><strong>Spins:</strong> Hit the daily Spin 2 Win wheel to score more Rare Passes, $PC and hoard your stock.</li>
+<li class=""><strong>Referral System:</strong> Invite your friends using your special link and earn a chunk of any points your invites earn.</li>
+</ul>
+<p>Early access users already have a head start, leaderboards are live, and a new banger app drops every week. Dive in and claim your spot on the board.</p>
+<p>Head over to <a href="https://portal.push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=s3launch" target="_blank" rel="noopener noreferrer" class="">Push Chain Portal</a>, login using your favorite socials or wallet, and start collecting.</p>
+<p>⚠️ <strong>Note:</strong> The token is currently live on testnet and not in mainnet. $PC is the only official token that will power all native functionalities on Push Chain. As a reminder, $PUSH holders will be able to migrate their tokens to $PC.</p>]]></content:encoded>
+            <category>Featured</category>
+            <category>Programs</category>
+        </item>
+        <item>
+            <title><![CDATA[Introducing Multihop on Push Chain]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-multihop-on-push-chain/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-multihop-on-push-chain/</guid>
+            <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Multihop allows you to compose multiple cross-chain operations into a single signed transaction. Ordered and tracked end-to-end.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing Multihop on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/cover-image-5da56dd003c46725ee2031035e4c8359.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Multihop allows you to compose multiple cross-chain operations into a single signed transaction. Ordered and tracked end-to-end.</p>
+<h1>Cross-chain today is still manual and bumpy</h1>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-users">For users:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-multihop-on-push-chain/#for-users" class="hash-link" aria-label="Direct link to For users:" title="Direct link to For users:" translate="no">​</a></h2>
+<p>Try doing anything non-trivial across chains right now. Swap ETH for a Solana token. Move collateral from BNB to Ethereum and deposit it into a lending protocol.</p>
+<p>Every step is a separate transaction. And every transaction needs a separate signature.
+This means multiple interruptions, multiple clicks and many minutes wasted in preparing a transaction before actually executing it.</p>
+<p>The question worth asking is: why do users have to heavy lift all these precursor steps? Shouldn’t the underlying tech handle everything on its own!?</p>
+<p>Take a cross-chain yield balancing app as an example:</p>
+<p><img decoding="async" loading="lazy" alt="First Image of Introducing Multihop on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/image-1-fc9721a048a211c4de9efc1df58f5577.webp" width="1600" height="900" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-developers">For developers:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-multihop-on-push-chain/#for-developers" class="hash-link" aria-label="Direct link to For developers:" title="Direct link to For developers:" translate="no">​</a></h2>
+<p>Today, building cross-chain apps is 30% business logic and 70% orchestration and plumbing.
+Instead of focusing on app features and logic, devs are forced to integrate multiple SDKs and interop protocols with a bumpy learning curve.</p>
+<p>Then comes another headache. <strong>Cross-protocol compatibility and debugging hell</strong>.
+Writing complex retry handles, timeout watches and manual rollback scripts</p>
+<p>What devs often fail to understand is that the cross-chain part of their codebase isn't the true product. It’s just plumbing. Which (again) should be abstracted and handled by the underlying protocol itself.</p>
+<h1>What multihop changes?</h1>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-users-1">For users:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-multihop-on-push-chain/#for-users-1" class="hash-link" aria-label="Direct link to For users:" title="Direct link to For users:" translate="no">​</a></h2>
+<p>Multihop lets you compose multiple cross-chain transactions into a single ordered flow.</p>
+<p>You simply specify your steps or intent and watch Push Chain execute them all at once, with just one signature.</p>
+<p>Push handles all the cross chain coordination across multiple chains (be it EVM, Solana, or Push Chain itself).</p>
+<p><img decoding="async" loading="lazy" alt="Second Image of Introducing Multihop on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/assets/images/image-2-c9d158d1c1c6ae88dd1418a57f30cb30.webp" width="1600" height="1600" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-devs">For devs:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-multihop-on-push-chain/#for-devs" class="hash-link" aria-label="Direct link to For devs:" title="Direct link to For devs:" translate="no">​</a></h2>
+<p>The API surface is two functions. That's it.</p>
+<p>prepareTransaction takes a transaction description, target address, calldata, chain, optional fund movement and returns a  PreparedUniversalTx object. This object contains the resolved route (where does this hop execute?), estimated gas, nonce, deadline, and the encoded payload. You don't need to inspect any of this. You just pass it forward.</p>
+<p>executeTransactions takes an ordered array of prepared transactions and submits them as a single cascade to Push Chain. One signature. The SDK figures out the routing: <em>which hops stay on Push Chain, which go outbound to external chains via CEAs, which move funds between chains.</em></p>
+<p>Refer to the docs for more <a href="https://push.org/docs/chain/build/send-multichain-transactions/" target="_blank" rel="noopener noreferrer" class="">detailed insights</a>.</p>
+<p><strong>Routing is automatic:</strong>
+You don't think about routes. Pass a plain address in to and the hop stays on Push Chain. Pass <code>{ address, chain }</code> and it goes outbound (from push to ext chain)  via CEA.</p>
+<p>Need a hop to originate from an external chain? Set <code>from: { chain }</code> and the SDK handles the rest.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>CEA TL;DR</div><div class="admonitionContent_BuS1"><p>Chain Executor Accounts are per-user smart accounts that live on external chains and act on your behalf while keeping your funds and unified crosschain identity separate from everyone else.</p><p><a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1235/blog/introducing-chain-executor-account/">Read more about CEAs</a>.</p></div></div>
+<p><strong>Funds can move with any hop</strong>
+Any hop can carry token movement alongside its contract call via the funds parameter. Bridge ETH into Push Chain and call a contract in the same hop. No separate bridging steps needed.</p>
+<p><strong>Multiple calls can be batched into a single hop</strong>
+The data field accepts either a single calldata or an array of calls. So approve + deposit can be one hop instead of two. Fewer hops, tighter cascades.</p>
+<h1>Try It</h1>
+<p>Multihop is live on testnet.
+Experience it through our ecosystem apps like <a href="https://www.ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">RamenFi</a>.</p>
+<p><a href="https://push.org/docs/chain/build/send-multichain-transactions/" target="_blank" rel="noopener noreferrer" class="">Multihop docs also include playground environments</a> where you can test directly in your browser, no local setup needed.</p>]]></content:encoded>
+            <category>Technical</category>
+            <category>Deep Dives</category>
+        </item>
+    </channel>
+</rss>

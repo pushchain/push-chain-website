@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Ảnh bìa cho ",
+        "image-append": "",
+        "link-prepend": "Khám phá ",
+        "link-append": "",
+        "cta-title": "Đọc thêm"
+      }
+    }
+  }
+}

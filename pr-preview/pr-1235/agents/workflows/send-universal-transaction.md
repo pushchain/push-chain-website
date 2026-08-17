@@ -1,0 +1,333 @@
+# Send Universal Transaction
+
+## Purpose
+
+Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), with automatic UEA resolution, gas funding, and execution orchestration.
+
+## When to Use
+
+- Transferring native PC tokens on Push Chain
+- Calling smart contracts deployed on Push Chain
+- Executing batched multicall transactions
+- Moving assets into Push Chain as part of a transaction
+- Any operation targeting Push Chain (Route 1)
+
+## Prerequisites
+
+| Requirement | Details |
+|-------------|---------|
+| Initialized client | `pushChainClient` from `PushChain.initialize()` |
+| Signer mode | Client must be initialized with `UniversalSigner` (not read-only) |
+| Target address | Valid Push Chain address or contract |
+
+## Inputs
+
+### Standard Arguments
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|--------------|
+| `tx.to` | `string` \| `{ address: string; chain: CHAIN }` | Yes | Plain address → Push Chain (Route 1). Object → external chain (Route 2) |
+| `tx.from` | `{ chain: CHAIN }` | No | Forces CEA of that chain as execution origin (Route 3) |
+| `tx.value` | `BigInt` | No | Native value in smallest unit (uPC on Push Chain, wei on EVM external chains). Default: `0n` |
+| `tx.data` | `string` \| `Array<{to: string; value: bigint; data: string}>` | No | ABI-encoded calldata (string) or multicall array. **For multicall the outer `tx.to` must be `0x0000000000000000000000000000000000000000`; every inner entry needs a non-zero `to`** |
+| `tx.funds` | `{ amount: BigInt; token: PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN> }` | No | Move cross-chain asset atomically (external origin chains only) |
+| `tx.progressHook` | `(progress: ProgressHookType) => void` | No | Callback for real-time progress updates |
+
+### Advanced Arguments
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `tx.gasLimit` | `BigInt` | SDK estimated | Override transaction gas limit |
+| `tx.maxFeePerGas` | `BigInt` | SDK estimated | Override max fee per gas (EIP-1559) |
+| `tx.maxPriorityFeePerGas` | `BigInt` | SDK estimated | Override priority fee (EIP-1559) |
+| `tx.payGasWith` | `{ token: PushChain.CONSTANTS.PAYABLE.TOKEN.<CHAIN>.<TOKEN>; slippageBps?: number; minAmountOut?: bigint \| string }` | - | Pay universal transaction fees with a supported token instead of native. `slippageBps` e.g. `100` = 1% |
+| `tx.deadline` | `BigInt` | - | Optional execution deadline timestamp |
+| `tx.options.enforceGasCheck` | `boolean` | `false` | When `true`, the SDK pre-flight check throws `InsufficientUEABalanceError` instead of emitting a `WARNING` progress event and proceeding. Set `true` when you want pre-flight guarantees; leave at the default for best-effort flows that rely on the SDK's fee-locking / refill paths. Same flag is accepted by `prepareTransaction` and propagates through `executeTransactions` cascades. |
+
+## Steps
+
+### Basic Native Transfer
+
+1. **Prepare the transaction parameters**
+   ```typescript
+   const recipientAddress = '0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF';
+   const amountInPC = '0.1'; // human-readable
+   ```
+
+2. **Convert amount to uPC (smallest unit)**
+   ```typescript
+   const valueInUPC = PushChain.utils.helpers.parseUnits(amountInPC, 18);
+   // Or directly: BigInt('100000000000000000')
+   ```
+
+3. **Send the transaction with error handling**
+   ```typescript
+   try {
+     const txResponse = await pushChainClient.universal.sendTransaction({
+       to: recipientAddress,
+       value: valueInUPC,
+     });
+     const receipt = await txResponse.wait();
+     if (receipt.status !== 1) throw new Error(`tx failed: ${receipt.hash}`);
+     console.log('Transaction hash:', receipt.hash);
+   } catch (e) {
+     // Error codes and recovery actions: https://push.org/agents/errors.json
+     console.error(e);
+   }
+   ```
+
+### Contract Call
+
+1. **Encode the function call**
+   ```typescript
+   import { ethers } from 'ethers';
+   
+   const contractInterface = new ethers.Interface([
+     'function transfer(address to, uint256 amount) returns (bool)'
+   ]);
+   const calldata = contractInterface.encodeFunctionData('transfer', [
+     '0xRecipientAddress',
+     BigInt('1000000000000000000')
+   ]);
+   ```
+
+2. **Send with encoded data**
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: '0xContractAddressOnPushChain',
+     data: calldata,
+     value: 0n,
+   });
+   ```
+
+### With Progress Tracking
+
+1. **Define progress handler**
+   ```typescript
+   const progressHandler = (progress) => {
+     console.log(`[${progress.id}] ${progress.title}: ${progress.message}`);
+     // Example output: [SEND-TX-103-02] Universal Execution Account Resolved: UEA: 0x..., Deployed: true
+   };
+   ```
+
+2. **Send with progressHook**
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: recipientAddress,
+     value: valueInUPC,
+     progressHook: progressHandler,
+   });
+   ```
+
+### Multicall (Batched Transactions)
+
+1. **Prepare multiple calls**
+   ```typescript
+   const calls = [
+     {
+       to: '0xContract1',
+       data: encodedCall1,
+       value: 0n,
+     },
+     {
+       to: '0xContract2',
+       data: encodedCall2,
+       value: BigInt('50000000000000000'),
+     },
+   ];
+   ```
+
+2. **Send as batched transaction** - outer `to` **must be zero address** for multicall
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: '0x0000000000000000000000000000000000000000', // REQUIRED for multicall
+     data: calls,
+   });
+   console.log('Executed atomically:', txResponse.atomic);
+   ```
+
+> **Warning:** The SDK will `console.warn` if any other address is used for the outer multicall `to`. This restriction will become mandatory in a future release. Only the **outer** `to` is the zero address - each **inner** entry must have a non-zero `to`; a zero-address entry is rejected with a `PushChainExecutionError` (the EIP-7702 executor reinterprets a zero target as the account itself).
+
+3. **Understand the execution path per origin** - multicall works from any origin:
+   - **External origin chains (EVM or SVM)**: the batch executes atomically through the UEA (`UEA_MULTICALL`). Unchanged behavior.
+   - **Native Push Chain EOAs**: the SDK executes the whole batch atomically in a single EIP-7702 type-4 (SetCode) transaction. The EOA signs an authorization delegating its code to the `PushBatchExecutor` contract (deployed on Push Chain Donut Testnet), then submits one tx calling the batch on itself - all calls succeed or the whole tx reverts. Requires a signer that can sign EIP-7702 authorizations: `PushChain.utils.signer.toUniversal` wires this automatically for ethers v6 `Wallet` (local key) and viem local accounts (e.g. `privateKeyToAccount`); custom signers can supply `signAuthorization` via `PushChain.utils.signer.construct`. Browser wallets (JSON-RPC accounts such as MetaMask) and ethers v5 signers cannot sign EIP-7702 authorizations - the SDK detects this **before any broadcast**, logs a `console.warn`, and safely falls back to the legacy sequential per-call loop (non-atomic: an earlier call stays committed if a later one reverts). No double-execution risk.
+   - Check `txResponse.atomic` to see which path ran: `false` only when a native-EOA batch fell back to sequential execution.
+
+### With Asset Movement (tx.funds)
+
+Move a supported asset from origin chain to Push Chain atomically with your call. Only supported from external origin chains (not from a native Push Chain account).
+
+1. **Specify funds to move (chain-scoped token accessor)**
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: '0xContractOnPushChain',
+     data: calldata,
+     funds: {
+       amount: PushChain.utils.helpers.parseUnits('1', 6), // 1 USDT (6 decimals)
+       token: PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT,
+     },
+   });
+   ```
+
+### With Gas Paid in Token (tx.payGasWith)
+
+Pay universal transaction fees with a supported token instead of native PC.
+
+1. **Pay fees with USDT from Ethereum Sepolia**
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: recipientAddress,
+     value: valueInUPC,
+     payGasWith: {
+       token: PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT,
+       slippageBps: 100, // 1% slippage tolerance for on-chain swap
+     },
+   });
+   ```
+
+### Using encodeTxData Utility
+
+Use `PushChain.utils.helpers.encodeTxData` to ABI-encode contract calls without importing ethers/viem directly:
+
+```typescript
+const data = PushChain.utils.helpers.encodeTxData({
+  abi: ['function transfer(address to, uint256 amount) returns (bool)'],
+  functionName: 'transfer',
+  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)],
+});
+
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: '0xTokenContractAddress',
+  value: 0n,
+  data,
+});
+```
+
+### With Advanced Gas Overrides
+
+```typescript
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: recipientAddress,
+  value: valueInUPC,
+  gasLimit: BigInt('100000'),
+  maxFeePerGas: BigInt('2000000000'),
+  maxPriorityFeePerGas: BigInt('200000000'),
+  deadline: BigInt(Math.floor(Date.now() / 1000) + 3600), // 1 hour
+});
+```
+
+## Expected Output
+
+```typescript
+// TransactionResponse object (full shape)
+{
+  hash: '0xe2302bd21ab0902f37cb605d491ce5f95ee35ce4083405dddf3657d782acae35',
+  origin: 'eip155:42101:0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9', // CAIP-10 origin
+  blockNumber: 0n,
+  blockHash: '',
+  transactionIndex: 0,
+  chainId: '42101',
+  from: '0xFd6C...', // UEA address
+  to: '0x35B8...',
+  nonce: 341,
+  data: '0x',
+  value: 1000n,
+  gasLimit: 21000n,
+  gasPrice: 1325000000n,
+  maxFeePerGas: 1325000000n,
+  maxPriorityFeePerGas: 125000000n,
+  accessList: [],
+  type: '2',
+  typeVerbose: 'eip1559',
+  atomic: true, // true for a single tx, an EIP-7702 batch, or a UEA multicall; false only when a native-EOA multicall fell back to sequential execution
+  signature: { r: '0x...', s: '0x...', v: 1, yParity: 1 },
+  raw: { from: '0x...', to: '0x...', nonce: 341, data: '0x', value: 1000n },
+  wait: [Function], // wait(confirmations?: number): Promise<UniversalTxReceipt>
+}
+```
+
+```typescript
+// UniversalTxReceipt from txResponse.wait(1)
+{
+  hash: '0xb52706...',
+  blockNumber: 3413247n,
+  blockHash: '0x5a7b6e...',
+  transactionIndex: 0,
+  from: '0xFd6C...', // UEA
+  to: '0x35B8...',
+  contractAddress: null,
+  gasPrice: 1325000000n,
+  gasUsed: 21000n,
+  cumulativeGasUsed: 21000n,
+  logs: [],
+  status: 1, // 1 = success, 0 = failure
+  raw: { from, to, nonce, data, value },
+}
+```
+
+### Progress Hook Events (Route 1, in order)
+
+> Route 1 events carry the `1xx` prefix. Full per-route reference (Route 1/2/3 + cascade): [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Pinned to `@pushchain/core@6.0.19`.
+
+| ID | Title | Level |
+|----|-------|-------|
+| `SEND-TX-101` | Origin Chain Detected | INFO |
+| `SEND-TX-102-01` | Estimating Gas | INFO |
+| `SEND-TX-103-01` | Resolving Universal Execution Account | INFO |
+| `SEND-TX-103-02` | Universal Execution Account Resolved | SUCCESS |
+| `SEND-TX-103-03` | Calculating Prepaid Deposit | INFO |
+| `SEND-TX-103-03-01` | Adjusting Prepaid Deposit to be >$1 | INFO |
+| `SEND-TX-103-03-02` | Prepaid Deposit in range (>=$1 and <$10) | INFO |
+| `SEND-TX-103-03-03` | Prepaid Deposit Exceeds $10 Cap, splitting Gas and Funds | INFO |
+| `SEND-TX-103-03-04` | Prepaid Deposit Estimated | SUCCESS |
+| `SEND-TX-104-01` | Awaiting Transaction | INFO |
+| `SEND-TX-104-02` | Awaiting Signature | INFO |
+| `SEND-TX-104-03` | Verification Success | SUCCESS |
+| `SEND-TX-104-04` | Verification Declined / Signature Failed | ERROR |
+| `SEND-TX-105-01` | Gas Funding In Progress | INFO |
+| `SEND-TX-105-02` | Gas Funding Confirmed | SUCCESS |
+| `SEND-TX-106-01` | Preparing Funds Transfer | INFO |
+| `SEND-TX-106-02` | Funds Lock Submitted | INFO |
+| `SEND-TX-106-03` | Awaiting Confirmations | INFO |
+| `SEND-TX-106-03-01` | Confirmation `<current>/<required>` Received | INFO |
+| `SEND-TX-106-03-02` | Confirmation `<current>/<required>` Received (final) | SUCCESS |
+| `SEND-TX-106-04` | Funds Confirmed | SUCCESS |
+| `SEND-TX-106-05` | Syncing with Push Chain | INFO |
+| `SEND-TX-106-06` | Funds Credited on Push Chain | SUCCESS |
+| `SEND-TX-107` | Broadcasting to Push Chain | INFO |
+| `SEND-TX-199-01` | Push Chain Tx Success | SUCCESS |
+| `SEND-TX-199-02` | Push Chain Tx Failed | ERROR |
+| `SEND-TX-199-03` | Syncing State with Push Chain Timeout | ERROR |
+| `SEND-TX-199-99` | Intermediate Push Chain Tx Completed | INFO |
+
+## Common Failures
+
+| Error | Cause | Recovery |
+|-------|-------|----------|
+| `Restricted call blocked` | Client initialized in read-only mode | Reinitialize with `UniversalSigner` |
+| `Insufficient funds for gas` | UEA has no gas balance | Ensure origin wallet has native tokens; SDK auto-funds UEA |
+| `User rejected signature` | User declined wallet prompt | Retry transaction; inform user why signature is needed |
+| `Invalid recipient address` | Malformed `to` address | Validate address format before sending |
+| `Execution reverted` | Contract call failed on-chain | Check contract state, parameters, and simulate call first |
+| `SEND-TX-104-04` progress event | Verification declined by user | User cancelled; show appropriate UI message |
+| `Gas estimation failed` | Contract will revert or invalid state | Simulate transaction or check contract preconditions |
+
+## Agent Notes
+
+- **Route 1 is default**: Plain `to` address always executes on Push Chain.
+- **Route 1 origin types**: The signer can be a wallet on any supported external chain (EVM or SVM) OR a native Push Chain wallet. When the origin is external, the call routes through the UEA on Push Chain; when the origin is a native Push Chain wallet, the SDK signs and submits directly with no UEA hop.
+- **Value is in smallest unit**: Use `PushChain.utils.helpers.parseUnits()` for human-readable conversion.
+- **UEA auto-deploys**: First transaction from a new origin wallet triggers automatic UEA deployment.
+- **Gas is abstracted**: Users pay gas on their origin chain in native tokens; SDK handles UEA funding.
+- **Signature prompt expected**: User will see one signature request from their wallet.
+- **Multicall works from any origin**: External origins batch atomically via the UEA; native Push Chain EOAs batch atomically via EIP-7702 when the signer can sign authorizations (local keys, Push Wallet email/google logins), otherwise the SDK falls back to sequential execution. Inspect `atomic` on the response to know which path ran - browser wallets (JSON-RPC accounts) always take the sequential fallback.
+- **Use progressHook for UX**: Display step-by-step status in frontend for better user experience.
+- **Check for reverts**: If `SEND-TX-199-02` fires, parse the error message for revert reason.
+
+## MCP Mapping Candidates
+
+- `send_native_transfer` - Simple PC token transfer to address
+- `send_contract_call` - Execute encoded calldata on Push Chain contract
+- `send_multicall` - Batch multiple calls in single transaction
+- `encode_function_call` - Helper to generate ABI-encoded calldata
+- `parse_units_to_bigint` - Convert human-readable amount to BigInt
