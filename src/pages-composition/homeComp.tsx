@@ -4,22 +4,18 @@
 
 // React + Web3 Essentials
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { useContext, useState } from 'react';
-import ReactPlayer from 'react-player';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 // External Components
 import { useTranslation } from 'react-i18next';
-import { BsArrowRight, BsDiscord } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 
 // Internal Components
-import Accordion from '@site/src/components/Accordion';
-import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
 import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
 import {
   A,
-  B,
   Content,
   H1,
   H2,
@@ -33,29 +29,28 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
-import Marquee from 'react-fast-marquee';
 
 import QnA from '@site/src/components/QnA/QnA';
-import { getShortFAQsList } from '@site/src/config/ShortFAQsList';
+import { getHomeAgentFAQsList } from '@site/src/config/HomeAgentFAQsList';
 
 // Import Assets
-import HeroBGMobile from '@site/static/assets/website/hero/hero-bg-img.webp';
-import FinalBgImage from '@site/static/assets/website/home/others/push-chain-final.webm';
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
 
 // Internal Configs
-import { FeaturesList } from '@site/src/config/HomeFeaturesList';
-import { InvList } from '@site/src/config/HomeInvestorList';
+import { AgentFeaturesListB } from '@site/src/config/AgentFeaturesListB';
 import GLOBALS, { device, structure } from '@site/src/config/globals';
 
-import { FeaturedSection } from '@site/src/components/Home/FeaturedSection';
-import { StatsSection } from '@site/src/components/Home/StatsSection';
-import { WhatIsSection } from '@site/src/components/Home/WhatIsSection';
+import AgenticScaleSection from '@site/src/components/Home/AgenticScaleSection';
+import ClosingCTA from '@site/src/components/Home/ClosingCTA';
+import FeatureCard from '@site/src/components/Home/FeatureCard';
+import PaidStatsRow from '@site/src/components/Home/PaidStatsRow';
+import UniversalStatCallout from '@site/src/components/Home/UniversalStatCallout';
+import ProblemNarrative from '@site/src/components/Home/ProblemNarrative';
+import SolutionPanel from '@site/src/components/Home/SolutionPanel';
 
 import AccountContext from '@site/src/context/accountContext';
-import CustomReactPlayer from '@site/src/utils/CustomReactPlayer';
-import { Alert } from '../components/Alert';
-import { AlertBar } from '../components/AlertBar';
+
+const FONT_MONO = "'IBM Plex Mono', monospace";
 
 export default function HomeComp() {
   // Internationalization
@@ -63,25 +58,6 @@ export default function HomeComp() {
   const { isHydrated, shouldShowAlertBar } = useContext(AccountContext);
 
   const isMobile = useMediaQuery(device.mobileL);
-  const isTablet = useMediaQuery(device.tablet);
-  const isLaptop = useMediaQuery(device.laptop);
-
-  // Hero video hover state
-  const [heroHovered, setHeroHovered] = useState(false);
-
-  const isSafari = () => {
-    if (typeof window === 'undefined') return false;
-    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  };
-
-  // Hero video hover handlers
-  const handleHeroMouseEnter = () => {
-    setHeroHovered(true);
-  };
-
-  const handleHeroMouseLeave = () => {
-    setHeroHovered(false);
-  };
 
   return (
     <HomeWrapper showAlertBar={isHydrated ? shouldShowAlertBar : false}>
@@ -97,62 +73,17 @@ export default function HomeComp() {
         aria-label={t('pages.home.hero-section.section-aria-label')}
       >
         <HeroContent alignSelf='center' overflow='visible'>
-          <HeroPrimary
-            flex='initial'
-            justifyContent='flex-start'
-            onMouseEnter={handleHeroMouseEnter}
-            onMouseLeave={handleHeroMouseLeave}
-            style={{
-              backgroundImage: heroHovered ? 'none' : undefined,
-            }}
-          >
-            {/* Hero Video - plays continuously */}
-            {!isMobile && (
-              <HeroVideo
-                url={
-                  require(
-                    isSafari()
-                      ? `@site/static/assets/website/hero/hero-hover-video.mp4`
-                      : `@site/static/assets/website/hero/hero-hover-video.webm`
-                  ).default
-                }
-                playing={true}
-                loop={true}
-                muted={true}
-                width='100%'
-                height='100%'
-                config={{
-                  file: {
-                    attributes: {
-                      controlsList: 'nofullscreen',
-                    },
-                  },
-                }}
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  zIndex: 1,
-                  opacity: 0.8,
-                }}
-              />
-            )}
-
+          <HeroPrimary flex='initial' justifyContent='flex-start'>
             <HeroItem alignItems='center'>
               <HeroBody>
-                {/*<ItemV margin='0 auto 48px auto' flex='0'>
-                  <AlertBar
-                    text='Apply for Season 3 Pre-Launch Access Eligibility'
-                    url='https://portal.push.org'
-                  />
-                </ItemV>*/}
                 <H1
                   zIndex='2'
-                  fontSize={isMobile ? '2.5rem' : '3.625rem'}
-                  margin='0 0 12px 0'
-                  fontWeight='600'
-                  lineHeight='126%'
-                  letterSpacing='normal'
+                  fontSize={isMobile ? '2.5rem' : '4rem'}
+                  margin='0 0 24px 0'
+                  fontWeight='500'
+                  lineHeight='100%'
+                  letterSpacing='-0.06em'
+                  fontFamily={FONT_MONO}
                   color='var(--ifm-color-white)'
                 >
                   {t('pages.home.hero-section.title')}
@@ -164,7 +95,7 @@ export default function HomeComp() {
                   fontSize={isMobile ? '1.125rem' : '1.25rem'}
                   fontWeight='400'
                   lineHeight='150%'
-                  letterSpacing='normal'
+                  letterSpacing='0.4px'
                 >
                   {t('pages.home.hero-section.description')}
                 </Span>
@@ -205,129 +136,57 @@ export default function HomeComp() {
         </HeroContent>
       </HeroSection>
 
-      {/* WHAT IS SECTION */}
-      <Section
-        id='what-is-push-chain'
-        aria-level='2'
-        aria-label={t('pages.home.whatis-section.section-aria-label')}
-      >
-        <Content alignSelf='center'>
-          <WhatIsSection />
-        </Content>
-      </Section>
+      {/* PROBLEM NARRATIVE SECTION */}
+      <ProblemNarrative />
 
-      {/* INNOVATION SECTION */}
+      {/* SOLUTION PANEL SECTION */}
+      <SolutionPanel />
+
+      {/* BUILT TO SCALE + FEATURE GRID A — one gradient plate, per Figma */}
+      <AgenticScaleSection />
+
+      {/* FEATURE GRID B SECTION */}
       <Section
-        id='innovations-of-push-chain'
+        id='universal-network'
         aria-level='2'
-        aria-label={t('pages.home.chain-features-section.section-aria-label')}
+        aria-label={t('pages.home.feature-grid-b.section-aria-label')}
       >
         <Content>
           <MultiContent>
-            <FeaturesTopSection maxWidth={'840px'} margin='0px auto'>
+            <GridBHeader flexDirection={isMobile ? 'column' : 'row'}>
               <H2
-                color='var(--ifm-color-home-subtitle)'
-                fontSize={isMobile ? '24px' : '30px'}
-                textAlign={isMobile ? 'left' : 'center'}
-                lineHeight='normal'
-                fontWeight='400'
-                letterSpacing='normal'
-                fontFamily='DM Sans, san-serif'
+                fontFamily={FONT_MONO}
+                fontSize={isMobile ? '1.75rem' : '3rem'}
+                fontWeight='500'
+                letterSpacing='-0.06em'
+                lineHeight='120%'
+                color='var(--ifm-color-white)'
               >
-                <B color='var(--ifm-color-white)'>
-                  {t(FeaturesList?.meta.title)}
-                </B>{' '}
-                {t(FeaturesList?.meta.subtitle)}
+                {/* Three lines per Figma: "Everything runs on a" /
+                    "network that reaches" / "every other chain." */}
+                {t(AgentFeaturesListB.meta.title)}
+                {'\n'}
+                <GradientWord>{t(AgentFeaturesListB.meta.titleGradient)}</GradientWord>
               </H2>
-            </FeaturesTopSection>
+              <Span
+                fontSize='1.25rem'
+                lineHeight='150%'
+                letterSpacing='0.4px'
+                color='var(--ifm-color-white)'
+              >
+                {t(AgentFeaturesListB.meta.subtitle)}
+              </Span>
+            </GridBHeader>
           </MultiContent>
           <MultiContent>
-            <FirstGridFeatures>
-              {FeaturesList?.first?.map((item) => (
-                <GridFeatureItem
-                  showDesktop={!item.config.hide.desktop}
-                  showLaptop={!item.config.hide.laptop}
-                  showTablet={!item.config.hide.tablet}
-                  showMobile={!item.config.hide.mobile}
-                >
-                  <Glassy item={item} />
-                </GridFeatureItem>
+            <FeatureGridRow flexDirection={isMobile ? 'column' : 'row'}>
+              {AgentFeaturesListB.cards.map((item) => (
+                <FeatureCard key={item.id} item={item} />
               ))}
-            </FirstGridFeatures>
-
-            <SecondGridFeatures>
-              {FeaturesList?.second?.map((item) => (
-                <GridFeatureItem
-                  showDesktop={!item.config.hide.desktop}
-                  showLaptop={!item.config.hide.laptop}
-                  showTablet={!item.config.hide.tablet}
-                  showMobile={!item.config.hide.mobile}
-                >
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </SecondGridFeatures>
-
-            <ThirdGridFeatures>
-              {FeaturesList?.third?.map((item, index) => (
-                <GridFeatureItem
-                  key={`${item.config.id}-${index}`}
-                  showDesktop={!item.config.hide.desktop}
-                  showLaptop={!item.config.hide.laptop}
-                  showTablet={!item.config.hide.tablet}
-                  showMobile={!item.config.hide.mobile}
-                >
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </ThirdGridFeatures>
+            </FeatureGridRow>
           </MultiContent>
           <MultiContent>
-            <FeaturesBottomSection
-              flexDirection={isMobile ? 'column' : 'row'}
-              justifyContent='space-between'
-              alignItems='center'
-            >
-              <ItemH
-                gap='24px'
-                flexDirection='row'
-                justifyContent='flex-start'
-                flexWrap='nowrap'
-              >
-                <H1Text>10x</H1Text>
-                <Span
-                  color='var(--ifm-color-white)'
-                  fontSize={isMobile ? '1.5rem' : '2rem'}
-                  fontWeight='500'
-                  lineHeight='140%'
-                  letterSpacing='-0.64px'
-                  gap='24px'
-                >
-                  {t(FeaturesList.meta.footer.title)}
-                  <FeaturesBottomOptionalText>
-                    <br />
-                    {t(FeaturesList.meta.footer.secondary)}
-                  </FeaturesBottomOptionalText>
-                </Span>
-              </ItemH>
-
-              <A
-                href={useBaseUrl('/docs')}
-                title={t(FeaturesList.meta.footer.ctaTitle)}
-                background='var(--ifm-color-custom-pink)'
-                borderRadius='16px'
-                border='1px solid rgba(255, 255, 255, 0.30)'
-                fontSize='1.125rem'
-                fontWeight='600'
-                letterSpacing='-0.03em'
-                lineHeight='1rem'
-                padding='16px 32px'
-                zIndex='2'
-              >
-                {t(FeaturesList.meta.footer.ctaText)}
-                <BsArrowRight className='start-svg' />
-              </A>
-            </FeaturesBottomSection>
+            <UniversalStatCallout />
           </MultiContent>
         </Content>
       </Section>
@@ -342,16 +201,8 @@ export default function HomeComp() {
           </Content>
         </ShowcaseSection> */}
 
-      {/* USEFUL STATS SECTION */}
-      <Section
-        id='useful-stats'
-        aria-level='2'
-        aria-label={t('pages.home.stats-section.section-aria-label')}
-      >
-        <Content>
-          <StatsSection />
-        </Content>
-      </Section>
+      {/* GET P.A.I.D SECTION */}
+      <PaidStatsRow />
 
       {/* PUSH CHAIN BLOG */}
       <Section
@@ -408,11 +259,12 @@ export default function HomeComp() {
 
           <H2
             fontSize='3rem'
+            fontFamily={FONT_MONO}
             color='var(--ifm-color-white)'
             margin='8px 0 0 0'
             fontWeight='500'
             lineHeight='120%'
-            letterSpacing='0.6px'
+            letterSpacing='-0.06em'
             role='heading'
             aria-level='2'
             aria-label={t('pages.home.blog-section.title-aria-label')}
@@ -420,7 +272,7 @@ export default function HomeComp() {
             {t('pages.home.blog-section.title')}
           </H2>
 
-          <RecentBlogPosts />
+          <RecentBlogPosts count={4} />
         </Content>
       </Section>
 
@@ -428,204 +280,31 @@ export default function HomeComp() {
       <Section
         id='faq'
         aria-level='2'
-        aria-label={t('components.short-faq-snippet.section-aria-label')}
+        aria-label={t('components.home-agent-faq.section-aria-label')}
       >
         <Content>
           <QnA
-            titleKey='components.short-faq-snippet.title'
-            titleAriaLabelKey='components.short-faq-snippet.title-aria-label'
-            discordLinkTitleKey='components.short-faq-snippet.discord-link-title'
-            discordLinkAriaLabelKey='components.short-faq-snippet.discord-link-aria-label'
-            discordLinkTextKey='components.short-faq-snippet.discord-link-text'
-            accordionAriaLabelKey='components.short-faq-snippet.accordion-aria-label'
-            exploreMoreTitleKey='components.short-faq-snippet.explore-more-title'
-            exploreMoreAriaLabelKey='components.short-faq-snippet.explore-more-aria-label'
-            exploreMoreTextKey='components.short-faq-snippet.explore-more-text'
+            variant='pushCore'
+            titleKey='components.home-agent-faq.title'
+            titleAriaLabelKey='components.home-agent-faq.title-aria-label'
+            discordLinkTitleKey='components.home-agent-faq.discord-link-title'
+            discordLinkAriaLabelKey='components.home-agent-faq.discord-link-aria-label'
+            discordLinkTextKey='components.home-agent-faq.discord-link-text'
+            accordionAriaLabelKey='components.home-agent-faq.accordion-aria-label'
+            exploreMoreTitleKey='components.home-agent-faq.explore-more-title'
+            exploreMoreAriaLabelKey='components.home-agent-faq.explore-more-aria-label'
+            exploreMoreTextKey='components.home-agent-faq.explore-more-text'
             discordUrl='https://discord.com/invite/pushchain'
             exploreMoreUrl='/knowledge/faq'
-            getQnAsFunction={getShortFAQsList}
+            getQnAsFunction={getHomeAgentFAQsList}
+            titleFontFamily={FONT_MONO}
+            titleFontWeight='500'
           />
         </Content>
       </Section>
 
-      {/* BACKED BY SECTION */}
-      <Section
-        id='backing'
-        aria-level='2'
-        aria-label={t('pages.home.trustedby-section.section-aria-label')}
-      >
-        <Content alignSelf='center' className='fluid'>
-          <FeaturedGlowCircle />
-
-          <InvestorItem alignItems='stretch'>
-            <H2
-              color='var(--ifm-color-white)'
-              fontWeight='500'
-              letterSpacing='-0.02em'
-              fontSize={isMobile ? '24px' : '2rem'}
-              lineHeight='130%'
-              textAlign='center'
-            >
-              {t('pages.home.trustedby-section.title')}
-            </H2>
-          </InvestorItem>
-
-          <MarqueeAnimationContainer
-            margin={isMobile ? '24px 0 2.625rem 0' : '64px 0 2.625rem 0'}
-            flex='1'
-            alignItems='stretch'
-          >
-            <Marquee
-              direction='left'
-              speed={50}
-              gradient={true}
-              gradientColor={'transparent'}
-              gradientWidth={80}
-              pauseOnHover={false}
-            >
-              {InvList.top.map((item) => {
-                return (
-                  <InvestorCard key={item.id} style={{ margin: '0 12px' }}>
-                    <InvestorIcon
-                      width={item.title ? 64 : 'auto'}
-                      src={
-                        require(
-                          `@site/static/assets/website/investors/${item.srcref}.webp`
-                        ).default
-                      }
-                      srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                      alt={`${t('pages.home.trustedby-section.trusted-by-alt')}${item?.alt}}`}
-                    />
-                    {item.title && (
-                      <InvestorDetails>
-                        <InvestorTitle>{item.title}</InvestorTitle>
-                        {item.subtitle && (
-                          <InvestorSubtitle>{item.subtitle}</InvestorSubtitle>
-                        )}
-                      </InvestorDetails>
-                    )}
-                  </InvestorCard>
-                );
-              })}
-            </Marquee>
-          </MarqueeAnimationContainer>
-
-          <MarqueeAnimationContainer flex='1' alignItems='stretch'>
-            <Marquee
-              direction='right'
-              speed={50}
-              gradient={true}
-              gradientColor={'transparent'}
-              gradientWidth={80}
-              pauseOnHover={false}
-            >
-              {InvList.bottom.map((item, i) => {
-                return (
-                  <InvestorCard
-                    key={item.id}
-                    flexDirection={item.title ? 'true' : 'false'}
-                    style={{ margin: '0 12px' }}
-                  >
-                    <InvestorIcon
-                      width={item.title ? '64px' : 'auto'}
-                      borderRadius={item.title ? '50%' : '0'}
-                      src={
-                        require(
-                          `@site/static/assets/website/investors/${item.srcref}.webp`
-                        ).default
-                      }
-                      srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                      alt={`${t('pages.home.trustedby-section.trusted-by-alt')}${item?.alt}}`}
-                    />
-                    {item.title && (
-                      <InvestorDetails>
-                        <InvestorTitle>{item.title}</InvestorTitle>
-                        {item.subtitle && (
-                          <InvestorSubtitle>{item.subtitle}</InvestorSubtitle>
-                        )}
-                      </InvestorDetails>
-                    )}
-                  </InvestorCard>
-                );
-              })}
-            </Marquee>
-          </MarqueeAnimationContainer>
-
-          <FeaturedSection
-            aria-level='2'
-            aria-label={t('pages.home.featued-section.aria-label')}
-          />
-        </Content>
-      </Section>
-
-      {/* ENDING LETS PUSH SECTION */}
-      <Section
-        id='letspush'
-        aria-level='2'
-        aria-label={t('pages.home.ending-section.aria-label')}
-      >
-        <Content className='content'>
-          <MultiContent className='small'>
-            <VideoItemV>
-              <CustomReactPlayer
-                url={
-                  require(
-                    isSafari()
-                      ? `@site/static/assets/website/home/others/push-chain-final.mp4`
-                      : `@site/static/assets/website/home/others/push-chain-final.webm`
-                  ).default
-                }
-                playing
-                playContinuously
-                config={{
-                  file: {
-                    attributes: {
-                      controlsList: 'nofullscreen',
-                    },
-                  },
-                }}
-              />
-              <H2
-                fontSize={isMobile ? '2.5rem' : '4rem'}
-                color='var(--ifm-color-white)'
-                fontWeight='600'
-                lineHeight='120%'
-                textAlign='center'
-              >
-                {t('pages.home.ending-section.section-title')}
-              </H2>
-              <Span
-                fontSize='1.25rem'
-                color='var(--ifm-color-white)'
-                fontWeight='400'
-                lineHeight='125%'
-                textAlign='center'
-              >
-                {t('pages.home.ending-section.section-subtitle')}
-              </Span>
-            </VideoItemV>
-          </MultiContent>
-          <MultiContent className='small'>
-            <BuildUniversalAppLink
-              background='var(--ifm-color-custom-pink)'
-              borderRadius='16px'
-              border='1px solid rgba(255, 255, 255, 0.30)'
-              fontSize='1.125rem'
-              fontWeight='600'
-              letterSpacing='-0.03em'
-              lineHeight='1rem'
-              padding='16px 32px'
-              href='/docs'
-              target='_blank'
-              title={t('pages.home.ending-section.docs-link.title')}
-              aria-label={t('pages.home.ending-section.docs-link.aria-label')}
-            >
-              <p>{t('pages.home.ending-section.docs-link.text')}</p>
-              <BsArrowRight className='svg' size={23} />
-            </BuildUniversalAppLink>
-          </MultiContent>
-        </Content>
-      </Section>
+      {/* CLOSING CTA */}
+      <ClosingCTA />
     </HomeWrapper>
   );
 }
@@ -638,66 +317,30 @@ const GlowCircle = styled.div`
   pointer-events: none;
   z-index: 2;
 
+  /* Centred on the hero rather than positioned by a per-breakpoint left
+     percentage — those offsets put the glow's *left edge* at the percentage,
+     so its centre drifted further right the wider the screen got (149px off
+     centre at 1512px). */
   width: 600px;
   height: 600px;
-  left: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   top: 200px;
-
-  @media ${device.desktopL} {
-    left: 40%;
-  }
 
   @media ${device.laptopL} {
     width: 500px;
     height: 500px;
-    left: 35%;
   }
 
   @media ${device.tablet} {
     width: 543px;
     height: 538px;
-    left: 238px;
     top: 29px;
   }
 
   @media ${device.mobileL} {
     width: 395px;
     height: 392px;
-    left: -12px;
-    top: 102px;
-  }
-`;
-
-const FeaturedGlowCircle = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(179, 72, 236, 0.2);
-  filter: blur(125px);
-  pointer-events: none;
-  z-index: 999999;
-
-  width: 443px;
-  height: 338px;
-  left: 35%;
-  top: 150px;
-
-  @media ${device.laptopL} {
-    width: 500px;
-    height: 500px;
-    left: 25%;
-  }
-
-  @media ${device.tablet} {
-    width: 543px;
-    height: 538px;
-    left: 238px;
-    top: 0px;
-  }
-
-  @media ${device.mobileL} {
-    width: 395px;
-    height: 392px;
-    left: -12px;
     top: 102px;
   }
 `;
@@ -706,7 +349,7 @@ const HomeWrapper = styled(ItemV)`
   background: var(--ifm-color-black);
   margin: 0;
   padding: 0;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   font-family:
     DM Sans,
     san-serif !important;
@@ -743,7 +386,6 @@ const HomeWrapper = styled(ItemV)`
 const HeroSection = styled(Section)`
   overflow-y: visible;
   overflow-x: clip;
-  min-height: 100vh;
 `;
 
 const HeroContent = styled(Content)`
@@ -789,8 +431,6 @@ const HeroPrimary = styled.div`
   }
 
   @media ${device.mobileL} {
-    background-image: url(${HeroBGMobile});
-    background-size: contain;
     aspect-ratio: 1/2;
     width: 100%;
     height: 600px;
@@ -944,307 +584,64 @@ const GridContent = styled(Content)`
   }
 `;
 
-const BottomSection = styled(Section)`
-  .content {
-    padding-top: 100px;
-    padding-bottom: 200px;
 
-    @media ${device.mobileL} {
-      padding-top: 125px;
-      padding-bottom: 125px;
-    }
-  }
-`;
-
-const FAQSection = styled(Section)`
-  padding: 100px 0;
-
-  @media ${device.mobileL} {
-    padding: 0;
-  }
-`;
-
-const FeaturedInSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
-const BackedByContent = styled(Content)`
-  width: 100%;
-  max-width: 100%;
-  padding: 0px;
-`;
-
-const InvestorItem = styled(ItemV)``;
-
-const InvestorCard = styled.div`
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(112, 90, 208, 0.4);
-  border-radius: 16px;
-  padding: 8px;
-  min-width: 242px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  overflow: hidden;
-  box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-`;
-
-const InvestorIcon = styled(Image)`
-  margin: auto auto;
-`;
-
-const InvestorDetails = styled(ItemV)`
-  align-self: stretch;
-  flex: 1;
-  margin-bottom: auto;
-`;
-
-const InvestorTitle = styled(Span)`
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 142%;
-  color: var(--ifm-color-neutral-1200);
-`;
-
-const InvestorSubtitle = styled(Span)`
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 160%;
-  letter-spacing: 0.11em;
-  color: var(--ifm-color-neutral-900);
-  text-transform: uppercase;
-`;
-
-const FeaturesTopSection = styled(ItemV)``;
-
-const FirstGridFeatures = styled(ItemH)`
-  font-family:
-    DM Sans,
-    san-serif;
+const FeatureGridRow = styled(ItemH)`
   gap: 24px;
-  justify-content: flex-start;
-  width: 100%;
   align-items: stretch;
-  flex-wrap: nowrap;
+  width: 100%;
 
-  & > div:first-child {
-    flex: 1;
+  &:not(:first-child) {
+    margin-top: 24px;
   }
 
-  & > div:nth-child(2) {
-    flex: 1.8;
-  }
-
+  /* Three dividers side by side stop being readable well before mobile. */
   @media ${device.laptop} {
-    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+  }
+`;
+
+const GridBHeader = styled(ItemV)`
+  /* Figma node 49243:16611 — 115px gap, baseline-aligned via items-end. */
+  gap: 115px;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  h2 {
     flex: 1;
-
-    & > div:first-child {
-      flex: 1;
-    }
-
-    & > div:nth-child(2) {
-      flex: 1;
-    }
+    max-width: 620px;
+    /* Title carries its own line breaks, matching the design's wrap points. */
+    white-space: pre-line;
   }
 
-  @media ${device.mobileL} {
-    width: 100%;
-    display: flex;
+  span {
+    flex: 0 0 auto;
+    max-width: 492px;
+  }
+
+  /* 115px between two columns needs real width; stack below the laptop
+     breakpoint rather than crushing the heading. */
+  @media ${device.laptop} {
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
 
-    & > div:first-child {
-      width: 100%;
+    h2,
+    span {
+      max-width: 100%;
+    }
+  }
+
+  @media ${device.mobileL} {
+    h2,
+    span {
       max-width: 100%;
     }
   }
 `;
 
-const SecondGridFeatures = styled(ItemH)`
-  font-family:
-    DM Sans,
-    san-serif;
-  gap: 24px;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  margin-top: 24px;
-
-  & > div:first-child {
-    flex: 1;
-  }
-
-  & > div:nth-child(2) {
-    flex: 2;
-  }
-
-  & > div:nth-child(3) {
-    flex: 1;
-  }
-
-  @media ${device.laptop} {
-    width: 100%;
-
-    & > div:first-child {
-      flex: 1.4;
-    }
-
-    & > div:nth-child(2) {
-      flex: 1;
-    }
-  }
-
-  @media ${device.tablet} {
-    & > div:first-child {
-      flex: 1;
-    }
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & > div:first-child,
-    & > div:nth-child(3) {
-      width: 100%;
-      min-width: 100%;
-    }
-
-    & > div:nth-child(3) {
-      display: flex !important;
-    }
-  }
-`;
-
-const ThirdGridFeatures = styled(ItemH)`
-  font-family:
-    DM Sans,
-    san-serif;
-  gap: 24px;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  margin-top: 24px;
-
-  & > div:first-child {
-    flex: 2;
-  }
-
-  & > div:nth-child(2) {
-    flex: 1;
-  }
-
-  & > div:nth-child(3) {
-    flex: 1;
-  }
-
-  @media ${device.laptop} {
-    width: 100%;
-    flex: 1;
-
-    & > div:nth-child(2) {
-      flex: 1;
-    }
-
-    & > div:nth-child(3) {
-      flex: 1;
-    }
-  }
-
-  @media ${device.tablet} {
-    & > div:nth-child(2) {
-      flex: 1;
-    }
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & > div:first-child {
-      display: flex;
-      width: 100%;
-      min-width: 100%;
-    }
-  }
-`;
-
-const H1Text = styled(H1)`
-  leading-trim: both;
-  text-edge: cap;
-  text-shadow: 0px 0px 10px rgba(198, 139, 249, 0.5);
-  font-family: 'DM Sans';
-  font-size: 6.5rem;
-  font-style: normal;
-  font-weight: 600;
-  // line-height: 38.578px;
-  letter-spacing: -2.067px;
-
-  background: linear-gradient(
-    90deg,
-    var(--ifm-color-warning) -3.12%,
-    var(--ifm-color-home-gradient-end) 109.09%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-const FeaturesBottomSection = styled(ItemH)`
-  gap: 24px;
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-  }
-
-  @media ${device.mobileL} {
-    a {
-      width: 100%;
-    }
-  }
-`;
-
-const FeaturesBottomOptionalText = styled.span`
-  @media ${device.tablet} {
-    display: none;
-  }
-`;
-
-const GridFeatureItem = styled.div`
-  display: ${(props) => (props.showDesktop ? 'flex' : 'none')};
-  flex-direction: row;
-  flex: 1;
-  padding: 0px;
-
-  @media ${device.laptopL} {
-    display: ${(props) => (props.showLaptop ? 'flex' : 'none')};
-  }
-
-  @media ${device.tablet} {
-    display: ${(props) => (props.showTablet ? 'flex' : 'none')};
-  }
-
-  @media ${device.mobileL} {
-    display: ${(props) => (props.showMobile ? 'flex' : 'none')};
-  }
+const GradientWord = styled.span`
+  color: var(--ifm-color-custom-pink);
 `;
 
 const TagItem = styled.b`
@@ -1275,35 +672,6 @@ const SlideLink = styled(A)`
   }
 `;
 
-const BuildUniversalAppLink = styled(A)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: inherit;
-  align-self: center;
-  gap: 12px;
-
-  p {
-    margin: 0;
-  }
-
-  .anchorSVGlink {
-    color: var(--ifm-color-white);
-    top: 0px;
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-  }
-
-  &:hover {
-    text-decoration: none !important;
-    .anchorSVGlink {
-      color: var(--ifm-color-white);
-    }
-  }
-`;
-
 const SpanLink = styled(Span)`
   position: relative;
   text-decoration: none;
@@ -1330,11 +698,6 @@ const SpanLink = styled(Span)`
   }
 `;
 
-const MarqueeAnimationContainer = styled(ItemV)`
-  max-height: 96px;
-  min-height: 96px;
-`;
-
 const AccordionGrid = styled.div`
   max-width: 877px;
   min-width: 877px;
@@ -1342,45 +705,5 @@ const AccordionGrid = styled.div`
   @media ${device.laptop} {
     max-width: 100%;
     min-width: 100%;
-  }
-`;
-
-const HeroVideo = styled(ReactPlayer)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-`;
-
-const VideoItemV = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  margin: 0 auto;
-  pointer-events: none;
-  touch-action: none;
-
-  h2 {
-    margin-top: auto;
-
-    @media ${device.mobileL} {
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  @media ${device.tablet} {
-    max-width: 500px;
-  }
-
-  @media ${device.mobileL} {
-    max-width: 350px;
   }
 `;

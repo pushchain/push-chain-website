@@ -965,9 +965,6 @@ const HeaderItemH = styled(ItemH)`
   border-radius: 24px;
   border: 1px solid rgba(171, 70, 248, 0.4);
   background: rgba(0, 0, 0, 0.5);
-  // box-shadow:
-  //   2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
-  //   1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
   z-index: 1;
 
   &::before {
@@ -981,6 +978,22 @@ const HeaderItemH = styled(ItemH)`
     backdrop-filter: blur(5px);
     z-index: -1;
     border-radius: 24px;
+  }
+
+  /* Inner highlight from Figma (node 49113:39) — the same inset pair the
+     footer's newsletter input uses. It has to be its own layer *above* the
+     ::before glass: as a box-shadow on this element it paints underneath
+     that backdrop-filter, which blurs the highlight away. Figma stacks it
+     the same way, as the last child over the blurred fill. */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    pointer-events: none;
+    box-shadow:
+      2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+      1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
   }
 
   margin: ${({ showAlertBar }) =>

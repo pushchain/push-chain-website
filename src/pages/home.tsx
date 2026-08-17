@@ -19,6 +19,13 @@ function HomePage() {
   // Internationalization
   const { t } = useTranslation();
 
+  const homeFaqs = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6'].map(
+    (faqKey) => ({
+      question: t(`components.home-agent-faq.faqs.${faqKey}.question`),
+      answer: t(`components.home-agent-faq.faqs.${faqKey}.answer`),
+    })
+  );
+
   return (
     <Layout
       title={t('pages.home.seo.title')}
@@ -70,8 +77,8 @@ function HomePage() {
         />
       </Head>
 
-      {/* FAQ Schema Markup with default FAQs */}
-      <SchemaMarkup type='FAQPage' />
+      {/* FAQ Schema Markup for the homepage's agent-focused FAQ */}
+      <SchemaMarkup type='FAQPage' faqs={homeFaqs} />
 
       {/* Render Home Content */}
       <HomeComp />

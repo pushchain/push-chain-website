@@ -140,7 +140,7 @@ export default function Root({ children }) {
           {typeof window !== 'undefined' && showAlertBar && (
             <InfoBar
               translatedTextKey='notifications.info-bar.title'
-              url='/blog/push-chain-completes-hacken-security-audit/'
+              url='/knowledge/testnet'
             />
           )}
 
@@ -180,6 +180,6 @@ const Content = styled.div`
   flex: 1;
   ${({ isHome }) =>
     isHome &&
-    `background: linear-gradient(90deg, #3524ed 0%,var(--ifm-color-custom-pink) 50%, #3524ed 100%);
+    `background: linear-gradient(90deg, #f898f0 0%, #e670ee 25%, var(--ifm-color-custom-pink) 50%, #e670ee 75%, #f898f0 100%);
     `}
 `;

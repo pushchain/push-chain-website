@@ -1,8 +1,8 @@
 {
   "footer": {
     "email-section": {
-      "title": "Stay in the loop with Push Chain",
-      "title-secondary": "news and updates!",
+      "title": "Want to receive Push Core",
+      "title-secondary": "news, and updates?",
       "title-aria-label": "Newsletter subscription section",
       "section-aria-label": "Push Chain newsletter signup"
     },
@@ -28,6 +28,10 @@
       "help": {
         "title": "Help",
         "title-aria-label": "Help navigation"
+      },
+      "products": {
+        "title": "Products",
+        "title-aria-label": "Products navigation"
       }
     },
     "links": {
@@ -68,7 +72,9 @@
       "reddit": "Reddit",
       "reddit-title": "Join the Push Chain subreddit",
       "telegram": "Telegram",
-      "telegram-title": "Join the Push Chain Telegram"
+      "telegram-title": "Join the Push Chain Telegram",
+      "quick-start": "Quick Start",
+      "quick-start-title": "Get up and running on Push Chain quickly"
     },
     "social-section": {
       "section-aria-label": "Social media links and legal information",
