@@ -2,7 +2,7 @@
 title: "Setup Section"
 url: "https://pushchain.github.io/docs/chain/setup/"
 section: "setup"
-lastUpdated: "2026-08-17T16:17:48Z"
+lastUpdated: "2026-08-19T11:27:12Z"
 description: "Setup Section | Push Chain Docs"
 ---
 

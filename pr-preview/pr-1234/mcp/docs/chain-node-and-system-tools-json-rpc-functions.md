@@ -2,7 +2,7 @@
 title: "JSON-RPC Functions"
 url: "https://pushchain.github.io/docs/chain/node-and-system-tools/json-rpc-functions/"
 section: "node-and-system-tools"
-lastUpdated: "2026-08-17T16:17:48Z"
+lastUpdated: "2026-08-19T11:27:12Z"
 description: "JSON-RPC Functions | Deep Dives | Push Chain Docs"
 ---
 

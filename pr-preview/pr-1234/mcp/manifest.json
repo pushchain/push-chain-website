@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "serverVersion": "1.0.0",
-  "generated": "2026-08-17T20:24:59.531Z",
-  "buildHash": "dfde00ee45d7da364dab520cff4069df20241160d6b3467a06a395829f9014eb",
+  "generated": "2026-08-19T11:32:55.933Z",
+  "buildHash": "9962675329a16ffad705e01a9b347ea1702f336007f0f56f2ac4499f0915d7a9",
   "siteUrl": "https://pushchain.github.io",
   "locale": "en",
   "docsVersion": "current",
   "docCount": 79,
   "skippedCount": 0,
-  "indexBytes": 744353,
+  "indexBytes": 745114,
   "sections": [
     "build",
     "chain",
@@ -26,7 +26,7 @@
       "file": "docs/index.md",
       "title": "Documentation Hub",
       "section": "docs",
-      "lastUpdated": "2026-08-17T16:17:48Z"
+      "lastUpdated": "2026-08-19T11:27:12Z"
     },
     {
       "id": "chain",
@@ -34,7 +34,7 @@
       "file": "docs/chain.md",
       "title": "Intro to Push Chain",
       "section": "chain",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Introduction | Push Chain Docs"
     },
     {
@@ -43,7 +43,7 @@
       "file": "docs/chain-build.md",
       "title": "Build Section",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Build Section | Push Chain Docs"
     },
     {
@@ -52,7 +52,7 @@
       "file": "docs/chain-build-advanced.md",
       "title": "Advanced Section",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Advanced Section | Build | Push Chain Docs"
     },
     {
@@ -61,7 +61,7 @@
       "file": "docs/chain-build-advanced-custom-universal-signer.md",
       "title": "Custom Universal Signer",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Custom Universal Signer | Build | Advanced | Push Chain Docs"
     },
     {
@@ -70,7 +70,7 @@
       "file": "docs/chain-build-advanced-upgrade-universal-account.md",
       "title": "Upgrade Universal Account",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Upgrade Universal Account | Advanced | Build | Push Chain Docs"
     },
     {
@@ -79,7 +79,7 @@
       "file": "docs/chain-build-constants.md",
       "title": "Constants Reference",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Constants Reference | Build | Push Chain Docs"
     },
     {
@@ -88,7 +88,7 @@
       "file": "docs/chain-build-contract-helpers.md",
       "title": "Contract Helpers",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Contract Helpers | Build | Push Chain Docs"
     },
     {
@@ -97,7 +97,7 @@
       "file": "docs/chain-build-contract-initiated-examples.md",
       "title": "Contract-Initiated Examples Section",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Contract-Initiated Examples Section | Build | Push Chain Docs"
     },
     {
@@ -106,7 +106,7 @@
       "file": "docs/chain-build-contract-initiated-examples-advanced-patterns.md",
       "title": "Advanced Patterns",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Advanced Patterns | Contract-Initiated Examples | Build | Push Chain Docs"
     },
     {
@@ -115,7 +115,7 @@
       "file": "docs/chain-build-contract-initiated-examples-inbound-to-push-chain.md",
       "title": "Inbound to Push Chain",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Inbound to Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
     },
     {
@@ -124,7 +124,7 @@
       "file": "docs/chain-build-contract-initiated-examples-outbound-from-push-chain.md",
       "title": "Outbound from Push Chain",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Outbound from Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
     },
     {
@@ -133,7 +133,7 @@
       "file": "docs/chain-build-contract-initiated-examples-round-trip-auto-back-leg.md",
       "title": "Round-Trip with Auto Back-Leg",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Round-Trip with Auto Back-Leg | Examples | Build | Push Chain Docs"
     },
     {
@@ -142,7 +142,7 @@
       "file": "docs/chain-build-contract-initiated-multichain-execution.md",
       "title": "Contract-Initiated Multichain Execution",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Contract-Initiated Multichain Execution | Build | Push Chain Docs"
     },
     {
@@ -151,7 +151,7 @@
       "file": "docs/chain-build-create-universal-signer.md",
       "title": "Create Universal Signer",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Create Universal Signer | Build | Push Chain Docs"
     },
     {
@@ -160,7 +160,7 @@
       "file": "docs/chain-build-initialize-evm-client.md",
       "title": "Initialize EVM Client",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Initialize EVM Client | Build | Push Chain Docs"
     },
     {
@@ -169,7 +169,7 @@
       "file": "docs/chain-build-initialize-push-chain-client.md",
       "title": "Initialize Push Chain Client",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Initialize Push Chain Client | Build | Push Chain Docs"
     },
     {
@@ -178,7 +178,7 @@
       "file": "docs/chain-build-reading-blockchain-state.md",
       "title": "Reading Blockchain State",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Reading Blockchain State | Build | Push Chain Docs"
     },
     {
@@ -187,7 +187,7 @@
       "file": "docs/chain-build-recommended-practices.md",
       "title": "Recommended Practices",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Recommended Practices | Build | Push Chain Docs"
     },
     {
@@ -196,7 +196,7 @@
       "file": "docs/chain-build-send-multichain-transactions.md",
       "title": "Send Multichain Transactions",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Send Multichain Transactions | Build | Push Chain Docs"
     },
     {
@@ -205,7 +205,7 @@
       "file": "docs/chain-build-send-universal-transaction.md",
       "title": "Send Universal Transaction",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Send Universal Transaction | Build | Push Chain Docs"
     },
     {
@@ -214,7 +214,7 @@
       "file": "docs/chain-build-sign-universal-message.md",
       "title": "Sign Universal Message",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Sign Message | Build | Push Chain Docs"
     },
     {
@@ -223,7 +223,7 @@
       "file": "docs/chain-build-track-universal-transaction.md",
       "title": "Track Universal Transaction",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Track Universal Transaction | Build | Push Chain Docs"
     },
     {
@@ -232,7 +232,7 @@
       "file": "docs/chain-build-understanding-universal-transactions.md",
       "title": "Understanding Universal Transactions",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Understanding Universal Transactions | Build | Push Chain Docs"
     },
     {
@@ -241,7 +241,7 @@
       "file": "docs/chain-build-universal-transaction-scenarios.md",
       "title": "Universal Transaction Scenarios",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Universal Transaction Scenarios | Build | Push Chain Docs"
     },
     {
@@ -250,7 +250,7 @@
       "file": "docs/chain-build-utility-functions.md",
       "title": "Utility Functions",
       "section": "build",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Utility Functions | Build | Push Chain Docs"
     },
     {
@@ -259,7 +259,7 @@
       "file": "docs/chain-changelog.md",
       "title": "Changelog",
       "section": "chain",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Changelog | Push Chain Docs"
     },
     {
@@ -268,7 +268,7 @@
       "file": "docs/chain-code-snippet.md",
       "title": "Code Snippet Playground",
       "section": "chain",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Interactive code playground for Push Chain docs"
     },
     {
@@ -277,7 +277,7 @@
       "file": "docs/chain-deep-dives.md",
       "title": "Deep Dives Section",
       "section": "deep-dives",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Deep Dives Section | Push Chain Docs"
     },
     {
@@ -286,7 +286,7 @@
       "file": "docs/chain-deep-dives-how-cea-works.md",
       "title": "How Chain Executor Account (CEA) Works",
       "section": "deep-dives",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "How Chain Executor Account (CEA) Works | Deep Dives | Push Chain Docs"
     },
     {
@@ -295,7 +295,7 @@
       "file": "docs/chain-deep-dives-how-uea-works.md",
       "title": "How Universal Executor Account (UEA) Works",
       "section": "deep-dives",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "How Universal Executor Account (UEA) Works | Deep Dives | Push Chain Docs"
     },
     {
@@ -304,7 +304,7 @@
       "file": "docs/chain-for-ai-agents.md",
       "title": "For AI Agents & LLMs",
       "section": "chain",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "For AI Agents & LLMs | Push Chain Docs"
     },
     {
@@ -313,7 +313,7 @@
       "file": "docs/chain-important-concepts.md",
       "title": "Important Concepts",
       "section": "chain",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Important Concepts | Push Chain Docs"
     },
     {
@@ -322,7 +322,7 @@
       "file": "docs/chain-node-and-system-tools.md",
       "title": "Node & System Tools Section",
       "section": "node-and-system-tools",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Node & System Tools Section | Push Chain Docs"
     },
     {
@@ -331,7 +331,7 @@
       "file": "docs/chain-node-and-system-tools-json-rpc-functions.md",
       "title": "JSON-RPC Functions",
       "section": "node-and-system-tools",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "JSON-RPC Functions | Deep Dives | Push Chain Docs"
     },
     {
@@ -340,7 +340,7 @@
       "file": "docs/chain-node-and-system-tools-localnet.md",
       "title": "Running Localnet",
       "section": "node-and-system-tools",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Localnet | Setup | Push Chain Docs"
     },
     {
@@ -349,7 +349,7 @@
       "file": "docs/chain-node-and-system-tools-running-push-validator.md",
       "title": "Running Push Validator",
       "section": "node-and-system-tools",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Running Push Validators | Deep Dives | Push Chain Docs"
     },
     {
@@ -358,7 +358,7 @@
       "file": "docs/chain-quickstart.md",
       "title": "Quickstart",
       "section": "chain",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Quickstart | Push Chain Docs"
     },
     {
@@ -367,7 +367,7 @@
       "file": "docs/chain-setup.md",
       "title": "Setup Section",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Setup Section | Push Chain Docs"
     },
     {
@@ -376,7 +376,7 @@
       "file": "docs/chain-setup-chain-config.md",
       "title": "Chain Configuration",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Chain Configuration | Setup | Push Chain Docs"
     },
     {
@@ -385,7 +385,7 @@
       "file": "docs/chain-setup-faucets.md",
       "title": "Faucets",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Faucets | Setup | Push Chain Docs"
     },
     {
@@ -394,7 +394,7 @@
       "file": "docs/chain-setup-smart-contract-address-book.md",
       "title": "Smart Contract Address Book",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Smart Contract Address Book | Setup | Push Chain Docs"
     },
     {
@@ -403,7 +403,7 @@
       "file": "docs/chain-setup-smart-contract-environment.md",
       "title": "Smart Contract Environment Section",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Smart Contract Environment Section | Setup | Push Chain Docs"
     },
     {
@@ -412,7 +412,7 @@
       "file": "docs/chain-setup-smart-contract-environment-configure-foundry.md",
       "title": "Configure Foundry",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Configure Foundry | Smart Contract Environment | Tooling | Setup | Push Chain Docs"
     },
     {
@@ -421,7 +421,7 @@
       "file": "docs/chain-setup-smart-contract-environment-configure-hardhat.md",
       "title": "Configure Hardhat",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Configure Hardhat | Smart Contract Environment | Tooling | Setup | Push Chain Docs"
     },
     {
@@ -430,7 +430,7 @@
       "file": "docs/chain-setup-smart-contract-environment-configure-remix.md",
       "title": "Remix IDE",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Remix IDE | Smart Contract Environment | Setup | Push Chain Docs"
     },
     {
@@ -439,7 +439,7 @@
       "file": "docs/chain-setup-tooling.md",
       "title": "Tooling Section",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Tooling Section | Setup | Push Chain Docs"
     },
     {
@@ -448,7 +448,7 @@
       "file": "docs/chain-setup-tooling-block-explorer.md",
       "title": "Block Explorer",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Block Explorer | Tooling | Setup | Push Chain Docs"
     },
     {
@@ -457,7 +457,7 @@
       "file": "docs/chain-setup-tooling-faucet.md",
       "title": "Faucet",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Faucet | Tooling | Setup | Push Chain Docs"
     },
     {
@@ -466,7 +466,7 @@
       "file": "docs/chain-setup-tooling-wallet-setup.md",
       "title": "Wallet Setup",
       "section": "setup",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Wallet Setup | Tooling | Setup | Push Chain Docs"
     },
     {
@@ -475,7 +475,7 @@
       "file": "docs/chain-tutorials.md",
       "title": "Tutorials Section",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Tutorials Section | Push Chain Docs"
     },
     {
@@ -484,7 +484,7 @@
       "file": "docs/chain-tutorials-basics.md",
       "title": "Basics Section",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Basics Section | Tutorials | Push Chain Docs"
     },
     {
@@ -493,7 +493,7 @@
       "file": "docs/chain-tutorials-basics-tutorial-mint-erc-20-tokens.md",
       "title": "Mint Universal ERC-20 Tokens",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs"
     },
     {
@@ -502,7 +502,7 @@
       "file": "docs/chain-tutorials-basics-tutorial-simple-counter.md",
       "title": "Build a Counter App",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Build a Counter App | Tutorials | Push Chain Docs"
     },
     {
@@ -511,7 +511,7 @@
       "file": "docs/chain-tutorials-basics-tutorial-universal-counter.md",
       "title": "Build a Universal Counter App",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Build a Universal Counter App | Tutorials | Push Chain Docs"
     },
     {
@@ -520,7 +520,7 @@
       "file": "docs/chain-tutorials-integration-and-tooling.md",
       "title": "Integration and Tooling Section",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Integration and Tooling Section | Tutorials | Push Chain Docs"
     },
     {
@@ -529,7 +529,7 @@
       "file": "docs/chain-tutorials-integration-and-tooling-tutorial-scaffoldeth2.md",
       "title": "Setup Scaffold-ETH for Push",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "{Configure Scaffold‑ETH 2 for Push Chain: Deploy and Interact with a Contract | Tutorials | Push Chain Docs}"
     },
     {
@@ -538,7 +538,7 @@
       "file": "docs/chain-tutorials-power-features.md",
       "title": "Power Features Section",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Power Features Section | Tutorials | Push Chain Docs"
     },
     {
@@ -547,7 +547,7 @@
       "file": "docs/chain-tutorials-power-features-tutorial-batch-transactions.md",
       "title": "Batch Transactions (Multicall)",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Batch Transactions | Tutorials | Push Chain Docs"
     },
     {
@@ -556,7 +556,7 @@
       "file": "docs/chain-tutorials-power-features-tutorial-derive-chain-executor-account.md",
       "title": "Derive Chain Executor Accounts (CEAs)",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Derive Chain Executor Accounts | Tutorials | Push Chain Docs"
     },
     {
@@ -565,7 +565,7 @@
       "file": "docs/chain-tutorials-power-features-tutorial-derive-universal-executor-account.md",
       "title": "Derive Universal Executor Accounts (UEAs)",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Derive Universal Executor Accounts | Tutorials | Push Chain Docs"
     },
     {
@@ -574,7 +574,7 @@
       "file": "docs/chain-tutorials-power-features-tutorial-universal-cross-chain-counters.md",
       "title": "Build Universal Cross-Chain Counters",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Build Universal Cross-Chain Counters | Tutorials | Push Chain Docs"
     },
     {
@@ -583,7 +583,7 @@
       "file": "docs/chain-tutorials-token-systems.md",
       "title": "Token Systems Section",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Token Systems Section | Tutorials | Push Chain Docs"
     },
     {
@@ -592,7 +592,7 @@
       "file": "docs/chain-tutorials-token-systems-tutorial-universal-airdrop.md",
       "title": "Build a Universal Airdrop",
       "section": "tutorials",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Build a Universal Airdrop | Tutorials | Push Chain Docs"
     },
     {
@@ -601,7 +601,7 @@
       "file": "docs/chain-ui-kit.md",
       "title": "UI Kit Section",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "UI Kit Section | Push Chain Docs"
     },
     {
@@ -610,7 +610,7 @@
       "file": "docs/chain-ui-kit-customizations.md",
       "title": "Customizations Section",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Customizations Section | UI Kit | Push Chain Docs"
     },
     {
@@ -619,7 +619,7 @@
       "file": "docs/chain-ui-kit-customizations-push-universal-account-button.md",
       "title": "Push Universal Account Button",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Push Universal Account Button | Customizations | UI Kit | Push Chain Docs"
     },
     {
@@ -628,7 +628,7 @@
       "file": "docs/chain-ui-kit-customizations-push-universal-wallet-provider.md",
       "title": "Push Universal Wallet Provider",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "{Push Universal Wallet Provider | Customizations | UI Kit | Push Chain Docs}"
     },
     {
@@ -637,7 +637,7 @@
       "file": "docs/chain-ui-kit-customizations-theme-variables.md",
       "title": "Theme Variables",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Theme Variables | Customizations | UI Kit | Push Chain Docs"
     },
     {
@@ -646,7 +646,7 @@
       "file": "docs/chain-ui-kit-customizations-use-push-chain-client.md",
       "title": "usePushChainClient",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "usePushChainClient | Customizations | UI Kit | Push Chain Docs"
     },
     {
@@ -655,7 +655,7 @@
       "file": "docs/chain-ui-kit-customizations-use-push-chain.md",
       "title": "usePushChain",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "usePushChain | Customizations | UI Kit | Push Chain Docs"
     },
     {
@@ -664,7 +664,7 @@
       "file": "docs/chain-ui-kit-customizations-use-push-wallet-context.md",
       "title": "usePushWalletContext",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "usePushWalletContext | Customizations | UI Kit | Push Chain Docs"
     },
     {
@@ -673,7 +673,7 @@
       "file": "docs/chain-ui-kit-examples.md",
       "title": "Examples Section",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Examples Section | UI Kit | Push Chain Docs"
     },
     {
@@ -682,7 +682,7 @@
       "file": "docs/chain-ui-kit-examples-button-theme-overrides-example.md",
       "title": "Button Theme Overrides Example",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Button Theme Overrides Example | Examples | UI Kit | Push Chain Docs"
     },
     {
@@ -691,7 +691,7 @@
       "file": "docs/chain-ui-kit-examples-multiple-wallet-example.md",
       "title": "Multiple Wallet Example",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Multiple Wallets Example | Examples | UI Kit | Push Chain Docs"
     },
     {
@@ -700,7 +700,7 @@
       "file": "docs/chain-ui-kit-examples-send-transaction-example.md",
       "title": "Send Transaction Example",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Send Transaction Example | Examples | UI Kit | Push Chain Docs"
     },
     {
@@ -709,7 +709,7 @@
       "file": "docs/chain-ui-kit-examples-single-wallet-example.md",
       "title": "Single Wallet Example",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Single Wallets Example | Examples | UI Kit | Push Chain Docs"
     },
     {
@@ -718,7 +718,7 @@
       "file": "docs/chain-ui-kit-examples-theme-overrides-example.md",
       "title": "Theme Overrides Example",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "Theme Overrides Example | Examples | UI Kit | Push Chain Docs"
     },
     {
@@ -727,7 +727,7 @@
       "file": "docs/chain-ui-kit-integrate-push-universal-wallet.md",
       "title": "Integrate Push Universal Wallet",
       "section": "ui-kit",
-      "lastUpdated": "2026-08-17T16:17:48Z",
+      "lastUpdated": "2026-08-19T11:27:12Z",
       "description": "{Integrate Push Universal Wallet | Customizations | UI Kit | Push Chain Docs}"
     }
   ],

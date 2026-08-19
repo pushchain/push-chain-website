@@ -4,10 +4,98 @@
         <title>Push Chain — Universal Blockchain for Apps Blog</title>
         <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/</link>
         <description>Push Chain — Universal Blockchain for Apps Blog</description>
-        <lastBuildDate>Mon, 10 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[AI Agent Identities in Crypto - Everything You Need To Know]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/</guid>
+            <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Learn what ERC8004 is and what makes it a revolutionary standard for defining, identifying and tracking the reputation of onchain AI agents]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of AI Agent Identities in Crypto" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-4929386a6e358f532e23bef72b859d5f.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Consider an open marketplace of thousands of AI agents. Where one agent can employ other agents to coordinate given tasks.</p>
+<p>Let's say agent A is looking for an agent that provides smart contract auditing services.</p>
+<p>Another agent, say agent B, says <em>"I can analyze this smart contract for $5."</em></p>
+<p>Now on what basis would Agent 'A' decide whether Agent 'B' is the best choice for the job?</p>
+<p>Can't just assume word for word, right !?</p>
+<p>Agent 'A' still needs answers to questions like:</p>
+<ul>
+<li class="">Is this the correct agent?</li>
+<li class="">Has anyone used it before?</li>
+<li class="">Did previous tasks succeed?</li>
+<li class="">Can another system verify its work?</li>
+</ul>
+<p>It all boils down to one empirical question: <strong>How should we (humans) and agents find and trust other agents?</strong></p>
+<p>This is exactly what ERC-8004 solves.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-erc-8004">What is ERC-8004?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#what-is-erc-8004" class="hash-link" aria-label="Direct link to What is ERC-8004?" title="Direct link to What is ERC-8004?" translate="no">​</a></h2>
+<p><a href="https://eips.ethereum.org/EIPS/eip-8004" target="_blank" rel="noopener noreferrer" class="">ERC-8004</a> is an Ethereum standard for discovering agents and creating trust signals about them.</p>
+<p>It gives AI agents a common on-chain system for identity, reputation, and validation. Its goal is to let agents work across different organizations without pre-existing trust.</p>
+<p>ERC-8004 consists of three main components (or registries):</p>
+<ol>
+<li class="">Identity Registry</li>
+<li class="">Reputation Registry</li>
+<li class="">Validation Registry</li>
+</ol>
+<p><strong>Caveat:</strong> ERC-8004 does not put a complete AI agent onchain. The agent can still run on a server, in a Trusted Execution Environment, or in another computing system.</p>
+<p>The blockchain stores the parts that need a common and public source of truth.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="decoding-erc-8004-registries">Decoding ERC-8004 Registries<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#decoding-erc-8004-registries" class="hash-link" aria-label="Direct link to Decoding ERC-8004 Registries" title="Direct link to Decoding ERC-8004 Registries" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="identity-registry">Identity Registry<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#identity-registry" class="hash-link" aria-label="Direct link to Identity Registry" title="Direct link to Identity Registry" translate="no">​</a></h3>
+<p>The Identity Registry gives each agent a unique on-chain identity. This identity is minted as an ERC-721 NFT.</p>
+<p>Each registered agent gets an <strong>agentId</strong>. The NFT owner controls the agent identity. The owner can also transfer the identity to another owner.</p>
+<p>This NFT points to a JSON file, also commonly known as an <strong>Agent Card</strong>, which includes all the metadata about the agent, including its name, service endpoints (A2A, MCP), payable address, functionalities and more.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="reputation-registry">Reputation Registry<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#reputation-registry" class="hash-link" aria-label="Direct link to Reputation Registry" title="Direct link to Reputation Registry" translate="no">​</a></h3>
+<p>The Reputation Registry stores feedback about an agent's past performance.</p>
+<p>Any client can submit feedback for a registered agentId. The agent owner and approved operators cannot review their own agent.</p>
+<p>Feedback can be provided in two ways: <strong>Numerical</strong> and <strong>Categorical (tags)</strong>.</p>
+<p>For numerical, example:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">Quality       = 87 / 100</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Uptime        = 99.77%</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Success Rate  = 89%</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Response Time = 560 ms</span><br></div></code></pre></div></div>
+<p>And categorical tags could be: <code>"uptime"</code>, <code>"month"</code></p>
+<p><strong>Caveat:</strong> ERC-8004 does not define one universal reputation score.</p>
+<p>It stores standardized feedback signals. Applications can decide how to filter, weight, and combine them.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="validation-registry">Validation Registry<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#validation-registry" class="hash-link" aria-label="Direct link to Validation Registry" title="Direct link to Validation Registry" translate="no">​</a></h3>
+<p>Provides a standardised mechanism for evaluating and recording the agent's work as an onchain verifiable evidence.</p>
+<p>The registry stores independent checks of an agent's work.</p>
+<p>The registry does not check the work itself. A separate validator does the check. The registry records: What was checked, who checked it and what the result was.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-erc-8004-work">How does ERC-8004 work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#how-does-erc-8004-work" class="hash-link" aria-label="Direct link to How does ERC-8004 work?" title="Direct link to How does ERC-8004 work?" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Diagram of the ERC-8004 agent trust layer" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-0a19f84b97c63d5ce31d697a6695ad17.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>A typical ERC-8004 flow has four stages:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-1-register-the-agent">Step 1: Register the agent<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#step-1-register-the-agent" class="hash-link" aria-label="Direct link to Step 1: Register the agent" title="Direct link to Step 1: Register the agent" translate="no">​</a></h3>
+<p>The agent owner registers an agent in the Identity Registry, which then creates an ERC-721 token and assigns an agentId. The owner also provides an <strong>agentURI</strong>.</p>
+<p>You can track and discover ERC-8004 registered agents at: <a href="https://8004scan.io/" target="_blank" rel="noopener noreferrer" class="">8004scan.io</a></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-2-use-the-agent">Step 2: Use the agent<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#step-2-use-the-agent" class="hash-link" aria-label="Direct link to Step 2: Use the agent" title="Direct link to Step 2: Use the agent" translate="no">​</a></h3>
+<p>A client discovers the agent.</p>
+<p>The client can then call its MCP endpoint, send an A2A task, use its web service, or interact through another supported method.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-3-add-reputation">Step 3: Add reputation<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#step-3-add-reputation" class="hash-link" aria-label="Direct link to Step 3: Add reputation" title="Direct link to Step 3: Add reputation" translate="no">​</a></h3>
+<p>After the interaction, the client can submit feedback to the Reputation Registry.</p>
+<p>As discussed in the article above, the Reputation Registry can accept feedback in both numerical and categorical forms.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-4-validate-important-work">Step 4: Validate important work<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#step-4-validate-important-work" class="hash-link" aria-label="Direct link to Step 4: Validate important work" title="Direct link to Step 4: Validate important work" translate="no">​</a></h3>
+<p>Here the agent can ask a validator of its choice to vet its work. Validators can use different verification methods.</p>
+<p>For example:</p>
+<ul>
+<li class="">Re-run the computation.</li>
+<li class="">Use stake-secured verification.</li>
+<li class="">Check a zkML proof.</li>
+<li class="">Check a TEE attestation.</li>
+</ul>
+<p>The validator returns a value from 0 to 100.</p>
+<p>A validator can use 0 for failure and 100 for success. It can also use values between them when the result is not binary.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-erc-8004-does-not-do">What ERC-8004 does not do<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#what-erc-8004-does-not-do" class="hash-link" aria-label="Direct link to What ERC-8004 does not do" title="Direct link to What ERC-8004 does not do" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>ERC-8004 does not define payments.</strong> Payment systems such as x402 can work with ERC-8004, but payments remain outside the standard.</li>
+<li class=""><strong>ERC-8004 does not replace MCP or A2A.</strong> MCP provides access to tools and resources, whereas A2A supports communication and task coordination between agents. ERC-8004 adds discovery and trust around these systems.</li>
+<li class=""><strong>It does not guarantee an agent's safety.</strong></li>
+<li class=""><strong>Fake accounts can also try to create a false reputation.</strong></li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-does-it-matter">Why does it matter?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/#why-does-it-matter" class="hash-link" aria-label="Direct link to Why does it matter?" title="Direct link to Why does it matter?" translate="no">​</a></h2>
+<p>The internet has many ways to identify people, websites, and companies.</p>
+<p>AI agents need a similar system. But agents also need something more. They need <strong>machine-readable trust</strong>.</p>
+<p>An agent cannot read hundreds of human reviews before every transaction. It needs structured data that software can inspect. ERC-8004 provides the foundation for this model.</p>
+<p>If you want to dig deeper into the AI x crypto rabbit hole, read about the <a href="https://push.org/blog/understanding-the-crypto-ai-agent-stack/" target="_blank" rel="noopener noreferrer" class="">AI agent stack</a> and <a href="https://push.org/blog/how-do-ai-agents-transact-onchain/" target="_blank" rel="noopener noreferrer" class="">how agents transact onchain</a>.</p>]]></content:encoded>
+            <category>Key Features</category>
+            <category>Deep Dives</category>
+        </item>
         <item>
             <title><![CDATA[Highest Revenue Generating Crypto AI Agent Protocols of 2026]]></title>
             <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/highest-revenue-generating-crypto-ai-agent-protocols-of-2026/</link>
@@ -547,64 +635,6 @@ The data field accepts either a single calldata or an array of calls. So approve
 <p>Multihop is live on testnet.
 Experience it through our ecosystem apps like <a href="https://www.ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">RamenFi</a>.</p>
 <p><a href="https://push.org/docs/chain/build/send-multichain-transactions/" target="_blank" rel="noopener noreferrer" class="">Multihop docs also include playground environments</a> where you can test directly in your browser, no local setup needed.</p>]]></content:encoded>
-            <category>Technical</category>
-            <category>Deep Dives</category>
-        </item>
-        <item>
-            <title><![CDATA[Introducing Chain Executor Accounts (CEAs)]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/</guid>
-            <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[This is one of our biggest security upgrades to date. Must read if you're a cross-chain user or a dev.]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing Chain Executor Accounts (CEAs)" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-ab35d52d60c69631162fb1d4ed340828.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>This is one of our biggest security upgrades to date. Must read if you're a cross-chain user or a dev.</p>
-<p>CEAs are per-user smart accounts that live on external chains and act on your behalf while keeping your funds and unified crosschain identity separate from everyone else.</p>
-<p>Every cross-chain protocol routes your transaction through a shared gateway address.CEAs fix that by giving every user their own isolated smart account on every external chain.</p>
-<p>Let's discuss about the darkest cross-chain secrets you’re probably unaware of.</p>
-<p>Open any cross-chain protocol today. Bridge some tokens. Execute a swap. Deposit into a lending pool on the destination chain.</p>
-<p>Now check the block explorer. Who made that deposit?</p>
-<p>It's not you!
-It's either a gateway contract or any other intermediary relayer contract that deposits on your behalf.</p>
-<p>And not just you, all the other users are mostly sharing the same gateway address for such actions. Using the same pipeline.</p>
-<p>This creates two problems, both serious enough to keep you up at night.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="identity-collapse">Identity Collapse:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/#identity-collapse" class="hash-link" aria-label="Direct link to Identity Collapse:" title="Direct link to Identity Collapse:" translate="no">​</a></h2>
-<p>The target protocol can't distinguish between users. Your lending position, your collateral, and all are attributed to a shared gateway address.</p>
-<p><em>msg.sender = 0xGateway</em> for everyone.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="shared-custody-risk">Shared custody risk<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/#shared-custody-risk" class="hash-link" aria-label="Direct link to Shared custody risk" title="Direct link to Shared custody risk" translate="no">​</a></h2>
-<p>Every user's funds sit under one contract.</p>
-<p>A single exploit doesn't drain one user; it would drain everyone who had pooled their funds in the gateway.</p>
-<p><img decoding="async" loading="lazy" alt="First Image of Introducing Chain Executor Accounts (CEAs)" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-2d3e7651901ce9015455b531922c64ac.webp" width="1600" height="900" class="img_ev3q"></p>
-<h1>How do CEAs work?</h1>
-<p>A Chain Executor Account is an isolated smart account deployed on an external chain, derived deterministically from a user's UEA on Push Chain.</p>
-<div class="theme-admonition theme-admonition-success admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>A <a href="https://push.org/blog/what-are-universal-executor-accounts/" target="_blank" rel="noopener noreferrer" class=""><strong>Universal Executor Account (UEA)</strong></a> is a deterministic smart account on Push Chain, derived from an origin wallet (chain namespace + chain id + owner), that serves as the execution account for that origin wallet on Push Chain.</p></div></div>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Common Misconceptions</div><div class="admonitionContent_BuS1"><p>• A UEA is not a new wallet on the origin chain <br>
-• No private keys are created or stored on Push Chain <br>
-• UEA addresses are deterministic, but the smart account is deployed lazily on first use <br></p></div></div>
-<p>In plain English: instead of everyone sharing one gateway address on Ethereum, every user gets their own contract. Bob gets Bob's CEA. Alice gets Alice's CEA. The gateway routes to them without touching the target protocol directly.</p>
-<p><img decoding="async" loading="lazy" alt="Second Image of Introducing Chain Executor Accounts (CEAs)" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-2-92fa1dfe370d219279764fe51a2c2a83.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Here's how the execution actually flows</p>
-<p><img decoding="async" loading="lazy" alt="Third Image of Introducing Chain Executor Accounts (CEAs)" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-3-b45fbd02987d93c9bb05bb1650be644d.webp" width="1600" height="900" class="img_ev3q"></p>
-<h1></h1>
-<p><strong>CEA’s objective is not only to patch the identity problem but make unified onchain identities a first-class architectural primitive.</strong></p>
-<h1>How does CEA impact your security?</h1>
-<p>Identity is half the story. The other half is what happens when something goes wrong.</p>
-<p>Without CEA, the gateway holds every user's funds, approvals, and positions under one address. It's a single point of failure with maximum blast radius. One vulnerability in the gateway contract and every user who ever routed through it loses everything.</p>
-<p><em>for instance:</em></p>
-<div class="BlogTweet__TweetWrapper-sc-19ovpm5-0 dIzqtb"><div class="light"><div class="react-tweet-theme root_D3qd root_Y6tr"><article class="article_kRZ8"><span class="skeleton_FMR8" style="height:3rem;margin-bottom:0.75rem"></span><span class="skeleton_FMR8" style="height:6rem;margin:0.5rem 0"></span><div style="border-top:var(--tweet-border);margin:0.5rem 0"></div><span class="skeleton_FMR8" style="height:2rem"></span><span class="skeleton_FMR8" style="height:2rem;border-radius:9999px;margin-top:0.5rem"></span></article></div></div></div>
-<p>We've seen this movie before. Bridge exploits have drained over $2.5 billion since 2021. The root cause is almost always the same: shared custody.</p>
-<p>CEA breaks the blast radius at the account level.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="deterministic-mapping">Deterministic Mapping<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/#deterministic-mapping" class="hash-link" aria-label="Direct link to Deterministic Mapping" title="Direct link to Deterministic Mapping" translate="no">​</a></h2>
-<p>One UEA, one CEA per chain. The mapping is 1:1 and deterministic. If you have UEAs derived from wallets on Ethereum, Solana, and Base, you get three CEAs, one on each respective external chain. No ambiguity, no collisions.</p>
-<p>Fund withdrawal. Assets locked in a CEA can always be moved back to the user's UEA on Push Chain. No funds get stuck.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="deterministic-derivation">Deterministic derivation<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/#deterministic-derivation" class="hash-link" aria-label="Direct link to Deterministic derivation" title="Direct link to Deterministic derivation" translate="no">​</a></h2>
-<p>Each CEA is derived from its underlying UEA. One UEA maps to exactly one CEA per external chain. You can't deploy a counterfeit CEA that claims to be Bob's since the derivation is verifiable.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="strict-access-control">Strict access control<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/#strict-access-control" class="hash-link" aria-label="Direct link to Strict access control" title="Direct link to Strict access control" translate="no">​</a></h2>
-<p><em>CEA.execute()</em> only accepts calls from the Universal Gateway on that chain. Nobody else can trigger it. Not an EOA, not another contract, not another CEA. The gateway, in turn, only routes to a CEA after resolving which UEA initiated the call. Bob's UEA can only trigger Bob's CEA. The resolution is deterministic and verifiable on-chain.</p>
-<p>With CEA, a compromised account means one user is affected and not the entire user base.</p>
-<p>Token approvals are scoped per-CEA. Fund isolation is structural. There's no shared pool to drain because there's no shared pool!</p>
-<p><strong>One wallet. One signature. Universal identity preservation. Isolated risk.</strong></p>
-<p><a href="https://push.org/docs/chain/build/understanding-universal-transactions/#chain-executor-account-cea" target="_blank" rel="noopener noreferrer" class=""><strong>Refer this integration guide</strong></a> to make your app universally accessible and secure in hours not months.</p>
-<p>Got any Questions? Reach out to us via our  <a href="https://t.me/+SFD4qD1JIF1jNTk1" target="_blank" rel="noopener noreferrer" class="">Dev Telegram Chat</a> or community <a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Discord</a>.</p>]]></content:encoded>
             <category>Technical</category>
             <category>Deep Dives</category>
         </item>
