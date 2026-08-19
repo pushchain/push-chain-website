@@ -357,16 +357,17 @@ function Header() {
                   to={useBaseUrl('/')}
                   aria-label={t('header.meta.logo-aria-label')}
                 >
+                  {/* Referenced as a served static URL rather than require()d:
+                      this project's webpack turns .svg imports into SVGR React
+                      components, so require(...).default yields a component and
+                      the <img> renders 0x0. */}
                   <Image
-                    src={
-                      require(
-                        `@site/static/assets/website/segments/PushLogoTextBlack.webp`
-                      ).default
-                    }
-                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextBlack@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextBlack@3x.webp`).default} 3x`}
+                    src={useBaseUrl(
+                      '/assets/website/segments/PushCoreLogoTextBlack.svg'
+                    )}
                     alt={t('header.logo.imagealt')}
-                    width='auto'
-                    height='auto'
+                    width='176px'
+                    height='38px'
                   />
                 </LinkTo>
               </PushLogoBlackContainer>
@@ -378,15 +379,12 @@ function Header() {
                   padding='0'
                 >
                   <Image
-                    src={
-                      require(
-                        `@site/static/assets/website/segments/PushLogoTextWhite.webp`
-                      ).default
-                    }
-                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextWhite@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextWhite@3x.webp`).default} 3x`}
+                    src={useBaseUrl(
+                      '/assets/website/segments/PushCoreLogoTextWhite.svg'
+                    )}
                     alt={t('header.logo.imagealt')}
-                    width='auto'
-                    height='auto'
+                    width='176px'
+                    height='38px'
                   />
                 </LinkTo>
               </PushLogoWhiteContainer>
@@ -963,6 +961,7 @@ const LanguageItem = styled.div`
 
 const HeaderItemH = styled(ItemH)`
   border-radius: 24px;
+  box-sizing: border-box;
   border: 1px solid rgba(171, 70, 248, 0.4);
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -1060,7 +1059,23 @@ const HeaderNavItemV = styled(ItemV)`
 
 const PushLogoWhiteContainer = styled(ItemV)`
   display: flex;
-  max-width: 190px;
+  max-width: 209px;
+  flex: 0 0 auto;
+  /* Figma node 49113:40: the artwork sits in a 50px-tall box with 16px of
+     padding either side, so the mark starts 28px in from the pill edge. */
+  height: 50px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    object-fit: contain;
+    /* A global img { max-width: 100% } clamps the mark to its parent, which is
+       itself sized by the mark — leaving it short of its intrinsic 176px. */
+    max-width: none;
+    flex: 0 0 auto;
+  }
   &.light {
     display: none;
   }
@@ -1068,6 +1083,22 @@ const PushLogoWhiteContainer = styled(ItemV)`
 
 const PushLogoBlackContainer = styled(ItemV)`
   display: none;
+  flex: 0 0 auto;
+  /* Figma node 49113:40: the artwork sits in a 50px-tall box with 16px of
+     padding either side, so the mark starts 28px in from the pill edge. */
+  height: 50px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    object-fit: contain;
+    /* A global img { max-width: 100% } clamps the mark to its parent, which is
+       itself sized by the mark — leaving it short of its intrinsic 176px. */
+    max-width: none;
+    flex: 0 0 auto;
+  }
   &.light {
     display: flex;
   }
@@ -1189,7 +1220,10 @@ const MenuTop = styled(ItemV)<{
 }>`
   display: flex;
   z-index: 9999;
-  height: ${GLOBALS.HEADER.HEIGHT}px;
+  /* Fill the pill's content box, not the pill's outer height — the pill now
+     carries 12px padding, so a fixed HEADER.HEIGHT here overflows it by 24px
+     and pushes the row off centre. */
+  height: 100%;
 
   & svg {
     cursor: pointer;
