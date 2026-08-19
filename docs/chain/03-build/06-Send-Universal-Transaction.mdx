@@ -61,7 +61,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `tx.from`         | `{ chain: PushChain.CONSTANTS.CHAIN }`                           | Optional. When set to an external chain, execution uses the Chain Executor Account (CEA) for that chain as the transaction origin.<br /><br />This is primarily used for external origin or CEA-based execution flows. <br /><ConstantsDropdown variant="CHAIN" />                                        |
 | `tx.value`        | `BigInt`                                                         | Native value to send, expressed in the smallest unit of the execution context.<br /><br />On Push Chain this is uPC (the smallest unit, like wei in ETH). <br /><br />On external execution routes, this maps to the native asset amount of that route.                                                   |
 | `tx.data`         | `string` \| `Array<{ to: string; value: bigint; data: string }>` | Encoded calldata for a single call `string` or batched multicall `Array<{ to, value, data }>`. <br /><br />Use [`encodeTxData`](/docs/chain/build/utility-functions#encode-transaction-data) to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
-| `tx.funds`        | `{ amount: BigInt; token?: MoveableToken \| PC20TokenReference }` | Moves supported assets as part of the transaction. If `tx.data` is provided, the movement and the call happen atomically.<br /><br />Pass a `MoveableToken`, or `{ chain, address }` for a [PC20](#moving-pc20-tokens). <ConstantsDropdown variant="MOVEABLE_TOKEN" /> |
+| `tx.funds`        | `{ amount: BigInt; token?: MoveableToken \| PC20TokenReference }` | Moves supported assets as part of the transaction. If `tx.data` is provided, the movement and the call happen atomically.<br /><br />Pass a `MoveableToken`, or `{ chain, address }` for a [PC-20](#moving-pc-20-tokens). <ConstantsDropdown variant="MOVEABLE_TOKEN" /> |
 | `tx.progressHook` | `(progress: ProgressHookType) => void`                           | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions.                                                                                                                                                                    |
 
 </PushAPIReference>
@@ -370,6 +370,8 @@ Use the funds field to specify the amount of assets to move, and _optionally_ th
 
 `funds.token` takes either kind of token — see [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-push-chain) for the difference.
 
+<h2 className="anchor" id="moving-prc-20-tokens" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Moving Prc 20 Tokens</h2>
+
 ### Moving PRC-20 Tokens (Tokens born outside Push Chain)
 
 `funds.token` accepts a **[MoveableToken](#tx-funds)** from the supported-asset table. The origin-chain token is locked and its [PRC-20](/docs/chain/important-concepts#token-types-on-push-chain) representation is minted on Push Chain.
@@ -385,6 +387,8 @@ const txResponse = await pushChainClient.universal.sendTransaction({
   },
 });
 ```
+
+<h2 className="anchor" id="moving-pc-20-tokens" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Moving Pc 20 Tokens</h2>
 
 ### Moving PC-20 Tokens (Tokens born on Push Chain)
 
@@ -406,11 +410,11 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-**Important:** `funds.chain` is the chain the token sit on right now. It is different from the destination `to.chain` which indicates where it should go.
+**Important:** `funds.token.chain` is the chain the tokens sit on right now. It is different from the destination `to.chain` which indicates where it should go.
 
-:::danger Never add `symbol` to a PC20 reference
+:::danger Never add `symbol` to a PC-20 reference
 
-A PC20 reference is exactly `{ chain, address }`. The SDK tells it apart from a `MoveableToken` by the **absence** of `symbol` and `mechanism`, adding a `symbol` field silently routes the token down the static-table path instead.
+A PC-20 reference is exactly `{ chain, address }`. The SDK tells it apart from a `MoveableToken` by the **absence** of `symbol`, adding a `symbol` will cause unexpected results.
 
 :::
 

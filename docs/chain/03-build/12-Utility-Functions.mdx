@@ -1324,11 +1324,11 @@ import { PushChain } from '@pushchain/core';
 
 {/* API Section Start*/}
 
-### Get PRC20 Address
+### Get PRC-20 Address
 
 **_`PushChain.utils.tokens.getPRC20Address(token, options?): { address, chain, symbol, decimals, network }`_**
 
-Resolves the [synthetic PRC20 address](/docs/chain/important-concepts#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
+Resolves the [synthetic PRC-20 address](/docs/chain/important-concepts#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
 
 ```typescript
 const { address, chain, symbol, decimals, network } =
@@ -1346,7 +1346,7 @@ const prc20Alt = PushChain.utils.tokens.getPRC20Address({
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
 | _`token`_ | `MoveableToken \| { chain: string; address: string }` | Origin token info. Either pass a `MoveableToken` (e.g., from `getMoveableTokens()`) or provide the origin chain plus token address. |
-| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` <ConstantsDropdown variant="PUSH_NETWORK" /> |
+| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC-20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` <ConstantsDropdown variant="PUSH_NETWORK" /> |
 
 </PushAPIReference>
 
@@ -1364,7 +1364,7 @@ const prc20Alt = PushChain.utils.tokens.getPRC20Address({
 
 </Details>
 
-<Details summary="Live Playground: Map origin token to PRC20 on Push Chain" className="alert alert--live-play">
+<Details summary="Live Playground: Map origin token to PRC-20 on Push Chain" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
 {`
@@ -1409,15 +1409,15 @@ import { PushChain } from '@pushchain/core';
 
 {/* API Section Start*/}
 
-### Get PC20 Address
+### Get PC-20 Address
 
 **_`PushChain.utils.tokens.getPC20Address(address, options): Promise<PC20AddressResult>`_**
 
-Resolves a [PC20](/docs/chain/important-concepts#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
+Resolves a [PC-20](/docs/chain/important-concepts#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
 
-PC20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol. 
+PC-20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol. 
 
-> **Note:** Synthetic PRC20s such as `pETH` and `USDC.eth` are not PC20s. Use [getPRC20Address()](#get-prc20-address) for those.
+> **Note:** Synthetic PRC20s such as `pETH` and `USDC.eth` are not PC20s. Use [getPRC20Address()](#get-prc-20-address) for those.
 
 ```typescript
 // From an external wrapper
@@ -1440,7 +1440,7 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
 | _`address`_ | `string` | The external wrapper or the canonical token on Push Chain. Checksummed hex on EVM, base58 on Solana. |
-| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` <ConstantsDropdown variant="PUSH_NETWORK" /> |
+| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC-20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` <ConstantsDropdown variant="PUSH_NETWORK" /> |
 | `options.chain` | `PushChain.CONSTANTS.CHAIN` | Where the address lives. Omit to let the SDK find it. Throws `PC20AmbiguousAddressError` if more than one chain claims it. <ConstantsDropdown variant="CHAIN" /> |
 | `options.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | Per-chain RPC overrides for reading the registry. Defaults to the SDK's endpoints. |
 | `options.strict` | `boolean` | Also verify factory identity against the live gateway. Slower; off by default. |
@@ -1468,7 +1468,7 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 
 </Details>
 
-<Details summary="Live Playground: Resolve a PC20 and list its deployments" className="alert alert--live-play">
+<Details summary="Live Playground: Resolve a PC-20 and list its deployments" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
 {`
@@ -1477,7 +1477,7 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 // customPropGTagEvent=utility_get_pc20_address
 import { PushChain } from '@pushchain/core';
 
-    // A PC20 deployed on Donut Testnet
+    // A PC-20 deployed on Donut Testnet
     const PUSH_PC20 = '0x14693f665cE282A451ba9a86F2EC04B43F931145';
 
     async function main() {
@@ -1486,7 +1486,7 @@ import { PushChain } from '@pushchain/core';
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
 
-      console.log('Canonical PC20:', token.address);
+      console.log('Canonical PC-20:', token.address);
       console.log('Metadata:', token.symbol, '| decimals:', token.decimals);
 
       // Every chain it is deployed on

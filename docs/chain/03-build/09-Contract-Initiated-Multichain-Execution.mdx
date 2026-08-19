@@ -57,7 +57,7 @@ The contract CEA:
 
 ### UniversalGatewayPC (UGPC)
 
-UGPC is the on-chain gateway contract on Push Chain through which all outbound cross-chain calls are routed. Your contract calls `UGPC.sendUniversalTxOutbound()`, which relays the payload, optionally burns or locks PRC20 tokens, and emits the event the TSS network listens for. 
+UGPC is the on-chain gateway contract on Push Chain through which all outbound cross-chain calls are routed. Your contract calls `UGPC.sendUniversalTxOutbound()`, which relays the payload, optionally burns or locks PRC-20 tokens, and emits the event the TSS network listens for. 
 
 UGPC is a predeploy at `0x00000000000000000000000000000000000000C1` on every Push Chain network.
 
@@ -308,8 +308,8 @@ interface IUniversalGatewayPC {
 | Arguments | Type | Description |
 | --------- | ---- | ----------- |
 | _`req.recipient`_ | `bytes` | CEA or target address on the external chain, bytes-encoded. |
-| _`req.token`_ | `address` | PRC20 token address on Push Chain to bridge. Use `address(0)` if no token is being bridged. |
-| _`req.amount`_ | `uint256` | Amount of PRC20 to bridge. Set to `0` if not bridging. |
+| _`req.token`_ | `address` | PRC-20 token address on Push Chain to bridge. Use `address(0)` if no token is being bridged. |
+| _`req.amount`_ | `uint256` | Amount of PRC-20 to bridge. Set to `0` if not bridging. |
 | _`req.gasLimit`_ | `uint256` | Gas limit for external-chain execution. Default to `2_000_000` (see [Operational Knobs](#operational-knobs)); UGPC charges only for actual gas used and refunds the surplus. |
 | _`req.gasPrice`_ | `uint256` | Gas price override for the destination chain. Set to `0` to use the per-chain default quoted by UniversalCore (recommended). |
 | _`req.maxPCForGas`_ | `uint256` | Maximum native `$PC` the on-chain AMM may consume when swapping for destination gas. Set to `0` for no cap (recommended on testnet). |
@@ -403,8 +403,8 @@ function executeUniversalTx(
 | _`sourceChainNamespace`_ | `string` | CAIP-2 chain identifier of the originating chain, e.g. `"eip155:97"`. |
 | _`ceaAddress`_ | `bytes` | CEA address on the source chain, bytes-encoded. |
 | _`payload`_ | `bytes` | ABI-encoded action data. Decode inside your handler to determine the action. |
-| _`amount`_ | `uint256` | Amount of PRC20 tokens bridged with this back-leg. |
-| _`prc20`_ | `address` | PRC20 token address on Push corresponding to the bridged asset. |
+| _`amount`_ | `uint256` | Amount of PRC-20 tokens bridged with this back-leg. |
+| _`prc20`_ | `address` | PRC-20 token address on Push corresponding to the bridged asset. |
 | _`txId`_ | `bytes32` | Unique cross-chain transaction identifier. Use this to prevent replay. |
 
 </PushAPIReference>

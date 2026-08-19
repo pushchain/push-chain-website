@@ -367,9 +367,9 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
 
 </Details>
 
-<Details summary="Move a PC20 Token to Push Chain (wrapper burn)" className="alert alert--live-play">
+<Details summary="Move a PC-20 Token to Push Chain (wrapper burn)" className="alert alert--live-play">
 
-A complete PC20 round trip in one script: mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home. Unlike an ERC-20 bridge, the return leg sends **no approval transaction** — the gateway's PC20Factory burns via `burnFrom`.<br /><br />
+A complete PC-20 round trip in one script: mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home. Unlike an ERC-20 bridge, the return leg sends **no approval transaction** — the gateway's PC20Factory burns via `burnFrom`.<br /><br />
 
 The export step hands back the wrapper address in `receipt.externalAssetAddr`, so the burn leg never needs a hardcoded address or a registry lookup.<br /><br />
 
@@ -377,7 +377,7 @@ The export step hands back the wrapper address in `receipt.externalAssetAddr`, s
 
 These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, so you can mint yourself as much as you need.<br /><br />
 
-Nothing was added to make it exportable. Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC20. Your ERC-20 addresses born on Push will just work.
+Nothing was added to make it exportable. Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
 
 :::
 
@@ -388,7 +388,7 @@ Nothing was added to make it exportable. Any **ERC-20** on Push Chain with stand
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route1_pc20_import
 
-    // Round trip: mint a PC20 on Push Chain → export it to Sepolia →
+    // Round trip: mint a PC-20 on Push Chain → export it to Sepolia →
     // burn the wrapper to unlock it back to your UEA.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
@@ -951,9 +951,9 @@ Nothing was added to make it exportable. Any **ERC-20** on Push Chain with stand
 
 </Details>
 
-<Details summary="Export a PC20 Token to an External Chain" className="alert alert--live-play">
+<Details summary="Export a PC-20 Token to an External Chain" className="alert alert--live-play">
 
-Send a [PC20 (Token born on Push Chain)](/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.<br /><br />
+Send a [PC-20 (Token born on Push Chain)](/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.<br /><br />
 
 **Pre-requisite:**. Mint yourself some **$UNICORN** from [Mint Universal ERC-20 Tokens](/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). $UNICORN is an ordinary ERC-20 that exists on Push Chain.
 
@@ -964,7 +964,7 @@ Send a [PC20 (Token born on Push Chain)](/docs/chain/build/send-universal-transa
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route2_pc20_export
 
-    // Route 2: export a PC20 from Push Chain → mint its wrapper on Sepolia.
+    // Route 2: export a PC-20 from Push Chain → mint its wrapper on Sepolia.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
