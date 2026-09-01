@@ -4,10 +4,92 @@
         <title>Push Chain — Universal Blockchain for Apps Blog</title>
         <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/</link>
         <description>Push Chain — Universal Blockchain for Apps Blog</description>
-        <lastBuildDate>Mon, 17 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[What Is ERC-8126? How Does It Work?]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/</guid>
+            <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Learn what ERC8126 is and what makes it a revolutionary standard for deriving, verifying and validating the reputation of onchain AI agents]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of What Is ERC-8126" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-ff49835b118d27301b9e51ed96022a70.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>There are studies that show that humans have become more sceptical with every passing decade.</p>
+<p>This is something we all can totally relate to.</p>
+<p>Look at us today. Our day starts by second-guessing the sugar content in a cereal marketed as diet-friendly.</p>
+<p>Even in the online realm, we doubt whether a freelancer is half as good as their Fiverr bio or whether our LLM subscription is secretly stealing our data and running malicious scripts.</p>
+<p>The same thesis applies to AI agents. Especially onchain agents.</p>
+<p>To tackle this, Marco De Rossi of MetaMask, Davide Crapis of the Ethereum Foundation, Jordan Ellis of Google and Erik Reppel from Coinbase developed <a href="https://eips.ethereum.org/EIPS/eip-8004" target="_blank" rel="noopener noreferrer" class="">ERC-8004</a>: an identity recognition standard for AI agents on EVM chains.</p>
+<p>But it was not sufficient to tackle questions like:</p>
+<ul>
+<li class="">"How do I know this agent is safe to interact with?"</li>
+<li class="">"Does its contract actually exist, and is it safe?"</li>
+<li class="">"Is its profile data its own, or stolen?"</li>
+<li class="">"Has its wallet been involved in anything bad?"</li>
+<li class="">"Is its website real, or a copy?"</li>
+</ul>
+<div class="theme-admonition theme-admonition-success admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>&nbsp;</div><div class="admonitionContent_BuS1"><p><strong>Quick TL;DR on <a href="https://push.org/blog/ai-agent-identities-in-crypto/" target="_blank" rel="noopener noreferrer" class="">ERC-8004</a>:</strong> it is an Ethereum standard for discovering AI agents and creating trust signals about them, built on three registries. The <strong>Identity Registry</strong> mints each agent an ERC-721 identity with its own <code>agentId</code> and Agent Card. The <strong>Reputation Registry</strong> stores client feedback on past performance. The <strong>Validation Registry</strong> records independent checks of an agent's work as onchain verifiable evidence. What it does not do: define payments, replace MCP or A2A, or guarantee an agent's safety.</p></div></div>
+<p>And that's when Leigh Cronian from <a href="https://www.cybercentry.co.uk/" target="_blank" rel="noopener noreferrer" class="">Cybercentry</a> and Don Johnson from <a href="https://www.virtuals.io/" target="_blank" rel="noopener noreferrer" class="">Virtuals Protocol</a> coauthored ERC-8126.</p>
+<p><a href="https://eips.ethereum.org/EIPS/eip-8126" target="_blank" rel="noopener noreferrer" class="">Complete Specification</a>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="quick-tldr">Quick TLDR;<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/#quick-tldr" class="hash-link" aria-label="Direct link to Quick TLDR;" title="Direct link to Quick TLDR;" translate="no">​</a></h2>
+<ul>
+<li class="">ERC-8126 is a standardised verification framework for AI agents using ERC-8004</li>
+<li class="">Provides a marketplace of independent providers</li>
+<li class="">Delivers five verification layers: Ethereum Token Verification, Media Content Verification, Solidity Code Verification, Web Application Verification, and Wallet Verification.</li>
+<li class="">Privacy is preserved through Zero-Knowledge Proofs, allowing attestations without exposing sensitive data.</li>
+<li class="">Builds the missing verification layer for trustworthy agent economies.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-erc-8126-work">How does ERC-8126 work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/#how-does-erc-8126-work" class="hash-link" aria-label="Direct link to How does ERC-8126 work?" title="Direct link to How does ERC-8126 work?" translate="no">​</a></h2>
+<p>Before getting into the 'hows', let's first establish the scope of ERC-8126. Like does it operate fully on-chain? Or not?</p>
+<p>Most of ERC-8126 work happens off-chain.</p>
+<p>The respective EVM chain stores the agent identity. A verification provider performs an extensive security analysis outside the blockchain. The provider can then publish a result or attestation that other applications can use.</p>
+<p><img decoding="async" loading="lazy" alt="Diagram of how ERC-8126 works" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-f66d569d88837cb0b862e2438d989fdd.webp" width="1080" height="1080" class="img_ev3q"></p>
+<p>ERC-8126 defines five main security checks.</p>
+<table><thead><tr><th>Check</th><th>Name</th><th>What it looks at</th></tr></thead><tbody><tr><td><strong>ETV</strong></td><td>Ethereum Token Verification</td><td>Smart contract presence and security</td></tr><tr><td><strong>MCV</strong></td><td>Media Content Verification</td><td>Media origin, integrity, and manipulation</td></tr><tr><td><strong>SCV</strong></td><td>Solidity Code Verification</td><td>Solidity code and known security problems</td></tr><tr><td><strong>WAV</strong></td><td>Web Application Verification</td><td>Agent web endpoints and HTTPS security</td></tr><tr><td><strong>WV</strong></td><td>Wallet Verification</td><td>Wallet history and known threat signals</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Diagram of the ERC-8126 agent verification protocol flow" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-2-51f0b935dde6db71f0af05207e3d2da2.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>ERC-8126 does not tell an AI agent what it can do.</p>
+<p>It tells other systems how much technical risk the agent presents at the time of verification.</p>
+<ol>
+<li class=""><strong>Request phase:</strong> The agent registered via ERC-8004 sends the agentId to a verification provider.</li>
+<li class=""><strong>Resolve identity:</strong> The provider then calls and validates the <code>tokenURI(agentId)</code> on the ERC-8004 identity registry.</li>
+<li class=""><strong>Read metadata:</strong> The registry URI gives a JSON file with the agent data.</li>
+<li class=""><strong>Extract data:</strong> wallet, contract, code, URL, image assets.</li>
+<li class=""><strong>Perform checks:</strong> each check gives a score of 1-100:<!-- -->
+<ul>
+<li class="">ETV = Is the contract safe?</li>
+<li class="">MCV = Is the image unaltered and genuine?</li>
+<li class="">SCV = Does the code have known weaknesses?</li>
+<li class="">WAV = Is the endpoint live? Has HTTPS?</li>
+<li class="">WV = Does the wallet look legitimate?</li>
+</ul>
+</li>
+<li class=""><strong>Mean Risk Score:</strong> Provider then takes a mean of all applicable scores and outputs a result between 1-100.</li>
+<li class=""><strong>Generate ZK Proof:</strong> PDV creates a zero knowledge proof for each result. Each proof has a proofID.</li>
+<li class=""><strong>Result:</strong>
+<ul>
+<li class="">Owner sees the details — only the agent wallet holder reads the full report.</li>
+<li class="">Registry sees the proof — the score and proofID may go to the ERC-8004 validation registry.</li>
+</ul>
+</li>
+</ol>
+<p>Within this entire process, nothing from steps 5-7 run onchain. Only the identity part from steps 1-2 and the optional attestation in Step 8b get recorded onchain.</p>
+<p>Remember, the score reports the state of the agent at one moment. It nowhere predicts its future behaviour.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="use-cases">Use Cases<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/#use-cases" class="hash-link" aria-label="Direct link to Use Cases" title="Direct link to Use Cases" translate="no">​</a></h2>
+<p>Consider an agent that wants permission to manage a wallet.</p>
+<p>The wallet can first check the agent's ERC-8004 identity. It can then read an ERC-8126 verification result. If the risk is high, the wallet can reject the request or reduce the agent's permissions.</p>
+<p>An agent marketplace can use the same model before it lists an agent.</p>
+<p>A DeFi application can first verify the score before it allows an automated agent to transact.</p>
+<p>One agent can check another agent before it starts an economic interaction.</p>
+<p>A company can also require periodic re-verification for agents that control important systems.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tldr">TLDR;<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/#tldr" class="hash-link" aria-label="Direct link to TLDR;" title="Direct link to TLDR;" translate="no">​</a></h2>
+<p>ERC-8126 replaces non-deterministic validation — "Trust this agent".</p>
+<p>With a deterministic system that says:</p>
+<p><em>"This is the agent. These parts of it were checked. This was the measured risk. This is the proof."</em></p>
+<p>If you want to dig deeper into the AI x crypto rabbit hole, read about the <a href="https://push.org/blog/understanding-the-crypto-ai-agent-stack/" target="_blank" rel="noopener noreferrer" class="">AI agent stack</a> and <a href="https://push.org/blog/how-do-ai-agents-transact-onchain/" target="_blank" rel="noopener noreferrer" class="">how agents transact onchain</a>.</p>]]></content:encoded>
+            <category>Maker Monday</category>
+            <category>Key Features</category>
+        </item>
         <item>
             <title><![CDATA[AI Agent Identities in Crypto - Everything You Need To Know]]></title>
             <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/ai-agent-identities-in-crypto/</link>
@@ -589,54 +671,6 @@ Prediction markets today only accept stablecoins on their native chain, which cu
 <p>⚠️ <strong>Note:</strong> The token is currently live on testnet and not in mainnet. $PC is the only official token that will power all native functionalities on Push Chain. As a reminder, $PUSH holders will be able to migrate their tokens to $PC.</p>]]></content:encoded>
             <category>Featured</category>
             <category>Programs</category>
-        </item>
-        <item>
-            <title><![CDATA[Introducing Multihop on Push Chain]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-multihop-on-push-chain/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-multihop-on-push-chain/</guid>
-            <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Multihop allows you to compose multiple cross-chain operations into a single signed transaction. Ordered and tracked end-to-end.]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing Multihop on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-5da56dd003c46725ee2031035e4c8359.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Multihop allows you to compose multiple cross-chain operations into a single signed transaction. Ordered and tracked end-to-end.</p>
-<h1>Cross-chain today is still manual and bumpy</h1>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-users">For users:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-multihop-on-push-chain/#for-users" class="hash-link" aria-label="Direct link to For users:" title="Direct link to For users:" translate="no">​</a></h2>
-<p>Try doing anything non-trivial across chains right now. Swap ETH for a Solana token. Move collateral from BNB to Ethereum and deposit it into a lending protocol.</p>
-<p>Every step is a separate transaction. And every transaction needs a separate signature.
-This means multiple interruptions, multiple clicks and many minutes wasted in preparing a transaction before actually executing it.</p>
-<p>The question worth asking is: why do users have to heavy lift all these precursor steps? Shouldn’t the underlying tech handle everything on its own!?</p>
-<p>Take a cross-chain yield balancing app as an example:</p>
-<p><img decoding="async" loading="lazy" alt="First Image of Introducing Multihop on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-fc9721a048a211c4de9efc1df58f5577.webp" width="1600" height="900" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-developers">For developers:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-multihop-on-push-chain/#for-developers" class="hash-link" aria-label="Direct link to For developers:" title="Direct link to For developers:" translate="no">​</a></h2>
-<p>Today, building cross-chain apps is 30% business logic and 70% orchestration and plumbing.
-Instead of focusing on app features and logic, devs are forced to integrate multiple SDKs and interop protocols with a bumpy learning curve.</p>
-<p>Then comes another headache. <strong>Cross-protocol compatibility and debugging hell</strong>.
-Writing complex retry handles, timeout watches and manual rollback scripts</p>
-<p>What devs often fail to understand is that the cross-chain part of their codebase isn't the true product. It’s just plumbing. Which (again) should be abstracted and handled by the underlying protocol itself.</p>
-<h1>What multihop changes?</h1>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-users-1">For users:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-multihop-on-push-chain/#for-users-1" class="hash-link" aria-label="Direct link to For users:" title="Direct link to For users:" translate="no">​</a></h2>
-<p>Multihop lets you compose multiple cross-chain transactions into a single ordered flow.</p>
-<p>You simply specify your steps or intent and watch Push Chain execute them all at once, with just one signature.</p>
-<p>Push handles all the cross chain coordination across multiple chains (be it EVM, Solana, or Push Chain itself).</p>
-<p><img decoding="async" loading="lazy" alt="Second Image of Introducing Multihop on Push Chain" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-2-c9d158d1c1c6ae88dd1418a57f30cb30.webp" width="1600" height="1600" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="for-devs">For devs:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-multihop-on-push-chain/#for-devs" class="hash-link" aria-label="Direct link to For devs:" title="Direct link to For devs:" translate="no">​</a></h2>
-<p>The API surface is two functions. That's it.</p>
-<p>prepareTransaction takes a transaction description, target address, calldata, chain, optional fund movement and returns a  PreparedUniversalTx object. This object contains the resolved route (where does this hop execute?), estimated gas, nonce, deadline, and the encoded payload. You don't need to inspect any of this. You just pass it forward.</p>
-<p>executeTransactions takes an ordered array of prepared transactions and submits them as a single cascade to Push Chain. One signature. The SDK figures out the routing: <em>which hops stay on Push Chain, which go outbound to external chains via CEAs, which move funds between chains.</em></p>
-<p>Refer to the docs for more <a href="https://push.org/docs/chain/build/send-multichain-transactions/" target="_blank" rel="noopener noreferrer" class="">detailed insights</a>.</p>
-<p><strong>Routing is automatic:</strong>
-You don't think about routes. Pass a plain address in to and the hop stays on Push Chain. Pass <code>{ address, chain }</code> and it goes outbound (from push to ext chain)  via CEA.</p>
-<p>Need a hop to originate from an external chain? Set <code>from: { chain }</code> and the SDK handles the rest.</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>CEA TL;DR</div><div class="admonitionContent_BuS1"><p>Chain Executor Accounts are per-user smart accounts that live on external chains and act on your behalf while keeping your funds and unified crosschain identity separate from everyone else.</p><p><a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-chain-executor-account/">Read more about CEAs</a>.</p></div></div>
-<p><strong>Funds can move with any hop</strong>
-Any hop can carry token movement alongside its contract call via the funds parameter. Bridge ETH into Push Chain and call a contract in the same hop. No separate bridging steps needed.</p>
-<p><strong>Multiple calls can be batched into a single hop</strong>
-The data field accepts either a single calldata or an array of calls. So approve + deposit can be one hop instead of two. Fewer hops, tighter cascades.</p>
-<h1>Try It</h1>
-<p>Multihop is live on testnet.
-Experience it through our ecosystem apps like <a href="https://www.ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">RamenFi</a>.</p>
-<p><a href="https://push.org/docs/chain/build/send-multichain-transactions/" target="_blank" rel="noopener noreferrer" class="">Multihop docs also include playground environments</a> where you can test directly in your browser, no local setup needed.</p>]]></content:encoded>
-            <category>Technical</category>
-            <category>Deep Dives</category>
         </item>
     </channel>
 </rss>

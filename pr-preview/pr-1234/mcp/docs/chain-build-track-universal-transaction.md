@@ -2,7 +2,7 @@
 title: "Track Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/track-universal-transaction/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Track Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -31,7 +31,7 @@ const response = await pushChainClient.universal.trackTransaction(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |

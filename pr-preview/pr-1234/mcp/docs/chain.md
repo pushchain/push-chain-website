@@ -2,7 +2,7 @@
 title: "Intro to Push Chain"
 url: "https://pushchain.github.io/docs/chain/"
 section: "chain"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Introduction | Push Chain Docs"
 ---
 

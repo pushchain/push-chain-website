@@ -2,7 +2,7 @@
 title: "Custom Universal Signer"
 url: "https://pushchain.github.io/docs/chain/build/advanced/custom-universal-signer/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Custom Universal Signer | Build | Advanced | Push Chain Docs"
 ---
 
@@ -43,7 +43,7 @@ const skeleton = PushChain.utils.signer.construct(account, {
 const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |

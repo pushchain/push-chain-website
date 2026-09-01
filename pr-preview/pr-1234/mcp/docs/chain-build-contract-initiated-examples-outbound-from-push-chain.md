@@ -2,7 +2,7 @@
 title: "Outbound from Push Chain"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-examples/outbound-from-push-chain/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Outbound from Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
 ---
 
@@ -21,7 +21,7 @@ This is the smallest contract-initiated outbound that runs end to end on Donut.
 | **Direction** | Push Chain to BNB Testnet. One-way. No back-leg. |
 | **Trigger** | A regular EOA calls `dispatchOutbound(...)` on the Push contract. |
 | **Identity on BNB** | The destination contract sees `msg.sender` equal to the Push contract's deterministic CEA on BNB. |
-| **Funds movement** | None. The example dispatches a payload only. The same surface supports bridging PRC20 (`token` + `amount`); see the [Advanced Patterns](/push-chain-website/pr-preview/pr-1234/docs/chain/build/contract-initiated-examples/advanced-patterns/) for funds variants. |
+| **Funds movement** | None. The example dispatches a payload only. The same surface supports bridging PRC-20 (`token` + `amount`); see the [Advanced Patterns](/push-chain-website/pr-preview/pr-1234/docs/chain/build/contract-initiated-examples/advanced-patterns/) for funds variants. |
 | **Verified on** | Donut Testnet. |
 
 ## Identity model

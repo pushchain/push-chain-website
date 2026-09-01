@@ -2,7 +2,7 @@
 title: "Recommended Practices"
 url: "https://pushchain.github.io/docs/chain/build/recommended-practices/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Recommended Practices | Build | Push Chain Docs"
 ---
 
@@ -46,6 +46,24 @@ To understand where your users are coming from—whether directly on Push Chain 
 -   Incentivize or reward activity coming from specific chains
 
 These helpers are already deployed and maintained, so you can easily integrate them into your logic with minimal effort.
+
+## Moving Tokens Across Chains
+
+Push Chain has two token standards:
+
+-   **PRC-20** for tokens that come in from an external chain, and
+-   **PC-20** for Push-native tokens that go out to one.
+
+See [Token Types on Push Chain](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain) for the distinction. Two habits will save you most of the debugging:
+
+-   **Resolve decimals, never hardcode them.**  
+    `parseUnits('1', 6)` is only correct for six-decimal tokens such as USDC and USDT. Both **getPRC20Address()** and **getPC20Address()** return the token's decimals.
+    
+    Resolve the token first, then pass what it reports. Hardcoding the wrong exponent does not throw; it silently moves the wrong amount.
+    
+-   **When naming a token's chain, name where it _is_.**  
+    In `funds.token`, `chain` is the chain the tokens are sitting on right now, not the chain they are headed to. The destination is a separate field. Getting this backwards is rejected before anything is signed, so it fails loudly, but it is the single most common first mistake.
+    
 
 ## Speed run
 

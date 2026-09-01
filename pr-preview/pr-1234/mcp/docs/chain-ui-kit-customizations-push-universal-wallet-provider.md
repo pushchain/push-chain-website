@@ -2,7 +2,7 @@
 title: "Push Universal Wallet Provider"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/push-universal-wallet-provider/"
 section: "ui-kit"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "{Push Universal Wallet Provider | Customizations | UI Kit | Push Chain Docs}"
 ---
 
@@ -62,7 +62,7 @@ LIVE APP PREVIEW
 
 ## Props
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ These`Arguments`are mandatory
 
 Customize the behavior of the wallet connection, logins, and modals by using the `config` prop.
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |

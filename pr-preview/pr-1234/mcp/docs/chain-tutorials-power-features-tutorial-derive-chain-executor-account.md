@@ -2,7 +2,7 @@
 title: "Derive Chain Executor Accounts (CEAs)"
 url: "https://pushchain.github.io/docs/chain/tutorials/power-features/tutorial-derive-chain-executor-account/"
 section: "tutorials"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Derive Chain Executor Accounts | Tutorials | Push Chain Docs"
 ---
 

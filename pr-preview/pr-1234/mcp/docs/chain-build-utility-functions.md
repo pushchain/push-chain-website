@@ -2,7 +2,7 @@
 title: "Utility Functions"
 url: "https://pushchain.github.io/docs/chain/build/utility-functions/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Utility Functions | Build | Push Chain Docs"
 ---
 
@@ -29,7 +29,7 @@ const result = PushChain.utils.helpers.parseUnits('1.5', { decimals: 18 });
 // Returns: 1500000000000000000n (1.5 PC in uPC)
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ const result = PushChain.utils.helpers.formatUnits('1500000000000000000', { deci
 // Returns: 1.5 (1.5 PC in uPC)
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -114,7 +114,7 @@ const encodedData = PushChain.utils.helpers.encodeTxData({
 
 `encodeTxData` produces chain-appropriate calldata based on the shape of `abi` or `idl`.
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |
@@ -158,7 +158,7 @@ Every external chain is represented as a particular string on Push Chain. You ca
 const chainName = PushChain.utils.chains.getChainNamespace('PUSH_TESTNET_DONUT');
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -191,7 +191,7 @@ Every external chain is represented as a particular string on Push Chain. You ca
 const chainName = PushChain.utils.chains.getChainName('eip155:42101');
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -224,7 +224,7 @@ Returns the list of supported chain names (human-readable strings) for a given P
 const chains = PushChain.utils.chains.getSupportedChainsByName(PushChain.CONSTANTS.PUSH_NETWORK.TESTNET);
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -270,7 +270,7 @@ Returns the list of chains supported for a given Push Network.
 const chains = PushChain.utils.chains.getSupportedChains(PushChain.CONSTANTS.PUSH_NETWORK.TESTNET);
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -318,7 +318,7 @@ const account = PushChain.utils.account.toUniversal(address, {
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -356,7 +356,7 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -389,7 +389,7 @@ Copy code
 const account = PushChain.utils.account.fromChainAgnostic(chainAgnosticAddress);
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -457,7 +457,7 @@ const ceaSolanaResult = await PushChain.utils.account.deriveExecutorAccount(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |
@@ -509,7 +509,7 @@ const ceaResult = await PushChain.utils.account.resolveControllerAccount(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |
@@ -593,7 +593,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -653,7 +653,7 @@ Copy code
 
 **_`PushChain.utils.tokens.getMoveableTokens(chainOrClient?): { tokens: [] }`_**
 
-Commonly used to get list of supported assets that can be moved across chains. See [send universal transaction](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#sending-universal-transaction) for more info.
+Commonly used to get list of supported assets that can be moved across chains. See [send universal transaction](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#send-a-universal-transaction) for more info.
 
 ```typescript
 // All supported moveable tokens across chains
@@ -665,7 +665,7 @@ const { tokens: sepoliaMoveable } = PushChain.utils.tokens.getMoveableTokens(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -696,7 +696,7 @@ Copy code
 
 **_`PushChain.utils.tokens.getPayableTokens(chainOrClient?): { tokens: [] }`_**
 
-Commonly used to get list of supported assets to pay with (either for gas or token movement) across chains. See [send universal transaction](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#sending-universal-transaction) for more info.
+Commonly used to get list of supported assets to pay with (either for gas or token movement) across chains. See [send universal transaction](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#send-a-universal-transaction) for more info.
 
 ```typescript
 // All supported payable tokens across chains
@@ -708,7 +708,7 @@ const { tokens: solanaDevnetPayable } = PushChain.utils.tokens.getPayableTokens(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -735,11 +735,11 @@ Copy playground link
 
 Copy code
 
-### Get PRC20 Address
+### Get PRC-20 Address
 
 **_`PushChain.utils.tokens.getPRC20Address(token, options?): { address, chain, symbol, decimals, network }`_**
 
-Resolves the Push Chain synthetic PRC20 address for a supported origin-chain token. Accepts either a `MoveableToken` (for example from `getMoveableTokens`) or an object containing the origin `chain` and token `address`.
+Resolves the [synthetic PRC-20 address](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
 
 ```typescript
 const { address, chain, symbol, decimals, network } =
@@ -752,12 +752,12 @@ const prc20Alt = PushChain.utils.tokens.getPRC20Address({
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
 | _`token`_ | `MoveableToken | { chain: string; address: string }` | Origin token info. Either pass a `MoveableToken` (e.g., from `getMoveableTokens()`) or provide the origin chain plus token address. |
-| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
+| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC-20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
 `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET``PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET`
 
  |
@@ -774,7 +774,77 @@ Returns \`PRC20Token\` <object>
 }
 ```
 
-Live Playground: Map origin token to PRC20 on Push Chain
+Live Playground: Map origin token to PRC-20 on Push Chain
+
+VIRTUAL NODE IDE
+
+Copy playground link
+
+Copy code
+
+### Get PC-20 Address
+
+**_`PushChain.utils.tokens.getPC20Address(address, options): Promise<PC20AddressResult>`_**
+
+Resolves a [PC-20](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
+
+PC-20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol.
+
+> **Note:** Synthetic PRC-20s such as `pETH` and `USDC.eth` are not PC-20s. Use [getPRC20Address()](#get-prc-20-address) for those.
+
+```typescript
+// From an external wrapper
+const token = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB574E18c1B0b2596163c68144ae', {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+
+token.address; // canonical token on Push Chain
+token.registry; // every chain it is deployed on
+
+// chain is optional — the SDK will find it
+const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB574E18c1B0b2596163c68144ae', {
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+```
+
+These `Arguments` are mandatory
+
+| **Arguments** | **Type** | **Description** |
+| --- | --- | --- |
+| _`address`_ | `string` | The external wrapper or the canonical token on Push Chain. Checksummed hex on EVM, base58 on Solana. |
+| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC-20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
+`PushChain.CONSTANTS.PUSH_NETWORK.TESTNET``PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET`
+
+ |
+| `options.chain` | `PushChain.CONSTANTS.CHAIN` | Where the address lives. Omit to let the SDK find it. Throws `PC20AmbiguousAddressError` if more than one chain claims it. PushChain.CONSTANTS.CHAIN
+
+`PushChain.CONSTANTS.CHAIN.PUSH_TESTNET``PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT``PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA``PushChain.CONSTANTS.CHAIN.BNB_TESTNET``PushChain.CONSTANTS.CHAIN.BASE_SEPOLIA``PushChain.CONSTANTS.CHAIN.ARBITRUM_SEPOLIA``PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET`
+
+ |
+| `options.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | Per-chain RPC overrides for reading the registry. Defaults to the SDK's endpoints. |
+| `options.strict` | `boolean` | Also verify factory identity against the live gateway. Slower; off by default. |
+
+Returns \`PC20AddressResult\` <object>
+
+```typescript
+{
+  address: `0x${string}`;  // Canonical PC-20 address on Push Chain
+  name: string;            // Token name
+  symbol: string;          // Token symbol
+  decimals: number;        // Token decimals
+  network: PUSH_NETWORK;   // The Push network this PC-20 belongs to
+  registry: Array<{
+    address: string;       // Checksummed hex on EVM, base58 on Solana
+    chain: CHAIN;          // CAIP-2 chain id, e.g. 'eip155:11155111'
+    chainName: string;     // Human-readable chain key, e.g. 'ETHEREUM_SEPOLIA'
+  }>;
+}
+```
+
+`registry` lists deployments that already exist — wrappers first, the Push Chain entry last. A wrapper address predicted for a first export is not included.
+
+Live Playground: Resolve a PC-20 and list its deployments
 
 VIRTUAL NODE IDE
 
@@ -795,7 +865,7 @@ const minOut = PushChain.utils.conversion.slippageToMinAmount('100000000', {
 // Returns: '99000000'
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -823,7 +893,7 @@ Copy code
 
 > **Note**: This function is available only after initializing the Push Chain client.
 
-The function is used to get conversion quote especially when you want to pay with (from) one token, move as (to) another token. Used in [send universal transaction](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#sending-universal-transaction) for token movement across chains or to pay gas in other tokens instead of native token of the source chain.
+The function is used to get conversion quote especially when you want to pay with (from) one token, move as (to) another token. Used in [send universal transaction](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#send-a-universal-transaction) for token movement across chains or to pay gas in other tokens instead of native token of the source chain.
 
 > **Convention:** from = the token you pay with (Payable), to = the token you move as (Moveable).
 
@@ -891,7 +961,7 @@ const sepoliaUrl = pushChainClient.explorer.getTransactionUrl(txHash, {
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -937,7 +1007,7 @@ const sepoliaExplorers = pushChainClient.explorer.listUrls({
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |

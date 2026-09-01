@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -38,7 +38,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-These`Arguments`are mandatory
+## Transaction Parameters
+
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
@@ -59,13 +61,10 @@ On Push Chain this is uPC (the smallest unit, like wei in ETH).
 On external execution routes, this maps to the native asset amount of that route. |
 | `tx.data` | `string` | `Array<{ to: string; value: bigint; data: string }>` | Encoded calldata for a single call `string` or batched multicall `Array<{ to, value, data }>`.  
   
-Use `encodeTxData` to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
-| `tx.funds` | `{ amount: BigInt; token?: PushChain.CONSTANTS.MOVEABLE.TOKEN }` | Moves supported assets as part of the transaction flow.  
+Use [`encodeTxData`](/push-chain-website/pr-preview/pr-1234/docs/chain/build/utility-functions/#encode-transaction-data) to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
+| `tx.funds` | `{ amount: BigInt; token?: MoveableToken | PC20TokenReference }` | Moves supported assets as part of the transaction. If `tx.data` is provided, the movement and the call happen atomically.  
   
-Depending on the route, assets may be moved into Push Chain or between Push Chain and a supported external chain.  
-  
-If `tx.data` is provided, asset movement and execution happen atomically.  
-PushChain.CONSTANTS.MOVEABLE.TOKEN
+Pass a `MoveableToken`, or `{ chain, address }` for a [PC-20](#moving-pc-20-tokens). PushChain.CONSTANTS.MOVEABLE.TOKEN
 
 `PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.ETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.WETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.stETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.ETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.WETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.ETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.WETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.BNB``PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.SOLANA_DEVNET.SOL``PushChain.CONSTANTS.MOVEABLE.TOKEN.SOLANA_DEVNET.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.SOLANA_DEVNET.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pEth``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pEthArb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pEthBase``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pBnb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pSol``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.eth``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.arb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.base``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.bnb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.sol``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.eth``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.arb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.base``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.bsc``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.sol`
 
@@ -377,6 +376,14 @@ Use the funds field to specify the amount of assets to move, and _optionally_ th
 > **Note**: funds transactions are only supported from external origin chains.  
 > Native Push Chain users should call ERC-20 `transfer` or `transferFrom` directly (instead of using funds).
 
+`funds.token` takes either kind of token — see [Token Types on Push Chain](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain) for the difference.
+
+## Moving Prc 20 Tokens
+
+### Moving PRC-20 Tokens (Tokens born outside Push Chain)
+
+`funds.token` accepts a **[MoveableToken](#tx-funds)** from the supported-asset table. The origin-chain token is locked and its [PRC-20](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain) representation is minted on Push Chain.
+
 ```typescript
 // Send 1 USDT to the recipient address
 const txResponse = await pushChainClient.universal.sendTransaction({
@@ -388,6 +395,44 @@ const txResponse = await pushChainClient.universal.sendTransaction({
   },
 });
 ```
+
+## Moving Pc 20 Tokens
+
+### Moving PC-20 Tokens (Tokens born on Push Chain)
+
+`funds.token` also accepts a **[PC-20 reference](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain)**, a token born on Push Chain, identified by `{ chain, address }` and resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
+
+```typescript
+// Resolve the token first. getPC20Address reports its decimals, so the amount
+// is right by construction — see [Recommended Practices](/docs/chain/build/recommended-practices).
+const unicorn = await PushChain.utils.tokens.getPC20Address(
+  '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+  {
+    chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+    network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+  }
+);
+
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: {
+    address: '0xRecipientAddress',
+    chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // where it is going
+  },
+  funds: {
+    amount: PushChain.utils.helpers.parseUnits('1', { decimals: unicorn.decimals }),
+    token: {
+      chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, // where the token IS
+      address: unicorn.address,
+    },
+  },
+});
+```
+
+**Important:** `funds.token.chain` is the chain the tokens sit on right now. It is different from the destination `to.chain` which indicates where it should go.
+
+Never add `symbol` to a PC-20 reference
+
+A PC-20 reference is exactly `{ chain, address }`. The SDK tells it apart from a `MoveableToken` by the **absence** of `symbol`, adding a `symbol` will cause unexpected results.
 
 ## Send Batch Transactions (Multicall)
 

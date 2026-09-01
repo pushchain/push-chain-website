@@ -2,7 +2,7 @@
 title: "Changelog"
 url: "https://pushchain.github.io/docs/chain/changelog/"
 section: "chain"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Changelog | Push Chain Docs"
 ---
 
@@ -11,6 +11,16 @@ description: "Changelog | Push Chain Docs"
 Keep track of the latest changes and updates to the Push Chain Core and UI Kit SDKs.
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
+
+### 6.0.23 (2026-09-01)
+
+#### Fixes
+
+-   route EVM PC20 imports through the payload path
+
+#### Other Changes
+
+-   docs: changelog entry for the EVM PC20 burn routing fix
 
 ### 6.0.22 (2026-08-14)
 
@@ -49,6 +59,7 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 -   Fixed prepaid native gas credit on PC20 burns by using the sender's executor
 -   Fixed first PC20 wrapper deployments running out of gas on the destination.
 -   Realigned inbound protobuf fields with the chain, exposed PC20 inbound
+-   Fixed EVM PC20 wrapper burns destroying the wrapper without unlocking the
 
 ### 6.0.20 (2026-07-10)
 
@@ -399,6 +410,16 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 -   release fix
 
 ## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)
+
+### 6.0.24 (2026-09-01)
+
+#### Chores
+
+-   update bundled to pull in the latest core features (v6.0.24)
+
+#### Fixes
+
+-   fix modal positioning and track live progress icon
 
 ### 6.0.23 (2026-08-14)
 

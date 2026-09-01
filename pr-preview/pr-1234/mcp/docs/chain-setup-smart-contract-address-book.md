@@ -2,7 +2,7 @@
 title: "Smart Contract Address Book"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-address-book/"
 section: "setup"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Smart Contract Address Book | Setup | Push Chain Docs"
 ---
 
@@ -120,7 +120,9 @@ Verifies Solana signatures for universal execution
 
 ### PRC-20 Supported Tokens (on Push Chain)
 
-Push-native representations of tokens bridged from external chains. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+Push Chain representations of tokens that live natively on an external chain. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+
+> See [Token Types on Push Chain](/push-chain-website/pr-preview/pr-1234/docs/chain/important-concepts/#token-types-on-push-chain) for how PRC-20 differs from PC-20.
 
 | Token Name | Symbol | Source Chain | Token Address on Push Chain |
 | --- | --- | --- | --- |
@@ -142,7 +144,7 @@ Push-native representations of tokens bridged from external chains. Each PRC-20 
 | USDC.bsc | USDC.bsc | BNB\_Testnet | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) |
 | USDT.bnb | USDT.bnb | BNB\_Testnet | [0x731aF1Da5365259d27528557EE4aFBA4baC90ef2](https://donut.push.network/address/0x731aF1Da5365259d27528557EE4aFBA4baC90ef2?tab=contract) |
 
-* * *
+> **PC-20 wrappers are not listed here.** A PRC-20 is created by Push Chain, so it can be published as a fixed table. A PC-20 wrapper is deployed on the external chain the first time its token is exported there, so the set changes over time and lives in UniversalCore's on-chain registry instead. Resolve one with [`getPC20Address`](/push-chain-website/pr-preview/pr-1234/docs/chain/build/utility-functions/#get-pc-20-address).
 
 ### Core AMM & Helpers
 
@@ -236,7 +238,7 @@ ProxyAdmin - [0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3](https://sepolia.ethers
 
 Tokens accepted by the Ethereum Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| Token Name | Source Address | PRC-20 Address (on Push Chain) |
 | --- | --- | --- |
 | Native ETH | 0x0000000000000000000000000000000000000000 | [0x2971824Db68229D087931155C2b8bB820B275809](https://donut.push.network/address/0x2971824Db68229D087931155C2b8bB820B275809?tab=contract) `pETH` |
 | USDC | [0x97F477B7f970D47a87B42869ceeace218106152a](https://sepolia.etherscan.io/address/0x97F477B7f970D47a87B42869ceeace218106152a#code) | [0x7A58048036206bB898008b5bBDA85697DB1e5d66](https://donut.push.network/address/0x7A58048036206bB898008b5bBDA85697DB1e5d66?tab=contract) `USDC.eth` |
@@ -297,7 +299,7 @@ ProxyAdmin - [0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2](https://sepolia.arbisc
 
 Tokens accepted by the Arbitrum Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| Token Name | Source Address | PRC-20 Address (on Push Chain) |
 | --- | --- | --- |
 | Native ETH | 0x0000000000000000000000000000000000000000 | [0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e](https://donut.push.network/address/0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e?tab=contract) `pETH.arb` |
 | USDC | [0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C](https://sepolia.arbiscan.io/address/0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C#code) | [0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C](https://donut.push.network/address/0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C?tab=contract) `USDC.arb` |
@@ -357,7 +359,7 @@ ProxyAdmin - [0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d](https://sepolia.basesc
 
 Tokens accepted by the Base Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| Token Name | Source Address | PRC-20 Address (on Push Chain) |
 | --- | --- | --- |
 | Native ETH | 0x0000000000000000000000000000000000000000 | [0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21](https://donut.push.network/address/0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21?tab=contract) `pETH.base` |
 | USDC | [0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8](https://sepolia.basescan.org/address/0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8#code) | [0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1](https://donut.push.network/address/0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1?tab=contract) `USDC.base` |
@@ -417,7 +419,7 @@ ProxyAdmin - [0xc34eF3cA76d1C18c35AbF5C3664d183B57382AbC](https://testnet.bscsca
 
 Tokens accepted by the BNB Testnet gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| Token Name | Source Address | PRC-20 Address (on Push Chain) |
 | --- | --- | --- |
 | Native BNB | 0x0000000000000000000000000000000000000000 | [0x7a9082dA308f3fa005beA7dB0d203b3b86664E36](https://donut.push.network/address/0x7a9082dA308f3fa005beA7dB0d203b3b86664E36?tab=contract) `pBNB` |
 | USDC | [0xA8802F96cAd0d45343d9bc660B6f7d80050A660b](https://testnet.bscscan.com/address/0xA8802F96cAd0d45343d9bc660B6f7d80050A660b#code) | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) `USDC.bsc` |
@@ -439,7 +441,7 @@ Contracts deployed on Solana Devnet. The Solana gateway is a native Solana progr
 
 Tokens accepted by the Solana Devnet gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| Token Name | Source Address | PRC-20 Address (on Push Chain) |
 | --- | --- | --- |
 | Native SOL | — | [0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed](https://donut.push.network/address/0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed?tab=contract) `pSOL` |
 | USDC | [4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU](https://explorer.solana.com/address/4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU?cluster=devnet) | [0x04B8F634ABC7C879763F623e0f0550a4b5c4426F](https://donut.push.network/address/0x04B8F634ABC7C879763F623e0f0550a4b5c4426F?tab=contract) `USDC.sol` |

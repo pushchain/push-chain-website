@@ -2,7 +2,7 @@
 title: "Universal Transaction Scenarios"
 url: "https://pushchain.github.io/docs/chain/build/universal-transaction-scenarios/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Universal Transaction Scenarios | Build | Push Chain Docs"
 ---
 
@@ -44,7 +44,7 @@ Copy playground link
 
 Copy code
 
-Move ERC-20 (USDT) + Call Contract in One Tx
+Move ERC-20 (USDT) + Call Contract in one Tx
 
 Bridge USDT into Push Chain AND atomically call a contract in the same transaction. The funds land on the UEA, then the UEA executes your payload — all from one user signature.
 
@@ -57,6 +57,26 @@ Copy code
 Batch Transactions (Multicall)
 
 Run two `increment()` calls on the same Push Chain contract atomically, from a single Sepolia signature. The inline `progressHook` lets you watch the full lifecycle (gas estimate -> UEA resolution -> fee-lock -> broadcast -> confirmation) without a separate tracking example.
+
+VIRTUAL NODE IDE
+
+Copy playground link
+
+Copy code
+
+Move PC-20 Token from an External Chain to Push
+
+A complete PC-20 round trip in one script. Mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home.  
+  
+**Note:** Ideally, you will be either moving PC-20 from external chains to Push or vice-versa. This example does the full route to make the understanding easier.  
+  
+
+Getting the test token
+
+These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/push-chain-website/pr-preview/pr-1234/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, which was used to mint.  
+  
+
+Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
 
 VIRTUAL NODE IDE
 
@@ -109,6 +129,19 @@ Copy playground link
 Copy code
 
 Contract Call on Solana from Ethereum Sepolia
+
+VIRTUAL NODE IDE
+
+Copy playground link
+
+Copy code
+
+Move PC-20 Token from Push to an External Chain
+
+Send a [PC-20 (Token born on Push Chain)](/push-chain-website/pr-preview/pr-1234/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.  
+  
+
+**Pre-requisite:**. Mint yourself some **$UNICORN** from [Mint Universal ERC-20 Tokens](/push-chain-website/pr-preview/pr-1234/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). $UNICORN is an ordinary ERC-20 that exists on Push Chain.
 
 VIRTUAL NODE IDE
 

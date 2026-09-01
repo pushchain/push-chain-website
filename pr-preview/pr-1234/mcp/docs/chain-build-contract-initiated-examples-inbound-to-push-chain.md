@@ -2,7 +2,7 @@
 title: "Inbound to Push Chain"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-examples/inbound-to-push-chain/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Inbound to Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
 ---
 

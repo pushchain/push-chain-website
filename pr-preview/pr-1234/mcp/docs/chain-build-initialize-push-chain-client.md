@@ -2,7 +2,7 @@
 title: "Initialize Push Chain Client"
 url: "https://pushchain.github.io/docs/chain/build/initialize-push-chain-client/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Initialize Push Chain Client | Build | Push Chain Docs"
 ---
 
@@ -34,7 +34,7 @@ const pushChainClient = await PushChain.initialize(universalSigner, {
 });
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | Arguments | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -259,7 +259,7 @@ For advanced account management flows, read [Upgrade Universal Account](/push-ch
 const status = await pushChainClient.getAccountStatus();
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |

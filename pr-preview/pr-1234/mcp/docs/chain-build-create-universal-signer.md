@@ -2,7 +2,7 @@
 title: "Create Universal Signer"
 url: "https://pushchain.github.io/docs/chain/build/create-universal-signer/"
 section: "build"
-lastUpdated: "2026-08-19T11:27:12Z"
+lastUpdated: "2026-09-01T21:11:33Z"
 description: "Create Universal Signer | Build | Push Chain Docs"
 ---
 
@@ -68,7 +68,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 );
 ```
 
-These`Arguments`are mandatory
+These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
