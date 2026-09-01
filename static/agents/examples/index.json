@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.2",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T22:38:22.658Z",
   "description": "Full index of all Push Chain code examples with SDK methods used, prerequisite examples, chains involved, and difficulty metadata. Referenced by agents/index.json as the canonical example catalog.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .examples[]. Change examples/index.json[N] → examples/index.json.examples[N].",
   "examples": [
@@ -204,7 +204,6 @@
       "file": "convert-solana-keypair-to-universal-signer.md",
       "description": "Code example: Create Universal Signer — https://push.org/docs/chain/build/create-universal-signer/",
       "sdk_methods_used": [
-        "PushChain.utils.signer.toUniversal",
         "PushChain.utils.signer.toUniversalFromKeypair"
       ],
       "chains_involved": [],
@@ -353,7 +352,6 @@
       "file": "send-transaction-solana-basic.md",
       "description": "Code example: Live Playground — https://push.org/docs/chain/build/send-universal-transaction/",
       "sdk_methods_used": [
-        "PushChain.utils.signer.toUniversal",
         "PushChain.utils.signer.toUniversalFromKeypair",
         "PushChain.initialize",
         "pushChainClient.universal.sendTransaction",
@@ -548,7 +546,9 @@
       "name": "Encode Transaction Data",
       "file": "utility-encode-tx-data.md",
       "description": "Code example: Encode Transaction Data — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.helpers.encodeTxData"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -558,7 +558,9 @@
       "name": "Get Chain Namespace from Chain Name",
       "file": "utility-get-chain-namespace.md",
       "description": "Code example: Get Chain Namespace from Chain Name — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.chains.getChainNamespace"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -568,7 +570,9 @@
       "name": "Get Chain Name from Chain Namespace",
       "file": "utility-get-chain-name.md",
       "description": "Code example: Get Chain Name from Chain Namespace — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.chains.getChainName"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -578,7 +582,9 @@
       "name": "Get Supported Chains By Name",
       "file": "utility-get-supported-chains-by-name.md",
       "description": "Code example: Get Supported Chains By Name — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.chains.getSupportedChainsByName"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -588,7 +594,9 @@
       "name": "Get Supported Chains",
       "file": "utility-get-supported-chains.md",
       "description": "Code example: Get Supported Chains — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.chains.getSupportedChains"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -622,7 +630,9 @@
       "name": "Convert from Chain-Agnostic to Universal Account",
       "file": "utility-account-from-chain-agnostic.md",
       "description": "Code example: Convert from Chain-Agnostic to Universal Account — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.account.fromChainAgnostic"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -658,7 +668,6 @@
       "file": "utility-signer-from-keypair-ethers.md",
       "description": "Code example: Create Universal Signer from Keypair — https://push.org/docs/chain/build/utility-functions/",
       "sdk_methods_used": [
-        "PushChain.utils.signer.toUniversal",
         "PushChain.utils.signer.toUniversalFromKeypair"
       ],
       "chains_involved": [],
@@ -671,7 +680,6 @@
       "file": "utility-signer-from-keypair-viem.md",
       "description": "Code example: Create Universal Signer from Keypair — https://push.org/docs/chain/build/utility-functions/",
       "sdk_methods_used": [
-        "PushChain.utils.signer.toUniversal",
         "PushChain.utils.signer.toUniversalFromKeypair"
       ],
       "chains_involved": [],
@@ -684,7 +692,6 @@
       "file": "utility-signer-from-keypair-solana.md",
       "description": "Code example: Create Universal Signer from Keypair — https://push.org/docs/chain/build/utility-functions/",
       "sdk_methods_used": [
-        "PushChain.utils.signer.toUniversal",
         "PushChain.utils.signer.toUniversalFromKeypair"
       ],
       "chains_involved": [],
@@ -696,7 +703,9 @@
       "name": "Get Moveable Tokens",
       "file": "utility-get-moveable-tokens.md",
       "description": "Code example: Get Moveable Tokens — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.tokens.getMoveableTokens"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -706,17 +715,22 @@
       "name": "Get Payable Tokens",
       "file": "utility-get-payable-tokens.md",
       "description": "Code example: Get Payable Tokens — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.tokens.getPayableTokens"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
     },
     {
       "id": "utility-get-prc20-address",
-      "name": "Get PRC20 Address",
+      "name": "Get PRC-20 Address",
       "file": "utility-get-prc20-address.md",
-      "description": "Code example: Get PRC20 Address — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "description": "Code example: Get PRC-20 Address — https://push.org/docs/chain/build/utility-functions/",
+      "sdk_methods_used": [
+        "PushChain.utils.tokens.getMoveableTokens",
+        "PushChain.utils.tokens.getPRC20Address"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
@@ -726,7 +740,9 @@
       "name": "Calculate Minimum Amount from Slippage",
       "file": "utility-slippage-to-min-amount.md",
       "description": "Code example: Calculate Minimum Amount from Slippage — https://push.org/docs/chain/build/utility-functions/",
-      "sdk_methods_used": [],
+      "sdk_methods_used": [
+        "PushChain.utils.conversion.slippageToMinAmount"
+      ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"

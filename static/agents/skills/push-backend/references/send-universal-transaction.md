@@ -36,6 +36,10 @@ const tx = await client.universal.sendTransaction({
   funds: {
     amount: PushChain.utils.helpers.parseUnits('1', 6),
     token: PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT,
+    // For a token born ON Push Chain (PC-20), pass a { chain, address }
+    // reference instead - never with a symbol field, and with chain set to
+    // where the tokens sit right now (resolve via getPC20Address):
+    // token: { chain: CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, address: '0x...' },
   },
 
   // ── Pay gas with a bridged token instead of native PC ─────────────

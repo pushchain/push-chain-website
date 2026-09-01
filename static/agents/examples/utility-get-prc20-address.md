@@ -1,4 +1,4 @@
-## Get PRC20 Address
+## Get PRC-20 Address
 
 Source: https://push.org/docs/chain/build/utility-functions/
 
@@ -39,4 +39,5 @@ import { PushChain } from '@pushchain/core';
 
 ## SDK Methods Used
 
-- See code above
+- `PushChain.utils.tokens.getMoveableTokens`
+- `PushChain.utils.tokens.getPRC20Address`

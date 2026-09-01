@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.0",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.2.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "description": "Catalog of Push Chain SDK error conditions with detection signals, user-visible symptoms, machine recovery steps, and escalation guidance. Cross-reference with agents/recovery-playbook.md for step-by-step procedures.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .errors[]. Change errors.json[N] → errors.json.errors[N].",
   "errors": [
@@ -306,6 +306,207 @@
         "Check response.atomic after sending to detect which path ran"
       ],
       "escalation": "Not a bug. If atomic batching is needed from a browser context, route signing through Push Wallet (email/google login) or a backend local-key signer instead of a JSON-RPC wallet.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_invalid_address",
+      "name": "Invalid PC-20 Address (PC20_INVALID_ADDRESS)",
+      "description": "InvalidPC20AddressError: the address in a PC-20 reference is malformed for the supplied chain’s VM, or is the zero/default address. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "A truncated, wrong-VM (e.g. base58 on an EVM chain), or zero address was passed as `funds.token.address` or to PushChain.utils.tokens.getPC20Address().",
+      "detection_signal": "Rejected promise carrying code PC20_INVALID_ADDRESS during pre-flight validation, before any broadcast. Every caller-facing path is async (sendTransaction, prepareTransaction, getPC20Address), so it surfaces as a rejection, never a synchronous throw.",
+      "user_visible_symptom": "Transaction or lookup fails immediately with an address validation message; nothing is signed or broadcast.",
+      "machine_recovery": [
+        "Verify the address is a full, checksummed address valid for the VM of `funds.token.chain`",
+        "Resolve the canonical address via PushChain.utils.tokens.getPC20Address() instead of hand-copying it",
+        "Never derive PC-20 identity from a symbol — PC-20 identity is address-and-chain only"
+      ],
+      "escalation": "If a registry-sourced address triggers this, escalate with the address, chain, and SDK version — the registry entry may be corrupt.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_token_chain_mismatch",
+      "name": "PC-20 Token Chain Mismatch (PC20_TOKEN_CHAIN_MISMATCH)",
+      "description": "PC20TokenChainMismatchError: `funds.token.chain` does not match the chain the funds are actually on — the signer’s chain for a direct external route, `from.chain` for a CEA-origin route, or Push Chain for an export. This is the check that stops a wrapper address copied onto the wrong chain. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "`funds.token.chain` was set to the destination chain (`to.chain`) instead of the chain the tokens currently sit on, or a wrapper address from one chain was paired with another chain’s constant.",
+      "detection_signal": "Error with code PC20_TOKEN_CHAIN_MISMATCH thrown pre-flight. Hint text: “funds.token.chain must be where the token lives, not the destination. `to.chain` is the destination.”",
+      "user_visible_symptom": "sendTransaction rejects before broadcast; no funds move.",
+      "machine_recovery": [
+        "Set `funds.token.chain` to where the tokens are RIGHT NOW (e.g. PUSH_TESTNET_DONUT when exporting a Push-native token)",
+        "Set the destination only in `to.chain`",
+        "Re-resolve the token with getPC20Address({ chain }) to confirm which chain the supplied address belongs to"
+      ],
+      "escalation": "None — this is always a caller-side argument fix.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_wrapper_not_registered",
+      "name": "PC-20 Wrapper Not Registered (PC20_WRAPPER_NOT_REGISTERED)",
+      "description": "PC20WrapperNotRegisteredError: UniversalCore’s on-chain registry has no source mapping for this wrapper address on this chain. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "The address was never deployed by a PC-20 export to that chain, the address belongs to a different chain, or the token is not a PC-20 wrapper at all.",
+      "detection_signal": "Error with code PC20_WRAPPER_NOT_REGISTERED from getPC20Address() or from pre-flight resolution of a `funds.token` PC-20 reference.",
+      "user_visible_symptom": "Lookup or transaction fails with “No PC20 wrapper is registered at this address on this chain.”",
+      "machine_recovery": [
+        "Confirm the wrapper was deployed by a prior export to this chain — a wrapper only exists on a chain after the first export there",
+        "Confirm the address belongs to the chain passed in `options.chain` / `funds.token.chain`",
+        "If the token is Push-native, pass its canonical Push Chain address with chain = PUSH_TESTNET_DONUT instead of a wrapper address"
+      ],
+      "escalation": "If a wrapper you deployed via a confirmed export is not found, escalate with the export tx hash and chain.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_registry_mismatch",
+      "name": "PC-20 Registry Mismatch (PC20_REGISTRY_MISMATCH)",
+      "description": "PC20RegistryMismatchError: forward and reverse registry lookups disagree — getPC20Source(wrapper) resolved a source whose getPC20Wrapper(source) is a different address. A stale or partially-written registry entry. The SDK never proceeds: the burn would unlock the wrong Push token. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "Registry inconsistency on-chain (stale or partially-written entry). Not caused by caller arguments.",
+      "detection_signal": "Error with code PC20_REGISTRY_MISMATCH; message may include the reverse-resolved wrapper address.",
+      "user_visible_symptom": "Transaction aborts pre-flight; no funds are locked or burned.",
+      "machine_recovery": [
+        "Do not retry blindly — the hint says this is a registry inconsistency",
+        "Re-resolve via getPC20Address() to capture the conflicting addresses for the report"
+      ],
+      "escalation": "Always escalate with both addresses and the chain — this indicates on-chain registry corruption, not a caller bug.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_factory_mismatch",
+      "name": "PC-20 Factory Mismatch (PC20_FACTORY_MISMATCH)",
+      "description": "PC20FactoryMismatchError: the live external gateway’s configured pc20Factory differs from the reference factory, or the factory does not recognize the wrapper. Proceeding would risk the gateway taking the non-PC-20 path for this token. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "Deployment misconfiguration on the external chain (gateway and UniversalCore disagree about the factory identity).",
+      "detection_signal": "Error with code PC20_FACTORY_MISMATCH thrown pre-flight. The gateway and registry factory addresses are compared internally but are NOT exposed on the error object or in its message — only code, chain, address, expectedChain, chainNamespace, and hint are set.",
+      "user_visible_symptom": "Transaction aborts before broadcast.",
+      "machine_recovery": [
+        "Do not retry — the hint says the deployment is misconfigured; report it",
+        "Capture err.code, err.chain, err.address, and err.message for the report; the factory addresses are not carried on the error"
+      ],
+      "escalation": "Always escalate with the destination chain and token address — this is an infrastructure misconfiguration between the live gateway and UniversalCore, not a caller bug.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_invalid_metadata",
+      "name": "Invalid PC-20 Metadata (PC20_INVALID_METADATA)",
+      "description": "InvalidPC20MetadataError: the token does not expose usable ERC-20 metadata (name/symbol/decimals), or the metadata fails validation. Since @pushchain/core 6.0.22 any ERC-20 born on Push Chain with standard name()/symbol()/decimals() qualifies as a PC-20 — there is no pc20Metadata() interface to implement. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "The contract at the supplied address is not a standard ERC-20 (missing or reverting name/symbol/decimals), or returns values that fail validation.",
+      "detection_signal": "Error with code PC20_INVALID_METADATA during resolution or export preparation.",
+      "user_visible_symptom": "Lookup or export fails citing token metadata.",
+      "machine_recovery": [
+        "Verify the contract implements standard ERC-20 name(), symbol(), and decimals()",
+        "Confirm you passed a token contract address, not a wallet, pool, or proxy-admin address"
+      ],
+      "escalation": "If a standard ERC-20 with verifiable metadata triggers this, escalate with the address and chain.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_expected_but_prc20",
+      "name": "PRC-20 Supplied Where PC-20 Expected (PC20_EXPECTED_BUT_PRC20)",
+      "description": "PC20ExpectedButPRC20Error: a synthetic PRC-20 address (an external-chain token mirrored inward, e.g. USDC.eth, pETH) was supplied where a Push-native PC-20 was expected. A PRC-20 is a legitimate token on the wrong API, not a broken one — the SDK keeps this distinct from invalid-metadata so the fix points at the right call. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "The two standards are one letter apart and mean opposite directions: PRC-20 = foreign token mirrored INTO Push; PC-20 = Push-native token mirrored OUT. A PRC-20 address was passed as a `{ chain, address }` PC-20 reference or to getPC20Address().",
+      "detection_signal": "Error with code PC20_EXPECTED_BUT_PRC20: “This address is a synthetic PRC20, not a Push-native PC20.”",
+      "user_visible_symptom": "Transaction or lookup rejects before anything is signed.",
+      "machine_recovery": [
+        "Move PRC-20 tokens with the MoveableToken API (PushChain.CONSTANTS.MOVEABLE.TOKEN.* accessors), not a { chain, address } PC-20 reference",
+        "Use PushChain.utils.tokens.getPRC20Address() (sync, static table) for PRC-20s; getPC20Address() (async, on-chain registry) is only for Push-native tokens"
+      ],
+      "escalation": "None — switch to the MoveableToken API for this token.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_unsupported_destination",
+      "name": "Unsupported PC-20 Destination (PC20_UNSUPPORTED_DESTINATION)",
+      "description": "UnsupportedPC20DestinationError: the destination chain has no configured PC-20 factory, or is not supported for PC-20 export. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "A PC-20 export targeted a chain namespace with no registered PC-20 factory (chain not yet supported for PC-20).",
+      "detection_signal": "Error with code PC20_UNSUPPORTED_DESTINATION thrown pre-flight.",
+      "user_visible_symptom": "Export rejects before any lock or approval.",
+      "machine_recovery": [
+        "Read err.chainNamespace off the error — it names the unsupported destination. No static list of PC-20-capable chains is published; support is decided by UniversalCore's factory registrations at runtime",
+        "Pick a destination that already appears in getPC20Address(...).registry for a known exported PC-20, or keep the token on Push Chain"
+      ],
+      "escalation": "If a chain documented as PC-20-capable triggers this, escalate with the chain namespace from the error context.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_insufficient_balance",
+      "name": "Insufficient PC-20 Balance (PC20_INSUFFICIENT_BALANCE) — exported, not thrown in 6.0.24",
+      "description": "InsufficientPC20BalanceError is exported by @pushchain/core 6.0.24 with code PC20_INSUFFICIENT_BALANCE, but no code path in 6.0.24 instantiates it: the SDK performs no PC-20 balance pre-flight. An underfunded PC-20 move surfaces as an on-chain revert (or the generic gas/balance checks under enforceGasCheck), never as this code. The class exists for forward compatibility; `required`/`available` are folded into the message string only and are not instance properties. It belongs to the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "Not reachable in 6.0.24. If a future SDK wires it, the cause would be a wrapper (inbound) or Push-native source (export) balance lower than funds.amount.",
+      "detection_signal": "None in 6.0.24 — the code is never emitted. Do not write a catch branch that depends on it; check balances yourself before sending.",
+      "user_visible_symptom": "Not applicable in 6.0.24. An underfunded PC-20 transfer fails on chain (revert) rather than pre-flight.",
+      "machine_recovery": [
+        "Check the balance of the exact address that funds the move (UEA for external-origin flows, the wallet itself for Push-native flows) BEFORE calling sendTransaction — the SDK will not do it for PC-20s",
+        "Use the decimals from getPC20Address() when computing funds.amount — a decimals mismatch inflates the requested amount",
+        "Treat `instanceof InsufficientPC20BalanceError` as forward-compatible only; on 6.0.24 it never matches"
+      ],
+      "escalation": "None — fund the account or fix the amount.",
+      "confidence": "inferred"
+    },
+    {
+      "id": "pc20_ambiguous_address",
+      "name": "Ambiguous PC-20 Address (PC20_AMBIGUOUS_ADDRESS)",
+      "description": "PC20AmbiguousAddressError: the same address is registered on more than one chain, resolving to different Push sources, and no `chain` option was supplied to disambiguate. Only reachable from getPC20Address()’s optional-chain discovery path; the error carries a `candidates` array of { chain, pushAddress }. Picking the first match silently would give a confident answer about the wrong token, so the SDK throws instead. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "getPC20Address(address) was called without `options.chain` and the address exists on multiple chains.",
+      "detection_signal": "Error with code PC20_AMBIGUOUS_ADDRESS listing every candidate chain and its Push source address.",
+      "user_visible_symptom": "Lookup fails with the candidate list; no transaction was attempted.",
+      "machine_recovery": [
+        "Pass `options.chain` to getPC20Address() to pin which chain the supplied address lives on",
+        "Read the `candidates` array off the error to present the choice to the user"
+      ],
+      "escalation": "None — supply the chain option.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_unknown_chain_namespace",
+      "name": "Unknown PC-20 Chain Namespace (PC20_UNKNOWN_CHAIN_NAMESPACE)",
+      "description": "PC20UnknownChainNamespaceError: a chain namespace could not be mapped in either direction (SDK chain constant ↔ CAIP-2 namespace). Thrown rather than returning a negative result — an unmapped namespace would read from the registry as “not deployed”, hiding the actual bug. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "A chain value outside PushChain.CONSTANTS.CHAIN was supplied, or the SDK version predates the chain’s addition.",
+      "detection_signal": "Error with code PC20_UNKNOWN_CHAIN_NAMESPACE; the chainNamespace context field holds the unmapped value.",
+      "user_visible_symptom": "Lookup or transaction fails naming the namespace.",
+      "machine_recovery": [
+        "Use a PushChain.CONSTANTS.CHAIN value, never a hand-written chain string",
+        "Upgrade @pushchain/core if the chain was added in a newer release"
+      ],
+      "escalation": "If a current CONSTANTS.CHAIN value triggers this on the latest SDK, escalate with the namespace and SDK version.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_wrapper_prediction_unavailable",
+      "name": "PC-20 Wrapper Prediction Unavailable (PC20_WRAPPER_PREDICTION_UNAVAILABLE)",
+      "description": "PC20WrapperPredictionUnavailableError: the destination wrapper address for a FIRST export could not be predicted. Thrown strictly BEFORE approval — a first export commits the source token into VaultPC20 before the destination transfer is built, so an unverifiable prediction aborts rather than guessing. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "The destination chain’s PC-20 factory was unreachable (RPC outage or misconfiguration) while preparing the token’s first export to that chain.",
+      "detection_signal": "Error with code PC20_WRAPPER_PREDICTION_UNAVAILABLE thrown before approval; no funds locked.",
+      "user_visible_symptom": "First export to a new chain fails fast; repeat exports (wrapper already deployed) are unaffected.",
+      "machine_recovery": [
+        "Retry once the destination factory/RPC is reachable — the hint confirms nothing was locked",
+        "Verify the destination chain RPC is healthy before retrying"
+      ],
+      "escalation": "If retries keep failing with healthy RPCs, escalate with the destination chain and token address.",
+      "confidence": "documented"
+    },
+    {
+      "id": "pc20_export_reverted",
+      "name": "PC-20 Export Reverted (PC20_EXPORT_REVERTED) — exported, not thrown in 6.0.24",
+      "description": "PC20ExportRevertedError is exported by @pushchain/core 6.0.24 with code PC20_EXPORT_REVERTED and instance fields outboundTxId / lockedAmount / revertRecipient, but no code path in 6.0.24 instantiates it. A PC-20 export that reverts after the Push-side lock is reported through the normal outbound tracking path (trackTransaction / progress events), not through this error. The class exists for forward compatibility. It belongs to the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields, and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "Not reachable in 6.0.24. If a future SDK wires it, the cause would be the destination leg of an export failing after the Push-side lock.",
+      "detection_signal": "None in 6.0.24 — the code is never emitted. Detect a failed export from the receipt / trackTransaction outcome instead.",
+      "user_visible_symptom": "Not applicable in 6.0.24. A failed export shows as a failed or reverted outbound in tracking; the locked tokens return to the revert recipient on Push Chain via the protocol's revert path.",
+      "machine_recovery": [
+        "Track the export with trackTransaction(txHash) and surface the outbound status to the user",
+        "Confirm the refund landed on Push Chain (donut.push.network explorer) before retrying",
+        "Treat `instanceof PC20ExportRevertedError` as forward-compatible only; on 6.0.24 it never matches"
+      ],
+      "escalation": "If a reverted export's refund does not appear on Push Chain, escalate immediately with the Push tx hash — cross-reference agents/recovery-playbook.md.",
+      "confidence": "inferred"
+    },
+    {
+      "id": "pc20_unsafe_empty_payload",
+      "name": "Unsafe Empty PC-20 Payload (PC20_UNSAFE_EMPTY_PAYLOAD)",
+      "description": "PC20UnsafeEmptyPayloadError: a wrapper burn was about to be submitted without any Push-side forwarding payload. Until every supported Push Chain version treats selector-only PC-20 payloads as empty, broadcasting this shape could burn the wrapper and leave the canonical token permanently locked — the SDK fails closed. Part of the typed PC-20 error family (present in @pushchain/core 6.0.24): every PC-20 error extends PC20Error, carries a stable `code` discriminator, curated context fields (chain, address, expectedChain, chainNamespace), and a remediation `hint`. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages.",
+      "likely_cause": "A hand-built or downlevel-prepared transaction produced a PC-20 burn with no Push-side payload (typically an outdated SDK or manual payload construction).",
+      "detection_signal": "Error with code PC20_UNSAFE_EMPTY_PAYLOAD thrown before broadcast.",
+      "user_visible_symptom": "The burn never broadcasts; wrapper balance is untouched.",
+      "machine_recovery": [
+        "Prepare the transaction again with a current @pushchain/core — recent versions always attach the PC-20 transfer payload",
+        "Never hand-construct PC-20 burn payloads"
+      ],
+      "escalation": "If the current SDK still produces this, escalate with the SDK version and the prepared payload shape.",
       "confidence": "documented"
     }
   ]

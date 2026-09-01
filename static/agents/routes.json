@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.1",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "description": "Machine-readable definition of Push Chain's three universal transaction routes. Consumed by build.agents.llms.mjs to generate the route bullets in llms.txt. Other agent surfaces (README.md, task-router.md, decision-tree.json, workflows, skills) carry the same route concepts in prose form intended for human / LLM reading.",
   "routes": [
     {
@@ -96,6 +96,11 @@
     "cea_derivation": {
       "preferred": "PushChain.utils.account.deriveExecutorAccount(uoa, { chain, skipNetworkCheck: true })",
       "anti_pattern": "Hand-rolling CEAFactory.getCEAForPushAccount(...) calls when the SDK helper is available."
+    },
+    "funds_token_forms": {
+      "description": "On every route, funds.token accepts two forms. (1) MoveableToken accessor (PushChain.CONSTANTS.MOVEABLE.TOKEN.*): a token born on an external chain — locked at origin, minted as its PRC-20 representation on Push Chain (static SDK table, sync lookup via getPRC20Address). (2) PC-20 reference { chain, address }: a token born ON Push Chain — resolved against UniversalCore's on-chain registry (async lookup via getPC20Address) and exported as a wrapper on the destination chain.",
+      "chain_semantics": "funds.token.chain is where the tokens sit RIGHT NOW; to.chain is the destination. A mismatch throws PC20TokenChainMismatchError before broadcast.",
+      "anti_pattern": "Never add `symbol` to a PC-20 reference — the SDK tells a PC-20 reference apart from a MoveableToken by the ABSENCE of `symbol`. Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight."
     }
   }
 }

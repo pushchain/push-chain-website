@@ -29,5 +29,4 @@ await main().catch(console.error);
 
 ## SDK Methods Used
 
-- `PushChain.utils.signer.toUniversal`
 - `PushChain.utils.signer.toUniversalFromKeypair`

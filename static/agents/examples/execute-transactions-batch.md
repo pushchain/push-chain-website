@@ -147,3 +147,5 @@ await main().catch(console.error);
 
 - `PushChain.utils.signer.toUniversal`
 - `PushChain.initialize`
+- `pushChainClient.universal.prepareTransaction`
+- `pushChainClient.universal.executeTransactions`

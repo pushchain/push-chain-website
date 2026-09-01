@@ -5,8 +5,8 @@ metadata:
   id: push-backend
   intent: 'Execute universal transactions from server-side code, scripts, bots, and automation'
   package: '@pushchain/core'
-  package_version: '6.0.19'
-  current_sdk_version: '6.0.19'
+  package_version: '6.0.24'
+  current_sdk_version: '6.0.24'
   entry: 'PushChain.initialize'
   resources: 'https://push.org/agents/resources/push-backend/index.json'
   references: 'references/signer-options.md, references/initialize-client.md, references/send-universal-transaction.md, ../../workflows/send-multichain-transaction.md'
@@ -251,7 +251,7 @@ const status = await client.getAccountStatus();
 | `tx.from`                 | `{ chain: CHAIN }` _(optional)_                                                                 | Forces CEA on the specified external chain as execution origin → Route 3.                                                                                                                              |
 | `tx.value`                | `bigint` _(optional)_                                                                           | Native value in smallest unit - uPC on Push Chain; native asset on external routes.                                                                                                                    |
 | `tx.data`                 | `string \| Array<{ to: string; value: bigint; data: string }>` _(optional)_                     | Encoded calldata for a single call or multicall array. EVM: `encodeTxData({ abi, functionName, args })`. Solana: `encodeTxData({ idl, functionName, args })`. Multicall requires `tx.to: '0x000...0'`. |
-| `tx.funds`                | `{ amount: bigint; token?: MOVEABLE.TOKEN }` _(optional)_                                       | Move supported assets as part of the tx. For Route 1: external origin only (Push-native users use ERC-20 `transfer` directly).                                                                         |
+| `tx.funds`                | `{ amount: bigint; token?: MOVEABLE.TOKEN \| { chain: CHAIN; address: string } }` _(optional)_  | Move supported assets as part of the tx. Two token shapes: a `MoveableToken` accessor for external-born tokens (PRC-20 path), or a `{ chain, address }` **PC-20 reference** for Push-born tokens — see [Moving Tokens: PRC-20 vs PC-20](#moving-tokens-with-txfunds---prc-20-vs-pc-20). For Route 1: external origin only (Push-native users use ERC-20 `transfer` directly).                             |
 | `tx.progressHook`         | `(progress: ProgressHookType) => void` _(optional)_                                             | Callback for per-step lifecycle events. Event IDs are route-prefixed (`SEND-TX-1xx` Route 1, `SEND-TX-2xx` Route 2, `SEND-TX-3xx` Route 3). See [ProgressHook Events](#progresshook-events) below.     |
 | `tx.payGasWith`           | `{ token?: PAYABLE.TOKEN; slippageBps?: number; minAmountOut?: bigint \| string }` _(optional)_ | Pay universal gas fees with a supported ERC-20 instead of native.                                                                                                                                      |
 | `tx.gasLimit`             | `bigint` _(optional, SDK estimated)_                                                            | Override gas limit.                                                                                                                                                                                    |
@@ -431,6 +431,69 @@ const tx = await client.universal.sendTransaction({
 await tx.wait();
 // Inside 0xContractOnPushChain: msg.sender === CEA(Solana Devnet, userAddress)
 ```
+
+---
+
+### Moving Tokens with `tx.funds` - PRC-20 vs PC-20
+
+`funds.token` accepts two shapes. The SDK tells them apart by the **absence of `symbol`** - a `{ chain, address }` object with no `symbol` field is a PC-20 reference; adding `symbol` makes the SDK treat it as a `MoveableToken` and misroute it.
+
+| Token was born on…                                   | Shape to pass                                                                     | Lookup                                                     | What happens                                                                                          |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| An **external chain** (USDT on Sepolia, SOL, …)      | `MoveableToken` accessor - `PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN>`   | `getPRC20Address` - sync, static SDK table                 | Origin token is locked; its synthetic **PRC-20** (`USDC.eth`, `pETH`) is minted on Push Chain          |
+| **Push Chain** (any standard ERC-20 deployed there)  | **PC-20 reference** - `{ chain, address }`, nothing else                          | `getPC20Address` - async, UniversalCore on-chain registry  | Canonical token is locked in VaultPC20; a **wrapper** deploys on the destination chain on first export |
+
+> PRC-20 = a foreign token wearing a Push jacket. PC-20 = a Push token wearing a foreign jacket. One letter apart, opposite directions - canonical definitions: [Token Types on Push Chain](https://push.org/docs/chain/important-concepts/#token-types-on-push-chain). Any ERC-20 born on Push Chain with standard `name()` / `symbol()` / `decimals()` is a PC-20 - there is no interface to implement.
+
+**PC-20 export - Push-born token to an external chain:**
+
+```ts
+// 1. Resolve the token first. getPC20Address reports its decimals, so the
+//    amount is right by construction. It accepts either end of the mapping
+//    (canonical Push address or an external wrapper) and always returns the
+//    canonical token, with every confirmed deployment in .registry.
+const token = await PushChain.utils.tokens.getPC20Address('0xTokenBornOnPush', {
+  chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, // where the address lives
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+
+// 2. Send. funds.token.chain = where the tokens sit RIGHT NOW (Push Chain);
+//    to.chain = the destination. A mismatch throws PC20TokenChainMismatchError
+//    before anything broadcasts.
+const tx = await client.universal.sendTransaction({
+  to: {
+    address: '0xRecipientOnSepolia',
+    chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  },
+  funds: {
+    amount: PushChain.utils.helpers.parseUnits('1', token.decimals),
+    token: {
+      chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+      address: token.address,
+      // no symbol - ever. Its absence is what marks this as a PC-20 reference.
+    },
+  },
+});
+await tx.wait();
+
+// 3. Read the wrapper address from the registry - the authoritative record.
+//    receipt.externalAssetAddr is a best-effort mirror: the raw chain field is
+//    only observed when a wrapper is newly deployed, and although the SDK
+//    backfills it from UniversalCore it is undefined while the outbound is
+//    still in flight.
+const resolved = await PushChain.utils.tokens.getPC20Address(token.address, {
+  chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+const wrapper = resolved.registry.find((e) => e.chainName === 'ETHEREUM_SEPOLIA');
+if (!wrapper) throw new Error('Wrapper not registered yet - retry in a moment.');
+```
+
+Bringing a wrapper home is the same call from the external side: `funds.token = { chain: <external chain>, address: <wrapper> }` with `to` on Push Chain. The gateway's PC20Factory burns via `burnFrom`, so the return leg sends **no approval transaction**.
+
+Every PC-20 failure is a typed error extending `PC20Error`, with a stable `code` (`PC20_TOKEN_CHAIN_MISMATCH`, `PC20_WRAPPER_NOT_REGISTERED`, `PC20_EXPECTED_BUT_PRC20`, `PC20_AMBIGUOUS_ADDRESS`, …), curated context fields, and a remediation hint. Classify by `instanceof PC20Error` or `err.code`, never by parsing messages - full catalog with recovery steps: [errors.json](https://push.org/agents/errors.json).
+
+> Supplying a synthetic PRC-20 address (e.g. `USDC.eth`) as a PC-20 reference throws `PC20_EXPECTED_BUT_PRC20` - a PRC-20 is a legitimate token on the wrong API, not a broken one. Move it with its `MoveableToken` accessor instead.
 
 ---
 
@@ -834,7 +897,7 @@ Returns supported assets that can be used to pay gas or fund token movement (use
 
 ### `getPRC20Address(token, options?)` → `{ address, chain, symbol, decimals, network }`
 
-Resolves the Push Chain synthetic PRC20 address for a supported origin-chain token. Accepts either a `MoveableToken` (e.g., from `getMoveableTokens()`) or an object containing the origin `chain` and token `address`.
+Resolves the Push Chain synthetic PRC-20 address for a supported origin-chain token. Accepts either a `MoveableToken` (e.g., from `getMoveableTokens()`) or an object containing the origin `chain` and token `address`. Synchronous - PRC-20s live in the SDK's static token table. For tokens born **on** Push Chain (PC-20s), use [`getPC20Address`](#getpc20addressaddress-options--promisepc20addressresult) instead.
 
 | Argument          | Type                                                  | Description                                                                                                                  |
 | ----------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -863,6 +926,38 @@ const {
   network,
 } = PushChain.utils.tokens.getPRC20Address(ethMoveable);
 ```
+
+### `getPC20Address(address, options)` → `Promise<PC20AddressResult>`
+
+Resolves a **PC-20** (a token born on Push Chain) against UniversalCore's on-chain registry and lists every chain it is deployed on. Accepts either end of the mapping - the canonical Push-native token or one of its external wrappers - and always returns the canonical token at `.address`, with every **confirmed** deployment in `.registry` (a predicted first-export wrapper address never appears there).
+
+Unlike `getPRC20Address`, this is **asynchronous**: PC-20 mappings are dynamic and live on chain. It is never symbol-based - PC-20 identity is address-and-chain only.
+
+| Argument          | Type                                 | Description                                                                                                                                     |
+| ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`address`_       | `string`                             | Canonical Push Chain token or an external wrapper address                                                                                        |
+| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve on, e.g. `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET`                                                                  |
+| `options.chain`   | `PushChain.CONSTANTS.CHAIN` _(optional)_ | Where the address lives. Omit to let the SDK discover it - throws `PC20AmbiguousAddressError` if more than one chain claims the address      |
+| `options.rpcUrls` | `Partial<Record<CHAIN, string[]>>` _(optional)_ | Custom RPC URLs per chain for the registry and wrapper reads                                                                              |
+| `options.strict`  | `boolean` _(optional)_               | Also run live factory-identity checks. Slower; off by default                                                                                    |
+
+**Returns**: `{ address: 0x${string}, name: string, symbol: string, decimals: number, network: PUSH_NETWORK, registry: Array<{ address, chain, chainName }> }`
+
+```ts
+const token = await PushChain.utils.tokens.getPC20Address(
+  '0x14693f665cE282A451ba9a86F2EC04B43F931145', // a PC-20 on Donut Testnet
+  {
+    chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+    network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+  }
+);
+console.log('canonical:', token.address, 'decimals:', token.decimals);
+for (const entry of token.registry) {
+  console.log(`${entry.chainName}: ${entry.address}`);
+}
+```
+
+> Lookup is lenient; spending is not. `options.chain` may be omitted here, but `funds.token.chain` is **required** when sending, and one that disagrees with where the funds actually are is rejected before any approval. Throws `PC20WrapperNotRegisteredError`, `PC20RegistryMismatchError`, `PC20ExpectedButPRC20Error`, `PC20AmbiguousAddressError` - see [errors.json](https://push.org/agents/errors.json) for the full typed family.
 
 ---
 
@@ -1062,6 +1157,10 @@ Full reference: https://push.org/agents/workflows/use-contract-helpers.md
 | Private key in source code                                   | Use `process.env.PRIVATE_KEY` - never hardcode keys in scripts or commit them to version control               |
 | Treating `client.universal.account` as `{ address }` object — `account.address` returns `undefined` | `account` is a **plain address string**, not an object. Only `origin` has the `{ address, chain }` shape. Read it directly: ``const me = client.universal.account; // `0x${string}` ``. |
 | Multicall rejected with `PushChainExecutionError` about a zero `to` address     | Only the **outer** `tx.to` is the zero address (multicall marker). Every entry inside the `data` array needs an explicit non-zero target. |
+| PC-20 transfer misroutes or throws after adding `symbol` to `funds.token` | A PC-20 reference is exactly `{ chain, address }` - the SDK detects PC-20 vs `MoveableToken` by the **absence** of `symbol`. Resolve it first with `getPC20Address()`. |
+| PC-20 transfer throws `PC20_TOKEN_CHAIN_MISMATCH` | `funds.token.chain` was set to the destination. It must be where the tokens sit **right now**; the destination goes in `to.chain`. |
+| PC-20 wrapper address empty after an export | It was read from `receipt.externalAssetAddr`, a best-effort mirror that is `undefined` while the outbound is in flight (the raw chain field is only observed on a first deployment; the SDK backfills it from UniversalCore). Resolve wrappers from `getPC20Address(...).registry` - the authoritative record. |
+| `PC20_EXPECTED_BUT_PRC20` thrown on a token transfer | A synthetic PRC-20 (`USDC.eth`, `pETH`) was passed as a PC-20 reference. External-born tokens move via their `MoveableToken` accessor, not `{ chain, address }`. |
 
 > For Solana targets, use `encodeTxData({ idl, functionName, args })` and pass the result as `tx.data` - same `{ to, value, data }` shape as EVM. The SDK resolves program accounts, PDAs, and the sender's CEA automatically from the IDL.
 >

@@ -50,3 +50,4 @@ import * as readline from 'node:readline/promises';
 - `PushChain.utils.signer.toUniversal`
 - `PushChain.initialize`
 - `PushChain.utils.helpers.parseUnits`
+- `pushChainClient.universal.sendTransaction`

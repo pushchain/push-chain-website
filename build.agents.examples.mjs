@@ -44,11 +44,13 @@ const SDK_METHODS = [
   'PushChain.utils.helpers.formatUnits',
   'PushChain.utils.account.toUniversal',
   'PushChain.utils.account.toChainAgnostic',
+  'PushChain.utils.account.fromChainAgnostic',
   'PushChain.utils.account.deriveExecutorAccount',
   'PushChain.utils.account.resolveControllerAccount',
   'PushChain.utils.chains.getChainNamespace',
   'PushChain.utils.chains.getChainName',
   'PushChain.utils.chains.getSupportedChains',
+  'PushChain.utils.chains.getSupportedChainsByName',
   'PushChain.utils.helpers.encodeTxData',
   'PushChain.utils.tokens.getMoveableTokens',
   'PushChain.utils.tokens.getPayableTokens',
@@ -59,8 +61,19 @@ const SDK_METHODS = [
   'PushChain.utils.conversion.slippageToMinAmount',
 ];
 
+// Match a method name only when it is followed by a non-identifier character,
+// so a prefix never matches its longer sibling: `getChainName` must not fire
+// on `getChainNamespace(`, `toUniversal` not on `toUniversalFromKeypair(`.
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const SDK_METHOD_PATTERNS = SDK_METHODS.map((m) => ({
+  method: m,
+  pattern: new RegExp(`${escapeRegExp(m)}(?![A-Za-z0-9_$])`),
+}));
+
 function detectSdkMethods(code) {
-  return SDK_METHODS.filter((m) => code.includes(m));
+  return SDK_METHOD_PATTERNS.filter(({ pattern }) => pattern.test(code)).map(
+    ({ method }) => method
+  );
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -118,6 +131,34 @@ function cleanCode(raw) {
     .replace(/\\\{/g, '{')
     .replace(/\\\}/g, '}')
     .replace(/\\`/g, '`');
+}
+
+/**
+ * Fenced code blocks of an example markdown file, joined. Detection must run
+ * on code only: every example ends with an auto-generated "## SDK Methods Used"
+ * footer that lists method names in backticks, so scanning the whole file would
+ * re-detect whatever the footer already says — including past false positives.
+ */
+function codeBlocksOf(markdown) {
+  const blocks = [];
+  const re = /```[^\n]*\n([\s\S]*?)```/g;
+  let m;
+  while ((m = re.exec(markdown)) !== null) blocks.push(m[1]);
+  return blocks.join('\n');
+}
+
+function sdkMethodsFooter(methods) {
+  const list = methods.length
+    ? methods.map((m) => `- \`${m}\``).join('\n')
+    : '- See code above';
+  return `## SDK Methods Used\n\n${list}\n`;
+}
+
+/** Rewrite the trailing "## SDK Methods Used" section to match `methods`. */
+function syncSdkMethodsFooter(markdown, methods) {
+  const idx = markdown.lastIndexOf('## SDK Methods Used');
+  if (idx === -1) return markdown;
+  return markdown.slice(0, idx) + sdkMethodsFooter(methods);
 }
 
 // ─── Extraction: SDK pages ────────────────────────────────────────────────────
@@ -510,13 +551,157 @@ export const buildAgentsExamples = async () => {
     }
   }
 
-  // Persist updated index
-  if (newEntries.length > 0) {
-    const merged = [...existingIndex, ...newEntries];
-    const payload = indexWrapper
-      ? { ...indexWrapper, examples: merged }
-      : merged;
-    await fs.writeFile(INDEX_PATH, JSON.stringify(payload, null, 2), 'utf-8');
+  // ── Backfill: re-detect sdk_methods_used for already-registered entries ──
+  // The extraction loop skips registered IDs, so an empty sdk_methods_used
+  // (the retrieval key) would otherwise stay empty forever. Entries with no
+  // detectable SDK method (e.g. pure ethers/viem read examples) stay empty.
+  let backfilled = 0;
+  let pruned = 0;
+  for (const entry of existingIndex) {
+    // Tombstones (status: 'removed') document a deleted API; advertising that
+    // API under sdk_methods_used would surface a removed method as usable.
+    if (entry.status === 'removed') continue;
+
+    if (
+      Array.isArray(entry.sdk_methods_used) &&
+      entry.sdk_methods_used.length > 0
+    ) {
+      // Prune substring false positives left by the old `includes()` matcher:
+      // a method is dropped only when it is a strict prefix of another method
+      // in the same list AND the boundary-aware detector cannot find it.
+      const listed = entry.sdk_methods_used;
+      const suspects = listed.filter((m) =>
+        listed.some((other) => other !== m && other.startsWith(m))
+      );
+      if (suspects.length === 0) continue;
+      try {
+        const md = await fs.readFile(
+          path.join(AGENTS_EXAMPLES_DIR, entry.file),
+          'utf-8'
+        );
+        const detected = new Set(detectSdkMethods(codeBlocksOf(md)));
+        const kept = listed.filter(
+          (m) => !suspects.includes(m) || detected.has(m)
+        );
+        if (kept.length !== listed.length) {
+          entry.sdk_methods_used = kept;
+          await fs.writeFile(
+            path.join(AGENTS_EXAMPLES_DIR, entry.file),
+            syncSdkMethodsFooter(md, kept),
+            'utf-8'
+          );
+          pruned++;
+          console.log(
+            chalk.yellow(`  ✂  ${entry.id}`) +
+              chalk.gray(
+                ` dropped [${listed.filter((m) => !kept.includes(m)).join(', ')}]`
+              )
+          );
+        }
+      } catch {
+        // example file missing on disk — leave the entry untouched
+      }
+      continue;
+    }
+    try {
+      const md = await fs.readFile(
+        path.join(AGENTS_EXAMPLES_DIR, entry.file),
+        'utf-8'
+      );
+      const detected = detectSdkMethods(codeBlocksOf(md));
+      if (detected.length > 0) {
+        entry.sdk_methods_used = detected;
+        await fs.writeFile(
+          path.join(AGENTS_EXAMPLES_DIR, entry.file),
+          syncSdkMethodsFooter(md, detected),
+          'utf-8'
+        );
+        backfilled++;
+        console.log(
+          chalk.green(`  ✚  ${entry.id}`) +
+            chalk.gray(` sdk_methods_used ← [${detected.join(', ')}]`)
+        );
+      }
+    } catch {
+      // example file missing on disk — leave the entry untouched
+    }
+  }
+  // ── Footer drift check: every example's "## SDK Methods Used" section must
+  // mirror its index entry, regardless of whether this run changed the entry
+  // (entries backfilled by an earlier run predate the footer sync).
+  let footersSynced = 0;
+  for (const entry of existingIndex) {
+    if (entry.status === 'removed') continue; // hand-written migration stubs
+    if (!Array.isArray(entry.sdk_methods_used)) continue;
+    try {
+      const filePath = path.join(AGENTS_EXAMPLES_DIR, entry.file);
+      const md = await fs.readFile(filePath, 'utf-8');
+      const synced = syncSdkMethodsFooter(md, entry.sdk_methods_used);
+      if (synced !== md) {
+        await fs.writeFile(filePath, synced, 'utf-8');
+        footersSynced++;
+        console.log(chalk.green(`  ≡  ${entry.id}`) + chalk.gray(' footer synced'));
+      }
+    } catch {
+      // example file missing on disk — nothing to sync
+    }
+  }
+  if (footersSynced > 0) {
+    console.log(
+      chalk.cyan(`\n≡ Synced "SDK Methods Used" footers on ${footersSynced} files`)
+    );
+  }
+
+  if (backfilled > 0 || pruned > 0) {
+    console.log(
+      chalk.cyan(
+        `\n🔁 sdk_methods_used: backfilled ${backfilled}, pruned ${pruned}`
+      )
+    );
+  }
+
+  // ── Refresh wrapper metadata from the installed SDK ──────────────────────
+  // The wrapper used to be carried over verbatim ({...indexWrapper}), which
+  // froze current_sdk_version/generated at their 2026-07-03 values forever.
+  if (indexWrapper) {
+    try {
+      const corePkg = JSON.parse(
+        await fs.readFile(
+          path.join(__dirname, 'node_modules/@pushchain/core/package.json'),
+          'utf-8'
+        )
+      );
+      if (
+        corePkg.version &&
+        indexWrapper.current_sdk_version !== corePkg.version
+      ) {
+        indexWrapper.current_sdk_version = corePkg.version;
+      }
+    } catch {
+      // SDK not installed — keep the recorded version
+    }
+  }
+
+  // Persist updated index (only when content actually changed, so repeated
+  // runs stay byte-identical and don't churn git or prettier).
+  const merged = [...existingIndex, ...newEntries];
+  const payload = indexWrapper ? { ...indexWrapper, examples: merged } : merged;
+  const serialized = JSON.stringify(payload, null, 2) + '\n';
+  let onDisk = null;
+  try {
+    onDisk = await fs.readFile(INDEX_PATH, 'utf-8');
+  } catch {
+    // no index yet
+  }
+  if (serialized !== onDisk) {
+    if (indexWrapper) {
+      payload.generated = new Date().toISOString();
+    }
+    await fs.writeFile(
+      INDEX_PATH,
+      JSON.stringify(payload, null, 2) + '\n',
+      'utf-8'
+    );
     console.log(
       chalk.cyan(
         `\n📖 Updated examples/index.json → ${merged.length} total entries`

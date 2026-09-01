@@ -21,4 +21,4 @@ import { PushChain } from '@pushchain/core';
 
 ## SDK Methods Used
 
-- See code above
+- `PushChain.utils.chains.getSupportedChainsByName`
