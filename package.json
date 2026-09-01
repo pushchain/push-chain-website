@@ -30,7 +30,7 @@
     "typecheck:mcp": "node node_modules/typescript5/bin/tsc -p mcp/tsconfig.test.json",
     "swizzle": "docusaurus swizzle",
     "build:notice": "yarn generate:ecosystem && node plugins/buildNotice.js",
-    "build:pr:preview": "yarn generate:ecosystem && node build.mjs preview skip_translation && NODE_OPTIONS=--max-old-space-size=8192 yarn build",
+    "build:pr:preview": "yarn generate:ecosystem && node build.mjs preview skip_translation skip_agents_check && NODE_OPTIONS=--max-old-space-size=8192 yarn build",
     "deploy": "yarn generate:ecosystem && node build.mjs prod && NODE_OPTIONS=--max-old-space-size=8192 yarn build && echo 'push.org' > ./build/CNAME && gh-pages -d build --dotfiles -r https://github.com/pushchain/push-website-prod-deployment.git",
     "deploy:skip:translations": "yarn generate:ecosystem && node build.mjs prod skip_translation && yarn build:mcp-plugin && NODE_OPTIONS=--max-old-space-size=8192 docusaurus build && echo 'push.org' > ./build/CNAME && gh-pages -d build --dotfiles -r https://github.com/pushchain/push-website-prod-deployment.git",
     "clear": "docusaurus clear",

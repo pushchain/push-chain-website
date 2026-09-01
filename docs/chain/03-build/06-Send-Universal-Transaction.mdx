@@ -395,16 +395,26 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 `funds.token` also accepts a **[PC-20 reference](/docs/chain/important-concepts#token-types-on-push-chain)**, a token born on Push Chain, identified by `{ chain, address }` and resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
 
 ```typescript
+// Resolve the token first. getPC20Address reports its decimals, so the amount
+// is right by construction — see [Recommended Practices](/docs/chain/build/recommended-practices).
+const unicorn = await PushChain.utils.tokens.getPC20Address(
+  '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+  {
+    chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+    network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+  }
+);
+
 const txResponse = await pushChainClient.universal.sendTransaction({
   to: {
     address: '0xRecipientAddress',
     chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // where it is going
   },
   funds: {
-    amount: PushChain.utils.helpers.parseUnits('1', 18),
+    amount: PushChain.utils.helpers.parseUnits('1', { decimals: unicorn.decimals }),
     token: {
       chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, // where the token IS
-      address: '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+      address: unicorn.address,
     },
   },
 });

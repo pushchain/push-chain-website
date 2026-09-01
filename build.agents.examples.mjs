@@ -44,7 +44,6 @@ const SDK_METHODS = [
   'PushChain.utils.helpers.formatUnits',
   'PushChain.utils.account.toUniversal',
   'PushChain.utils.account.toChainAgnostic',
-  'PushChain.utils.account.toUniversalFromKeypair',
   'PushChain.utils.account.deriveExecutorAccount',
   'PushChain.utils.account.resolveControllerAccount',
   'PushChain.utils.chains.getChainNamespace',
@@ -55,8 +54,9 @@ const SDK_METHODS = [
   'PushChain.utils.tokens.getPayableTokens',
   'PushChain.utils.tokens.getPRC20Address',
   'PushChain.utils.tokens.getPC20Address',
-  'PushChain.utils.conversion.originToExecutor',
-  'PushChain.utils.conversion.executorToOrigin',
+  'PushChain.utils.account.convertOriginToExecutor',
+  'PushChain.utils.account.convertExecutorToOriginAccount',
+  'PushChain.utils.conversion.slippageToMinAmount',
 ];
 
 function detectSdkMethods(code) {

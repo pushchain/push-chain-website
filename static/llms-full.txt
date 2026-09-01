@@ -49,6 +49,23 @@ To understand where your users are coming from—whether directly on Push Chain 
 
 These helpers are already deployed and maintained, so you can easily integrate them into your logic with minimal effort.
 
+## Moving Tokens Across Chains
+
+Push Chain has two token standards: 
+
+- **PRC-20** for tokens that come in from an external chain, and 
+- **PC-20** for Push-native tokens that go out to one. 
+
+See [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-push-chain) for the distinction. Two habits will save you most of the debugging:
+
+- **Resolve decimals, never hardcode them.**
+  `parseUnits('1', 6)` is only correct for six-decimal tokens such as USDC and USDT. Both **getPRC20Address()** and **getPC20Address()** return the token's decimals. 
+  
+  Resolve the token first, then pass what it reports. Hardcoding the wrong exponent does not throw; it silently moves the wrong amount.
+
+- **When naming a token's chain, name where it *is*.**
+  In `funds.token`, `chain` is the chain the tokens are sitting on right now, not the chain they are headed to. The destination is a separate field. Getting this backwards is rejected before anything is signed, so it fails loudly, but it is the single most common first mistake.
+
 ## Speed run
 
 {`
@@ -905,7 +922,7 @@ This is the smallest contract-initiated outbound that runs end to end on Donut.
 | **Direction** | Push Chain to BNB Testnet. One-way. No back-leg. |
 | **Trigger** | A regular EOA calls `dispatchOutbound(...)` on the Push contract. |
 | **Identity on BNB** | The destination contract sees `msg.sender` equal to the Push contract's deterministic CEA on BNB. |
-| **Funds movement** | None. The example dispatches a payload only. The same surface supports bridging PRC20 (`token` + `amount`); see the [Advanced Patterns](/docs/chain/build/contract-initiated-examples/advanced-patterns) for funds variants. |
+| **Funds movement** | None. The example dispatches a payload only. The same surface supports bridging PRC-20 (`token` + `amount`); see the [Advanced Patterns](/docs/chain/build/contract-initiated-examples/advanced-patterns) for funds variants. |
 | **Verified on** | Donut Testnet. |
 
 ## Identity model
@@ -2103,13 +2120,15 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+Transaction Parameters
+
 | **Arguments**     | **Type**                                                         | **Description**                                                                                                                                                                                                                                                                                           |
 | ----------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _`tx.to`_         | `string` \| `{ address: string; chain: CHAIN }`                  | Defines the execution target. Passing a plain address triggers Push Chain execution. Passing `{ address, chain }` targets an external chain.                                                                                                                                                  |
 | `tx.from`         | `{ chain: PushChain.CONSTANTS.CHAIN }`                           | Optional. When set to an external chain, execution uses the Chain Executor Account (CEA) for that chain as the transaction origin.This is primarily used for external origin or CEA-based execution flows.                                         |
 | `tx.value`        | `BigInt`                                                         | Native value to send, expressed in the smallest unit of the execution context.On Push Chain this is uPC (the smallest unit, like wei in ETH). On external execution routes, this maps to the native asset amount of that route.                                                   |
-| `tx.data`         | `string` \| `Array` | Encoded calldata for a single call `string` or batched multicall `Array`. Use `encodeTxData` to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
-| `tx.funds`        | `{ amount: BigInt; token?: PushChain.CONSTANTS.MOVEABLE.TOKEN }` | Moves supported assets as part of the transaction flow.Depending on the route, assets may be moved into Push Chain or between Push Chain and a supported external chain.If `tx.data` is provided, asset movement and execution happen atomically.   |
+| `tx.data`         | `string` \| `Array` | Encoded calldata for a single call `string` or batched multicall `Array`. Use [`encodeTxData`](/docs/chain/build/utility-functions#encode-transaction-data) to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
+| `tx.funds`        | `{ amount: BigInt; token?: MoveableToken \| PC20TokenReference }` | Moves supported assets as part of the transaction. If `tx.data` is provided, the movement and the call happen atomically.Pass a `MoveableToken`, or `{ chain, address }` for a [PC-20](#moving-pc-20-tokens).  |
 | `tx.progressHook` | `(progress: ProgressHookType) => void`                           | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions.                                                                                                                                                                    |
 
 Progress Hook Type and Response
@@ -2400,6 +2419,14 @@ Use the funds field to specify the amount of assets to move, and _optionally_ th
 > **Note**: funds transactions are only supported from external origin chains.
 > Native Push Chain users should call ERC-20 `transfer` or `transferFrom` directly (instead of using funds).
 
+`funds.token` takes either kind of token — see [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-push-chain) for the difference.
+
+Moving Prc 20 Tokens
+
+### Moving PRC-20 Tokens (Tokens born outside Push Chain)
+
+`funds.token` accepts a **[MoveableToken](#tx-funds)** from the supported-asset table. The origin-chain token is locked and its [PRC-20](/docs/chain/important-concepts#token-types-on-push-chain) representation is minted on Push Chain.
+
 ```typescript
 // Send 1 USDT to the recipient address
 const txResponse = await pushChainClient.universal.sendTransaction({
@@ -2411,6 +2438,46 @@ const txResponse = await pushChainClient.universal.sendTransaction({
   },
 });
 ```
+
+Moving Pc 20 Tokens
+
+### Moving PC-20 Tokens (Tokens born on Push Chain)
+
+`funds.token` also accepts a **[PC-20 reference](/docs/chain/important-concepts#token-types-on-push-chain)**, a token born on Push Chain, identified by `{ chain, address }` and resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
+
+```typescript
+// Resolve the token first. getPC20Address reports its decimals, so the amount
+// is right by construction — see [Recommended Practices](/docs/chain/build/recommended-practices).
+const unicorn = await PushChain.utils.tokens.getPC20Address(
+  '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+  {
+    chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+    network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+  }
+);
+
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: {
+    address: '0xRecipientAddress',
+    chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // where it is going
+  },
+  funds: {
+    amount: PushChain.utils.helpers.parseUnits('1', { decimals: unicorn.decimals }),
+    token: {
+      chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, // where the token IS
+      address: unicorn.address,
+    },
+  },
+});
+```
+
+**Important:** `funds.token.chain` is the chain the tokens sit on right now. It is different from the destination `to.chain` which indicates where it should go.
+
+:::danger Never add `symbol` to a PC-20 reference
+
+A PC-20 reference is exactly `{ chain, address }`. The SDK tells it apart from a `MoveableToken` by the **absence** of `symbol`, adding a `symbol` will cause unexpected results.
+
+:::
 
 ## Send Batch Transactions (Multicall)
 
@@ -3078,6 +3145,126 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
     await main().catch(console.error);
 `}
 
+A complete PC-20 round trip in one script: mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home. Unlike an ERC-20 bridge, the return leg sends **no approval transaction** — the gateway's PC20Factory burns via `burnFrom`.
+
+The export step hands back the wrapper address in `receipt.externalAssetAddr`, so the burn leg never needs a hardcoded address or a registry lookup.
+
+:::note Getting the test token
+
+These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, so you can mint yourself as much as you need.
+
+Nothing was added to make it exportable. Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
+
+:::
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route1_pc20_import
+
+    // Round trip: mint a PC-20 on Push Chain → export it to Sepolia →
+    // burn the wrapper to unlock it back to your UEA.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // $UNICORN on Push Chain. See the Mint Universal ERC-20 tutorial.
+    const UNICORN = '0x0165878A594ca255338adfa4d48449f69242Eb8F';
+    const MINT_ABI = [{
+      inputs: [{ name: 'to', type: 'address' }, { name: 'amount', type: 'uint256' }],
+      name: 'mint', outputs: [], stateMutability: 'nonpayable', type: 'function',
+    }];
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      const token = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      const one = PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals });
+
+      await rl.question(':::prompt:::Send at least 0.03 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia, then press Enter.\\\\n(This is the only account you fund — the SDK fee-locks it to mint the PC your UEA needs for all three legs.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      // Re-prompt rather than exit: this wallet is generated per run, so bailing
+      // out and re-running would strand whatever you just sent to it.
+      while ((await provider.getBalance(wallet.address)) === 0n) {
+        await rl.question(':::prompt:::Still 0 ETH at ' + wallet.address + '. Send Sepolia ETH there, then press Enter.');
+      }
+
+      try {
+        // 1. Mint — $UNICORN's mint() is public, so the script self-serves.
+        console.log('⚒️  Minting', token.symbol, 'on Push Chain...');
+        const mintTx = await client.universal.sendTransaction({
+          to: UNICORN,
+          data: PushChain.utils.helpers.encodeTxData({
+            abi: MINT_ABI,
+            functionName: 'mint',
+            args: [client.universal.account, PushChain.utils.helpers.parseUnits('10', { decimals: token.decimals })],
+          }),
+        });
+        await mintTx.wait();
+
+        // 2. Export to your own Sepolia address. First export deploys the wrapper.
+        console.log('📤 Exporting 1', token.symbol, 'to Sepolia...');
+        const outTx = await client.universal.sendTransaction({
+          to: { address: wallet.address, chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA },
+          funds: {
+            amount: one,
+            // 'chain' is where the token IS — Push Chain, since this is an export.
+            token: { chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, address: UNICORN },
+          },
+        });
+        const outReceipt = await outTx.wait();
+        const wrapperAddr = outReceipt.externalAssetAddr;
+        console.log('📦 Wrapper on Sepolia:', wrapperAddr);
+
+        // 3. Wait for the wrapper to actually land, as settlement takes a few seconds.
+        const erc20 = new ethers.Contract(wrapperAddr, ['function balanceOf(address) view returns (uint256)'], provider);
+        process.stdout.write('⏳ Waiting for delivery');
+        for (let tries = 0; (await erc20.balanceOf(wallet.address))  60) throw new Error('Wrapper never arrived on Sepolia after ~5 minutes.');
+          process.stdout.write('.');
+          await new Promise((r) => setTimeout(r, 5000));
+        }
+        console.log(' delivered.');
+
+        // 4. Burn the wrapper to bring it home. No approval is sent.
+        console.log('🔥 Burning the wrapper back to Push Chain...');
+        const backTx = await client.universal.sendTransaction({
+          // A plain address means Route 1 — execute on Push Chain. This is
+          // where the unlocked $UNICORN lands, so send it to your own UEA.
+          to: client.universal.account,
+          funds: {
+            amount: one,
+            // 'chain' is where the token IS — Sepolia now, not the destination.
+            token: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, address: wrapperAddr },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+        await backTx.wait();
+        console.log('🎉 Round trip complete —', token.symbol, 'is back at', client.universal.account);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+      } finally {
+        rl.close();
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
 ## Route 2 → Execute on External Chain
 
 > **Route 2** originates from a wallet on an external chain or a Push Account (UEA, native Push Chain wallet, or smart contract on Push) → routes through your CEA on a target external chain → executes the transaction on that target chain. See [How Universal Routing Works](/docs/chain/build/send-universal-transaction/#how-routing-works) to learn more. Useful for cross-chain transfers, calling external-chain contracts from a single account, atomic move-and-call workflows, etc.
@@ -3477,6 +3664,106 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
         console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
         console.log('🌐 Solana tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
+Send a [PC-20 (Token born on Push Chain)](/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.
+
+**Pre-requisite:**. Mint yourself some **$UNICORN** from [Mint Universal ERC-20 Tokens](/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). $UNICORN is an ordinary ERC-20 that exists on Push Chain.
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route2_pc20_export
+
+    // Route 2: export a PC-20 from Push Chain → mint its wrapper on Sepolia.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // $UNICORN on Push Chain — see the Mint Universal ERC-20 tutorial.
+    const UNICORN = '0x0165878A594ca255338adfa4d48449f69242Eb8F';
+    const MINT_ABI = [{
+      inputs: [{ name: 'to', type: 'address' }, { name: 'amount', type: 'uint256' }],
+      name: 'mint', outputs: [], stateMutability: 'nonpayable', type: 'function',
+    }];
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      const token = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('🪙 Exporting', token.symbol, '— known deployments:');
+      for (const entry of token.registry) {
+        console.log('   -', entry.chainName, '→', entry.address);
+      }
+
+      // The wrapper is delivered here on Sepolia. Defaults to this run's own
+      // wallet so the example is self-contained — set it to anything you like.
+      const TARGET = wallet.address;
+
+      await rl.question(':::prompt:::Send at least 0.02 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia, then press Enter.\\\\n(The SDK fee-locks it to mint the PC your UEA needs, and the script mints its own ' + token.symbol + ' — this is the only account you fund.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      // Re-prompt rather than exit: this wallet is generated per run, so bailing
+      // out and re-running would strand whatever you just sent to it.
+      while ((await provider.getBalance(wallet.address)) === 0n) {
+        await rl.question(':::prompt:::Still 0 ETH at ' + wallet.address + '. Send Sepolia ETH there, then press Enter.');
+      }
+
+      // $UNICORN has a public mint(), so the script can self-serve what it exports.
+      console.log('⚒️  Minting', token.symbol, 'to your UEA...');
+      const mintTx = await client.universal.sendTransaction({
+        to: UNICORN,
+        data: PushChain.utils.helpers.encodeTxData({
+          abi: MINT_ABI,
+          functionName: 'mint',
+          args: [client.universal.account, PushChain.utils.helpers.parseUnits('10', { decimals: token.decimals })],
+        }),
+      });
+      await mintTx.wait();
+      console.log('✅ Minted — exporting 1', token.symbol, 'to', TARGET, 'on Sepolia');
+
+      try {
+        const tx = await client.universal.sendTransaction({
+          to: {
+            address: TARGET,
+            chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // destination
+          },
+          funds: {
+            amount: PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals }),
+            // 'chain' is where the token IS — Push Chain, since this is an export.
+            token: {
+              chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+              address: UNICORN,
+            },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+
+        console.log('✅ Push Chain tx hash:', tx.hash);
+        const receipt = await tx.wait();
+        console.log('🌐 External tx:', receipt.externalTxHash);
+        console.log('📦 Wrapper on Sepolia:', receipt.externalAssetAddr);
         console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
@@ -4702,7 +4989,7 @@ The contract CEA:
 
 ### UniversalGatewayPC (UGPC)
 
-UGPC is the on-chain gateway contract on Push Chain through which all outbound cross-chain calls are routed. Your contract calls `UGPC.sendUniversalTxOutbound()`, which relays the payload, optionally burns or locks PRC20 tokens, and emits the event the TSS network listens for. 
+UGPC is the on-chain gateway contract on Push Chain through which all outbound cross-chain calls are routed. Your contract calls `UGPC.sendUniversalTxOutbound()`, which relays the payload, optionally burns or locks PRC-20 tokens, and emits the event the TSS network listens for. 
 
 UGPC is a predeploy at `0x00000000000000000000000000000000000000C1` on every Push Chain network.
 
@@ -4946,8 +5233,8 @@ interface IUniversalGatewayPC {
 | Arguments | Type | Description |
 | --------- | ---- | ----------- |
 | _`req.recipient`_ | `bytes` | CEA or target address on the external chain, bytes-encoded. |
-| _`req.token`_ | `address` | PRC20 token address on Push Chain to bridge. Use `address(0)` if no token is being bridged. |
-| _`req.amount`_ | `uint256` | Amount of PRC20 to bridge. Set to `0` if not bridging. |
+| _`req.token`_ | `address` | PRC-20 token address on Push Chain to bridge. Use `address(0)` if no token is being bridged. |
+| _`req.amount`_ | `uint256` | Amount of PRC-20 to bridge. Set to `0` if not bridging. |
 | _`req.gasLimit`_ | `uint256` | Gas limit for external-chain execution. Default to `2_000_000` (see [Operational Knobs](#operational-knobs)); UGPC charges only for actual gas used and refunds the surplus. |
 | _`req.gasPrice`_ | `uint256` | Gas price override for the destination chain. Set to `0` to use the per-chain default quoted by UniversalCore (recommended). |
 | _`req.maxPCForGas`_ | `uint256` | Maximum native `$PC` the on-chain AMM may consume when swapping for destination gas. Set to `0` for no cap (recommended on testnet). |
@@ -5037,8 +5324,8 @@ function executeUniversalTx(
 | _`sourceChainNamespace`_ | `string` | CAIP-2 chain identifier of the originating chain, e.g. `"eip155:97"`. |
 | _`ceaAddress`_ | `bytes` | CEA address on the source chain, bytes-encoded. |
 | _`payload`_ | `bytes` | ABI-encoded action data. Decode inside your handler to determine the action. |
-| _`amount`_ | `uint256` | Amount of PRC20 tokens bridged with this back-leg. |
-| _`prc20`_ | `address` | PRC20 token address on Push corresponding to the bridged asset. |
+| _`amount`_ | `uint256` | Amount of PRC-20 tokens bridged with this back-leg. |
+| _`prc20`_ | `address` | PRC-20 token address on Push corresponding to the bridged asset. |
 | _`txId`_ | `bytes32` | Unique cross-chain transaction identifier. Use this to prevent replay. |
 
 ### Required guards
@@ -6439,7 +6726,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 
 **_`PushChain.utils.tokens.getMoveableTokens(chainOrClient?): { tokens: [] }`_**
 
-Commonly used to get list of supported assets that can be moved across chains. See [send universal transaction](/docs/chain/build/send-universal-transaction/#sending-universal-transaction) for more info.
+Commonly used to get list of supported assets that can be moved across chains. See [send universal transaction](/docs/chain/build/send-universal-transaction/#send-a-universal-transaction) for more info.
 
 ```typescript
 // All supported moveable tokens across chains
@@ -6488,7 +6775,7 @@ const { tokens: sepoliaMoveable } = PushChain.utils.tokens.getMoveableTokens(
 
 **_`PushChain.utils.tokens.getPayableTokens(chainOrClient?): { tokens: [] }`_**
 
-Commonly used to get list of supported assets to pay with (either for gas or token movement) across chains. See [send universal transaction](/docs/chain/build/send-universal-transaction/#sending-universal-transaction) for more info.
+Commonly used to get list of supported assets to pay with (either for gas or token movement) across chains. See [send universal transaction](/docs/chain/build/send-universal-transaction/#send-a-universal-transaction) for more info.
 
 ```typescript
 // All supported payable tokens across chains
@@ -6533,11 +6820,11 @@ const { tokens: solanaDevnetPayable } = PushChain.utils.tokens.getPayableTokens(
 
 `}
 
-### Get PRC20 Address
+### Get PRC-20 Address
 
 **_`PushChain.utils.tokens.getPRC20Address(token, options?): { address, chain, symbol, decimals, network }`_**
 
-Resolves the Push Chain synthetic PRC20 address for a supported origin-chain token. Accepts either a `MoveableToken` (for example from `getMoveableTokens`) or an object containing the origin `chain` and token `address`.
+Resolves the [synthetic PRC-20 address](/docs/chain/important-concepts#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
 
 ```typescript
 const { address, chain, symbol, decimals, network } =
@@ -6553,7 +6840,7 @@ const prc20Alt = PushChain.utils.tokens.getPRC20Address({
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
 | _`token`_ | `MoveableToken \| { chain: string; address: string }` | Origin token info. Either pass a `MoveableToken` (e.g., from `getMoveableTokens()`) or provide the origin chain plus token address. |
-| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET`  |
+| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC-20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET`  |
 
 " className="alert alert--fn-args">
 
@@ -6593,6 +6880,88 @@ const prc20Alt = PushChain.utils.tokens.getPRC20Address({
       const { address: prc20Addr, symbol, decimals, network } =
         PushChain.utils.tokens.getPRC20Address(ethMoveable);
       console.log('pETH address:', prc20Addr, '| symbol:', symbol, '| decimals:', decimals);
+    }
+
+    main();
+
+`}
+
+### Get PC-20 Address
+
+**_`PushChain.utils.tokens.getPC20Address(address, options): Promise`_**
+
+Resolves a [PC-20](/docs/chain/important-concepts#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
+
+PC-20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol. 
+
+> **Note:** Synthetic PRC-20s such as `pETH` and `USDC.eth` are not PC-20s. Use [getPRC20Address()](#get-prc-20-address) for those.
+
+```typescript
+// From an external wrapper
+const token = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB574E18c1B0b2596163c68144ae', {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+
+token.address; // canonical token on Push Chain
+token.registry; // every chain it is deployed on
+
+// chain is optional — the SDK will find it
+const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB574E18c1B0b2596163c68144ae', {
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+```
+
+| **Arguments** | **Type** | **Description** |
+| ------------- | -------- | --------------- |
+| _`address`_ | `string` | The external wrapper or the canonical token on Push Chain. Checksummed hex on EVM, base58 on Solana. |
+| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC-20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET`  |
+| `options.chain` | `PushChain.CONSTANTS.CHAIN` | Where the address lives. Omit to let the SDK find it. Throws `PC20AmbiguousAddressError` if more than one chain claims it.  |
+| `options.rpcUrls` | `Partial>` | Per-chain RPC overrides for reading the registry. Defaults to the SDK's endpoints. |
+| `options.strict` | `boolean` | Also verify factory identity against the live gateway. Slower; off by default. |
+
+" className="alert alert--fn-args">
+
+```typescript
+{
+  address: `0x${string}`;  // Canonical PC-20 address on Push Chain
+  name: string;            // Token name
+  symbol: string;          // Token symbol
+  decimals: number;        // Token decimals
+  network: PUSH_NETWORK;   // The Push network this PC-20 belongs to
+  registry: Array;
+}
+```
+
+`registry` lists deployments that already exist — wrappers first, the Push Chain entry last. A wrapper address predicted for a first export is not included.
+
+{`
+// customPropHighlightRegexStart=PushChain\\.utils\\.tokens\\.getPC20Address
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=utility_get_pc20_address
+
+    // A PC-20 deployed on Donut Testnet
+    const PUSH_PC20 = '0x14693f665cE282A451ba9a86F2EC04B43F931145';
+
+    async function main() {
+      const token = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      console.log('Canonical PC-20:', token.address);
+      console.log('Metadata:', token.symbol, '| decimals:', token.decimals);
+
+      // Every chain it is deployed on
+      for (const entry of token.registry) {
+        console.log('  -', entry.chainName, '→', entry.address);
+      }
+
+      // chain is optional — the SDK will find it
+      const discovered = await PushChain.utils.tokens.getPC20Address(PUSH_PC20, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('Same token via auto-discovery:', discovered.address === token.address);
     }
 
     main();
@@ -6646,7 +7015,7 @@ const minOut = PushChain.utils.conversion.slippageToMinAmount('100000000', {
 
 > **Note**: This function is available only after initializing the Push Chain client.
 
-The function is used to get conversion quote especially when you want to pay with (from) one token, move as (to) another token. Used in [send universal transaction](/docs/chain/build/send-universal-transaction/#sending-universal-transaction) for token movement across chains or to pay gas in other tokens instead of native token of the source chain.
+The function is used to get conversion quote especially when you want to pay with (from) one token, move as (to) another token. Used in [send universal transaction](/docs/chain/build/send-universal-transaction/#send-a-universal-transaction) for token movement across chains or to pay gas in other tokens instead of native token of the source chain.
 
 > **Convention:** from = the token you pay with (Payable), to = the token you move as (Moveable).
 
@@ -8959,6 +9328,31 @@ Every external chain is represented as a particular constant on Push Chain. Ment
 
 > The namespaces are inspired from [caip-10](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md 'Link to caip-10 proposal') format.
 
+## Token Types on Push Chain
+
+Push Chain represents tokens in two directions. Which standard a token uses tells you which direction it came from.
+
+| Standard  | Native to         | Represented as                                       |
+| --------- | ----------------- | ---------------------------------------------------- |
+| **PRC-20** | An external chain | A synthetic token on Push Chain (`USDC.eth`, `pETH`) |
+| **PC-20**  | Push Chain        | A wrapper deployed on the external chain             |
+
+- **PRC-20 → foreign tokens, mirrored inward**
+  Synthetic Push Chain representations of tokens that live natively on an external chain. 
+  
+  For instance, USDC on Ethereum Sepolia becomes **USDC.eth** on Push Chain; native ETH becomes **pETH**. 
+  
+  Push Chain creates one PRC-20 per source token, per origin chain. See the [Address Book](/docs/chain/setup/smart-contract-address-book) for every PRC-20 and its source token.
+
+- **PC-20 → Push-native tokens, mirrored outward**
+  Tokens whose canonical version lives on Push Chain and which can be exported to external chains, where a wrapper is deployed to represent them.
+  
+  The canonical token stays on Push Chain; the wrapper is what travels.
+
+> **Mental model**  
+> PRC-20 = a foreign token, wearing a Push jacket.  
+> PC-20 = a Push token, wearing a foreign jacket.
+
 ## Next Steps
 
 - Setup your [Environment and Tooling](/docs/chain/setup/)
@@ -10763,7 +11157,9 @@ Custom precompiles deployed on Push Chain for universal transaction verification
 
 ### PRC-20 Supported Tokens (on Push Chain)
 
-Push-native representations of tokens bridged from external chains. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+Push Chain representations of tokens that live natively on an external chain. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+
+> See [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-push-chain) for how PRC-20 differs from PC-20.
 
 | Token Name | Symbol    | Source Chain     | Token Address on Push Chain                                                                                                              |
 | ---------- | --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -10785,7 +11181,7 @@ Push-native representations of tokens bridged from external chains. Each PRC-20 
 | USDC.bsc   | USDC.bsc  | BNB_Testnet      | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) |
 | USDT.bnb   | USDT.bnb  | BNB_Testnet      | [0x731aF1Da5365259d27528557EE4aFBA4baC90ef2](https://donut.push.network/address/0x731aF1Da5365259d27528557EE4aFBA4baC90ef2?tab=contract) |
 
----
+> **PC-20 wrappers are not listed here.** A PRC-20 is created by Push Chain, so it can be published as a fixed table. A PC-20 wrapper is deployed on the external chain the first time its token is exported there, so the set changes over time and lives in UniversalCore's on-chain registry instead. Resolve one with [`getPC20Address`](/docs/chain/build/utility-functions/#get-pc-20-address).
 
 ### Core AMM & Helpers
 
@@ -10859,7 +11255,7 @@ Vault contract custodies user funds deposited via the gateway and coordinates wi
 
 Tokens accepted by the Ethereum Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address                                                                                                                     | PRC20 Address (on Push Chain)                                                                                                            |
+| Token Name | Source Address                                                                                                                     | PRC-20 Address (on Push Chain)                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Native ETH | 0x0000000000000000000000000000000000000000                                                                                         | [0x2971824Db68229D087931155C2b8bB820B275809](https://donut.push.network/address/0x2971824Db68229D087931155C2b8bB820B275809?tab=contract) `pETH` |
 | USDC       | [0x97F477B7f970D47a87B42869ceeace218106152a](https://sepolia.etherscan.io/address/0x97F477B7f970D47a87B42869ceeace218106152a#code) | [0x7A58048036206bB898008b5bBDA85697DB1e5d66](https://donut.push.network/address/0x7A58048036206bB898008b5bBDA85697DB1e5d66?tab=contract) `USDC.eth` |
@@ -10900,7 +11296,7 @@ Vault contract on Arbitrum Sepolia that custodies deposited funds and coordinate
 
 Tokens accepted by the Arbitrum Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address                                                                                                                    | PRC20 Address (on Push Chain)                                                                                                            |
+| Token Name | Source Address                                                                                                                    | PRC-20 Address (on Push Chain)                                                                                                            |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Native ETH | 0x0000000000000000000000000000000000000000                                                                                        | [0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e](https://donut.push.network/address/0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e?tab=contract) `pETH.arb` |
 | USDC       | [0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C](https://sepolia.arbiscan.io/address/0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C#code) | [0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C](https://donut.push.network/address/0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C?tab=contract) `USDC.arb` |
@@ -10940,7 +11336,7 @@ Vault contract on Base Sepolia that custodies deposited funds and coordinates cr
 
 Tokens accepted by the Base Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address                                                                                                                     | PRC20 Address (on Push Chain)                                                                                                            |
+| Token Name | Source Address                                                                                                                     | PRC-20 Address (on Push Chain)                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Native ETH | 0x0000000000000000000000000000000000000000                                                                                         | [0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21](https://donut.push.network/address/0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21?tab=contract) `pETH.base` |
 | USDC       | [0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8](https://sepolia.basescan.org/address/0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8#code) | [0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1](https://donut.push.network/address/0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1?tab=contract) `USDC.base` |
@@ -10980,7 +11376,7 @@ Vault contract on BNB Testnet that custodies deposited funds and coordinates cro
 
 Tokens accepted by the BNB Testnet gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name | Source Address                                                                                                                     | PRC20 Address (on Push Chain)                                                                                                            |
+| Token Name | Source Address                                                                                                                     | PRC-20 Address (on Push Chain)                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Native BNB | 0x0000000000000000000000000000000000000000                                                                                         | [0x7a9082dA308f3fa005beA7dB0d203b3b86664E36](https://donut.push.network/address/0x7a9082dA308f3fa005beA7dB0d203b3b86664E36?tab=contract) `pBNB` |
 | USDC       | [0xA8802F96cAd0d45343d9bc660B6f7d80050A660b](https://testnet.bscscan.com/address/0xA8802F96cAd0d45343d9bc660B6f7d80050A660b#code) | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) `USDC.bsc` |
@@ -11002,7 +11398,7 @@ Contracts deployed on Solana Devnet. The Solana gateway is a native Solana progr
 
 Tokens accepted by the Solana Devnet gateway and their corresponding PRC-20 representations on Push Chain.
 
-| Token Name        | Source Address                                                                                                                                  | PRC20 Address (on Push Chain)                                                                                                            |
+| Token Name        | Source Address                                                                                                                                  | PRC-20 Address (on Push Chain)                                                                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Native SOL        | —                                                                                                                                               | [0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed](https://donut.push.network/address/0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed?tab=contract) `pSOL` |
 | USDC              | [4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU](https://explorer.solana.com/address/4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU?cluster=devnet) | [0x04B8F634ABC7C879763F623e0f0550a4b5c4426F](https://donut.push.network/address/0x04B8F634ABC7C879763F623e0f0550a4b5c4426F?tab=contract) `USDC.sol` |
