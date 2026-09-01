@@ -2,7 +2,7 @@
 title: "Recommended Practices"
 url: "https://pushchain.github.io/docs/chain/build/recommended-practices/"
 section: "build"
-lastUpdated: "2026-08-11T07:08:59Z"
+lastUpdated: "2026-09-01T13:23:12Z"
 description: "Recommended Practices | Build | Push Chain Docs"
 ---
 
@@ -51,8 +51,8 @@ These helpers are already deployed and maintained, so you can easily integrate t
 
 Push Chain has two token standards:
 
--   **PRC20** for tokens that come in from an external chain, and
--   **PC20** for Push-native tokens that go out to one.
+-   **PRC-20** for tokens that come in from an external chain, and
+-   **PC-20** for Push-native tokens that go out to one.
 
 See [Token Types on Push Chain](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) for the distinction. Two habits will save you most of the debugging:
 

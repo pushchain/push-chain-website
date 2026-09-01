@@ -2,7 +2,7 @@
 title: "Changelog"
 url: "https://pushchain.github.io/docs/chain/changelog/"
 section: "chain"
-lastUpdated: "2026-08-11T07:08:59Z"
+lastUpdated: "2026-09-01T13:23:12Z"
 description: "Changelog | Push Chain Docs"
 ---
 
@@ -11,6 +11,17 @@ description: "Changelog | Push Chain Docs"
 Keep track of the latest changes and updates to the Push Chain Core and UI Kit SDKs.
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
+
+### 6.0.22 (2026-08-14)
+
+#### Features
+
+-   curated E2E CI suite with pre-flight fund gate
+
+#### Fixes
+
+-   make PC20 first exports and Solana R3 E2E reliable
+-   support PC20 exports for standard ERC-20 tokens
 
 ### 6.0.21 (2026-08-01)
 
@@ -30,11 +41,13 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 #### Other Changes
 
 -   Added first-class PC20 support to the universal transaction API. PC20 tokens
+-   Removed the custom `pc20Metadata()` requirement for Push-native PC20 exports.
 -   Added `PushChain.utils.tokens.getPC20Address()` for resolving either a
 -   Added PC20 execution across EVM and Solana for Route 1 (external wrapper burn
 -   Fixed funds-only PC20 returns and cascades producing a selector-only
 -   Fixed PC20 return tracking when a gateway transaction emits both a wrapper
 -   Fixed prepaid native gas credit on PC20 burns by using the sender's executor
+-   Fixed first PC20 wrapper deployments running out of gas on the destination.
 -   Realigned inbound protobuf fields with the chain, exposed PC20 inbound
 
 ### 6.0.20 (2026-07-10)
@@ -386,6 +399,18 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 -   release fix
 
 ## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)
+
+### 6.0.23 (2026-08-14)
+
+#### Chores
+
+-   update bundled to pull in the latest core features (v6.0.22)
+
+### 6.0.22 (2026-08-14)
+
+#### Features
+
+-   add swap support and transaction lifecycle tracking
 
 ### 6.0.20 (2026-07-13)
 

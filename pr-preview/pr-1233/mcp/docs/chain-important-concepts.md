@@ -2,7 +2,7 @@
 title: "Important Concepts"
 url: "https://pushchain.github.io/docs/chain/important-concepts/"
 section: "chain"
-lastUpdated: "2026-08-11T07:08:59Z"
+lastUpdated: "2026-09-01T13:23:12Z"
 description: "Important Concepts | Push Chain Docs"
 ---
 
@@ -143,25 +143,25 @@ Push Chain represents tokens in two directions. Which standard a token uses tell
 
 | Standard | Native to | Represented as |
 | --- | --- | --- |
-| **PRC20** | An external chain | A synthetic token on Push Chain (`USDC.eth`, `pETH`) |
-| **PC20** | Push Chain | A wrapper deployed on the external chain |
+| **PRC-20** | An external chain | A synthetic token on Push Chain (`USDC.eth`, `pETH`) |
+| **PC-20** | Push Chain | A wrapper deployed on the external chain |
 
--   **PRC20 → foreign tokens, mirrored inward**  
+-   **PRC-20 → foreign tokens, mirrored inward**  
     Synthetic Push Chain representations of tokens that live natively on an external chain.
     
     For instance, USDC on Ethereum Sepolia becomes **USDC.eth** on Push Chain; native ETH becomes **pETH**.
     
-    Push Chain creates one PRC20 per source token, per origin chain. See the [Address Book](/push-chain-website/pr-preview/pr-1233/docs/chain/setup/smart-contract-address-book/) for every PRC20 and its source token.
+    Push Chain creates one PRC-20 per source token, per origin chain. See the [Address Book](/push-chain-website/pr-preview/pr-1233/docs/chain/setup/smart-contract-address-book/) for every PRC-20 and its source token.
     
--   **PC20 → Push-native tokens, mirrored outward**  
+-   **PC-20 → Push-native tokens, mirrored outward**  
     Tokens whose canonical version lives on Push Chain and which can be exported to external chains, where a wrapper is deployed to represent them.
     
     The canonical token stays on Push Chain; the wrapper is what travels.
     
 
 > **Mental model**  
-> PRC20 = a foreign token, wearing a Push jacket.  
-> PC20 = a Push token, wearing a foreign jacket.
+> PRC-20 = a foreign token, wearing a Push jacket.  
+> PC-20 = a Push token, wearing a foreign jacket.
 
 ## Next Steps
 

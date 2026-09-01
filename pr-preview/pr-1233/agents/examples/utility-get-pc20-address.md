@@ -1,4 +1,4 @@
-## Get PC20 Address
+## Get PC-20 Address
 
 Source: https://push.org/docs/chain/build/utility-functions/
 
@@ -11,7 +11,7 @@ See the [source documentation](https://push.org/docs/chain/build/utility-functio
 ```typescript
 import { PushChain } from '@pushchain/core';
 
-    // A PC20 deployed on Donut Testnet
+    // A PC-20 deployed on Donut Testnet
     const PUSH_PC20 = '0x14693f665cE282A451ba9a86F2EC04B43F931145';
 
     async function main() {
@@ -20,7 +20,7 @@ import { PushChain } from '@pushchain/core';
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
 
-      console.log('Canonical PC20:', token.address);
+      console.log('Canonical PC-20:', token.address);
       console.log('Metadata:', token.symbol, '| decimals:', token.decimals);
 
       // Every chain it is deployed on

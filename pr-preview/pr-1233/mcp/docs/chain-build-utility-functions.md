@@ -2,7 +2,7 @@
 title: "Utility Functions"
 url: "https://pushchain.github.io/docs/chain/build/utility-functions/"
 section: "build"
-lastUpdated: "2026-08-11T07:08:59Z"
+lastUpdated: "2026-09-01T13:23:12Z"
 description: "Utility Functions | Build | Push Chain Docs"
 ---
 
@@ -735,11 +735,11 @@ Copy playground link
 
 Copy code
 
-### Get PRC20 Address
+### Get PRC-20 Address
 
 **_`PushChain.utils.tokens.getPRC20Address(token, options?): { address, chain, symbol, decimals, network }`_**
 
-Resolves the [synthetic PRC20 address](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
+Resolves the [synthetic PRC-20 address](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) for a supported origin-chain token. Accepts either a [`MoveableToken`](#get-moveable-tokens) or an object containing the origin `chain` and token `address`.
 
 ```typescript
 const { address, chain, symbol, decimals, network } =
@@ -757,7 +757,7 @@ These `Arguments` are mandatory
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
 | _`token`_ | `MoveableToken | { chain: string; address: string }` | Origin token info. Either pass a `MoveableToken` (e.g., from `getMoveableTokens()`) or provide the origin chain plus token address. |
-| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
+| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network to resolve the PRC-20 on. Defaults to the network the client was initialized with. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
 `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET``PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET`
 
  |
@@ -774,7 +774,7 @@ Returns \`PRC20Token\` <object>
 }
 ```
 
-Live Playground: Map origin token to PRC20 on Push Chain
+Live Playground: Map origin token to PRC-20 on Push Chain
 
 VIRTUAL NODE IDE
 
@@ -782,15 +782,15 @@ Copy playground link
 
 Copy code
 
-### Get PC20 Address
+### Get PC-20 Address
 
 **_`PushChain.utils.tokens.getPC20Address(address, options): Promise<PC20AddressResult>`_**
 
-Resolves a [PC20](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
+Resolves a [PC-20](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) token and lists every chain it is deployed on. Pass either the external wrapper or the canonical token on Push Chain, and you always get the canonical one back.
 
-PC20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol.
+PC-20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol.
 
-> **Note:** Synthetic PRC20s such as `pETH` and `USDC.eth` are not PC20s. Use [getPRC20Address()](#get-prc20-address) for those.
+> **Note:** Synthetic PRC-20s such as `pETH` and `USDC.eth` are not PC-20s. Use [getPRC20Address()](#get-prc-20-address) for those.
 
 ```typescript
 // From an external wrapper
@@ -813,7 +813,7 @@ These `Arguments` are mandatory
 | **Arguments** | **Type** | **Description** |
 | --- | --- | --- |
 | _`address`_ | `string` | The external wrapper or the canonical token on Push Chain. Checksummed hex on EVM, base58 on Solana. |
-| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
+| _`options.network`_ | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve the PC-20 on. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` PushChain.CONSTANTS.PUSH\_NETWORK
 `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET``PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET`
 
  |
@@ -829,11 +829,11 @@ Returns \`PC20AddressResult\` <object>
 
 ```typescript
 {
-  address: `0x${string}`;  // Canonical PC20 address on Push Chain
+  address: `0x${string}`;  // Canonical PC-20 address on Push Chain
   name: string;            // Token name
   symbol: string;          // Token symbol
   decimals: number;        // Token decimals
-  network: PUSH_NETWORK;   // The Push network this PC20 belongs to
+  network: PUSH_NETWORK;   // The Push network this PC-20 belongs to
   registry: Array<{
     address: string;       // Checksummed hex on EVM, base58 on Solana
     chain: CHAIN;          // CAIP-2 chain id, e.g. 'eip155:11155111'
@@ -844,7 +844,7 @@ Returns \`PC20AddressResult\` <object>
 
 `registry` lists deployments that already exist — wrappers first, the Push Chain entry last. A wrapper address predicted for a first export is not included.
 
-Live Playground: Resolve a PC20 and list its deployments
+Live Playground: Resolve a PC-20 and list its deployments
 
 VIRTUAL NODE IDE
 

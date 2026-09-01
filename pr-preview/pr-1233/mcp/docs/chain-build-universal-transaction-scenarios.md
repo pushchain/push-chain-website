@@ -2,7 +2,7 @@
 title: "Universal Transaction Scenarios"
 url: "https://pushchain.github.io/docs/chain/build/universal-transaction-scenarios/"
 section: "build"
-lastUpdated: "2026-08-11T07:08:59Z"
+lastUpdated: "2026-09-01T13:23:12Z"
 description: "Universal Transaction Scenarios | Build | Push Chain Docs"
 ---
 
@@ -64,15 +64,20 @@ Copy playground link
 
 Copy code
 
-Move a PC20 Token to Push Chain (wrapper burn)
+Move a PC-20 Token to Push Chain (wrapper burn)
 
-Bring a [PC20](/push-chain-website/pr-preview/pr-1233/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) token home. The wrapper on Sepolia is burned and the canonical Push-native token is unlocked to your UEA. Unlike an ERC-20 bridge, **no approval transaction is sent** — the gateway's PC20Factory burns via `burnFrom`.
+A complete PC-20 round trip in one script: mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home. Unlike an ERC-20 bridge, the return leg sends **no approval transaction** — the gateway's PC20Factory burns via `burnFrom`.  
+  
+
+The export step hands back the wrapper address in `receipt.externalAssetAddr`, so the burn leg never needs a hardcoded address or a registry lookup.  
+  
 
 Getting the test token
 
-These examples use `rain`, a test PC20 on Donut Testnet at `0x14693f665cE282A451ba9a86F2EC04B43F931145`. It has a public `mint(address,uint256)`, so you can mint yourself as much as you need on Push Chain.
+These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/push-chain-website/pr-preview/pr-1233/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, so you can mint yourself as much as you need.  
+  
 
-The **Sepolia wrapper** (`0x81E05001A1f3fB574E18c1B0b2596163c68144ae`) is a different matter — only the gateway can mint it, and it only comes into existence when a PC20 is exported. So to run this example, first mint `rain` on Push and run the [Route 2 export](#route-2--execute-on-external-chain) with `TARGET` set to **your own address**. That delivers the wrapper to you; then come back here to burn it.
+Nothing was added to make it exportable. Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
 
 VIRTUAL NODE IDE
 
@@ -132,11 +137,12 @@ Copy playground link
 
 Copy code
 
-Export a PC20 Token to an External Chain
+Export a PC-20 Token to an External Chain
 
-Send a Push-native [PC20](/push-chain-website/pr-preview/pr-1233/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) outward. The canonical token is approved and locked into VaultPC20, and the wrapper is minted on the destination chain. If the token has never been exported to that chain, the wrapper is **deployed as part of this transaction** and its address is predicted before anything is locked.
+Send a [PC-20 (Token born on Push Chain)](/push-chain-website/pr-preview/pr-1233/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.  
+  
 
-This is the example to run first — the test token's `mint(address,uint256)` is public on Push Chain, so you can self-serve the `rain` you need here. Set `TARGET` to your own address and this also delivers the Sepolia wrapper that the [Route 1](#route-1--execute-on-push-chain) and [Route 3](#route-3--execute-on-push-chain-from-cea) PC20 examples burn.
+**Pre-requisite:**. Mint yourself some **$UNICORN** from [Mint Universal ERC-20 Tokens](/push-chain-website/pr-preview/pr-1233/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). $UNICORN is an ordinary ERC-20 that exists on Push Chain.
 
 VIRTUAL NODE IDE
 
@@ -189,18 +195,6 @@ Copy playground link
 Copy code
 
 Contract Call on Push Chain from a Solana CEA
-
-VIRTUAL NODE IDE
-
-Copy playground link
-
-Copy code
-
-Bring a PC20 Back from your CEA
-
-Settle a [PC20](/push-chain-website/pr-preview/pr-1233/docs/chain/build/send-universal-transaction/#moving-pc20-tokens) wrapper held by your CEA on an external chain. The CEA burns its wrapper balance and the canonical Push-native token is unlocked to your UEA.
-
-As with [Route 1](#route-1--execute-on-push-chain), you need the Sepolia wrapper before you can burn it — run the Route 2 export to your own address first.
 
 VIRTUAL NODE IDE
 

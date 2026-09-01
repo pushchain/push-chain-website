@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-08-11T07:08:59Z"
+lastUpdated: "2026-09-01T13:23:12Z"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -38,6 +38,8 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+## Transaction Parameters
+
 These `Arguments` are mandatory
 
 | **Arguments** | **Type** | **Description** |
@@ -59,15 +61,10 @@ On Push Chain this is uPC (the smallest unit, like wei in ETH).
 On external execution routes, this maps to the native asset amount of that route. |
 | `tx.data` | `string` | `Array<{ to: string; value: bigint; data: string }>` | Encoded calldata for a single call `string` or batched multicall `Array<{ to, value, data }>`.  
   
-Use `encodeTxData` to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
-| `tx.funds` | `{ amount: BigInt; token?: MoveableToken | { chain: CHAIN; address: string } }` | Moves supported assets as part of the transaction flow.  
+Use [`encodeTxData`](/push-chain-website/pr-preview/pr-1233/docs/chain/build/utility-functions/#encode-transaction-data) to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
+| `tx.funds` | `{ amount: BigInt; token?: MoveableToken | PC20TokenReference }` | Moves supported assets as part of the transaction. If `tx.data` is provided, the movement and the call happen atomically.  
   
-Depending on the route, assets may be moved into Push Chain or between Push Chain and a supported external chain.  
-  
-If `tx.data` is provided, asset movement and execution happen atomically.  
-  
-`token` accepts either a **`MoveableToken`** (a supported asset from the static table, e.g. `PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT`) or a **PC20 reference** — `{ chain, address }`, resolved against the on-chain registry. See [Moving PC20 Tokens](#moving-pc20-tokens).  
-PushChain.CONSTANTS.MOVEABLE.TOKEN
+Pass a `MoveableToken`, or `{ chain, address }` for a [PC-20](#moving-pc-20-tokens). PushChain.CONSTANTS.MOVEABLE.TOKEN
 
 `PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.ETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.WETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.stETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.ETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.ARBITRUM_SEPOLIA.WETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.ETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.WETH``PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.BNB``PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.SOLANA_DEVNET.SOL``PushChain.CONSTANTS.MOVEABLE.TOKEN.SOLANA_DEVNET.USDT``PushChain.CONSTANTS.MOVEABLE.TOKEN.SOLANA_DEVNET.USDC``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pEth``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pEthArb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pEthBase``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pBnb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.pSol``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.eth``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.arb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.base``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.bnb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDT.sol``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.eth``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.arb``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.base``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.bsc``PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.sol`
 
@@ -379,6 +376,14 @@ Use the funds field to specify the amount of assets to move, and _optionally_ th
 > **Note**: funds transactions are only supported from external origin chains.  
 > Native Push Chain users should call ERC-20 `transfer` or `transferFrom` directly (instead of using funds).
 
+`funds.token` takes either kind of token — see [Token Types on Push Chain](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) for the difference.
+
+## Moving Prc 20 Tokens
+
+### Moving PRC-20 Tokens (Tokens born outside Push Chain)
+
+`funds.token` accepts a **[MoveableToken](#tx-funds)** from the supported-asset table. The origin-chain token is locked and its [PRC-20](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain) representation is minted on Push Chain.
+
 ```typescript
 // Send 1 USDT to the recipient address
 const txResponse = await pushChainClient.universal.sendTransaction({
@@ -391,68 +396,43 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-### Moving PC20 Tokens (Tokens born on Push Chain)
+## Moving Pc 20 Tokens
 
-`funds.token` also accepts a **PC20 reference**. a token born on Push Chain and is identified by `{ chain, address }` alone, resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
+### Moving PC-20 Tokens (Tokens born on Push Chain)
 
-> **Note**: funds transactions are only supported from external origin chains.  
-> Native Push Chain users should call ERC-20 `transfer` or `transferFrom` directly (instead of using funds).
+`funds.token` also accepts a **[PC-20 reference](/push-chain-website/pr-preview/pr-1233/docs/chain/important-concepts/#token-types-on-push-chain)**, a token born on Push Chain, identified by `{ chain, address }` and resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
 
 ```typescript
+// Resolve the token first. getPC20Address reports its decimals, so the amount
+// is right by construction — see [Recommended Practices](/docs/chain/build/recommended-practices).
+const unicorn = await PushChain.utils.tokens.getPC20Address(
+  '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+  {
+    chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+    network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+  }
+);
+
 const txResponse = await pushChainClient.universal.sendTransaction({
-  to: '0xRecipientAddress',
+  to: {
+    address: '0xRecipientAddress',
+    chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // where it is going
+  },
   funds: {
-    amount: PushChain.utils.helpers.parseUnits('1', 6),
+    amount: PushChain.utils.helpers.parseUnits('1', { decimals: unicorn.decimals }),
     token: {
-      chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // where the token IS
-      address: '0x81E05001A1f3fB574E18c1B0b2596163c68144ae',
+      chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, // where the token IS
+      address: unicorn.address,
     },
   },
 });
 ```
 
-`chain` is where the token is, never where it is going
+**Important:** `funds.token.chain` is the chain the tokens sit on right now. It is different from the destination `to.chain` which indicates where it should go.
 
-`funds.token.chain` is the chain the tokens are sitting on right now — the external chain for an inbound wrapper, the Push chain for an export. The destination is `to.chain`, a separate field.
+Never add `symbol` to a PC-20 reference
 
-Unlike [`getPC20Address`](/push-chain-website/pr-preview/pr-1233/docs/chain/build/utility-functions/#get-pc20-address), where `chain` is optional, spending **requires** it. A send whose `chain` disagrees with where the funds actually are is rejected with `PC20TokenChainMismatchError` before any approval is signed. Lookup is lenient; spending is not.
-
-Never add `symbol` to a PC20 reference
-
-A PC20 reference is exactly `{ chain, address }`. The SDK discriminates it from a `MoveableToken` by the **absence** of `symbol` and `mechanism`, so adding a `symbol` field silently routes the token down the static-table path instead of the registry resolver.
-
-#### Route Coverage
-
-| Route | Flow | EVM | Solana |
-| --- | --- | --- | --- |
-| Route 1 | External wrapper burn → unlock the canonical token on Push | ✅ | ✅ |
-| Route 2 | Push → external export (lock + mint the wrapper) | ✅ | ✅ |
-| Route 3 | CEA-held wrapper burns back, unlocks to the UEA | ✅ | ✅ |
-| Route 4 | CEA → CEA | ❌ | ❌ |
-
-Route 4 is **not yet supported** for PC20.
-
-See [Universal Transaction Scenarios](/push-chain-website/pr-preview/pr-1233/docs/chain/build/universal-transaction-scenarios/) for a runnable example of each supported route.
-
-#### Behavior Worth Knowing
-
--   **Inbound wrappers are never approved.** The gateway's PC20Factory burns via `burnFrom`, so no approval transaction is sent on the way in. Exports are the opposite: they approve and lock the canonical Push token into VaultPC20, and quote gas through `getPC20ExportGasAndFees`.
--   **First export predicts the wrapper address.** Exporting a PC20 to a chain that has never seen it deploys the wrapper as part of the flow. On Solana, delivery falls back to the sender's CEA associated token account when the recipient has none — an ATA cannot exist before its mint does.
--   **Funds plus a `data` payload transfer first, then call.** Tokens are transferred to `execute.to` and the call runs afterwards. No allowance is granted to the target, so calldata that uses `transferFrom` will revert. Use `transfer`\-style calldata, or have the target pull from a balance it already holds.
-
-Every PC20 failure throws a subclass of `PC20Error`, exported from `@pushchain/core`. Each carries a stable `code` plus `chain`, `address` and a `hint` describing the remediation, so catching the base class is usually enough:
-
-```typescript
-import { PC20Error } from '@pushchain/core';
-
-try {
-  await pushChainClient.universal.sendTransaction({ /* … */ });
-} catch (err) {
-  if (err instanceof PC20Error) {
-    console.error(err.code, err.hint); // e.g. 'PC20_TOKEN_CHAIN_MISMATCH'
-  }
-}
-```
+A PC-20 reference is exactly `{ chain, address }`. The SDK tells it apart from a `MoveableToken` by the **absence** of `symbol`, adding a `symbol` will cause unexpected results.
 
 ## Send Batch Transactions (Multicall)
 
