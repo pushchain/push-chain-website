@@ -76,15 +76,16 @@ const Stage = styled.div`
   overflow: hidden;
 
   /* The canvas paints an opaque #090909 field, so without this it would end in
-     a hard horizontal seam against the page's black. Fade the last third out
-     instead. */
+     a hard horizontal seam against the page's black. Only the tail needs
+     feathering though: the design runs the field at full density the whole way
+     down, and fading earlier visibly dims it behind the CTAs. */
   -webkit-mask-image: linear-gradient(
     180deg,
     #000 0%,
-    #000 62%,
+    #000 82%,
     rgba(0, 0, 0, 0) 100%
   );
-  mask-image: linear-gradient(180deg, #000 0%, #000 62%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 82%, rgba(0, 0, 0, 0) 100%);
 
   .push-topography-canvas {
     display: block;
