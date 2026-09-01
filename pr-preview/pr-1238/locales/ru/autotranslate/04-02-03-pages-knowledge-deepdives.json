@@ -1,0 +1,30 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "learn-push-chain": {
+                "items": {
+                  "what-is-universal-fee-abstraction": {
+                    "title": "Что такое Universal Fee Abstraction и как это работает?"
+                  },
+                  "what-are-universal-executor-accounts": {
+                    "title": "Что такое аккаунты универсальных исполнителей (UEA) и как они работают?"
+                  },
+                  "how-universal-transaction-works": {
+                    "title": "Как работает универсальная транзакция"
+                  },
+                  "push-chain-silence-labs": {
+                    "title": "Push Chain × Silence Labs: Создание механизма распределенной подписи"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

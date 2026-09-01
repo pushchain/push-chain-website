@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "网络更新",
+          "description": "Push Chain 实时网络状态更新。及时了解停机、维护和已解决的问题。",
+          "og-title": "Push Chain 网络更新 - 网络状态",
+          "og-description": "跟踪 Push Chain 网络更新、维护窗口和服务更新。获取实时状态信息。",
+          "twitter-title": "Push Chain 网络更新",
+          "twitter-description": "Push Chain 网络状态和维护的实时更新。"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "知识库",
+            "donut-testnet": "Donut Testnet",
+            "report": "网络更新"
+          },
+          "blocks": {
+            "title": "网络更新",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "内容"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "区块链升级 - 代币再平衡 - 100 亿 $PC 代币",
+                "items": {
+                  "status-heading": "## 状态",
+                  "status-timeline": "2026年2月25日 - 开始<br />2026年2月25日 - ✅ 完成",
+                  "overview-heading": "## 概述",
+                  "overview-text": "Push Chain 执行了一项代币再平衡提案，以减少 PC 代币的总供应量从 75T+ 代币减少到大约 100 亿代币。这次升级解决了测试网早期阶段的技术债务，并为区块链进入类似主网的环境做准备。",
+                  "why-heading": "### 为什么要做这件事？",
+                  "why-text": "在 Push Chain 测试网的早期阶段，PC 代币没有燃烧和铸造机制。这导致了对 universal 交易的价格计算极低，并允许少数代币持有者积累大量的代币供应（达到数万亿）。这在主网启动之前需要纠正的不平衡的代币经济。",
+                  "why-necessary": "重组是必要的，原因如下:",
+                  "reason-mainnet": "- 为主网环境做好准备",
+                  "reason-season3": "- 启用第三赛季奖励分发",
+                  "reason-tech-debt": "- 移除早期<testnet>的旧技术债务",
+                  "reason-token-economy": "- 建立公平且可持续的代币经济",
+                  "what-changed-heading": "### 发生了什么变化？",
+                  "what-changed-text": "该提案影响了前 1,950 个钱包，总地址数为 117.8 万个。持有 1,100 或更多 <token> 的钱包（包括持有大量 <token> 的钱包）被重新平衡，持有数量在 1,100-2,000 <token> 之间。",
+                  "key-changes-heading": "**主要变更:**",
+                  "change-supply": "- 总供应量从75T+减少到约100亿 <token> tokens",
+                  "change-wallets": "- 前1950个<token>钱包已重新平衡到1100-2000 $PC 范围",
+                  "change-percentage": "- 仅影响总地址的 0.17% (1,950 个中的 1,178,000 个)",
+                  "change-unaffected": "- 99.83% 的用户不受影响",
+                  "why-not-informed-heading": "### 为什么事先没有通知用户？",
+                  "why-not-informed-text": "为了防止恶意行为者在再平衡之前将代币重新分配到其他<wallet>，未提前通知用户。这项安全措施确保了再平衡过程的完整性，并防止了对系统的干扰。",
+                  "validator-period": "当前测试网验证者提案周期设置为 5 分钟，旨在帮助消除类似情况的边缘情况，然后再全面实施去中心化验证者所有权。",
+                  "why-52t-heading": "### 为什么我仍然看到 52T 的代币供应量？",
+                  "why-52t-text": "再平衡是一个两阶段的方法。这些代币现在被收集到团队控制的钱包中，并很快将被销毁。",
+                  "how-affect-heading": "### 这会如何影响我？",
+                  "affect-majority": "**对于 99.83% 的用户:** 此变更不会影响您。您的钱包余额保持不变。",
+                  "affect-top-wallets": "**对于受影响的钱包 (排名前1950名):** 如果您的钱包持有超过 1,100 个 PC <token> (或万亿个)，您的余额已重新调整到 1,100-2,000 个 PC <token> 的范围内。",
+                  "need-help-heading": "**需要帮助？**",
+                  "need-help-text": "如果您认为您受到此次代币重平衡的影响，并有任何疑问或疑虑，请通过 Discord 联系 Push Chain 团队寻求帮助。"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
