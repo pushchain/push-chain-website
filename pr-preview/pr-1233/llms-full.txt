@@ -3225,18 +3225,25 @@ Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()`
             token: { chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, address: UNICORN },
           },
         });
-        const outReceipt = await outTx.wait();
-        const wrapperAddr = outReceipt.externalAssetAddr;
-        console.log('📦 Wrapper on Sepolia:', wrapperAddr);
+        await outTx.wait();
+        // The registry is the authoritative record of where a PC-20 lives on
+        // each chain, so resolve the wrapper from it.
+        const exported = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+          chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+        });
+        const wrapper = exported.registry.find((e) => e.chainName === 'ETHEREUM_SEPOLIA');
+        if (!wrapper) throw new Error('Sepolia wrapper is not registered yet — retry in a moment.');
+        console.log('📦 Wrapper on Sepolia:', wrapper.address);
 
         // 3. Wait for the wrapper to actually land, as settlement takes a few seconds.
-        const erc20 = new ethers.Contract(wrapperAddr, ['function balanceOf(address) view returns (uint256)'], provider);
-        process.stdout.write('⏳ Waiting for delivery');
+        const erc20 = new ethers.Contract(wrapper.address, ['function balanceOf(address) view returns (uint256)'], provider);
+        console.log('⏳ Waiting for delivery on Sepolia...');
         for (let tries = 0; (await erc20.balanceOf(wallet.address))  60) throw new Error('Wrapper never arrived on Sepolia after ~5 minutes.');
-          process.stdout.write('.');
+          if (tries > 0 && tries % 6 === 0) console.log('   still waiting (' + (tries * 5) + 's)...');
           await new Promise((r) => setTimeout(r, 5000));
         }
-        console.log(' delivered.');
+        console.log('📬 Delivered.');
 
         // 4. Burn the wrapper to bring it home. No approval is sent.
         console.log('🔥 Burning the wrapper back to Push Chain...');
@@ -3247,7 +3254,7 @@ Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()`
           funds: {
             amount: one,
             // 'chain' is where the token IS — Sepolia now, not the destination.
-            token: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, address: wrapperAddr },
+            token: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, address: wrapper.address },
           },
           progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
@@ -3255,8 +3262,6 @@ Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()`
         console.log('🎉 Round trip complete —', token.symbol, 'is back at', client.universal.account);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
-      } finally {
-        rl.close();
       }
     }
 
@@ -3761,7 +3766,13 @@ Send a [PC-20 (Token born on Push Chain)](/docs/chain/build/send-universal-trans
         console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
         console.log('🌐 External tx:', receipt.externalTxHash);
-        console.log('📦 Wrapper on Sepolia:', receipt.externalAssetAddr);
+        // Read the wrapper back from the registry.
+        const exported = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+          chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+        });
+        const wrapper = exported.registry.find((e) => e.chainName === 'ETHEREUM_SEPOLIA');
+        console.log('📦 Wrapper on Sepolia:', wrapper ? wrapper.address : '(not registered yet)');
         console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);

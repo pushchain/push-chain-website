@@ -2,7 +2,7 @@
 title: "Outbound from Push Chain"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-examples/outbound-from-push-chain/"
 section: "build"
-lastUpdated: "2026-09-01T17:50:46Z"
+lastUpdated: "2026-09-01T23:22:00+04:00"
 description: "Outbound from Push Chain | Contract-Initiated Examples | Build | Push Chain Docs"
 ---
 
