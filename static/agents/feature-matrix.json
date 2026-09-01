@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.1",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "description": "Feature availability matrix showing which Push Chain capabilities are supported per actor type (developer, end_user, agent, backend). Cross-reference with capabilities.json for full capability definitions.",
   "legend": {
     "true": "Fully supported for this actor type",
@@ -124,7 +124,15 @@
     },
     {
       "feature": "asset_movement",
-      "description": "Move assets atomically with transaction execution via tx.funds",
+      "description": "Move assets atomically with transaction execution via tx.funds — MoveableTokens born on external chains (minted as PRC-20s on Push Chain) and PC-20 tokens born on Push Chain (exported as wrappers on external chains via UniversalCore registry)",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "pc20_token_movement",
+      "description": "Move Push-born (PC-20) tokens to and from external chains via a { chain, address } funds.token reference — resolved against UniversalCore’s on-chain registry with getPC20Address; typed PC20Error family covers every failure mode",
       "developer": true,
       "end_user": true,
       "agent": true,

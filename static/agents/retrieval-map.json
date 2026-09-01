@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.1",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.2.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "base_url": "https://push.org",
   "description": "Maps every major task and capability to its authoritative documentation source. Use this as the entry point for RAG and retrieval systems.",
   "entries": [
@@ -720,12 +720,40 @@
           "normative": false
         }
       ],
-      "agent_files": [
-        "agents/skills/index.json",
-        "agents/task-router.md"
-      ],
+      "agent_files": ["agents/skills/index.json", "agents/task-router.md"],
       "prefer_over": [],
       "notes": "PUSD is a first-party product on Push Chain with its own agent layer at pusd.push.org. Two integration paths: Path A (external-chain wallet, multicall in one signature) and Path B (native Push EOA, two signatures for mint). Donut Testnet contracts: PUSD 0x488d080e16386379561a47A4955D22001d8A9D89, PUSDManager 0x7A24Eea43a1095e9Dc652AB9Cba156a93Ed5Ed46, PUSDPlusVault 0xb55a5B36d82D3B7f18Afe42F390De565080A49a1, InsuranceFund 0xFF7E741621ad5d39015759E3d606A631Fa319a62. PUSD is 6-decimal. The PUSD path uses /agents/skill/ (singular) — treat the URL above as authoritative; do not construct it from a /agents/skills/ pattern."
+    },
+    {
+      "task": "Move or resolve a PC-20 token (Push-born token and its external-chain wrappers)",
+      "capability_id": null,
+      "authoritative_sources": [
+        {
+          "url": "https://push.org/docs/chain/important-concepts/#token-types-on-push-chain",
+          "type": "docs",
+          "confidence": "high",
+          "normative": true
+        },
+        {
+          "url": "https://push.org/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens",
+          "type": "docs",
+          "confidence": "high",
+          "normative": true
+        },
+        {
+          "url": "https://push.org/docs/chain/build/utility-functions/#get-pc-20-address",
+          "type": "docs",
+          "confidence": "high",
+          "normative": true
+        }
+      ],
+      "agent_files": [
+        "agents/examples/utility-get-pc20-address.md",
+        "agents/errors.json",
+        "agents/decision-tree.json"
+      ],
+      "prefer_over": ["npm README", "blog posts"],
+      "notes": "PC-20 = token born ON Push Chain, mirrored outward as wrappers (dynamic UniversalCore registry, async getPC20Address). PRC-20 = token born on an external chain, mirrored inward as a synthetic (static table, sync getPRC20Address). One letter apart, opposite directions — link the important-concepts section rather than re-explaining. funds.token = { chain, address } with NO symbol field; chain = where the tokens sit now. Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight. Typed PC20Error family in agents/errors.json."
     }
   ]
 }

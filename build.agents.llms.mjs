@@ -24,11 +24,11 @@ const BASE_URL = 'https://push.org';
 const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
-  core: '6.0.19',
-  uiKit: '6.0.18',
+  core: '6.0.24',
+  uiKit: '6.0.24',
 };
-const AGENT_LAYER_VERSION = '1.0.25';
-const AGENT_LAYER_DATE = '2026-07-15';
+const AGENT_LAYER_VERSION = '1.0.26';
+const AGENT_LAYER_DATE = '2026-09-02';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -179,7 +179,13 @@ const gatherBlogPosts = async () => {
 };
 
 // Build llms.txt — static sections hardcoded, workflows, skills, resources and blog posts dynamic
-const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => {
+const buildLlmsTxt = async (
+  workflows,
+  skills,
+  resources,
+  routes,
+  blogPosts
+) => {
   const lines = [];
 
   // ── Header ──────────────────────────────────────────────────────────────
@@ -220,6 +226,12 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push(
     '- **Universal Transaction**: A single SDK call that routes funds and execution from any origin chain to Push Chain or an external target.'
+  );
+  lines.push(
+    '- **PRC-20**: A token born on an *external* chain, mirrored inward as a synthetic on Push Chain (`USDC.eth`, `pETH`). Static SDK table, sync lookup via `getPRC20Address`. Move it with a `MoveableToken` accessor in `tx.funds`.'
+  );
+  lines.push(
+    '- **PC-20**: A token born *on* Push Chain, mirrored outward as a wrapper on external chains. Dynamic — lives in UniversalCore’s on-chain registry, async lookup via `getPC20Address`. Move it with a `{ chain, address }` reference in `tx.funds` (never add `symbol`). One letter apart from PRC-20 and the opposite direction — canonical definition: https://push.org/docs/chain/important-concepts/#token-types-on-push-chain'
   );
   // Route prose pulled from agents/routes.json (single source of truth).
   // Falls back to inline strings only if the JSON failed to load.
@@ -346,8 +358,8 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
       const href = s.external
         ? s.url
         : s.file
-        ? `${BASE_URL}/${s.file}`
-        : s.url;
+          ? `${BASE_URL}/${s.file}`
+          : s.url;
       if (s.external) {
         const brief =
           s.id === 'push-pusd'
@@ -564,6 +576,15 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   lines.push(
     '| Tx fails with "insufficient funds" even though origin wallet has balance | UEA on Push Chain has no PC token balance \u2014 gas abstraction requires a funded UEA | Fund the UEA address on Push Chain via https://faucet.push.org or transfer PC tokens to it |'
   );
+  lines.push(
+    '| PC-20 transfer throws `PC20_TOKEN_CHAIN_MISMATCH` | `funds.token.chain` was set to the destination chain | `funds.token.chain` = where the tokens sit RIGHT NOW; the destination goes in `to.chain` |'
+  );
+  lines.push(
+    '| PC-20 transfer misroutes or throws with a `symbol` field present | A `symbol` was added to a PC-20 reference \u2014 the SDK detects PC-20 vs MoveableToken by the ABSENCE of `symbol` | A PC-20 reference is exactly `{ chain, address }`; resolve it first with `PushChain.utils.tokens.getPC20Address()` |'
+  );
+  lines.push(
+    '| PC-20 wrapper address is empty after an export | Wrapper read from `receipt.externalAssetAddr`, a best-effort mirror that is `undefined` while the outbound is still in flight | Resolve wrappers from `getPC20Address(...).registry` \u2014 the authoritative record |'
+  );
   lines.push('');
 
   // ── Canonical Workflows (grouped by category) ─────────────────────────────
@@ -634,7 +655,10 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 Launched the push.org docs **MCP server** at \`https://mcp.push.org/api\` (Streamable HTTP, spec revision 2025-11-25; stateless, read-only, no API key). Four tools: \`search_docs\` (ranked full-text search over the indexed docs), \`get_page\` (full page as clean markdown with title/url/section/lastUpdated), \`list_sections\` (hierarchical docs tree), \`get_agent_resource\` (raw JSON of \`capabilities\`, \`errors\`, \`contract-addresses\`, \`supported-chains\`, \`sdk-capabilities\`, or \`changelog\` \u2014 snapshotted at site build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin (MiniSearch index, per-page markdown, manifest with build hash); pages containing raw i18n placeholder keys are excluded from the index and logged to \`build/mcp/skipped.json\`. Discovery document at \`/.well-known/mcp.json\`. Updated the \`mcp-candidates.json\` description \u2014 docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework.`
+    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 **PC-20 agent-layer propagation** (the follow-up deferred from the PC-20 docs PR) plus \`@pushchain/core\` 6.0.19 \u2192 6.0.24 and \`@pushchain/ui-kit\` 6.0.18 \u2192 6.0.24. PC-20 = a token born ON Push Chain, mirrored outward as wrappers on external chains via UniversalCore's on-chain registry (async \`getPC20Address\`); PRC-20 = a token born on an external chain, mirrored inward as a synthetic (static table, sync \`getPRC20Address\`) \u2014 one letter apart, opposite directions. \`errors.json\` gained the full typed PC-20 error family (base \`PC20Error\` + 14 concrete classes with stable \`PC20_*\` codes, curated context fields, and remediation hints). \`sdk-capabilities.json\` gained \`PushChain.utils.tokens.getPC20Address\`; \`capabilities.json\` \`tx.funds\` now documents both token forms (MoveableToken accessor vs \`{ chain, address }\` PC-20 reference \u2014 never add \`symbol\`; \`funds.token.chain\` = where the tokens sit now, \`to.chain\` = destination). New \`choose_token_standard\` decision tree, \`pc20_token_movement\` feature-matrix row, \`routes.json\` \`shared.funds_token_forms\`, a PC-20 retrieval-map entry, and a read-only \`get_pc20_address\` MCP candidate (16 total). Unfroze \`examples/index.json\` regeneration (wrapper metadata was carried over verbatim since 2026-07-03; the builder now refreshes \`current_sdk_version\` from the installed SDK, stamps \`generated\` only on real changes, writes a trailing newline, and backfills empty \`sdk_methods_used\` \u2014 10 entries backfilled, 2 removed-API tombstones deliberately left empty, boundary-aware method matching so prefixes like \`getChainName\` no longer match \`getChainNamespace\`, \`fromChainAgnostic\` + \`getSupportedChainsByName\` added to detection). Skills and workflows gained the same coverage: push-backend SKILL.md has a full "Moving Tokens with tx.funds - PRC-20 vs PC-20" section plus a \`getPC20Address\` utility entry and four new Common Mistakes rows, push-frontend a compact PC-20 send section, and the send-universal-transaction / use-utility-functions workflows the step-by-step PC-20 form (push-backend and push-frontend frontmatter pins refreshed to 6.0.24; push-contracts untouched \u2014 no contract-side PC-20 interface is documented yet). Fixed 8 \`source-freshness.json\` paths broken by the docs renumbering. Naming pass completed: "Get PRC-20 Address" hyphenated in prose everywhere.`
+  );
+  lines.push(
+    `- **2026-07-15 v1.0.25** \u2014 Launched the push.org docs **MCP server** at \`https://mcp.push.org/api\` (Streamable HTTP, spec revision 2025-11-25; stateless, read-only, no API key). Four tools: \`search_docs\` (ranked full-text search over the indexed docs), \`get_page\` (full page as clean markdown with title/url/section/lastUpdated), \`list_sections\` (hierarchical docs tree), \`get_agent_resource\` (raw JSON of \`capabilities\`, \`errors\`, \`contract-addresses\`, \`supported-chains\`, \`sdk-capabilities\`, or \`changelog\` \u2014 snapshotted at site build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin (MiniSearch index, per-page markdown, manifest with build hash); pages containing raw i18n placeholder keys are excluded from the index and logged to \`build/mcp/skipped.json\`. Discovery document at \`/.well-known/mcp.json\`. Updated the \`mcp-candidates.json\` description \u2014 docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework.`
   );
   lines.push(
     `- **2026-07-03 v1.0.24** \u2014 \`@pushchain/core\` 6.0.16 \u2192 6.0.19 and \`@pushchain/ui-kit\` 6.0.16 \u2192 6.0.18 (versions now intentionally unequal). Core headline: **EIP-7702 atomic batching for native Push Chain EOAs** \u2014 a multicall from a Push-native EOA now executes as ONE type-4 (SetCode) transaction delegating to \`PushBatchExecutor\` (Donut: \`0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796\`) when the signer can sign authorizations (auto-wired for ethers v6 Wallet and viem local accounts; browser JSON-RPC wallets and ethers v5 fall back safely, pre-broadcast, to the legacy sequential loop). New additive \`atomic: boolean\` response field (\`false\` only on that fallback); inner multicall entries with a zero \`to\` now reject with \`PushChainExecutionError\`; \`UniversalSigner\` gains optional \`signAuthorization\`. Corrected the long-stale "Push-native senders cannot use multicall" claim across the skill/workflow/docs surfaces. Also: automatic **archive-RPC fallback** on Donut for pruned history (\`https://archive.evm.donut.rpc.push.org/\`), wait-stage progress markers now carry \`pushTxHash\` (no event ID changes), normalized user-facing revert messages, and a gas-swap preflight fix that reports real shortfalls instead of Uniswap \`STF\` reverts. ui-kit 6.0.18 is internal-only (viem/wagmi refresh, no public prop changes).`
@@ -739,9 +763,7 @@ const generateLlmsTxt = async () => {
 
   const routes = await loadRoutes();
   console.log(
-    chalk.gray(
-      `   Loaded ${routes.length} routes from agents/routes.json`
-    )
+    chalk.gray(`   Loaded ${routes.length} routes from agents/routes.json`)
   );
 
   const blogPosts = await gatherBlogPosts();
@@ -749,7 +771,13 @@ const generateLlmsTxt = async () => {
 
   await fs.mkdir(STATIC_DIR, { recursive: true });
 
-  const content = await buildLlmsTxt(workflows, skills, resources, routes, blogPosts);
+  const content = await buildLlmsTxt(
+    workflows,
+    skills,
+    resources,
+    routes,
+    blogPosts
+  );
   await fs.writeFile(OUTPUT_PATH, content, 'utf-8');
 
   console.log(chalk.green('✅ Generated static/llms.txt'));

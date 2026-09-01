@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "version": "1.2.1",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.3.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "description": "Intent-level agent capabilities — what an agent can do with Push Chain. For the complete SDK method surface with signatures see sdk-capabilities.json. Utilities (parseUnits, formatUnits, encodeTxData, chain/token discovery, constants) and raw ethers.js operations are API primitives consumed inside these capabilities rather than standalone agent intents.",
   "prerequisite_glossary": {
     "sdk_imported": "@pushchain/core is imported — check with `typeof PushChain !== 'undefined'`",
@@ -190,9 +190,9 @@
         },
         {
           "name": "tx.funds",
-          "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN }",
+          "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN | { chain: CHAIN; address: string } }",
           "required": false,
-          "description": "Assets to move atomically with execution"
+          "description": "Assets to move atomically with execution. Two token forms: (1) a MoveableToken accessor (PushChain.CONSTANTS.MOVEABLE.TOKEN.*) for tokens born on external chains — locked at origin and minted as their PRC-20 representation on Push Chain; (2) a PC-20 reference `{ chain, address }` for tokens born ON Push Chain — resolved against UniversalCore's on-chain registry and exported as a wrapper on the destination chain. `funds.token.chain` is where the tokens sit RIGHT NOW (not the destination — that is `to.chain`); a mismatch throws PC20TokenChainMismatchError before broadcast. NEVER add `symbol` to a PC-20 reference — the SDK distinguishes a PC-20 reference from a MoveableToken by the ABSENCE of `symbol`. Resolve address + decimals via PushChain.utils.tokens.getPC20Address() first."
         },
         {
           "name": "tx.progressHook",
@@ -655,7 +655,7 @@
     {
       "id": "use_utility_functions",
       "name": "Use Utility Functions",
-      "description": "Access helper utilities for parsing units, encoding data, and account operations.",
+      "description": "Access helper utilities for parsing units, encoding data, account operations, and token resolution — including getPRC20Address (sync, static table — external-born tokens mirrored into Push Chain as PRC-20s) and getPC20Address (async, UniversalCore on-chain registry — Push-born PC-20 tokens and their external wrappers).",
       "actor": ["developer", "backend", "browser_agent"],
       "operation": "read",
       "prerequisites": ["sdk_imported"],

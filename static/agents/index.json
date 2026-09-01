@@ -1,16 +1,19 @@
 {
   "description": "Push Chain agent-layer root index. Curated discovery entry points for agents and retrieval systems — see sub-index files (workflows/index.json, examples/index.json, resources/index.json, schemas/index.json, skills/index.json) for complete per-category listings. Push Chain is a universal L1 blockchain enabling apps to deploy once and execute across all supported chains.",
   "schema_version": "1.0.0",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "version_policy": "All files in /agents/ carry schema_version (bumps only when the file's field layout changes — signals a consumer code update is needed) and version (bumps when content changes — backward-compatible by default). Per-file versioning is intentional: contract-addresses.json can be at 1.1.0 while index.json remains at 1.0.0 because each file evolves on its own cadence. changelog.json entries additionally carry breaking and migration fields so agents can detect whether a version change requires action.",
-  "current_sdk_version": "6.0.19",
-  "sdk_version": { "@pushchain/core": "6.0.19", "@pushchain/ui-kit": "6.0.18" },
-  "generated": "2026-07-15T00:00:00.000Z",
+  "current_sdk_version": "6.0.24",
+  "sdk_version": {
+    "@pushchain/core": "6.0.24",
+    "@pushchain/ui-kit": "6.0.24"
+  },
+  "generated": "2026-09-02T00:00:00.000Z",
   "sub_indexes": [
     {
       "category": "examples",
       "path": "agents/examples/index.json",
-      "count": 62
+      "count": 64
     },
     {
       "category": "workflows",
@@ -22,8 +25,16 @@
       "path": "agents/resources/index.json",
       "count": 3
     },
-    { "category": "schemas", "path": "agents/schemas/index.json", "count": 7 },
-    { "category": "skills", "path": "agents/skills/index.json", "count": 3 }
+    {
+      "category": "schemas",
+      "path": "agents/schemas/index.json",
+      "count": 7
+    },
+    {
+      "category": "skills",
+      "path": "agents/skills/index.json",
+      "count": 3
+    }
   ],
   "start_here": {
     "developer": "agents/workflows/send-universal-transaction.md",
@@ -96,7 +107,7 @@
     },
     {
       "path": "agents/errors.json",
-      "purpose": "Catalog of SDK error codes, meanings, and recommended recovery actions",
+      "purpose": "Catalog of SDK error codes, meanings, and recommended recovery actions. Includes the typed PC-20 error family (stable PC20_* codes) from @pushchain/core",
       "type": "error"
     },
     {

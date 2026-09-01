@@ -30,7 +30,7 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
 | `tx.from` | `{ chain: CHAIN }` | No | Forces CEA of that chain as execution origin (Route 3) |
 | `tx.value` | `BigInt` | No | Native value in smallest unit (uPC on Push Chain, wei on EVM external chains). Default: `0n` |
 | `tx.data` | `string` \| `Array<{to: string; value: bigint; data: string}>` | No | ABI-encoded calldata (string) or multicall array. **For multicall the outer `tx.to` must be `0x0000000000000000000000000000000000000000`; every inner entry needs a non-zero `to`** |
-| `tx.funds` | `{ amount: BigInt; token: PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN> }` | No | Move cross-chain asset atomically (external origin chains only) |
+| `tx.funds` | `{ amount: BigInt; token: MOVEABLE.TOKEN \| { chain: CHAIN; address: string } }` | No | Move assets atomically. `MoveableToken` accessor for external-born tokens (PRC-20 path); `{ chain, address }` PC-20 reference (no `symbol` - ever) for Push-born tokens |
 | `tx.progressHook` | `(progress: ProgressHookType) => void` | No | Callback for real-time progress updates |
 
 ### Advanced Arguments
@@ -155,7 +155,7 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
 
 ### With Asset Movement (tx.funds)
 
-Move a supported asset from origin chain to Push Chain atomically with your call. Only supported from external origin chains (not from a native Push Chain account).
+Move a supported asset from origin chain to Push Chain atomically with your call. For `MoveableToken` accessors this is only supported from external origin chains (not from a native Push Chain account); Push-born tokens leave Push Chain via the PC-20 form in [Moving a PC-20](#moving-a-pc-20-push-born-token) below.
 
 1. **Specify funds to move (chain-scoped token accessor)**
    ```typescript
@@ -168,6 +168,44 @@ Move a supported asset from origin chain to Push Chain atomically with your call
      },
    });
    ```
+
+### Moving a PC-20 (Push-born token)
+
+`funds.token` also accepts a **PC-20 reference** for tokens born on Push Chain: `{ chain, address }` with **no `symbol` field** - the SDK distinguishes a PC-20 reference from a `MoveableToken` by the absence of `symbol`. PC-20s resolve against UniversalCore's on-chain registry, not the static token table ([Token Types on Push Chain](https://push.org/docs/chain/important-concepts/#token-types-on-push-chain)).
+
+1. **Resolve the token first** - `getPC20Address` is async and reports the decimals, so the amount is right by construction
+   ```typescript
+   const token = await PushChain.utils.tokens.getPC20Address('0xTokenBornOnPush', {
+     chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+     network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+   });
+   ```
+2. **Send with a PC-20 reference** - `funds.token.chain` is where the tokens sit **right now**; the destination goes in `to.chain`. A mismatch throws `PC20TokenChainMismatchError` before broadcast
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: {
+       address: '0xRecipientOnSepolia',
+       chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+     },
+     funds: {
+       amount: PushChain.utils.helpers.parseUnits('1', token.decimals),
+       token: {
+         chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+         address: token.address,
+       },
+     },
+   });
+   ```
+3. **Resolve wrapper addresses from the registry** - it is the authoritative record. `receipt.externalAssetAddr` is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is `undefined` while the outbound is still in flight
+   ```typescript
+   const resolved = await PushChain.utils.tokens.getPC20Address(token.address, {
+     chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+     network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+   });
+   const wrapper = resolved.registry.find((e) => e.chainName === 'ETHEREUM_SEPOLIA');
+   ```
+
+   Every PC-20 failure is typed with a stable code (`PC20_TOKEN_CHAIN_MISMATCH`, `PC20_WRAPPER_NOT_REGISTERED`, `PC20_EXPECTED_BUT_PRC20`, `PC20_AMBIGUOUS_ADDRESS`, …) - catalog with recovery steps in [errors.json](https://push.org/agents/errors.json).
 
 ### With Gas Paid in Token (tx.payGasWith)
 

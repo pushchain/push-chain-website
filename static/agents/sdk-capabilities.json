@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.0",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.4.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "description": "Complete SDK method surface for @pushchain/core and @pushchain/ui-kit: all namespaces, method signatures, parameter types, return types, and safe_for_autonomous_execution flags. For intent-level capability definitions (what an agent can do) see capabilities.json. For routing logic see decision-tree.json and task-router.md.",
   "namespaces": [
     {
@@ -243,8 +243,15 @@
         {
           "name": "getPRC20Address",
           "signature": "PushChain.utils.tokens.getPRC20Address(token: MoveableToken | { chain: CHAIN, address: string }, options?: { network?: PUSH_NETWORK }): { address: `0x${string}`; chain: CHAIN; symbol: string; decimals: number; network: PUSH_NETWORK }",
-          "description": "Returns the full PRC20 token descriptor on Push Chain corresponding to a moveable token (address, chain, symbol, decimals, network)",
+          "description": "Returns the full PRC-20 token descriptor on Push Chain corresponding to a moveable token (address, chain, symbol, decimals, network). PRC-20 = a token born on an EXTERNAL chain, mirrored inward as a synthetic on Push Chain (USDC.eth, pETH). Synchronous — resolved from the SDK's static token table. For tokens born ON Push Chain (PC-20), use the async getPC20Address instead.",
           "returns": "{ address: `0x${string}`; chain: CHAIN; symbol: string; decimals: number; network: PUSH_NETWORK }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getPC20Address",
+          "signature": "PushChain.utils.tokens.getPC20Address(address: string, options: { network: PUSH_NETWORK; chain?: CHAIN; rpcUrls?: Partial<Record<CHAIN, string[]>>; strict?: boolean }): Promise<PC20AddressResult>",
+          "description": "Resolves a PC-20 token (a token born ON Push Chain, mirrored outward as wrappers on external chains) against UniversalCore's on-chain registry, and lists every confirmed deployment. Accepts either end of the mapping — an external wrapper or the canonical Push-native token — and always returns the canonical token at .address, with every known deployment in .registry (confirmed only; a predicted first-export wrapper address never appears). Asynchronous, unlike getPRC20Address: PC-20 mappings are dynamic and live on chain. Never symbol-based — identity is address-and-chain only. options.chain is optional for lookup (SDK works out which chain the address belongs to; throws PC20AmbiguousAddressError if several chains claim it) but funds.token.chain is REQUIRED when spending. Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight. Throws PC20WrapperNotRegisteredError, PC20RegistryMismatchError, PC20ExpectedButPRC20Error, PC20AmbiguousAddressError — see agents/errors.json for the full typed PC-20 error family.",
+          "returns": "Promise<{ address: `0x${string}`; name: string; symbol: string; decimals: number; network: PUSH_NETWORK; registry: Array<{ address: string; chain: CHAIN; chainName: string }> }>",
           "safe_for_autonomous_execution": true
         }
       ]

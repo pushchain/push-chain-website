@@ -5,8 +5,8 @@ metadata:
   id: push-frontend
   intent: 'Enable universal transactions in a React frontend app'
   package: '@pushchain/ui-kit'
-  package_version: '6.0.18'
-  current_sdk_version: '6.0.19'
+  package_version: '6.0.24'
+  current_sdk_version: '6.0.24'
   entry: 'usePushChainClient'
   resources: 'https://push.org/agents/resources/push-frontend/index.json'
   references: 'references/ui-components.md'
@@ -396,6 +396,29 @@ const tx = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+### Moving a PC-20 (Push-born token)
+
+`funds.token` also accepts a **PC-20 reference** - `{ chain, address }` with **no `symbol` field** - for tokens born on Push Chain ([PRC-20 vs PC-20](https://push.org/docs/chain/important-concepts/#token-types-on-push-chain)). Resolve it first; the result carries the decimals:
+
+```tsx
+const token = await PushChain.utils.tokens.getPC20Address('0xTokenBornOnPush', {
+  chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+});
+
+const tx = await pushChainClient.universal.sendTransaction({
+  to: { address: '0xRecipient', chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA },
+  funds: {
+    amount: PushChain.utils.helpers.parseUnits('1', token.decimals),
+    // chain = where the tokens sit RIGHT NOW; destination goes in to.chain.
+    // Never add symbol - its absence is what marks a PC-20 reference.
+    token: { chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, address: token.address },
+  },
+});
+```
+
+> Wrapper addresses come from `getPC20Address(...).registry` - the authoritative record. `receipt.externalAssetAddr` is a best-effort mirror that is `undefined` while the outbound is still in flight. PC-20 failures are typed (`PC20_TOKEN_CHAIN_MISMATCH`, `PC20_EXPECTED_BUT_PRC20`, …) - full catalog and mechanics in the [push-backend skill](https://push.org/agents/skills/push-backend/SKILL.md#moving-tokens-with-txfunds---prc-20-vs-pc-20) and [errors.json](https://push.org/agents/errors.json).
+
 ## Route 3 - CEA Identity on Push Chain
 
 Add `from: { chain }` to use your CEA on an external chain as the execution origin on Push Chain. `msg.sender` inside the target contract will be the CEA, not the UEA.
@@ -597,6 +620,7 @@ For wallets that implement ERC-1271 (multisigs, account-abstraction wallets, UEA
 | Wallet throws `Provided chainId "42101" must match the active chainId "<N>"` when signing EIP-712 | Don't hardcode Push Chain's chainId in the typed-data domain. Read `pushChainClient.universal.origin.chain`, stamp the origin chainId into the domain, sign via `pushChainClient.universal.signTypedData(...)`, and resolve the signer's UEA on the contract side via `IUEAFactory.getUEAForOrigin`. See [EIP-712 Typed-Data Signing](#eip-712-typed-data-signing-cross-chain-wallets). |
 | `wallet: true` in `login` config — `pushChainClient` stays `null` after external-wallet connect | Use the object form `wallet: { enabled: true }`. The bare boolean is silently ignored by the provider. See [Setup - Wrap Your App](#setup---wrap-your-app). |
 | `app`, `themeMode`, `themeOverrides` placed inside `config` — they're ignored and the provider falls back to defaults | These are **top-level props** on `PushUniversalWalletProvider`, NOT keys in `config`. `config` carries `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`. |
+| `symbol` added to a PC-20 `funds.token` reference — transfer misroutes or throws | A PC-20 reference is exactly `{ chain, address }`; the SDK detects it by the **absence** of `symbol`. `chain` = where the tokens sit now, not the destination. See [Moving a PC-20](#moving-a-pc-20-push-born-token). |
 
 > For read-only state queries (no transactions): use ethers.js or viem directly with `https://evm.donut.rpc.push.org/` (HTTP) or `wss://evm.donut.rpc.push.org` (WebSocket - for `watchBlocks`, event subscriptions). See [read-blockchain-state.md](https://push.org/agents/workflows/read-blockchain-state.md).
 
