@@ -394,7 +394,15 @@ const HeroContent = styled(Content)`
 
 const HeroPrimary = styled.div`
   width: 1440px;
-  height: 850px;
+  /* Sized so the next section lands where Figma puts it (49233:16511, page
+     y=1095) rather than on the old illustrated hero's arbitrary 850/650:
+       1095 - 125 (next section padding-top)
+            - 125 (hero content padding-bottom)
+            - 125 (hero content padding-top)
+            -  98 (hero content margin-top)
+            -  56 (hero top) = 566
+     The 850px value left a 681px gap below the CTAs at 1512px wide. */
+  height: 566px;
   z-index: 99;
   position: relative;
   left: 50%;
@@ -402,8 +410,7 @@ const HeroPrimary = styled.div`
 
   @media ${device.laptopL} {
     width: 100%;
-    height: 650px;
-    aspect-ratio: 1 / 2;
+    height: 566px;
   }
 
   @media ${device.mobileL} {
@@ -418,10 +425,6 @@ const HeroItem = styled(ItemV)`
   max-width: 970px;
   margin: 0 auto;
   height: 100%;
-
-  @media (min-width: 1440px) {
-    height: 700px;
-  }
 
   @media ${device.laptop} {
     max-width: initial;
@@ -439,7 +442,6 @@ const HeroItem = styled(ItemV)`
 `;
 
 const HeroBody = styled(ItemV)`
-  margin-bottom: 150px;
   text-align: left;
   align-self: center;
   position: relative;
