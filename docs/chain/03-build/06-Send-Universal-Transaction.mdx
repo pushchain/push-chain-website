@@ -51,6 +51,8 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+<h2 className="anchor" id="tx-funds" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Transaction Parameters</h2>
+
 <PushAPIReference>
 
 | **Arguments**     | **Type**                                                         | **Description**                                                                                                                                                                                                                                                                                           |
@@ -58,8 +60,8 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | _`tx.to`_         | `string` \| `{ address: string; chain: CHAIN }`                  | Defines the execution target. Passing a plain address triggers Push Chain execution. <br /><br />Passing `{ address, chain }` targets an external chain.                                                                                                                                                  |
 | `tx.from`         | `{ chain: PushChain.CONSTANTS.CHAIN }`                           | Optional. When set to an external chain, execution uses the Chain Executor Account (CEA) for that chain as the transaction origin.<br /><br />This is primarily used for external origin or CEA-based execution flows. <br /><ConstantsDropdown variant="CHAIN" />                                        |
 | `tx.value`        | `BigInt`                                                         | Native value to send, expressed in the smallest unit of the execution context.<br /><br />On Push Chain this is uPC (the smallest unit, like wei in ETH). <br /><br />On external execution routes, this maps to the native asset amount of that route.                                                   |
-| `tx.data`         | `string` \| `Array<{ to: string; value: bigint; data: string }>` | Encoded calldata for a single call `string` or batched multicall `Array<{ to, value, data }>`. <br /><br />Use `encodeTxData` to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
-| `tx.funds`        | `{ amount: BigInt; token?: PushChain.CONSTANTS.MOVEABLE.TOKEN }` | Moves supported assets as part of the transaction flow.<br /><br />Depending on the route, assets may be moved into Push Chain or between Push Chain and a supported external chain.<br /><br />If `tx.data` is provided, asset movement and execution happen atomically. <br /> <ConstantsDropdown variant="MOVEABLE_TOKEN" /> |
+| `tx.data`         | `string` \| `Array<{ to: string; value: bigint; data: string }>` | Encoded calldata for a single call `string` or batched multicall `Array<{ to, value, data }>`. <br /><br />Use [`encodeTxData`](/docs/chain/build/utility-functions#encode-transaction-data) to produce the correct bytes for EVM (ABI) or Solana (Anchor IDL) targets. |
+| `tx.funds`        | `{ amount: BigInt; token?: MoveableToken \| PC20TokenReference }` | Moves supported assets as part of the transaction. If `tx.data` is provided, the movement and the call happen atomically.<br /><br />Pass a `MoveableToken`, or `{ chain, address }` for a [PC-20](#moving-pc-20-tokens). <ConstantsDropdown variant="MOVEABLE_TOKEN" /> |
 | `tx.progressHook` | `(progress: ProgressHookType) => void`                           | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions.                                                                                                                                                                    |
 
 </PushAPIReference>
@@ -366,6 +368,14 @@ Use the funds field to specify the amount of assets to move, and _optionally_ th
 > **Note**: funds transactions are only supported from external origin chains.<br />
 > Native Push Chain users should call ERC-20 `transfer` or `transferFrom` directly (instead of using funds).
 
+`funds.token` takes either kind of token — see [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-push-chain) for the difference.
+
+<h2 className="anchor" id="moving-prc-20-tokens" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Moving Prc 20 Tokens</h2>
+
+### Moving PRC-20 Tokens (Tokens born outside Push Chain)
+
+`funds.token` accepts a **[MoveableToken](#tx-funds)** from the supported-asset table. The origin-chain token is locked and its [PRC-20](/docs/chain/important-concepts#token-types-on-push-chain) representation is minted on Push Chain.
+
 ```typescript
 // Send 1 USDT to the recipient address
 const txResponse = await pushChainClient.universal.sendTransaction({
@@ -378,6 +388,45 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+<h2 className="anchor" id="moving-pc-20-tokens" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Moving Pc 20 Tokens</h2>
+
+### Moving PC-20 Tokens (Tokens born on Push Chain)
+
+`funds.token` also accepts a **[PC-20 reference](/docs/chain/important-concepts#token-types-on-push-chain)**, a token born on Push Chain, identified by `{ chain, address }` and resolved against UniversalCore's on-chain registry instead of the SDK's static token table.
+
+```typescript
+// Resolve the token first. getPC20Address reports its decimals, so the amount
+// is right by construction — see [Recommended Practices](/docs/chain/build/recommended-practices).
+const unicorn = await PushChain.utils.tokens.getPC20Address(
+  '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+  {
+    chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+    network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+  }
+);
+
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: {
+    address: '0xRecipientAddress',
+    chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // where it is going
+  },
+  funds: {
+    amount: PushChain.utils.helpers.parseUnits('1', { decimals: unicorn.decimals }),
+    token: {
+      chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, // where the token IS
+      address: unicorn.address,
+    },
+  },
+});
+```
+
+**Important:** `funds.token.chain` is the chain the tokens sit on right now. It is different from the destination `to.chain` which indicates where it should go.
+
+:::danger Never add `symbol` to a PC-20 reference
+
+A PC-20 reference is exactly `{ chain, address }`. The SDK tells it apart from a `MoveableToken` by the **absence** of `symbol`, adding a `symbol` will cause unexpected results.
+
+:::
 
 ## Send Batch Transactions (Multicall)
 

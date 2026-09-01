@@ -215,7 +215,7 @@ import * as readline from 'node:readline/promises';
 
 </Details>
 
-<Details summary="Move ERC-20 (USDT) + Call Contract in One Tx" className="alert alert--live-play">
+<Details summary="Move ERC-20 (USDT) + Call Contract in one Tx" className="alert alert--live-play">
 
 Bridge USDT into Push Chain AND atomically call a contract in the same transaction. The funds land on the UEA, then the UEA executes your payload — all from one user signature.
 
@@ -357,6 +357,138 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
         console.log('📊 Counter on Push Chain → before: ' + before.toString() + ' | after: ' + after.toString());
       } catch (error) {
         console.error('❌ Error:', error.message);
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<Details summary="Move PC-20 Token from an External Chain to Push" className="alert alert--live-play">
+
+A complete PC-20 round trip in one script. Mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home. <br /> <br />**Note:** Ideally, you will be either moving PC-20 from external chains to Push or vice-versa. This example does the full route to make the understanding easier.  <br /> <br />
+
+:::note Getting the test token
+
+These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, which was used to mint.<br /><br />
+
+Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
+
+:::
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route1_pc20_import
+
+    // Round trip: mint a PC-20 on Push Chain → export it to Sepolia →
+    // burn the wrapper to unlock it back to your UEA.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // $UNICORN on Push Chain. See the Mint Universal ERC-20 tutorial.
+    const UNICORN = '0x0165878A594ca255338adfa4d48449f69242Eb8F';
+    const MINT_ABI = [{
+      inputs: [{ name: 'to', type: 'address' }, { name: 'amount', type: 'uint256' }],
+      name: 'mint', outputs: [], stateMutability: 'nonpayable', type: 'function',
+    }];
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      const token = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      const one = PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals });
+
+      await rl.question(':::prompt:::Send at least 0.03 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia, then press Enter.\\\\n(This is the only account you fund — the SDK fee-locks it to mint the PC your UEA needs for all three legs.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      // Re-prompt rather than exit: this wallet is generated per run, so bailing
+      // out and re-running would strand whatever you just sent to it.
+      while ((await provider.getBalance(wallet.address)) === 0n) {
+        await rl.question(':::prompt:::Still 0 ETH at ' + wallet.address + '. Send Sepolia ETH there, then press Enter.');
+      }
+
+      try {
+        // 1. Mint — $UNICORN's mint() is public, so the script self-serves.
+        console.log('⚒️  Minting', token.symbol, 'on Push Chain...');
+        const mintTx = await client.universal.sendTransaction({
+          to: UNICORN,
+          data: PushChain.utils.helpers.encodeTxData({
+            abi: MINT_ABI,
+            functionName: 'mint',
+            args: [client.universal.account, PushChain.utils.helpers.parseUnits('10', { decimals: token.decimals })],
+          }),
+        });
+        await mintTx.wait();
+
+        // 2. Export to your own Sepolia address. First export deploys the wrapper.
+        console.log('📤 Exporting 1', token.symbol, 'to Sepolia...');
+        const outTx = await client.universal.sendTransaction({
+          to: { address: wallet.address, chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA },
+          funds: {
+            amount: one,
+            // 'chain' is where the token IS — Push Chain, since this is an export.
+            token: { chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT, address: UNICORN },
+          },
+        });
+        await outTx.wait();
+        // The registry is the authoritative record of where a PC-20 lives on
+        // each chain, so resolve the wrapper from it.
+        const exported = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+          chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+        });
+        const wrapper = exported.registry.find((e) => e.chainName === 'ETHEREUM_SEPOLIA');
+        if (!wrapper) throw new Error('Sepolia wrapper is not registered yet — retry in a moment.');
+        console.log('📦 Wrapper on Sepolia:', wrapper.address);
+
+        // 3. Wait for the wrapper to actually land, as settlement takes a few seconds.
+        const erc20 = new ethers.Contract(wrapper.address, ['function balanceOf(address) view returns (uint256)'], provider);
+        console.log('⏳ Waiting for delivery on Sepolia...');
+        for (let tries = 0; (await erc20.balanceOf(wallet.address)) < one; tries++) {
+          if (tries > 60) throw new Error('Wrapper never arrived on Sepolia after ~5 minutes.');
+          if (tries > 0 && tries % 6 === 0) console.log('   still waiting (' + (tries * 5) + 's)...');
+          await new Promise((r) => setTimeout(r, 5000));
+        }
+        console.log('📬 Delivered.');
+
+        // 4. Burn the wrapper to bring it home. No approval is sent.
+        console.log('🔥 Burning the wrapper back to Push Chain...');
+        const backTx = await client.universal.sendTransaction({
+          // A plain address means Route 1 — execute on Push Chain. This is
+          // where the unlocked $UNICORN lands, so send it to your own UEA.
+          to: client.universal.account,
+          funds: {
+            amount: one,
+            // 'chain' is where the token IS — Sepolia now, not the destination.
+            token: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, address: wrapper.address },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+        await backTx.wait();
+        console.log('🎉 Round trip complete —', token.symbol, 'is back at', client.universal.account);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -811,6 +943,120 @@ Run two `increment()` calls on the same Push Chain contract atomically, from a s
         console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
         console.log('🌐 Solana tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+      }
+    }
+
+    await main().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<Details summary="Move PC-20 Token from Push to an External Chain" className="alert alert--live-play">
+
+Send a [PC-20 (Token born on Push Chain)](/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.<br /><br />
+
+**Pre-requisite:**. Mint yourself some **$UNICORN** from [Mint Universal ERC-20 Tokens](/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). $UNICORN is an ordinary ERC-20 that exists on Push Chain.
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_route2_pc20_export
+
+    // Route 2: export a PC-20 from Push Chain → mint its wrapper on Sepolia.
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // $UNICORN on Push Chain — see the Mint Universal ERC-20 tutorial.
+    const UNICORN = '0x0165878A594ca255338adfa4d48449f69242Eb8F';
+    const MINT_ABI = [{
+      inputs: [{ name: 'to', type: 'address' }, { name: 'amount', type: 'uint256' }],
+      name: 'mint', outputs: [], stateMutability: 'nonpayable', type: 'function',
+    }];
+
+    async function main() {
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
+
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+
+      const token = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('🪙 Exporting', token.symbol, '— known deployments:');
+      for (const entry of token.registry) {
+        console.log('   -', entry.chainName, '→', entry.address);
+      }
+
+      // The wrapper is delivered here on Sepolia. Defaults to this run's own
+      // wallet so the example is self-contained — set it to anything you like.
+      const TARGET = wallet.address;
+
+      await rl.question(':::prompt:::Send at least 0.02 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia, then press Enter.\\\\n(The SDK fee-locks it to mint the PC your UEA needs, and the script mints its own ' + token.symbol + ' — this is the only account you fund.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+
+      // Re-prompt rather than exit: this wallet is generated per run, so bailing
+      // out and re-running would strand whatever you just sent to it.
+      while ((await provider.getBalance(wallet.address)) === 0n) {
+        await rl.question(':::prompt:::Still 0 ETH at ' + wallet.address + '. Send Sepolia ETH there, then press Enter.');
+      }
+
+      // $UNICORN has a public mint(), so the script can self-serve what it exports.
+      console.log('⚒️  Minting', token.symbol, 'to your UEA...');
+      const mintTx = await client.universal.sendTransaction({
+        to: UNICORN,
+        data: PushChain.utils.helpers.encodeTxData({
+          abi: MINT_ABI,
+          functionName: 'mint',
+          args: [client.universal.account, PushChain.utils.helpers.parseUnits('10', { decimals: token.decimals })],
+        }),
+      });
+      await mintTx.wait();
+      console.log('✅ Minted — exporting 1', token.symbol, 'to', TARGET, 'on Sepolia');
+
+      try {
+        const tx = await client.universal.sendTransaction({
+          to: {
+            address: TARGET,
+            chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // destination
+          },
+          funds: {
+            amount: PushChain.utils.helpers.parseUnits('1', { decimals: token.decimals }),
+            // 'chain' is where the token IS — Push Chain, since this is an export.
+            token: {
+              chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+              address: UNICORN,
+            },
+          },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
+        });
+
+        console.log('✅ Push Chain tx hash:', tx.hash);
+        const receipt = await tx.wait();
+        console.log('🌐 External tx:', receipt.externalTxHash);
+        // Read the wrapper back from the registry.
+        const exported = await PushChain.utils.tokens.getPC20Address(UNICORN, {
+          chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+        });
+        const wrapper = exported.registry.find((e) => e.chainName === 'ETHEREUM_SEPOLIA');
+        console.log('📦 Wrapper on Sepolia:', wrapper ? wrapper.address : '(not registered yet)');
         console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);

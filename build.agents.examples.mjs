@@ -44,18 +44,19 @@ const SDK_METHODS = [
   'PushChain.utils.helpers.formatUnits',
   'PushChain.utils.account.toUniversal',
   'PushChain.utils.account.toChainAgnostic',
-  'PushChain.utils.account.toUniversalFromKeypair',
   'PushChain.utils.account.deriveExecutorAccount',
   'PushChain.utils.account.resolveControllerAccount',
-  'PushChain.utils.chain.getChainNamespace',
-  'PushChain.utils.chain.getChainName',
-  'PushChain.utils.chain.getSupportedChains',
-  'PushChain.utils.tx.encodeTxData',
-  'PushChain.utils.token.getMoveableTokens',
-  'PushChain.utils.token.getPayableTokens',
-  'PushChain.utils.token.getPRC20Address',
-  'PushChain.utils.conversion.originToExecutor',
-  'PushChain.utils.conversion.executorToOrigin',
+  'PushChain.utils.chains.getChainNamespace',
+  'PushChain.utils.chains.getChainName',
+  'PushChain.utils.chains.getSupportedChains',
+  'PushChain.utils.helpers.encodeTxData',
+  'PushChain.utils.tokens.getMoveableTokens',
+  'PushChain.utils.tokens.getPayableTokens',
+  'PushChain.utils.tokens.getPRC20Address',
+  'PushChain.utils.tokens.getPC20Address',
+  'PushChain.utils.account.convertOriginToExecutor',
+  'PushChain.utils.account.convertExecutorToOriginAccount',
+  'PushChain.utils.conversion.slippageToMinAmount',
 ];
 
 function detectSdkMethods(code) {
@@ -389,11 +390,23 @@ export const buildAgentsExamples = async () => {
 
   await fs.mkdir(AGENTS_EXAMPLES_DIR, { recursive: true });
 
-  // Load existing index so we can skip already-registered IDs
+  // Load existing index so we can skip already-registered IDs.
+  //
+  // The index was migrated from a bare array to an object wrapper
+  // (`{ schema_version, …, examples: [] }`) — see its own `migration_note`.
+  // Both shapes are accepted, and whichever one was read is the one written
+  // back, so the wrapper's metadata survives a regeneration.
   let existingIndex = [];
+  let indexWrapper = null;
   try {
     const raw = await fs.readFile(INDEX_PATH, 'utf-8');
-    existingIndex = JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) {
+      existingIndex = parsed;
+    } else if (parsed && Array.isArray(parsed.examples)) {
+      existingIndex = parsed.examples;
+      indexWrapper = parsed;
+    }
   } catch {
     // No existing index — start fresh
   }
@@ -500,7 +513,10 @@ export const buildAgentsExamples = async () => {
   // Persist updated index
   if (newEntries.length > 0) {
     const merged = [...existingIndex, ...newEntries];
-    await fs.writeFile(INDEX_PATH, JSON.stringify(merged, null, 2), 'utf-8');
+    const payload = indexWrapper
+      ? { ...indexWrapper, examples: merged }
+      : merged;
+    await fs.writeFile(INDEX_PATH, JSON.stringify(payload, null, 2), 'utf-8');
     console.log(
       chalk.cyan(
         `\n📖 Updated examples/index.json → ${merged.length} total entries`

@@ -24,8 +24,7 @@ export default function PushAPIReference({
       {showRequiredNotice && (
         <RequiredNotice hasNotice={showRequiredNotice}>
           <p>
-            These<code>Arguments</code>
-            are mandatory
+            These&nbsp;<code>Arguments</code>&nbsp;are mandatory
           </p>
         </RequiredNotice>
       )}
