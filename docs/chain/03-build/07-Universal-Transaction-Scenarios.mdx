@@ -470,7 +470,7 @@ Nothing was added to make it exportable. Any **ERC-20** on Push Chain with stand
         // 4. Burn the wrapper to bring it home. No approval is sent.
         console.log('🔥 Burning the wrapper back to Push Chain...');
         const backTx = await client.universal.sendTransaction({
-          to: '0x0000000000000000000000000000000000042101', // unlock to self on Push Chain
+          to: '0x0000000000000000000000000000000000042101', // send PC-20 from sepolia to Push 0x...42101 address
           funds: {
             amount: one,
             // 'chain' is where the token IS — Sepolia now, not the destination.
