@@ -44,6 +44,7 @@ import GLOBALS, { device, structure } from '@site/src/config/globals';
 import AgenticScaleSection from '@site/src/components/Home/AgenticScaleSection';
 import ClosingCTA from '@site/src/components/Home/ClosingCTA';
 import FeatureCard from '@site/src/components/Home/FeatureCard';
+import HeroTopography from '@site/src/components/Home/HeroTopography';
 import PaidStatsRow from '@site/src/components/Home/PaidStatsRow';
 import UniversalStatCallout from '@site/src/components/Home/UniversalStatCallout';
 import ProblemNarrative from '@site/src/components/Home/ProblemNarrative';
@@ -66,9 +67,6 @@ export default function HomeComp() {
 
   return (
     <HomeWrapper showAlertBar={isHydrated ? shouldShowAlertBar : false}>
-      {/* GLOW CIRCLE */}
-      <GlowCircle />
-
       {/* HERO SECTION */}
       <HeroSection
         id='hero'
@@ -77,6 +75,8 @@ export default function HomeComp() {
         aria-level='2'
         aria-label={t('pages.home.hero-section.section-aria-label')}
       >
+        <HeroTopography />
+
         <HeroContent alignSelf='center' overflow='visible'>
           <HeroPrimary flex='initial' justifyContent='flex-start'>
             <HeroItem alignItems='center'>
@@ -319,42 +319,6 @@ export default function HomeComp() {
   );
 }
 
-const GlowCircle = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(179, 72, 236, 0.2);
-  filter: blur(125px);
-  pointer-events: none;
-  z-index: 2;
-
-  /* Centred on the hero rather than positioned by a per-breakpoint left
-     percentage — those offsets put the glow's *left edge* at the percentage,
-     so its centre drifted further right the wider the screen got (149px off
-     centre at 1512px). */
-  width: 600px;
-  height: 600px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 200px;
-
-  @media ${device.laptopL} {
-    width: 500px;
-    height: 500px;
-  }
-
-  @media ${device.tablet} {
-    width: 543px;
-    height: 538px;
-    top: 29px;
-  }
-
-  @media ${device.mobileL} {
-    width: 395px;
-    height: 392px;
-    top: 102px;
-  }
-`;
-
 const HomeWrapper = styled(ItemV)`
   background: var(--ifm-color-black);
   margin: 0;
@@ -396,6 +360,8 @@ const HomeWrapper = styled(ItemV)`
 const HeroSection = styled(Section)`
   overflow-y: visible;
   overflow-x: clip;
+  /* Positioning context for the topography canvas. */
+  position: relative;
 `;
 
 const HeroContent = styled(Content)`
@@ -476,6 +442,20 @@ const HeroBody = styled(ItemV)`
   margin-bottom: 150px;
   text-align: left;
   align-self: center;
+  position: relative;
+
+  /* Figma 49898:9883 — a blurred #090909 plate that settles the topography
+     behind the copy so the glyphs never fight the text. Sits above the canvas
+     but below the text, which carries z-index 2. */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -56px 0 -37px 0;
+    background: #090909;
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+  }
 
   h1,
   span {
@@ -593,7 +573,6 @@ const GridContent = styled(Content)`
     padding-top: 100px;
   }
 `;
-
 
 const FeatureGridRow = styled(ItemH)`
   gap: 24px;
