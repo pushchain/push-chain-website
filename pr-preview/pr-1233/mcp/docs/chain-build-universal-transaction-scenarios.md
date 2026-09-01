@@ -2,7 +2,7 @@
 title: "Universal Transaction Scenarios"
 url: "https://pushchain.github.io/docs/chain/build/universal-transaction-scenarios/"
 section: "build"
-lastUpdated: "2026-09-01T13:23:12Z"
+lastUpdated: "2026-09-01T17:50:46Z"
 description: "Universal Transaction Scenarios | Build | Push Chain Docs"
 ---
 
@@ -44,7 +44,7 @@ Copy playground link
 
 Copy code
 
-Move ERC-20 (USDT) + Call Contract in One Tx
+Move ERC-20 (USDT) + Call Contract in one Tx
 
 Bridge USDT into Push Chain AND atomically call a contract in the same transaction. The funds land on the UEA, then the UEA executes your payload — all from one user signature.
 
@@ -64,20 +64,19 @@ Copy playground link
 
 Copy code
 
-Move a PC-20 Token to Push Chain (wrapper burn)
+Move PC-20 Token from an External Chain to Push
 
-A complete PC-20 round trip in one script: mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home. Unlike an ERC-20 bridge, the return leg sends **no approval transaction** — the gateway's PC20Factory burns via `burnFrom`.  
+A complete PC-20 round trip in one script. Mint **$UNICORN** on Push Chain, export it to Sepolia as a wrapper, then burn that wrapper to bring it home.  
   
-
-The export step hands back the wrapper address in `receipt.externalAssetAddr`, so the burn leg never needs a hardcoded address or a registry lookup.  
+**Note:** Ideally, you will be either moving PC-20 from external chains to Push or vice-versa. This example does the full route to make the understanding easier.  
   
 
 Getting the test token
 
-These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/push-chain-website/pr-preview/pr-1233/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, so you can mint yourself as much as you need.  
+These examples use **$UNICORN**, the token you build in [Mint Universal ERC-20 Tokens](/push-chain-website/pr-preview/pr-1233/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/). It is already deployed on Donut Testnet at `0x0165878A594ca255338adfa4d48449f69242Eb8F` with a public `mint(address,uint256)`, which was used to mint.  
   
 
-Nothing was added to make it exportable. Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
+Any **ERC-20** on Push Chain with standard `name()`, `symbol()` and `decimals()` is a PC-20. Your ERC-20 addresses born on Push will just work.
 
 VIRTUAL NODE IDE
 
@@ -137,7 +136,7 @@ Copy playground link
 
 Copy code
 
-Export a PC-20 Token to an External Chain
+Move PC-20 Token from Push to an External Chain
 
 Send a [PC-20 (Token born on Push Chain)](/push-chain-website/pr-preview/pr-1233/docs/chain/build/send-universal-transaction/#moving-pc-20-tokens) outward. The token is approved and locked into VaultPC20 on Push Chain, and its wrapper is minted on the destination chain. If the token has never been exported there, the wrapper is **deployed as part of this transaction**.  
   
