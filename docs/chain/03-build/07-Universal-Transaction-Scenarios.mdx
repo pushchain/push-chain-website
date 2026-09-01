@@ -470,7 +470,9 @@ Nothing was added to make it exportable. Any **ERC-20** on Push Chain with stand
         // 4. Burn the wrapper to bring it home. No approval is sent.
         console.log('🔥 Burning the wrapper back to Push Chain...');
         const backTx = await client.universal.sendTransaction({
-          to: '0x0000000000000000000000000000000000042101', // send PC-20 from sepolia to Push 0x...42101 address
+          // A plain address means Route 1 — execute on Push Chain. This is
+          // where the unlocked $UNICORN lands, so send it to your own UEA.
+          to: client.universal.account,
           funds: {
             amount: one,
             // 'chain' is where the token IS — Sepolia now, not the destination.

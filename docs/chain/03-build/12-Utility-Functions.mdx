@@ -1417,7 +1417,7 @@ Resolves a [PC-20](/docs/chain/important-concepts#token-types-on-push-chain) tok
 
 PC-20 mappings live in UniversalCore's on-chain registry rather than a static table, so this call is asynchronous and looks tokens up by address, never by symbol. 
 
-> **Note:** Synthetic PRC20s such as `pETH` and `USDC.eth` are not PC20s. Use [getPRC20Address()](#get-prc-20-address) for those.
+> **Note:** Synthetic PRC-20s such as `pETH` and `USDC.eth` are not PC-20s. Use [getPRC20Address()](#get-prc-20-address) for those.
 
 ```typescript
 // From an external wrapper
@@ -1451,11 +1451,11 @@ const discovered = await PushChain.utils.tokens.getPC20Address('0x81E05001A1f3fB
 
 ```typescript
 {
-  address: `0x${string}`;  // Canonical PC20 address on Push Chain
+  address: `0x${string}`;  // Canonical PC-20 address on Push Chain
   name: string;            // Token name
   symbol: string;          // Token symbol
   decimals: number;        // Token decimals
-  network: PUSH_NETWORK;   // The Push network this PC20 belongs to
+  network: PUSH_NETWORK;   // The Push network this PC-20 belongs to
   registry: Array<{
     address: string;       // Checksummed hex on EVM, base58 on Solana
     chain: CHAIN;          // CAIP-2 chain id, e.g. 'eip155:11155111'

@@ -815,9 +815,9 @@
     },
     {
       "id": "utility-get-pc20-address",
-      "name": "Get PC20 Address",
+      "name": "Get PC-20 Address",
       "file": "utility-get-pc20-address.md",
-      "description": "Code example: Get PC20 Address — https://push.org/docs/chain/build/utility-functions/",
+      "description": "Code example: Get PC-20 Address — https://push.org/docs/chain/build/utility-functions/",
       "sdk_methods_used": [
         "PushChain.utils.tokens.getPC20Address"
       ],
