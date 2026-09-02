@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 // React + Web3 Essentials
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // External Components
@@ -21,6 +21,11 @@ import GLOBALS, { device } from '@site/src/config/globals';
 import { ProblemNarrativeList } from '@site/src/config/ProblemNarrativeList';
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Runs before the browser paints on the client, and degrades to useEffect on
+// the server where layout effects are not available.
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 // Hard floor for where a stuck card parks, so it can never tuck under the
 // fixed header on short viewports.
@@ -224,6 +229,17 @@ export default function ProblemNarrative() {
     };
   }, [isCompact]);
 
+  // Park the incoming card below the fold before the browser paints. It cannot
+  // be done in CSS: GSAP folds an element's existing transform into its own, so
+  // a stylesheet offset here would compound with the timeline's and the card
+  // would never arrive. A passive effect is too late and shows the card on top
+  // for a frame.
+  useIsomorphicLayoutEffect(() => {
+    if (isCompact) return;
+    const incoming = cardRefs.current[1];
+    if (incoming) gsap.set(incoming, { yPercent: 108 });
+  }, [isCompact]);
+
   // Drive the incoming card up over the one beneath it across the pinned
   // runway, and let the covered card recede so the pair reads as depth rather
   // than a flat swap.
@@ -236,10 +252,6 @@ export default function ProblemNarrative() {
 
     const ctx = gsap.context(() => {
       const [beneath, incoming] = cards;
-
-      // Match the CSS start state before the timeline reads it, so a refresh
-      // can never leave the incoming card sitting on top at rest.
-      gsap.set(incoming, { yPercent: 108 });
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -434,17 +446,15 @@ const CardLayer = styled.div`
   z-index: ${(props) => props.index + 1};
   will-change: transform;
 
-  /* The incoming card starts parked below the fold. Declared here rather than
-     left to GSAP alone: the timeline is built after first paint, so without it
-     the second card renders over the first for a frame and then jumps down. */
-  ${(props) =>
-    props.index > 0 ? 'transform: translateY(108%);' : ''}
 
   @media ${device.laptop} {
     position: static;
     inset: auto;
-    transform: none !important;
-    opacity: 1 !important;
+
+    > * {
+      transform: none !important;
+      opacity: 1 !important;
+    }
 
     &:not(:last-child) {
       margin-bottom: 24px;
