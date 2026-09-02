@@ -317,8 +317,11 @@ const CardRow = styled.div`
   align-items: stretch;
   gap: 24px;
 
+  /* A floor rather than a fixed height: the design's row heights assume its
+     own copy at its own width, and a hard height simply spills the card's
+     content out of the bottom once either grows. */
   > * {
-    ${(props) => (props.$height ? `height: ${props.$height}px;` : '')}
+    ${(props) => (props.$height ? `min-height: ${props.$height}px;` : '')}
   }
 
   /* Three fixed-height cards need real width; below the laptop breakpoint

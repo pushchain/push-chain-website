@@ -237,6 +237,10 @@ export default function ProblemNarrative() {
     const ctx = gsap.context(() => {
       const [beneath, incoming] = cards;
 
+      // Match the CSS start state before the timeline reads it, so a refresh
+      // can never leave the incoming card sitting on top at rest.
+      gsap.set(incoming, { yPercent: 108 });
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: stage,
@@ -429,6 +433,12 @@ const CardLayer = styled.div`
   inset: 0;
   z-index: ${(props) => props.index + 1};
   will-change: transform;
+
+  /* The incoming card starts parked below the fold. Declared here rather than
+     left to GSAP alone: the timeline is built after first paint, so without it
+     the second card renders over the first for a frame and then jumps down. */
+  ${(props) =>
+    props.index > 0 ? 'transform: translateY(108%);' : ''}
 
   @media ${device.laptop} {
     position: static;
