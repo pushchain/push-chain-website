@@ -479,16 +479,23 @@ const HeroItem = styled(ItemV)`
 
 const HeroBody = styled(ItemV)`
   text-align: left;
-  align-self: center;
+  /* Stretched to the 970px column rather than shrink-wrapped to the longest
+     line, because the plate below is sized from this box. Shrink-wrapped it
+     was only as wide as the headline and the backdrop read as a tight halo
+     instead of the broad field the design draws. */
+  align-self: stretch;
+  width: 100%;
   position: relative;
 
   /* Figma 49898:9883 — a blurred #090909 plate that settles the topography
      behind the copy so the glyphs never fight the text. Sits above the canvas
-     but below the text, which carries z-index 2. */
+     but below the text, which carries z-index 2.
+     The design draws it 938.95 x 421.66 against a 970 x 329 copy block: 56px
+     proud at the top, 37px at the bottom, and inset ~15px on each side. */
   &::before {
     content: '';
     position: absolute;
-    inset: -56px 0 -37px 0;
+    inset: -56px 15px -37px 15px;
     background: #090909;
     filter: blur(100px);
     z-index: 1;
