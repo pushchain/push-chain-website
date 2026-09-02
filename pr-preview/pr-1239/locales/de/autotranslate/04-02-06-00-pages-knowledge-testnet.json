@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "network-updates": {
+                "title": "Netzwerk-Updates",
+                "items": {
+                  "chain-upgrade-token-rebalance": {
+                    "title": "Chain Upgrade - Token Rebalancing - Donut Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
