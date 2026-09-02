@@ -2,7 +2,7 @@
 title: "Configure Hardhat"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-environment/configure-hardhat/"
 section: "setup"
-lastUpdated: "2026-09-02T08:21:03Z"
+lastUpdated: "2026-09-02T09:34:10Z"
 description: "Configure Hardhat | Smart Contract Environment | Tooling | Setup | Push Chain Docs"
 ---
 

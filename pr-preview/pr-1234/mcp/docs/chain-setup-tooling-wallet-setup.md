@@ -2,7 +2,7 @@
 title: "Wallet Setup"
 url: "https://pushchain.github.io/docs/chain/setup/tooling/wallet-setup/"
 section: "setup"
-lastUpdated: "2026-09-02T08:21:03Z"
+lastUpdated: "2026-09-02T09:34:10Z"
 description: "Wallet Setup | Tooling | Setup | Push Chain Docs"
 ---
 

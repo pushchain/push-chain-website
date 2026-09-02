@@ -2,7 +2,7 @@
 title: "Important Concepts"
 url: "https://pushchain.github.io/docs/chain/important-concepts/"
 section: "chain"
-lastUpdated: "2026-09-02T08:21:03Z"
+lastUpdated: "2026-09-02T09:34:10Z"
 description: "Important Concepts | Push Chain Docs"
 ---
 

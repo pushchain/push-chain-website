@@ -2,11 +2,108 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/</id>
     <title>Push Chain — Universal Blockchain for Apps Blog</title>
-    <updated>2026-08-24T00:00:00.000Z</updated>
+    <updated>2026-08-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/"/>
     <subtitle>Push Chain — Universal Blockchain for Apps Blog</subtitle>
     <icon>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/website/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[The Complete Guide to ERC-8183]]></title>
+        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/</id>
+        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/"/>
+        <updated>2026-08-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn what ERC8183 is and what makes it a revolutionary standard for establishing agentic commerce in the onchain world]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of The Complete Guide to ERC-8183" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-8816db56179e7e8c08fa717eba83cc74.webp" width="1600" height="900" class="img_ev3q"></p>
+<p><em>"Dude I just pretty much delegate all my secondary tasks to my Claude Code agent"</em></p>
+<p>This one line sums up how easy it has become for us humans to hire a 500IQ digital servant for just $20 a month to run almost every digital errand.</p>
+<p>But has this comfort transferred to the onchain world yet?</p>
+<p><strong>Partly Yes, Partly No.</strong></p>
+<p>Yes, because we have been devoting a lot of energy towards making agents first-class citizens of crypto. These efforts led us to build standards like <a href="https://push.org/blog/ai-agent-identities-in-crypto/" target="_blank" rel="noopener noreferrer" class="">ERC-8004</a> and <a href="https://push.org/blog/what-is-erc-8126/" target="_blank" rel="noopener noreferrer" class="">ERC-8126</a> which are massively used today for <strong>discovering, registering and verifying AI agents' work and capabilities</strong>.</p>
+<p>But the next part of the problem was much harder.</p>
+<p>How can one agent safely hire another agent to do work?</p>
+<ul>
+<li class="">A buyer does not want to pay before the work is complete.</li>
+<li class="">A service provider does not want to work without proof of funds and credibility.</li>
+</ul>
+<p>ERC-8183 was born to address these problems, kickstarting the age of Onchain Agentic Economies.</p>
+<p><img decoding="async" loading="lazy" alt="Diagram showing why ERC-8183 exists: the pay-first versus work-first trust problem" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-687abedcd7a96d3acb4a10a7e3403cd6.webp" width="1600" height="900" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-erc-8183">What is ERC-8183<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#what-is-erc-8183" class="hash-link" aria-label="Direct link to What is ERC-8183" title="Direct link to What is ERC-8183" translate="no">​</a></h2>
+<p>The <a href="https://eips.ethereum.org/EIPS/eip-8183" target="_blank" rel="noopener noreferrer" class="">ERC-8183 specification</a> enables onchain registered agents to hire and pay other agents. The standard enables onchain agentic commerce by defining a small commerce protocol for jobs, escrow, delivery, and payment.</p>
+<p>The standard answers this question: "How can two agents exchange work for money without trusting each other with the funds?"</p>
+<p><strong>Co-developed by <a href="https://www.virtuals.io/" target="_blank" rel="noopener noreferrer" class="">Virtuals Protocol</a> and the Ethereum Foundation's dAI team.</strong></p>
+<p>This job-based agentic commerce enabler consists of three main components (or roles):</p>
+<ul>
+<li class=""><strong>Client:</strong> An agent that needs assistance with some work. The client creates the job and provides the payment.</li>
+<li class=""><strong>Provider:</strong> The provider performs the work. The provider submits a reference to the completed work.</li>
+<li class=""><strong>Evaluator:</strong> Then the evaluator checks the result and determines whether the job is complete or rejected.</li>
+</ul>
+<div class="theme-admonition theme-admonition-success admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>&nbsp;</div><div class="admonitionContent_BuS1"><p><em>Caveat: The evaluator does not need to be a separate company or person.</em></p><p><em>The client can also be the evaluator. A smart contract can also act as the evaluator. For example, the evaluator can verify a zero-knowledge proof before it approves the job.</em></p></div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-erc-8183-work">How Does ERC-8183 Work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#how-does-erc-8183-work" class="hash-link" aria-label="Direct link to How Does ERC-8183 Work?" title="Direct link to How Does ERC-8183 Work?" translate="no">​</a></h2>
+<p>ERC-8183 uses a simple job state machine. A job moves through these six deterministic states:</p>
+<p><img decoding="async" loading="lazy" alt="Diagram of the ERC-8183 workflow from job creation through evaluation" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-2-6c8d339261d1ac3ed0cd8eb153c28093.webp" width="1600" height="900" class="img_ev3q"></p>
+<table><thead><tr><th>State</th><th>What it means</th></tr></thead><tbody><tr><td><strong>Open</strong></td><td>The job exists but payment is not locked.</td></tr><tr><td><strong>Funded</strong></td><td>Payment is in an escrow wallet.</td></tr><tr><td><strong>Submitted</strong></td><td>The provider submitted the work.</td></tr><tr><td><strong>Completed</strong></td><td>The evaluator approved the work. The provider gets paid.</td></tr><tr><td><strong>Rejected</strong></td><td>The evaluator rejected the job. The client gets a refund.</td></tr><tr><td><strong>Expired</strong></td><td>The deadline passed. The client gets a refund.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-1-create-the-job">Step 1: Create the job<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#step-1-create-the-job" class="hash-link" aria-label="Direct link to Step 1: Create the job" title="Direct link to Step 1: Create the job" translate="no">​</a></h3>
+<p>The client creates a job that contains information about: Client, Provider, Evaluator, Description, Budget, Deadline, Status.</p>
+<p>The provider can be selected immediately or later via a bidding and marketplace flow.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-2-agree-on-the-budget">Step 2: Agree on the budget<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#step-2-agree-on-the-budget" class="hash-link" aria-label="Direct link to Step 2: Agree on the budget" title="Direct link to Step 2: Agree on the budget" translate="no">​</a></h3>
+<p>The client or provider can set the budget. For example:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">Job #42</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Task:       Analyze contract</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Provider:   Agent B</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Budget:     20 USDC</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Evaluator:  Agent C</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Deadline:   14:00 UTC</span><br></div></code></pre></div></div>
+<p>The provider must be selected before the client funds the job. The contract also checks the expected budget during funding. This check helps prevent a budget change from affecting the funding transaction.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-3-fund-the-escrow">Step 3: Fund the escrow<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#step-3-fund-the-escrow" class="hash-link" aria-label="Direct link to Step 3: Fund the escrow" title="Direct link to Step 3: Fund the escrow" translate="no">​</a></h3>
+<p>The client calls the <code>fund()</code> function to transfer tokens into the escrow wallet. Tokens could be either stablecoins, native chain tokens, or any verified ERC20.</p>
+<p>The job status now changes from:</p>
+<p><code>OPEN → FUNDED</code></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-4-submit-the-work">Step 4: Submit the work<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#step-4-submit-the-work" class="hash-link" aria-label="Direct link to Step 4: Submit the work" title="Direct link to Step 4: Submit the work" translate="no">​</a></h3>
+<p>When the provider finishes the task, the provider calls <code>submit()</code>. The provider does not need to put the complete work on-chain. Instead, the provider submits a <code>bytes32</code> reference called the deliverable.</p>
+<p>This reference can represent:</p>
+<ul>
+<li class="">A hash of the result.</li>
+<li class="">An IPFS reference.</li>
+<li class="">An attestation commitment.</li>
+<li class="">Another reference to off-chain work.</li>
+</ul>
+<p>Now the job status changes to:</p>
+<p><code>FUNDED → SUBMITTED</code></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-5-evaluate-the-work">Step 5: Evaluate the work<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#step-5-evaluate-the-work" class="hash-link" aria-label="Direct link to Step 5: Evaluate the work" title="Direct link to Step 5: Evaluate the work" translate="no">​</a></h3>
+<p>The evaluator checks the submitted result.</p>
+<p>If the deliverable meets the expectations, it is accepted, the job status is marked as completed, and the provider is paid.</p>
+<p>Otherwise, the job is rejected, the status is shifted to rejected, and the client sum is refunded from the escrow wallet.</p>
+<p>The reason for rejection can include a hash that points to evidence for the decision.</p>
+<p>This also helps in creating an audit trail without forcing the complete evaluation data on-chain.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="hooks">Hooks<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#hooks" class="hash-link" aria-label="Direct link to Hooks" title="Direct link to Hooks" translate="no">​</a></h2>
+<p>Hooks are additional rules that add a layer of customizability to ERC-8183. A hook is an external smart contract that can run logic before or after an ERC-8183 action.</p>
+<p>A hook can add features such as:</p>
+<ul>
+<li class=""><strong>Reputation checks:</strong> Allow only providers above a reputation threshold.</li>
+<li class=""><strong>Bidding:</strong> Let several agents compete for a job.</li>
+<li class=""><strong>Custom fees:</strong> Split payments between several parties.</li>
+<li class=""><strong>Access rules:</strong> Require an allowlist or another condition.</li>
+<li class=""><strong>Reputation updates:</strong> Write the job result to ERC-8004 after completion.</li>
+</ul>
+<p>ERC-8183 does not include its own agent identity or reputation system. The specification recommends <a href="https://push.org/blog/ai-agent-identities-in-crypto/" target="_blank" rel="noopener noreferrer" class="">ERC-8004</a> for this purpose.</p>
+<p>An application can first use ERC-8004 to find a provider with a good reputation. The application can then use ERC-8183 to create and fund the job. After the job completes, a hook can send the outcome back to the ERC-8004 reputation system.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="use-cases">Use cases<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/#use-cases" class="hash-link" aria-label="Direct link to Use cases" title="Direct link to Use cases" translate="no">​</a></h2>
+<p>Any onchain jobs that have a deterministic measurable outcome can be accomplished by this tech, including (but not limited to):</p>
+<ul>
+<li class="">Research agents</li>
+<li class="">Data processing agents</li>
+<li class="">Code generation services</li>
+<li class="">Smart contract analysis</li>
+<li class="">Content generation</li>
+<li class="">Trading or execution services</li>
+<li class="">API services</li>
+<li class="">Token swaps or transfers with custom hooks</li>
+<li class="">Agent marketplaces</li>
+<li class="">Agent-to-agent outsourcing</li>
+</ul>
+<p>If you want to dig deeper into the AI x crypto rabbit hole, read about the <a href="https://push.org/blog/understanding-the-crypto-ai-agent-stack/" target="_blank" rel="noopener noreferrer" class="">AI agent stack</a> and <a href="https://push.org/blog/how-do-ai-agents-transact-onchain/" target="_blank" rel="noopener noreferrer" class="">how agents transact onchain</a>.</p>]]></content>
+        <author>
+            <name>Push Chain</name>
+            <uri>https://x.com/PushChain</uri>
+        </author>
+        <category label="Maker Monday" term="Maker Monday"/>
+        <category label="Key Features" term="Key Features"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[What Is ERC-8126? How Does It Work?]]></title>
         <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/what-is-erc-8126/</id>
@@ -674,41 +771,5 @@ Prediction markets today only accept stablecoins on their native chain, which cu
         <category label="Featured" term="Featured"/>
         <category label="Product" term="Product"/>
         <category label="Ecosystem" term="Ecosystem"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Push Rewards Program goes Public: Universal Network Meets Real Usage]]></title>
-        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/push-rewards-program/</id>
-        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/push-rewards-program/"/>
-        <updated>2026-05-21T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Following the launch of Donut Testnet and $PC ticker reveal, Push Chain has continued to gain strong momentum. Over the past few months,]]></summary>
-        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Push Rewards Program" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-33c3dc1f584eca7159cd0fefd9a405de.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Following the launch of Donut Testnet and $PC ticker reveal, Push Chain has continued to gain strong momentum. Over the past few months, we’ve seen increasing <a href="https://donut.push.network/stats" target="_blank" rel="noopener noreferrer" class="">activity</a> across users, developers, and validators as the ecosystem around universal apps begins to take shape.</p>
-<p>Push Chain has processed <strong>15M+ transactions across 400k+ active addresses, secured by 35+ validators.</strong> We’ve seen massive developer interest in building DeFi, RWAs, and AI Agents. With over 25 universal apps already <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">live</a>  like <a href="http://ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">RamenFi</a>, <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a>, and <a href="http://degenchess.fun/" target="_blank" rel="noopener noreferrer" class="">Degen Chess</a>, users from Ethereum, Solana, Arbitrum, BNB, and Base are interacting seamlessly without needing complex and unsafe bridging to get started.</p>
-<p>Rewards Portal <a href="https://portal.push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=s3launch" target="_blank" rel="noopener noreferrer" class="">https://portal.push.org/</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="a-program-beyond-social-farming">A program beyond social farming<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/push-rewards-program/#a-program-beyond-social-farming" class="hash-link" aria-label="Direct link to A program beyond social farming" title="Direct link to A program beyond social farming" translate="no">​</a></h2>
-<p><strong>With the launch of Season 3, we wanted to avoid the typical incentivized testnet playbook.</strong> Most campaigns often resort to social farming where users click buttons to join Discord or post on X for points that are pointless. Participating without ever meaningfully touching the network.</p>
-<p>Testnets exist to stress test real infrastructure with real users. With Push Chain S3 you are using the actual network with EVM and non EVM wallets on the exact same platform in realtime. Every point in Season 3 flows from on-chain activity and the usage of $PC.</p>
-<p>Leaderboards reflect who is actually putting the network through its paces and instead of a static points system, Season 3 introduces a fully gamified reward loop.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="enter-push-chain-pass-rareshinies">Enter Push Chain Pass (Rare/Shinies)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/push-rewards-program/#enter-push-chain-pass-rareshinies" class="hash-link" aria-label="Direct link to Enter Push Chain Pass (Rare/Shinies)" title="Direct link to Enter Push Chain Pass (Rare/Shinies)" translate="no">​</a></h2>
-<p>Rare Passes are collectibles earned purely through active testnet participation. They are your ticket to the endgame of Season 3. <strong>At TGE, users will burn their Rare Passes for a chance to mint and convert them into a Shiny Pass, maxed with rewards for Push Chain supporters.</strong> But even if you miss the Shiny, every burned pass guarantees a boost.</p>
-<p>Hit your daily spins, grind your levels, score $PC and stack as many passes as you can. The bigger your stash, the better your odds.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="season-3-is-open-heres-how-it-works">Season 3 is Open: Here’s how it works<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/push-rewards-program/#season-3-is-open-heres-how-it-works" class="hash-link" aria-label="Direct link to Season 3 is Open: Here’s how it works" title="Direct link to Season 3 is Open: Here’s how it works" translate="no">​</a></h2>
-<p>Season 3 is now open to everyone. <strong>No invite codes, no waitlists.</strong> Here is how you play the meta:</p>
-<ul>
-<li class=""><strong>Weekly Airdrops:</strong> Every week, a new universal app built on Push Chain drops into the rotation.</li>
-<li class=""><strong>Quest loops:</strong> Complete on-chain tasks on Push Chains <a href="https://portal.push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=s3launch" target="_blank" rel="noopener noreferrer" class="">testnet portal</a> (providing liquidity, swapping, playing, or predicting) to earn XP.</li>
-<li class=""><strong>Progresssion:</strong> Level up to score 2 Rare Passes, Points, Buffs, and more.</li>
-<li class=""><strong>Spins:</strong> Hit the daily Spin 2 Win wheel to score more Rare Passes, $PC and hoard your stock.</li>
-<li class=""><strong>Referral System:</strong> Invite your friends using your special link and earn a chunk of any points your invites earn.</li>
-</ul>
-<p>Early access users already have a head start, leaderboards are live, and a new banger app drops every week. Dive in and claim your spot on the board.</p>
-<p>Head over to <a href="https://portal.push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=s3launch" target="_blank" rel="noopener noreferrer" class="">Push Chain Portal</a>, login using your favorite socials or wallet, and start collecting.</p>
-<p>⚠️ <strong>Note:</strong> The token is currently live on testnet and not in mainnet. $PC is the only official token that will power all native functionalities on Push Chain. As a reminder, $PUSH holders will be able to migrate their tokens to $PC.</p>]]></content>
-        <author>
-            <name>Push Chain</name>
-            <uri>https://x.com/PushChain</uri>
-        </author>
-        <category label="Featured" term="Featured"/>
-        <category label="Programs" term="Programs"/>
     </entry>
 </feed>
