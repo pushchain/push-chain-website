@@ -65,13 +65,9 @@ export default function SolutionPanel() {
 // the top of this title (node 49233:16550 at y=2724 vs the card block ending
 // at y=2339). The two sections' own paddings already supply 253px of that, so
 // this makes up the remaining lead-in.
-const SolutionSection = styled(Section)`
-  margin-top: 132px;
-
-  @media ${device.mobileL} {
-    margin-top: 40px;
-  }
-`;
+/* Spacing to the previous section now comes from the home page's shared
+   section rhythm, so this no longer carries its own margin. */
+const SolutionSection = styled(Section)``;
 
 const TextRow = styled(ItemH)`
   align-items: center;

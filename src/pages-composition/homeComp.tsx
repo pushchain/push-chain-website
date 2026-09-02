@@ -99,7 +99,7 @@ export default function HomeComp() {
                   <span>{t('pages.home.hero-section.title-line2')}</span>
                 </H1>
 
-                <Span
+                <HeroDescription
                   color='var(--ifm-color-white)'
                   zIndex='2'
                   fontSize={isMobile ? '1.125rem' : '1.25rem'}
@@ -108,7 +108,7 @@ export default function HomeComp() {
                   letterSpacing='0.4px'
                 >
                   {t('pages.home.hero-section.description')}
-                </Span>
+                </HeroDescription>
 
                 <HeroCTA gap='18px' flex='0'>
                   <PrimaryA
@@ -335,6 +335,28 @@ const HomeWrapper = styled(ItemV)`
     `}
 
   box-sizing: border-box;
+
+  /* Figma sets ~320px between one section's content and the next. Every
+     section's shared Content box already contributes 125px of padding on each
+     side (250px per boundary), so the remainder is added here rather than by
+     touching Content itself, which 100+ other files rely on. Tablet and mobile
+     start from 100px padding and keep a tighter rhythm. */
+  & > section + section {
+    margin-top: 70px;
+  }
+
+  @media ${device.laptop} {
+    & > section + section {
+      margin-top: 40px;
+    }
+  }
+
+  @media ${device.mobileL} {
+    & > section + section {
+      margin-top: 0;
+    }
+  }
+
   & #hero .contentBox {
     row-gap: 18px;
   }
@@ -498,6 +520,18 @@ const HeroBody = styled(ItemV)`
     span {
       white-space: normal;
     }
+  }
+`;
+
+/* Figma 49557:30080 — the copy sets in three lines at 694.5px wide inside the
+   970px column. Constrain it rather than letting it run the full width, which
+   would re-break it as the window grows. */
+const HeroDescription = styled(Span)`
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media ${device.laptop} {
+    max-width: 100%;
   }
 `;
 
