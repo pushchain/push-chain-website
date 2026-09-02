@@ -459,6 +459,24 @@ const HeroBody = styled(ItemV)`
     pointer-events: none;
   }
 
+  /* On phones the same plate is painted as a gradient instead. A 100px blur is
+     a per-frame GPU cost on iOS while the canvas underneath repaints, and a
+     radial falloff is visually equivalent here for a soft dark blob. */
+  @media ${device.tablet} {
+    &::before {
+      filter: none;
+      background: radial-gradient(
+        ellipse at center,
+        #090909 0%,
+        rgba(9, 9, 9, 0.95) 35%,
+        rgba(9, 9, 9, 0.7) 60%,
+        rgba(9, 9, 9, 0.3) 80%,
+        rgba(9, 9, 9, 0) 100%
+      );
+      inset: -90px -60px -70px -60px;
+    }
+  }
+
   h1,
   span {
     white-space: pre-line;

@@ -18,6 +18,26 @@ import { device } from '@site/src/config/globals';
  */
 const STAGE_HEIGHT = 921;
 
+/**
+ * Phone-sized viewports draw a lighter glyph field.
+ *
+ * Profiling the hero against a throttled CPU put effectively all of the frame
+ * cost in the glyph layer — one fillText per populated cell, ~960 of them at
+ * 390px — while the contour and agent layers cost nothing measurable. At 4x
+ * throttle (roughly a mid-tier phone) the design's own settings already hold
+ * 60fps; at 6x they fall to 55fps with the p95 on the 33ms ledge, i.e. every
+ * other frame dropped.
+ *
+ * Rather than coarsen the grid enough to fix that outright — cellSize 18 buys
+ * the frames but turns the fine texture into chunky symbols — this keeps the
+ * scale close to the design and thins the field instead, which halves the draw
+ * calls (~960 to ~530) and holds 60fps at 6x with headroom past it.
+ */
+const MOBILE_TUNING = {
+  glyphs: { cellSize: 12, fontSize: 11, amount: 0.34 },
+};
+const MOBILE_MAX_WIDTH = 768;
+
 const HeroTopography: React.FC = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,7 +55,9 @@ const HeroTopography: React.FC = () => {
     import('./topography/pushTopography')
       .then(({ createTopography }) => {
         if (cancelled || !mountRef.current) return;
-        instance = createTopography(mountRef.current);
+        const tuning =
+          window.innerWidth <= MOBILE_MAX_WIDTH ? MOBILE_TUNING : undefined;
+        instance = createTopography(mountRef.current, tuning);
 
         // The hero scrolls away and never comes back for most of the session —
         // stop burning frames on it once it is off screen.
