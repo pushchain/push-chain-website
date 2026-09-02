@@ -28,5 +28,4 @@ import { Keypair } from '@solana/web3.js';
 
 ## SDK Methods Used
 
-- `PushChain.utils.signer.toUniversal`
 - `PushChain.utils.signer.toUniversalFromKeypair`

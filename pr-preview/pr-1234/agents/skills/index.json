@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "version": "1.1.0",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.1.1",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-02T00:00:00.000Z",
   "description": "Domain-scoped skill files mapping high-level developer intents to required packages, entry points, workflows, and examples. Load the skill file for your context before exploring workflows or examples.",
   "schema_notes": {
     "v1_1_0": "Added optional fields for external skills hosted on first-party product subdomains (e.g. PUSD on pusd.push.org). New optional fields: 'external' (boolean), 'host' (string, e.g. 'pusd.push.org'), 'agent_layer' (string, URL of the external skill's full llms.txt), 'repo' (string, GitHub repo URL). Internal skills (push-frontend / push-backend / push-contracts) omit these fields. Treat external skills like any other skill at load time; the agent fetches them from their canonical host."

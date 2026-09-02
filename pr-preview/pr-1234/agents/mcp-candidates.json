@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.1",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.24",
+  "generated": "2026-09-01T00:00:00.000Z",
   "description": "MCP tool definitions for Push Chain operations. Each entry is a candidate MCP tool ready for Model Context Protocol integration — includes inputs, safety metadata, and mapping to the corresponding SDK method and workflow.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .candidates[]. Change mcp-candidates.json[N] → mcp-candidates.json.candidates[N].",
   "candidates": [
@@ -603,6 +603,46 @@
       "corresponding_sdk_method": null,
       "corresponding_workflow": "contract-initiated-multichain-execution",
       "notes": "IUniversalGateway.sendUniversalTx(bytes recipient, bytes payload, address token, uint256 amount) payable. UG addresses: Eth Sepolia 0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A, Arb Sepolia 0x2cd870e0166Ba458dEC615168Fd659AacD795f34, Base Sepolia 0xFD4fef1F43aFEc8b5bcdEEc47f35a1431479aC16, BNB Testnet 0x44aFFC61983F4348DdddB886349eb992C061EaC0. On Push Chain msg.sender = caller's UEA. Documented in agents/skills/push-contracts/SKILL.md."
+    },
+    {
+      "tool_name": "get_pc20_address",
+      "purpose": "Resolves a PC-20 token (a token born on Push Chain) against UniversalCore’s on-chain registry. Accepts either the canonical Push-native address or an external wrapper address, and returns the canonical token plus every confirmed deployment across chains. Use before building any funds.token = { chain, address } transfer.",
+      "inputs": [
+        {
+          "name": "address",
+          "type": "string",
+          "required": true,
+          "description": "Token address — either the canonical Push Chain token or one of its external wrappers. Identity is address-and-chain only; never symbol-based."
+        },
+        {
+          "name": "network",
+          "type": "string",
+          "required": true,
+          "description": "PUSH_NETWORK constant (e.g. TESTNET_DONUT)."
+        },
+        {
+          "name": "chain",
+          "type": "string",
+          "required": false,
+          "description": "CHAIN constant for where the address lives. Omit to let the SDK discover it; throws PC20_AMBIGUOUS_ADDRESS if several chains claim the address with different Push sources."
+        },
+        {
+          "name": "strict",
+          "type": "boolean",
+          "required": false,
+          "description": "Also run live factory-identity checks. Slower; off by default."
+        }
+      ],
+      "return_type": "PC20AddressResult { address, name, symbol, decimals, network, registry: [{ address, chain, chainName }] }",
+      "idempotent": true,
+      "read_only": true,
+      "state_changing": false,
+      "safety_risks": [],
+      "user_confirmation_required": false,
+      "availability": "ready",
+      "corresponding_sdk_method": "PushChain.utils.tokens.getPC20Address",
+      "corresponding_workflow": "send-universal-transaction",
+      "notes": "Async — PC-20 mappings are dynamic and live on chain, unlike getPRC20Address (sync, static table, for external-born tokens mirrored into Push Chain). Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight. Throws the typed PC20Error family with stable codes — see agents/errors.json. Documented in docs/chain/03-build/12-Utility-Functions.mdx."
     }
   ]
 }

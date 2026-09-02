@@ -272,3 +272,5 @@ await main().catch(console.error);
 - `PushChain.utils.helpers.encodeTxData`
 - `PushChain.utils.account.toUniversal`
 - `PushChain.utils.account.deriveExecutorAccount`
+- `pushChainClient.universal.prepareTransaction`
+- `pushChainClient.universal.executeTransactions`

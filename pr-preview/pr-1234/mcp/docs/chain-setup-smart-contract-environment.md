@@ -2,7 +2,7 @@
 title: "Smart Contract Environment Section"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-environment/"
 section: "setup"
-lastUpdated: "2026-09-01T21:11:33Z"
+lastUpdated: "2026-09-02T08:21:03Z"
 description: "Smart Contract Environment Section | Setup | Push Chain Docs"
 ---
 

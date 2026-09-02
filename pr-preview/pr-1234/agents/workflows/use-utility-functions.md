@@ -19,7 +19,7 @@ Leverage the `PushChain.utils` namespace for common operations: unit parsing, ac
 | `PushChain.utils.chains` | `getSupportedChains`, `getSupportedChainsByName`, `getChainNamespace`, `getChainName` | No |
 | `PushChain.utils.account` | `toUniversal`, `toChainAgnostic`, `fromChainAgnostic`, `deriveExecutorAccount`, `resolveControllerAccount` | No |
 | `PushChain.utils.signer` | `toUniversal`, `toUniversalFromKeypair`, `construct` | No |
-| `PushChain.utils.tokens` | `getMoveableTokens`, `getPayableTokens`, `getPRC20Address` | No |
+| `PushChain.utils.tokens` | `getMoveableTokens`, `getPayableTokens`, `getPRC20Address`, `getPC20Address` | No |
 | `PushChain.utils.conversion` | `slippageToMinAmount` | No |
 | `pushChainClient.funds` | `getConversionQuote` | **Yes** |
 | `pushChainClient.explorer` | `getTransactionUrl`, `listUrls`, `listAllUrls` | **Yes** |
@@ -225,7 +225,7 @@ Returns supported assets that can be used to pay gas or fund token movement.
 
 ### `getPRC20Address(token, options?)` → `{ address, chain, symbol, decimals, network }`
 
-Resolves the Push Chain synthetic PRC20 token descriptor for a supported origin-chain token.
+Resolves the Push Chain synthetic PRC-20 token descriptor for a supported origin-chain token (a token born on an **external** chain, mirrored into Push Chain). Synchronous - static SDK table.
 
 | Argument | Type | Description |
 |---|---|---|
@@ -233,6 +233,22 @@ Resolves the Push Chain synthetic PRC20 token descriptor for a supported origin-
 | `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | Override the Push network. Defaults to client's initialized network. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` |
 
 **Returns**: `{ address: 0x${string}, chain: CHAIN, symbol: string, decimals: number, network: PUSH_NETWORK }`
+
+### `getPC20Address(address, options)` → `Promise<PC20AddressResult>`
+
+Resolves a **PC-20** (a token born **on** Push Chain) against UniversalCore's on-chain registry and lists every confirmed deployment. Accepts either the canonical Push-native token or one of its external wrappers, and always returns the canonical token. Asynchronous, unlike `getPRC20Address` - PC-20 mappings are dynamic and live on chain. Never symbol-based.
+
+| Argument | Type | Description |
+|---|---|---|
+| `address` | `string` | Canonical Push Chain token or an external wrapper address |
+| `options.network` | `PushChain.CONSTANTS.PUSH_NETWORK` | The Push network to resolve on, e.g. `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` |
+| `options.chain` | `PushChain.CONSTANTS.CHAIN` _(optional)_ | Where the address lives. Omit to let the SDK discover it - throws `PC20AmbiguousAddressError` if more than one chain claims it |
+| `options.rpcUrls` | `Partial<Record<CHAIN, string[]>>` _(optional)_ | Custom RPC URLs per chain for the registry and wrapper reads |
+| `options.strict` | `boolean` _(optional)_ | Also run live factory-identity checks. Slower; off by default |
+
+**Returns**: `{ address: 0x${string}, name: string, symbol: string, decimals: number, network: PUSH_NETWORK, registry: Array<{ address, chain, chainName }> }`
+
+> Resolve wrapper addresses from `.registry` - the authoritative record. `receipt.externalAssetAddr` is a best-effort mirror that is `undefined` while an outbound is still in flight. Throws the typed PC-20 error family with stable `PC20_*` codes - see [errors.json](https://push.org/agents/errors.json). Token-type definitions: [Token Types on Push Chain](https://push.org/docs/chain/important-concepts/#token-types-on-push-chain).
 
 ---
 

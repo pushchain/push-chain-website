@@ -78,7 +78,6 @@ import * as readline from 'node:readline/promises';
 
 ## SDK Methods Used
 
-- `PushChain.utils.signer.toUniversal`
 - `PushChain.utils.signer.toUniversalFromKeypair`
 - `PushChain.initialize`
 - `pushChainClient.universal.sendTransaction`

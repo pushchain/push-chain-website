@@ -2,7 +2,7 @@
 title: "Build a Counter App"
 url: "https://pushchain.github.io/docs/chain/tutorials/basics/tutorial-simple-counter/"
 section: "tutorials"
-lastUpdated: "2026-09-01T21:11:33Z"
+lastUpdated: "2026-09-02T08:21:03Z"
 description: "Build a Counter App | Tutorials | Push Chain Docs"
 ---
 

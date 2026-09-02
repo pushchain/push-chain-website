@@ -2,7 +2,7 @@
 title: "Universal Transaction Scenarios"
 url: "https://pushchain.github.io/docs/chain/build/universal-transaction-scenarios/"
 section: "build"
-lastUpdated: "2026-09-01T21:11:33Z"
+lastUpdated: "2026-09-02T08:21:03Z"
 description: "Universal Transaction Scenarios | Build | Push Chain Docs"
 ---
 
