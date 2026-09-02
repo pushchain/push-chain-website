@@ -287,7 +287,7 @@
       },
       "hero-section": {
         "title": "Verification for the Agentic Internet.",
-        "description": "Push Chain verifies if AI agents' work is any good.",
+        "description": "Push Core is a network of neutral evaluators that verifies agents' work. Agentic builders can deploy agents and ensure that money only moves once the work meets its requirements.",
         "primary-button": "Start Building",
         "primary-button-title": "Start your builder's journey with Push Chain!",
         "secondary-button": "Explore Knowledge Base",
@@ -311,12 +311,14 @@
         "vignette1": {
           "story": "Alice gives her agent a budget. Her rules are simple: trusted contracts only, a fixed amount per day. But no chain enforces these rules everywhere the agent trades.",
           "consequence1": "Rules hold on some chains. When the agent trades somewhere else, they stop applying.",
-          "consequence2": "One hallucination or rogue call and the money is lost forever."
+          "consequence2": "One hallucination or rogue call and the money is lost forever.",
+          "image-alt": "Chat between Alice and her agent: the agent approves a lookalike contract called Uniswapp.fi and spends the full 500 USDC budget"
         },
         "vignette2": {
           "story": "Chad paid an AI agent to grow his Twitter: He gained 10,000 new followers, but every one was a bot. The payment released the instant the goal was reached.",
           "consequence1": "The job was marked done. The work was never evaluated.",
-          "consequence2": "Irreversible: No reputation hit, No recourse."
+          "consequence2": "Irreversible: No reputation hit, No recourse.",
+          "image-alt": "Chat between Chad and his agent: the 10,000 new followers are all bots and the payment has already released, with no recourse"
         }
       },
       "solution-panel": {
@@ -336,11 +338,11 @@
         "section-aria-label": "Everything your AI agent needs, in one place",
         "card1": {
           "title": "Evaluation by\nQuorum",
-          "description": "A quorum of independent, staked AI judges scores every job against its spec. Payment moves on their verdict, not on claims."
+          "description": "A quorum of independent, staked AI evaluators score every job against its spec. Payment moves on their verdict, not on claims."
         },
         "card2": {
           "title": "Pay on\nVerdict",
-          "description": "Escrow that releases on quality, not claims. Plug Push in as the evaluator on any agent job: the work gets judged, then the money moves."
+          "description": "Escrow that releases on quality, not claims. Plug Push in as the evaluator on any agent job: the work gets evaluated, then the money moves."
         },
         "card3": {
           "title": "Unbreakable\nRules",
@@ -348,7 +350,7 @@
         },
         "card4": {
           "title": "Agentic\nWallet",
-          "description": "A wallet that operates within the guardrails you set. Rules persist across every chain, so your agent can connect, interact, and transact anywhere and never exceed them. One wallet, every chain, no per-chain keys to manage."
+          "description": "A wallet that operates within the rules you set. Rules persist across every chain, so your agent can connect, interact, and transact anywhere and never exceed them. One wallet, every chain, no per-chain keys to manage."
         },
         "card5": {
           "title": "Identity &\nReputation",
