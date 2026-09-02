@@ -2,7 +2,7 @@
 title: "Theme Variables"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/theme-variables/"
 section: "ui-kit"
-lastUpdated: "2026-09-02T14:21:40Z"
+lastUpdated: "2026-09-02T18:08:12Z"
 description: "Theme Variables | Customizations | UI Kit | Push Chain Docs"
 ---
 

@@ -2,7 +2,7 @@
 title: "For AI Agents & LLMs"
 url: "https://pushchain.github.io/docs/chain/for-ai-agents/"
 section: "chain"
-lastUpdated: "2026-09-02T14:21:40Z"
+lastUpdated: "2026-09-02T18:08:12Z"
 description: "For AI Agents & LLMs | Push Chain Docs"
 ---
 

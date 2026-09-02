@@ -2,7 +2,7 @@
 title: "Theme Overrides Example"
 url: "https://pushchain.github.io/docs/chain/ui-kit/examples/theme-overrides-example/"
 section: "ui-kit"
-lastUpdated: "2026-09-02T14:21:40Z"
+lastUpdated: "2026-09-02T18:08:12Z"
 description: "Theme Overrides Example | Examples | UI Kit | Push Chain Docs"
 ---
 

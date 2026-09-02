@@ -2,7 +2,7 @@
 title: "usePushWalletContext"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/use-push-wallet-context/"
 section: "ui-kit"
-lastUpdated: "2026-09-02T14:21:40Z"
+lastUpdated: "2026-09-02T18:08:12Z"
 description: "usePushWalletContext | Customizations | UI Kit | Push Chain Docs"
 ---
 
