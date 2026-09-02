@@ -92,7 +92,11 @@ const Stage = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: ${STAGE_HEIGHT}px;
+  /* The hero is now as tall as the viewport, so the field has to keep up with
+     it: at a fixed 921px it stopped short on a tall monitor and its fade-out
+     landed right where the copy sits, leaving the blurred plate nothing to
+     settle against. */
+  height: max(${STAGE_HEIGHT}px, 100svh);
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
@@ -116,15 +120,15 @@ const Stage = styled.div`
   }
 
   @media ${device.laptop} {
-    height: 780px;
+    height: max(780px, 100svh);
   }
 
   @media ${device.tablet} {
-    height: 680px;
+    height: max(680px, 100svh);
   }
 
   @media ${device.mobileL} {
-    height: 560px;
+    height: max(560px, 100svh);
   }
 `;
 

@@ -390,32 +390,46 @@ const HeroContent = styled(Content)`
   align-self: stretch;
   padding-right: 0;
   padding-left: 0;
-  margin-top: ${GLOBALS.HEADER.HEIGHT +
-  GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px;
+
+  /* The copy centres in the space below the navbar rather than sitting at a
+     fixed offset from the top. With a fixed offset it reads as centred at only
+     one window height — on a short laptop it sank into the lower half with the
+     buttons near the fold, while a tall monitor looked right.
+
+     Centring a box whose paddings differ does not land where you expect: the
+     content centres between the two padding edges, so the section's bottom
+     padding drags it upward. Adding that bottom padding to the navbar's height
+     as the top padding cancels it out. svh rather than vh keeps it stable while
+     a mobile URL bar collapses. */
+  min-height: 100svh;
+  justify-content: center;
+  padding-top: ${GLOBALS.HEADER.HEIGHT +
+  GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP +
+  structure.PADDING.DESKTOP.BOTTOM}px;
 
   @media ${device.laptop} {
     padding-bottom: 40px;
+    padding-top: ${GLOBALS.HEADER.HEIGHT +
+    GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP +
+    40}px;
     padding-right: ${structure.PADDING.TABLET.RIGHT}px;
     padding-left: ${structure.PADDING.TABLET.LEFT}px;
   }
 
-  @media ${device.tablet} {
-    margin-top: ${GLOBALS.HEADER.HEIGHT +
-    GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px;
-  }
-
   @media ${device.mobileL} {
-    padding-top: 0px;
     padding-bottom: 40px;
+    padding-top: ${GLOBALS.HEADER.HEIGHT +
+    GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP +
+    40}px;
     padding-right: ${structure.PADDING.MOBILE.RIGHT}px;
     padding-left: ${structure.PADDING.MOBILE.LEFT}px;
-    margin-top: ${GLOBALS.HEADER.HEIGHT +
-    GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px;
   }
 `;
 
 const HeroPrimary = styled.div`
   width: 1440px;
+  /* Height now comes from the copy; HeroContent centres it in the viewport. */
+  flex: 0 0 auto;
   /* Sized so the next section lands where Figma puts it (49233:16511, page
      y=1095) rather than on the old illustrated hero's arbitrary 850/650:
        1095 - 125 (next section padding-top)
@@ -424,7 +438,7 @@ const HeroPrimary = styled.div`
             -  98 (hero content margin-top)
             -  56 (hero top) = 566
      The 850px value left a 681px gap below the CTAs at 1512px wide. */
-  height: 566px;
+  height: auto;
   z-index: 99;
   position: relative;
   left: 50%;
@@ -432,7 +446,7 @@ const HeroPrimary = styled.div`
 
   @media ${device.laptopL} {
     width: 100%;
-    height: 566px;
+    height: auto;
   }
 
   @media ${device.mobileL} {
@@ -446,7 +460,7 @@ const HeroItem = styled(ItemV)`
   z-index: 2;
   max-width: 970px;
   margin: 0 auto;
-  height: 100%;
+  height: auto;
 
   @media ${device.laptop} {
     max-width: initial;

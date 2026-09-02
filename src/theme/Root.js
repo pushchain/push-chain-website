@@ -12,9 +12,7 @@ import styled from 'styled-components';
 import { AccountProvider } from '@site/src/context/accountContext';
 import ServerStyle from '@site/src/theme/ServerStyle';
 import CookieComponent from '../components/CookieComponent';
-import InfoBar from '../components/InfoBar';
 import AccountContext from '../context/accountContext';
-import { useChainNotification } from '../hooks/useChainNotification';
 import { Notification } from '../hooks/useRewardsNotification';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 
@@ -50,7 +48,6 @@ export default function Root({ children }) {
 
   const location = useLocation();
   const baseURL = useSiteBaseUrl();
-  useChainNotification();
   const { showAlertBar } = useContext(AccountContext);
   const isPreview = /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(
     location.pathname
@@ -136,14 +133,6 @@ export default function Root({ children }) {
     <QueryClientProvider client={queryClient}>
       <AccountProvider>
         <>
-          {/* Only render InfoBar on client-side after hydration */}
-          {typeof window !== 'undefined' && showAlertBar && (
-            <InfoBar
-              translatedTextKey='notifications.info-bar.title'
-              url='/knowledge/testnet'
-            />
-          )}
-
           <PageContainer
             className={returnAdditionalClasses(superimposedConditions)}
           >
