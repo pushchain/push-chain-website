@@ -18,6 +18,7 @@ import { AgentFeaturesListA } from '@site/src/config/AgentFeaturesListA';
 // Import Assets
 import RingPattern from '@site/static/assets/website/home/built-to-scale/ring-pattern.png';
 import PushLogoMark from '@site/static/assets/website/home/built-to-scale/push-logo-mark.svg';
+import GlyphRasterBackdrop from '@site/src/components/Home/GlyphRasterBackdrop';
 
 const FONT_MONO = "'IBM Plex Mono', monospace";
 
@@ -47,10 +48,8 @@ export default function AgenticScaleSection() {
       aria-label={t('pages.home.built-to-scale.section-aria-label')}
     >
       <Panel>
-        {/* Top half: reserved for the animation the design team will supply.
-            The exported ring artwork stands in for it until then. */}
         <TopVisual>
-          <RingArtwork aria-hidden='true' />
+          <GlyphRasterBackdrop />
           <PinkCard>
             <LogoMark aria-hidden='true'>
               <PushLogoMark />
