@@ -2,7 +2,7 @@
 title: "Understanding Universal Transactions"
 url: "https://pushchain.github.io/docs/chain/build/understanding-universal-transactions/"
 section: "build"
-lastUpdated: "2026-09-02T13:34:37Z"
+lastUpdated: "2026-09-02T13:49:50Z"
 description: "Understanding Universal Transactions | Build | Push Chain Docs"
 ---
 
