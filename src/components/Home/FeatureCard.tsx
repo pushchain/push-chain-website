@@ -2,6 +2,9 @@
 // @ts-nocheck
 /* eslint-disable */
 
+// React + Web3 Essentials
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 // External Components
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
@@ -10,6 +13,9 @@ const FONT_MONO = "'IBM Plex Mono', monospace";
 
 export default function FeatureCard({ item }) {
   const { t } = useTranslation();
+  // Hoisted above the divided-card branch below: useBaseUrl is a hook, so it
+  // cannot sit behind that early return or inside the conditional JSX.
+  const imageUrl = useBaseUrl(item.image ?? '/');
 
   if (item.cardStyle === 'divided') {
     return (
@@ -35,6 +41,16 @@ export default function FeatureCard({ item }) {
 
   return (
     <BorderedCard>
+      {item.image && (
+        <CardFigure
+          src={imageUrl}
+          alt=''
+          aria-hidden='true'
+          loading='lazy'
+          decoding='async'
+          wide={item.imageWide}
+        />
+      )}
       <CardBody>
         <BorderedTitle>{t(item.titleKey)}</BorderedTitle>
         <BorderedDescription>{t(item.descriptionKey)}</BorderedDescription>
@@ -47,7 +63,9 @@ const BorderedCard = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* Figma seats the illustration at the top of the card and the copy at the
+     bottom (e.g. 49242:16565 — a 197px mark, then the text block at y=221). */
+  justify-content: space-between;
   /* Figma's stroke is a vertical linear gradient — #ffffff at the top to
      #eb8afb at the bottom — drawn at 25% opacity, Outside, 1px. Extracted from
      the node's alpha channel (alpha 63/255 = 24.7%).
@@ -68,6 +86,25 @@ const BorderedCard = styled.div`
   border-radius: 24px;
   padding: 32px;
   box-sizing: border-box;
+`;
+
+// The narrow cards carry a square mark centred over the copy; the two wide
+// cards in the second row carry a full-width graphic instead.
+const CardFigure = styled.img`
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+  margin: ${(props) => (props.wide ? '0 0 24px 0' : '0 auto 24px auto')};
+
+  /* Two of the marks export with a viewBox but no width/height, so they need a
+     size given to them; the aspect comes from the viewBox. Figma draws them at
+     197-212px, and the wide pair fills the card. */
+  ${(props) =>
+    props.wide
+      ? `width: 100%;
+         height: auto;`
+      : `height: 200px;
+         width: auto;`}
 `;
 
 const BorderedTitle = styled.p`

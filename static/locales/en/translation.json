@@ -338,11 +338,11 @@
         "section-aria-label": "Everything your AI agent needs, in one place",
         "card1": {
           "title": "Evaluation by\nQuorum",
-          "description": "A quorum of independent, staked AI judges scores every job against its spec. Payment moves on their verdict, not on claims."
+          "description": "A quorum of independent, staked AI evaluators score every job against its spec. Payment moves on their verdict, not on claims."
         },
         "card2": {
           "title": "Pay on\nVerdict",
-          "description": "Escrow that releases on quality, not claims. Plug Push in as the evaluator on any agent job: the work gets judged, then the money moves."
+          "description": "Escrow that releases on quality, not claims. Plug Push in as the evaluator on any agent job: the work gets evaluated, then the money moves."
         },
         "card3": {
           "title": "Unbreakable\nRules",
@@ -350,7 +350,7 @@
         },
         "card4": {
           "title": "Agentic\nWallet",
-          "description": "A wallet that operates within the guardrails you set. Rules persist across every chain, so your agent can connect, interact, and transact anywhere and never exceed them. One wallet, every chain, no per-chain keys to manage."
+          "description": "A wallet that operates within the rules you set. Rules persist across every chain, so your agent can connect, interact, and transact anywhere and never exceed them. One wallet, every chain, no per-chain keys to manage."
         },
         "card5": {
           "title": "Identity &\nReputation",
