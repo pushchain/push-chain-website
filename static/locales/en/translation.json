@@ -311,12 +311,14 @@
         "vignette1": {
           "story": "Alice gives her agent a budget. Her rules are simple: trusted contracts only, a fixed amount per day. But no chain enforces these rules everywhere the agent trades.",
           "consequence1": "Rules hold on some chains. When the agent trades somewhere else, they stop applying.",
-          "consequence2": "One hallucination or rogue call and the money is lost forever."
+          "consequence2": "One hallucination or rogue call and the money is lost forever.",
+          "image-alt": "Chat between Alice and her agent: the agent approves a lookalike contract called Uniswapp.fi and spends the full 500 USDC budget"
         },
         "vignette2": {
           "story": "Chad paid an AI agent to grow his Twitter: He gained 10,000 new followers, but every one was a bot. The payment released the instant the goal was reached.",
           "consequence1": "The job was marked done. The work was never evaluated.",
-          "consequence2": "Irreversible: No reputation hit, No recourse."
+          "consequence2": "Irreversible: No reputation hit, No recourse.",
+          "image-alt": "Chat between Chad and his agent: the 10,000 new followers are all bots and the payment has already released, with no recourse"
         }
       },
       "solution-panel": {

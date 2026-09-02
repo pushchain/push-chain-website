@@ -4,6 +4,7 @@
 
 // React + Web3 Essentials
 import { useEffect, useRef } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // External Components
 import { gsap } from 'gsap';
@@ -25,28 +26,42 @@ gsap.registerPlugin(ScrollTrigger);
 // fixed header on short viewports.
 const HEADER_OFFSET = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 24;
 
-// Breathing room the parked card always keeps below the header, on top of the
-// header floor. Centring alone is not enough: on a short laptop viewport
-// (~740px) the centred position lands only a few pixels below the header, so
-// the stack still reads as glued to the nav.
-const MIN_PARK_GAP = 64;
+// The section pins as one piece: title, subtitle and the card stack all hold
+// their place while the second card climbs over the first. Sticky alone cannot
+// express that — a sticky element releases at its container's bottom minus its
+// own height, so a short header always outlasts a tall card and the cards end
+// up scrolling through the title. Instead one sticky viewport holds the whole
+// group and the incoming card is driven by scroll progress inside it.
 
-// A parked card sits vertically centred in the viewport rather than pinned to
-// the top, which reads far better when the card is shorter than the screen —
-// but never closer to the nav than the gap above, and never so low that the
-// card's bottom edge runs off the screen on a short window.
-const parkOffset = (cardHeight) => {
-  if (typeof window === 'undefined') return HEADER_OFFSET;
+// Scroll distance the pinned group holds for while the second card travels.
+const TRANSITION_SCROLL = 620;
 
-  const viewport = window.innerHeight;
-  const centred = Math.round((viewport - cardHeight) / 2);
-  const preferred = Math.max(HEADER_OFFSET + MIN_PARK_GAP, centred);
-  const ceiling = Math.max(HEADER_OFFSET, viewport - cardHeight - 24);
+// Where the pinned group parks. Tighter than the shared HEADER_OFFSET: the
+// group is tall, so every pixel above it comes straight off the card's footer.
+const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
 
-  return Math.min(preferred, ceiling);
+// Gap between the header and the parked card.
+const HEADER_GAP = 24;
+
+// Room left under the card before the fold.
+const FLOOR_GAP = 8;
+
+// Vertical space the card may occupy if the whole group is to sit on screen.
+const cardBudget = (headerHeight) => {
+  if (typeof window === 'undefined') return 0;
+  return window.innerHeight - PIN_TOP - headerHeight - HEADER_GAP - FLOOR_GAP;
 };
 
-// Vertical gap between the cards while they are still stacked in flow.
+// The illustration is the one part of the card that can give ground: the copy
+// and the consequences row have a natural floor. Shrinking it buys back enough
+// height to keep the group pinned on a short laptop, where the full-size card
+// would otherwise push its own footer off the bottom for the whole scroll.
+const FIGURE_MAX = 300;
+const FIGURE_MIN = 150;
+
+// Height the card's own padding and inner gap give back in tight mode.
+const TIGHT_SAVING = 72;
+
 const CARD_GAP = 48;
 
 const FONT_MONO = "'IBM Plex Mono', monospace";
@@ -84,92 +99,166 @@ export default function ProblemNarrative() {
   const isCompact = useMediaQuery(device.laptop);
 
   const stageRef = useRef(null);
+  const viewportRef = useRef(null);
+  const areaRef = useRef(null);
   const cardRefs = useRef([]);
-  const parkRef = useRef(HEADER_OFFSET);
   const setCardRef = (index) => (el) => {
     cardRefs.current[index] = el;
   };
 
-  // The stack is pure CSS `position: sticky` in natural document flow: every
-  // card keeps its own place in the flow, so the section's height is always
-  // the true sum of its cards and the following section can never ride up
-  // underneath it. The cards differ by a line or two of wrapped copy though,
-  // so equalise their heights — otherwise the incoming card is shorter than
-  // the one it is meant to cover and leaves a sliver showing.
+  // Measure the group, decide whether it can be pinned on this viewport, and
+  // publish the result as custom properties so the CSS and the scroll trigger
+  // below always read the same numbers.
   useEffect(() => {
+    const stage = stageRef.current;
     const cards = cardRefs.current.filter(Boolean);
-    if (cards.length < 2) return undefined;
+    if (!stage || cards.length < 2) return undefined;
 
-    const equalize = () => {
+    const measure = () => {
       cards.forEach((card) => {
         card.style.minHeight = '';
       });
+      stage.style.removeProperty('--runway');
+      stage.dataset.pinned = 'false';
 
       if (isCompact) {
         ScrollTrigger.refresh();
         return;
       }
 
-      const tallest = Math.max(...cards.map((card) => card.offsetHeight));
-      cards.forEach((card) => {
-        card.style.minHeight = `${tallest}px`;
+      // Measure the cards in natural flow before fixing the area's height.
+      // The layers are absolutely positioned inside that box, so reading them
+      // while it is sized would just echo whatever height was set last time.
+      const area = areaRef.current;
+      const layers = cards.map((card) => card.parentElement);
+      if (area) area.style.height = '';
+
+      // Reset last run's tightening first, or the natural height measured below
+      // is the already-shrunk one and the decision oscillates between runs.
+      stage.dataset.tight = 'false';
+      stage.style.setProperty('--figure-max', `${FIGURE_MAX}px`);
+      layers.forEach((layer) => {
+        if (layer) layer.style.position = 'static';
       });
 
-      // Park the stack vertically centred for this viewport. Published as a
-      // custom property so the sticky CSS and the GSAP trigger below always
-      // read the exact same number.
-      parkRef.current = parkOffset(tallest);
-      stageRef.current?.style.setProperty('--stack-top', `${parkRef.current}px`);
+      // The cards differ by a line or two of wrapped copy, so equalise them —
+      // otherwise the incoming card is shorter than the one it covers and
+      // leaves a sliver of the card beneath showing along one edge.
+      const natural = Math.max(...cards.map((card) => card.offsetHeight));
 
-      // Heights and offsets just changed, so every trigger needs recomputing.
+      layers.forEach((layer) => {
+        if (layer) layer.style.position = '';
+      });
+
+      // Read the header from the DOM rather than a ref: NarrativeHeader wraps
+      // a styled ItemV, which does not forward one, so a ref here silently
+      // measures 0 and the budget below comes out too generous.
+      const headerEl = viewportRef.current?.firstElementChild;
+      const headerHeight = headerEl?.offsetHeight ?? 0;
+      const budget = cardBudget(headerHeight);
+
+      // Everything in the card that is not the illustration — padding, the gap
+      // to the consequences row, and the row itself.
+      const chrome = natural - FIGURE_MAX;
+      let figure = FIGURE_MAX;
+      let tight = false;
+
+      if (natural > budget) {
+        // Tighten the card's own padding first, then trade the illustration's
+        // height for the room still missing.
+        tight = true;
+        figure = Math.round(budget - (chrome - TIGHT_SAVING));
+      }
+
+      const pinned = figure >= FIGURE_MIN;
+      stage.dataset.pinned = String(pinned);
+      stage.dataset.tight = String(pinned && tight);
+      stage.style.setProperty(
+        '--figure-max',
+        `${Math.min(FIGURE_MAX, Math.max(FIGURE_MIN, figure))}px`
+      );
+      stage.style.setProperty(
+        '--runway',
+        pinned ? `${TRANSITION_SCROLL}px` : '0px'
+      );
+
+      // Re-measure in flow once more: tight mode changes padding and the
+      // figure's cap, so the settled height differs from the natural one.
+      layers.forEach((layer) => {
+        if (layer) layer.style.position = 'static';
+      });
+      const settled = Math.max(...cards.map((card) => card.offsetHeight));
+      layers.forEach((layer) => {
+        if (layer) layer.style.position = '';
+      });
+
+      cards.forEach((card) => {
+        card.style.minHeight = `${settled}px`;
+      });
+      if (area) area.style.height = `${settled}px`;
+
       ScrollTrigger.refresh();
     };
 
-    equalize();
+    measure();
 
-    // Re-measure once webfonts land — IBM Plex Mono changes how the story
-    // copy wraps, and therefore how tall each card is.
+    // Re-measure once webfonts land — IBM Plex Mono changes how the story copy
+    // wraps, and therefore how tall each card is.
     if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(equalize);
+      document.fonts.ready.then(measure);
     }
 
-    window.addEventListener('resize', equalize);
+    // The illustrations load lazily, so measure again once each lands.
+    const figures = Array.from(stage.querySelectorAll('img'));
+    figures.forEach((img) => {
+      if (!img.complete) img.addEventListener('load', measure);
+    });
+
+    window.addEventListener('resize', measure);
     return () => {
-      window.removeEventListener('resize', equalize);
+      window.removeEventListener('resize', measure);
+      figures.forEach((img) => img.removeEventListener('load', measure));
       cards.forEach((card) => {
         if (card) card.style.minHeight = '';
       });
     };
   }, [isCompact]);
 
-  // Cosmetic only: as the incoming card climbs over the one beneath it, the
-  // lower card recedes so the stack reads as depth rather than a flat swap.
-  // This touches transform/opacity exclusively — never layout — so it cannot
-  // disturb the sticky flow above.
+  // Drive the incoming card up over the one beneath it across the pinned
+  // runway, and let the covered card recede so the pair reads as depth rather
+  // than a flat swap.
   useEffect(() => {
     if (isCompact) return undefined;
 
+    const stage = stageRef.current;
     const cards = cardRefs.current.filter(Boolean);
-    if (cards.length < 2 || !stageRef.current) return undefined;
+    if (!stage || cards.length < 2) return undefined;
 
     const ctx = gsap.context(() => {
-      cards.slice(0, -1).forEach((card) => {
-        gsap.to(card, {
-          scale: 0.93,
-          opacity: 0.45,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: stageRef.current,
-            // From the moment the first card parks…
-            start: () => `top top+=${parkRef.current}`,
-            // …until the stack releases, i.e. the card above is fully covered.
-            end: () => `bottom top+=${parkRef.current + card.offsetHeight}`,
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        });
+      const [beneath, incoming] = cards;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: stage,
+          start: () => `top top+=${PIN_TOP}`,
+          end: () => `+=${TRANSITION_SCROLL}`,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
       });
-    }, stageRef);
+
+      tl.fromTo(
+        incoming,
+        { yPercent: 108 },
+        { yPercent: 0, ease: 'none' },
+        0
+      ).fromTo(
+        beneath,
+        { scale: 1, opacity: 1 },
+        { scale: 0.93, opacity: 0.45, ease: 'none' },
+        0
+      );
+    }, stage);
 
     return () => ctx.revert();
   }, [isCompact]);
@@ -181,6 +270,8 @@ export default function ProblemNarrative() {
       aria-label={t('pages.home.problem-narrative.section-aria-label')}
     >
       <Content alignSelf='center' overflow='visible'>
+        <Stage ref={stageRef}>
+          <PinnedViewport ref={viewportRef}>
         <NarrativeHeader>
           <H2
             fontFamily={FONT_MONO}
@@ -210,25 +301,36 @@ export default function ProblemNarrative() {
           </Span>
         </NarrativeHeader>
 
-        <Stage ref={stageRef}>
+        <CardsArea ref={areaRef}>
           {ProblemNarrativeList.vignettes.map((vignette, index) => (
-            <CardSlot key={vignette.id}>
+            <CardLayer key={vignette.id} index={index}>
               <VignetteCard
                 ref={setCardRef(index)}
                 bg={vignette.cardBg}
                 align={vignette.align}
               >
-                <StoryText>
-                  <Span
-                    color='var(--ifm-color-white)'
-                    fontSize='1.5rem'
-                    fontFamily={FONT_MONO}
-                    letterSpacing='-0.06em'
-                    lineHeight='150%'
-                  >
-                    {t(vignette.story)}
-                  </Span>
-                </StoryText>
+                <StoryRow imageSide={vignette.imageSide}>
+                  <StoryFigure
+                    src={useBaseUrl(vignette.image)}
+                    alt={t(vignette.imageAlt)}
+                    loading='lazy'
+                    decoding='async'
+                    width={498}
+                    height={300}
+                  />
+
+                  <StoryText>
+                    <Span
+                      color='var(--ifm-color-white)'
+                      fontSize='1.5rem'
+                      fontFamily={FONT_MONO}
+                      letterSpacing='-0.06em'
+                      lineHeight='150%'
+                    >
+                      {t(vignette.story)}
+                    </Span>
+                  </StoryText>
+                </StoryRow>
 
                 <ConsequenceRow flexDirection={isMobile ? 'column' : 'row'}>
                   {vignette.consequences.map((consequence, i) => (
@@ -245,8 +347,15 @@ export default function ProblemNarrative() {
                   ))}
                 </ConsequenceRow>
               </VignetteCard>
-            </CardSlot>
+            </CardLayer>
           ))}
+        </CardsArea>
+          </PinnedViewport>
+
+          {/* The runway. A sibling rather than padding on Stage: sticky travel
+              is bounded by the containing block's content box, so padding
+              would give the pin no room to hold at all. */}
+          <Runway aria-hidden='true' />
         </Stage>
       </Content>
     </Section>
@@ -263,34 +372,69 @@ const GradientWord = styled.span`
   color: var(--ifm-color-custom-pink);
 `;
 
-// Plain block in normal flow. Deliberately no overflow/transform/filter here:
-// any of those would turn this into the sticky containing block and the stack
-// would silently stop working.
+// The scroll runway. Its extra height beyond the pinned group is exactly the
+// distance the group holds for while the second card travels. Deliberately no
+// overflow/transform/filter here: any of those would become the sticky
+// containing block and the pin would silently stop working.
 const Stage = styled.div`
   position: relative;
   width: 100%;
-  margin-top: 64px;
+`;
 
-  @media ${device.mobileL} {
-    margin-top: 40px;
+const Runway = styled.div`
+  height: var(--runway, 0px);
+
+  ${Stage}[data-pinned='false'] & {
+    height: 0;
+  }
+
+  @media ${device.laptop} {
+    height: 0;
   }
 `;
 
-// One slot per card, stacked normally. Each sticks at the same offset, so a
-// later card climbs over an earlier one and — being later in the DOM — paints
-// on top of it without needing any z-index juggling.
-const CardSlot = styled.div`
+// Holds the whole group — title, subtitle and the card stack — in place for
+// the length of the runway, so the section reads as one piece.
+const PinnedViewport = styled.div`
   position: sticky;
-  top: var(--stack-top, ${HEADER_OFFSET}px);
-  width: 100%;
+  top: ${PIN_TOP}px;
 
-  &:not(:last-child) {
-    margin-bottom: ${CARD_GAP}px;
+  ${Stage}[data-pinned='false'] & {
+    position: static;
+    top: auto;
   }
 
   @media ${device.laptop} {
     position: static;
     top: auto;
+  }
+`;
+
+// Fixed to the tallest card so both layers can occupy the same box.
+const CardsArea = styled.div`
+  position: relative;
+  width: 100%;
+  margin-top: ${HEADER_GAP}px;
+
+  @media ${device.laptop} {
+    height: auto !important;
+    margin-top: 40px;
+  }
+`;
+
+// Both cards share one box; the later one paints on top and is translated down
+// out of view until the scroll brings it up.
+const CardLayer = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: ${(props) => props.index + 1};
+  will-change: transform;
+
+  @media ${device.laptop} {
+    position: static;
+    inset: auto;
+    transform: none !important;
+    opacity: 1 !important;
 
     &:not(:last-child) {
       margin-bottom: 24px;
@@ -301,13 +445,18 @@ const CardSlot = styled.div`
 const VignetteCard = styled(ItemV)`
   align-items: ${(props) => (props.align === 'right' ? 'flex-end' : 'flex-start')};
   justify-content: space-between;
-  gap: 157px;
+  gap: 120px;
   width: 100%;
   padding: 48px;
   border-radius: 48px;
   background: ${(props) => props.bg};
   box-sizing: border-box;
   will-change: transform;
+
+  ${Stage}[data-tight='true'] & {
+    gap: 72px;
+    padding: 36px 48px;
+  }
 
   @media ${device.laptop} {
     align-items: flex-start;
@@ -323,6 +472,50 @@ const VignetteCard = styled(ItemV)`
   }
 `;
 
+// Figma 37218: the chat and the copy sit side by side across the card's
+// 1104px, 497.5 + 141.5 gap + 465. `imageSide` mirrors the pair on the second
+// card. Below laptop they stack, illustration first, so the story still reads
+// in the same order.
+const StoryRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: ${(props) =>
+    props.imageSide === 'right' ? 'row-reverse' : 'row'};
+  gap: 141px;
+  width: 100%;
+
+  @media ${device.laptopM} {
+    gap: 64px;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+`;
+
+const StoryFigure = styled.img`
+  flex: 0 1 497.5px;
+  width: 497.5px;
+  max-width: 100%;
+  max-height: var(--figure-max, none);
+  /* Reserve the box before the lazy image arrives, so the card is measured at
+     its true height rather than collapsing and skipping the tight mode. */
+  aspect-ratio: 497.5 / 300;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 16px;
+  display: block;
+
+  @media ${device.laptop} {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+`;
+
 // 465px is the Figma width, but it has to be a cap rather than a fixed width:
 // as a fixed width it becomes a min-content floor that inflates the card (and
 // then the whole Content column) past the viewport on narrow screens.
@@ -330,9 +523,15 @@ const StoryText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 1 465px;
   width: 100%;
   max-width: 465px;
   min-width: 0;
+
+  @media ${device.laptop} {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
 `;
 
 const ConsequenceRow = styled(ItemH)`
