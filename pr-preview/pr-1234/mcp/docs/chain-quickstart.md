@@ -2,7 +2,7 @@
 title: "Quickstart"
 url: "https://pushchain.github.io/docs/chain/quickstart/"
 section: "chain"
-lastUpdated: "2026-09-03T10:10:58Z"
+lastUpdated: "2026-09-03T23:40:31Z"
 description: "Quickstart | Push Chain Docs"
 ---
 
