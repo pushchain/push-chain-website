@@ -12,6 +12,7 @@ import styled from 'styled-components';
 
 // Internal Components
 import { A, Content, H2, ItemV, Section } from '@site/src/css/SharedStyling';
+import ClosingAnimation from '@site/src/components/Home/ClosingAnimation';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
 
 // Internal Configs
@@ -29,15 +30,11 @@ export default function ClosingCTA() {
       aria-level='2'
       aria-label={t('pages.home.closing-cta.section-aria-label')}
     >
+      {/* overflow must stay visible: Content clips by default, which makes it
+          a scroll container and stops the field below from pinning. */}
       <Content alignSelf='center' overflow='visible'>
-        {/* Reserved for the dot-matrix hand animation. Held at the design's
-            footprint so dropping the real asset in needs no layout change. */}
-        <AnimationSlot
-          role='img'
-          aria-label={t('pages.home.closing-cta.animation-aria-label')}
-        />
-
-        <CTABody>
+        <ClosingAnimation>
+          <CTABody>
           <H2
             fontFamily={FONT_MONO}
             fontSize={isMobile ? '1.75rem' : '3rem'}
@@ -62,28 +59,12 @@ export default function ClosingCTA() {
             {t('pages.home.closing-cta.cta')}
             <BsArrowRight aria-hidden='true' />
           </CTAButton>
-        </CTABody>
+          </CTABody>
+        </ClosingAnimation>
       </Content>
     </Section>
   );
 }
-
-const AnimationSlot = styled.div`
-  width: 100%;
-  height: 420px;
-
-  @media ${device.laptop} {
-    height: 320px;
-  }
-
-  @media ${device.tablet} {
-    height: 240px;
-  }
-
-  @media ${device.mobileL} {
-    height: 160px;
-  }
-`;
 
 const CTABody = styled(ItemV)`
   align-items: center;
