@@ -42,7 +42,7 @@ export default function AgenticScaleSection() {
   const isMobile = useMediaQuery(device.mobileL);
 
   return (
-    <Section
+    <GroundSection
       id='built-to-scale'
       aria-level='2'
       aria-label={t('pages.home.built-to-scale.section-aria-label')}
@@ -85,7 +85,7 @@ export default function AgenticScaleSection() {
           </BodyInner>
         </Body>
       </Panel>
-    </Section>
+    </GroundSection>
   );
 }
 
@@ -93,6 +93,18 @@ export default function AgenticScaleSection() {
 // page background, so the section dissolves into the page instead of ending on
 // a seam. Stops are in design pixels from the top, because everything anchored
 // to them (artwork, wash, card rows) is fixed-height too.
+/* The ground the scene ends on carries on behind this section, so the strip
+   either side of the inset panel reads as the same floor continuing down.
+   The tile is the design's own (Figma 49456:681) with its top cropped off —
+   that part is already drawn by the animation above. */
+const GroundSection = styled(Section)`
+  background-image: url('/assets/website/home/solution/ground-tile.webp');
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: auto 623px;
+  image-rendering: pixelated;
+`;
+
 const Panel = styled.div`
   position: relative;
   flex: 1;

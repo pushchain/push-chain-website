@@ -49,7 +49,6 @@ import PaidStatsRow from '@site/src/components/Home/PaidStatsRow';
 import UniversalStatCallout from '@site/src/components/Home/UniversalStatCallout';
 import ProblemNarrative from '@site/src/components/Home/ProblemNarrative';
 import SolutionPanel from '@site/src/components/Home/SolutionPanel';
-import { GROUND_OVERLAP } from '@site/src/components/Home/SolutionAnimation';
 
 import AccountContext from '@site/src/context/accountContext';
 
@@ -361,14 +360,10 @@ const HomeWrapper = styled(ItemV)`
   /* The pink panel stands on the ground the 8-bit scene walks across, as the
      design draws it, so this one boundary drops the shared rhythm. The section's
      own bottom padding is removed in SolutionPanel. */
-  /* The pink panel stands on the ground rather than after it: pulled up over
-     all but the top strip, so the ground shows above it and in the gutters
-     either side, where the panel is inset. Matches SolutionAnimation's
-     GROUND_OVERLAP, scaled with the scene. */
+  /* The pink panel starts immediately after the scene, which ends on its own
+     ground — no rhythm gap between them. */
   & > #built-to-scale {
-    margin-top: -${GROUND_OVERLAP}px;
-    position: relative;
-    z-index: 1;
+    margin-top: 0;
   }
 
   & #hero .contentBox {

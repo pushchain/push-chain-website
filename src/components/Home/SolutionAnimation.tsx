@@ -37,57 +37,6 @@ const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP 
 
 const RUNWAY = (STOPS.length - 1) * STEP_SCROLL;
 
-/**
- * The ground. Figma runs the band from y=3581 to 4399 — 818px — and starts the
- * pink panel at 3781, so a strip of it shows above the panel and the rest
- * continues behind, visible in the gutters either side of the inset panel.
- *
- * The strip is shorter than the design's 200px because every pixel of it comes
- * off the scene's height while the section is pinned, and a 743px laptop has
- * little to spare. It still reads as ground under the character.
- */
-/**
- * The ground image at its own height. The next section is pulled up over it so
- * only the strip above and the gutters either side stay visible — Figma runs
- * the band 3581..4399 and starts the pink panel at 3781.
- */
-const GROUND_FULL = 818;
-const GROUND_ABOVE = 200;
-
-/** The scene renders at this fraction of the stage's width. */
-const COMP_SCALE = 0.8;
-
-/** The ground at the scale the scene is drawn at. */
-const GROUND_H = Math.round(GROUND_FULL * COMP_SCALE);
-
-/**
- * How much of the ground is held inside the pinned box, so the character has
- * ground under him while the scene plays. The rest sits below the runway for
- * the next section to stand on.
- */
-const GROUND_BAND = 120;
-
-/** What the next section is pulled up over: everything but the strip above it. */
-export const GROUND_OVERLAP =
-  GROUND_H - GROUND_BAND - Math.round(GROUND_ABOVE * COMP_SCALE - GROUND_BAND);
-
-/**
- * Where the ground line sits in the composition, as a fraction of its height.
- * Measured off a natural-aspect render: 684 of 891. The scene is anchored by
- * this rather than centred, so the cards, the character and the ground he
- * stands on all stay in frame when the stage is shorter than the comp.
- */
-const GROUND_LINE = 0.768;
-
-/**
- * The comp is cut exactly at its ground line and the full-width strip below
- * takes over from there. Keeping any of the comp's own ground would show it
- * inset by the scale above, with black either side of it, against a full-width
- * strip — the scene's own background is black, so above the ground line those
- * gaps are invisible.
- */
-const GROUND_SHOW = 0;
-
 /** Gap between the copy and the scene. */
 const COPY_GAP = 32;
 
@@ -97,6 +46,21 @@ const COPY_GAP = 32;
  * something cramped.
  */
 const MIN_STAGE = 280;
+
+/** The composition's own size. The wider export needs no scaling to fill. */
+const COMP_W = 1920;
+const COMP_H = 849;
+
+/**
+ * Where the ground line sits in the composition, as a fraction of its height.
+ * The scene is anchored by this rather than centred, so the cards, the
+ * character and the ground he stands on all stay in frame when the stage is
+ * shorter than the comp.
+ */
+const GROUND_LINE = 0.768;
+
+/** Comp ground kept below the ground line, so the scene ends on ground. */
+const GROUND_SHOW = 90;
 
 const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const runwayRef = useRef<HTMLDivElement | null>(null);
@@ -139,7 +103,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // The strip of ground below the scene is outside the pinned box, so it
       // costs nothing here — the scene gets everything the copy leaves.
       const available =
-        window.innerHeight - PIN_TOP - copyEl.offsetHeight - COPY_GAP - GROUND_BAND;
+        window.innerHeight - PIN_TOP - copyEl.offsetHeight - COPY_GAP;
       const pinned = available >= MIN_STAGE;
       runway.dataset.pinned = String(pinned);
       stage.style.height = pinned ? `${Math.round(available)}px` : '';
@@ -149,8 +113,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // character in half on a short viewport.
       const host = stage.firstElementChild as HTMLElement | null;
       if (host) {
-        const renderW = stage.offsetWidth * COMP_SCALE;
-        const renderH = (renderW * 849) / 1440;
+        const renderW = stage.offsetWidth;
+        const renderH = (renderW * COMP_H) / COMP_W;
         const offset = pinned
           ? Math.round(stage.offsetHeight - (renderH * GROUND_LINE + GROUND_SHOW))
           : 0;
@@ -269,15 +233,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
           )}
         </Stage>
 
-        {/* Ground under the character, held with him. */}
-        <GroundBand aria-hidden='true' />
       </Pinned>
       </Runway>
-
-      {/* The ground continues below the scene and runs under the next section,
-          which stands on it. Outside the runway so it never competes with the
-          scene for the pinned box's height. */}
-      <Ground aria-hidden='true' />
     </>
   );
 };
@@ -347,10 +304,10 @@ const Stage = styled.div`
     position: absolute;
   }
 
-  /* Unpinned the scene keeps the comp's own 1440x849; pinned, the effect sets
+  /* Unpinned the scene keeps the comp's own aspect; pinned, the effect sets
      an explicit height and the comp is cropped to it. The character is centred,
      so it is the empty ends of the scene that go. */
-  aspect-ratio: 1440 / 849;
+  aspect-ratio: ${COMP_W} / ${COMP_H};
 
   ${Runway}[data-pinned='true'] & {
     aspect-ratio: auto;
@@ -364,30 +321,6 @@ const Stage = styled.div`
     width: 100% !important;
     height: 100% !important;
   }
-`;
-
-/* Figma 49456:681 — the ground tile, repeated across the width. It continues
-   past the pinned box so the next section can be pulled up over it. */
-const groundTexture = `
-  background-image: url('/assets/website/home/solution/ground.webp');
-  background-repeat: repeat-x;
-  background-size: auto ${GROUND_H}px;
-  image-rendering: pixelated;
-`;
-
-const GroundBand = styled.div`
-  ${fullBleed}
-  height: ${GROUND_BAND}px;
-  ${groundTexture}
-  background-position: top center;
-`;
-
-const Ground = styled.div`
-  ${fullBleed}
-  height: ${GROUND_H - GROUND_BAND}px;
-  ${groundTexture}
-  /* Continues the band above rather than restarting the tile. */
-  background-position: center -${GROUND_BAND}px;
 `;
 
 
