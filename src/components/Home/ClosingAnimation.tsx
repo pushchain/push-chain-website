@@ -31,6 +31,12 @@ const PAGE_BACKGROUND = '#000000';
 const COPY_FADE_FROM = 0.72;
 const COPY_FADE_TO = 0.95;
 
+/** Space left between the call to action and the footer once the pin releases. */
+const TAIL_GAP = 160;
+
+/** What the shared Content box already contributes below the runway. */
+const CONTENT_PAD_BOTTOM = 125;
+
 const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -124,6 +130,23 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
     };
   }, [bin, atlas, poster]);
 
+  // The tail trim below needs the copy's height, which depends on how the
+  // headline wraps, so publish it rather than guessing a constant.
+  useEffect(() => {
+    const copy = copyRef.current;
+    const runway = runwayRef.current;
+    if (!copy || !runway) return undefined;
+
+    const publish = () =>
+      runway.style.setProperty('--closing-copy-h', `${copy.offsetHeight}px`);
+    publish();
+
+    if (typeof ResizeObserver === 'undefined') return undefined;
+    const ro = new ResizeObserver(publish);
+    ro.observe(copy);
+    return () => ro.disconnect();
+  }, []);
+
   return (
     <Runway ref={runwayRef}>
       <Pinned ref={pinnedRef}>
@@ -146,6 +169,20 @@ const Runway = styled.div`
   left: 50%;
   margin-left: -50vw;
   height: calc(${RUNWAY}px + 100svh);
+
+  /* The pin frame is a full viewport so the field centres on screen, but the
+     copy sits in the middle of it, so once the pin releases the frame's lower
+     half is empty -- and that band is half the window, so the taller the
+     monitor the more black sat between the call to action and the footer.
+     Pull the footer back up by exactly that band, leaving a fixed gap. Clamped
+     at zero so a window shorter than the copy never pulls the footer over it. */
+  margin-bottom: min(
+    0px,
+    calc(
+      (var(--closing-copy-h, 304px) / 2) + ${TAIL_GAP - CONTENT_PAD_BOTTOM}px -
+        50svh
+    )
+  );
 
   @media ${device.mobileL} {
     height: calc(${Math.round(RUNWAY * 0.7)}px + 100svh);

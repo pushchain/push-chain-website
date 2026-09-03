@@ -102,9 +102,6 @@ const DotGridIcon = () => (
 export default function ProblemNarrative() {
   const { t } = useTranslation();
   const isMobile = useMediaQuery(device.mobileL);
-  // Stack only where there's room for it; below this the cards read better
-  // as a simple vertical list.
-  const isCompact = useMediaQuery(device.laptop);
 
   const stageRef = useRef(null);
   const viewportRef = useRef(null);
@@ -128,11 +125,6 @@ export default function ProblemNarrative() {
       });
       stage.style.removeProperty('--runway');
       stage.dataset.pinned = 'false';
-
-      if (isCompact) {
-        ScrollTrigger.refresh();
-        return;
-      }
 
       // Measure the cards in natural flow before fixing the area's height.
       // The layers are absolutely positioned inside that box, so reading them
@@ -178,27 +170,56 @@ export default function ProblemNarrative() {
         figure = Math.round(budget - (chrome - TIGHT_SAVING));
       }
 
-      const pinned = figure >= FIGURE_MIN;
+      const inFlow = () => {
+        layers.forEach((layer) => {
+          if (layer) layer.style.position = 'static';
+        });
+        const h = Math.max(...cards.map((card) => card.offsetHeight));
+        layers.forEach((layer) => {
+          if (layer) layer.style.position = '';
+        });
+        return h;
+      };
+
+      const applyFigure = (px) =>
+        stage.style.setProperty(
+          '--figure-max',
+          `${Math.min(FIGURE_MAX, Math.max(FIGURE_MIN, px))}px`
+        );
+
+      stage.dataset.tight = String(tight);
+      applyFigure(figure);
+
+      // Predict, then verify. TIGHT_SAVING is one number but what tightening
+      // actually gives back differs by breakpoint, so the prediction alone left
+      // a phone's card standing past the fold. Correct against what the card
+      // actually settled at -- and take the correction off the height the
+      // figure is really rendering at, not off the cap: below laptop the
+      // illustration is bounded by the card's width long before a 300px height
+      // cap bites, so lowering the cap towards it changed nothing at all.
+      const shownFigure = () =>
+        Math.max(
+          0,
+          ...Array.from(stage.querySelectorAll('img')).map((i) => i.offsetHeight)
+        );
+
+      let settled = inFlow();
+      for (let pass = 0; pass < 3 && settled > budget; pass += 1) {
+        figure = shownFigure() - (settled - budget);
+        applyFigure(figure);
+        settled = inFlow();
+      }
+
+      // Pin only if the group genuinely fits: a card taller than the budget
+      // holds its own footer off the bottom of the screen for the whole scroll.
+      const pinned = figure >= FIGURE_MIN && settled <= budget;
       stage.dataset.pinned = String(pinned);
       stage.dataset.tight = String(pinned && tight);
-      stage.style.setProperty(
-        '--figure-max',
-        `${Math.min(FIGURE_MAX, Math.max(FIGURE_MIN, figure))}px`
-      );
       stage.style.setProperty(
         '--runway',
         pinned ? `${TRANSITION_SCROLL}px` : '0px'
       );
-
-      // Re-measure in flow once more: tight mode changes padding and the
-      // figure's cap, so the settled height differs from the natural one.
-      layers.forEach((layer) => {
-        if (layer) layer.style.position = 'static';
-      });
-      const settled = Math.max(...cards.map((card) => card.offsetHeight));
-      layers.forEach((layer) => {
-        if (layer) layer.style.position = '';
-      });
+      if (!pinned) applyFigure(FIGURE_MAX);
 
       cards.forEach((card) => {
         card.style.minHeight = `${settled}px`;
@@ -230,7 +251,7 @@ export default function ProblemNarrative() {
         if (card) card.style.minHeight = '';
       });
     };
-  }, [isCompact]);
+  }, []);
 
   // Park the incoming card below the fold before the browser paints. It cannot
   // be done in CSS: GSAP folds an element's existing transform into its own, so
@@ -238,17 +259,14 @@ export default function ProblemNarrative() {
   // would never arrive. A passive effect is too late and shows the card on top
   // for a frame.
   useIsomorphicLayoutEffect(() => {
-    if (isCompact) return;
     const incoming = cardRefs.current[1];
     if (incoming) gsap.set(incoming, { yPercent: 108 });
-  }, [isCompact]);
+  }, []);
 
   // Drive the incoming card up over the one beneath it across the pinned
   // runway, and let the covered card recede so the pair reads as depth rather
   // than a flat swap.
   useEffect(() => {
-    if (isCompact) return undefined;
-
     const stage = stageRef.current;
     const cards = cardRefs.current.filter(Boolean);
     if (!stage || cards.length < 2) return undefined;
@@ -275,14 +293,19 @@ export default function ProblemNarrative() {
         0
       ).fromTo(
         beneath,
-        { scale: 1, opacity: 1 },
+        // Shrink from the top edge, not the centre. Scaling about the centre
+        // walked this card's top down by half the height it lost -- 15px of the
+        // 34px the drawer leaves showing -- so the stack read as a flat swap
+        // with a hairline above it. Pinned at the top the edge holds still and
+        // only the sides and foot draw in, which is what reads as depth.
+        { scale: 1, opacity: 1, transformOrigin: '50% 0%' },
         { scale: 0.93, opacity: 0.45, ease: 'none' },
         0
       );
     }, stage);
 
     return () => ctx.revert();
-  }, [isCompact]);
+  }, []);
 
   return (
     <Section
@@ -408,10 +431,6 @@ const Runway = styled.div`
   ${Stage}[data-pinned='false'] & {
     height: 0;
   }
-
-  @media ${device.laptop} {
-    height: 0;
-  }
 `;
 
 // Holds the whole group — title, subtitle and the card stack — in place for
@@ -424,11 +443,6 @@ const PinnedViewport = styled.div`
     position: static;
     top: auto;
   }
-
-  @media ${device.laptop} {
-    position: static;
-    top: auto;
-  }
 `;
 
 // Fixed to the tallest card so both layers can occupy the same box.
@@ -437,8 +451,11 @@ const CardsArea = styled.div`
   width: 100%;
   margin-top: ${HEADER_GAP}px;
 
-  @media ${device.laptop} {
+  ${Stage}[data-pinned='false'] & {
     height: auto !important;
+  }
+
+  @media ${device.laptop} {
     margin-top: 40px;
   }
 `;
@@ -452,7 +469,7 @@ const CardLayer = styled.div`
   will-change: transform;
 
 
-  @media ${device.laptop} {
+  ${Stage}[data-pinned='false'] & {
     position: static;
     inset: auto;
 
@@ -478,9 +495,8 @@ const VignetteCard = styled(ItemV)`
   box-sizing: border-box;
   will-change: transform;
 
-  ${Stage}[data-tight='true'] & {
-    gap: 72px;
-    padding: 36px 48px;
+  ${Stage}[data-pinned='false'] & {
+    min-height: 0 !important;
   }
 
   @media ${device.laptop} {
@@ -488,12 +504,30 @@ const VignetteCard = styled(ItemV)`
     justify-content: flex-start;
     gap: 48px;
     padding: 40px 32px;
-    min-height: 0 !important;
   }
 
   @media ${device.mobileL} {
     gap: 32px;
     padding: 28px 20px;
+  }
+
+  /* Tight mode has to stay tighter than the card's own size at every width.
+     Keyed only to the desktop numbers it outranked the media queries below --
+     a data attribute beats a plain class -- so on a phone "tight" was handing
+     the card desktop padding and a 72px gap and making it grow. */
+  ${Stage}[data-tight='true'] & {
+    gap: 72px;
+    padding: 36px 48px;
+
+    @media ${device.laptop} {
+      gap: 32px;
+      padding: 28px 24px;
+    }
+
+    @media ${device.mobileL} {
+      gap: 20px;
+      padding: 20px 16px;
+    }
   }
 `;
 
@@ -518,6 +552,14 @@ const StoryRow = styled.div`
     flex-direction: column;
     align-items: stretch;
     gap: 32px;
+  }
+
+  @media ${device.tablet} {
+    gap: 24px;
+  }
+
+  @media ${device.mobileL} {
+    gap: 20px;
   }
 `;
 
@@ -557,6 +599,22 @@ const StoryText = styled.div`
     flex: 0 0 auto;
     max-width: 100%;
   }
+
+  span {
+    @media ${device.laptop} {
+      font-size: 1.25rem;
+    }
+
+    @media ${device.tablet} {
+      font-size: 1.125rem;
+      letter-spacing: -0.04em;
+    }
+
+    @media ${device.mobileL} {
+      font-size: 1rem;
+      line-height: 145%;
+    }
+  }
 `;
 
 const ConsequenceRow = styled(ItemH)`
@@ -567,6 +625,10 @@ const ConsequenceRow = styled(ItemH)`
   @media ${device.laptop} {
     flex-direction: column;
     gap: 24px;
+  }
+
+  @media ${device.mobileL} {
+    gap: 16px;
   }
 `;
 
@@ -579,5 +641,24 @@ const ConsequenceItem = styled(ItemH)`
 
   svg {
     flex: 0 0 auto;
+  }
+
+  @media ${device.tablet} {
+    gap: 16px;
+  }
+
+  @media ${device.mobileL} {
+    gap: 12px;
+  }
+
+  span {
+    @media ${device.tablet} {
+      font-size: 1rem;
+    }
+
+    @media ${device.mobileL} {
+      font-size: 0.9375rem;
+      line-height: 145%;
+    }
   }
 `;
