@@ -89,9 +89,14 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
         }
         field = created;
 
-        // Without WebGL the engine mounts a poster image instead; there is no
-        // timeline to drive, so leave the copy showing.
+        // Without WebGL -- or if the field's data will not load -- the engine
+        // mounts a still of the hands instead. There is no timeline to drive,
+        // so the copy has to be shown outright; but the copy sits in the same
+        // grid cell, so leaving the still behind it printed the headline over
+        // the hands. The still is the animation degrading, not part of the
+        // message, so drop it and show the copy alone.
         if (field.poster || !field.setFrame) {
+          host.style.display = 'none';
           copy.style.opacity = '1';
           return;
         }
@@ -207,6 +212,7 @@ const FieldHost = styled.div`
   grid-area: 1 / 1;
   width: 100vw;
   aspect-ratio: 1440 / 750;
+
 
   canvas {
     display: block;

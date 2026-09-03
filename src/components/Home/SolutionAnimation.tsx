@@ -141,13 +141,26 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
           Math.min(GROUND_SHOW_MAX, room)
         );
 
-        const offset = pinned
+        let offset = pinned
           ? Math.round(stageH - (renderH * GROUND_LINE + groundShow))
           : 0;
+
+        // A positive offset means the stage is taller than the scene needs.
+        // That is what a phone gets: the comp is 1920 wide, so at full width it
+        // renders only ~170px tall and left two thirds of the pinned box empty
+        // below it. Clamping the offset at 0 pinned the scene to the top of
+        // that box and left the blank on show; pushing it down would only move
+        // the blank above it. Give the height back instead so the pinned box
+        // hugs the scene and its ground sits on the fold.
+        if (offset > 0) {
+          stage.style.height = `${Math.round(stageH - offset)}px`;
+          offset = 0;
+        }
+
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
         host.style.left = '0px';
-        host.style.top = `${Math.min(0, offset)}px`;
+        host.style.top = `${offset}px`;
       }
     };
 
