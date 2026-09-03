@@ -2,7 +2,7 @@
 title: "usePushChain"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/use-push-chain/"
 section: "ui-kit"
-lastUpdated: "2026-09-03T09:30:20Z"
+lastUpdated: "2026-09-03T10:10:58Z"
 description: "usePushChain | Customizations | UI Kit | Push Chain Docs"
 ---
 

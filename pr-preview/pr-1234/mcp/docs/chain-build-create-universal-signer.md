@@ -2,7 +2,7 @@
 title: "Create Universal Signer"
 url: "https://pushchain.github.io/docs/chain/build/create-universal-signer/"
 section: "build"
-lastUpdated: "2026-09-03T09:30:20Z"
+lastUpdated: "2026-09-03T10:10:58Z"
 description: "Create Universal Signer | Build | Push Chain Docs"
 ---
 

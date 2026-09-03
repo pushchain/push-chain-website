@@ -2,7 +2,7 @@
 title: "Push Universal Account Button"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/push-universal-account-button/"
 section: "ui-kit"
-lastUpdated: "2026-09-03T09:30:20Z"
+lastUpdated: "2026-09-03T10:10:58Z"
 description: "Push Universal Account Button | Customizations | UI Kit | Push Chain Docs"
 ---
 
