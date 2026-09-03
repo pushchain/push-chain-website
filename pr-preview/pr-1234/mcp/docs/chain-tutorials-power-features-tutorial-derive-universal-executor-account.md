@@ -2,7 +2,7 @@
 title: "Derive Universal Executor Accounts (UEAs)"
 url: "https://pushchain.github.io/docs/chain/tutorials/power-features/tutorial-derive-universal-executor-account/"
 section: "tutorials"
-lastUpdated: "2026-09-02T18:08:12Z"
+lastUpdated: "2026-09-03T09:30:20Z"
 description: "Derive Universal Executor Accounts | Tutorials | Push Chain Docs"
 ---
 
