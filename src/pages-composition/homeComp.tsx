@@ -341,18 +341,21 @@ const HomeWrapper = styled(ItemV)`
      side (250px per boundary), so the remainder is added here rather than by
      touching Content itself, which 100+ other files rely on. Tablet and mobile
      start from 100px padding and keep a tighter rhythm. */
-  & > section + section {
+  & > section + section,
+  & > div + section {
     margin-top: 70px;
   }
 
   @media ${device.laptop} {
-    & > section + section {
+    & > section + section,
+    & > div + section {
       margin-top: 40px;
     }
   }
 
   @media ${device.mobileL} {
-    & > section + section {
+    & > section + section,
+    & > div + section {
       margin-top: 0;
     }
   }
@@ -362,7 +365,9 @@ const HomeWrapper = styled(ItemV)`
      own bottom padding is removed in SolutionPanel. */
   /* The pink panel starts immediately after the scene, which ends on its own
      ground — no rhythm gap between them. */
-  & > #built-to-scale {
+  /* #built-to-scale is wrapped in a group so it can park under the pinned
+     scene below laptop, so the rule has to name the group, not the section. */
+  & > #built-to-scale-group {
     margin-top: 0;
   }
 

@@ -112,7 +112,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     const runway = runwayRef.current;
     const copyEl = copyRef.current;
     const stage = stageRef.current;
-    if (!runway || !copyEl || !stage) return undefined;
+    const pinnedEl = pinnedRef.current;
+    if (!runway || !copyEl || !stage || !pinnedEl) return undefined;
 
     const fit = () => {
       // The strip of ground below the scene is outside the pinned box, so it
@@ -136,9 +137,14 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // Solved rather than fixed: with a fixed depth the cards had 8px of
         // margin at 743px tall and clipped on anything shorter.
         const room = stageH + renderH * (CONTENT_TOP - GROUND_LINE);
+
+        // Never ask for more floor than the composition actually draws below
+        // its ground line. On a phone that is only ~42px, so a 90px ask left a
+        // black band between the scene's floor and the section beneath it.
+        const drawnBelowGround = renderH * (1 - GROUND_LINE);
         const groundShow = Math.max(
           GROUND_SHOW_MIN,
-          Math.min(GROUND_SHOW_MAX, room)
+          Math.min(GROUND_SHOW_MAX, room, drawnBelowGround)
         );
 
         let offset = pinned
@@ -162,6 +168,19 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         host.style.left = '0px';
         host.style.top = `${offset}px`;
       }
+
+      // Publish where the pinned box ends and how long it holds for, so the
+      // section below can park itself directly underneath for exactly that
+      // stretch instead of leaving the rest of a phone's screen empty.
+      const root = document.documentElement;
+      root.style.setProperty(
+        '--solution-pin-bottom',
+        `${pinned ? PIN_TOP + pinnedEl.offsetHeight : 0}px`
+      );
+      root.style.setProperty(
+        '--solution-travel',
+        `${pinned ? Math.max(0, runway.offsetHeight - pinnedEl.offsetHeight) : 0}px`
+      );
     };
 
     fit();
@@ -302,6 +321,17 @@ const Runway = styled.div`
   @media ${device.mobileL} {
     &[data-pinned='true'] {
       height: calc(${Math.round(RUNWAY * 0.55) + HOLD_TAIL}px + 100svh);
+    }
+  }
+
+  /* Below laptop the pinned box hugs the scene rather than filling the screen,
+     which left the rest of the fold empty for the whole hold. Pull the section
+     below up by the hold's length so it starts directly under the pinned box;
+     it parks itself there (see AgenticScaleSection) and the spacer at its foot
+     puts the scroll distance back, so nothing else on the page moves. */
+  @media ${device.laptop} {
+    &[data-pinned='true'] {
+      margin-bottom: calc(-1 * var(--solution-travel, 0px));
     }
   }
 `;

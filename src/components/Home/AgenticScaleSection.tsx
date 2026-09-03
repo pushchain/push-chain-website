@@ -28,6 +28,23 @@ const FONT_MONO = "'IBM Plex Mono', monospace";
 // constrain it — that's what makes it read as full-bleed.
 const PANEL_INSET = 18.5;
 
+/* The ground tile's native size, and the checker cell measured in it. */
+const GROUND_TILE_H = 623;
+const GROUND_TILE_CELL = 100;
+
+/* The scene's own floor, measured off a 1512px-wide render: an 8px cell, which
+   is 8 * 1920 / 1512 in the 1920-wide composition. */
+const SCENE_GROUND_CELL = (8 * 1920) / 1512;
+
+/* So one tile, drawn at the scene's scale, is this fraction of the viewport. */
+const GROUND_TILE_SCALE = (
+  (GROUND_TILE_H * (SCENE_GROUND_CELL / GROUND_TILE_CELL)) /
+  1920
+).toFixed(5);
+
+/* How many of those tiles the strip runs for before it stops. */
+const GROUND_TILE_RUN = 6;
+
 // Vertical anchors, in design pixels measured from the top of that plate.
 const VISUAL_HEIGHT = 726; // image 32 — the slot for the incoming animation
 const PINK_CARD_TOP = 177;
@@ -42,6 +59,7 @@ export default function AgenticScaleSection() {
   const isMobile = useMediaQuery(device.mobileL);
 
   return (
+    <GroundGroup id='built-to-scale-group'>
     <GroundSection
       id='built-to-scale'
       aria-level='2'
@@ -86,8 +104,29 @@ export default function AgenticScaleSection() {
         </Body>
       </Panel>
     </GroundSection>
+      <GroundSpacer aria-hidden='true' />
+    </GroundGroup>
   );
 }
+
+/* Below laptop the section above pins a box that only hugs its scene, so this
+   one parks directly under it for the length of that hold instead of leaving
+   the fold empty. Sticky travel is bounded by this group, and the spacer is
+   what gives it that travel -- the runway above gave the same distance back
+   with a negative margin, so the page's total scroll is unchanged. Inert on
+   desktop, where --solution-travel is only set below laptop and the pinned box
+   already fills the screen. */
+const GroundGroup = styled.div`
+  position: relative;
+`;
+
+const GroundSpacer = styled.div`
+  height: 0;
+
+  @media ${device.laptop} {
+    height: var(--solution-travel, 0px);
+  }
+`;
 
 // The single gradient plate behind the whole section. Its final stop is the
 // page background, so the section dissolves into the page instead of ending on
@@ -98,12 +137,43 @@ export default function AgenticScaleSection() {
    The tile is the design's own (Figma 49456:681) with its top cropped off —
    that part is already drawn by the animation above. */
 const GroundSection = styled(Section)`
-  background-image: url('/assets/website/home/solution/ground-tile.webp'),
-    url('/assets/website/home/solution/ground-tile.webp');
-  background-repeat: no-repeat, no-repeat;
-  background-position: left top, right top;
-  background-size: auto 623px, auto 623px;
-  image-rendering: pixelated;
+  position: relative;
+
+  @media ${device.laptop} {
+    position: sticky;
+    top: var(--solution-pin-bottom, 0px);
+  }
+
+  /* One strip of ground down each side of the inset panel, drawn at the scale
+     the scene above draws its own floor at so the two read as one surface.
+     ${GROUND_TILE_H}px was the tile's native height and it was used as-is,
+     which made these checks about twelve times the size of the animation's --
+     the asset is a ${Math.round(
+       GROUND_TILE_CELL / SCENE_GROUND_CELL
+     )}x export. Matching the cell instead ties the strip to the viewport, the
+     same way the scene is tied to it. Repeated for a few tiles and then
+     stopped, rather than running the section's whole height. */
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: ${PANEL_INSET}px;
+    height: calc(${GROUND_TILE_RUN} * 100vw * ${GROUND_TILE_SCALE});
+    background-image: url('/assets/website/home/solution/ground-tile.webp');
+    background-repeat: repeat-y;
+    background-size: auto calc(100vw * ${GROUND_TILE_SCALE});
+    image-rendering: pixelated;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
 `;
 
 const Panel = styled.div`

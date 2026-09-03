@@ -564,8 +564,12 @@ const StoryRow = styled.div`
 `;
 
 const StoryFigure = styled.img`
-  flex: 0 1 497.5px;
-  width: 497.5px;
+  /* The width tracks the height cap. Held at a flat 497.5px while max-height
+     shrank the box, object-fit contain drew the picture short of its right
+     edge and left a band of empty card beside it -- the taller the screen
+     the smaller the cap, so it showed on some monitors and not others. */
+  flex: 0 1 auto;
+  width: min(497.5px, calc(var(--figure-max, 300px) * (497.5 / 300)));
   max-width: 100%;
   max-height: var(--figure-max, none);
   /* Reserve the box before the lazy image arrives, so the card is measured at
@@ -579,7 +583,7 @@ const StoryFigure = styled.img`
 
   @media ${device.laptop} {
     flex: 0 0 auto;
-    width: 100%;
+    width: min(100%, calc(var(--figure-max, 300px) * (497.5 / 300)));
   }
 `;
 
