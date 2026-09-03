@@ -98,10 +98,11 @@ export default function AgenticScaleSection() {
    The tile is the design's own (Figma 49456:681) with its top cropped off —
    that part is already drawn by the animation above. */
 const GroundSection = styled(Section)`
-  background-image: url('/assets/website/home/solution/ground-tile.webp');
-  background-repeat: repeat;
-  background-position: top center;
-  background-size: auto 623px;
+  background-image: url('/assets/website/home/solution/ground-tile.webp'),
+    url('/assets/website/home/solution/ground-tile.webp');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-size: auto 623px, auto 623px;
   image-rendering: pixelated;
 `;
 

@@ -69,6 +69,9 @@ const TIGHT_SAVING = 72;
 
 const CARD_GAP = 48;
 
+/** Where the incoming card comes to rest, as a percentage of its own height. */
+const DRAWER_REST = 6;
+
 const FONT_MONO = "'IBM Plex Mono', monospace";
 
 // Exact 5x5 dot-grid glyph from Figma (node 49322:1879 and its repeats) — red accent
@@ -266,7 +269,9 @@ export default function ProblemNarrative() {
       tl.fromTo(
         incoming,
         { yPercent: 108 },
-        { yPercent: 0, ease: 'none' },
+        // Stops just short of covering the card beneath, so its top edge stays
+        // showing and the pair reads as a drawer rather than a swap.
+        { yPercent: DRAWER_REST, ease: 'none' },
         0
       ).fromTo(
         beneath,

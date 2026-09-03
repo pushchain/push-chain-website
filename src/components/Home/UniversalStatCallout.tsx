@@ -101,7 +101,13 @@ const GradientText = styled.span`
 
 const StatBlock = styled.div`
   display: flex;
+  /* The number and the label sit on one baseline, as Figma draws them — its
+     boxes both end at y=58 under cap-height trim. Aligning the boxes instead
+     dropped the label 8px low: at 77px the value's baseline is 10.4px above
+     its box bottom, at 20px the label's is only 2.7px above its own. Falls
+     back to the box alignment where last-baseline is unsupported. */
   align-items: flex-end;
+  align-items: last baseline;
 `;
 
 const StatValue = styled(GradientText)`

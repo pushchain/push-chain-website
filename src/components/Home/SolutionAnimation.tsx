@@ -37,8 +37,16 @@ const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP 
 
 const RUNWAY = (STOPS.length - 1) * STEP_SCROLL;
 
-/** Gap between the copy and the scene. */
-const COPY_GAP = 32;
+/**
+ * Scroll kept back at the end so the final stop is actually seen. Without it
+ * the timeline finished exactly as the pin released — measured, "Payment
+ * Complete" was reached on the last pixel of travel, with the section already
+ * scrolling away, so it read as being stuck on "Evaluation of Work".
+ */
+const HOLD_TAIL = 460;
+
+/** Gap between the copy and the scene. Every pixel here comes off the scene. */
+const COPY_GAP = 24;
 
 /**
  * Below this the scene is too short to read anything but the character, so the
@@ -52,15 +60,22 @@ const COMP_W = 1920;
 const COMP_H = 849;
 
 /**
- * Where the ground line sits in the composition, as a fraction of its height.
- * The scene is anchored by this rather than centred, so the cards, the
- * character and the ground he stands on all stay in frame when the stage is
- * shorter than the comp.
+ * The composition's own landmarks, as fractions of its height, measured off a
+ * natural-aspect render: the step cards begin at 179 of 669 and the ground line
+ * falls at 504. Everything between them — cards, character, ground — is what
+ * has to stay in frame.
  */
-const GROUND_LINE = 0.768;
+const CONTENT_TOP = 0.268;
+const GROUND_LINE = 0.753;
 
-/** Comp ground kept below the ground line, so the scene ends on ground. */
-const GROUND_SHOW = 90;
+/**
+ * Ground kept below the ground line. It is the part that gives first: the
+ * stage is always shorter than the comp, so rather than anchoring at a fixed
+ * depth and letting the cards clip off the top, the strip is traded away down
+ * to the floor below and only then does the top start to go.
+ */
+const GROUND_SHOW_MAX = 90;
+const GROUND_SHOW_MIN = 40;
 
 const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const runwayRef = useRef<HTMLDivElement | null>(null);
@@ -115,12 +130,23 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       if (host) {
         const renderW = stage.offsetWidth;
         const renderH = (renderW * COMP_H) / COMP_W;
+        const stageH = stage.offsetHeight;
+
+        // Deepest the scene can sit before the cards start leaving the top.
+        // Solved rather than fixed: with a fixed depth the cards had 8px of
+        // margin at 743px tall and clipped on anything shorter.
+        const room = stageH + renderH * (CONTENT_TOP - GROUND_LINE);
+        const groundShow = Math.max(
+          GROUND_SHOW_MIN,
+          Math.min(GROUND_SHOW_MAX, room)
+        );
+
         const offset = pinned
-          ? Math.round(stage.offsetHeight - (renderH * GROUND_LINE + GROUND_SHOW))
+          ? Math.round(stageH - (renderH * GROUND_LINE + groundShow))
           : 0;
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
-        host.style.left = `${Math.round((stage.offsetWidth - renderW) / 2)}px`;
+        host.style.left = '0px';
         host.style.top = `${Math.min(0, offset)}px`;
       }
     };
@@ -167,7 +193,10 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     const stopFromScroll = () => {
       if (runway.dataset.pinned !== 'true') return index;
       const top = runway.getBoundingClientRect().top + window.scrollY;
-      const travel = Math.max(1, runway.offsetHeight - pinned.offsetHeight);
+      const travel = Math.max(
+        1,
+        runway.offsetHeight - pinned.offsetHeight - HOLD_TAIL
+      );
       const travelled = window.scrollY - top;
       const progress = Math.max(0, Math.min(1, travelled / travel));
       return Math.round(progress * (STOPS.length - 1));
@@ -248,18 +277,18 @@ const Runway = styled.div`
   width: 100%;
 
   &[data-pinned='true'] {
-    height: calc(${RUNWAY}px + 100svh);
+    height: calc(${RUNWAY + HOLD_TAIL}px + 100svh);
   }
 
   @media ${device.laptop} {
     &[data-pinned='true'] {
-      height: calc(${Math.round(RUNWAY * 0.7)}px + 100svh);
+      height: calc(${Math.round(RUNWAY * 0.7) + HOLD_TAIL}px + 100svh);
     }
   }
 
   @media ${device.mobileL} {
     &[data-pinned='true'] {
-      height: calc(${Math.round(RUNWAY * 0.55)}px + 100svh);
+      height: calc(${Math.round(RUNWAY * 0.55) + HOLD_TAIL}px + 100svh);
     }
   }
 `;
