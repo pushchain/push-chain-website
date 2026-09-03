@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 // Internal Components
 import { Content, H2, ItemH, ItemV, Section, Span } from '@site/src/css/SharedStyling';
+import SolutionAnimation from '@site/src/components/Home/SolutionAnimation';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
 
 // Internal Configs
@@ -25,38 +26,45 @@ export default function SolutionPanel() {
       aria-level='2'
       aria-label={t('pages.home.solution-panel.section-aria-label')}
     >
-      <Content alignSelf='center'>
-        <TextRow flexDirection={isMobile ? 'column' : 'row'}>
-          <H2
-            fontFamily={FONT_MONO}
-            fontSize={isMobile ? '1.75rem' : '3rem'}
-            fontWeight='500'
-            letterSpacing='-0.06em'
-            lineHeight='120%'
-            color='var(--ifm-color-white)'
-          >
-            {/* Three fixed lines, per Figma. The design's 530px text box wraps
-                naturally into "Making AI / Universally / accountable"; forcing
-                the breaks keeps that shape at any container width instead of
-                depending on where the copy happens to wrap. */}
-            {t('pages.home.solution-panel.title-prefix')}
-            <br />
-            <GradientWord>{t('pages.home.solution-panel.title-highlight')}</GradientWord>
-            <br />
-            {t('pages.home.solution-panel.title-suffix')}
-          </H2>
-          <Span
-            fontSize='1.25rem'
-            lineHeight='150%'
-            letterSpacing='0.4px'
-            color='var(--ifm-color-white)'
-          >
-            {t('pages.home.solution-panel.paragraph')}
-          </Span>
-        </TextRow>
-
-        <SolutionPlaceholder aria-hidden='true' />
-      </Content>
+      {/* overflow must stay visible: Content clips by default, which makes it
+          a scroll container and stops the animation below from pinning. */}
+      {/* overflow must stay visible: Content clips by default, which makes it
+          a scroll container and stops the composition below from pinning. */}
+      <SolutionContent alignSelf='center' overflow='visible'>
+        <SolutionAnimation
+          copy={
+            <TextRow flexDirection={isMobile ? 'column' : 'row'}>
+              <H2
+                fontFamily={FONT_MONO}
+                fontSize={isMobile ? '1.75rem' : '3rem'}
+                fontWeight='500'
+                letterSpacing='-0.06em'
+                lineHeight='120%'
+                color='var(--ifm-color-white)'
+              >
+                {/* Three fixed lines, per Figma. The design's 530px text box
+                    wraps naturally into "Making AI / Universally / accountable";
+                    forcing the breaks keeps that shape at any container width. */}
+                {t('pages.home.solution-panel.title-prefix')}
+                <br />
+                <GradientWord>
+                  {t('pages.home.solution-panel.title-highlight')}
+                </GradientWord>
+                <br />
+                {t('pages.home.solution-panel.title-suffix')}
+              </H2>
+              <Span
+                fontSize='1.25rem'
+                lineHeight='150%'
+                letterSpacing='0.4px'
+                color='var(--ifm-color-white)'
+              >
+                {t('pages.home.solution-panel.paragraph')}
+              </Span>
+            </TextRow>
+          }
+        />
+      </SolutionContent>
     </SolutionSection>
   );
 }
@@ -69,10 +77,15 @@ export default function SolutionPanel() {
    section rhythm, so this no longer carries its own margin. */
 const SolutionSection = styled(Section)``;
 
+/* The pink panel stands on the ground the scene walks across, so this section
+   gives up its bottom padding rather than leaving a black band between them. */
+const SolutionContent = styled(Content)`
+  padding-bottom: 0;
+`;
+
 const TextRow = styled(ItemH)`
   align-items: center;
   gap: 139px;
-  margin-bottom: 64px;
 
   h2,
   span {
@@ -83,11 +96,6 @@ const TextRow = styled(ItemH)`
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    margin-bottom: 40px;
-  }
-
-  @media ${device.mobileL} {
-    margin-bottom: 32px;
   }
 `;
 
@@ -95,19 +103,3 @@ const GradientWord = styled.span`
   color: var(--ifm-color-custom-pink);
 `;
 
-const SolutionPlaceholder = styled.div`
-  width: 100%;
-  height: 635px;
-  border-radius: 48px;
-  background: #323232;
-
-  @media ${device.laptop} {
-    height: 420px;
-    border-radius: 32px;
-  }
-
-  @media ${device.mobileL} {
-    height: 240px;
-    border-radius: 24px;
-  }
-`;

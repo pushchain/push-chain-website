@@ -357,6 +357,13 @@ const HomeWrapper = styled(ItemV)`
     }
   }
 
+  /* The pink panel stands on the ground the 8-bit scene walks across, as the
+     design draws it, so this one boundary drops the shared rhythm. The section's
+     own bottom padding is removed in SolutionPanel. */
+  & > #built-to-scale {
+    margin-top: 0;
+  }
+
   & #hero .contentBox {
     row-gap: 18px;
   }
