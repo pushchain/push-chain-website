@@ -38,20 +38,26 @@ const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP 
 const RUNWAY = (STOPS.length - 1) * STEP_SCROLL;
 
 /**
- * Ground showing above the next section. Figma runs the ground band from
- * y=3581 to 4399 and starts the pink panel at 3781, so 200px of it is visible
- * and the remaining 618px sits behind the panel.
+ * The ground. Figma runs the band from y=3581 to 4399 — 818px — and starts the
+ * pink panel at 3781, so a strip of it shows above the panel and the rest
+ * continues behind, visible in the gutters either side of the inset panel.
+ *
+ * The strip is shorter than the design's 200px because every pixel of it comes
+ * off the scene's height while the section is pinned, and a 743px laptop has
+ * little to spare. It still reads as ground under the character.
  */
-const GROUND_VISIBLE = 200;
+const GROUND_VISIBLE = 140;
+const GROUND_TAIL = 480;
 
 /** Gap between the copy and the scene. */
-const COPY_GAP = 40;
+const COPY_GAP = 32;
 
 /**
- * Below this the scene is too short to read, so the section is laid out in
- * normal flow at the design's spacing instead of pinning something cramped.
+ * Below this the scene is too short to read anything but the character, so the
+ * section lays out in normal flow at the design's spacing rather than pinning
+ * something cramped.
  */
-const MIN_STAGE = 300;
+const MIN_STAGE = 280;
 
 const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const runwayRef = useRef<HTMLDivElement | null>(null);
@@ -208,10 +214,14 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
           )}
         </Stage>
 
-        {/* The ground the next section stands on. It runs past the bottom of
-            the pinned box; the pink panel is pulled up over the remainder. */}
+        {/* The strip of ground the character walks on, held with him. */}
         <Ground aria-hidden='true' />
       </Pinned>
+
+      {/* The rest of the ground, which the next section is pulled up over. It
+          sits outside the pinned box so it scrolls with the page and the panel
+          can overlap it, leaving ground showing in the gutters either side. */}
+      <GroundTail aria-hidden='true' />
     </Runway>
   );
 };
@@ -292,14 +302,33 @@ const Stage = styled.div`
 
 /* Figma 49456:681 — the ground tile, repeated across the width. It continues
    past the pinned box so the next section can be pulled up over it. */
-const Ground = styled.div`
-  ${fullBleed}
-  height: ${GROUND_VISIBLE}px;
+const groundTexture = `
   background-image: url('/assets/website/home/solution/ground.webp');
   background-repeat: repeat-x;
   background-position: top center;
-  background-size: auto 100%;
+  background-size: auto ${GROUND_VISIBLE + GROUND_TAIL}px;
   image-rendering: pixelated;
+`;
+
+const Ground = styled.div`
+  ${fullBleed}
+  height: ${GROUND_VISIBLE}px;
+  ${groundTexture}
+`;
+
+/* Pinned to the runway's bottom rather than left in flow. In flow it lands
+   immediately after the pinned box's *flow* position — near the top of the
+   runway — where it painted over the header and clipped the title. */
+const GroundTail = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: ${GROUND_TAIL}px;
+  ${groundTexture}
+  /* Continues the strip above rather than restarting the tile. */
+  background-position: center -${GROUND_VISIBLE}px;
 `;
 
 export default SolutionAnimation;

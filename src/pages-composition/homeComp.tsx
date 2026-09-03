@@ -360,8 +360,13 @@ const HomeWrapper = styled(ItemV)`
   /* The pink panel stands on the ground the 8-bit scene walks across, as the
      design draws it, so this one boundary drops the shared rhythm. The section's
      own bottom padding is removed in SolutionPanel. */
+  /* Pulled up over the ground's tail so the panel stands on it, with ground
+     still showing in the gutters either side. Matches SolutionAnimation's
+     GROUND_TAIL. */
   & > #built-to-scale {
-    margin-top: 0;
+    margin-top: -480px;
+    position: relative;
+    z-index: 1;
   }
 
   & #hero .contentBox {
