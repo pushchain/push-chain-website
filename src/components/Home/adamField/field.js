@@ -6,6 +6,9 @@
  * atlas and the WebGL-less poster) are written out as real files and passed in
  * by URL instead, and the tuning panel that came with the export is dropped.
  *
+ * `palettes` is exported alongside it so the caller can match the field's
+ * base colour to the page.
+ *
  * createAdamField(host, opts) builds its own scroll spacer and sticky pin
  * inside `host` and maps scroll position to the animation. It returns a handle
  * carrying `scroll.pin` (the sticky element), `burstProgress` (0..1 across the
@@ -1131,3 +1134,6 @@ async function Ce(e, n = {}) {
 }
 
 export { Ce as createAdamField };
+// The palette presets, so a caller can spread one and override a single
+// colour — the field's `base` has to match whatever page it sits on.
+export { se as palettes };

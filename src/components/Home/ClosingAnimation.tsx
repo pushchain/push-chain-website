@@ -24,6 +24,9 @@ import { device } from '@site/src/config/globals';
 /** Scroll distance the section holds for while the hands meet and burst. */
 const RUNWAY = 1600;
 
+/** The page's own background, which the field's base has to match. */
+const PAGE_BACKGROUND = '#000000';
+
 /** Burst progress over which the copy fades up, once the field has blown out. */
 const COPY_FADE_FROM = 0.72;
 const COPY_FADE_TO = 0.95;
@@ -63,8 +66,15 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
     };
 
     import('./adamField/field')
-      .then(({ createAdamField }) =>
-        createAdamField(host, { bin, atlas, poster })
+      .then(({ createAdamField, palettes }) =>
+        createAdamField(host, {
+          bin,
+          atlas,
+          poster,
+          // The preset's base is #090909, which reads as a lighter rectangle
+          // against the page's black. Everything else about the palette stays.
+          palette: { ...palettes.pushBrand, base: PAGE_BACKGROUND },
+        })
       )
       .then((created: any) => {
         if (cancelled) {
@@ -153,11 +163,13 @@ const Pinned = styled.div`
 
 /* The engine appends its canvas here and sizes it to fill. Capped to the
    viewport so a short window shrinks the field rather than cropping it. */
+/* Full width. The pinned box crops it vertically rather than the field being
+   shrunk to fit, and where the viewport is taller than the field its base now
+   matches the page so the edges are invisible. */
 const FieldHost = styled.div`
   grid-area: 1 / 1;
-  width: min(1440px, 100vw);
+  width: 100vw;
   aspect-ratio: 1440 / 750;
-  max-height: 100svh;
 
   canvas {
     display: block;
