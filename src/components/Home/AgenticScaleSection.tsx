@@ -282,7 +282,18 @@ const PinkCard = styled.div`
   max-width: calc(100% - 48px);
   padding: 40px;
   box-sizing: border-box;
-  background: var(--ifm-color-custom-pink);
+
+  /* A blurred plate rather than a solid fill, the way the hero's card is done:
+     the glyph raster behind it stays visible through the blur instead of being
+     covered by a flat rectangle. #d548ec is the same pink, carried at a
+     fraction of its opacity. */
+  background: rgba(213, 72, 236, 0.34);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
 
   @media ${device.laptop} {
     gap: 32px;

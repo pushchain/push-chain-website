@@ -57,6 +57,10 @@ const HEADER_GAP = 24;
 // Room left under the card before the fold.
 const FLOOR_GAP = 8;
 
+/* Gap between the two columns a card is built on -- the illustration and the
+   copy above, the two consequences below. */
+const STORY_GAP = 64;
+
 // A height change smaller than this is taken to be a phone's browser chrome
 // sliding, not a real viewport change.
 const VIEWPORT_NOISE = 120;
@@ -600,12 +604,12 @@ const StoryRow = styled.div`
   justify-content: space-between;
   flex-direction: ${(props) =>
     props.imageSide === 'right' ? 'row-reverse' : 'row'};
-  gap: 141px;
+  /* The same two-column grid the consequences below use, so the illustration's
+     left edge lands on the same line as the second consequence and as the
+     other card's copy. At the design's 141px gap with unequal columns it sat
+     ~85px right of both. */
+  gap: ${STORY_GAP}px;
   width: 100%;
-
-  @media ${device.laptopM} {
-    gap: 64px;
-  }
 
   @media ${device.laptop} {
     flex-direction: column;
@@ -627,12 +631,13 @@ const StoryFigure = styled.img`
      shrank the box, object-fit contain drew the picture short of its right
      edge and left a band of empty card beside it -- the taller the screen
      the smaller the cap, so it showed on some monitors and not others. */
-  /* The same column width as StoryText. The second card mirrors the pair, so
-     with the figure at the design's 497.5 and the copy at 465 the two cards'
-     right-hand columns started 32px apart. */
-  flex: 0 1 auto;
-  width: min(465px, calc(var(--figure-max, 300px) * (465 / 300)));
+  /* The other half of that grid. The picture is drawn at the cap's height and
+     sits at the column's left edge, so its left edge is what lines up -- the
+     slack falls to its right, where it reads as card, not as a gap in a row. */
+  flex: 0 0 calc((100% - ${STORY_GAP}px) / 2);
+  width: auto;
   max-width: 100%;
+  height: var(--figure-max, 300px);
   max-height: var(--figure-max, none);
   /* Reserve the box before the lazy image arrives, so the card is measured at
      its true height rather than collapsing and skipping the tight mode. */
@@ -656,9 +661,9 @@ const StoryText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 1 465px;
+  /* Half the row, matching the consequence columns. */
+  flex: 0 0 calc((100% - ${STORY_GAP}px) / 2);
   width: 100%;
-  max-width: 465px;
   min-width: 0;
 
   @media ${device.laptop} {
