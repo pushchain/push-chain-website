@@ -2,7 +2,7 @@
 title: "Block Explorer"
 url: "https://pushchain.github.io/docs/chain/setup/tooling/block-explorer/"
 section: "setup"
-lastUpdated: "2026-09-04T07:14:57Z"
+lastUpdated: "2026-09-04T07:28:43Z"
 description: "Block Explorer | Tooling | Setup | Push Chain Docs"
 ---
 
