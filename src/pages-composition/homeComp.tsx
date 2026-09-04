@@ -172,8 +172,13 @@ export default function HomeComp() {
                 color='var(--ifm-color-white)'
               >
                 {/* Three lines per Figma: "Everything runs on a" /
-                    "network that reaches" / "every other chain." */}
-                {t(AgentFeaturesListB.meta.title)}
+                    "network that reaches" / "every other chain." The first
+                    line is two spans so a phone can break between them rather
+                    than wrapping and leaving "a" alone on a line. */}
+                <span>{t(AgentFeaturesListB.meta.titleLine1a)}</span>{' '}
+                <span>{t(AgentFeaturesListB.meta.titleLine1b)}</span>
+                {'\n'}
+                {t(AgentFeaturesListB.meta.titleLine2)}
                 {'\n'}
                 <GradientWord>{t(AgentFeaturesListB.meta.titleGradient)}</GradientWord>
               </H2>
@@ -737,6 +742,12 @@ const GridBHeader = styled(ItemV)`
 
     @media ${device.mobileL} {
       font-size: 2rem;
+
+      /* Break after "runs" so the line reads "on a", rather than letting the
+         line wrap and strand "a" on one of its own. */
+      span:first-of-type {
+        display: block;
+      }
     }
   }
 

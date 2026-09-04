@@ -359,7 +359,9 @@
         }
       },
       "feature-grid-b": {
-        "title": "Everything runs on a\nnetwork that reaches",
+        "title-line1a": "Everything runs",
+        "title-line1b": "on a",
+        "title-line2": "network that reaches",
         "titleGradient": "every other chain.",
         "subtitle": "One settlement and execution layer, so any agent and any user can easily participate without bridging.",
         "section-aria-label": "Push Chain runs on a network that reaches every other chain",

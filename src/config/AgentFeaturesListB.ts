@@ -1,6 +1,8 @@
 export const AgentFeaturesListB = {
   meta: {
-    title: 'pages.home.feature-grid-b.title',
+    titleLine1a: 'pages.home.feature-grid-b.title-line1a',
+    titleLine1b: 'pages.home.feature-grid-b.title-line1b',
+    titleLine2: 'pages.home.feature-grid-b.title-line2',
     titleGradient: 'pages.home.feature-grid-b.titleGradient',
     subtitle: 'pages.home.feature-grid-b.subtitle',
   },

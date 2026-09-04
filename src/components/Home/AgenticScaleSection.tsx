@@ -283,17 +283,12 @@ const PinkCard = styled.div`
   padding: 40px;
   box-sizing: border-box;
 
-  /* A blurred plate rather than a solid fill, the way the hero's card is done:
-     the glyph raster behind it stays visible through the blur instead of being
-     covered by a flat rectangle. #d548ec is the same pink, carried at a
-     fraction of its opacity. */
-  background: rgba(213, 72, 236, 0.34);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
+  /* Blur alone, to settle the glyphs behind the title so it reads. At a third
+     of the pink's opacity with a border it still showed as a lighter box; the
+     hero's card is barely there, and this matches that. */
+  background: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   @media ${device.laptop} {
     gap: 32px;
@@ -333,10 +328,10 @@ const BannerHeading = styled.h2`
   color: var(--ifm-color-white);
   font-family: ${FONT_MONO};
   font-weight: 500;
-  /* The same size every other section heading uses. It was stepped down to
-     17px on a phone to keep its two lines unwrapped; the card now has a screen
-     to itself, so the lines wrap instead of the type shrinking. */
-  font-size: 3rem;
+  /* The one heading that keeps its own ladder rather than the shared section
+     size: it is two long lines inside a card, and at 3rem/2rem it took six
+     lines of that card to say them. */
+  font-size: 38px;
   letter-spacing: -0.06em;
   line-height: 1.2;
 
@@ -344,8 +339,16 @@ const BannerHeading = styled.h2`
     display: block;
   }
 
+  @media ${device.laptop} {
+    font-size: 28px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 22px;
+  }
+
   @media ${device.mobileL} {
-    font-size: 2rem;
+    font-size: 17px;
   }
 `;
 
