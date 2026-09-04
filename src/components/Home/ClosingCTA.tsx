@@ -22,7 +22,6 @@ const FONT_MONO = "'IBM Plex Mono', monospace";
 
 export default function ClosingCTA() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery(device.mobileL);
 
   return (
     <Section
@@ -37,7 +36,6 @@ export default function ClosingCTA() {
           <CTABody>
           <H2
             fontFamily={FONT_MONO}
-            fontSize={isMobile ? '1.75rem' : '3rem'}
             fontWeight='500'
             letterSpacing='-0.06em'
             lineHeight='120%'
@@ -67,6 +65,14 @@ export default function ClosingCTA() {
 }
 
 const CTABody = styled(ItemV)`
+  h2 {
+    font-size: 3rem;
+
+    @media ${device.mobileL} {
+      font-size: 1.75rem;
+    }
+  }
+
   align-items: center;
   justify-content: center;
   gap: 16px;

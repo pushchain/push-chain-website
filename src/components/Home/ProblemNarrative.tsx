@@ -22,6 +22,12 @@ import { ProblemNarrativeList } from '@site/src/config/ProblemNarrativeList';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// A phone's address bar sliding in and out changes the viewport height mid
+// scroll. Every one of those fires a resize, and refreshing pin positions
+// underneath a moving finger is what makes the page appear to jump to a
+// different section. Height-only changes are ignored for that reason.
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 // Runs before the browser paints on the client, and degrades to useEffect on
 // the server where layout effects are not available.
 const useIsomorphicLayoutEffect =
@@ -50,6 +56,10 @@ const HEADER_GAP = 24;
 
 // Room left under the card before the fold.
 const FLOOR_GAP = 8;
+
+// A height change smaller than this is taken to be a phone's browser chrome
+// sliding, not a real viewport change.
+const VIEWPORT_NOISE = 120;
 
 // Vertical space the card may occupy if the whole group is to sit on screen.
 const cardBudget = (headerHeight) => {
@@ -101,7 +111,6 @@ const DotGridIcon = () => (
 
 export default function ProblemNarrative() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery(device.mobileL);
 
   const stageRef = useRef(null);
   const viewportRef = useRef(null);
@@ -155,7 +164,41 @@ export default function ProblemNarrative() {
       // measures 0 and the budget below comes out too generous.
       const headerEl = viewportRef.current?.firstElementChild;
       const headerHeight = headerEl?.offsetHeight ?? 0;
-      const budget = cardBudget(headerHeight);
+
+      // Holding the title in the pin costs the card its own height. A desktop
+      // can afford that; a phone cannot -- the title runs to three lines, and
+      // with the browser's own chrome eating the rest there was never a figure
+      // small enough to fit, so the stack fell back to a plain list on every
+      // real handset. When the title does not fit, it scrolls away and only the
+      // cards pin. Decided by measurement, so a short desktop window gets the
+      // same treatment rather than being judged on its width.
+      // How much the card can actually give up. The illustration only yields
+      // the difference between the height it renders at and its floor -- below
+      // laptop it is bounded by the card's width, so that is tens of pixels,
+      // not the FIGURE_MAX - FIGURE_MIN a desktop has to trade.
+      const shownFigure = () =>
+        Math.max(
+          0,
+          ...Array.from(stage.querySelectorAll('img')).map((i) => i.offsetHeight)
+        );
+      const smallestCard =
+        natural - Math.max(0, shownFigure() - FIGURE_MIN) - TIGHT_SAVING;
+
+      const keepHeader = cardBudget(headerHeight) >= smallestCard;
+
+      // Dropped, the group hangs above the fold and the card owns everything
+      // from PIN_TOP down; cardBudget's header gap is already spent up there.
+      const budget = keepHeader
+        ? cardBudget(headerHeight)
+        : window.innerHeight - PIN_TOP - FLOOR_GAP;
+
+      // Park the group so the cards land at PIN_TOP either way: with the title
+      // dropped that means hanging the group's top above the fold by exactly
+      // the title's height.
+      stage.style.setProperty(
+        '--pin-top',
+        keepHeader ? `${PIN_TOP}px` : `${PIN_TOP - headerHeight - HEADER_GAP}px`
+      );
 
       // Everything in the card that is not the illustration — padding, the gap
       // to the consequences row, and the row itself.
@@ -197,12 +240,6 @@ export default function ProblemNarrative() {
       // figure is really rendering at, not off the cap: below laptop the
       // illustration is bounded by the card's width long before a 300px height
       // cap bites, so lowering the cap towards it changed nothing at all.
-      const shownFigure = () =>
-        Math.max(
-          0,
-          ...Array.from(stage.querySelectorAll('img')).map((i) => i.offsetHeight)
-        );
-
       let settled = inFlow();
       for (let pass = 0; pass < 3 && settled > budget; pass += 1) {
         figure = shownFigure() - (settled - budget);
@@ -231,6 +268,21 @@ export default function ProblemNarrative() {
 
     measure();
 
+    // Same reason as ignoreMobileResize above: re-measuring on a height-only
+    // change means re-measuring on every toolbar slide, which resizes the
+    // pinned box and drags the scroll position with it.
+    let lastW = window.innerWidth;
+    let lastH = window.innerHeight;
+    const onResize = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const widthChanged = w !== lastW;
+      const heightJumped = Math.abs(h - lastH) > VIEWPORT_NOISE;
+      lastW = w;
+      lastH = h;
+      if (widthChanged || heightJumped) measure();
+    };
+
     // Re-measure once webfonts land — IBM Plex Mono changes how the story copy
     // wraps, and therefore how tall each card is.
     if (document.fonts && document.fonts.ready) {
@@ -243,9 +295,9 @@ export default function ProblemNarrative() {
       if (!img.complete) img.addEventListener('load', measure);
     });
 
-    window.addEventListener('resize', measure);
+    window.addEventListener('resize', onResize);
     return () => {
-      window.removeEventListener('resize', measure);
+      window.removeEventListener('resize', onResize);
       figures.forEach((img) => img.removeEventListener('load', measure));
       cards.forEach((card) => {
         if (card) card.style.minHeight = '';
@@ -319,7 +371,6 @@ export default function ProblemNarrative() {
         <NarrativeHeader>
           <H2
             fontFamily={FONT_MONO}
-            fontSize={isMobile ? '2rem' : '3rem'}
             fontWeight='500'
             letterSpacing='-0.06em'
             lineHeight='120%'
@@ -376,7 +427,7 @@ export default function ProblemNarrative() {
                   </StoryText>
                 </StoryRow>
 
-                <ConsequenceRow flexDirection={isMobile ? 'column' : 'row'}>
+                <ConsequenceRow>
                   {vignette.consequences.map((consequence, i) => (
                     <ConsequenceItem key={i}>
                       <DotGridIcon />
@@ -407,6 +458,14 @@ export default function ProblemNarrative() {
 }
 
 const NarrativeHeader = styled(ItemV)`
+  h2 {
+    font-size: 3rem;
+
+    @media ${device.mobileL} {
+      font-size: 2rem;
+    }
+  }
+
   align-items: center;
   max-width: 780px;
   margin: 0 auto;
@@ -437,7 +496,7 @@ const Runway = styled.div`
 // the length of the runway, so the section reads as one piece.
 const PinnedViewport = styled.div`
   position: sticky;
-  top: ${PIN_TOP}px;
+  top: var(--pin-top, ${PIN_TOP}px);
 
   ${Stage}[data-pinned='false'] & {
     position: static;

@@ -18,7 +18,6 @@ const FONT_MONO = "'IBM Plex Mono', monospace";
 
 export default function SolutionPanel() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery(device.mobileL);
 
   return (
     <SolutionSection
@@ -33,10 +32,9 @@ export default function SolutionPanel() {
       <SolutionContent alignSelf='center' overflow='visible'>
         <SolutionAnimation
           copy={
-            <TextRow flexDirection={isMobile ? 'column' : 'row'}>
+            <TextRow>
               <H2
                 fontFamily={FONT_MONO}
-                fontSize={isMobile ? '1.75rem' : '3rem'}
                 fontWeight='500'
                 letterSpacing='-0.06em'
                 lineHeight='120%'
@@ -84,6 +82,14 @@ const SolutionContent = styled(Content)`
 `;
 
 const TextRow = styled(ItemH)`
+  h2 {
+    font-size: 3rem;
+
+    @media ${device.mobileL} {
+      font-size: 1.75rem;
+    }
+  }
+
   align-items: center;
   gap: 139px;
 

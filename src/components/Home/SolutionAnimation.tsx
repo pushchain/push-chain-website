@@ -55,6 +55,10 @@ const COPY_GAP = 24;
  */
 const MIN_STAGE = 280;
 
+// A height change smaller than this is a phone's browser chrome sliding, not a
+// real viewport change.
+const VIEWPORT_NOISE = 120;
+
 /** The composition's own size. The wider export needs no scaling to fill. */
 const COMP_W = 1920;
 const COMP_H = 849;
@@ -184,8 +188,24 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     };
 
     fit();
-    window.addEventListener('resize', fit);
-    return () => window.removeEventListener('resize', fit);
+
+    // A phone's address bar sliding changes innerHeight mid scroll, and this
+    // effect resizes the pinned box off that number -- doing it under a moving
+    // finger drags the scroll position and reads as the page jumping. Only a
+    // width change, or a height change too large to be browser chrome, counts.
+    let lastW = window.innerWidth;
+    let lastH = window.innerHeight;
+    const onResize = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const changed = w !== lastW || Math.abs(h - lastH) > VIEWPORT_NOISE;
+      lastW = w;
+      lastH = h;
+      if (changed) fit();
+    };
+
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, [data]);
 
   useEffect(() => {

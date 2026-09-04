@@ -19,10 +19,9 @@ import { device } from '@site/src/config/globals';
 
 export default function UniversalStatCallout() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery(device.mobileL);
 
   return (
-    <CalloutRow flexDirection={isMobile ? 'column' : 'row'}>
+    <CalloutRow>
       <CalloutLeft>
         <StatBlock>
           <StatValue>{t('pages.home.feature-grid-b.stat-callout.value')}</StatValue>

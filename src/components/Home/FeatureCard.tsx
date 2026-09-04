@@ -9,6 +9,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
+import { device } from '@site/src/config/globals';
+
 const FONT_MONO = "'IBM Plex Mono', monospace";
 
 export default function FeatureCard({ item }) {
@@ -136,8 +138,17 @@ const DividedCard = styled.div`
   padding: 32px;
   border-left: 1px solid #2c2c35;
 
+  /* Side by side, this is the rule between columns, so the first card must
+     not carry one. Stacked, it is a line down each card's left edge instead --
+     and dropping it from the first left that one card looking unfinished. */
   &:first-child {
     border-left: none;
+  }
+
+  @media ${device.laptop} {
+    &:first-child {
+      border-left: 1px solid #2c2c35;
+    }
   }
 `;
 

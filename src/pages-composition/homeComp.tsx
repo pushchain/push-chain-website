@@ -28,7 +28,6 @@ import {
   Section,
   Span,
 } from '@site/src/css/SharedStyling';
-import useMediaQuery from '@site/src/hooks/useMediaQuery';
 import useSmoothScroll from '@site/src/hooks/useSmoothScroll';
 
 import QnA from '@site/src/components/QnA/QnA';
@@ -59,7 +58,6 @@ export default function HomeComp() {
   const { t, i18n } = useTranslation();
   const { isHydrated, shouldShowAlertBar } = useContext(AccountContext);
 
-  const isMobile = useMediaQuery(device.mobileL);
 
   // Inertial scrolling for this page, wired into ScrollTrigger so the
   // problem-narrative stack stays in step with it.
@@ -83,7 +81,6 @@ export default function HomeComp() {
               <HeroBody>
                 <H1
                   zIndex='2'
-                  fontSize={isMobile ? '2.5rem' : '4rem'}
                   margin='0 0 24px 0'
                   fontWeight='500'
                   lineHeight='100%'
@@ -102,7 +99,6 @@ export default function HomeComp() {
                 <HeroDescription
                   color='var(--ifm-color-white)'
                   zIndex='2'
-                  fontSize={isMobile ? '1.125rem' : '1.25rem'}
                   fontWeight='400'
                   lineHeight='150%'
                   letterSpacing='0.4px'
@@ -163,10 +159,9 @@ export default function HomeComp() {
       >
         <Content>
           <MultiContent>
-            <GridBHeader flexDirection={isMobile ? 'column' : 'row'}>
+            <GridBHeader>
               <H2
                 fontFamily={FONT_MONO}
-                fontSize={isMobile ? '1.75rem' : '3rem'}
                 fontWeight='500'
                 letterSpacing='-0.06em'
                 lineHeight='120%'
@@ -189,7 +184,7 @@ export default function HomeComp() {
             </GridBHeader>
           </MultiContent>
           <MultiContent>
-            <FeatureGridRow flexDirection={isMobile ? 'column' : 'row'}>
+            <FeatureGridRow>
               {AgentFeaturesListB.cards.map((item) => (
                 <FeatureCard key={item.id} item={item} />
               ))}
@@ -241,8 +236,7 @@ export default function HomeComp() {
               </H2>
             </ItemH>
 
-            {!isMobile && (
-              <ItemH justifyContent='flex-end'>
+              <BlogExploreLink justifyContent='flex-end'>
                 <SlideLink
                   href='/blog'
                   title={t('pages.home.blog-section.explore-link-title')}
@@ -263,8 +257,7 @@ export default function HomeComp() {
                   </SpanLink>
                   <BsArrowRight className='anchorSVGlink' aria-hidden='true' />
                 </SlideLink>
-              </ItemH>
-            )}
+              </BlogExploreLink>
           </ItemH>
 
           <H2
@@ -492,6 +485,18 @@ const HeroItem = styled(ItemV)`
 `;
 
 const HeroBody = styled(ItemV)`
+  /* Sized here rather than from a media-query hook. The hook cannot know the
+     width while the page is being built, so it answers "desktop", and the
+     first paint on a phone was the 4rem heading running off the side of the
+     screen until hydration corrected it. */
+  h1 {
+    font-size: 4rem;
+
+    @media ${device.mobileL} {
+      font-size: 2.5rem;
+    }
+  }
+
   text-align: left;
   /* Stretched to the 970px column rather than shrink-wrapped to the longest
      line, because the plate below is sized from this box. Shrink-wrapped it
@@ -562,6 +567,12 @@ const HeroBody = styled(ItemV)`
    970px column. Constrain it rather than letting it run the full width, which
    would re-break it as the window grows. */
 const HeroDescription = styled(Span)`
+  font-size: 1.25rem;
+
+  @media ${device.mobileL} {
+    font-size: 1.125rem;
+  }
+
   max-width: 700px;
   margin: 0 auto;
 
@@ -663,6 +674,14 @@ const GridContent = styled(Content)`
   }
 `;
 
+/* Hidden with CSS rather than left out of the tree: dropped by a media-query
+   hook it was present in the statically built HTML and vanished on hydration. */
+const BlogExploreLink = styled(ItemH)`
+  @media ${device.mobileL} {
+    display: none;
+  }
+`;
+
 const FeatureGridRow = styled(ItemH)`
   gap: 24px;
   align-items: stretch;
@@ -680,6 +699,14 @@ const FeatureGridRow = styled(ItemH)`
 `;
 
 const GridBHeader = styled(ItemV)`
+  h2 {
+    font-size: 3rem;
+
+    @media ${device.mobileL} {
+      font-size: 1.75rem;
+    }
+  }
+
   /* Figma node 49243:16611 — 115px gap, baseline-aligned via items-end. */
   gap: 115px;
   align-items: flex-end;

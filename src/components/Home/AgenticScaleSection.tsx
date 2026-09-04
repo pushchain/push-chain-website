@@ -56,7 +56,6 @@ const ROW_TWO_HEIGHT = 418;
 
 export default function AgenticScaleSection() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery(device.mobileL);
 
   return (
     <GroundGroup id='built-to-scale-group'>
@@ -89,13 +88,13 @@ export default function AgenticScaleSection() {
           <BodyInner>
             <GridTitle>{t(AgentFeaturesListA.meta.title)}</GridTitle>
 
-            <CardRow $height={isMobile ? null : ROW_ONE_HEIGHT}>
+            <CardRow $height={ROW_ONE_HEIGHT}>
               {AgentFeaturesListA.rowOne.map((item) => (
                 <FeatureCard key={item.id} item={item} />
               ))}
             </CardRow>
 
-            <CardRow $height={isMobile ? null : ROW_TWO_HEIGHT}>
+            <CardRow $height={ROW_TWO_HEIGHT}>
               {AgentFeaturesListA.rowTwo.map((item) => (
                 <FeatureCard key={item.id} item={item} />
               ))}

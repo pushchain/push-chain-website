@@ -36,7 +36,6 @@ const chainIcon = (name) => {
 
 export default function PaidStatsRow() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery(device.mobileL);
 
   return (
     <Section
@@ -62,10 +61,9 @@ export default function PaidStatsRow() {
           </Span>
         </Eyebrow>
 
-        <PaidHeaderRow flexDirection={isMobile ? 'column' : 'row'}>
+        <PaidHeaderRow>
           <TitleBlock
             fontFamily={FONT_MONO}
-            fontSize={isMobile ? '1.75rem' : '3rem'}
             fontWeight='500'
             letterSpacing='-0.06em'
             lineHeight='120%'
@@ -87,7 +85,7 @@ export default function PaidStatsRow() {
             <Lottie animationData={instantInteroperability} loop autoplay />
           </LinesAnimation>
 
-          <StatRow flexDirection={isMobile ? 'column' : 'row'}>
+          <StatRow>
           {PaidStatsList.stats.map((stat) => (
             <StatItem key={stat.id} $fill={stat.type === 'text'}>
               <StatTitle>{t(stat.titleKey)}</StatTitle>
@@ -205,6 +203,14 @@ const Eyebrow = styled(ItemH)`
 `;
 
 const PaidHeaderRow = styled(ItemV)`
+  h2 {
+    font-size: 3rem;
+
+    @media ${device.mobileL} {
+      font-size: 1.75rem;
+    }
+  }
+
   flex-direction: row;
   align-items: center;
   /* Figma pins the paragraph to the right edge of the 1200px content block
