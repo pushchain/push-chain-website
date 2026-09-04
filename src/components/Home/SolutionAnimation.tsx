@@ -119,8 +119,33 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const dataUrl = useBaseUrl('/assets/website/home/solution/push-8bit.json');
 
   // 3MB of shape data, so it is fetched rather than bundled — it is served
-  // gzipped at about 83KB and stays out of the JS chunk entirely.
+  // gzipped at about 83KB and stays out of the JS chunk entirely. The transfer
+  // is small but parsing it and building the several thousand nodes it draws is
+  // not, so that work waits until the section is within a screen or two rather
+  // than competing with everything else during the initial load.
+  const [near, setNear] = useState(false);
   useEffect(() => {
+    const runway = runwayRef.current;
+    if (!runway) return undefined;
+    if (typeof IntersectionObserver !== 'function') {
+      setNear(true);
+      return undefined;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setNear(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: '150% 0px' }
+    );
+    io.observe(runway);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!near) return undefined;
     let cancelled = false;
     fetch(dataUrl)
       .then((r) => r.json())
@@ -134,7 +159,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     return () => {
       cancelled = true;
     };
-  }, [dataUrl]);
+  }, [dataUrl, near]);
 
   // Decide whether the whole composition — copy, scene and the strip of ground
   // the next section sits on — fits the viewport, and size the scene to what is
