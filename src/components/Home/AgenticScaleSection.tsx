@@ -28,22 +28,22 @@ const FONT_MONO = "'IBM Plex Mono', monospace";
 // constrain it — that's what makes it read as full-bleed.
 const PANEL_INSET = 18.5;
 
-/* The ground tile's native size, and the checker cell measured in it. */
+/* The ground tile's native size. It is the scene's own ground image with the
+   top cropped off -- the part the animation already draws -- so it continues
+   only if it is drawn at the width the animation draws that image at, which is
+   the full viewport. Matching a checker cell instead put it about fifteen
+   times too small. */
+const GROUND_TILE_W = 1222;
 const GROUND_TILE_H = 623;
-const GROUND_TILE_CELL = 100;
 
-/* The scene's own floor, measured off a 1512px-wide render: an 8px cell, which
-   is 8 * 1920 / 1512 in the 1920-wide composition. */
-const SCENE_GROUND_CELL = (8 * 1920) / 1512;
-
-/* So one tile, drawn at the scene's scale, is this fraction of the viewport. */
-const GROUND_TILE_SCALE = (
-  (GROUND_TILE_H * (SCENE_GROUND_CELL / GROUND_TILE_CELL)) /
-  1920
-).toFixed(5);
-
-/* How many of those tiles the strip runs for before it stops. */
-const GROUND_TILE_RUN = 6;
+/* Both textures measured off a 1512px-wide render by autocorrelating a
+   scanline: the scene's floor repeats every 39.8px, and this tile every 63.2px
+   when drawn at the full viewport width. Drawn at this fraction of the
+   viewport the two repeat at the same size, which is what makes the strip read
+   as the scene's floor carrying on rather than a different texture. The scene
+   is drawn larger than the viewport below laptop, so the strip follows it
+   through --scene-scale rather than drifting out of step with it. */
+const GROUND_TILE_FIT = 39.8 / 63.2;
 
 // Vertical anchors, in design pixels measured from the top of that plate.
 const VISUAL_HEIGHT = 726; // image 32 — the slot for the incoming animation
@@ -53,6 +53,10 @@ const BLEND_HEIGHT = 544;
 const BODY_TOP = 743; // Frame 37246
 const ROW_ONE_HEIGHT = 534;
 const ROW_TWO_HEIGHT = 418;
+
+/* How far the plate's tail runs below the panel before it is page colour. Far
+   enough to carry past the section boundary and behind the next heading. */
+const PANEL_TAIL_H = 420;
 
 export default function AgenticScaleSection() {
   const { t } = useTranslation();
@@ -102,6 +106,7 @@ export default function AgenticScaleSection() {
           </BodyInner>
         </Body>
       </Panel>
+        <PanelTail aria-hidden='true' />
     </GroundSection>
       <GroundSpacer aria-hidden='true' />
     </GroundGroup>
@@ -147,35 +152,28 @@ const GroundSection = styled(Section)`
     top: var(--solution-pin-bottom, 0px);
   }
 
-  /* One strip of ground down each side of the inset panel, drawn at the scale
-     the scene above draws its own floor at so the two read as one surface.
-     ${GROUND_TILE_H}px was the tile's native height and it was used as-is,
-     which made these checks about twelve times the size of the animation's --
-     the asset is a ${Math.round(
-       GROUND_TILE_CELL / SCENE_GROUND_CELL
-     )}x export. Matching the cell instead ties the strip to the viewport, the
-     same way the scene is tied to it. Repeated for a few tiles and then
-     stopped, rather than running the section's whole height. */
-  &::before,
-  &::after {
+  /* One tile-high band of ground across the top of the section, drawn at the
+     scale the scene above draws its floor at so the two read as one surface.
+     It repeats sideways, not down: the panel covers the middle, so what shows
+     is the strip either side of it. */
+  &::before {
     content: '';
     position: absolute;
     top: 0;
-    width: ${PANEL_INSET}px;
-    height: calc(${GROUND_TILE_RUN} * 100vw * ${GROUND_TILE_SCALE});
+    left: 0;
+    right: 0;
+    height: calc(
+      100vw * ${GROUND_TILE_FIT.toFixed(4)} * var(--scene-scale, 1) *
+        ${GROUND_TILE_H} / ${GROUND_TILE_W}
+    );
     background-image: url('/assets/website/home/solution/ground-tile.webp');
-    background-repeat: repeat-y;
-    background-size: auto calc(100vw * ${GROUND_TILE_SCALE});
+    background-repeat: repeat-x;
+    background-size: calc(
+        100vw * ${GROUND_TILE_FIT.toFixed(4)} * var(--scene-scale, 1)
+      )
+      auto;
     image-rendering: pixelated;
     pointer-events: none;
-  }
-
-  &::before {
-    left: 0;
-  }
-
-  &::after {
-    right: 0;
   }
 `;
 
@@ -188,15 +186,16 @@ const Panel = styled.div`
   /* Figma's Rectangle 42282 stops, at their design pixel offsets. #fbe9fe is a
      single peak at 1207px — not a plateau — so the light stays a narrow band
      around the first card row and darkens continuously from there, reaching
-     #180621 just below the second row (which ends ~1841px). The tail is only
-     carried far enough to settle on the page colour without banding. */
+     its darkest exactly at the panel's edge -- reaching it 144px above that
+     made the purple read as starting before the section's block had ended.
+     PanelTail carries the colour on below the section, as the design does; a
+     black stop here would put a seam across the join. */
   background: linear-gradient(
     180deg,
     #d548ec 0px,
     #d548ec 454px,
     #fbe9fe 1207px,
-    #180621 1894px,
-    var(--ifm-color-black) 97%
+    #180621 100%
   );
 
   @media ${device.mobileL} {
@@ -209,9 +208,33 @@ const Panel = styled.div`
       #d548ec 0%,
       #d548ec 17%,
       #fbe9fe 46%,
-      #180621 72%,
-      var(--ifm-color-black) 95%
+      #180621 100%
     );
+  }
+`;
+
+/* In the design the plate's dark end carries on past the panel and the next
+   section's heading sits on it; the panel clips its own background, so the
+   tail has to be drawn outside it. Positioned off the section's bottom edge so
+   it adds no height -- it reaches down over the boundary and settles on the
+   page colour, and the section below paints over it in the normal way. */
+const PanelTail = styled.div`
+  position: absolute;
+  top: 100%;
+  left: ${PANEL_INSET}px;
+  right: ${PANEL_INSET}px;
+  height: ${PANEL_TAIL_H}px;
+  background: linear-gradient(
+    180deg,
+    #180621 0%,
+    var(--ifm-color-black) 100%
+  );
+  pointer-events: none;
+
+  @media ${device.mobileL} {
+    left: 12px;
+    right: 12px;
+    height: ${Math.round(PANEL_TAIL_H * 0.6)}px;
   }
 `;
 

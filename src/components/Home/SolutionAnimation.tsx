@@ -59,6 +59,18 @@ const MIN_STAGE = 280;
 // real viewport change.
 const VIEWPORT_NOISE = 120;
 
+/* Room left under the scene before the fold when the copy is not pinned. */
+const FLOOR_GAP = 8;
+
+/* The comp is 1920 wide, so at a phone's full width it renders about 170px
+   tall -- a thin strip with the section below showing through the rest of the
+   pinned box. Below laptop it is instead drawn large enough to fill the height
+   the pin has to give, and the stage crops the ends: the comp pans with the
+   character, so what goes is the empty lead-in and run-out at each moment
+   rather than the steps themselves. Never smaller than full width. */
+const sceneScaleFor = (availableH, stageW) =>
+  Math.max(1, (availableH * COMP_W) / COMP_H / stageW);
+
 /** The composition's own size. The wider export needs no scaling to fill. */
 const COMP_W = 1920;
 const COMP_H = 849;
@@ -122,18 +134,46 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     const fit = () => {
       // The strip of ground below the scene is outside the pinned box, so it
       // costs nothing here — the scene gets everything the copy leaves.
-      const available =
-        window.innerHeight - PIN_TOP - copyEl.offsetHeight - COPY_GAP;
+      const copyH = copyEl.offsetHeight;
+      const withCopy = window.innerHeight - PIN_TOP - copyH - COPY_GAP;
+
+      // Holding the copy in the pin costs the scene its height. On a phone the
+      // copy runs to ~305px and the browser's own chrome takes the rest, so
+      // there was nothing left for the scene and it never pinned at all --
+      // meaning the animation never ran. When the copy will not fit it scrolls
+      // away and only the scene pins. Decided by measurement, so a short
+      // desktop window is treated the same rather than judged on its width.
+      const keepCopy = withCopy >= MIN_STAGE;
+      const available = keepCopy
+        ? withCopy
+        : window.innerHeight - PIN_TOP - FLOOR_GAP;
       const pinned = available >= MIN_STAGE;
+
+      // Park the group so the scene lands at PIN_TOP either way: with the copy
+      // dropped that means hanging the group's top above the fold by exactly
+      // the copy's height.
+      runway.style.setProperty(
+        '--scene-pin-top',
+        keepCopy ? `${PIN_TOP}px` : `${PIN_TOP - copyH - COPY_GAP}px`
+      );
+
       runway.dataset.pinned = String(pinned);
       stage.style.height = pinned ? `${Math.round(available)}px` : '';
 
       // Slide the comp so its ground line lands just above the stage's bottom
       // edge. Centring it — which is what a plain `slice` does — cut the
       // character in half on a short viewport.
+      const wide =
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia(device.laptop).matches;
+      const sceneScale = wide
+        ? sceneScaleFor(available, stage.offsetWidth)
+        : 1;
+
       const host = stage.firstElementChild as HTMLElement | null;
       if (host) {
-        const renderW = stage.offsetWidth;
+        const stageW = stage.offsetWidth;
+        const renderW = stageW * sceneScale;
         const renderH = (renderW * COMP_H) / COMP_W;
         const stageH = stage.offsetHeight;
 
@@ -169,7 +209,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
-        host.style.left = '0px';
+        host.style.left = `${Math.round((stageW - renderW) / 2)}px`;
         host.style.top = `${offset}px`;
       }
 
@@ -181,6 +221,9 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         '--solution-pin-bottom',
         `${pinned ? PIN_TOP + pinnedEl.offsetHeight : 0}px`
       );
+      // The ground strip below carries on from this scene's floor, so it has to
+      // be drawn at whatever scale the scene ended up at.
+      root.style.setProperty('--scene-scale', String(sceneScale));
       root.style.setProperty(
         '--solution-travel',
         `${pinned ? Math.max(0, runway.offsetHeight - pinnedEl.offsetHeight) : 0}px`
@@ -362,7 +405,7 @@ const Runway = styled.div`
    design's own spacing. */
 const Pinned = styled.div`
   position: sticky;
-  top: ${PIN_TOP}px;
+  top: var(--scene-pin-top, ${PIN_TOP}px);
 
   ${Runway}[data-pinned='false'] & {
     position: static;
