@@ -1,6 +1,6 @@
 // React + Web3 Essentials
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // External Components
 import styled from 'styled-components';
@@ -21,11 +21,9 @@ import { device } from '@site/src/config/globals';
  * the explosion and the copy is faded in against the tail of it.
  */
 
-/**
- * How much wider than the viewport the field is drawn below laptop. Higher
- * covers more of the screen and crops more of the hands' outer travel.
- */
-const FIELD_MOBILE_SCALE = 1.7;
+/** The two compositions' aspect ratios, from their own grids: 120x62 and 60x106. */
+const WIDE_ASPECT = '1440 / 750';
+const TALL_ASPECT = '60 / 106';
 
 /** Scroll distance the section holds for while the hands meet and burst. */
 const RUNWAY = 1600;
@@ -51,9 +49,33 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
   const hostRef = useRef<HTMLDivElement | null>(null);
   const copyRef = useRef<HTMLDivElement | null>(null);
 
-  const bin = useBaseUrl('/assets/website/home/closing/adamfield.bin');
+  // Two compositions of the same scene. The desktop one is 120x62 cells, near
+  // 2:1, and on a phone it can only ever be a band across the middle. The
+  // mobile one is 60x106 -- portrait, built to fill the screen. They share the
+  // glyph atlas.
+  const wideBin = useBaseUrl('/assets/website/home/closing/adamfield.bin');
+  const tallBin = useBaseUrl('/assets/website/home/closing/adamfield-mobile.bin');
   const atlas = useBaseUrl('/assets/website/home/closing/adamfield-atlas.png');
-  const poster = useBaseUrl('/assets/website/home/closing/adamfield-poster.png');
+  const widePoster = useBaseUrl(
+    '/assets/website/home/closing/adamfield-poster.png'
+  );
+  const tallPoster = useBaseUrl(
+    '/assets/website/home/closing/adamfield-mobile-poster.png'
+  );
+
+  // Bumped when the viewport crosses the breakpoint, so the field is rebuilt
+  // with the other composition. Which one to use is read inside that effect
+  // rather than held in state: as state the first render is always the wide
+  // one, so a phone fetched that composition before replacing it with the
+  // portrait one.
+  const [breakpoint, setBreakpoint] = useState(0);
+  useEffect(() => {
+    if (typeof window.matchMedia !== 'function') return undefined;
+    const mq = window.matchMedia(device.laptop);
+    const bump = () => setBreakpoint((n) => n + 1);
+    mq.addEventListener('change', bump);
+    return () => mq.removeEventListener('change', bump);
+  }, []);
 
   useEffect(() => {
     const runway = runwayRef.current;
@@ -65,6 +87,14 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
     let field: any = null;
     let raf = 0;
     let cancelled = false;
+
+    // Which composition this viewport gets, and the sizing that goes with it.
+    const tall =
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia(device.laptop).matches;
+    host.dataset.tall = String(tall);
+    const bin = tall ? tallBin : wideBin;
+    const poster = tall ? tallPoster : widePoster;
 
     const reduced = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
@@ -148,7 +178,7 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
       if (raf) cancelAnimationFrame(raf);
       field?.destroy?.();
     };
-  }, [bin, atlas, poster]);
+  }, [wideBin, tallBin, atlas, widePoster, tallPoster, breakpoint]);
 
   // The tail trim below needs the copy's height, which depends on how the
   // headline wraps, so publish it rather than guessing a constant.
@@ -224,26 +254,25 @@ const Pinned = styled.div`
    shrunk to fit, and where the viewport is taller than the field its base now
    matches the page so the edges are invisible. */
 const FieldHost = styled.div`
-  /* Taken out of the grid rather than placed in it. Below laptop this is drawn
-     wider than the viewport, and as a grid item that widened the shared track,
-     which dragged the copy -- sized at 100% of it -- off the side of the
-     screen. Absolute keeps it from sizing anything, and centres it on both
-     axes inside the pinned box. */
+  /* Taken out of the grid rather than placed in it. Drawn larger than the
+     viewport, a grid item widened the shared track and the copy -- sized at
+     100% of it -- went off the side of the screen with it. Absolute sizes
+     nothing, and centres it on both axes inside the pinned box. */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
-  aspect-ratio: 1440 / 750;
   pointer-events: none;
 
-  /* The composition is 1440 wide, so at a phone's full width it is only ~200px
-     tall and the hands read as a thin band. Drawn wider than the viewport it
-     covers more of the screen; the pinned box clips the sides. The hands start
-     apart and travel inward, so what is lost is the outer reach of that
-     approach, not the meeting or the burst. */
-  @media ${device.laptop} {
-    width: ${FIELD_MOBILE_SCALE * 100}vw;
+  /* The wide composition, drawn at the viewport's width. */
+  width: 100vw;
+  aspect-ratio: ${WIDE_ASPECT};
+
+  /* The portrait one covers the screen instead: scaled so neither axis falls
+     short, which leaves a little of its width outside the pinned box's clip. */
+  &[data-tall='true'] {
+    width: max(100vw, calc(100svh * ${TALL_ASPECT}));
+    aspect-ratio: ${TALL_ASPECT};
   }
 
   canvas {
