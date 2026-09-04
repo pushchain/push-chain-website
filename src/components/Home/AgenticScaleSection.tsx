@@ -51,8 +51,8 @@ const PINK_CARD_TOP = 177;
 const BLEND_TOP = 552; // Rectangle 42285
 const BLEND_HEIGHT = 544;
 const BODY_TOP = 743; // Frame 37246
-const ROW_ONE_HEIGHT = 534;
-const ROW_TWO_HEIGHT = 418;
+const ROW_ONE_HEIGHT = 400;
+const ROW_TWO_HEIGHT = 330;
 
 /* How far the plate's tail runs below the panel before it is page colour. Far
    enough to carry past the section boundary and behind the next heading. */
@@ -238,22 +238,13 @@ const PanelTail = styled.div`
   }
 `;
 
+/* The title holds a screen of its own, with the grid below starting on the
+   next one. A floor keeps it from collapsing on a very short window. */
 const TopVisual = styled.div`
   position: relative;
   width: 100%;
-  height: ${VISUAL_HEIGHT}px;
-
-  @media ${device.laptop} {
-    height: 560px;
-  }
-
-  @media ${device.tablet} {
-    height: 440px;
-  }
-
-  @media ${device.mobileL} {
-    height: 320px;
-  }
+  height: 100svh;
+  min-height: 420px;
 `;
 
 const RingArtwork = styled.div`
@@ -272,10 +263,12 @@ const RingArtwork = styled.div`
 `;
 
 const PinkCard = styled.div`
+  /* Centred in that screen rather than hung from a fixed offset, so the space
+     around it grows evenly with the viewport. */
   position: absolute;
-  top: ${PINK_CARD_TOP}px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -289,19 +282,16 @@ const PinkCard = styled.div`
   background: var(--ifm-color-custom-pink);
 
   @media ${device.laptop} {
-    top: 140px;
     gap: 32px;
     padding: 32px 24px;
     max-width: calc(100% - 48px);
   }
 
   @media ${device.tablet} {
-    top: 110px;
     gap: 24px;
   }
 
   @media ${device.mobileL} {
-    top: 72px;
     gap: 16px;
     padding: 24px 16px;
     max-width: calc(100% - 32px);
@@ -417,7 +407,7 @@ const GridTitle = styled.h2`
 
   @media ${device.mobileL} {
     margin: 0 0 8px 0;
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 `;
 

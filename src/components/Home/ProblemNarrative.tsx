@@ -390,7 +390,7 @@ export default function ProblemNarrative() {
             textAlign='center'
             letterSpacing='0.4px'
             lineHeight='150%'
-            margin='32px 0 0 0'
+            margin='16px 0 0 0'
           >
             {t(ProblemNarrativeList.meta.subtitle)}
           </Span>
@@ -697,7 +697,9 @@ const ConsequenceRow = styled(ItemH)`
 
 const ConsequenceItem = styled(ItemH)`
   flex: 1;
-  align-items: flex-start;
+  /* The dot-grid mark centres against its line of text rather than hanging off
+     the first line's top. */
+  align-items: center;
   justify-content: flex-start;
   flex-wrap: nowrap;
   gap: 24px;

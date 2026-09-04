@@ -34,7 +34,7 @@ const STEP_SCROLL = 620;
  * smoother and lazier, higher tracks the finger more tightly. This is what
  * carries the deceleration the timed spans used to provide.
  */
-const SCRUB_DAMPING = 0.12;
+const SCRUB_DAMPING = 0.1;
 
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -344,7 +344,13 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const span = progress * (STOPS.length - 1);
       const i = Math.min(STOPS.length - 2, Math.floor(span));
       const within = span - i;
-      return STOPS[i] + (STOPS[i + 1] - STOPS[i]) * within;
+
+      // Eased across each span rather than run at a flat rate. The spans are
+      // different lengths in frames, so a linear read changes speed abruptly
+      // at every stop; smoothstep settles into each one and picks up again
+      // into the next.
+      const eased = within * within * (3 - 2 * within);
+      return STOPS[i] + (STOPS[i + 1] - STOPS[i]) * eased;
     };
 
     // Follow that target rather than snapping to it: a fraction of the gap is

@@ -69,7 +69,7 @@ const CTABody = styled(ItemV)`
     font-size: 3rem;
 
     @media ${device.mobileL} {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
   }
 

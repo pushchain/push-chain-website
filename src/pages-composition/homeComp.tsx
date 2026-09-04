@@ -89,9 +89,13 @@ export default function HomeComp() {
                   color='var(--ifm-color-white)'
                   maxWidth='970px'
                 >
-                  {/* Two fixed lines per Figma (node 49113:88). Left to wrap
-                      naturally this re-breaks as the window widens. */}
-                  <span>{t('pages.home.hero-section.title-line1')}</span>
+                  {/* Fixed break points per Figma (node 49113:88) -- left to
+                      wrap naturally this re-breaks as the window widens. Line
+                      one is two spans so the phone can break between them:
+                      "Verification / for the / Agentic Internet." where a
+                      desktop reads "Verification for the / Agentic Internet." */}
+                  <span>{t('pages.home.hero-section.title-line1a')}</span>{' '}
+                  <span>{t('pages.home.hero-section.title-line1b')}</span>
                   <br />
                   <span>{t('pages.home.hero-section.title-line2')}</span>
                 </H1>
@@ -494,6 +498,11 @@ const HeroBody = styled(ItemV)`
 
     @media ${device.mobileL} {
       font-size: 2.5rem;
+
+      /* Break after "Verification" and keep "Agentic Internet." whole. */
+      span {
+        display: block;
+      }
     }
   }
 
@@ -718,7 +727,7 @@ const GridBHeader = styled(ItemV)`
     font-size: 3rem;
 
     @media ${device.mobileL} {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
   }
 
@@ -732,7 +741,9 @@ const GridBHeader = styled(ItemV)`
   @media ${device.laptop} {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    /* Stacked, this is the gap between a title and its subtext, which is 16px
+       everywhere on the page. */
+    gap: 16px;
 
     h2,
     span {

@@ -65,9 +65,10 @@ const BorderedCard = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* Figma seats the illustration at the top of the card and the copy at the
-     bottom (e.g. 49242:16565 — a 197px mark, then the text block at y=221). */
-  justify-content: space-between;
+  /* Figma seats the illustration at the top and the copy at the bottom, but
+     spread across the row's floor that left a wide band of nothing between
+     them. They now sit together under the mark. */
+  justify-content: flex-start;
   /* Figma's stroke is a vertical linear gradient — #ffffff at the top to
      #eb8afb at the bottom — drawn at 25% opacity, Outside, 1px. Extracted from
      the node's alpha channel (alpha 63/255 = 24.7%).
@@ -86,7 +87,7 @@ const BorderedCard = styled.div`
       border-box;
   border: 1px solid transparent;
   border-radius: 24px;
-  padding: 32px;
+  padding: 24px;
   box-sizing: border-box;
 `;
 
@@ -96,7 +97,7 @@ const CardFigure = styled.img`
   display: block;
   max-width: 100%;
   object-fit: contain;
-  margin: ${(props) => (props.wide ? '0 0 24px 0' : '0 auto 24px auto')};
+  margin: ${(props) => (props.wide ? '0 0 12px 0' : '0 auto 12px auto')};
 
   /* Two of the marks export with a viewBox but no width/height, so they need a
      size given to them; the aspect comes from the viewBox. Figma draws them at
@@ -105,7 +106,7 @@ const CardFigure = styled.img`
     props.wide
       ? `width: 100%;
          height: auto;`
-      : `height: 200px;
+      : `height: 168px;
          width: auto;`}
 `;
 
@@ -122,8 +123,9 @@ const BorderedTitle = styled.p`
 `;
 
 const BorderedDescription = styled.p`
-  /* Figma spaces the title and body by 24px (spacing-md), not 16px. */
-  margin: 24px 0 0 0;
+  /* The gap comes from CardBody, which is 16px like every other title and its
+     subtext on the page; a margin here would stack on top of it. */
+  margin: 0;
   font-size: 1rem;
   letter-spacing: -0.02em;
   line-height: 1.5;
@@ -134,7 +136,7 @@ const DividedCard = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   padding: 32px;
   border-left: 1px solid #2c2c35;
 
@@ -160,7 +162,8 @@ const IconImage = styled.img`
 const CardBody = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  /* 16px between a title and its description, as everywhere else. */
+  gap: 16px;
 `;
 
 const DividedTitle = styled.p`

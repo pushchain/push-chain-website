@@ -21,6 +21,12 @@ import { device } from '@site/src/config/globals';
  * the explosion and the copy is faded in against the tail of it.
  */
 
+/**
+ * How much wider than the viewport the field is drawn below laptop. Higher
+ * covers more of the screen and crops more of the hands' outer travel.
+ */
+const FIELD_MOBILE_SCALE = 1.7;
+
 /** Scroll distance the section holds for while the hands meet and burst. */
 const RUNWAY = 1600;
 
@@ -212,6 +218,17 @@ const FieldHost = styled.div`
   grid-area: 1 / 1;
   width: 100vw;
   aspect-ratio: 1440 / 750;
+
+  /* The composition is 1440 wide, so at a phone's full width it is only ~200px
+     tall and the hands read as a thin band across the middle of the screen.
+     Below laptop it is drawn wider than the viewport so it covers more of the
+     screen; the pin box clips the sides. The hands start apart and travel
+     inward, so what is lost is the outer reach of that approach, not the
+     meeting or the burst that follows it. */
+  @media ${device.laptop} {
+    width: ${FIELD_MOBILE_SCALE * 100}vw;
+    justify-self: center;
+  }
 
 
   canvas {
