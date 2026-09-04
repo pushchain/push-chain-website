@@ -2,7 +2,7 @@
 title: "Smart Contract Address Book"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-address-book/"
 section: "setup"
-lastUpdated: "2026-09-04T07:28:43Z"
+lastUpdated: "2026-09-04T10:06:02Z"
 description: "Smart Contract Address Book | Setup | Push Chain Docs"
 ---
 

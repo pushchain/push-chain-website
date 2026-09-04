@@ -2,7 +2,7 @@
 title: "Button Theme Overrides Example"
 url: "https://pushchain.github.io/docs/chain/ui-kit/examples/button-theme-overrides-example/"
 section: "ui-kit"
-lastUpdated: "2026-09-04T07:28:43Z"
+lastUpdated: "2026-09-04T10:06:02Z"
 description: "Button Theme Overrides Example | Examples | UI Kit | Push Chain Docs"
 ---
 
