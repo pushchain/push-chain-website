@@ -57,9 +57,14 @@ const HEADER_GAP = 24;
 // Room left under the card before the fold.
 const FLOOR_GAP = 8;
 
-/* Gap between the two columns a card is built on -- the illustration and the
-   copy above, the two consequences below. */
-const STORY_GAP = 64;
+/* Figma 37218 splits the card's 1104px row as 497.5 illustration, 141.5 gap,
+   465 copy. Held as proportions so they hold on a row wider than the design's;
+   space-between turns the remainder back into that gap. */
+const FIGURE_COL = '45.06%';
+const TEXT_COL = '42.12%';
+
+/* The illustrations are 998x602. */
+const FIGURE_RATIO = '998 / 602';
 
 // A height change smaller than this is taken to be a phone's browser chrome
 // sliding, not a real viewport change.
@@ -75,7 +80,10 @@ const cardBudget = (headerHeight) => {
 // and the consequences row have a natural floor. Shrinking it buys back enough
 // height to keep the group pinned on a short laptop, where the full-size card
 // would otherwise push its own footer off the bottom for the whole scroll.
-const FIGURE_MAX = 300;
+/* Tall enough that the illustration fills its column on a desktop rather than
+   stopping short of it; the budget below still trades it down when a viewport
+   cannot afford it. */
+const FIGURE_MAX = 320;
 const FIGURE_MIN = 150;
 
 // Height the card's own padding and inner gap give back in tight mode.
@@ -602,13 +610,15 @@ const StoryRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* Top of the card, not centred in the row: the illustration and the copy
+     start on the same line, and the space they do not use falls below them. */
+  align-items: flex-start;
   flex-direction: ${(props) =>
     props.imageSide === 'right' ? 'row-reverse' : 'row'};
-  /* The same two-column grid the consequences below use, so the illustration's
-     left edge lands on the same line as the second consequence and as the
-     other card's copy. At the design's 141px gap with unequal columns it sat
-     ~85px right of both. */
-  gap: ${STORY_GAP}px;
+  /* Figma 37218's split, as proportions rather than fixed pixels: 497.5 and
+     465 across a 1104 row, with the remainder between them. Our row is wider
+     than the design's, so the fixed sizes left the columns adrift of it. */
+  gap: 0;
   width: 100%;
 
   @media ${device.laptop} {
@@ -631,13 +641,12 @@ const StoryFigure = styled.img`
      shrank the box, object-fit contain drew the picture short of its right
      edge and left a band of empty card beside it -- the taller the screen
      the smaller the cap, so it showed on some monitors and not others. */
-  /* The other half of that grid. The picture is drawn at the cap's height and
-     sits at the column's left edge, so its left edge is what lines up -- the
-     slack falls to its right, where it reads as card, not as a gap in a row. */
-  flex: 0 0 calc((100% - ${STORY_GAP}px) / 2);
-  width: auto;
+  /* Its column, or whatever the height cap leaves it, whichever is narrower --
+     so the picture fills its box and carries no slack inside it. */
+  flex: 0 0 auto;
+  width: min(${FIGURE_COL}, calc(var(--figure-max, 300px) * (${FIGURE_RATIO})));
   max-width: 100%;
-  height: var(--figure-max, 300px);
+  height: auto;
   max-height: var(--figure-max, none);
   /* Reserve the box before the lazy image arrives, so the card is measured at
      its true height rather than collapsing and skipping the tight mode. */
@@ -661,8 +670,7 @@ const StoryText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Half the row, matching the consequence columns. */
-  flex: 0 0 calc((100% - ${STORY_GAP}px) / 2);
+  flex: 0 0 ${TEXT_COL};
   width: 100%;
   min-width: 0;
 
