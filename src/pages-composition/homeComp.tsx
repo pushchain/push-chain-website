@@ -699,13 +699,11 @@ const FeatureGridRow = styled(ItemH)`
 `;
 
 const GridBHeader = styled(ItemV)`
-  h2 {
-    font-size: 3rem;
-
-    @media ${device.mobileL} {
-      font-size: 1.75rem;
-    }
-  }
+  /* Two columns, so the direction has to be stated: this extends ItemV, whose
+     own direction is a column, and it used to be turned into a row by a prop.
+     Without it the heading and its paragraph stacked and lost the left half of
+     the row. */
+  flex-direction: row;
 
   /* Figma node 49243:16611 — 115px gap, baseline-aligned via items-end. */
   gap: 115px;
@@ -717,6 +715,11 @@ const GridBHeader = styled(ItemV)`
     max-width: 620px;
     /* Title carries its own line breaks, matching the design's wrap points. */
     white-space: pre-line;
+    font-size: 3rem;
+
+    @media ${device.mobileL} {
+      font-size: 1.75rem;
+    }
   }
 
   span {
