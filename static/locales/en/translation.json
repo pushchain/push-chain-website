@@ -278,12 +278,12 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Home — Push Chain | The Universal Blockchain for Apps",
-        "description": "Shared-state blockchain for universal apps. Deploy once; reach users on any chain. Use any wallet. Pay with any token.",
-        "og-title": "Push Chain - Universal L1 for Apps",
-        "og-description": "One deploy for EVM and non-EVM users. Use any wallet and pay with any token — no network switching.",
-        "twitter-title": "Deploy once. Reach any chain.",
-        "twitter-description": "Transact from any chain. Use any wallet. Pay with any token. No network switching."
+        "title": "Push-Core - Verification for the Agentic Internet.",
+        "description": "Push Core is a network of neutral evaluators that verifies agents' work. Agentic builders can deploy agents and ensure that money only moves once the work meets its requirements.",
+        "og-title": "Push-Core - Verification for the Agentic Internet.",
+        "og-description": "Push Core is a network of neutral evaluators that verifies agents' work. Agentic builders can deploy agents and ensure that money only moves once the work meets its requirements.",
+        "twitter-title": "Push-Core - Verification for the Agentic Internet.",
+        "twitter-description": "Push Core is a network of neutral evaluators that verifies agents' work. Agentic builders can deploy agents and ensure that money only moves once the work meets its requirements."
       },
       "hero-section": {
         "title": "Verification for the Agentic Internet.",

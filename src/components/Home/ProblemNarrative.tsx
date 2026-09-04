@@ -60,8 +60,13 @@ const FLOOR_GAP = 8;
 /* Figma 37218 splits the card's 1104px row as 497.5 illustration, 141.5 gap,
    465 copy. Held as proportions so they hold on a row wider than the design's;
    space-between turns the remainder back into that gap. */
-const FIGURE_COL = '45.06%';
 const TEXT_COL = '42.12%';
+
+/* The consequence row's two columns and the mark that leads each one. The
+   illustration lines up with where the second one's text begins. */
+const STORY_GAP = 64;
+const DOT_ICON = 44;
+const DOT_GAP = 24;
 
 /* The illustrations are 998x602. */
 const FIGURE_RATIO = '998 / 602';
@@ -641,10 +646,14 @@ const StoryFigure = styled.img`
      shrank the box, object-fit contain drew the picture short of its right
      edge and left a band of empty card beside it -- the taller the screen
      the smaller the cap, so it showed on some monitors and not others. */
-  /* Its column, or whatever the height cap leaves it, whichever is narrower --
-     so the picture fills its box and carries no slack inside it. */
+  /* Sized so its left edge lands where the second consequence's text starts:
+     that column begins half way across, and its mark and gap take another
+     ${DOT_ICON + DOT_GAP}px before the words do. */
   flex: 0 0 auto;
-  width: min(${FIGURE_COL}, calc(var(--figure-max, 300px) * (${FIGURE_RATIO})));
+  width: min(
+    calc((100% - ${STORY_GAP}px) / 2 - ${DOT_ICON + DOT_GAP}px),
+    calc(var(--figure-max, 300px) * (${FIGURE_RATIO}))
+  );
   max-width: 100%;
   height: auto;
   max-height: var(--figure-max, none);
