@@ -319,31 +319,19 @@ const BannerHeading = styled.h2`
   color: var(--ifm-color-white);
   font-family: ${FONT_MONO};
   font-weight: 500;
-  font-size: 38px;
+  /* The same size every other section heading uses. It was stepped down to
+     17px on a phone to keep its two lines unwrapped; the card now has a screen
+     to itself, so the lines wrap instead of the type shrinking. */
+  font-size: 3rem;
   letter-spacing: -0.06em;
   line-height: 1.2;
 
   span {
     display: block;
-    white-space: nowrap;
-  }
-
-  /* The two lines are set nowrap at full size; below this they no longer fit,
-     so let them wrap and step the size down instead of overflowing. */
-  @media ${device.laptop} {
-    font-size: 28px;
-
-    span {
-      white-space: normal;
-    }
-  }
-
-  @media ${device.tablet} {
-    font-size: 22px;
   }
 
   @media ${device.mobileL} {
-    font-size: 17px;
+    font-size: 2rem;
   }
 `;
 
