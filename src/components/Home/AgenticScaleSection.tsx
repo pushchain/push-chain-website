@@ -116,6 +116,10 @@ export default function AgenticScaleSection() {
    desktop, where --solution-travel is only set below laptop and the pinned box
    already fills the screen. */
 const GroundGroup = styled.div`
+  /* The page column centres its children and every Section carries its own
+     width: 100%. This wrapper is a plain div, so without one it shrank to its
+     content and pulled the whole pink panel in from both edges. */
+  width: 100%;
   position: relative;
 `;
 
