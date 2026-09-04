@@ -27,10 +27,14 @@ import GLOBALS, { device } from '@site/src/config/globals';
 const STOPS = [0, 90, 200, 280, 378, 540];
 
 /** Scroll distance that advances one stop. */
-const STEP_SCROLL = 460;
+const STEP_SCROLL = 620;
 
-/** Seconds a span takes to play once its stop is picked. */
-const SPAN_SECONDS = 2.2;
+/**
+ * How much of the distance to the scroll's frame is closed each tick. Lower is
+ * smoother and lazier, higher tracks the finger more tightly. This is what
+ * carries the deceleration the timed spans used to provide.
+ */
+const SCRUB_DAMPING = 0.12;
 
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -138,7 +142,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
           io.disconnect();
         }
       },
-      { rootMargin: '150% 0px' }
+      { rootMargin: '250% 0px' }
     );
     io.observe(runway);
     return () => io.disconnect();
@@ -150,7 +154,20 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     fetch(dataUrl)
       .then((r) => r.json())
       .then((json) => {
-        if (!cancelled) setData(json);
+        if (cancelled) return;
+        // Handing this to React builds the several thousand nodes the scene
+        // draws, and that is a ~1s block of the main thread -- measured, it
+        // landed mid-scroll as a single 1040ms frame. Waiting for an idle
+        // moment puts it in a gap between scrolls instead; the timeout is the
+        // backstop for a reader who never stops scrolling.
+        const build = () => {
+          if (!cancelled) setData(json);
+        };
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(build, { timeout: 2000 });
+        } else {
+          build();
+        }
       })
       .catch((err) => {
         console.error('[SolutionAnimation] failed to load', err);
@@ -304,18 +321,18 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     let raf = 0;
     let frame = 0;
-    let from = 0;
-    let to = 0;
-    let startedAt = 0;
-    let moving = false;
-    let index = 0;
 
-    // Which stop the reader has scrolled to. Measured against the runway, not
-    // the pinned box: that one is the sticky element, so once it pins its
-    // document position tracks the scroll and the distance travelled reads as
-    // zero for the whole pinned stretch.
-    const stopFromScroll = () => {
-      if (runway.dataset.pinned !== 'true') return index;
+    // Measured against the runway, not the pinned box: that one is the sticky
+    // element, so once it pins its document position tracks the scroll and the
+    // distance travelled reads as zero for the whole pinned stretch.
+    // Where the reader is between the stops, as a continuous position rather
+    // than a whole one. Crossing a threshold used to hand the animation to a
+    // fixed 2.2s timer, so a few pixels of scroll bought a whole span and the
+    // scene ran away from the finger driving it. The frame is now read from
+    // the scroll position itself, so the character advances by exactly as much
+    // as the reader scrolls.
+    const frameFromScroll = () => {
+      if (runway.dataset.pinned !== 'true') return frame;
       const top = runway.getBoundingClientRect().top + window.scrollY;
       const travel = Math.max(
         1,
@@ -323,45 +340,40 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       );
       const travelled = window.scrollY - top;
       const progress = Math.max(0, Math.min(1, travelled / travel));
-      return Math.round(progress * (STOPS.length - 1));
+
+      const span = progress * (STOPS.length - 1);
+      const i = Math.min(STOPS.length - 2, Math.floor(span));
+      const within = span - i;
+      return STOPS[i] + (STOPS[i + 1] - STOPS[i]) * within;
     };
 
-    const goTo = (next: number) => {
-      if (next === index) return;
-      index = next;
-      from = frame;
-      to = STOPS[index];
-      startedAt = performance.now();
-      moving = true;
-    };
+    // Follow that target rather than snapping to it: a fraction of the gap is
+    // closed each frame, which keeps the deceleration the eased spans gave
+    // while staying tied to the scroll.
+    let drawn = -1;
+    const tick = () => {
+      const target = frameFromScroll();
+      const gap = target - frame;
+      frame += Math.abs(gap) < 0.5 ? gap : gap * SCRUB_DAMPING;
 
-    const tick = (now: number) => {
-      if (moving) {
-        const t = Math.min(1, (now - startedAt) / (SPAN_SECONDS * 1000));
-        // Cubic ease-out, as the reference uses, so a span decelerates into
-        // its stop rather than arriving at speed.
-        frame = from + (to - from) * (1 - Math.pow(1 - t, 3));
-        if (t >= 1) {
-          frame = to;
-          moving = false;
-        }
-        anim.goToAndStop(Math.round(frame), true);
+      // Only redraw when the frame actually changes. The scene is several
+      // thousand nodes, and this loop runs whether or not anyone is scrolling,
+      // so redrawing an unchanged frame would burn that cost every tick.
+      const next = Math.round(frame);
+      if (next !== drawn) {
+        anim.goToAndStop(next, true);
+        drawn = next;
       }
       raf = requestAnimationFrame(tick);
     };
 
-    const onScroll = () => goTo(stopFromScroll());
+    frame = frameFromScroll();
+    anim.goToAndStop(Math.round(frame), true);
 
-    index = stopFromScroll();
-    frame = STOPS[index];
-    anim.goToAndStop(frame, true);
-
-    window.addEventListener('scroll', onScroll, { passive: true });
     raf = requestAnimationFrame(tick);
 
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener('scroll', onScroll);
     };
   }, [data]);
 
@@ -406,13 +418,13 @@ const Runway = styled.div`
 
   @media ${device.laptop} {
     &[data-pinned='true'] {
-      height: calc(${Math.round(RUNWAY * 0.7) + HOLD_TAIL}px + 100svh);
+      height: calc(${Math.round(RUNWAY * 0.8) + HOLD_TAIL}px + 100svh);
     }
   }
 
   @media ${device.mobileL} {
     &[data-pinned='true'] {
-      height: calc(${Math.round(RUNWAY * 0.55) + HOLD_TAIL}px + 100svh);
+      height: calc(${Math.round(RUNWAY * 0.75) + HOLD_TAIL}px + 100svh);
     }
   }
 
