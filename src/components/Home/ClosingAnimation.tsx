@@ -83,6 +83,15 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
           bin,
           atlas,
           poster,
+          // From the field tool's saved settings. Block size, glyph size and
+          // dot size are that panel's percentages; the dot grid is off and the
+          // accent threshold is 7 there, which is what the build already used.
+          tileScale: 0.66,
+          fontScale: 0.68,
+          dotScale: 0.15,
+          dots: false,
+          accentMinValue: 7,
+          inkGamma: 0.3,
           // The preset's base is #090909, which reads as a lighter rectangle
           // against the page's black. Everything else about the palette stays.
           palette: { ...palettes.pushBrand, base: PAGE_BACKGROUND },
@@ -215,21 +224,27 @@ const Pinned = styled.div`
    shrunk to fit, and where the viewport is taller than the field its base now
    matches the page so the edges are invisible. */
 const FieldHost = styled.div`
-  grid-area: 1 / 1;
+  /* Taken out of the grid rather than placed in it. Below laptop this is drawn
+     wider than the viewport, and as a grid item that widened the shared track,
+     which dragged the copy -- sized at 100% of it -- off the side of the
+     screen. Absolute keeps it from sizing anything, and centres it on both
+     axes inside the pinned box. */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100vw;
   aspect-ratio: 1440 / 750;
+  pointer-events: none;
 
   /* The composition is 1440 wide, so at a phone's full width it is only ~200px
-     tall and the hands read as a thin band across the middle of the screen.
-     Below laptop it is drawn wider than the viewport so it covers more of the
-     screen; the pin box clips the sides. The hands start apart and travel
-     inward, so what is lost is the outer reach of that approach, not the
-     meeting or the burst that follows it. */
+     tall and the hands read as a thin band. Drawn wider than the viewport it
+     covers more of the screen; the pinned box clips the sides. The hands start
+     apart and travel inward, so what is lost is the outer reach of that
+     approach, not the meeting or the burst. */
   @media ${device.laptop} {
     width: ${FIELD_MOBILE_SCALE * 100}vw;
-    justify-self: center;
   }
-
 
   canvas {
     display: block;

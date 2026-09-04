@@ -178,6 +178,10 @@ const GroundSection = styled(Section)`
 `;
 
 const Panel = styled.div`
+  /* The title's screen, shared by the artwork above and the wash that blends
+     it into the grid below so the two cannot drift apart. */
+  --visual-h: max(100svh, 420px);
+
   position: relative;
   flex: 1;
   margin: 0 ${PANEL_INSET}px;
@@ -243,8 +247,7 @@ const PanelTail = styled.div`
 const TopVisual = styled.div`
   position: relative;
   width: 100%;
-  height: 100svh;
-  min-height: 420px;
+  height: var(--visual-h);
 `;
 
 const RingArtwork = styled.div`
@@ -335,9 +338,14 @@ const BannerHeading = styled.h2`
   }
 `;
 
+/* Straddles the join between the artwork and the card grid. It used to sit at
+   a fixed offset that happened to land there; with the artwork now a screen
+   tall that offset fell in the middle of it and bloomed as a white cloud over
+   the title. It is measured back from the artwork's end instead -- the same
+   174px above it and 544px below that the design's offsets described. */
 const BlendWash = styled.div`
   position: absolute;
-  top: ${BLEND_TOP}px;
+  top: calc(var(--visual-h) - ${VISUAL_HEIGHT - BLEND_TOP}px);
   left: 0;
   right: 0;
   height: ${BLEND_HEIGHT}px;
@@ -347,7 +355,7 @@ const BlendWash = styled.div`
   pointer-events: none;
 
   @media ${device.mobileL} {
-    top: 300px;
+    top: calc(var(--visual-h) - 20px);
     height: 260px;
     filter: blur(30px);
   }

@@ -497,11 +497,20 @@ const HeroBody = styled(ItemV)`
     font-size: 4rem;
 
     @media ${device.mobileL} {
-      font-size: 2.5rem;
+      /* 2.5rem wrapped "Agentic Internet." onto a fourth line; at 2rem it
+         holds together, giving the three lines the design asks for -- and it
+         matches the section headings. */
+      font-size: 2rem;
 
-      /* Break after "Verification" and keep "Agentic Internet." whole. */
+      /* Break after "Verification" and keep "Agentic Internet." whole. The
+         line break between the two source lines has to go with it -- as blocks
+         the spans already break, so it was adding an empty line. */
       span {
         display: block;
+      }
+
+      br {
+        display: none;
       }
     }
   }

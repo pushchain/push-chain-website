@@ -366,8 +366,8 @@ function Header() {
                       '/assets/website/segments/PushCoreLogoTextBlack.svg'
                     )}
                     alt={t('header.logo.imagealt')}
-                    width='176px'
-                    height='38px'
+                    width='142px'
+                    height='31px'
                   />
                 </LinkTo>
               </PushLogoBlackContainer>
@@ -383,8 +383,8 @@ function Header() {
                       '/assets/website/segments/PushCoreLogoTextWhite.svg'
                     )}
                     alt={t('header.logo.imagealt')}
-                    width='176px'
-                    height='38px'
+                    width='142px'
+                    height='31px'
                   />
                 </LinkTo>
               </PushLogoWhiteContainer>

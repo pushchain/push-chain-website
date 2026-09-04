@@ -105,7 +105,10 @@ const CardFigure = styled.img`
   ${(props) =>
     props.wide
       ? `width: 100%;
-         height: auto;`
+         height: auto;
+         /* The squarer of the two wide marks rendered much taller than the
+            other; a cap evens them up. */
+         max-height: 180px;`
       : `height: 168px;
          width: auto;`}
 `;
