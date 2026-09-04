@@ -2,7 +2,7 @@
 title: "Customizations Section"
 url: "https://pushchain.github.io/docs/chain/ui-kit/customizations/"
 section: "ui-kit"
-lastUpdated: "2026-09-03T23:40:31Z"
+lastUpdated: "2026-09-04T07:14:57Z"
 description: "Customizations Section | UI Kit | Push Chain Docs"
 ---
 
