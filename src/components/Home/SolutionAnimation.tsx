@@ -53,7 +53,11 @@ const COPY_GAP = 24;
  * section lays out in normal flow at the design's spacing rather than pinning
  * something cramped.
  */
-const MIN_STAGE = 280;
+/* Below this the scene is too short to read even scaled, and the section falls
+   back to flowing normally. It only has to cover the scene now that the scene
+   is scaled to the room it is given, rather than the slab a fixed-size one
+   needed. */
+const MIN_STAGE = 140;
 
 // A height change smaller than this is a phone's browser chrome sliding, not a
 // real viewport change.
@@ -67,9 +71,20 @@ const FLOOR_GAP = 8;
    pinned box. Below laptop it is instead drawn large enough to fill the height
    the pin has to give, and the stage crops the ends: the comp pans with the
    character, so what goes is the empty lead-in and run-out at each moment
-   rather than the steps themselves. Never smaller than full width. */
-const sceneScaleFor = (availableH, stageW) =>
-  Math.max(1, (availableH * COMP_W) / COMP_H / stageW);
+   rather than the steps themselves. Never smaller than full width.
+
+   Solved rather than simply "as tall as the stage": the scene has to land so
+   its ground line sits exactly GROUND_SHOW_MAX above the stage's bottom, or the
+   offset below comes out positive, the stage gives that height back, and the
+   section underneath shows through the difference. */
+const sceneScaleFor = (availableH, stageW) => {
+  const withCappedFloor = (availableH - GROUND_SHOW_MAX) / GROUND_LINE;
+  const fillH =
+    withCappedFloor * (1 - GROUND_LINE) >= GROUND_SHOW_MAX
+      ? withCappedFloor
+      : availableH;
+  return Math.max(1, (fillH * COMP_W) / COMP_H / stageW);
+};
 
 /** The composition's own size. The wider export needs no scaling to fill. */
 const COMP_W = 1920;
@@ -134,28 +149,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     const fit = () => {
       // The strip of ground below the scene is outside the pinned box, so it
       // costs nothing here — the scene gets everything the copy leaves.
+      // Title, description and scene hold the screen together, the way they do
+      // on a desktop: the copy keeps its place at the top and the scene takes
+      // exactly what is left. Letting the copy scroll out of the pin instead
+      // did get the scene running on a phone, but it pushed the title off the
+      // top of the screen while the animation played.
       const copyH = copyEl.offsetHeight;
-      const withCopy = window.innerHeight - PIN_TOP - copyH - COPY_GAP;
+      const available = window.innerHeight - PIN_TOP - copyH - COPY_GAP;
 
-      // Holding the copy in the pin costs the scene its height. On a phone the
-      // copy runs to ~305px and the browser's own chrome takes the rest, so
-      // there was nothing left for the scene and it never pinned at all --
-      // meaning the animation never ran. When the copy will not fit it scrolls
-      // away and only the scene pins. Decided by measurement, so a short
-      // desktop window is treated the same rather than judged on its width.
-      const keepCopy = withCopy >= MIN_STAGE;
-      const available = keepCopy
-        ? withCopy
-        : window.innerHeight - PIN_TOP - FLOOR_GAP;
+      // The scene is scaled to whatever that leaves rather than needing a fixed
+      // slab of it, so the floor is only what the scene needs to stay legible.
       const pinned = available >= MIN_STAGE;
-
-      // Park the group so the scene lands at PIN_TOP either way: with the copy
-      // dropped that means hanging the group's top above the fold by exactly
-      // the copy's height.
-      runway.style.setProperty(
-        '--scene-pin-top',
-        keepCopy ? `${PIN_TOP}px` : `${PIN_TOP - copyH - COPY_GAP}px`
-      );
 
       runway.dataset.pinned = String(pinned);
       stage.style.height = pinned ? `${Math.round(available)}px` : '';
@@ -405,7 +409,7 @@ const Runway = styled.div`
    design's own spacing. */
 const Pinned = styled.div`
   position: sticky;
-  top: var(--scene-pin-top, ${PIN_TOP}px);
+  top: ${PIN_TOP}px;
 
   ${Runway}[data-pinned='false'] & {
     position: static;
