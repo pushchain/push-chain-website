@@ -9,7 +9,7 @@ type AccountContextType = {
 };
 
 const AccountContext = createContext<AccountContextType>({
-  showAlertBar: true,
+  showAlertBar: false,
   setShowAlertBar: () => {},
   isHydrated: false,
   shouldShowAlertBar: false,
@@ -21,21 +21,18 @@ export const AccountProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [showAlertBar, setShowAlertBarState] = useState<boolean>(true);
+  const [showAlertBar, setShowAlertBarState] = useState<boolean>(false);
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
   const [shouldShowAlertBar, setShouldShowAlertBar] = useState<boolean>(false);
   const [delayedShowAlertBar, setDelayedShowAlertBar] =
     useState<boolean>(false);
   const [wasEverVisible, setWasEverVisible] = useState<boolean>(false);
 
+  // The alert bar itself has been removed, so this stays off. It is still
+  // threaded through the tree because the header and page wrapper offset
+  // themselves by its height, and a stored `true` from a previous visit would
+  // otherwise leave an 80px gap above the header with nothing in it.
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('showAlertBar');
-      // Show alert bar if localStorage is not explicitly set to 'false'
-      const shouldShow = stored !== 'false';
-      setShouldShowAlertBar(shouldShow);
-      setShowAlertBarState(shouldShow);
-    }
     setIsHydrated(true);
   }, []);
 

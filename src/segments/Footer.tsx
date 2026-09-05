@@ -74,9 +74,10 @@ function Footer() {
             <EmailDiv>
               <H2
                 color='var(--ifm-color-white)'
+                fontFamily="'IBM Plex Mono', monospace"
                 fontWeight='400'
                 letterSpacing='-0.56px'
-                fontSize={isMobile ? '1.rem' : '1.75rem'}
+                fontSize={isMobile ? '1.25rem' : '1.75rem'}
                 lineHeight='140%'
                 aria-label={t('footer.email-section.title-aria-label')}
               >
@@ -87,7 +88,7 @@ function Footer() {
               </H2>
 
               <MailingSignup
-                inputWidth={isMobile ? '100%' : '300px'}
+                inputWidth={isMobile || isTablet ? '100%' : '515px'}
                 showButton={true}
                 background={'var(--ifm-color-footer-mailing-bg)'}
                 borderColor={'var(--ifm-color-footer-mailing-border)'}
@@ -174,10 +175,10 @@ function Footer() {
                     <FooterColumn key={columnKey}>
                       <FooterLinks>
                         <Span
-                          fontWeight='700'
+                          fontWeight='600'
                           fontSize='1rem'
                           lineHeight='140%'
-                          letterSpacing='1.8px'
+                          letterSpacing='1.6px'
                           textTransform='uppercase'
                           margin='0 0 8px 0'
                           aria-label={t(
@@ -223,7 +224,7 @@ function Footer() {
                 gap={isMobile ? '24px' : '16px'}
                 justifyContent='flex-start'
               >
-                <ItemH flex='0' gap='16px' className='pushLinks'>
+                <ItemH flex='0' gap='24px' className='pushLinks'>
                   <FooterAnchorIcon
                     href='https://x.com/PushChain'
                     title={t('footer.social-section.twitter-icon-title')}
@@ -233,7 +234,7 @@ function Footer() {
                     target='_blank'
                     onClick={() => trackSocialClick('twitter')}
                   >
-                    <BsTwitterX size={30} />
+                    <BsTwitterX size={38} />
                   </FooterAnchorIcon>
 
                   <FooterAnchorIcon
@@ -245,7 +246,7 @@ function Footer() {
                     target='_blank'
                     onClick={() => trackSocialClick('github')}
                   >
-                    <GithubSVG width={30} height={30} />
+                    <GithubSVG width={48} height={48} />
                   </FooterAnchorIcon>
 
                   <FooterAnchorIcon
@@ -257,7 +258,7 @@ function Footer() {
                     target='_blank'
                     onClick={() => trackSocialClick('discord')}
                   >
-                    <DiscordSVG width={30} height={30} />
+                    <DiscordSVG width={54} height={41} />
                   </FooterAnchorIcon>
                 </ItemH>
               </ItemV>
@@ -292,22 +293,6 @@ function Footer() {
           </Content>
         </FooterSection>
 
-        <Section>
-          <ImageContent>
-            <Image
-              src={
-                require(`@site/static/assets/website/footer/PushFooterImg.webp`)
-                  .default
-              }
-              srcSet={`${require(`@site/static/assets/website/footer/PushFooterImg@2x.webp`).default} 2x, ${require(`@site/static/assets/website/footer/PushFooterImg@3x.webp`).default} 3x`}
-              alt={t('footer.footer-image.alt')}
-              title={t('footer.footer-image.title')}
-              loading='lazy'
-              width='100%'
-              height='auto'
-            />
-          </ImageContent>
-        </Section>
       </StyledFooter>
     </ChainFooterContainer>
   );
@@ -380,12 +365,6 @@ const FooterContainer = styled.div`
   }
 `;
 
-const ImageContent = styled(Content)`
-  @media ${device.tablet} {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-`;
 
 const FooterColumn = styled.div`
   display: flex;

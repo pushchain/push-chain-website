@@ -4,22 +4,18 @@
 
 // React + Web3 Essentials
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { useContext, useState } from 'react';
-import ReactPlayer from 'react-player';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 // External Components
 import { useTranslation } from 'react-i18next';
-import { BsArrowRight, BsDiscord } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 
 // Internal Components
-import Accordion from '@site/src/components/Accordion';
-import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
 import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
 import {
   A,
-  B,
   Content,
   H1,
   H2,
@@ -32,62 +28,43 @@ import {
   Section,
   Span,
 } from '@site/src/css/SharedStyling';
-import useMediaQuery from '@site/src/hooks/useMediaQuery';
-import Marquee from 'react-fast-marquee';
+import useSmoothScroll from '@site/src/hooks/useSmoothScroll';
 
 import QnA from '@site/src/components/QnA/QnA';
-import { getShortFAQsList } from '@site/src/config/ShortFAQsList';
+import { getHomeAgentFAQsList } from '@site/src/config/HomeAgentFAQsList';
 
 // Import Assets
-import HeroBGMobile from '@site/static/assets/website/hero/hero-bg-img.webp';
-import FinalBgImage from '@site/static/assets/website/home/others/push-chain-final.webm';
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
 
 // Internal Configs
-import { FeaturesList } from '@site/src/config/HomeFeaturesList';
-import { InvList } from '@site/src/config/HomeInvestorList';
+import { AgentFeaturesListB } from '@site/src/config/AgentFeaturesListB';
 import GLOBALS, { device, structure } from '@site/src/config/globals';
 
-import { FeaturedSection } from '@site/src/components/Home/FeaturedSection';
-import { StatsSection } from '@site/src/components/Home/StatsSection';
-import { WhatIsSection } from '@site/src/components/Home/WhatIsSection';
+import AgenticScaleSection from '@site/src/components/Home/AgenticScaleSection';
+import ClosingCTA from '@site/src/components/Home/ClosingCTA';
+import FeatureCard from '@site/src/components/Home/FeatureCard';
+import HeroTopography from '@site/src/components/Home/HeroTopography';
+import PaidStatsRow from '@site/src/components/Home/PaidStatsRow';
+import UniversalStatCallout from '@site/src/components/Home/UniversalStatCallout';
+import ProblemNarrative from '@site/src/components/Home/ProblemNarrative';
+import SolutionPanel from '@site/src/components/Home/SolutionPanel';
 
 import AccountContext from '@site/src/context/accountContext';
-import CustomReactPlayer from '@site/src/utils/CustomReactPlayer';
-import { Alert } from '../components/Alert';
-import { AlertBar } from '../components/AlertBar';
+
+const FONT_MONO = "'IBM Plex Mono', monospace";
 
 export default function HomeComp() {
   // Internationalization
   const { t, i18n } = useTranslation();
   const { isHydrated, shouldShowAlertBar } = useContext(AccountContext);
 
-  const isMobile = useMediaQuery(device.mobileL);
-  const isTablet = useMediaQuery(device.tablet);
-  const isLaptop = useMediaQuery(device.laptop);
 
-  // Hero video hover state
-  const [heroHovered, setHeroHovered] = useState(false);
-
-  const isSafari = () => {
-    if (typeof window === 'undefined') return false;
-    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  };
-
-  // Hero video hover handlers
-  const handleHeroMouseEnter = () => {
-    setHeroHovered(true);
-  };
-
-  const handleHeroMouseLeave = () => {
-    setHeroHovered(false);
-  };
+  // Inertial scrolling for this page, wired into ScrollTrigger so the
+  // problem-narrative stack stays in step with it.
+  useSmoothScroll();
 
   return (
     <HomeWrapper showAlertBar={isHydrated ? shouldShowAlertBar : false}>
-      {/* GLOW CIRCLE */}
-      <GlowCircle />
-
       {/* HERO SECTION */}
       <HeroSection
         id='hero'
@@ -96,78 +73,42 @@ export default function HomeComp() {
         aria-level='2'
         aria-label={t('pages.home.hero-section.section-aria-label')}
       >
-        <HeroContent alignSelf='center' overflow='visible'>
-          <HeroPrimary
-            flex='initial'
-            justifyContent='flex-start'
-            onMouseEnter={handleHeroMouseEnter}
-            onMouseLeave={handleHeroMouseLeave}
-            style={{
-              backgroundImage: heroHovered ? 'none' : undefined,
-            }}
-          >
-            {/* Hero Video - plays continuously */}
-            {!isMobile && (
-              <HeroVideo
-                url={
-                  require(
-                    isSafari()
-                      ? `@site/static/assets/website/hero/hero-hover-video.mp4`
-                      : `@site/static/assets/website/hero/hero-hover-video.webm`
-                  ).default
-                }
-                playing={true}
-                loop={true}
-                muted={true}
-                width='100%'
-                height='100%'
-                config={{
-                  file: {
-                    attributes: {
-                      controlsList: 'nofullscreen',
-                    },
-                  },
-                }}
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  zIndex: 1,
-                  opacity: 0.8,
-                }}
-              />
-            )}
+        <HeroTopography />
 
+        <HeroContent alignSelf='center' overflow='visible'>
+          <HeroPrimary flex='initial' justifyContent='flex-start'>
             <HeroItem alignItems='center'>
               <HeroBody>
-                {/*<ItemV margin='0 auto 48px auto' flex='0'>
-                  <AlertBar
-                    text='Apply for Season 3 Pre-Launch Access Eligibility'
-                    url='https://portal.push.org'
-                  />
-                </ItemV>*/}
                 <H1
                   zIndex='2'
-                  fontSize={isMobile ? '2.5rem' : '3.625rem'}
-                  margin='0 0 12px 0'
-                  fontWeight='600'
-                  lineHeight='126%'
-                  letterSpacing='normal'
+                  margin='0 0 24px 0'
+                  fontWeight='500'
+                  lineHeight='100%'
+                  letterSpacing='-0.06em'
+                  fontFamily={FONT_MONO}
                   color='var(--ifm-color-white)'
+                  maxWidth='970px'
                 >
-                  {t('pages.home.hero-section.title')}
+                  {/* Fixed break points per Figma (node 49113:88) -- left to
+                      wrap naturally this re-breaks as the window widens. Line
+                      one is two spans so the phone can break between them:
+                      "Verification / for the / Agentic Internet." where a
+                      desktop reads "Verification for the / Agentic Internet." */}
+                  <span>{t('pages.home.hero-section.title-line1a')}</span>{' '}
+                  <span>{t('pages.home.hero-section.title-line1b')}</span>
+                  <br />
+                  <span>{t('pages.home.hero-section.title-line2')}</span>
                 </H1>
 
-                <Span
+                <HeroDescription
                   color='var(--ifm-color-white)'
                   zIndex='2'
-                  fontSize={isMobile ? '1.125rem' : '1.25rem'}
                   fontWeight='400'
                   lineHeight='150%'
-                  letterSpacing='normal'
+                  letterSpacing='0.4px'
                 >
                   {t('pages.home.hero-section.description')}
-                </Span>
+                </HeroDescription>
 
                 <HeroCTA gap='18px' flex='0'>
                   <PrimaryA
@@ -205,129 +146,61 @@ export default function HomeComp() {
         </HeroContent>
       </HeroSection>
 
-      {/* WHAT IS SECTION */}
-      <Section
-        id='what-is-push-chain'
-        aria-level='2'
-        aria-label={t('pages.home.whatis-section.section-aria-label')}
-      >
-        <Content alignSelf='center'>
-          <WhatIsSection />
-        </Content>
-      </Section>
+      {/* PROBLEM NARRATIVE SECTION */}
+      <ProblemNarrative />
 
-      {/* INNOVATION SECTION */}
+      {/* SOLUTION PANEL SECTION */}
+      <SolutionPanel />
+
+      {/* BUILT TO SCALE + FEATURE GRID A — one gradient plate, per Figma */}
+      <AgenticScaleSection />
+
+      {/* FEATURE GRID B SECTION */}
       <Section
-        id='innovations-of-push-chain'
+        id='universal-network'
         aria-level='2'
-        aria-label={t('pages.home.chain-features-section.section-aria-label')}
+        aria-label={t('pages.home.feature-grid-b.section-aria-label')}
       >
         <Content>
           <MultiContent>
-            <FeaturesTopSection maxWidth={'840px'} margin='0px auto'>
+            <GridBHeader>
               <H2
-                color='var(--ifm-color-home-subtitle)'
-                fontSize={isMobile ? '24px' : '30px'}
-                textAlign={isMobile ? 'left' : 'center'}
-                lineHeight='normal'
-                fontWeight='400'
-                letterSpacing='normal'
-                fontFamily='DM Sans, san-serif'
+                fontFamily={FONT_MONO}
+                fontWeight='500'
+                letterSpacing='-0.06em'
+                lineHeight='120%'
+                color='var(--ifm-color-white)'
               >
-                <B color='var(--ifm-color-white)'>
-                  {t(FeaturesList?.meta.title)}
-                </B>{' '}
-                {t(FeaturesList?.meta.subtitle)}
+                {/* Three lines per Figma: "Everything runs on a" /
+                    "network that reaches" / "every other chain." The first
+                    line is two spans so a phone can break between them rather
+                    than wrapping and leaving "a" alone on a line. */}
+                <span>{t(AgentFeaturesListB.meta.titleLine1a)}</span>{' '}
+                <span>{t(AgentFeaturesListB.meta.titleLine1b)}</span>
+                {'\n'}
+                {t(AgentFeaturesListB.meta.titleLine2)}
+                {'\n'}
+                <GradientWord>{t(AgentFeaturesListB.meta.titleGradient)}</GradientWord>
               </H2>
-            </FeaturesTopSection>
+              <Span
+                fontSize='1.25rem'
+                lineHeight='150%'
+                letterSpacing='0.4px'
+                color='var(--ifm-color-white)'
+              >
+                {t(AgentFeaturesListB.meta.subtitle)}
+              </Span>
+            </GridBHeader>
           </MultiContent>
           <MultiContent>
-            <FirstGridFeatures>
-              {FeaturesList?.first?.map((item) => (
-                <GridFeatureItem
-                  showDesktop={!item.config.hide.desktop}
-                  showLaptop={!item.config.hide.laptop}
-                  showTablet={!item.config.hide.tablet}
-                  showMobile={!item.config.hide.mobile}
-                >
-                  <Glassy item={item} />
-                </GridFeatureItem>
+            <FeatureGridRow>
+              {AgentFeaturesListB.cards.map((item) => (
+                <FeatureCard key={item.id} item={item} />
               ))}
-            </FirstGridFeatures>
-
-            <SecondGridFeatures>
-              {FeaturesList?.second?.map((item) => (
-                <GridFeatureItem
-                  showDesktop={!item.config.hide.desktop}
-                  showLaptop={!item.config.hide.laptop}
-                  showTablet={!item.config.hide.tablet}
-                  showMobile={!item.config.hide.mobile}
-                >
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </SecondGridFeatures>
-
-            <ThirdGridFeatures>
-              {FeaturesList?.third?.map((item, index) => (
-                <GridFeatureItem
-                  key={`${item.config.id}-${index}`}
-                  showDesktop={!item.config.hide.desktop}
-                  showLaptop={!item.config.hide.laptop}
-                  showTablet={!item.config.hide.tablet}
-                  showMobile={!item.config.hide.mobile}
-                >
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </ThirdGridFeatures>
+            </FeatureGridRow>
           </MultiContent>
           <MultiContent>
-            <FeaturesBottomSection
-              flexDirection={isMobile ? 'column' : 'row'}
-              justifyContent='space-between'
-              alignItems='center'
-            >
-              <ItemH
-                gap='24px'
-                flexDirection='row'
-                justifyContent='flex-start'
-                flexWrap='nowrap'
-              >
-                <H1Text>10x</H1Text>
-                <Span
-                  color='var(--ifm-color-white)'
-                  fontSize={isMobile ? '1.5rem' : '2rem'}
-                  fontWeight='500'
-                  lineHeight='140%'
-                  letterSpacing='-0.64px'
-                  gap='24px'
-                >
-                  {t(FeaturesList.meta.footer.title)}
-                  <FeaturesBottomOptionalText>
-                    <br />
-                    {t(FeaturesList.meta.footer.secondary)}
-                  </FeaturesBottomOptionalText>
-                </Span>
-              </ItemH>
-
-              <A
-                href={useBaseUrl('/docs')}
-                title={t(FeaturesList.meta.footer.ctaTitle)}
-                background='var(--ifm-color-custom-pink)'
-                borderRadius='16px'
-                border='1px solid rgba(255, 255, 255, 0.30)'
-                fontSize='1.125rem'
-                fontWeight='600'
-                letterSpacing='-0.03em'
-                lineHeight='1rem'
-                padding='16px 32px'
-                zIndex='2'
-              >
-                {t(FeaturesList.meta.footer.ctaText)}
-                <BsArrowRight className='start-svg' />
-              </A>
-            </FeaturesBottomSection>
+            <UniversalStatCallout />
           </MultiContent>
         </Content>
       </Section>
@@ -342,16 +215,8 @@ export default function HomeComp() {
           </Content>
         </ShowcaseSection> */}
 
-      {/* USEFUL STATS SECTION */}
-      <Section
-        id='useful-stats'
-        aria-level='2'
-        aria-label={t('pages.home.stats-section.section-aria-label')}
-      >
-        <Content>
-          <StatsSection />
-        </Content>
-      </Section>
+      {/* GET P.A.I.D SECTION */}
+      <PaidStatsRow />
 
       {/* PUSH CHAIN BLOG */}
       <Section
@@ -380,8 +245,7 @@ export default function HomeComp() {
               </H2>
             </ItemH>
 
-            {!isMobile && (
-              <ItemH justifyContent='flex-end'>
+              <BlogExploreLink justifyContent='flex-end'>
                 <SlideLink
                   href='/blog'
                   title={t('pages.home.blog-section.explore-link-title')}
@@ -402,17 +266,17 @@ export default function HomeComp() {
                   </SpanLink>
                   <BsArrowRight className='anchorSVGlink' aria-hidden='true' />
                 </SlideLink>
-              </ItemH>
-            )}
+              </BlogExploreLink>
           </ItemH>
 
           <H2
             fontSize='3rem'
+            fontFamily={FONT_MONO}
             color='var(--ifm-color-white)'
             margin='8px 0 0 0'
             fontWeight='500'
             lineHeight='120%'
-            letterSpacing='0.6px'
+            letterSpacing='-0.06em'
             role='heading'
             aria-level='2'
             aria-label={t('pages.home.blog-section.title-aria-label')}
@@ -420,7 +284,7 @@ export default function HomeComp() {
             {t('pages.home.blog-section.title')}
           </H2>
 
-          <RecentBlogPosts />
+          <RecentBlogPosts count={4} />
         </Content>
       </Section>
 
@@ -428,285 +292,40 @@ export default function HomeComp() {
       <Section
         id='faq'
         aria-level='2'
-        aria-label={t('components.short-faq-snippet.section-aria-label')}
+        aria-label={t('components.home-agent-faq.section-aria-label')}
       >
         <Content>
           <QnA
-            titleKey='components.short-faq-snippet.title'
-            titleAriaLabelKey='components.short-faq-snippet.title-aria-label'
-            discordLinkTitleKey='components.short-faq-snippet.discord-link-title'
-            discordLinkAriaLabelKey='components.short-faq-snippet.discord-link-aria-label'
-            discordLinkTextKey='components.short-faq-snippet.discord-link-text'
-            accordionAriaLabelKey='components.short-faq-snippet.accordion-aria-label'
-            exploreMoreTitleKey='components.short-faq-snippet.explore-more-title'
-            exploreMoreAriaLabelKey='components.short-faq-snippet.explore-more-aria-label'
-            exploreMoreTextKey='components.short-faq-snippet.explore-more-text'
+            variant='pushCore'
+            titleKey='components.home-agent-faq.title'
+            titleAriaLabelKey='components.home-agent-faq.title-aria-label'
+            discordLinkTitleKey='components.home-agent-faq.discord-link-title'
+            discordLinkAriaLabelKey='components.home-agent-faq.discord-link-aria-label'
+            discordLinkTextKey='components.home-agent-faq.discord-link-text'
+            accordionAriaLabelKey='components.home-agent-faq.accordion-aria-label'
+            exploreMoreTitleKey='components.home-agent-faq.explore-more-title'
+            exploreMoreAriaLabelKey='components.home-agent-faq.explore-more-aria-label'
+            exploreMoreTextKey='components.home-agent-faq.explore-more-text'
             discordUrl='https://discord.com/invite/pushchain'
             exploreMoreUrl='/knowledge/faq'
-            getQnAsFunction={getShortFAQsList}
+            getQnAsFunction={getHomeAgentFAQsList}
+            titleFontFamily={FONT_MONO}
+            titleFontWeight='500'
           />
         </Content>
       </Section>
 
-      {/* BACKED BY SECTION */}
-      <Section
-        id='backing'
-        aria-level='2'
-        aria-label={t('pages.home.trustedby-section.section-aria-label')}
-      >
-        <Content alignSelf='center' className='fluid'>
-          <FeaturedGlowCircle />
-
-          <InvestorItem alignItems='stretch'>
-            <H2
-              color='var(--ifm-color-white)'
-              fontWeight='500'
-              letterSpacing='-0.02em'
-              fontSize={isMobile ? '24px' : '2rem'}
-              lineHeight='130%'
-              textAlign='center'
-            >
-              {t('pages.home.trustedby-section.title')}
-            </H2>
-          </InvestorItem>
-
-          <MarqueeAnimationContainer
-            margin={isMobile ? '24px 0 2.625rem 0' : '64px 0 2.625rem 0'}
-            flex='1'
-            alignItems='stretch'
-          >
-            <Marquee
-              direction='left'
-              speed={50}
-              gradient={true}
-              gradientColor={'transparent'}
-              gradientWidth={80}
-              pauseOnHover={false}
-            >
-              {InvList.top.map((item) => {
-                return (
-                  <InvestorCard key={item.id} style={{ margin: '0 12px' }}>
-                    <InvestorIcon
-                      width={item.title ? 64 : 'auto'}
-                      src={
-                        require(
-                          `@site/static/assets/website/investors/${item.srcref}.webp`
-                        ).default
-                      }
-                      srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                      alt={`${t('pages.home.trustedby-section.trusted-by-alt')}${item?.alt}}`}
-                    />
-                    {item.title && (
-                      <InvestorDetails>
-                        <InvestorTitle>{item.title}</InvestorTitle>
-                        {item.subtitle && (
-                          <InvestorSubtitle>{item.subtitle}</InvestorSubtitle>
-                        )}
-                      </InvestorDetails>
-                    )}
-                  </InvestorCard>
-                );
-              })}
-            </Marquee>
-          </MarqueeAnimationContainer>
-
-          <MarqueeAnimationContainer flex='1' alignItems='stretch'>
-            <Marquee
-              direction='right'
-              speed={50}
-              gradient={true}
-              gradientColor={'transparent'}
-              gradientWidth={80}
-              pauseOnHover={false}
-            >
-              {InvList.bottom.map((item, i) => {
-                return (
-                  <InvestorCard
-                    key={item.id}
-                    flexDirection={item.title ? 'true' : 'false'}
-                    style={{ margin: '0 12px' }}
-                  >
-                    <InvestorIcon
-                      width={item.title ? '64px' : 'auto'}
-                      borderRadius={item.title ? '50%' : '0'}
-                      src={
-                        require(
-                          `@site/static/assets/website/investors/${item.srcref}.webp`
-                        ).default
-                      }
-                      srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                      alt={`${t('pages.home.trustedby-section.trusted-by-alt')}${item?.alt}}`}
-                    />
-                    {item.title && (
-                      <InvestorDetails>
-                        <InvestorTitle>{item.title}</InvestorTitle>
-                        {item.subtitle && (
-                          <InvestorSubtitle>{item.subtitle}</InvestorSubtitle>
-                        )}
-                      </InvestorDetails>
-                    )}
-                  </InvestorCard>
-                );
-              })}
-            </Marquee>
-          </MarqueeAnimationContainer>
-
-          <FeaturedSection
-            aria-level='2'
-            aria-label={t('pages.home.featued-section.aria-label')}
-          />
-        </Content>
-      </Section>
-
-      {/* ENDING LETS PUSH SECTION */}
-      <Section
-        id='letspush'
-        aria-level='2'
-        aria-label={t('pages.home.ending-section.aria-label')}
-      >
-        <Content className='content'>
-          <MultiContent className='small'>
-            <VideoItemV>
-              <CustomReactPlayer
-                url={
-                  require(
-                    isSafari()
-                      ? `@site/static/assets/website/home/others/push-chain-final.mp4`
-                      : `@site/static/assets/website/home/others/push-chain-final.webm`
-                  ).default
-                }
-                playing
-                playContinuously
-                config={{
-                  file: {
-                    attributes: {
-                      controlsList: 'nofullscreen',
-                    },
-                  },
-                }}
-              />
-              <H2
-                fontSize={isMobile ? '2.5rem' : '4rem'}
-                color='var(--ifm-color-white)'
-                fontWeight='600'
-                lineHeight='120%'
-                textAlign='center'
-              >
-                {t('pages.home.ending-section.section-title')}
-              </H2>
-              <Span
-                fontSize='1.25rem'
-                color='var(--ifm-color-white)'
-                fontWeight='400'
-                lineHeight='125%'
-                textAlign='center'
-              >
-                {t('pages.home.ending-section.section-subtitle')}
-              </Span>
-            </VideoItemV>
-          </MultiContent>
-          <MultiContent className='small'>
-            <BuildUniversalAppLink
-              background='var(--ifm-color-custom-pink)'
-              borderRadius='16px'
-              border='1px solid rgba(255, 255, 255, 0.30)'
-              fontSize='1.125rem'
-              fontWeight='600'
-              letterSpacing='-0.03em'
-              lineHeight='1rem'
-              padding='16px 32px'
-              href='/docs'
-              target='_blank'
-              title={t('pages.home.ending-section.docs-link.title')}
-              aria-label={t('pages.home.ending-section.docs-link.aria-label')}
-            >
-              <p>{t('pages.home.ending-section.docs-link.text')}</p>
-              <BsArrowRight className='svg' size={23} />
-            </BuildUniversalAppLink>
-          </MultiContent>
-        </Content>
-      </Section>
+      {/* CLOSING CTA */}
+      <ClosingCTA />
     </HomeWrapper>
   );
 }
-
-const GlowCircle = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(179, 72, 236, 0.2);
-  filter: blur(125px);
-  pointer-events: none;
-  z-index: 2;
-
-  width: 600px;
-  height: 600px;
-  left: 30%;
-  top: 200px;
-
-  @media ${device.desktopL} {
-    left: 40%;
-  }
-
-  @media ${device.laptopL} {
-    width: 500px;
-    height: 500px;
-    left: 35%;
-  }
-
-  @media ${device.tablet} {
-    width: 543px;
-    height: 538px;
-    left: 238px;
-    top: 29px;
-  }
-
-  @media ${device.mobileL} {
-    width: 395px;
-    height: 392px;
-    left: -12px;
-    top: 102px;
-  }
-`;
-
-const FeaturedGlowCircle = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(179, 72, 236, 0.2);
-  filter: blur(125px);
-  pointer-events: none;
-  z-index: 999999;
-
-  width: 443px;
-  height: 338px;
-  left: 35%;
-  top: 150px;
-
-  @media ${device.laptopL} {
-    width: 500px;
-    height: 500px;
-    left: 25%;
-  }
-
-  @media ${device.tablet} {
-    width: 543px;
-    height: 538px;
-    left: 238px;
-    top: 0px;
-  }
-
-  @media ${device.mobileL} {
-    width: 395px;
-    height: 392px;
-    left: -12px;
-    top: 102px;
-  }
-`;
 
 const HomeWrapper = styled(ItemV)`
   background: var(--ifm-color-black);
   margin: 0;
   padding: 0;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   font-family:
     DM Sans,
     san-serif !important;
@@ -718,6 +337,42 @@ const HomeWrapper = styled(ItemV)`
     `}
 
   box-sizing: border-box;
+
+  /* Figma sets ~320px between one section's content and the next. Every
+     section's shared Content box already contributes 125px of padding on each
+     side (250px per boundary), so the remainder is added here rather than by
+     touching Content itself, which 100+ other files rely on. Tablet and mobile
+     start from 100px padding and keep a tighter rhythm. */
+  & > section + section,
+  & > div + section {
+    margin-top: 70px;
+  }
+
+  @media ${device.laptop} {
+    & > section + section,
+    & > div + section {
+      margin-top: 40px;
+    }
+  }
+
+  @media ${device.mobileL} {
+    & > section + section,
+    & > div + section {
+      margin-top: 0;
+    }
+  }
+
+  /* The pink panel stands on the ground the 8-bit scene walks across, as the
+     design draws it, so this one boundary drops the shared rhythm. The section's
+     own bottom padding is removed in SolutionPanel. */
+  /* The pink panel starts immediately after the scene, which ends on its own
+     ground — no rhythm gap between them. */
+  /* #built-to-scale is wrapped in a group so it can park under the pinned
+     scene below laptop, so the rule has to name the group, not the section. */
+  & > #built-to-scale-group {
+    margin-top: 0;
+  }
+
   & #hero .contentBox {
     row-gap: 18px;
   }
@@ -743,40 +398,63 @@ const HomeWrapper = styled(ItemV)`
 const HeroSection = styled(Section)`
   overflow-y: visible;
   overflow-x: clip;
-  min-height: 100vh;
+  /* Positioning context for the topography canvas. */
+  position: relative;
 `;
 
 const HeroContent = styled(Content)`
   align-self: stretch;
   padding-right: 0;
   padding-left: 0;
-  margin-top: ${GLOBALS.HEADER.HEIGHT +
-  GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px;
+
+  /* The copy centres in the space below the navbar rather than sitting at a
+     fixed offset from the top. With a fixed offset it reads as centred at only
+     one window height — on a short laptop it sank into the lower half with the
+     buttons near the fold, while a tall monitor looked right.
+
+     Centring a box whose paddings differ does not land where you expect: the
+     content centres between the two padding edges, so the section's bottom
+     padding drags it upward. Adding that bottom padding to the navbar's height
+     as the top padding cancels it out. svh rather than vh keeps it stable while
+     a mobile URL bar collapses. */
+  min-height: 100svh;
+  justify-content: center;
+  padding-top: ${GLOBALS.HEADER.HEIGHT +
+  GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP +
+  structure.PADDING.DESKTOP.BOTTOM}px;
 
   @media ${device.laptop} {
     padding-bottom: 40px;
+    padding-top: ${GLOBALS.HEADER.HEIGHT +
+    GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP +
+    40}px;
     padding-right: ${structure.PADDING.TABLET.RIGHT}px;
     padding-left: ${structure.PADDING.TABLET.LEFT}px;
   }
 
-  @media ${device.tablet} {
-    margin-top: ${GLOBALS.HEADER.HEIGHT +
-    GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px;
-  }
-
   @media ${device.mobileL} {
-    padding-top: 0px;
     padding-bottom: 40px;
+    padding-top: ${GLOBALS.HEADER.HEIGHT +
+    GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP +
+    40}px;
     padding-right: ${structure.PADDING.MOBILE.RIGHT}px;
     padding-left: ${structure.PADDING.MOBILE.LEFT}px;
-    margin-top: ${GLOBALS.HEADER.HEIGHT +
-    GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px;
   }
 `;
 
 const HeroPrimary = styled.div`
   width: 1440px;
-  height: 850px;
+  /* Height now comes from the copy; HeroContent centres it in the viewport. */
+  flex: 0 0 auto;
+  /* Sized so the next section lands where Figma puts it (49233:16511, page
+     y=1095) rather than on the old illustrated hero's arbitrary 850/650:
+       1095 - 125 (next section padding-top)
+            - 125 (hero content padding-bottom)
+            - 125 (hero content padding-top)
+            -  98 (hero content margin-top)
+            -  56 (hero top) = 566
+     The 850px value left a 681px gap below the CTAs at 1512px wide. */
+  height: auto;
   z-index: 99;
   position: relative;
   left: 50%;
@@ -784,13 +462,10 @@ const HeroPrimary = styled.div`
 
   @media ${device.laptopL} {
     width: 100%;
-    height: 650px;
-    aspect-ratio: 1 / 2;
+    height: auto;
   }
 
   @media ${device.mobileL} {
-    background-image: url(${HeroBGMobile});
-    background-size: contain;
     aspect-ratio: 1/2;
     width: 100%;
     height: 600px;
@@ -801,11 +476,7 @@ const HeroItem = styled(ItemV)`
   z-index: 2;
   max-width: 970px;
   margin: 0 auto;
-  height: 100%;
-
-  @media (min-width: 1440px) {
-    height: 700px;
-  }
+  height: auto;
 
   @media ${device.laptop} {
     max-width: initial;
@@ -823,9 +494,73 @@ const HeroItem = styled(ItemV)`
 `;
 
 const HeroBody = styled(ItemV)`
-  margin-bottom: 150px;
+  /* Sized here rather than from a media-query hook. The hook cannot know the
+     width while the page is being built, so it answers "desktop", and the
+     first paint on a phone was the 4rem heading running off the side of the
+     screen until hydration corrected it. */
+  h1 {
+    font-size: 4rem;
+
+    @media ${device.mobileL} {
+      /* 2.5rem wrapped "Agentic Internet." onto a fourth line; at 2rem it
+         holds together, giving the three lines the design asks for -- and it
+         matches the section headings. */
+      font-size: 2rem;
+
+      /* Break after "Verification" and keep "Agentic Internet." whole. The
+         line break between the two source lines has to go with it -- as blocks
+         the spans already break, so it was adding an empty line. */
+      span {
+        display: block;
+      }
+
+      br {
+        display: none;
+      }
+    }
+  }
+
   text-align: left;
-  align-self: center;
+  /* Stretched to the 970px column rather than shrink-wrapped to the longest
+     line, because the plate below is sized from this box. Shrink-wrapped it
+     was only as wide as the headline and the backdrop read as a tight halo
+     instead of the broad field the design draws. */
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+
+  /* Figma 49898:9883 — a blurred #090909 plate that settles the topography
+     behind the copy so the glyphs never fight the text. Sits above the canvas
+     but below the text, which carries z-index 2.
+     The design draws it 938.95 x 421.66 against a 970 x 329 copy block: 56px
+     proud at the top, 37px at the bottom, and inset ~15px on each side. */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -56px 15px -37px 15px;
+    background: #090909;
+    filter: blur(100px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* On phones the same plate is painted as a gradient instead. A 100px blur is
+     a per-frame GPU cost on iOS while the canvas underneath repaints, and a
+     radial falloff is visually equivalent here for a soft dark blob. */
+  @media ${device.tablet} {
+    &::before {
+      filter: none;
+      background: radial-gradient(
+        ellipse at center,
+        #090909 0%,
+        rgba(9, 9, 9, 0.95) 35%,
+        rgba(9, 9, 9, 0.7) 60%,
+        rgba(9, 9, 9, 0.3) 80%,
+        rgba(9, 9, 9, 0) 100%
+      );
+      inset: -90px -60px -70px -60px;
+    }
+  }
 
   h1,
   span {
@@ -848,6 +583,24 @@ const HeroBody = styled(ItemV)`
     span {
       white-space: normal;
     }
+  }
+`;
+
+/* Figma 49557:30080 — the copy sets in three lines at 694.5px wide inside the
+   970px column. Constrain it rather than letting it run the full width, which
+   would re-break it as the window grows. */
+const HeroDescription = styled(Span)`
+  font-size: 1.25rem;
+
+  @media ${device.mobileL} {
+    font-size: 1.125rem;
+  }
+
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media ${device.laptop} {
+    max-width: 100%;
   }
 `;
 
@@ -944,307 +697,90 @@ const GridContent = styled(Content)`
   }
 `;
 
-const BottomSection = styled(Section)`
-  .content {
-    padding-top: 100px;
-    padding-bottom: 200px;
+/* Hidden with CSS rather than left out of the tree: dropped by a media-query
+   hook it was present in the statically built HTML and vanished on hydration. */
+const BlogExploreLink = styled(ItemH)`
+  @media ${device.mobileL} {
+    display: none;
+  }
+`;
+
+const FeatureGridRow = styled(ItemH)`
+  gap: 24px;
+  align-items: stretch;
+  width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  /* Three dividers side by side stop being readable well before mobile. */
+  @media ${device.laptop} {
+    flex-direction: column;
+    gap: 32px;
+  }
+`;
+
+const GridBHeader = styled(ItemV)`
+  /* Two columns, so the direction has to be stated: this extends ItemV, whose
+     own direction is a column, and it used to be turned into a row by a prop.
+     Without it the heading and its paragraph stacked and lost the left half of
+     the row. */
+  flex-direction: row;
+
+  /* Figma node 49243:16611 — 115px gap, baseline-aligned via items-end. */
+  gap: 115px;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  h2 {
+    flex: 1;
+    max-width: 620px;
+    /* Title carries its own line breaks, matching the design's wrap points. */
+    white-space: pre-line;
+    font-size: 3rem;
 
     @media ${device.mobileL} {
-      padding-top: 125px;
-      padding-bottom: 125px;
+      font-size: 2rem;
+
+      /* Break after "runs" so the line reads "on a", rather than letting the
+         line wrap and strand "a" on one of its own. */
+      span:first-of-type {
+        display: block;
+      }
     }
   }
-`;
 
-const FAQSection = styled(Section)`
-  padding: 100px 0;
-
-  @media ${device.mobileL} {
-    padding: 0;
-  }
-`;
-
-const FeaturedInSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
-const BackedByContent = styled(Content)`
-  width: 100%;
-  max-width: 100%;
-  padding: 0px;
-`;
-
-const InvestorItem = styled(ItemV)``;
-
-const InvestorCard = styled.div`
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(112, 90, 208, 0.4);
-  border-radius: 16px;
-  padding: 8px;
-  min-width: 242px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  overflow: hidden;
-  box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-`;
-
-const InvestorIcon = styled(Image)`
-  margin: auto auto;
-`;
-
-const InvestorDetails = styled(ItemV)`
-  align-self: stretch;
-  flex: 1;
-  margin-bottom: auto;
-`;
-
-const InvestorTitle = styled(Span)`
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 142%;
-  color: var(--ifm-color-neutral-1200);
-`;
-
-const InvestorSubtitle = styled(Span)`
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 160%;
-  letter-spacing: 0.11em;
-  color: var(--ifm-color-neutral-900);
-  text-transform: uppercase;
-`;
-
-const FeaturesTopSection = styled(ItemV)``;
-
-const FirstGridFeatures = styled(ItemH)`
-  font-family:
-    DM Sans,
-    san-serif;
-  gap: 24px;
-  justify-content: flex-start;
-  width: 100%;
-  align-items: stretch;
-  flex-wrap: nowrap;
-
-  & > div:first-child {
-    flex: 1;
+  span {
+    flex: 0 0 auto;
+    max-width: 492px;
   }
 
-  & > div:nth-child(2) {
-    flex: 1.8;
-  }
-
+  /* 115px between two columns needs real width; stack below the laptop
+     breakpoint rather than crushing the heading. */
   @media ${device.laptop} {
-    width: 100%;
-    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Stacked, this is the gap between a title and its subtext, which is 16px
+       everywhere on the page. */
+    gap: 16px;
 
-    & > div:first-child {
-      flex: 1;
-    }
-
-    & > div:nth-child(2) {
-      flex: 1;
+    h2,
+    span {
+      max-width: 100%;
     }
   }
 
   @media ${device.mobileL} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & > div:first-child {
-      width: 100%;
+    h2,
+    span {
       max-width: 100%;
     }
   }
 `;
 
-const SecondGridFeatures = styled(ItemH)`
-  font-family:
-    DM Sans,
-    san-serif;
-  gap: 24px;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  margin-top: 24px;
-
-  & > div:first-child {
-    flex: 1;
-  }
-
-  & > div:nth-child(2) {
-    flex: 2;
-  }
-
-  & > div:nth-child(3) {
-    flex: 1;
-  }
-
-  @media ${device.laptop} {
-    width: 100%;
-
-    & > div:first-child {
-      flex: 1.4;
-    }
-
-    & > div:nth-child(2) {
-      flex: 1;
-    }
-  }
-
-  @media ${device.tablet} {
-    & > div:first-child {
-      flex: 1;
-    }
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & > div:first-child,
-    & > div:nth-child(3) {
-      width: 100%;
-      min-width: 100%;
-    }
-
-    & > div:nth-child(3) {
-      display: flex !important;
-    }
-  }
-`;
-
-const ThirdGridFeatures = styled(ItemH)`
-  font-family:
-    DM Sans,
-    san-serif;
-  gap: 24px;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  margin-top: 24px;
-
-  & > div:first-child {
-    flex: 2;
-  }
-
-  & > div:nth-child(2) {
-    flex: 1;
-  }
-
-  & > div:nth-child(3) {
-    flex: 1;
-  }
-
-  @media ${device.laptop} {
-    width: 100%;
-    flex: 1;
-
-    & > div:nth-child(2) {
-      flex: 1;
-    }
-
-    & > div:nth-child(3) {
-      flex: 1;
-    }
-  }
-
-  @media ${device.tablet} {
-    & > div:nth-child(2) {
-      flex: 1;
-    }
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & > div:first-child {
-      display: flex;
-      width: 100%;
-      min-width: 100%;
-    }
-  }
-`;
-
-const H1Text = styled(H1)`
-  leading-trim: both;
-  text-edge: cap;
-  text-shadow: 0px 0px 10px rgba(198, 139, 249, 0.5);
-  font-family: 'DM Sans';
-  font-size: 6.5rem;
-  font-style: normal;
-  font-weight: 600;
-  // line-height: 38.578px;
-  letter-spacing: -2.067px;
-
-  background: linear-gradient(
-    90deg,
-    var(--ifm-color-warning) -3.12%,
-    var(--ifm-color-home-gradient-end) 109.09%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-const FeaturesBottomSection = styled(ItemH)`
-  gap: 24px;
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-  }
-
-  @media ${device.mobileL} {
-    a {
-      width: 100%;
-    }
-  }
-`;
-
-const FeaturesBottomOptionalText = styled.span`
-  @media ${device.tablet} {
-    display: none;
-  }
-`;
-
-const GridFeatureItem = styled.div`
-  display: ${(props) => (props.showDesktop ? 'flex' : 'none')};
-  flex-direction: row;
-  flex: 1;
-  padding: 0px;
-
-  @media ${device.laptopL} {
-    display: ${(props) => (props.showLaptop ? 'flex' : 'none')};
-  }
-
-  @media ${device.tablet} {
-    display: ${(props) => (props.showTablet ? 'flex' : 'none')};
-  }
-
-  @media ${device.mobileL} {
-    display: ${(props) => (props.showMobile ? 'flex' : 'none')};
-  }
+const GradientWord = styled.span`
+  color: var(--ifm-color-custom-pink);
 `;
 
 const TagItem = styled.b`
@@ -1275,35 +811,6 @@ const SlideLink = styled(A)`
   }
 `;
 
-const BuildUniversalAppLink = styled(A)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: inherit;
-  align-self: center;
-  gap: 12px;
-
-  p {
-    margin: 0;
-  }
-
-  .anchorSVGlink {
-    color: var(--ifm-color-white);
-    top: 0px;
-  }
-
-  @media ${device.mobileL} {
-    width: 100%;
-  }
-
-  &:hover {
-    text-decoration: none !important;
-    .anchorSVGlink {
-      color: var(--ifm-color-white);
-    }
-  }
-`;
-
 const SpanLink = styled(Span)`
   position: relative;
   text-decoration: none;
@@ -1330,11 +837,6 @@ const SpanLink = styled(Span)`
   }
 `;
 
-const MarqueeAnimationContainer = styled(ItemV)`
-  max-height: 96px;
-  min-height: 96px;
-`;
-
 const AccordionGrid = styled.div`
   max-width: 877px;
   min-width: 877px;
@@ -1342,45 +844,5 @@ const AccordionGrid = styled.div`
   @media ${device.laptop} {
     max-width: 100%;
     min-width: 100%;
-  }
-`;
-
-const HeroVideo = styled(ReactPlayer)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-`;
-
-const VideoItemV = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  margin: 0 auto;
-  pointer-events: none;
-  touch-action: none;
-
-  h2 {
-    margin-top: auto;
-
-    @media ${device.mobileL} {
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  @media ${device.tablet} {
-    max-width: 500px;
-  }
-
-  @media ${device.mobileL} {
-    max-width: 350px;
   }
 `;
