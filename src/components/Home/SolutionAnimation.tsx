@@ -30,11 +30,11 @@ const STOPS = [0, 90, 200, 280, 378, 540];
 const STEP_SCROLL = 620;
 
 /**
- * How much of the distance to the scroll's frame is closed each tick. Lower is
- * smoother and lazier, higher tracks the finger more tightly. This is what
- * carries the deceleration the timed spans used to provide.
+ * How much of the distance to the target stop is closed each tick. This is the
+ * step's own movement: at 0.08 a step takes roughly half a second to walk,
+ * easing out as it arrives. Lower is slower and lazier, higher snappier.
  */
-const SCRUB_DAMPING = 0.1;
+const SCRUB_DAMPING = 0.08;
 
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -341,16 +341,13 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const travelled = window.scrollY - top;
       const progress = Math.max(0, Math.min(1, travelled / travel));
 
-      const span = progress * (STOPS.length - 1);
-      const i = Math.min(STOPS.length - 2, Math.floor(span));
-      const within = span - i;
-
-      // Eased across each span rather than run at a flat rate. The spans are
-      // different lengths in frames, so a linear read changes speed abruptly
-      // at every stop; smoothstep settles into each one and picks up again
-      // into the next.
-      const eased = within * within * (3 - 2 * within);
-      return STOPS[i] + (STOPS[i + 1] - STOPS[i]) * eased;
+      // The nearest stop, not a position between two. Read as a position, the
+      // scene rested wherever the reader stopped scrolling -- the character
+      // frozen half way between two nodes. Targeting the stop itself means a
+      // step, once started, always plays through to the node and settles
+      // there; the follower below is what carries it across.
+      const step = Math.round(progress * (STOPS.length - 1));
+      return STOPS[step];
     };
 
     // Follow that target rather than snapping to it: a fraction of the gap is
