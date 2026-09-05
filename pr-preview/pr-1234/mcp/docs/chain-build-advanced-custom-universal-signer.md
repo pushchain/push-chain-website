@@ -2,7 +2,7 @@
 title: "Custom Universal Signer"
 url: "https://pushchain.github.io/docs/chain/build/advanced/custom-universal-signer/"
 section: "build"
-lastUpdated: "2026-09-05T06:56:33Z"
+lastUpdated: "2026-09-05T13:14:25Z"
 description: "Custom Universal Signer | Build | Advanced | Push Chain Docs"
 ---
 
