@@ -43,9 +43,13 @@ const STEP_SCROLL = 280;
  */
 const SCRUB_SMOOTHING = 0.18;
 
-/** How long the settle onto the nearest node takes, and how long it waits. */
-const SNAP_MIN = 0.7;
-const SNAP_MAX = 1.0;
+/**
+ * How long the walk onto the nearest node takes, and how long it waits before
+ * starting. Eased out rather than in and out: in and out held the scene near
+ * still for the first half second after a scroll, which read as hesitation.
+ */
+const SNAP_MIN = 1.15;
+const SNAP_MAX = 1.55;
 const SNAP_DELAY = 0.03;
 
 /** Where the pinned composition parks under the header. */
@@ -377,7 +381,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         snapTo: 1 / (STOPS.length - 1),
         duration: { min: SNAP_MIN, max: SNAP_MAX },
         delay: SNAP_DELAY,
-        ease: 'power2.inOut',
+        ease: 'power2.out',
         // Land on the node nearest where the reader actually stopped, not
         // where their momentum was heading: with the projection on, a handful
         // of quick notches threw the walk three nodes down the line at once.
