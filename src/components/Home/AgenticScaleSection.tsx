@@ -283,18 +283,12 @@ const PinkCard = styled.div`
   padding: 40px;
   box-sizing: border-box;
 
-  /* The hero has no plate at all -- its copy sits straight on the dark canvas
-     and reads because the canvas is dark. Here the ground is bright, so the
-     glyphs behind the words need settling, but any box does it with edges: a
-     masked backdrop-filter still drew them, because the mask does not clip the
-     blur. This is a soft wash instead, fading to nothing well inside its own
-     box, so there is no rectangle at all -- only the words standing out. */
-  background: radial-gradient(
-    58% 62% at 50% 50%,
-    rgba(74, 10, 88, 0.5) 0%,
-    rgba(74, 10, 88, 0.32) 45%,
-    rgba(74, 10, 88, 0) 100%
-  );
+  /* Blur alone, to settle the glyphs behind the title so it reads. At a third
+     of the pink's opacity with a border it still showed as a lighter box; the
+     hero's card is barely there, and this matches that. */
+  background: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 `;
 
 const LogoMark = styled.div`
