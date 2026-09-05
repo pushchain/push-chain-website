@@ -1,0 +1,30 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "learn-push-chain": {
+                "items": {
+                  "what-is-universal-fee-abstraction": {
+                    "title": "¿Qué es la abstracción de tarifas universal y cómo funciona?"
+                  },
+                  "what-are-universal-executor-accounts": {
+                    "title": "¿Qué son las Cuentas de Ejecución Universales (UEAs) y cómo funcionan?"
+                  },
+                  "how-universal-transaction-works": {
+                    "title": "Cómo funciona la transacción universal"
+                  },
+                  "push-chain-silence-labs": {
+                    "title": "Push Chain × Silence Labs: Construyendo el Mecanismo de Firma Distribuida"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

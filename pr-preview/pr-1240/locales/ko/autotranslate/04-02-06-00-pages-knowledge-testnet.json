@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "network-updates": {
+                "title": "네트워크 업데이트",
+                "items": {
+                  "chain-upgrade-token-rebalance": {
+                    "title": "체인 업그레이드 - 토큰 리밸런싱 - Donut Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
