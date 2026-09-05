@@ -2,7 +2,7 @@
 title: "Build a Universal Airdrop"
 url: "https://pushchain.github.io/docs/chain/tutorials/token-systems/tutorial-universal-airdrop/"
 section: "tutorials"
-lastUpdated: "2026-09-05T06:39:51Z"
+lastUpdated: "2026-09-05T06:56:33Z"
 description: "Build a Universal Airdrop | Tutorials | Push Chain Docs"
 ---
 

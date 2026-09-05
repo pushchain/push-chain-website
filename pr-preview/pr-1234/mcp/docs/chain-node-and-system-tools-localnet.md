@@ -2,7 +2,7 @@
 title: "Running Localnet"
 url: "https://pushchain.github.io/docs/chain/node-and-system-tools/localnet/"
 section: "node-and-system-tools"
-lastUpdated: "2026-09-05T06:39:51Z"
+lastUpdated: "2026-09-05T06:56:33Z"
 description: "Localnet | Setup | Push Chain Docs"
 ---
 

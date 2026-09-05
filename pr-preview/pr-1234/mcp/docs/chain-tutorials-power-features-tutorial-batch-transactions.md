@@ -2,7 +2,7 @@
 title: "Batch Transactions (Multicall)"
 url: "https://pushchain.github.io/docs/chain/tutorials/power-features/tutorial-batch-transactions/"
 section: "tutorials"
-lastUpdated: "2026-09-05T06:39:51Z"
+lastUpdated: "2026-09-05T06:56:33Z"
 description: "Batch Transactions | Tutorials | Push Chain Docs"
 ---
 

@@ -2,7 +2,7 @@
 title: "Changelog"
 url: "https://pushchain.github.io/docs/chain/changelog/"
 section: "chain"
-lastUpdated: "2026-09-05T06:39:51Z"
+lastUpdated: "2026-09-05T06:56:33Z"
 description: "Changelog | Push Chain Docs"
 ---
 
