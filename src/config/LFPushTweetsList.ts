@@ -3,7 +3,26 @@
 
 // List of tweet URLs to fetch
 export const LFPushTweetsList: string[] = [
+  // Sep 2026
+  'https://x.com/igangsan54078/status/2095241101229850923?s=20',
+
+  // Aug 2026
+  'https://x.com/igangsan54078/status/2093067023735517361?s=20',
+  // ZNS Connect is an ecosystem partner — kept under the partner clause despite low likes
+  'https://x.com/ZNSConnect/status/2091937103240208665?s=20',
+  'https://x.com/ShantanuSwami11/status/2090536685440524491?s=20',
+  'https://x.com/igangsan54078/status/2089980668810088805?s=20',
+  'https://x.com/hackenai/status/2089733439008158021?s=20',
+  // Hacken's Turkish account — partner clause plus language spread
+  'https://x.com/hackenturkey/status/2085347966399746306?s=20',
+  'https://x.com/RinovMRN/status/2085078386511118830?s=20',
+  'https://x.com/Saandyeth/status/2083556383887114420?s=20',
+  // W3GF is a Web3/GameFi media account — kept under the media-account clause despite low likes
+  'https://x.com/Gamefi/status/2083520222980686175?s=20',
+  'https://x.com/PeacePrinc29959/status/2083468224285352298?s=20',
+
   // Jul 2026
+  'https://x.com/Saandyeth/status/2083273290475344164?s=20',
   'https://x.com/torettoj283/status/2082672823462416656?s=20',
   'https://x.com/BlaqOnyemauche/status/2082524276201279684?s=20',
   'https://x.com/mat_rash38998/status/2082511943227597245?s=20',
@@ -207,7 +226,6 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/everett_io/status/1988333704205529326?s=20',
   'https://x.com/svector_eth/status/1988524056589557979?s=20',
   'https://x.com/0xZabi/status/1988267166232134023?s=20',
-  'https://x.com/0xTanishaa/status/1988528699075920011?s=20',
   'https://x.com/jojoliciosa/status/1988618466216014264?s=20',
   'https://x.com/ameeetgaikwad/status/1988527995645022532?s=20',
   'https://x.com/sivramshastri/status/1988271954646953985?s=20',
@@ -229,7 +247,6 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/vaidik_namdev/status/1992653287255109636?s=20',
   'https://x.com/WhyParabola/status/1992189204437327960?s=20',
   'https://x.com/KakoliGM/status/1988631301579010169?s=20',
-  'https://x.com/Dagon361/status/1988960851081195973?s=20',
   'https://x.com/winsznx/status/1991223235183034395?s=20',
 
   // Till 11 Nov
