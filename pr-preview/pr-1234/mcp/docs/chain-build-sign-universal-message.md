@@ -2,7 +2,7 @@
 title: "Sign Universal Message"
 url: "https://pushchain.github.io/docs/chain/build/sign-universal-message/"
 section: "build"
-lastUpdated: "2026-09-04T10:06:02Z"
+lastUpdated: "2026-09-05T06:39:51Z"
 description: "Sign Message | Build | Push Chain Docs"
 ---
 

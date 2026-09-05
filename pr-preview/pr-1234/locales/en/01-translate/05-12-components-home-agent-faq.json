@@ -15,27 +15,27 @@
       "qnas": {
         "qna1": {
           "question": "What is Push Core?",
-          "answer": "<1>Push Chain is the verification layer for the agentic internet. Agents are held to rules they can't break while they act, and independent AI evaluators score their work after. Payment settles on the verdict, on any chain, with a universal network underneath.</1>"
+          "answer": "<1>Push Core is the verification layer for the agentic internet. Agents are held to rules they can't break while they act, and independent AI evaluators score their work after. Payment settles on the verdict, on any chain, with a universal network underneath.</1>"
         },
         "qna2": {
-          "question": "What if the evaluators disagree, or get it wrong?",
-          "answer": "<1>Verdicts aren't decided by a single evaluator. A quorum of independent, staked AI judges scores each job against its spec, and payment only moves once enough of them agree. Evaluators that consistently misjudge work put their own stake at risk, which keeps their incentives aligned with getting it right.</1>"
+          "question": "How does Push verify an agent's work?",
+          "answer": "<1>Verification runs through the whole job, not just the end.</1><3><4>During execution, universal guardrails keep the agent inside the rules it was given: spend caps, allowed contracts, time limits, enforced at the chain level.</4><4>After execution, a quorum of independent, staked evaluators scores the work against the spec it was hired for. Votes are commit-reveal, the verdict finalizes at 2/3 agreement, and judges who vote against clear evidence get slashed.</4><4>On the verdict, payment settles wherever the money lives: any chain, any token, through the universal access layer.</4></3><1>One AI's opinion is probabilistic; a staked quorum's agreement is a verdict.</1>"
         },
         "qna3": {
-          "question": "What stops evaluators from colluding or being bribed?",
-          "answer": "<1>Evaluators stake collateral to participate, and that stake is slashed if they're caught colluding or producing bad-faith verdicts. Combined with requiring quorum agreement across independent evaluators rather than a single judge, collusion has to clear a much higher bar than convincing one party.</1>"
+          "question": "Does my agent have to run on Push?",
+          "answer": "<1>No. Your client can live on one chain, your agent on another, and the work can happen anywhere, including off-chain. Evaluators attest to the work wherever it happens; Push records the verdict, updates reputation, and settles payment.</1>"
         },
         "qna4": {
-          "question": "Can Push verify work that happens offchain, in web2?",
-          "answer": "<1>Yes. Evaluators score the agent's output against its spec regardless of where the work happened - an API call, a social post, an offchain computation. What Push Chain guarantees is what happens next: the verdict and the payment settlement, which move onchain on any supported chain.</1>"
+          "question": "How does Push fit the agent standards?",
+          "answer": "<1>Push implements the Evaluator role in ERC-8183, the open standard for agent job escrow. It aggregates ERC-8004 identity and reputation into one canonical score. It complements payment rails like x402 and AP2: they move the money, Push tells them when the work deserves it.</1>"
         },
         "qna5": {
-          "question": "Does my agent have to run on Push?",
-          "answer": "<1>No. Your agent can run anywhere. Push Chain plugs in as the evaluation and settlement layer - you point your agent's payment flow at Push, and the work gets judged and paid out from there, without migrating your agent's own runtime.</1>"
+          "question": "What can I build today?",
+          "answer": "<1>The Donut testnet is live. Build universal apps that users from any chain can reach: one contract, every wallet. Faucet, explorer, quickstart takes about five minutes.</1><3><4>Universal Access Layer is completed.</4><4>Guardrails Layer and Judgement Layer roll out next.</4></3>"
         },
         "qna6": {
-          "question": "How does Push fit the existing agent standards?",
-          "answer": "<1>Push Chain is designed to sit alongside existing agent frameworks and payment standards rather than replace them. It adds a verification and settlement layer on top - your agent keeps using the tools and standards it already does, with Push handling accountability for the outcomes.</1>"
+          "question": "How fast is it and what do fees look like?",
+          "answer": "<1><2>Speed.</2> Designed for ~1s confirmations on Push Chain with instant finality and fast UX feedback. For universal transactions it depends per chain, but most modern blockchains should take ~2-3s confirmations or less. Check live metrics on <5>Donut Testnet</5>.</1><1><2>Fee model.</2> You see the fee in the token you choose to pay; the network settles in $PC under the hood.</1><1><2>Typical costs.</2> Typical fees are less than $0.001 per transaction, though it varies by contract complexity, price of the token and network load. You get an exact quote before you sign.</1>"
         }
       },
       "faqs": {
