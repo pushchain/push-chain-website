@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "use-cases": "<1>ما يمكن بنائه على Push Chain؟\n\nPush Chain يجلب الانتروبيليتي السهلة والتوحيد لجميع L1s, L2s, & L3s وبالتالي هو مهيأ becoming أن يكون ساحة الابتكار والانتروب. يمكنك بناء استخدامات w3 موجودة مثل:\n\n![ساحات الاستخدام الرئيسية Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nأو يمكنك تحسين w3 وبنشاء ابتكرات:\n\n![ساحات الاستخدام للمستهلكين Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nأو يمكنك رؤية بعض الأمثلة الشعبية للأبجيت والتشبيك من:\n\n![أمثلة التطبيقات الشعبية على Push Chain](/assets/website/chain/knowledge/tokenomics/popularapps.webp)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Network Updates",
+          "description": "Real-time network status updates for Push Chain. Stay informed about outages, maintenance, and resolved issues.",
+          "og-title": "Push Chain Network Updates - Network Status",
+          "og-description": "Track Push Chain network updates, maintenance windows, and service updates. Get real-time status information.",
+          "twitter-title": "Push Chain Network Updates",
+          "twitter-description": "Live updates on Push Chain network status and maintenance."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base",
+            "donut-testnet": "Donut Testnet",
+            "report": "Network Updates"
+          },
+          "blocks": {
+            "title": "Network Updates",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "content"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "Chain Upgrade - Token Rebalancing - 10 Billion PC Tokens",
+                "items": {
+                  "status-heading": "## Status",
+                  "status-timeline": "25th Feb 2026 - Started<br />25th Feb 2026 - ✅ Completed",
+                  "overview-heading": "## Overview",
+                  "overview-text": "Push Chain executed a token rebalancing proposal to reduce the total PC token supply from 75T+ tokens to approximately 10 billion tokens. This upgrade addresses a technical debt from the early days of the testnet and prepares the chain for a mainnet-like environment.",
+                  "why-heading": "### Why was this done?",
+                  "why-text": "In the early days of Push Chain testnet, there was no burn and mint process for PC tokens. This resulted in extremely low price calculations for universal transactions and allowed a handful of token holders to accumulate massive token supplies (going into trillions). This created an imbalanced token economy that needed correction before mainnet launch.",
+                  "why-necessary": "The rebalancing was necessary to:",
+                  "reason-mainnet": "- Prepare for mainnet-like environment",
+                  "reason-season3": "- Enable Season 3 rewards distribution",
+                  "reason-tech-debt": "- Remove old technical debt from early testnet",
+                  "reason-token-economy": "- Establish a fair and sustainable token economy",
+                  "what-changed-heading": "### What changed?",
+                  "what-changed-text": "The proposal affected the top 1,950 wallets out of 1.178M total addresses. Wallets holding 1,100 PC tokens or more (including those with trillions) were rebalanced to hold between 1,100-2,000 PC tokens.",
+                  "key-changes-heading": "**Key Changes:**",
+                  "change-supply": "- Total supply reduced from 75T+ to ~10B PC tokens",
+                  "change-wallets": "- Top 1,950 wallets rebalanced to 1,100-2,000 PC token range",
+                  "change-percentage": "- Affects only 0.17% of total addresses (1,950 out of 1.178M)",
+                  "change-unaffected": "- 99.83% of users remain unaffected",
+                  "why-not-informed-heading": "### Why weren't users informed beforehand?",
+                  "why-not-informed-text": "Users were not notified in advance to prevent malicious actors from redistributing tokens to other wallets before the rebalancing. This security measure ensured the integrity of the rebalancing process and prevented gaming of the system.",
+                  "validator-period": "The testnet validator proposal period is currently set to 5 minutes to help eliminate edge cases like this before full decentralized validator ownership is implemented.",
+                  "why-52t-heading": "### Why I still see 52T supply?",
+                  "why-52t-text": "The rebalance is a two-phase approach. The tokens are now collected to a team-controlled wallet and will be burned soon.",
+                  "how-affect-heading": "### How does it affect me?",
+                  "affect-majority": "**For 99.83% of users:** This change does not affect you. Your wallet balance remains unchanged.",
+                  "affect-top-wallets": "**For affected wallets (top 1,950):** If your wallet held 1,100+ PC tokens (or trillions), your balance has been rebalanced to the 1,100-2,000 PC token range.",
+                  "need-help-heading": "**Need Help?**",
+                  "need-help-text": "If you believe you are affected by this rebalancing and have questions or concerns, please reach out to the Push Chain team on Discord for assistance."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

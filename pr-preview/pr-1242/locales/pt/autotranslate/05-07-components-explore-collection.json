@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Capa para ",
+        "image-append": "",
+        "link-prepend": "Explore ",
+        "link-append": "",
+        "cta-title": "Leia Mais"
+      }
+    }
+  }
+}

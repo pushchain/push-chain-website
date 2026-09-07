@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Join Push Cult - Take the Oath",
+      "expanded-title": "The Oath",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "What's your email address? 📧",
+            "subtitle": "We need this to contact you",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "What's your X (Twitter) username?",
+            "subtitle": "We want to see your content and engagement",
+            "placeholder": "@yourhandle"
+          },
+          "telegram-id": {
+            "title": "What's your Telegram ID?",
+            "subtitle": "We use Telegram for direct communication with Disciples",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "Share your best content",
+            "subtitle": "Link to your best thread, video, or article that showcases your work",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Share your vision",
+            "subtitle": "Tell us about your content, audience, and why you want to join",
+            "placeholder": "Tell us about your content, audience, and why you want to join Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "Next",
+          "previous": "Previous",
+          "submit": "Submit Application",
+          "submitting": "Submitting..."
+        },
+        "validation": {
+          "email-required": "Email is required",
+          "email-invalid": "Please enter a valid email address",
+          "x-username-required": "X username is required",
+          "telegram-id-required": "Telegram ID is required",
+          "best-content-required": "Best content link is required",
+          "best-content-invalid": "Please enter a valid URL",
+          "message-required": "Message is required",
+          "default": "This field is required"
+        },
+        "success": {
+          "title": "Application Submitted!",
+          "message-before-link": "Join",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "and keep an eye on the",
+          "channel-name": "#push-cult",
+          "message-end": "channel for next steps.",
+          "button": "Submit Another Application"
+        },
+        "progress": {
+          "step-counter": "{{current}} of {{total}}"
+        }
+      }
+    }
+  }
+}

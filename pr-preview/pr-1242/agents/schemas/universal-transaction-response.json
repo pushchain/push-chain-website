@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/universal-transaction-response.json",
+  "title": "UniversalTransactionResponse",
+  "description": "Response object returned by pushChainClient.universal.sendTransaction(). Contains transaction hash and methods to await confirmation.",
+  "type": "object",
+  "properties": {
+    "hash": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "Transaction hash on Push Chain"
+    },
+    "wait": {
+      "description": "Method to await transaction confirmation. Returns a TransactionReceipt. Type: () => Promise<TransactionReceipt>",
+      "status": "inferred"
+    },
+    "atomic": {
+      "type": "boolean",
+      "description": "Whether the transaction executed atomically (all-or-nothing). true for a single tx, an EIP-7702 batch, or a UEA multicall batch; false only when a native Push EOA multicall fell back to the non-atomic sequential per-call loop (signer without signAuthorization support). Added in @pushchain/core 6.0.19.",
+      "status": "documented"
+    }
+  },
+  "required": ["hash"],
+  "additionalProperties": true,
+  "status": "inferred",
+  "notes": "The exact shape of TxResponse is not fully documented. The hash field and wait() method are inferred from standard EVM transaction response patterns and SDK usage examples."
+}

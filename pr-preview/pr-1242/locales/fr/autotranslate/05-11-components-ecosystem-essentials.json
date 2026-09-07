@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "Découvrez les applications essentielles du testnet",
+      "apps": {
+        "pc-faucet": {
+          "name": "Robinet à $PC",
+          "description": "Récupérez vos Tokens Testnet PC ici"
+        },
+        "push-bridge": {
+          "name": "Push Bridge",
+          "description": "Transférez des tokens entre différentes blockchains"
+        },
+        "simulate-tx": {
+          "name": "Simuler Tx",
+          "description": "Simuler une transaction universelle"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "L'explorateur de Blockchain de Push Chain"
+        },
+        "wallet": {
+          "name": "वॉलेट",
+          "description": "Le wallet universel de Push Chain"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Bergabung dengan Push Cult - Ikuti Sumpahnya",
+      "expanded-title": "Sumpah",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "Apa alamat email Anda? 📧",
+            "subtitle": "Kami butuhkan ini untuk menghubungi Anda",
+            "placeholder": "email.anda@contoh.com"
+          },
+          "x-username": {
+            "title": "Apa nama pengguna X (Twitter) Anda?",
+            "subtitle": "Kami ingin melihat konten dan interaksi Anda",
+            "placeholder": "@nama pengguna Anda"
+          },
+          "telegram-id": {
+            "title": "Berapa ID Telegram Anda?",
+            "subtitle": "Kami menggunakan Telegram untuk komunikasi langsung dengan Pengikut Setia",
+            "placeholder": "@usernameTelegramAnda"
+          },
+          "best-content": {
+            "title": "Bagikan konten terbaik Anda",
+            "subtitle": "Tautkan ke thread, video, atau artikel terbaik Anda yang menampilkan karya Anda",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Bagikan visi Anda",
+            "subtitle": "Ceritakan tentang konten Anda, audiens Anda, dan mengapa Anda ingin bergabung",
+            "placeholder": "Ceritakan tentang konten Anda, audiens Anda, dan mengapa Anda ingin bergabung dengan Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "Selanjutnya",
+          "previous": "Sebelumnya",
+          "submit": "Kirim Aplikasi",
+          "submitting": "Sedang Diproses..."
+        },
+        "validation": {
+          "email-required": "Email wajib diisi",
+          "email-invalid": "Masukkan alamat email yang valid",
+          "x-username-required": "Nama pengguna X diperlukan",
+          "telegram-id-required": "ID Telegram diperlukan",
+          "best-content-required": "Tautan konten terbaik wajib diisi",
+          "best-content-invalid": "Mohon masukkan URL yang valid",
+          "message-required": "Pesan diperlukan",
+          "default": "Kolom ini wajib diisi"
+        },
+        "success": {
+          "title": "Aplikasi Terkirim!",
+          "message-before-link": "Bergabunglah",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "dan terus pantau",
+          "channel-name": "#push-cult",
+          "message-end": "saluran untuk langkah selanjutnya.",
+          "button": "Kirim Aplikasi Lainnya"
+        },
+        "progress": {
+          "step-counter": "{{current}} dari {{total}}"
+        }
+      }
+    }
+  }
+}

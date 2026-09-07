@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "टेस्टनेट <app> पर ज़रूरी <app> देखें",
+      "apps": {
+        "pc-faucet": {
+          "name": "PC Faucet",
+          "description": "यहाँ से अपने PC टेस्टनेट टोकन प्राप्त करें"
+        },
+        "push-bridge": {
+          "name": "Push ब्रिज",
+          "description": "चेन के बीच टोकन ब्रिज करें"
+        },
+        "simulate-tx": {
+          "name": "लेन-देन का अनुकरण करें",
+          "description": "एक <1>यूनिवर्सल</1> <2>ट्रांजेक्शन</2> का अनुकरण करें"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Push Chain के ब्लॉकचेन एक्सप्लोरर"
+        },
+        "wallet": {
+          "name": "वॉलेट",
+          "description": "Push Chain का <1>universal</1> <2>वॉलेट</2>"
+        }
+      }
+    }
+  }
+}

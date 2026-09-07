@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Cover for ",
+        "image-append": "",
+        "link-prepend": "コレクションを探索 ",
+        "link-append": "",
+        "cta-title": "もっと詳しく"
+      }
+    }
+  }
+}

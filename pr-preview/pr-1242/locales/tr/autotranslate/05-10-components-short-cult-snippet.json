@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Kültürü - Yaratıcılar için Kan Yemini",
+      "title": "Disciple\nKurallar",
+      "title-aria-label": "Push Kült Üyesi Olmak İçin Kılavuzlar ve Gereksinimler",
+      "discord-link-text": "Discord'da Kült'e Katıl",
+      "discord-link-title": "Push Chain Discord #push-cult kanalına katılın",
+      "discord-link-aria-label": "Yeni sekmede Discord topluluğunu aç",
+      "explore-more-text": "Tamamını Gör",
+      "explore-more-title": "Push Kültü'nün tam manifestosunu ve program detaylarını oku",
+      "explore-more-aria-label": "Tam Push Kült blog yazısına git",
+      "accordion-aria-label": "Push Cult yönergeleri ve gereksinimleri",
+      "answer-aria-label": "Sorunun cevabı - ",
+      "qnas": {
+        "qna1": {
+          "question": "Push Cult nedir?",
+          "answer": "<1>Push Cult, yalnızca davetiyeli, özenle seçilmiş bir programdır; <2>50 seçkin içerik üreticisi</2> gerçek sinyal, spam değil, sunar.</1><1>Hedef kitleleriyle samimi bir bağ kuran, derinlemesine gönderiler, videolar veya makaleler aracılığıyla vizyonerleri ödüllendiriyoruz.</1><1>En iyi 50 Discipul, ölçülebilir etkiye dayalı olarak <2>20.000.000 PC ödülünü</2> paylaşır.</1>",
+          "discord-url-title": "Push Chain Discord'a katılın.",
+          "support-url-title": "Program hakkında daha fazla bilgi edinin."
+        },
+        "qna2": {
+          "question": "Kimlerin başvurması gerekiyor?",
+          "answer": "<1><2>İçerik üreticileri:</2> zaten rehberler, başlıklar veya etkileşimli bir kitlesi olan (mutlaka büyük olmak zorunda değil) açıklamalar üreten.</1><1><2>Açıklığa önem veren:</2> hızlı kazançlar yerine, kalıcı bir miras inşa etmeye önem veren.</1><1><2>Erken başlamak isteyen:</2> Push Chain'in Evrensel Yürütme dönemini desteklemek ve 3. Sezon'a inananları dahil etmek isteyen.</1><1>Hızlı kar elde etmek istiyorsanız, uzak durun. Eğer bir miras inşa etmek istiyorsanız, <3>ileri atın</3>.</1>",
+          "scan-url-title": "Push Kültüne katılmak için başvur",
+          "support-url-title": "Tamam manifestoyu oku."
+        },
+        "qna3": {
+          "question": "Disciples nasıl seçiliyor ve değerlendiriliyor?",
+          "answer": "<1>Odaklanmayı sağlamak için <2>50 Mürit</2> ile sınırlıyoruz. Katılım, <2>Devotion Score (Sadakat Puanı)</2> temelinde haftalık olarak yenilenir.</1><1><2>Devotion Score (Sadakat Puanı)</2> şunları birleştirir: Sinyal (ulaşım), Toplama (yeni inanlıların sisteme dahil edilmesi), İnanç (tutma), ve Zanaat (manuel inceleme).</1><1>Eşik altında düşerseniz, rotasyonunuz yapılır. Harika yaratıcılar kalitede, sayıda değil yarışır.</1>",
+          "faucet-url-title": "Değerlendirme kriterlerini öğrenin.",
+          "discord-url-title": "Discord'da sorular sorun."
+        },
+        "qna4": {
+          "question": "Disciples'lar tam olarak ne yapıyor?",
+          "answer": "<1>İçeriğinizi <2>kendi formatınızda</2> oluşturun. Konular, videolar, makaleler veya ruh halinize uyan her şey olabilir. Göreviniz: Push Chain kavramlarını açıklayın, Testnet’e sürüyü rehber edin, 3. Sezona inananları dahil edin.</1><1>Şunları sağlıyoruz: haftalık görevler, temalar ve halktan önce alfa. Anlatıyı siz şekillendiriyorsunuz.</1><1>Spam kül olur. Sadece gerçek hayatta kalır.</1>",
+          "support-url-title": "İçerik örneklerini gör.",
+          "discord-url-title": "Discord'a katılın."
+        },
+        "qna5": {
+          "question": "Ödüller nelerdir?",
+          "answer": "<1><2>En iyiler şunları alır:</2> 20M $PC havuzundan garanti pay, ayrıca mainnet'te Ultra Nadir Parlayan Geçiş (Shiny Pass).</1><1><2>Parlayan Geçiş (Shiny Pass) şunları sağlar:</2> zincir ücretlerinden gelir paylaşımı, doğrulayıcı ödüllerine katılım, staking çarpanları ve VIP ekosistem ayrıcalıkları.</1><1>Derece hasadı belirler. Katılım ödülü yoktur.</1>",
+          "docs-url-title": "Ödüller hakkında bilgi edinin.",
+          "kb-url-title": "Tokenomiği oku."
+        },
+        "qna6": {
+          "question": "Nasıl katılabilirim?",
+          "answer": "<1>Kapılar açıldı, bağlılığınızı kanıtlayın, <3>şimdi başvurun</3>.</1><1>Kayıt olmak, program detaylarına, değerlendirme mekaniklerine ve ilk yönlendirme adımlarına erişmenizi sağlar.</1><1>Oradan itibaren, <2>performans her şeyi belirler</2>.</1>",
+          "contact-url-title": "Push Kültüne Başvur",
+          "github-url-title": "Pact'ın tamamını oku."
+        }
+      }
+    }
+  }
+}

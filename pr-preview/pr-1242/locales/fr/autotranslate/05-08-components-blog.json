@@ -1,0 +1,19 @@
+{
+  "components": {
+    "blog": {
+      "featured": {
+        "title": "Articles en vedette",
+        "post-aria-label": "Article de blog en vedette : {{title}}",
+        "image-alt": "Image vedette pour {{title}}"
+      },
+      "tags": {
+        "title": "Par Thématique",
+        "tag-link-title": "Voir les articles étiquetés avec {{tagName}}",
+        "tag-link-aria-label": "Voir les articles étiquetés avec {{tagName}}"
+      },
+      "list": {
+        "recent-updates": "Derniers articles"
+      }
+    }
+  }
+}

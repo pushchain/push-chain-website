@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "Donut testnet'teki Temel Uygulamaları Keşfedin",
+      "apps": {
+        "pc-faucet": {
+          "name": "PC Musluğu",
+          "description": "Buradaki PC testnet <token>larınızı alın"
+        },
+        "push-bridge": {
+          "name": "Push Köprüsü",
+          "description": "Zincirler arası <token> köprüsü"
+        },
+        "simulate-tx": {
+          "name": "İşlemi Simüle Et",
+          "description": "Evrensel bir <transaction>ı simüle et"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Push Chain'in blokzincir gezgini"
+        },
+        "wallet": {
+          "name": "Cüzdan",
+          "description": "Push Chain'ın evrensel cüzdanı"
+        }
+      }
+    }
+  }
+}

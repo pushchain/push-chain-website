@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "home": {
+      "chain-features-section": {
+        "box7": {
+          "texttitle": "Eksekusi Universal\nPenjagaan",
+          "bodytext": "Aktifkan, validasi, dan lengkapi transaksi di setiap rantai menggunakan kontrak pintar Anda.",
+          "tags": {
+            "title1": "TULIS KE JARINGAN"
+          }
+        },
+        "box8": {
+          "bodytext": "Akses akun dan data status dari jaringan lain dalam kontrak pintar Anda.",
+          "tags": {
+            "title1": "MAMBIL DARI RANTAI"
+          },
+          "imagetitle": "(Roadmap) State Bagian Berbagi memungkinkan akses ke data akun dan state dari jaringan lain dalam kontrak pintar Anda."
+        }
+      }
+    }
+  }
+}

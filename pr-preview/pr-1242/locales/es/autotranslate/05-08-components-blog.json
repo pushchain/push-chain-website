@@ -1,0 +1,19 @@
+{
+  "components": {
+    "blog": {
+      "featured": {
+        "title": "Artículos Destacados",
+        "post-aria-label": "Publicación destacada del blog: {{title}}",
+        "image-alt": "Imagen destacada para {{title}}"
+      },
+      "tags": {
+        "title": "Explorar por Tema",
+        "tag-link-title": "Ver publicaciones etiquetadas con {{tagName}}",
+        "tag-link-aria-label": "Ver publicaciones etiquetadas con {{tagName}}"
+      },
+      "list": {
+        "recent-updates": "Publicaciones recientes"
+      }
+    }
+  }
+}

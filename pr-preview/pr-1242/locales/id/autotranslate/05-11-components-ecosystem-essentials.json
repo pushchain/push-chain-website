@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "Jelajahi Aplikasi Testnet Penting",
+      "apps": {
+        "pc-faucet": {
+          "name": "Keran PC",
+          "description": "Dapatkan <token> <testnet> PC Anda di sini"
+        },
+        "push-bridge": {
+          "name": "Push Bridge",
+          "description": "Jembatani <token> antar rantai"
+        },
+        "simulate-tx": {
+          "name": "Simulasi Tx",
+          "description": "Simulasikan sebuah transaksi universal"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Penjelajah <blockchain> Push Chain"
+        },
+        "wallet": {
+          "name": "Dompet",
+          "description": "Dompet universal Push Chain"
+        }
+      }
+    }
+  }
+}
