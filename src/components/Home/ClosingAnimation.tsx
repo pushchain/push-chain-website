@@ -26,13 +26,15 @@ const WIDE_ASPECT = '1440 / 750';
 const TALL_ASPECT = '60 / 106';
 
 /**
- * The portrait composition is drawn to cover the screen exactly and no more.
- * Its hands reach in from its own left and right edges, so cropping the sides
- * to make them taller cuts their tips off instead: drawn at 1.7x they came
- * apart into fragments. The dark areas above and below them are the artwork,
- * not a sizing fault -- everything bright in it sits between 41% and 56% of
- * its height, with only the faint lattice either side.
+ * How much larger than the screen the portrait composition is drawn. Its hands
+ * reach in from its own left and right edges, so this trades their reach for
+ * their size: at 1.0 the screen shows 82% of the composition's width and the
+ * hands are a band across an eighth of the screen; at 1.8 they are severed,
+ * with the right hand almost entirely off the edge. At 1.3 the screen shows
+ * 63% of the width -- the hands keep the part that reads as a hand and lose
+ * the reach, which was always meant to come in from off screen.
  */
+const TALL_FILL = 1.3;
 
 /** Scroll distance the section holds for while the hands meet and burst. */
 const RUNWAY = 1600;
@@ -128,6 +130,13 @@ const ClosingAnimation: React.FC<{ children: React.ReactNode }> = ({
           tileScale: 0.66,
           fontScale: 0.68,
           dotScale: 0.15,
+          // Left off, as the panel has it. Turning it on -- and lifting the ink
+          // gamma, and pushing the dot size to 0.9 -- each rendered pixel for
+          // pixel the same screen. There is no dim lattice either side of the
+          // hands to raise: the composition leaves those cells empty, and the
+          // shader shades a cell as pow(value / 15, gamma), which cannot lift
+          // a zero. Filling that space needs the composition rebuilt, not a
+          // setting.
           dots: false,
           accentMinValue: 7,
           inkGamma: 0.3,
@@ -292,7 +301,7 @@ const FieldHost = styled.div`
   /* The portrait one covers the screen instead: scaled so neither axis falls
      short, which leaves a little of its width outside the pinned box's clip. */
   &[data-tall='true'] {
-    width: max(100vw, calc(100dvh * ${TALL_ASPECT}));
+    width: calc(max(100vw, 100dvh * ${TALL_ASPECT}) * ${TALL_FILL});
     aspect-ratio: ${TALL_ASPECT};
   }
 
