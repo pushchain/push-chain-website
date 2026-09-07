@@ -2306,6 +2306,14 @@ ul.tabs.liveplaytab li {
   border-radius: 32px;
 }
 
+/* Tall portrait illustrations: cap width so they don't dominate the column.
+   Scoped by filename so only the intended image is affected. */
+.PushBlog img[src*='agent-overreach-comic'] {
+  max-width: 460px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ------------------ */
 /* DOCUSAURUS SIDEBAR OVERRIDE */
 /* ------------------ */
