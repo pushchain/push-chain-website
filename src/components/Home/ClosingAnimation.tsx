@@ -25,6 +25,15 @@ import { device } from '@site/src/config/globals';
 const WIDE_ASPECT = '1440 / 750';
 const TALL_ASPECT = '60 / 106';
 
+/**
+ * The portrait composition is drawn to cover the screen exactly and no more.
+ * Its hands reach in from its own left and right edges, so cropping the sides
+ * to make them taller cuts their tips off instead: drawn at 1.7x they came
+ * apart into fragments. The dark areas above and below them are the artwork,
+ * not a sizing fault -- everything bright in it sits between 41% and 56% of
+ * its height, with only the faint lattice either side.
+ */
+
 /** Scroll distance the section holds for while the hands meet and burst. */
 const RUNWAY = 1600;
 
@@ -242,7 +251,11 @@ const Runway = styled.div`
 const Pinned = styled.div`
   position: sticky;
   top: 0;
-  height: 100svh;
+  /* The viewport as it actually is, not as it is with the address bar out. At
+     100svh the box is the height of the smaller of the two states, so with the
+     bar retracted it was centring the hands against a box shorter than the
+     screen and they sat high. */
+  height: 100dvh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -264,6 +277,14 @@ const FieldHost = styled.div`
   transform: translate(-50%, -50%);
   pointer-events: none;
 
+  /* Centred on the hands rather than on the canvas. Measured off the portrait
+     composition's own poster, everything bright in it sits between 41% and 56%
+     of its height -- a centre of 48.5%, which put the hands a little above the
+     middle of the screen even with the canvas centred exactly. */
+  &[data-tall='true'] {
+    transform: translate(-50%, -49.2%);
+  }
+
   /* The wide composition, drawn at the viewport's width. */
   width: 100vw;
   aspect-ratio: ${WIDE_ASPECT};
@@ -271,7 +292,7 @@ const FieldHost = styled.div`
   /* The portrait one covers the screen instead: scaled so neither axis falls
      short, which leaves a little of its width outside the pinned box's clip. */
   &[data-tall='true'] {
-    width: max(100vw, calc(100svh * ${TALL_ASPECT}));
+    width: max(100vw, calc(100dvh * ${TALL_ASPECT}));
     aspect-ratio: ${TALL_ASPECT};
   }
 
