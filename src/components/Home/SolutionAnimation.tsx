@@ -27,15 +27,16 @@ import GLOBALS, { device } from '@site/src/config/globals';
 const STOPS = [0, 90, 200, 280, 378, 540];
 
 /**
- * Scroll distance that calls for the next stop. A step is meant to cost one
- * scroll or two, so this is close to a couple of notches of a wheel; at 300 it
- * took six, and five of them moved nothing on screen because the walk only
- * plays once a stop is called for. The five steps have to divide the runway
- * between them, so this is also what sets how long the section is held: short
- * enough that the walk keeps up with the reader, long enough that the last
- * stop is not reached by accident.
+ * Scroll distance that calls for the next stop. Sized off what one scroll
+ * actually moves this page, measured: a mouse notch and a light trackpad flick
+ * are both about 130px, an ordinary trackpad swipe 580px, a hard flick 1600px.
+ * A stop has to cost more than a swipe divided by one-plus-STEP_COMMIT, or a
+ * single swipe crosses two of them -- at 130 it crossed four and a half, which
+ * is why a step at a time turned into several. Four hundred puts an ordinary
+ * swipe on exactly one stop and a couple of notches on one stop, and it is also
+ * what sets how long the section is held.
  */
-const STEP_SCROLL = 130;
+const STEP_SCROLL = 400;
 
 /**
  * How fast a step is walked, in animation frames per second, and the shortest
@@ -44,16 +45,28 @@ const STEP_SCROLL = 130;
  * walk: the last stop is nearly twice the distance of the third, and a fixed
  * duration ran it at nearly twice the speed.
  */
-const STEP_FPS = 200;
-const STEP_MIN_SECONDS = 0.38;
-const STEP_MAX_SECONDS = 1.4;
+const STEP_FPS = 145;
+const STEP_MIN_SECONDS = 0.45;
+const STEP_MAX_SECONDS = 1.25;
 
 /**
  * How far past the halfway mark between two stops the scroll has to reach
  * before the next step is called for. Without it, resting exactly on the line
  * let the smallest movement flip the walk back and forth.
  */
-const STEP_COMMIT = 0.58;
+const STEP_COMMIT = 0.55;
+
+/**
+ * How long the scroll has to be completely quiet -- gesture finished, momentum
+ * spent -- before the page is settled onto the stop the walk is resting on, and
+ * how long that settling takes. Without it the scroll comes to rest between two
+ * stops and the leftover is carried into the next scroll, so an ordinary swipe
+ * did one step and the next did two. Waiting for silence first is what keeps
+ * this from fighting the browser: an earlier version settled the page while the
+ * gesture was still running and the two moved it at once.
+ */
+const SETTLE_IDLE_MS = 190;
+const SETTLE_SECONDS = 0.34;
 
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -387,6 +400,36 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       );
     };
 
+    // Settling the page onto a stop once the reader has actually stopped.
+    // Only the wheel and the finger call the scroll off; the scroll event is
+    // watched purely for silence, and is ignored while the settle is the thing
+    // moving the page.
+    let quietFrom = 0;
+    let settling = false;
+    let settleFrom = 0;
+    let settleTo = 0;
+    let settleAt = 0;
+
+    const stopScrollFor = (node: number) => {
+      const { top, travel } = geometry();
+      return Math.round(top + (travel * node) / LAST);
+    };
+
+    const cancelSettle = () => {
+      settling = false;
+      quietFrom = 0;
+    };
+
+    const onScroll = () => {
+      if (settling) return;
+      quietFrom = performance.now();
+    };
+    const onInput = () => cancelSettle();
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('wheel', onInput, { passive: true });
+    window.addEventListener('touchstart', onInput, { passive: true });
+
     let drawn = -1;
     let prevAt = 0;
     const tick = (now: number) => {
@@ -395,11 +438,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
       const place = placeNow();
       const nearest = Math.max(0, Math.min(LAST, Math.round(place)));
-      if (nearest !== want && Math.abs(place - want) > STEP_COMMIT) {
-        walkTo(nearest);
+      const walking = frame !== STOPS[want];
+      // One stop at a time, and only once the stop being walked to has been
+      // reached. A scroll long enough to reach across several stops used to be
+      // taken in a single stride, which read as two or three steps happening at
+      // once; it is walked stop by stop now, each at the same pace, however far
+      // the scroll went.
+      if (!walking && nearest !== want && Math.abs(place - want) > STEP_COMMIT) {
+        walkTo(want + (nearest > want ? 1 : -1));
       }
 
-      if (frame !== STOPS[want] && dt) {
+      if (walking && dt) {
         goneFor += dt;
         const t = Math.min(1, goneFor / stepSeconds);
         // Gentle off the mark and gentle into the stop, flat in between, so
@@ -408,6 +457,26 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         const eased = t < 0.5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t);
         frame = fromFrame + (STOPS[want] - fromFrame) * eased;
         if (t >= 1) frame = STOPS[want];
+      }
+
+      // Never while the walk is still going, never once the reader has scrolled
+      // past the runway -- settling there would hold the section against them.
+      const { top, travel } = geometry();
+      const inside = window.scrollY > top && window.scrollY < top + travel;
+      if (settling) {
+        const t = Math.min(1, (now - settleAt) / (SETTLE_SECONDS * 1000));
+        const eased = 1 - (1 - t) * (1 - t) * (1 - t);
+        window.scrollTo(0, Math.round(settleFrom + (settleTo - settleFrom) * eased));
+        if (t >= 1) cancelSettle();
+      } else if (!walking && inside && quietFrom && now - quietFrom > SETTLE_IDLE_MS) {
+        const to = stopScrollFor(want);
+        quietFrom = 0;
+        if (Math.abs(to - window.scrollY) > 2) {
+          settleFrom = window.scrollY;
+          settleTo = to;
+          settleAt = now;
+          settling = true;
+        }
       }
 
       const next = Math.round(frame);
@@ -424,6 +493,9 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     return () => {
       cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('wheel', onInput);
+      window.removeEventListener('touchstart', onInput);
     };
   }, [data]);
 
