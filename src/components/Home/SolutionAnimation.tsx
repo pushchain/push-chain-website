@@ -26,28 +26,29 @@ import GLOBALS, { device } from '@site/src/config/globals';
  */
 const STOPS = [0, 90, 200, 280, 378, 540];
 
-/**
- * Scroll distance that advances one stop. The step is picked by rounding, so
- * the walk sets off half of this into a segment -- about one notch of a wheel.
- * Longer and the reader scrolls into nothing waiting for it to start.
- */
-const STEP_SCROLL = 150;
 
 /** Seconds one step takes to walk from its node to the next. */
 const SPAN_SECONDS = 0.9;
 
+/** How close the box has to be to its parked place before it takes the scroll. */
+const CATCH_DISTANCE = 24;
+
+/** Grace after handing the scroll back, so it is not taken straight again. */
+const RELOCK_GRACE_MS = 450;
+
+/** A jump bigger than this is not scrolling, and the scroll is handed back. */
+const JUMP_ESCAPE = 400;
+
+/** Momentum swallowed after a step, so one flick of a trackpad is one step. */
+const COOLDOWN_MS = 140;
+
+/** Finger travel that counts as a swipe. */
+const TOUCH_THRESHOLD = 28;
+
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
 
-const RUNWAY = (STOPS.length - 1) * STEP_SCROLL;
 
-/**
- * Scroll kept back at the end so the final stop is actually seen. Without it
- * the timeline finished exactly as the pin released — measured, "Payment
- * Complete" was reached on the last pixel of travel, with the section already
- * scrolling away, so it read as being stuck on "Evaluation of Work".
- */
-const HOLD_TAIL = 460;
 
 /** Gap between the copy and the scene. Every pixel here comes off the scene. */
 const COPY_GAP = 24;
@@ -326,37 +327,135 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     let startedAt = 0;
     let moving = false;
     let index = 0;
+    let locked = false;
+    let cooldownUntil = 0;
+    let parkY = 0;
+    let relockAfter = 0;
+    let lastDelta = 0;
 
-    // Which stop the reader has scrolled to. Measured against the runway, not
-    // the pinned box: that one is the sticky element, so once it pins its
-    // document position tracks the scroll and the distance travelled reads as
-    // zero for the whole pinned stretch.
-    const stopFromScroll = () => {
-      if (runway.dataset.pinned !== 'true') return index;
-      const top = runway.getBoundingClientRect().top + window.scrollY;
-      const travel = Math.max(
-        1,
-        runway.offsetHeight - pinned.offsetHeight - HOLD_TAIL
-      );
-      const travelled = window.scrollY - top;
-      const progress = Math.max(0, Math.min(1, travelled / travel));
-      return Math.round(progress * (STOPS.length - 1));
-    };
+    const LAST = STOPS.length - 1;
+    const boxTop = () => pinned.getBoundingClientRect().top;
 
-    // One step, begun, always finishes. The scroll is only read when the walk
-    // is standing still, and it only ever moves to the neighbouring node --
-    // so a scroll that stops half way cannot pull the character back to where
-    // it set off from, and a long scroll queues the steps rather than
-    // skipping them.
-    const startStep = () => {
-      if (moving) return;
-      const wanted = stopFromScroll();
-      if (wanted === index) return;
-      index += wanted > index ? 1 : -1;
+    // The scene holds the scroll from the first step to the last. Mapping the
+    // scroll to a step instead let the page carry on past the section while
+    // steps were still queued, and let a fast scroll take two nodes at once.
+    // Locked, a gesture is a gesture: one step, whatever its size, and none
+    // at all while a step is already walking.
+    const step = (dir: number) => {
+      const next = index + dir;
+      if (next < 0 || next > LAST) return false;
+      index = next;
       from = frame;
       to = STOPS[index];
       startedAt = performance.now();
       moving = true;
+      return true;
+    };
+
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      if (moving || performance.now() < cooldownUntil) return;
+      const dir = e.deltaY > 0 ? 1 : -1;
+      // At either end, the gesture that would carry past it hands the scroll
+      // back to the page rather than being swallowed.
+      if ((dir > 0 && index === LAST) || (dir < 0 && index === 0)) {
+        release();
+        return;
+      }
+      step(dir);
+    };
+
+    let touchY = 0;
+    const onTouchStart = (e: TouchEvent) => {
+      touchY = e.touches[0].clientY;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      if (moving || performance.now() < cooldownUntil) return;
+      const dy = touchY - e.touches[0].clientY;
+      if (Math.abs(dy) < TOUCH_THRESHOLD) return;
+      touchY = e.touches[0].clientY;
+      const dir = dy > 0 ? 1 : -1;
+      if ((dir > 0 && index === LAST) || (dir < 0 && index === 0)) {
+        release();
+        return;
+      }
+      step(dir);
+    };
+
+    const KEYS: Record<string, number> = {
+      ArrowDown: 1, PageDown: 1, ' ': 1, ArrowUp: -1, PageUp: -1,
+    };
+    const onKey = (e: KeyboardEvent) => {
+      // Jumping somewhere else entirely hands the scroll straight back, so
+      // these keys cannot strand a reader inside the section.
+      if (e.key === 'Home' || e.key === 'End' || e.key === 'Escape') {
+        release();
+        return;
+      }
+      const dir = KEYS[e.key];
+      if (!dir) return;
+      e.preventDefault();
+      if (moving || performance.now() < cooldownUntil) return;
+      if ((dir > 0 && index === LAST) || (dir < 0 && index === 0)) {
+        release();
+        return;
+      }
+      step(dir);
+    };
+
+    const lock = () => {
+      if (locked) return;
+      locked = true;
+      // Park it exactly, so the walk happens against a still frame.
+      parkY = Math.round(window.scrollY + boxTop() - PIN_TOP);
+      window.scrollTo(0, parkY);
+      window.addEventListener('wheel', onWheel, { passive: false });
+      window.addEventListener('touchstart', onTouchStart, { passive: true });
+      window.addEventListener('touchmove', onTouchMove, { passive: false });
+      window.addEventListener('keydown', onKey, { passive: false });
+    };
+
+    function release() {
+      if (!locked) return;
+      locked = false;
+      // A moment's grace, or it takes the scroll straight back off the reader.
+      relockAfter = performance.now() + RELOCK_GRACE_MS;
+      window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('keydown', onKey);
+    }
+
+    // Take the scroll as the box passes the place it parks at, from either
+    // direction, so coming back up into the section picks the walk up where it
+    // was left rather than scrolling past it. Measured on the crossing rather
+    // than on a distance: approaching from below, a distance test arms itself
+    // only after the box has already gone by.
+    const onScroll = () => {
+      if (runway.dataset.pinned !== 'true') return;
+
+      // Hold the page still while the walk has the scroll. preventDefault
+      // alone is not enough -- a wheel can be handled off the main thread and
+      // scroll before the listener runs -- so the position is put back too.
+      if (locked) {
+        const off = window.scrollY - parkY;
+        // A jump this large is not someone scrolling -- an anchor, a restored
+        // position, find-in-page -- so the scroll is handed back rather than
+        // fought over.
+        if (Math.abs(off) > JUMP_ESCAPE) {
+          release();
+          return;
+        }
+        if (off !== 0) window.scrollTo(0, parkY);
+        return;
+      }
+
+      const d = boxTop() - PIN_TOP;
+      const crossed = (lastDelta > 0 && d <= 0) || (lastDelta < 0 && d >= 0);
+      lastDelta = d;
+      if (performance.now() < relockAfter) return;
+      if (crossed || Math.abs(d) < CATCH_DISTANCE) lock();
     };
 
     const tick = (now: number) => {
@@ -369,27 +468,27 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         if (t >= 1) {
           frame = to;
           moving = false;
+          // Swallow the tail of a trackpad's momentum, so one flick is one
+          // step rather than however many events it happens to send.
+          cooldownUntil = now + COOLDOWN_MS;
         }
         anim.goToAndStop(Math.round(frame), true);
-      } else {
-        // Idle: pick up the next step the reader has scrolled to, if any.
-        startStep();
       }
       raf = requestAnimationFrame(tick);
     };
 
-    const onScroll = () => startStep();
-
-    index = stopFromScroll();
     frame = STOPS[index];
     anim.goToAndStop(frame, true);
+    lastDelta = boxTop() - PIN_TOP;
 
     window.addEventListener('scroll', onScroll, { passive: true });
     raf = requestAnimationFrame(tick);
+    onScroll();
 
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('scroll', onScroll);
+      release();
     };
   }, [data]);
 
@@ -425,35 +524,12 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
    element rather than padding: sticky travel is bounded by the containing
    block's content box, and padding buys none of it. */
 const Runway = styled.div`
+  /* No scroll runway any more: the scene takes the scroll itself while it
+     walks, so the section is only as tall as the box it pins. The travel
+     variable it publishes is zero for the same reason, which leaves the
+     section below to follow in the ordinary way. */
   position: relative;
   width: 100%;
-
-  &[data-pinned='true'] {
-    height: calc(${RUNWAY + HOLD_TAIL}px + 100svh);
-  }
-
-  @media ${device.laptop} {
-    &[data-pinned='true'] {
-      height: calc(${Math.round(RUNWAY * 0.8) + HOLD_TAIL}px + 100svh);
-    }
-  }
-
-  @media ${device.mobileL} {
-    &[data-pinned='true'] {
-      height: calc(${Math.round(RUNWAY * 0.75) + HOLD_TAIL}px + 100svh);
-    }
-  }
-
-  /* Below laptop the pinned box hugs the scene rather than filling the screen,
-     which left the rest of the fold empty for the whole hold. Pull the section
-     below up by the hold's length so it starts directly under the pinned box;
-     it parks itself there (see AgenticScaleSection) and the spacer at its foot
-     puts the scroll distance back, so nothing else on the page moves. */
-  @media ${device.laptop} {
-    &[data-pinned='true'] {
-      margin-bottom: calc(-1 * var(--solution-travel, 0px));
-    }
-  }
 `;
 
 /* Holds the copy, the scene and the ground together, so the whole section sits
