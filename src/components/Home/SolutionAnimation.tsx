@@ -27,19 +27,33 @@ import GLOBALS, { device } from '@site/src/config/globals';
 const STOPS = [0, 90, 200, 280, 378, 540];
 
 /**
- * Scroll distance that advances one stop. At 620 the walk went a whole second
- * at a time without moving between steps -- measured off a screen recording,
- * three stills of 933, 966 and 1300ms inside six seconds of scrolling. The
- * section holds for half as long now; nothing about where anything sits
- * changes, only how much scrolling the walk is spread over.
+ * Scroll distance that calls for the next stop. A step is meant to cost one
+ * scroll or two, so this is close to a couple of notches of a wheel; at 300 it
+ * took six, and five of them moved nothing on screen because the walk only
+ * plays once a stop is called for. The five steps have to divide the runway
+ * between them, so this is also what sets how long the section is held: short
+ * enough that the walk keeps up with the reader, long enough that the last
+ * stop is not reached by accident.
  */
-const STEP_SCROLL = 300;
+const STEP_SCROLL = 130;
 
-/** How long after the reader stops before the step finishes itself. */
-const SETTLE_AFTER_MS = 90;
+/**
+ * How fast a step is walked, in animation frames per second, and the shortest
+ * and longest a step is allowed to take. Timing it by frame count rather than
+ * giving every step the same duration is what keeps one pace across the whole
+ * walk: the last stop is nearly twice the distance of the third, and a fixed
+ * duration ran it at nearly twice the speed.
+ */
+const STEP_FPS = 200;
+const STEP_MIN_SECONDS = 0.38;
+const STEP_MAX_SECONDS = 1.4;
 
-/** And how long that finish takes. */
-const SETTLE_SECONDS = 0.55;
+/**
+ * How far past the halfway mark between two stops the scroll has to reach
+ * before the next step is called for. Without it, resting exactly on the line
+ * let the smallest movement flip the walk back and forth.
+ */
+const STEP_COMMIT = 0.58;
 
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -47,12 +61,12 @@ const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP 
 const RUNWAY = (STOPS.length - 1) * STEP_SCROLL;
 
 /**
- * Scroll kept back at the end so the final stop is actually seen. Without it
- * the timeline finished exactly as the pin released — measured, "Payment
- * Complete" was reached on the last pixel of travel, with the section already
- * scrolling away, so it read as being stuck on "Evaluation of Work".
+ * Scroll kept back at the end so the final stop is actually seen. Small now
+ * that the walk lands on the last node rather than reaching it on the final
+ * pixel: at 460 the reader scrolled several times against nothing before the
+ * section would let go.
  */
-const HOLD_TAIL = 460;
+const HOLD_TAIL = 120;
 
 /** Gap between the copy and the scene. Every pixel here comes off the scene. */
 const COPY_GAP = 24;
@@ -325,97 +339,77 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     }
 
     let raf = 0;
-    let frame = 0;
     const LAST = STOPS.length - 1;
 
-    // The walk is held as a position along the stops rather than a frame, so
-    // one step of scroll is one step of the walk however many frames that
-    // stop happens to be from the last.
-    let pos = 0;
-    let basePos = 0;
-    let baseProgress = 0;
-
-    let dir = 1;
-    let lastY = window.scrollY;
-    let idle = 0;
-
-    let settling = false;
-    let settleFrom = 0;
-    let settleTo = 0;
-    let settleAt = 0;
-
-    const progressNow = () => {
+    const geometry = () => {
       const top = runway.getBoundingClientRect().top + window.scrollY;
       const travel = Math.max(
         1,
         runway.offsetHeight - pinned.offsetHeight - HOLD_TAIL
       );
-      return Math.max(0, Math.min(1, (window.scrollY - top) / travel));
+      return { top, travel };
     };
 
-    // Frame for a position that may sit between two stops.
-    const frameAt = (x: number) => {
-      const i = Math.max(0, Math.min(LAST - 1, Math.floor(x)));
-      const within = Math.max(0, Math.min(1, x - i));
-      return STOPS[i] + (STOPS[i + 1] - STOPS[i]) * within;
+    // Where the scroll sits along the walk, counted in stops. Read straight,
+    // with nothing carried over between steps -- the walk used to be measured
+    // from wherever the last step settled, and that drift is why scrolling
+    // back up ran out of runway around the third stop instead of returning to
+    // the first.
+    const placeNow = () => {
+      const { top, travel } = geometry();
+      const p = Math.max(0, Math.min(1, (window.scrollY - top) / travel));
+      return p * LAST;
     };
 
-    // Settling always finishes the step the reader started rather than
-    // returning to the one behind: forward if they were scrolling forward.
-    // Snapping to whichever stop was nearest is what made a slow scroll go
-    // part way and come back.
-    const settle = () => {
-      const target = Math.max(
-        0,
-        Math.min(LAST, dir > 0 ? Math.ceil(pos) : Math.floor(pos))
+    // The scroll chooses which stop the character is going to; it does not
+    // draw the walk there. The walk plays on its own clock, so a step always
+    // runs at one pace and always finishes, whether it was asked for by a
+    // flick or by a single notch.
+    //
+    // Nothing here touches the scroll. Carrying it by hand is what made the
+    // section fight the browser: both were moving the page, a step stalled
+    // halfway while they disagreed and then crossed two stops at once when
+    // they agreed again. The section stays put because the runway underneath
+    // it is long, which needs no help.
+    let want = Math.round(placeNow());
+    let frame = STOPS[want];
+    let fromFrame = frame;
+    let goneFor = 0;
+    let stepSeconds = 0;
+
+    const walkTo = (node: number) => {
+      want = node;
+      fromFrame = frame;
+      goneFor = 0;
+      stepSeconds = Math.max(
+        STEP_MIN_SECONDS,
+        Math.min(STEP_MAX_SECONDS, Math.abs(STOPS[node] - frame) / STEP_FPS)
       );
-      if (Math.abs(target - pos) < 0.001) return;
-      settleFrom = pos;
-      settleTo = target;
-      settleAt = performance.now();
-      settling = true;
-    };
-
-    const onScroll = () => {
-      if (runway.dataset.pinned !== 'true') return;
-      const y = window.scrollY;
-      if (y !== lastY) dir = y > lastY ? 1 : -1;
-      lastY = y;
-
-      // Scrolling takes the walk back off any settle in progress, from
-      // wherever it had reached, so the two never fight.
-      if (settling) {
-        settling = false;
-        basePos = pos;
-        baseProgress = progressNow();
-      }
-
-      pos = Math.max(
-        0,
-        Math.min(LAST, basePos + (progressNow() - baseProgress) * LAST)
-      );
-
-      idle = performance.now() + SETTLE_AFTER_MS;
     };
 
     let drawn = -1;
+    let prevAt = 0;
     const tick = (now: number) => {
-      if (settling) {
-        const t = Math.min(1, (now - settleAt) / (SETTLE_SECONDS * 1000));
-        const eased = 1 - Math.pow(1 - t, 3);
-        pos = settleFrom + (settleTo - settleFrom) * eased;
-        if (t >= 1) {
-          pos = settleTo;
-          settling = false;
-          basePos = pos;
-          baseProgress = progressNow();
-        }
-      } else if (idle && now > idle) {
-        idle = 0;
-        settle();
+      const dt = prevAt ? Math.min(0.05, (now - prevAt) / 1000) : 0;
+      prevAt = now;
+
+      const place = placeNow();
+      const nearest = Math.max(0, Math.min(LAST, Math.round(place)));
+      if (nearest !== want && Math.abs(place - want) > STEP_COMMIT) {
+        walkTo(nearest);
       }
 
-      frame = frameAt(pos);
+      if (frame !== STOPS[want] && dt) {
+        goneFor += dt;
+        const t = Math.min(1, goneFor / stepSeconds);
+        // Gentle off the mark and gentle into the stop, flat in between, so
+        // the character reads as setting off and arriving rather than being
+        // dragged at one rate and cut off.
+        const eased = t < 0.5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t);
+        frame = fromFrame + (STOPS[want] - fromFrame) * eased;
+        if (t >= 1) frame = STOPS[want];
+      }
+
       const next = Math.round(frame);
       if (next !== drawn) {
         anim.goToAndStop(next, true);
@@ -424,18 +418,12 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       raf = requestAnimationFrame(tick);
     };
 
-    baseProgress = progressNow();
-    basePos = Math.round(baseProgress * LAST);
-    pos = basePos;
-    frame = frameAt(pos);
     anim.goToAndStop(Math.round(frame), true);
 
-    window.addEventListener('scroll', onScroll, { passive: true });
     raf = requestAnimationFrame(tick);
 
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener('scroll', onScroll);
     };
   }, [data]);
 
