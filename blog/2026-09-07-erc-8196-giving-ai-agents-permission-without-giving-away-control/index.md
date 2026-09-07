@@ -19,7 +19,7 @@ Humanoids and robots are a hot trend these days. Imagine you're the proud owner 
 
 Alas! You come back to find out the robot not only trimmed the lawn but also axed your garden, bonsai plants and even your fence!
 
-![Comic strip of a robot asked to mow the lawn that destroys the garden and fence instead](./agent-overreach-comic.webp)
+![Comic strip of a robot asked to mow the lawn that destroys the garden and fence instead](./image-1.webp)
 
 *Maybe the agent made a bad decision.*
 
