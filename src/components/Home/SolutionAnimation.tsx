@@ -26,8 +26,14 @@ import GLOBALS, { device } from '@site/src/config/globals';
  */
 const STOPS = [0, 90, 200, 280, 378, 540];
 
-/** Scroll distance that advances one stop. */
-const STEP_SCROLL = 620;
+/**
+ * Scroll distance that advances one stop. At 620 the walk went a whole second
+ * at a time without moving between steps -- measured off a screen recording,
+ * three stills of 933, 966 and 1300ms inside six seconds of scrolling. The
+ * section holds for half as long now; nothing about where anything sits
+ * changes, only how much scrolling the walk is spread over.
+ */
+const STEP_SCROLL = 300;
 
 /** How long after the reader stops before the step finishes itself. */
 const SETTLE_AFTER_MS = 90;
