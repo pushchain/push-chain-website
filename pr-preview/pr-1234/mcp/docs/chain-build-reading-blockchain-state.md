@@ -2,7 +2,7 @@
 title: "Reading Blockchain State"
 url: "https://pushchain.github.io/docs/chain/build/reading-blockchain-state/"
 section: "build"
-lastUpdated: "2026-09-07T15:07:23Z"
+lastUpdated: "2026-09-07T21:01:40Z"
 description: "Reading Blockchain State | Build | Push Chain Docs"
 ---
 

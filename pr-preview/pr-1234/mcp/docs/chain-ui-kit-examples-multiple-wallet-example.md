@@ -2,7 +2,7 @@
 title: "Multiple Wallet Example"
 url: "https://pushchain.github.io/docs/chain/ui-kit/examples/multiple-wallet-example/"
 section: "ui-kit"
-lastUpdated: "2026-09-07T15:07:23Z"
+lastUpdated: "2026-09-07T21:01:40Z"
 description: "Multiple Wallets Example | Examples | UI Kit | Push Chain Docs"
 ---
 

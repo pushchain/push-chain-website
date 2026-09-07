@@ -2,7 +2,7 @@
 title: "Constants Reference"
 url: "https://pushchain.github.io/docs/chain/build/constants/"
 section: "build"
-lastUpdated: "2026-09-07T15:07:23Z"
+lastUpdated: "2026-09-07T21:01:40Z"
 description: "Constants Reference | Build | Push Chain Docs"
 ---
 
