@@ -236,16 +236,34 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const pinned = available >= MIN_STAGE;
 
       runway.dataset.pinned = String(pinned);
-      stage.style.height = pinned ? `${Math.round(available)}px` : '';
+
+      // True below laptop -- where the comp is far too wide to fill the height
+      // on its own and is scaled up until it does.
+      const fillsHeight =
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia(device.laptop).matches;
+
+      // Published before the stage is measured, because below laptop it is what
+      // the stage's height is worked out from in CSS.
+      document.documentElement.style.setProperty(
+        '--solution-copy',
+        `${pinned ? copyH + COPY_GAP : 0}px`
+      );
+
+      // Below laptop the stage is left to the stylesheet, which reaches the
+      // fold in a viewport unit that follows the address bar. Measuring it back
+      // off the box rather than off `innerHeight` is what keeps the scene
+      // scaled to the height it actually gets: scaled against the number this
+      // effect last saw, the scene came up short and left the stage black above
+      // it every time the bar slid.
+      stage.style.height = pinned && !fillsHeight ? `${Math.round(available)}px` : '';
+      const stageBox = pinned ? stage.offsetHeight : available;
 
       // Slide the comp so its ground line lands just above the stage's bottom
       // edge. Centring it — which is what a plain `slice` does — cut the
       // character in half on a short viewport.
-      const wide =
-        typeof window.matchMedia === 'function' &&
-        window.matchMedia(device.laptop).matches;
-      const sceneScale = wide
-        ? sceneScaleFor(available, stage.offsetWidth)
+      const sceneScale = fillsHeight
+        ? sceneScaleFor(stageBox, stage.offsetWidth)
         : 1;
 
       const host = stage.firstElementChild as HTMLElement | null;
@@ -273,14 +291,15 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
           ? Math.round(stageH - (renderH * GROUND_LINE + groundShow))
           : 0;
 
-        // A positive offset means the stage is taller than the scene needs.
-        // That is what a phone gets: the comp is 1920 wide, so at full width it
-        // renders only ~170px tall and left two thirds of the pinned box empty
-        // below it. Clamping the offset at 0 pinned the scene to the top of
-        // that box and left the blank on show; pushing it down would only move
-        // the blank above it. Give the height back instead so the pinned box
-        // hugs the scene and its ground sits on the fold.
-        if (offset > 0) {
+        // Above laptop a positive offset means the stage is taller than the
+        // scene needs, and the height is given back so the box hugs the scene.
+        // Below laptop it is not: the scene is scaled to fill the height, and
+        // handing any of it back is what let the section underneath show at the
+        // fold. A phone's address bar sliding grows the viewport by less than
+        // the resize guard allows through, so the box kept a height measured
+        // against the smaller screen and the pink panel below appeared in the
+        // strip it no longer covered.
+        if (offset > 0 && !fillsHeight) {
           stage.style.height = `${Math.round(stageH - offset)}px`;
           offset = 0;
         }
@@ -288,7 +307,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
         host.style.left = `${Math.round((stageW - renderW) / 2)}px`;
-        host.style.top = `${offset}px`;
+
+        // Held against the stage's floor rather than measured down from its
+        // top, so the scene stays on the fold when the stage grows underneath
+        // it -- which it does, in CSS, every time the address bar slides.
+        if (fillsHeight) {
+          host.style.top = 'auto';
+          host.style.bottom = `${Math.round(groundShow - drawnBelowGround)}px`;
+        } else {
+          host.style.bottom = 'auto';
+          host.style.top = `${offset}px`;
+        }
       }
 
       // Publish where the pinned box ends and how long it holds for, so the
@@ -302,9 +331,12 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // The ground strip below carries on from this scene's floor, so it has to
       // be drawn at whatever scale the scene ended up at.
       root.style.setProperty('--scene-scale', String(sceneScale));
+      // Only worth parking the next section under this one while the pinned box
+      // hugs its scene. Below laptop it fills the screen now, so there is
+      // nothing to park under and the page runs in its normal order.
       root.style.setProperty(
         '--solution-travel',
-        `${pinned ? Math.max(0, runway.offsetHeight - pinnedEl.offsetHeight) : 0}px`
+        `${pinned && !fillsHeight ? Math.max(0, runway.offsetHeight - pinnedEl.offsetHeight) : 0}px`
       );
     };
 
@@ -319,7 +351,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     const onResize = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      const changed = w !== lastW || Math.abs(h - lastH) > VIEWPORT_NOISE;
+      // Below laptop the pinned box, the stage and the runway are all sized by
+      // the stylesheet, so a refit only rescales the scene inside them and
+      // cannot move the scroll. The guard is needed where the effect still sets
+      // heights itself; holding it everywhere is what left the scene scaled for
+      // the screen the bar was covering.
+      const sceneOnly =
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia(device.laptop).matches;
+      const changed =
+        w !== lastW ||
+        (sceneOnly ? h !== lastH : Math.abs(h - lastH) > VIEWPORT_NOISE);
       lastW = w;
       lastH = h;
       if (changed) fit();
@@ -593,6 +635,17 @@ const fullBleed = `
 const Stage = styled.div`
   ${fullBleed}
   overflow: hidden;
+
+  /* Reaching the fold is done here rather than in the effect above, in the
+     viewport unit that tracks the address bar sliding. The effect is throttled
+     -- it has to be, resizing the pinned box under a moving finger drags the
+     scroll -- so a height it measured is always a little out of date, and the
+     gap that left at the bottom is where the section below showed through. */
+  @media ${device.laptop} {
+    ${Runway}[data-pinned='true'] & {
+      min-height: calc(100dvh - ${PIN_TOP}px - var(--solution-copy, 0px));
+    }
+  }
   /* The comp is positioned by the effect above, which anchors its ground line
      to this box's bottom edge. */
   /* Width, height and offset are all set by the effect above, which scales the
