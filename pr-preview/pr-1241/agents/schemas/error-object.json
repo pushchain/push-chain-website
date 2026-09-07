@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/error-object.json",
+  "title": "SDKError",
+  "description": "Error object thrown by Push Chain SDK operations",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "Human-readable error message describing what went wrong",
+      "examples": [
+        "Verification declined by user",
+        "UEA not deployed yet for this account",
+        "Read-only client cannot perform signing operations"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "description": "Error code for programmatic handling - inferred, not explicitly documented",
+      "status": "inferred"
+    },
+    "cause": {
+      "description": "Original error that caused this error, if applicable. Can be an Error object or any value.",
+      "status": "inferred"
+    },
+    "name": {
+      "type": "string",
+      "description": "Error name/type",
+      "examples": ["Error", "PushChainError"],
+      "status": "inferred"
+    },
+    "stack": {
+      "type": "string",
+      "description": "Stack trace for debugging",
+      "status": "inferred"
+    }
+  },
+  "required": ["message"],
+  "additionalProperties": true,
+  "status": "inferred",
+  "notes": "Error structure is inferred from standard JavaScript Error patterns. Push Chain SDK may have specific error types but they are not explicitly documented.",
+  "knownErrorScenarios": {
+    "readOnlyRestriction": {
+      "message": "Read-only client cannot perform signing operations",
+      "description": "Thrown when attempting to sign or send transactions with a read-only client initialized with UniversalAccount instead of UniversalSigner",
+      "status": "documented"
+    },
+    "verificationDeclined": {
+      "message": "Verification declined by user",
+      "progressId": "SEND-TX-04-04",
+      "description": "User declined to sign the transaction",
+      "status": "documented"
+    },
+    "transactionFailed": {
+      "progressId": "SEND-TX-99-02",
+      "description": "Transaction failed on Push Chain",
+      "status": "documented"
+    },
+    "upgradeFailed": {
+      "progressId": "UEA-MIG-9902",
+      "description": "UEA upgrade operation failed",
+      "status": "documented"
+    }
+  },
+  "progressErrorEvents": {
+    "description": "Errors can also be surfaced via progressHook with level: 'ERROR'",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Error event identifier"
+      },
+      "title": {
+        "type": "string",
+        "description": "Brief error title"
+      },
+      "message": {
+        "type": "string",
+        "description": "Detailed error message"
+      },
+      "level": {
+        "type": "string",
+        "const": "ERROR"
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "ISO-8601 timestamp"
+      }
+    }
+  }
+}

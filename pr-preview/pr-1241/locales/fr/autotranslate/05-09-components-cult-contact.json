@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Rejoignez le Push Cult - Prononcez le Serment",
+      "expanded-title": "Le Serment",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "Quelle est votre adresse e-mail ? 📧",
+            "subtitle": "Nous avons besoin de cela pour vous contacter",
+            "placeholder": "votre.email@example.com"
+          },
+          "x-username": {
+            "title": "Quel est votre nom d'utilisateur X (Twitter) ?",
+            "subtitle": "Nous aimerions voir votre contenu et votre engagement",
+            "placeholder": "@votreidentifiant"
+          },
+          "telegram-id": {
+            "title": "Quel est votre identifiant Telegram ?",
+            "subtitle": "Nous utilisons Telegram pour communiquer directement avec les disciples",
+            "placeholder": "@votreidentegram"
+          },
+          "best-content": {
+            "title": "Partagez votre meilleur contenu",
+            "subtitle": "Partagez un lien vers votre meilleur fil de discussion, vidéo ou article qui met en valeur votre travail",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Partagez votre vision",
+            "subtitle": "Parlez-nous de votre contenu, de votre audience et de ce qui vous motive à rejoindre notre communauté",
+            "placeholder": "Parlez-nous de votre contenu, de votre public et des raisons pour lesquelles vous souhaitez rejoindre Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "Suivant",
+          "previous": "Précédent",
+          "submit": "Envoyer la candidature",
+          "submitting": "En cours de soumission..."
+        },
+        "validation": {
+          "email-required": "L'adresse e-mail est obligatoire",
+          "email-invalid": "Veuillez entrer une adresse email valide",
+          "x-username-required": "Le nom d'utilisateur X est requis",
+          "telegram-id-required": "L'identifiant Telegram est requis",
+          "best-content-required": "Un lien vers le meilleur contenu est requis",
+          "best-content-invalid": "Veuillez entrer une URL valide",
+          "message-required": "Le message est obligatoire",
+          "default": "Ce champ est obligatoire"
+        },
+        "success": {
+          "title": "Demande soumise !",
+          "message-before-link": "Rejoignez",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "et surveillez",
+          "channel-name": "#push-cult",
+          "message-end": "canal pour les prochaines étapes.",
+          "button": "Soumettre une autre candidature"
+        },
+        "progress": {
+          "step-counter": "{{current}} sur {{total}}"
+        }
+      }
+    }
+  }
+}

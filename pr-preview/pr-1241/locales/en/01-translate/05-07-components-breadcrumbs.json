@@ -1,0 +1,12 @@
+{
+  "components": {
+    "breadcrumbs": {
+      "navigation-aria-label": "Breadcrumb navigation",
+      "home-text": "Home",
+      "navigate-to-aria-label": "Navigate to {{page}}",
+      "go-to-title": "Go to {{page}} page",
+      "current-page-aria-label": "Current page: {{page}}",
+      "separator-aria-label": "Breadcrumb separator"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "use-cases": "### Pushチェーンで何が構築できるのですか？\n\nPushチェーンは、すべてのL1s、L2s、L3sと相互運用可能性をもたらし、統一します。このため、インノベーションと相互運用性のプレイグラウンドとして繁栄することを期待されています。Pushチェーン上で実行できるWeb3ユースケースには以下があります:\n\n![Pushチェーンの主要なユースケース](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nまたは、Web3を改善し、新しいインノベーションを作成することもできます:\n\n![Pushチェーンの消費者ユースケース](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nまたは、人気アプリ例を見て、ヒントを得ることもできます:\n\n![Pushチェーン上の人気アプリ例](/assets/website/chain/knowledge/tokenomics/popularapps.webp)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

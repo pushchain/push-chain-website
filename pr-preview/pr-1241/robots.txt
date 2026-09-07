@@ -1,0 +1,41 @@
+# robots.txt for push.org
+
+User-agent: *
+Allow: /
+
+# LLM / AI crawler access
+# Compact AI-friendly documentation reference:  /llms.txt
+# Full documentation context:                   /llms-full.txt
+# Agent interface (structured JSON/MD):         /agents/index.json
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://push.org/sitemap.xml

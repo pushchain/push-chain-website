@@ -1,0 +1,12 @@
+{
+  "name": "Push Chain",
+  "short_name": "Push",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#D548EC",   // match your page bg (dark example)
+  "theme_color": "#0A0A23",        // dark mode chrome; see meta overrides below
+  "icons": [
+    { "src": "/assets/website/favicons/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/website/favicons/web-app-manifest-512x512", "sizes": "512x512", "type": "image/png" }
+  ]
+}

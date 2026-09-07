@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Ağ Güncellemeleri",
+          "description": "Push Chain için gerçek zamanlı ağ durumu güncellemeleri. Kesintiler, bakım çalışmaları ve çözülen sorunlar hakkında bilgi sahibi olun.",
+          "og-title": "Push Chain Ağı Güncellemeleri - Ağ Durumu",
+          "og-description": "Push Chain ağ güncellemelerini, bakım zamanlarını ve servis güncellemelerini takip edin. Gerçek zamanlı durum bilgisi alın.",
+          "twitter-title": "Push Chain Ağ Güncellemeleri",
+          "twitter-description": "Push Chain ağ durumu ve bakım hakkında canlı güncellemeler."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Bilgi Tabanı",
+            "donut-testnet": "Donut Testnet",
+            "report": "Ağ Güncellemeleri"
+          },
+          "blocks": {
+            "title": "Ağ Güncellemeleri",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "içerik"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "ब्लॉकचेन Yükseltmesi - Token Dengelemesi - 10 Milyar $PC Token",
+                "items": {
+                  "status-heading": "## Durum",
+                  "status-timeline": "25 Şubat 2026 - Başladı<br />25 Şubat 2026 - ✅ Tamamlandı",
+                  "overview-heading": "## Genel Bakış",
+                  "overview-text": "Push Chain, bir token yeniden dengeleme teklifini uyguladı ve toplam PC <token> arzını 75T+ <token>'dan yaklaşık 10 milyar <token>'a düşürdü. Bu yükseltme, test ağının ilk günlerine ait bir teknik borcu giderir ve zinciri mainnet benzeri bir ortama hazırlar.",
+                  "why-heading": "### Bunun sebebi neydi?",
+                  "why-text": "Push Chain testnet'in ilk dönemlerinde, PC <token>’ları için yakma ve basma işlemi yoktu. Bu durum, <universal> işlemler için aşırı düşük fiyat hesaplamalarına yol açtı ve birkaç <token> sahibinin devasa <token> arzları (trilyonlara ulaşan) biriktirmesine neden oldu. Bu, mainnet lansmanından önce düzeltilmesi gereken dengesiz bir <token> ekonomisi yarattı.",
+                  "why-necessary": "Yeniden dengeleme şunlar için gerekliydi:",
+                  "reason-mainnet": "- Mainnet benzeri ortam için hazırlık yapın",
+                  "reason-season3": "- Sezon 3 ödüllerinin dağıtımını etkinleştir",
+                  "reason-tech-debt": "- Erken testnet'ten eski teknik borcu kaldır",
+                  "reason-token-economy": "- Adil ve sürdürülebilir bir <token> ekonomisi oluşturmak",
+                  "what-changed-heading": "### Neler Değişti?",
+                  "what-changed-text": "Bu teklif, toplam 1.178M adresten ilk 1.950 <token>’ı etkiledi. 1.100 <token> veya daha fazla (trilyonlar dahil) tutan <token>’lar, 1.100-2.000 <token> arasında tutacak şekilde yeniden dengelendi.",
+                  "key-changes-heading": "**Önemli Değişiklikler:**",
+                  "change-supply": "- Toplam arz 75T+'dan ~10B PC <token>'a düşürüldü",
+                  "change-wallets": "- En çok 1.950 cüzdan, 1.100-2.000 PC token aralığına yeniden dengelendi",
+                  "change-percentage": "- Toplam adreslerin yalnızca %0,17'sini etkiler (1,178M adresin 1,950'sini)",
+                  "change-unaffected": "- Kullanıcıların %99,83'ü etkilenmedi",
+                  "why-not-informed-heading": "### Neden kullanıcılar önceden bilgilendirilmedi?",
+                  "why-not-informed-text": "Kullanıcılar, kötü niyetli aktörlerin dengelenmeden önce <token>’ları diğer cüzdanlara yeniden dağıtmasını önlemek amacıyla önceden bilgilendirilmedi. Bu güvenlik önlemi, dengelenme sürecinin bütünlüğünü sağladı ve sistemin manipülasyonunu engelledi.",
+                  "validator-period": "Testnet validadör teklif süresi şu anda bu tür durumları tam olarak merkezi olmayan validadör sahipliği uygulanmadan önce ortadan kaldırmaya yardımcı olmak için 5 dakikaya ayarlanmıştır.",
+                  "why-52t-heading": "### Hala 52T arzı görmeye devam ediyorum?",
+                  "why-52t-text": "Yeniden dengeleme iki aşamalı bir yaklaşımdır. <token>’lar şu anda bir ekip kontrolündeki cüzdana toplanıyor ve yakında yakılacak.",
+                  "how-affect-heading": "### Beni nasıl etkiler?",
+                  "affect-majority": "**%99.83 kullanıcı için:** Bu değişiklik sizi etkilemez. Cüzdan bakiyeniz değişmeden kalır.",
+                  "affect-top-wallets": "**Etkilenen cüzdanlar (ilk 1.950):** Cüzdanınız 1.100'den fazla PC <token>'a (veya trilyonlara) sahipse, bakiyeniz 1.100-2.000 PC <token> aralığına yeniden dengelendi.",
+                  "need-help-heading": "**Yardıma İhtiyacınız Var mı?**",
+                  "need-help-text": "Bu yeniden dengelemeden etkilendiğinizi düşünüyorsanız ve sorularınız veya endişeleriniz varsa, lütfen yardım için Push Chain ekibiyle Discord üzerinden iletişime geçin."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

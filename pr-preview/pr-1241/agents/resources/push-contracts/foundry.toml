@@ -1,0 +1,30 @@
+[profile.default]
+src     = "src"
+out     = "out"
+libs    = ["lib"]
+solc    = "0.8.26"
+remappings = [
+  "push-chain-core-contracts/=lib/push-chain-core-contracts/",
+  "push-chain-gateway-contracts/=lib/push-chain-gateway-contracts/",
+]
+
+[rpc_endpoints]
+push_testnet_donut = "https://evm.donut.rpc.push.org/"
+ethereum_sepolia   = "https://ethereum-sepolia-rpc.publicnode.com"
+arbitrum_sepolia   = "https://sepolia-rollup.arbitrum.io/rpc"
+base_sepolia       = "https://sepolia.base.org"
+bnb_testnet        = "https://data-seed-prebsc-1-s1.binance.org:8545/"
+
+[etherscan]
+push_testnet_donut = { key = "${ETHERSCAN_API_KEY}", url = "https://donut.push.network/api" }
+ethereum_sepolia   = { key = "${ETHERSCAN_API_KEY}", url = "https://api-sepolia.etherscan.io/api" }
+
+# Install dependencies:
+#   forge install pushchain/push-chain-core-contracts
+#   forge install pushchain/push-chain-gateway-contracts
+#
+# Deploy to Push Chain Donut Testnet:
+#   forge create --rpc-url push_testnet_donut --private-key $PRIVATE_KEY src/MyMultichainApp.sol:MyMultichainApp
+#
+# Verify on block explorer:
+#   forge verify-contract <address> src/MyMultichainApp.sol:MyMultichainApp --chain push_testnet_donut

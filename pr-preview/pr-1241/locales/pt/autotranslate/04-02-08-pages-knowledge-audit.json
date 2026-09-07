@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "knowledge": {
+      "audit": {
+        "seo": {},
+        "explainer-section": {
+          "breadcrumbs": {},
+          "blocks": {
+            "sections": {
+              "reports": {
+                "items": {
+                  "audit-report-1": {},
+                  "audit-report-2": {},
+                  "audit-report-3": {},
+                  "audit-report-4": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

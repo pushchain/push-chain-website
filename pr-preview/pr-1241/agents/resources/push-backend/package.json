@@ -1,0 +1,21 @@
+{
+  "name": "push-chain-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "send:ethers": "npx tsx client-ethers.ts",
+    "send:viem": "npx tsx client-viem.ts",
+    "send:solana": "npx tsx client-solana.ts"
+  },
+  "dependencies": {
+    "@pushchain/core": "latest",
+    "ethers": "^6.13.0",
+    "viem": "^2.21.0",
+    "@solana/web3.js": "^1.95.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

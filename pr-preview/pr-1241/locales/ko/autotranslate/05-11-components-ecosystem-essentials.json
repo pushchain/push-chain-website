@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "Donut testnet 필수 <app> 살펴보기",
+      "apps": {
+        "pc-faucet": {
+          "name": "PC 파이프",
+          "description": "여기에서 PC 테스트넷 토큰을 받아보세요"
+        },
+        "push-bridge": {
+          "name": "Push Bridge",
+          "description": "체인 간 토큰을 이동하세요"
+        },
+        "simulate-tx": {
+          "name": "거래 시뮬레이션",
+          "description": "유니버설 트랜잭션을 시뮬레이션합니다."
+        },
+        "push-chain-scan": {
+          "name": "Push Chain 스캔",
+          "description": "Push Chain의 블록체인 탐색기"
+        },
+        "wallet": {
+          "name": "지갑",
+          "description": "Push Chain의 universal <wallet>"
+        }
+      }
+    }
+  }
+}

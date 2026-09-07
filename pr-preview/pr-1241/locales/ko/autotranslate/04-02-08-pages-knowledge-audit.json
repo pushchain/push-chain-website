@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "knowledge": {
+      "audit": {
+        "seo": {
+          "title": "",
+          "description": "Push Chain의 аудит 리포트를 탐색하고, топ 조직에서 독립적인 보안 검토로 인한 infrastructure에 빌드는 유효성 검사를 통해 확인합니다.",
+          "og-title": "번안해약주석 재세요"
+        },
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "reports": {
+                "items": {
+                  "audit-report-1": {
+                    "title": "안소 해는서어 주생 프록댐의닱력다"
+                  },
+                  "audit-report-2": {
+                    "title": "구소가 총료 명소쾔 세요"
+                  },
+                  "audit-report-3": {
+                    "title": "[EVM 게이트웨이] 보안 분석 보고서"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

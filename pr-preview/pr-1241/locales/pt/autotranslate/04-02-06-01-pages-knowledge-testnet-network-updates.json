@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Atualizações da Rede",
+          "description": "Atualizações de status da rede em tempo real para o Push Chain. Mantenha-se informado sobre interrupções, manutenções e problemas resolvidos.",
+          "og-title": "Atualizações da Rede Push Chain - Status da Rede",
+          "og-description": "Acompanhe as atualizações da rede <keep>, janelas de manutenção e atualizações de serviço. Obtenha informações de status em tempo real.",
+          "twitter-title": "Atualizações da Rede Push Chain",
+          "twitter-description": "Atualizações ao vivo sobre o status e a manutenção da rede Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Base de Conhecimento",
+            "donut-testnet": "Donut Testnet",
+            "report": "Atualizações da Rede"
+          },
+          "blocks": {
+            "title": "Atualizações da Rede",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "conteúdo"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "Atualização da Blockchain - Rebalanceamento de Token - 10 Bilhões de PC Tokens",
+                "items": {
+                  "status-heading": "## Status",
+                  "status-timeline": "25 de Fevereiro de 2026 - Iniciado<br />25 de Fevereiro de 2026 - ✅ Concluído",
+                  "overview-heading": "## Visão Geral",
+                  "overview-text": "Push Chain executou uma proposta de rebalanceamento de <token> para reduzir o fornecimento total de <token> PC de 75T+ <token> para aproximadamente 10 bilhões de <token>. Essa atualização resolve uma dívida técnica dos primeiros dias da testnet e prepara a chain para um ambiente semelhante ao da mainnet.",
+                  "why-heading": "### Por que isso foi feito?",
+                  "why-text": "Nos primeiros dias da Push Chain testnet, não havia processo de queima e criação de tokens PC. Isso resultou em cálculos de preço extremamente baixos para transações universais e permitiu que um pequeno grupo de detentores de tokens acumulassem grandes quantidades de tokens (chegando a trilhões). Isso criou uma economia de tokens desequilibrada que precisava ser corrigida antes do lançamento da mainnet.",
+                  "why-necessary": "O reequilíbrio foi necessário para:",
+                  "reason-mainnet": "- Prepare para um ambiente semelhante ao mainnet",
+                  "reason-season3": "- Habilitar a distribuição de recompensas da Temporada 3",
+                  "reason-tech-debt": "- Remover dívida técnica antiga do início do testnet",
+                  "reason-token-economy": "- Estabelecer uma economia de <token> justa e sustentável",
+                  "what-changed-heading": "### O que mudou?",
+                  "what-changed-text": "A proposta afetou as 1.950 carteiras principais de um total de 1.178 milhões de endereços. Carteiras que possuíam 1.100 $PC tokens ou mais (incluindo aquelas com trilhões) foram reequilibradas para manter entre 1.100 e 2.000 $PC tokens.",
+                  "key-changes-heading": "**Principais Mudanças:**",
+                  "change-supply": "- Abastecimento total reduzido de 75T+ para ~10B PC tokens",
+                  "change-wallets": "- As 1.950 carteiras principais foram reequilibradas para a faixa de 1.100-2.000 PC token.",
+                  "change-percentage": "- Afeta apenas 0,17% dos endereços totais (1.950 de 1,178 milhão)",
+                  "change-unaffected": "- 99.83% dos usuários não são afetados",
+                  "why-not-informed-heading": "### Por que os usuários não foram informados com antecedência?",
+                  "why-not-informed-text": "Os usuários não foram notificados antecipadamente para evitar que agentes maliciosos redistribuíssem tokens para outras <wallet>s antes do rebalanceamento. Essa medida de segurança garantiu a integridade do processo de rebalanceamento e evitou a manipulação do sistema.",
+                  "validator-period": "O período de proposta de валидатор no testnet está atualmente definido para 5 minutos para ajudar a eliminar casos extremos como este antes que a propriedade descentralizada total do валидатор seja implementada.",
+                  "why-52t-heading": "### Por que ainda vejo 52T de oferta?",
+                  "why-52t-text": "O rebalance é uma abordagem em duas fases. Os <token> estão sendo coletados em uma carteira controlada pela equipe e serão queimados em breve.",
+                  "how-affect-heading": "### Como isso me afeta?",
+                  "affect-majority": "**Para 99,83% dos usuários:** Esta mudança não te afeta. O saldo da sua <wallet> permanece inalterado.",
+                  "affect-top-wallets": "**Para carteiras afetadas (as 1.950 principais):** Se sua carteira continha 1.100+ $PC tokens (ou trilhões), seu saldo foi rebalanceado para a faixa de 1.100 a 2.000 $PC tokens.",
+                  "need-help-heading": "**Precisa de Ajuda?**",
+                  "need-help-text": "Se você acredita que foi afetado por este rebalanceamento e tem dúvidas ou preocupações, entre em contato com a equipe Push Chain no Discord para obter ajuda."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
