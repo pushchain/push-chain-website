@@ -1,7 +1,5 @@
 // React + Web3 Essentials
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef, useState } from 'react';
 
 // External Components
@@ -10,8 +8,6 @@ import styled from 'styled-components';
 
 // Internal Configs
 import GLOBALS, { device } from '@site/src/config/globals';
-
-gsap.registerPlugin(ScrollTrigger);
 
 /**
  * The 8-bit journey behind "Making AI universally accountable".
@@ -31,26 +27,14 @@ gsap.registerPlugin(ScrollTrigger);
 const STOPS = [0, 90, 200, 280, 378, 540];
 
 /**
- * Scroll distance that advances one stop. Short enough that a notch or two of
- * the wheel carries a whole step -- at 620 it took five or six, and the walk
- * sat still in between.
+ * Scroll distance that advances one stop. The step is picked by rounding, so
+ * the walk sets off half of this into a segment -- about one notch of a wheel.
+ * Longer and the reader scrolls into nothing waiting for it to start.
  */
-const STEP_SCROLL = 280;
+const STEP_SCROLL = 150;
 
-/**
- * Seconds the walk takes to catch up with the scroll. Higher is heavier and
- * smoother, lower tracks the finger more tightly.
- */
-const SCRUB_SMOOTHING = 0.18;
-
-/**
- * How long the walk onto the nearest node takes, and how long it waits before
- * starting. Eased out rather than in and out: in and out held the scene near
- * still for the first half second after a scroll, which read as hesitation.
- */
-const SNAP_MIN = 1.15;
-const SNAP_MAX = 1.55;
-const SNAP_DELAY = 0.03;
+/** Seconds one step takes to walk from its node to the next. */
+const SPAN_SECONDS = 0.9;
 
 /** Where the pinned composition parks under the header. */
 const PIN_TOP = GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -335,69 +319,77 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       return;
     }
 
-    // Driven by ScrollTrigger rather than a hand-rolled follower. Reading the
-    // scroll for a nearest stop left the scene still for most of a step and
-    // then jumping at the half way point -- 668px of scrolling with nothing
-    // moving, which is what read as getting stuck. Scrub keeps the walk tied
-    // to every pixel of scroll, and snap eases the scroll itself to the
-    // nearest node once the reader stops, so a step always finishes on a node
-    // without ever standing still while they are scrolling.
-    const playhead = { t: 0 };
-    let drawn = -1;
+    let raf = 0;
+    let frame = 0;
+    let from = 0;
+    let to = 0;
+    let startedAt = 0;
+    let moving = false;
+    let index = 0;
 
-    // Progress is spent evenly across the steps, not across the frames: the
-    // spans differ in length, and pacing on frames makes the short ones flick
-    // past while the long ones crawl.
-    const frameFor = (t) => {
-      const span = t * (STOPS.length - 1);
-      const i = Math.min(STOPS.length - 2, Math.floor(span));
-      const within = span - i;
-      return STOPS[i] + (STOPS[i + 1] - STOPS[i]) * within;
+    // Which stop the reader has scrolled to. Measured against the runway, not
+    // the pinned box: that one is the sticky element, so once it pins its
+    // document position tracks the scroll and the distance travelled reads as
+    // zero for the whole pinned stretch.
+    const stopFromScroll = () => {
+      if (runway.dataset.pinned !== 'true') return index;
+      const top = runway.getBoundingClientRect().top + window.scrollY;
+      const travel = Math.max(
+        1,
+        runway.offsetHeight - pinned.offsetHeight - HOLD_TAIL
+      );
+      const travelled = window.scrollY - top;
+      const progress = Math.max(0, Math.min(1, travelled / travel));
+      return Math.round(progress * (STOPS.length - 1));
     };
 
-    const draw = () => {
-      const next = Math.round(frameFor(playhead.t));
-      if (next === drawn) return;
-      anim.goToAndStop(next, true);
-      drawn = next;
+    // One step, begun, always finishes. The scroll is only read when the walk
+    // is standing still, and it only ever moves to the neighbouring node --
+    // so a scroll that stops half way cannot pull the character back to where
+    // it set off from, and a long scroll queues the steps rather than
+    // skipping them.
+    const startStep = () => {
+      if (moving) return;
+      const wanted = stopFromScroll();
+      if (wanted === index) return;
+      index += wanted > index ? 1 : -1;
+      from = frame;
+      to = STOPS[index];
+      startedAt = performance.now();
+      moving = true;
     };
 
-    const tween = gsap.to(playhead, {
-      t: 1,
-      ease: 'none',
-      paused: true,
-      onUpdate: draw,
-    });
+    const tick = (now: number) => {
+      if (moving) {
+        const t = Math.min(1, (now - startedAt) / (SPAN_SECONDS * 1000));
+        // Eased both ways, so a step leaves its node and arrives at the next
+        // one gently rather than starting or stopping at speed.
+        const eased = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        frame = from + (to - from) * eased;
+        if (t >= 1) {
+          frame = to;
+          moving = false;
+        }
+        anim.goToAndStop(Math.round(frame), true);
+      } else {
+        // Idle: pick up the next step the reader has scrolled to, if any.
+        startStep();
+      }
+      raf = requestAnimationFrame(tick);
+    };
 
-    const trigger = ScrollTrigger.create({
-      animation: tween,
-      trigger: runway,
-      start: 'top top',
-      end: () =>
-        '+=' +
-        Math.max(1, runway.offsetHeight - pinned.offsetHeight - HOLD_TAIL),
-      scrub: SCRUB_SMOOTHING,
-      snap: {
-        snapTo: 1 / (STOPS.length - 1),
-        duration: { min: SNAP_MIN, max: SNAP_MAX },
-        delay: SNAP_DELAY,
-        ease: 'power2.out',
-        // Land on the node nearest where the reader actually stopped, not
-        // where their momentum was heading: with the projection on, a handful
-        // of quick notches threw the walk three nodes down the line at once.
-        inertia: false,
-        // Snap forward when they scrolled forward, so a nudge finishes the
-        // step it started rather than falling back to the one behind.
-        directional: true,
-      },
-      invalidateOnRefresh: true,
-    });
+    const onScroll = () => startStep();
 
-    draw();
+    index = stopFromScroll();
+    frame = STOPS[index];
+    anim.goToAndStop(frame, true);
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    raf = requestAnimationFrame(tick);
 
     return () => {
-      trigger.kill();
-      tween.kill();
+      cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', onScroll);
     };
   }, [data]);
 
