@@ -45,9 +45,9 @@ const STEP_SCROLL = 400;
  * walk: the last stop is nearly twice the distance of the third, and a fixed
  * duration ran it at nearly twice the speed.
  */
-const STEP_FPS = 120;
+const STEP_FPS = 100;
 const STEP_MIN_SECONDS = 0.45;
-const STEP_MAX_SECONDS = 1.45;
+const STEP_MAX_SECONDS = 1.7;
 
 /**
  * How far past the halfway mark between two stops the scroll has to reach
