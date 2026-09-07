@@ -27,9 +27,11 @@ const config = {
   favicon: '/assets/website/favicon.ico',
 
   // Set the production url of your site here
+  // core.push.org on this branch. It exists only to show the new build on a
+  // subdomain, and is never merged -- see noIndex below and static/robots.txt.
   url: process.env.GITHUB_ACTIONS
     ? `${process.env.REACT_APP_PUBLIC_URL}`
-    : 'https://push.org/',
+    : 'https://core.push.org/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.GITHUB_ACTIONS
@@ -42,6 +44,11 @@ const config = {
   organizationName: 'push-chain', // Usually your GitHub org/user name.
   projectName: 'push-chain-website', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+
+  // Every page carries <meta name="robots" content="noindex, nofollow">. This
+  // build is a showcase on a subdomain of push.org and must never be indexed
+  // against it.
+  noIndex: true,
 
   onBrokenLinks: 'throw',
 
