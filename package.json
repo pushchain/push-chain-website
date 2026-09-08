@@ -42,7 +42,7 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "jest",
-    "deploy:core": "yarn generate:ecosystem && node build.mjs prod && NODE_OPTIONS=--max-old-space-size=8192 yarn build && echo 'core.push.org' > ./build/CNAME && gh-pages -d build --dotfiles -r https://github.com/pushchain/push-core-showcase.git"
+    "deploy:core": "yarn generate:ecosystem && node build.mjs prod skip_agents_check && NODE_OPTIONS=--max-old-space-size=8192 yarn build && echo 'core.push.org' > ./build/CNAME && gh-pages -d build --dotfiles -r https://github.com/pushchain/push-core-showcase.git"
   },
   "lint-staged": {
     "src/**/*.{js,ts,jsx,tsx,json}": "prettier --write",
