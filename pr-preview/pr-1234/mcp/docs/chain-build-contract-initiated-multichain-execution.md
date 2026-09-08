@@ -2,7 +2,7 @@
 title: "Contract-Initiated Multichain Execution"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-multichain-execution/"
 section: "build"
-lastUpdated: "2026-09-08T09:51:28Z"
+lastUpdated: "2026-09-08T10:11:05Z"
 description: "Contract-Initiated Multichain Execution | Build | Push Chain Docs"
 ---
 

@@ -2,7 +2,7 @@
 title: "Initialize EVM Client"
 url: "https://pushchain.github.io/docs/chain/build/initialize-evm-client/"
 section: "build"
-lastUpdated: "2026-09-08T09:51:28Z"
+lastUpdated: "2026-09-08T10:11:05Z"
 description: "Initialize EVM Client | Build | Push Chain Docs"
 ---
 
