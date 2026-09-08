@@ -48,8 +48,6 @@ const GROUND_TILE_FIT = 39.8 / 63.2;
 // Vertical anchors, in design pixels measured from the top of that plate.
 const VISUAL_HEIGHT = 726; // image 32 — the slot for the incoming animation
 const PINK_CARD_TOP = 177;
-const BLEND_TOP = 552; // Rectangle 42285
-const BLEND_HEIGHT = 544;
 const BODY_TOP = 743; // Frame 37246
 const ROW_ONE_HEIGHT = 400;
 const ROW_TWO_HEIGHT = 330;
@@ -61,6 +59,48 @@ const ROW_TWO_HEIGHT = 330;
    screen tall here and 1207 from the top lands inside it on any tall
    monitor. */
 const LIGHT_PEAK_BELOW_VISUAL = 1207 - VISUAL_HEIGHT;
+
+/* The plate's colour ramps are eased, not straight. A straight ramp meets the
+   flat pink above it at a corner -- the slope goes from nothing to its full
+   rate in one pixel -- and the eye reads that corner as a line drawn across the
+   panel however smooth each side of it is. The same happens in reverse at the
+   light peak, where a rise of +7 per 40px becomes a fall of -14 in one step.
+   smoothstep leaves the slope at zero at both ends of a ramp, so the title
+   screen releases into the fade and the peak turns over with nothing to catch
+   on. It has to be walked in enough steps that the polyline between them is
+   not itself a set of corners: at sixteen each joint turns by under two levels
+   of brightness, which is beneath what the panel's own 8-bit dithering shows. */
+const PLATE_PINK = [0xd5, 0x48, 0xec];
+const PLATE_LIGHT = [0xfb, 0xe9, 0xfe];
+const PLATE_DARK = [0x18, 0x06, 0x21];
+const RAMP_STEPS = 16;
+
+const hex = (c) =>
+  '#' + c.map((v) => Math.round(v).toString(16).padStart(2, '0')).join('');
+const smoothstep = (t) => t * t * (3 - 2 * t);
+
+/* The stops strictly between two colours, placed by `at` -- the endpoints are
+   written at the call site so each ramp's ends stay readable. */
+const easedRamp = (from, to, at) =>
+  Array.from({ length: RAMP_STEPS - 1 }, (_, i) => {
+    const t = (i + 1) / RAMP_STEPS;
+    const f = smoothstep(t);
+    return `${hex(from.map((v, j) => v + (to[j] - v) * f))} ${at(t)}`;
+  }).join(',\n    ');
+
+const PEAK_AT = `calc(var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px)`;
+
+const FADE_IN = easedRamp(PLATE_PINK, PLATE_LIGHT, (t) =>
+  `calc(var(--visual-h) + ${Math.round(t * LIGHT_PEAK_BELOW_VISUAL)}px)`
+);
+
+/* Past the peak the far end is the panel's own bottom, so each stop is that
+   share of the way from the peak to it. */
+const FADE_OUT = easedRamp(PLATE_LIGHT, PLATE_DARK, (t) =>
+  `calc((var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px) * ${(1 - t).toFixed(
+    5
+  )} + ${(t * 100).toFixed(3)}%)`
+);
 
 /* How far the plate's tail runs below the panel before it is page colour. Far
    enough to carry past the section boundary and behind the next heading. */
@@ -78,7 +118,9 @@ export default function AgenticScaleSection() {
     >
       <Panel>
         <TopVisual>
-          <GlyphRasterBackdrop />
+          <Artwork aria-hidden='true'>
+            <GlyphRasterBackdrop />
+          </Artwork>
           <PinkCard>
             <LogoMark aria-hidden='true'>
               <PushLogoMark />
@@ -89,9 +131,6 @@ export default function AgenticScaleSection() {
             </BannerHeading>
           </PinkCard>
         </TopVisual>
-
-        {/* Blurred wash that melts the artwork above into the card grid below. */}
-        <BlendWash aria-hidden='true' />
 
         <Body
           id='innovations-of-push-chain'
@@ -210,10 +249,12 @@ const Panel = styled.div`
      put a seam across the join. */
   background: linear-gradient(
     180deg,
-    #d548ec 0px,
-    #d548ec var(--visual-h),
-    #fbe9fe calc(var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px),
-    #180621 100%
+    ${hex(PLATE_PINK)} 0px,
+    ${hex(PLATE_PINK)} var(--visual-h),
+    ${FADE_IN},
+    ${hex(PLATE_LIGHT)} ${PEAK_AT},
+    ${FADE_OUT},
+    ${hex(PLATE_DARK)} 100%
   );
 
   @media ${device.mobileL} {
@@ -358,27 +399,25 @@ const BannerHeading = styled.h2`
   }
 `;
 
-/* Straddles the join between the artwork and the card grid. It used to sit at
-   a fixed offset that happened to land there; with the artwork now a screen
-   tall that offset fell in the middle of it and bloomed as a white cloud over
-   the title. It is measured back from the artwork's end instead -- the same
-   174px above it and 544px below that the design's offsets described. */
-const BlendWash = styled.div`
+/* The artwork dissolves into the plate rather than being covered by anything.
+   A blurred rectangle used to do this job, and it was the source of both faults
+   in the panel: blur pulls a box's edges inward, so it left a strip of
+   uncovered artwork about 120px down each side, and its lower edge finished
+   111px before the plate reached its own lightest point, so the brightness
+   climbed, levelled off, then climbed again -- a line straight across the
+   panel. Alpha carries no colour of its own and a mask cannot be narrower than
+   the element, so neither fault can come back. */
+const Artwork = styled.div`
   position: absolute;
-  top: calc(var(--visual-h) - ${VISUAL_HEIGHT - BLEND_TOP}px);
-  left: 0;
-  right: 0;
-  height: ${BLEND_HEIGHT}px;
-  z-index: 1;
-  background: linear-gradient(180deg, #de6ef0 0%, #fae7fe 100%);
-  filter: blur(50px);
+  inset: 0;
   pointer-events: none;
-
-  @media ${device.mobileL} {
-    top: calc(var(--visual-h) - 20px);
-    height: 260px;
-    filter: blur(30px);
-  }
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    #000 0%,
+    #000 62%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
 `;
 
 const Body = styled.div`
