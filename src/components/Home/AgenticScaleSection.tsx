@@ -278,9 +278,12 @@ const PinkCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 44px;
-  width: 800px;
+  /* The design's own frame: 1200 wide, height hugging its contents, 44 between
+     the mark and the copy, and no padding at all -- the frame is the copy's
+     own box, not a plate around it. */
+  width: 1200px;
   max-width: calc(100% - 48px);
-  padding: 24px;
+  padding: 0;
   box-sizing: border-box;
 
   /* No fill and no blur of its own. What reads as the panel is the ring
