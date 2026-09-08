@@ -278,10 +278,12 @@ const PinkCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 44px;
-  /* The feather is added around the copy rather than taken out of it: the box
-     grows by what it fades away, so the content box is the 720px it always was
-     and the copy keeps its own two lines. */
-  width: calc(800px + 2 * var(--feather));
+  /* Sized from the copy outwards: the box is the copy's own width plus its
+     padding plus the distance it fades over, so changing how far it fades
+     never moves the copy or rewraps it. */
+  --copy: 720px;
+  --pad: 24px;
+  width: calc(var(--copy) + 2 * (var(--pad) + var(--feather)));
   max-width: calc(100% - 48px);
   box-sizing: border-box;
 
@@ -295,7 +297,7 @@ const PinkCard = styled.div`
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
 
-  --feather: 72px;
+  --feather: 168px;
   -webkit-mask-image: linear-gradient(
       to right,
       transparent 0,
@@ -327,12 +329,23 @@ const PinkCard = styled.div`
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 
-  /* The mask feathers the panel, so the copy needs to sit inside the part of it
-     that is still solid or its own edges go soft with it. */
-  padding: calc(40px + var(--feather));
+  /* The copy has to sit inside the part of the panel that is still solid, or
+     its own edges go soft with it. */
+  padding: calc(var(--pad) + var(--feather));
+
+  /* The fade is a fixed distance, so on a narrow screen it would eat the whole
+     panel; it comes down with the room available. */
+  @media ${device.laptop} {
+    --feather: 96px;
+  }
 
   @media ${device.tablet} {
-    --feather: 44px;
+    --feather: 64px;
+    --pad: 16px;
+  }
+
+  @media ${device.mobileL} {
+    --feather: 36px;
   }
 `;
 
