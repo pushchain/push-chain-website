@@ -57,6 +57,18 @@ const STEP_MAX_SECONDS = 1.7;
 const STEP_COMMIT = 0.55;
 
 /**
+ * How much a step is hurried along when the reader is scrolling harder than it
+ * can keep up with. The section holds the page until the walk arrives, so
+ * without this a fast scroll met a walk still running at its reading pace and
+ * the hold felt like the page had stuck. Scroll intent is measured off the
+ * wheel and the finger in pixels a second; at HURRY_AT the walk runs at
+ * HURRY_MAX times its normal speed, and between the two it scales.
+ */
+const HURRY_AT = 3400;
+const HURRY_MAX = 2.6;
+const HURRY_DECAY = 0.22;
+
+/**
  * How long the scroll has to be completely quiet -- gesture finished, momentum
  * spent -- before the page is settled onto the stop the walk is resting on, and
  * how long that settling takes. Without it the scroll comes to rest between two
@@ -466,11 +478,38 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       if (settling) return;
       quietFrom = performance.now();
     };
-    const onInput = () => cancelSettle();
+
+    // How hard the reader is pushing, in pixels a second, decayed. Read off the
+    // input rather than off the scroll, because while the page is being held
+    // the scroll is exactly what does not move.
+    let demand = 0;
+    let clamped = false;
+
+    const onWheel = (e: WheelEvent) => {
+      cancelSettle();
+      demand += Math.abs(e.deltaY);
+      // Holding the page by putting it back every frame leaves the browser its
+      // own momentum, which it spends the instant the hold comes off -- that is
+      // the jump to somewhere further down the page. Turning the wheel away
+      // while the section is holding means there is no momentum left to spend.
+      if (clamped && e.cancelable) e.preventDefault();
+    };
+
+    let touchY = 0;
+    const onTouchStart = (e: TouchEvent) => {
+      cancelSettle();
+      touchY = e.touches[0] ? e.touches[0].clientY : 0;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      const y = e.touches[0] ? e.touches[0].clientY : touchY;
+      demand += Math.abs(touchY - y);
+      touchY = y;
+    };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('wheel', onInput, { passive: true });
-    window.addEventListener('touchstart', onInput, { passive: true });
+    window.addEventListener('wheel', onWheel, { passive: false });
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
 
     let drawn = -1;
     let prevAt = 0;
@@ -481,17 +520,30 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const place = placeNow();
       const nearest = Math.max(0, Math.min(LAST, Math.round(place)));
       const walking = frame !== STOPS[want];
-      // One stop at a time, and only once the stop being walked to has been
-      // reached. A scroll long enough to reach across several stops used to be
-      // taken in a single stride, which read as two or three steps happening at
-      // once; it is walked stop by stop now, each at the same pace, however far
-      // the scroll went.
+      // One stop at a time while the scroll is only a stop ahead, so an
+      // ordinary scroll takes one step rather than two or three at once.
+      //
+      // Past that the walk goes straight to where the scroll already is. It
+      // used to queue every stop in between and walk them each at full pace,
+      // which is why a fast scroll played the whole thing out slowly, seconds
+      // behind the reader. Held back so it could catch up, the browser kept
+      // its own scroll target while the page was pinned and jumped to it the
+      // moment the hold came off. Neither is worth it: the scroll says where
+      // the walk should be, so the walk goes there.
       if (!walking && nearest !== want && Math.abs(place - want) > STEP_COMMIT) {
-        walkTo(want + (nearest > want ? 1 : -1));
+        walkTo(Math.abs(nearest - want) > 1 ? nearest : want + (nearest > want ? 1 : -1));
       }
 
+      // Decays over a fifth of a second, so it reflects how hard the reader is
+      // pushing now rather than how hard they pushed a moment ago.
+      demand *= Math.exp(-dt / HURRY_DECAY);
+      const hurry = Math.max(
+        1,
+        Math.min(HURRY_MAX, 1 + (demand / HURRY_DECAY / HURRY_AT) * (HURRY_MAX - 1))
+      );
+
       if (walking && dt) {
-        goneFor += dt;
+        goneFor += dt * hurry;
         const t = Math.min(1, goneFor / stepSeconds);
         // Gentle off the mark and gentle into the stop, flat in between, so
         // the character reads as setting off and arriving rather than being
@@ -505,25 +557,23 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // past the runway -- settling there would hold the section against them.
       const { top, travel } = geometry();
 
-      // The page is held at the pin until the walk has arrived. Scrolling
-      // faster than the walk used to carry the section off before it had
-      // finished, because the scroll is what says where the walk should be and
-      // it could run the whole runway out while the walk was still on its
-      // second step.
-      //
-      // A stop's worth of room either side, not none: the scroll is the thing
-      // asking for the next step, so it has to be able to get far enough ahead
-      // to ask. One stop is enough for that and never enough to reach the end
-      // of the runway, so the section cannot come unpinned mid-walk. The hold
-      // comes off at either end once the walk is standing still there.
+      // The page is held at the pin until the walk has arrived. The scroll may
+      // run one stop ahead of the stop being walked to -- it is also what asks
+      // for the next step, so it has to get far enough ahead to ask -- and one
+      // stop is never enough to reach the end of the runway, so the section
+      // cannot come unpinned mid-walk. The hold comes off at either end once
+      // the walk is standing still there.
+      clamped = false;
       if (!settling) {
         const held = Math.round(top + (travel * want) / LAST);
         const ceiling = held + (want < LAST ? STEP_SCROLL : 0);
         const floorY = held - (want > 0 ? STEP_SCROLL : 0);
         if (!(want === LAST && !walking) && window.scrollY > ceiling) {
           window.scrollTo(0, ceiling);
+          clamped = true;
         } else if (!(want === 0 && !walking) && window.scrollY < floorY) {
           window.scrollTo(0, floorY);
+          clamped = true;
         }
       }
 
@@ -559,8 +609,9 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('wheel', onInput);
-      window.removeEventListener('touchstart', onInput);
+      window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
     };
   }, [data]);
 
