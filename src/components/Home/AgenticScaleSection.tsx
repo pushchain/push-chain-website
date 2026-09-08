@@ -266,10 +266,11 @@ const RingArtwork = styled.div`
 `;
 
 /**
- * How far the title's box is blurred. Figma has a layer blur on it; this is the
- * radius, and the one number here still taken by eye rather than off the file.
+ * How far the title's box is blurred. The design has a uniform layer blur of 31
+ * on it, and Figma's blur number is twice CSS's -- its own Dev Mode export
+ * halves it -- so 31 there is 15.5 here.
  */
-const PANEL_BLUR = 24;
+const PANEL_BLUR = 15.5;
 
 const PinkCard = styled.div`
   /* Centred in that screen rather than hung from a fixed offset, so the space
