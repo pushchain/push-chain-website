@@ -265,6 +265,13 @@ const RingArtwork = styled.div`
   }
 `;
 
+/**
+ * How far the title's box is blurred. The design has a uniform layer blur of 31
+ * on it, and Figma's blur number is twice CSS's -- its own Dev Mode export
+ * halves it -- so 31 there is 15.5 here.
+ */
+const PANEL_BLUR = 15.5;
+
 const PinkCard = styled.div`
   /* Centred in that screen rather than hung from a fixed offset, so the space
      around it grows evenly with the viewport. */
@@ -278,17 +285,27 @@ const PinkCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 44px;
+  /* Frame 37239, as the design has it: 800 wide, height hugging its contents,
+     40 of padding, 44 between the mark and the copy. */
   width: 800px;
   max-width: calc(100% - 48px);
   padding: 40px;
   box-sizing: border-box;
 
-  /* Blur alone, to settle the glyphs behind the title so it reads. At a third
-     of the pink's opacity with a border it still showed as a lighter box; the
-     hero's card is barely there, and this matches that. */
-  background: rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* The box itself: a solid fill, blurred as a layer rather than blurring what
+     is behind it. That is the difference between the two -- a background blur
+     leaves the pattern present and smeared, which still reads as a panel laid
+     over it, while blurring the layer softens the fill's own edges and leaves
+     the middle solid. Drawn on a pseudo-element because the blur would
+     otherwise take the copy with it. */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #d548ec;
+    filter: blur(${PANEL_BLUR}px);
+    z-index: -1;
+  }
 `;
 
 const LogoMark = styled.div`
