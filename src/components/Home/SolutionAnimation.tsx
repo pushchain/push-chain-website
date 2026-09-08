@@ -504,6 +504,29 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // Never while the walk is still going, never once the reader has scrolled
       // past the runway -- settling there would hold the section against them.
       const { top, travel } = geometry();
+
+      // The page is held at the pin until the walk has arrived. Scrolling
+      // faster than the walk used to carry the section off before it had
+      // finished, because the scroll is what says where the walk should be and
+      // it could run the whole runway out while the walk was still on its
+      // second step.
+      //
+      // A stop's worth of room either side, not none: the scroll is the thing
+      // asking for the next step, so it has to be able to get far enough ahead
+      // to ask. One stop is enough for that and never enough to reach the end
+      // of the runway, so the section cannot come unpinned mid-walk. The hold
+      // comes off at either end once the walk is standing still there.
+      if (!settling) {
+        const held = Math.round(top + (travel * want) / LAST);
+        const ceiling = held + (want < LAST ? STEP_SCROLL : 0);
+        const floorY = held - (want > 0 ? STEP_SCROLL : 0);
+        if (!(want === LAST && !walking) && window.scrollY > ceiling) {
+          window.scrollTo(0, ceiling);
+        } else if (!(want === 0 && !walking) && window.scrollY < floorY) {
+          window.scrollTo(0, floorY);
+        }
+      }
+
       const inside = window.scrollY > top && window.scrollY < top + travel;
       if (settling) {
         const t = Math.min(1, (now - settleAt) / (SETTLE_SECONDS * 1000));
