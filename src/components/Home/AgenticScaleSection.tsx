@@ -54,6 +54,14 @@ const BODY_TOP = 743; // Frame 37246
 const ROW_ONE_HEIGHT = 400;
 const ROW_TWO_HEIGHT = 330;
 
+/* Where the plate's light peak sits, as the design places it: Rectangle
+   42282's #fbe9fe stop is at 1207 and the visual above ends at 726, so the
+   peak is 481px below the visual -- among the first row of cards. Held as
+   that offset rather than as 1207 from the top, because the visual is a
+   screen tall here and 1207 from the top lands inside it on any tall
+   monitor. */
+const LIGHT_PEAK_BELOW_VISUAL = 1207 - VISUAL_HEIGHT;
+
 /* How far the plate's tail runs below the panel before it is page colour. Far
    enough to carry past the section boundary and behind the next heading. */
 const PANEL_TAIL_H = 420;
@@ -187,33 +195,30 @@ const Panel = styled.div`
   margin: 0 ${PANEL_INSET}px;
   border-radius: 48px 48px 0 0;
   overflow: hidden;
-  /* Figma's Rectangle 42282 stops, at their design pixel offsets. #fbe9fe is a
-     single peak at 1207px — not a plateau — so the light stays a narrow band
-     around the first card row and darkens continuously from there, reaching
-     its darkest exactly at the panel's edge -- reaching it 144px above that
-     made the purple read as starting before the section's block had ended.
-     PanelTail carries the colour on below the section, as the design does; a
-     black stop here would put a seam across the join. */
+  /* Figma's Rectangle 42282, measured from the one edge that scales with it.
+     The design's stops are 454 and 1207 down a plate whose visual is 726 tall;
+     read from the top they only hold at that one height, and the visual here
+     is a whole screen, so on a tall monitor 454 fell part way up the title and
+     washed it out. Anchored to the visual's end instead: the title screen
+     stays flat #d548ec however tall it grows, the fade starts just above the
+     grid's heading, and #fbe9fe peaks among the first row of cards exactly as
+     the design has it. A single peak, not a plateau, so the light stays a
+     narrow band and darkens continuously from there, reaching its darkest at
+     the panel's edge -- reaching it above that made the purple read as
+     starting before the section's block had ended. PanelTail carries the
+     colour on below the section, as the design does; a black stop here would
+     put a seam across the join. */
   background: linear-gradient(
     180deg,
     #d548ec 0px,
-    #d548ec 454px,
-    #fbe9fe 1207px,
+    #d548ec var(--visual-h),
+    #fbe9fe calc(var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px),
     #180621 100%
   );
 
   @media ${device.mobileL} {
     margin: 0 12px;
     border-radius: 24px 24px 0 0;
-    /* Same shape as the design, in percentages — the stacked mobile layout's
-       height varies with copy, so fixed pixel offsets wouldn't line up. */
-    background: linear-gradient(
-      180deg,
-      #d548ec 0%,
-      #d548ec 17%,
-      #fbe9fe 46%,
-      #180621 100%
-    );
   }
 `;
 
