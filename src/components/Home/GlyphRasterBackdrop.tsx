@@ -70,37 +70,6 @@ const Stage = styled.div`
   border-radius: 48px;
   pointer-events: none;
 
-  /* Cleared through the middle, where the title sits, so what shows behind the
-     title is the plate's own colour -- solid, and an exact match because it is
-     the same paint, not a colour chosen to look like it. A panel with a fill
-     of its own cannot manage that here: the plate is a gradient and the colour
-     under the title moves with the viewport's height, so any one colour would
-     band against it. The ramp from clear to full is what softens the edge.
-     Centred, and the title's panel is centred in the same box. */
-  --clear-x: 52%;
-  --clear-y: 34%;
-  -webkit-mask-image: radial-gradient(
-    ellipse var(--clear-x) var(--clear-y) at 50% 50%,
-    transparent 0%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.4) 74%,
-    #000 100%
-  );
-  mask-image: radial-gradient(
-    ellipse var(--clear-x) var(--clear-y) at 50% 50%,
-    transparent 0%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.4) 74%,
-    #000 100%
-  );
-
-  /* Narrower screens give the title a bigger share of the box, so the clearing
-     has to grow with it or the glyphs come back under the copy. */
-  @media (max-width: 1024px) {
-    --clear-x: 62%;
-    --clear-y: 30%;
-  }
-
   canvas {
     display: block;
   }

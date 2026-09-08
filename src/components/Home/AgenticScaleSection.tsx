@@ -265,6 +265,12 @@ const RingArtwork = styled.div`
   }
 `;
 
+/**
+ * How far the title's box is blurred. Figma has a layer blur on it; this is the
+ * radius, and the one number here still taken by eye rather than off the file.
+ */
+const PANEL_BLUR = 24;
+
 const PinkCard = styled.div`
   /* Centred in that screen rather than hung from a fixed offset, so the space
      around it grows evenly with the viewport. */
@@ -278,18 +284,27 @@ const PinkCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 44px;
-  /* The design's own frame: 1200 wide, height hugging its contents, 44 between
-     the mark and the copy, and no padding at all -- the frame is the copy's
-     own box, not a plate around it. */
-  width: 1200px;
+  /* Frame 37239, as the design has it: 800 wide, height hugging its contents,
+     40 of padding, 44 between the mark and the copy. */
+  width: 800px;
   max-width: calc(100% - 48px);
-  padding: 0;
+  padding: 40px;
   box-sizing: border-box;
 
-  /* No fill and no blur of its own. What reads as the panel is the ring
-     pattern behind it being cleared away, which leaves the plate's own colour
-     showing -- solid, and an exact match by construction rather than a colour
-     picked to look like it. See RingArtwork's mask. */
+  /* The box itself: a solid fill, blurred as a layer rather than blurring what
+     is behind it. That is the difference between the two -- a background blur
+     leaves the pattern present and smeared, which still reads as a panel laid
+     over it, while blurring the layer softens the fill's own edges and leaves
+     the middle solid. Drawn on a pseudo-element because the blur would
+     otherwise take the copy with it. */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #d548ec;
+    filter: blur(${PANEL_BLUR}px);
+    z-index: -1;
+  }
 `;
 
 const LogoMark = styled.div`
