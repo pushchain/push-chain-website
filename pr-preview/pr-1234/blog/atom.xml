@@ -2,11 +2,140 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/</id>
     <title>Push Chain — Universal Blockchain for Apps Blog</title>
-    <updated>2026-08-31T00:00:00.000Z</updated>
+    <updated>2026-09-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/"/>
     <subtitle>Push Chain — Universal Blockchain for Apps Blog</subtitle>
     <icon>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/website/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[ERC-8196: Giving AI Agents Permission Without Giving Away Control]]></title>
+        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/</id>
+        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/"/>
+        <updated>2026-09-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn what ERC-8196 onchain AI agent standard is and how it enforces AI agents to act securely within boundaries defined by its users]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of ERC-8196: Giving AI Agents Permission Without Giving Away Control" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-782f5b7f3ff8d6b925a4b4472f1ee513.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Humanoids and robots are a hot trend these days. Imagine you're the proud owner of one of the finest bots, and one fine day you ask it to mow your lawn while you're out for some weekly grocery refill.</p>
+<p>Alas! You come back to find out the robot not only trimmed the lawn but also axed your garden, bonsai plants and even your fence!</p>
+<p><img decoding="async" loading="lazy" alt="Comic strip of a robot asked to mow the lawn that destroys the garden and fence instead" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-1be29196c575b3174788b7878560970c.webp" width="1122" height="1402" class="img_ev3q"></p>
+<p><em>Maybe the agent made a bad decision.</em></p>
+<p><em>Maybe its host changed its instructions.</em></p>
+<p><em>Maybe an attacker compromised it.</em></p>
+<p><em>Maybe it hallucinated.</em></p>
+<p><em>But the root cause was the same:</em></p>
+<p>The agent had more authority than it needed.</p>
+<p>In the onchain world, ERC-8196 tries to solve this problem.</p>
+<p>It lets a user give an AI agent limited and verifiable permission to use a wallet.</p>
+<p>But it must act inside rules that the owner defines first.</p>
+<p><em>Just for context:</em></p>
+<p><em>We're at a conjecture where there's a parabolic spike in usage and demand for crypto ai agents.</em></p>
+<div class="BlogTweet__TweetWrapper-sc-19ovpm5-0 dIzqtb"><div class="light"><div class="react-tweet-theme root_D3qd root_Y6tr"><article class="article_kRZ8"><span class="skeleton_FMR8" style="height:3rem;margin-bottom:0.75rem"></span><span class="skeleton_FMR8" style="height:6rem;margin:0.5rem 0"></span><div style="border-top:var(--tweet-border);margin:0.5rem 0"></div><span class="skeleton_FMR8" style="height:2rem"></span><span class="skeleton_FMR8" style="height:2rem;border-radius:9999px;margin-top:0.5rem"></span></article></div></div></div>
+<div class="BlogTweet__TweetWrapper-sc-19ovpm5-0 dIzqtb"><div class="light"><div class="react-tweet-theme root_D3qd root_Y6tr"><article class="article_kRZ8"><span class="skeleton_FMR8" style="height:3rem;margin-bottom:0.75rem"></span><span class="skeleton_FMR8" style="height:6rem;margin:0.5rem 0"></span><div style="border-top:var(--tweet-border);margin:0.5rem 0"></div><span class="skeleton_FMR8" style="height:2rem"></span><span class="skeleton_FMR8" style="height:2rem;border-radius:9999px;margin-top:0.5rem"></span></article></div></div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-erc-8196">What is ERC-8196?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#what-is-erc-8196" class="hash-link" aria-label="Direct link to What is ERC-8196?" title="Direct link to What is ERC-8196?" translate="no">​</a></h2>
+<p><a href="https://eips.ethereum.org/EIPS/eip-8196" target="_blank" rel="noopener noreferrer" class="">ERC-8196</a> defines a standard interface for an <strong>AI Agent Authenticated Wallet</strong>.</p>
+<p>The wallet does not give the agent unrestricted control.</p>
+<p>Instead, the asset owner creates a policy.</p>
+<p>The policy defines:</p>
+<ul>
+<li class="">What the agent can do.</li>
+<li class="">Which contracts it can use.</li>
+<li class="">How much value it can move.</li>
+<li class="">When its permission starts.</li>
+<li class="">When its permission ends.</li>
+<li class="">What ERC-8126 risk level is acceptable.</li>
+</ul>
+<p>The wallet checks this policy before it executes an agent action.</p>
+<p>ERC-8196 therefore answers:</p>
+<p><em><strong>"Is this agent allowed to perform this action right now?"</strong></em></p>
+<p>This is different from agent identity, and it is also different from agent reputation.</p>
+<p>ERC-8196 focuses on execution authority.</p>
+<p><em><strong>Co-authored by Leigh Cronian from <a href="https://x.com/cybercentry" target="_blank" rel="noopener noreferrer" class="">@cybercentry</a> and <a href="https://x.com/DonJohnsonSays" target="_blank" rel="noopener noreferrer" class="">Don Johnson</a> from <a href="https://x.com/virtuals_io" target="_blank" rel="noopener noreferrer" class="">@virtuals_io</a></strong></em></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-does-erc-8196-exist">Why does ERC-8196 exist?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#why-does-erc-8196-exist" class="hash-link" aria-label="Direct link to Why does ERC-8196 exist?" title="Direct link to Why does ERC-8196 exist?" translate="no">​</a></h2>
+<p>Before we understand the working of this ERC, let's reason why it even exists in the first place.</p>
+<p>Most wallets were designed for people.</p>
+<p>A person owns a private key, manually signs transactions for the blockchain to execute and settle.</p>
+<p><strong>Agents are probabilistic</strong> in nature and can make hundreds of decisions without a person approving each one. This creates a delegation problem where you're left with a few options.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="option-1---give-agent-the-private-key"><strong>Option 1 - Give agent the private key</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#option-1---give-agent-the-private-key" class="hash-link" aria-label="Direct link to option-1---give-agent-the-private-key" title="Direct link to option-1---give-agent-the-private-key" translate="no">​</a></h3>
+<p>EXTREMELY DANGEROUS!</p>
+<p>If the agent host is compromised, the attacker can get full control of the wallet.</p>
+<p>The ERC calls this the <strong>hosting trust trap</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="option-2-ask-the-user-to-approve-every-action"><strong>Option 2: Ask the user to approve every action</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#option-2-ask-the-user-to-approve-every-action" class="hash-link" aria-label="Direct link to option-2-ask-the-user-to-approve-every-action" title="Direct link to option-2-ask-the-user-to-approve-every-action" translate="no">​</a></h3>
+<p>This is relatively safer. But a total UX nightmare. Plus, the agent is no longer autonomous.</p>
+<p>You (the operator) will always have to be around and in the loop to approve the agent's txn requests.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="option-3-the-middle-path"><strong>Option 3: The middle path</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#option-3-the-middle-path" class="hash-link" aria-label="Direct link to option-3-the-middle-path" title="Direct link to option-3-the-middle-path" translate="no">​</a></h3>
+<p>Give the agent policy-bound access privileges defined by the owner/operator beforehand.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-a-policy-contain">What does a policy contain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#what-does-a-policy-contain" class="hash-link" aria-label="Direct link to What does a policy contain?" title="Direct link to What does a policy contain?" translate="no">​</a></h2>
+<p><strong>A policy in ERC-8196 defines the agent's operating boundary.</strong></p>
+<p>The specification includes fields such as:</p>
+<ul>
+<li class=""><em>Agent:</em></li>
+<li class=""><em>Owner:</em></li>
+<li class=""><em>Allowed Actions:</em></li>
+<li class=""><em>Allowed Contracts:</em></li>
+<li class=""><em>Blocked Contracts:</em></li>
+<li class=""><em>Max value/ transaction:</em></li>
+<li class=""><em>Max value/day:</em></li>
+<li class=""><em>Valid from:</em></li>
+<li class=""><em>Valid until:</em></li>
+<li class=""><em>Risk limit:</em></li>
+</ul>
+<p>The policy therefore converts a vague instruction such as: "Manage some of my funds" into machine readable deterministic rules.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-erc-8196-work"><strong>HOW does ERC-8196 work?</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#how-does-erc-8196-work" class="hash-link" aria-label="Direct link to how-does-erc-8196-work" title="Direct link to how-does-erc-8196-work" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Diagram of the ERC-8196 policy-based agent wallet flow, from owner sets policy through to audit log" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-2-742f079b57cad812adae224f2e357def.webp" width="1600" height="900" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-1-the-owner-registers-a-policy"><strong>Step 1: The owner registers a policy</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#step-1-the-owner-registers-a-policy" class="hash-link" aria-label="Direct link to step-1-the-owner-registers-a-policy" title="Direct link to step-1-the-owner-registers-a-policy" translate="no">​</a></h3>
+<p>The owner calls the <code>registerPolicy()</code> function.</p>
+<p>The policy connects: Owner + Agent + Rules</p>
+<p>The wallet creates a <strong>policyHash</strong>. This hash gives the policy a fixed cryptographic reference so that the agent cannot silently replace the policy with different rules.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-2-the-agent-requests-an-action"><strong>Step 2: The agent requests an action</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#step-2-the-agent-requests-an-action" class="hash-link" aria-label="Direct link to step-2-the-agent-requests-an-action" title="Direct link to step-2-the-agent-requests-an-action" translate="no">​</a></h3>
+<p>Suppose the agent wants to make a swap. The request contains information such as:</p>
+<ul>
+<li class="">Agent</li>
+<li class="">Action</li>
+<li class="">Target contract</li>
+<li class="">Value</li>
+<li class="">Transaction data</li>
+<li class="">Nonce</li>
+<li class="">Expiry</li>
+<li class="">Policy hash</li>
+</ul>
+<p>The agent signs the action.</p>
+<p>ERC-8196 uses <a href="https://eips.ethereum.org/EIPS/eip-712" target="_blank" rel="noopener noreferrer" class="">EIP-712 typed signatures</a> for this structure. The signature ties the action to a specific policy.</p>
+<p><strong>This is important:</strong> The agent cannot take a signature created for Policy A and freely use it under Policy B.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-3-check-erc-8126"><strong>Step 3: Check ERC-8126</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#step-3-check-erc-8126" class="hash-link" aria-label="Direct link to step-3-check-erc-8126" title="Direct link to step-3-check-erc-8126" translate="no">​</a></h3>
+<p>Before the action executes, the wallet must check the agent through <a href="https://push.org/blog/what-is-erc-8126/" target="_blank" rel="noopener noreferrer" class="">ERC-8126</a>.</p>
+<p>ERC-8126 produces a risk score between 0-100.</p>
+<p>Lower is better. The ERC-8196 policy defines an acceptable limit. The specification requires the wallet to reject the action when the current ERC-8126 score is above the policy threshold.</p>
+<table><thead><tr><th>Standard</th><th>Question it answers</th></tr></thead><tbody><tr><td><strong>ERC-8126</strong></td><td>"Should this agent be trusted?"</td></tr><tr><td><strong>ERC-8196</strong></td><td>"Can this agent do THIS action?"</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-4-verify-actions"><strong>Step 4: Verify actions</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#step-4-verify-actions" class="hash-link" aria-label="Direct link to step-4-verify-actions" title="Direct link to step-4-verify-actions" translate="no">​</a></h3>
+<p>After verification, ERC-8196 checks the action against the set policy. A failure at any important check stops the transaction.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-5-track-the-audit-trail"><strong>Step 5: Track the audit trail</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#step-5-track-the-audit-trail" class="hash-link" aria-label="Direct link to step-5-track-the-audit-trail" title="Direct link to step-5-track-the-audit-trail" translate="no">​</a></h3>
+<p>Autonomous agents can perform many actions. While users need to know what happened.</p>
+<p>ERC-8196 therefore defines a <strong>hash-chained audit trail</strong>. Each audit record links to the previous record.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">ACTION 1</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">│</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">▼</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">HASH A</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">│</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">▼</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">ACTION 2</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">│</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">▼</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">HASH B</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">│</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">▼</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">ACTION 3</span><br></div></code></pre></div></div>
+<p>If someone changes an old record, the hash chain breaks making the tampering detectable.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="step-6-entropy-commitment"><strong>Step 6: Entropy commitment</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#step-6-entropy-commitment" class="hash-link" aria-label="Direct link to step-6-entropy-commitment" title="Direct link to step-6-entropy-commitment" translate="no">​</a></h3>
+<p>AI agents are not always deterministic. The same prompt can sometimes produce different results.</p>
+<p>A malicious host could exploit this. For example, the host can run the agent many times:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">Run 1 → Don't trade</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Run 2 → Don't trade</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Run 3 → Trade</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Run 4 → Don't trade</span><br></div></code></pre></div></div>
+<p>The host can then select only the output that benefits it.</p>
+<p>ERC-8196 includes an <strong>entropy commitment</strong> in agent actions to help reduce this type of manipulation. The standard describes a commit-reveal approach for probabilistic agent behaviour.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="when-should-erc-8196-be-used"><strong>When should ERC-8196 be used?</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/#when-should-erc-8196-be-used" class="hash-link" aria-label="Direct link to when-should-erc-8196-be-used" title="Direct link to when-should-erc-8196-be-used" translate="no">​</a></h2>
+<p>ERC-8196 is useful when an AI agent needs <strong>real authority over assets or credentials</strong>.</p>
+<ul>
+<li class=""><strong>Trading agents -</strong> An agent can swap tokens within a fixed daily limit.</li>
+<li class=""><strong>Treasury agents -</strong> An agent can move funds only between approved contracts.</li>
+<li class=""><strong>DeFi agents -</strong> An agent can rebalance positions but cannot transfer funds to arbitrary wallets.</li>
+<li class=""><strong>Payment agents -</strong> An agent can pay approved services below a transaction limit.</li>
+</ul>
+<p>Read the official <a href="https://eips.ethereum.org/EIPS/eip-8196" target="_blank" rel="noopener noreferrer" class="">ERC-8196 documentation here</a>.</p>
+<p>If you want to dig deeper into the AI x crypto rabbit hole, get latest information about the <a href="https://push.org/blog/understanding-the-crypto-ai-agent-stack/" target="_blank" rel="noopener noreferrer" class="">AI agent stack</a>, <a href="https://push.org/blog/how-do-ai-agents-transact-onchain/" target="_blank" rel="noopener noreferrer" class="">how agents transact onchain</a> and <a href="https://push.org/blog/complete-guide-to-erc-8183/" target="_blank" rel="noopener noreferrer" class="">ERC-8183</a>.</p>
+<p>Happy lawn moving!</p>]]></content>
+        <author>
+            <name>Push Chain</name>
+            <uri>https://x.com/PushChain</uri>
+        </author>
+        <category label="Maker Monday" term="Maker Monday"/>
+        <category label="Key Features" term="Key Features"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The Complete Guide to ERC-8183]]></title>
         <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/complete-guide-to-erc-8183/</id>
@@ -697,73 +826,6 @@ This is where Push Chain does it differently.</p>
 <p>With <a href="http://zappi.to/" target="_blank" rel="noopener noreferrer" class="">Zappi</a>, users can create payment links, accept supported stablecoins, settle in PUSD, and earn safest yields through PUSD+.</p>
 <p>It is a simple idea: global payments should not break because the sender and receiver are on different chains.</p>
 <p>If you're a developer building in the payments or other cool industries and want to build using Push Chain and PUSD, <a href="https://t.me/+0PvJa9Kzfto5MWE9" target="_blank" rel="noopener noreferrer" class="">reach out to us here</a>.</p>]]></content>
-        <author>
-            <name>Push Chain</name>
-            <uri>https://x.com/PushChain</uri>
-        </author>
-        <category label="Featured" term="Featured"/>
-        <category label="Product" term="Product"/>
-        <category label="Ecosystem" term="Ecosystem"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Introducing PUSD: A Universal Stablecoin Built for the Future of Onchain Payments.]]></title>
-        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/</id>
-        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/"/>
-        <updated>2026-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[PUSD is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1.]]></summary>
-        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing PUSD" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/cover-image-b693a8437037ac590bc7f9ea9e8cf6d0.webp" width="1600" height="900" class="img_ev3q"></p>
-<!-- -->
-<p><a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a> is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1.</p>
-<p>This blog covers what PUSD is, why we need it, what it is not, its unique features, and how it aims to power the next generation of universal apps and blockchain-native payments, while also enabling passive income opportunities for users.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="challenges-users-and-businesses-face">Challenges users and businesses face<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#challenges-users-and-businesses-face" class="hash-link" aria-label="Direct link to Challenges users and businesses face" title="Direct link to Challenges users and businesses face" translate="no">​</a></h2>
-<p>Stablecoins are everywhere in crypto, but using them is still not as simple as holding a “digital dollar.”</p>
-<p>One has USDC on Base, USDT on Ethereum, or USDC on Solana, but the dilemma is always multifold</p>
-<ul>
-<li class="">Does the app support it?</li>
-<li class="">Do I need to bridge first?</li>
-<li class="">Will the recipient /vendor accept this version of the stablecoin?</li>
-<li class="">Can I withdraw into the chain I actually want to use?</li>
-<li class="">Are stablecoin yield platforms safe enough?</li>
-</ul>
-<p>So even when the user already has stablecoins, they still have to think about bridges, supported assets, approvals, destination chains, withdrawal routes, and whether the stablecoin in their wallet is the “right” one for the action they want to take.</p>
-<p>Now, if you zoom out and try to apply this workflow for bigger organizations, teams and events, the implications are massive: both in terms of time and resources wasted.</p>
-<p>That is the problem PUSD is built to solve.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="missed-opportunity">Missed opportunity:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#missed-opportunity" class="hash-link" aria-label="Direct link to Missed opportunity:" title="Direct link to Missed opportunity:" translate="no">​</a></h2>
-<p>PS: There's over $320 billion in stablecoin liquidity across 50+ chain-token pairs. But none of it is shared. An app on Arbitrum can't tap USDC liquidity sitting on Solana. A prediction market on Base can't settle with USDT locked on Ethereum.</p>
-<p>PUSD is designed to remove that problem at the application layer.</p>
-<p><strong>The goal is simple: make stablecoin usage feel less fragmented for users and easier to build around for developers by utilizing Push Chain’s  universal execution layer</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-pusd">What is PUSD?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#what-is-pusd" class="hash-link" aria-label="Direct link to What is PUSD?" title="Direct link to What is PUSD?" translate="no">​</a></h2>
-<p><strong>1:1 stablecoin minting</strong>
-Users deposit USDT, USDC from any supported EVM, non-EVM chain into the <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD App</a> and receive an equivalent amount of PUSD on Push Chain.</p>
-<p>Once minted, PUSD can be used for payments, trading, app interactions, or converted into PUSD+ for yield. <em>Read more use cases below</em>.</p>
-<p><strong>Backed by reserves, not printed from thin air</strong>
-Every PUSD is backed by reserve assets. The system is designed around reserve accounting, not speculative expansion.</p>
-<p><strong>Universal stablecoin liquidity for Push Chain apps</strong>
-Instead of every app needing to support every chain-specific version of USDC or USDT, apps can integrate PUSD as the common stablecoin layer.</p>
-<p>Integration takes a few hours, not months. <a href="https://pusd.push.org/docs/" target="_blank" rel="noopener noreferrer" class="">Refer the guide here</a>.</p>
-<p><strong>Instantly redeemable into chain-specific stablecoins</strong>
-Users can burn PUSD and redeem it back to required stablecoins.</p>
-<p><strong>Universal means Universal:</strong>
-PUSD is built for a multi-chain world. A user may enter with stablecoin liquidity from one chain and redeem into another supported chain, depending on available reserves and routing.</p>
-<p><strong>PUSD+ for yield-bearing exposure</strong>
-PUSD+ is the yield-bearing side of the system. Yield comes from activity around internal stablecoin swaps and rebalancing, with fees distributed back to PUSD+ holders.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-mint-pusd">How to mint PUSD?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#how-to-mint-pusd" class="hash-link" aria-label="Direct link to How to mint PUSD?" title="Direct link to How to mint PUSD?" translate="no">​</a></h2>
-<div style="width:100%;height:360px"></div>
-<p>Mint here: <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">http://pusd.push.org</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="safest-stablecoin-yield">Safest Stablecoin Yield<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#safest-stablecoin-yield" class="hash-link" aria-label="Direct link to Safest Stablecoin Yield" title="Direct link to Safest Stablecoin Yield" translate="no">​</a></h2>
-<p>PUSD+ is the yield-bearing version of PUSD. Because PUSD pools stablecoins from multiple chains, Push creates Uniswap-style swap pools (e.g., USDC.eth ↔ USDC.sol pairs) via <a href="https://www.ramenfi.xyz/" target="_blank" rel="noopener noreferrer" class="">Ramen.fi</a>. Swap fees from these pools flow back to PUSD+ holders</p>
-<p>The yield is not based on aggressive farming, leverage, volatile collateral, or uncertain hidden DeFi strategies making it the safest yield strategy 100% backed by stablecoins.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-earn-yield-on-pusd">How to earn yield on PUSD?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#how-to-earn-yield-on-pusd" class="hash-link" aria-label="Direct link to How to earn yield on PUSD?" title="Direct link to How to earn yield on PUSD?" translate="no">​</a></h2>
-<div style="width:100%;height:360px"></div>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="early-usecases">Early Usecases<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#early-usecases" class="hash-link" aria-label="Direct link to Early Usecases" title="Direct link to Early Usecases" translate="no">​</a></h2>
-<p><strong>Pay anyone, on any chain:</strong> You have USDC on Solana. The person you're paying needs USDT on Arbitrum. With PUSD, the chains don't need to match and the stablecoins don't need to match. Deposit, send, the recipient redeems on their chain.</p>
-<p>Check out <a href="http://zappi.to/" target="_blank" rel="noopener noreferrer" class="">Zappi.to</a>: An instant payment app for inide hackers and freelancers. Receive payments in stablecoins in seconds instead of weeks.</p>
-<p><strong>Predict and trade across chains</strong>
-Prediction markets today only accept stablecoins on their native chain, which cuts out users on every other chain.</p>
-<p>A prediction market settling in PUSD lets anyone from any supported chain place a bet with whatever stablecoin they already hold. No bridging before every trade.</p>
-<p>This is just a glimpse. <a href="http://pusd.push.org/" target="_blank" rel="noopener noreferrer" class="">PUSD</a> is more than a stablecoin, it’s the liquidity layer designed for a multi-chain, blockchain native payments future.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tldr">TLDR;<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/blog/introducing-pusd/#tldr" class="hash-link" aria-label="Direct link to TLDR;" title="Direct link to TLDR;" translate="no">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="What PUSD is and What PUSD is not" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1234/assets/images/image-1-85d04e0f2234283f6e9aa086389dd293.webp" width="1600" height="900" class="img_ev3q"></p>]]></content>
         <author>
             <name>Push Chain</name>
             <uri>https://x.com/PushChain</uri>
