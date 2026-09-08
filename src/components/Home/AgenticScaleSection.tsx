@@ -278,75 +278,15 @@ const PinkCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 44px;
-  /* Sized from the copy outwards: the box is the copy's own width plus its
-     padding plus the distance it fades over, so changing how far it fades
-     never moves the copy or rewraps it. */
-  --copy: 720px;
-  --pad: 24px;
-  width: calc(var(--copy) + 2 * (var(--pad) + var(--feather)));
+  width: 800px;
   max-width: calc(100% - 48px);
+  padding: 24px;
   box-sizing: border-box;
 
-  /* The blur at full strength, so the glyphs behind the title are gone rather
-     than softened, and no tint over it -- a tint is what made it read as a
-     lighter box laid on the pink. What stops it reading as a box now is its
-     edges: the panel is masked so it fades out on all four sides instead of
-     ending on a line. The two gradients are crossed rather than stacked, which
-     is what feathers the corners as well as the sides. */
-  background: transparent;
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
-
-  --feather: 168px;
-  -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 var(--feather),
-      #000 calc(100% - var(--feather)),
-      transparent 100%
-    ),
-    linear-gradient(
-      to bottom,
-      transparent 0,
-      #000 var(--feather),
-      #000 calc(100% - var(--feather)),
-      transparent 100%
-    );
-  mask-image: linear-gradient(
-      to right,
-      transparent 0,
-      #000 var(--feather),
-      #000 calc(100% - var(--feather)),
-      transparent 100%
-    ),
-    linear-gradient(
-      to bottom,
-      transparent 0,
-      #000 var(--feather),
-      #000 calc(100% - var(--feather)),
-      transparent 100%
-    );
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
-
-  /* The copy has to sit inside the part of the panel that is still solid, or
-     its own edges go soft with it. */
-  padding: calc(var(--pad) + var(--feather));
-
-  /* The fade is a fixed distance, so on a narrow screen it would eat the whole
-     panel; it comes down with the room available. */
-  @media ${device.laptop} {
-    --feather: 96px;
-  }
-
-  @media ${device.tablet} {
-    --feather: 64px;
-    --pad: 16px;
-  }
-
-  @media ${device.mobileL} {
-    --feather: 36px;
-  }
+  /* No fill and no blur of its own. What reads as the panel is the ring
+     pattern behind it being cleared away, which leaves the plate's own colour
+     showing -- solid, and an exact match by construction rather than a colour
+     picked to look like it. See RingArtwork's mask. */
 `;
 
 const LogoMark = styled.div`
