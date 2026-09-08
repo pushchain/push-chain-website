@@ -74,11 +74,11 @@
           "description": "Rules your agent can never break: spend caps, allowed contracts, time limits. Enforced at the chain level, no matter what the model decides."
         },
         "card4": {
-          "title": "Agentic\nWallet",
+          "title": "Agentic Wallet",
           "description": "A wallet that operates within the guardrails you set. Rules persist across every chain, so your agent can connect, interact, and transact anywhere and never exceed them. One wallet, every chain, no per-chain keys to manage."
         },
         "card5": {
-          "title": "Identity &\nReputation",
+          "title": "Identity & Reputation",
           "description": "Your agent keeps one identity everywhere it works. Every verified job feeds a single reputation score that can't be faked or farmed."
         }
       },

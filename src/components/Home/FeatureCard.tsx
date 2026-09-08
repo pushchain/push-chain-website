@@ -97,7 +97,10 @@ const CardFigure = styled.img`
   display: block;
   max-width: 100%;
   object-fit: contain;
-  margin: ${(props) => (props.wide ? '0 0 12px 0' : '0 auto 12px auto')};
+  /* The three narrow cards carry more air under their mark than the wide pair
+     do: it is what gives them their height, and the mark needs the room to
+     read as a mark rather than as something sitting on the title. */
+  margin: ${(props) => (props.wide ? '0 0 12px 0' : '0 auto 32px auto')};
 
   /* Two of the marks export with a viewBox but no width/height, so they need a
      size given to them; the aspect comes from the viewBox. Figma draws them at

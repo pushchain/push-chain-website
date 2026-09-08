@@ -278,17 +278,62 @@ const PinkCard = styled.div`
   align-items: center;
   justify-content: center;
   gap: 44px;
-  width: 800px;
+  /* The feather is added around the copy rather than taken out of it: the box
+     grows by what it fades away, so the content box is the 720px it always was
+     and the copy keeps its own two lines. */
+  width: calc(800px + 2 * var(--feather));
   max-width: calc(100% - 48px);
-  padding: 40px;
   box-sizing: border-box;
 
-  /* Blur alone, to settle the glyphs behind the title so it reads. At a third
-     of the pink's opacity with a border it still showed as a lighter box; the
-     hero's card is barely there, and this matches that. */
-  background: rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* The blur at full strength, so the glyphs behind the title are gone rather
+     than softened, and no tint over it -- a tint is what made it read as a
+     lighter box laid on the pink. What stops it reading as a box now is its
+     edges: the panel is masked so it fades out on all four sides instead of
+     ending on a line. The two gradients are crossed rather than stacked, which
+     is what feathers the corners as well as the sides. */
+  background: transparent;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+
+  --feather: 72px;
+  -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--feather),
+      #000 calc(100% - var(--feather)),
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0,
+      #000 var(--feather),
+      #000 calc(100% - var(--feather)),
+      transparent 100%
+    );
+  mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--feather),
+      #000 calc(100% - var(--feather)),
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0,
+      #000 var(--feather),
+      #000 calc(100% - var(--feather)),
+      transparent 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+
+  /* The mask feathers the panel, so the copy needs to sit inside the part of it
+     that is still solid or its own edges go soft with it. */
+  padding: calc(40px + var(--feather));
+
+  @media ${device.tablet} {
+    --feather: 44px;
+  }
 `;
 
 const LogoMark = styled.div`
