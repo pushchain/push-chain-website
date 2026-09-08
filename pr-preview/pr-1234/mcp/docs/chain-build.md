@@ -2,7 +2,7 @@
 title: "Build Section"
 url: "https://pushchain.github.io/docs/chain/build/"
 section: "build"
-lastUpdated: "2026-09-08T10:11:05Z"
+lastUpdated: "2026-09-08T11:45:03Z"
 description: "Build Section | Push Chain Docs"
 ---
 
