@@ -58,6 +58,24 @@ const COMMIT_FRAMES = 20;
 /** Slack on the way back, so resting on the line cannot flicker across it. */
 const COMMIT_HYST = 8;
 
+/**
+ * How long after the reader's last wheel or finger the section still counts
+ * them as scrolling. While they are, the page is not allowed past the end of
+ * this section -- so whatever momentum is left when the walk finishes puts the
+ * next section at the top of the screen instead of carrying clean past it.
+ */
+const INPUT_ALIVE_MS = 700;
+
+/**
+ * How much scrolling the section will absorb at its edge before it gives way.
+ * The hold is for a reader going at a readable pace: theirs is spent within a
+ * few hundred pixels of the end and the walk gets to finish. Someone leaving --
+ * a hard flick, a long drag -- puts this much against the edge in a moment and
+ * is let through rather than fought, which is the difference between a section
+ * that waits for you and one that feels stuck.
+ */
+const HOLD_GIVE = 900;
+
 /** Where the pinned composition parks under the header. */
 const PIN_TOP =
   GLOBALS.HEADER.HEIGHT + GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP + 8;
@@ -443,6 +461,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     let drawn = -1;
     let prevAt = 0;
 
+    // Read off the input rather than off the scroll: while the page is being
+    // held the scroll is exactly the thing that does not move.
+    let lastInput = 0;
+    let pushed = 0;
+    let released = false;
+    const onInput = () => {
+      lastInput = performance.now();
+    };
+    window.addEventListener('wheel', onInput, { passive: true });
+    window.addEventListener('touchmove', onInput, { passive: true });
+
     const tick = (now: number) => {
       const dt = prevAt ? Math.min(0.05, (now - prevAt) / 1000) : 0;
       prevAt = now;
@@ -473,6 +502,49 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         if (t >= 1) shown = STOPS[idx];
       }
 
+      // The section keeps the page until the walk has arrived -- but only for a
+      // reader going at a readable pace. Reading the scroll rather than
+      // steering it means the walk can be behind, and without this a quick
+      // reader is past the section before the character has finished. The hold
+      // is only ever the two ends of the runway, so a reader inside it is never
+      // pushed anywhere, and it gives way to anyone who keeps pushing.
+      const { top, travel } = geometry();
+      const alive = now - lastInput < INPUT_ALIVE_MS;
+      let holding = false;
+
+      if (!released) {
+        const overEnd = window.scrollY - (top + travel);
+        const underStart = top - window.scrollY;
+        if (shown < STOPS[LAST] && overEnd > 0) {
+          pushed += overEnd;
+          window.scrollTo(0, top + travel);
+          holding = true;
+        } else if (shown > STOPS[0] && underStart > 0) {
+          pushed += underStart;
+          window.scrollTo(0, top);
+          holding = true;
+        }
+        if (pushed > HOLD_GIVE) released = true;
+      }
+
+      // Forgotten as soon as the reader stops, so the next scroll meets a
+      // section that waits again rather than one that has given up for good.
+      if (!holding && !alive) {
+        pushed = 0;
+        released = false;
+      }
+
+      // Letting go is not letting fly. While the reader is still scrolling and
+      // the section has not been pushed aside, what is left of their momentum
+      // may reach the end of this section and no further, which puts the next
+      // one at the top of the screen rather than somewhere past it.
+      if (!holding && !released && alive) {
+        const pastEnd = top + runway.offsetHeight;
+        const beforeStart = top - window.innerHeight;
+        if (window.scrollY > pastEnd) window.scrollTo(0, pastEnd);
+        else if (window.scrollY < beforeStart) window.scrollTo(0, beforeStart);
+      }
+
       const next = Math.round(shown);
       if (next !== drawn) {
         anim.goToAndStop(next, true);
@@ -486,6 +558,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     return () => {
       cancelAnimationFrame(raf);
+      window.removeEventListener('wheel', onInput);
+      window.removeEventListener('touchmove', onInput);
     };
   }, [data]);
 
