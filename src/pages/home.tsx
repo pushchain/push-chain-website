@@ -37,11 +37,15 @@ function HomePage() {
         <title>{t('pages.home.seo.title')}</title>
         <meta name='description' content={t('pages.home.seo.description')} />
         <meta name='keywords' content={t('pages.home.seo.keywords')} />
-        <meta name='robots' content='index, follow' />
-        <meta name='googlebot' content='index, follow' />
+        {/* Kept out of search on this branch. This build is a showcase served
+            on a subdomain of push.org, and the site config's noIndex cannot
+            win against a tag set here -- the last one with the name is the one
+            that stands. */}
+        <meta name='robots' content='noindex, nofollow' />
+        <meta name='googlebot' content='noindex, nofollow' />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property='og:url' content='https://push.org/' />
+        <meta property='og:url' content='https://core.push.org/' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content={t('pages.home.seo.og-title')} />
         <meta
