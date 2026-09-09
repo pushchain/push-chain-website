@@ -58,11 +58,13 @@ const SETTLE_SOFTNESS = 1.0;
 const FAST_CHAPTER_MS = 500;
 
 /**
- * What counts as the very fast scroll that rushes through what is left: the
- * reference asks for 2400px of wheel inside 0.36s, which no ordinary gesture
- * or trackpad tail reaches.
+ * What counts as the very fast scroll that rushes through what is left: this
+ * much wheel travel inside FAST_WINDOW_MS. It sets how hard a flick has to be,
+ * not how fast the rush then runs -- that is FAST_CHAPTER_MS. Tuned on the
+ * page: at 600 an ordinary swipe tripped it and the run went by quicker than
+ * intended, so it takes a deliberate flick.
  */
-const FAST_TRIGGER_PX = 600;
+const FAST_TRIGGER_PX = 800;
 
 /**
  * Longest the page may be held for a single chapter. The walk always settles,
