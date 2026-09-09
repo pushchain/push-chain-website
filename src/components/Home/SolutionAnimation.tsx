@@ -37,53 +37,37 @@ const STOPS = [0, 90, 200, 280, 378, 540];
 const STEP_SCROLL = 400;
 
 /**
- * How long a step takes, from the reference's own driver.
+ * Pacing, taken from the reference's controls at the settings that were tuned
+ * on it -- not its shipped defaults, which differ.
  *
- * Not a rate: each gap is timed in its own right, because two of them are
- * deliberately stretched past their real duration. Gap 1 is Universal Rules
- * pulling itself apart, 3.67s of animation held for 7.34s; gap 4 is the flight
- * to the end, 5.40s held for 7.40s so the levitation has room to read. The rest
- * run at their true 30fps length, capped so no single step outstays its
- * welcome. `null` means automatic.
+ * Playback speed 1.00x, minimum chapter time 1.5s, settle softness 1.0, fast
+ * chapter time 0.5s. So a chapter runs for its own length at the source's 30fps
+ * unless that is under a second and a half, and softness 1.0 is a straight
+ * line: no ease at either end. Every gap here is longer than the minimum -- the
+ * shortest, 200 to 280, is 2.67s -- so in practice each chapter simply plays at
+ * its true speed.
  */
-const SPAN_MS = [null, 7340, null, null, 7400];
-const MAX_MS = 6000;
-const PLAYBACK = 1.0;
+const PLAYBACK_SPEED = 1.0;
+const MIN_CHAPTER_MS = 1500;
+const SETTLE_SOFTNESS = 1.0;
+const FAST_CHAPTER_MS = 500;
 
 /**
- * Three speeds, picked by how hard the reader is scrolling.
- *
- * Deliberate is the default and the slowest: the reference's own duration
- * stretched by DELIBERATE, because at its native pace the jump and the panel
- * that opens on landing go by before either can be read. A step called for
- * within HURRY_WINDOW of the last one is someone moving through rather than
- * watching, and runs at the reference's own pace. One called for within
- * SKIP_WINDOW is someone leaving, and is cut to SKIP_MS so the section lets go
- * quickly.
+ * What counts as the very fast scroll that rushes through what is left: the
+ * reference asks for 2400px of wheel inside 0.36s, which no ordinary gesture
+ * or trackpad tail reaches.
  */
-const DELIBERATE = 1.6;
-const HURRY_WINDOW = 900;
-const SKIP_WINDOW = 260;
-const SKIP_MS = 700;
+const FAST_TRIGGER_PX = 2400;
+const FAST_WINDOW_MS = 360;
 
-/** The reference's own curve: quick away from the stop, settling into the next. */
-const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+/** Settle softness as the reference applies it. At 1.0 this is the identity. */
+const settle = (t) => 1 - Math.pow(1 - t, SETTLE_SOFTNESS);
 
-/**
- * The duration for a step, in seconds. `gap` is the index of the gap being
- * crossed, which is the lower of the two stop indices; `since` is how long ago
- * the previous step was called for, which is the only reading of scroll speed
- * available at the moment a step starts.
- */
-const spanSeconds = (gap, fromFrame, toFrame, since) => {
-  const override = SPAN_MS[gap];
-  const natural =
-    override != null
-      ? override
-      : Math.min(MAX_MS, (Math.abs(toFrame - fromFrame) / 30) * 1000) / PLAYBACK;
-  if (since < SKIP_WINDOW) return SKIP_MS / 1000;
-  if (since < HURRY_WINDOW) return natural / 1000;
-  return (natural * DELIBERATE) / 1000;
+/** A chapter's duration in seconds. `rushing` is the fast-scroll case. */
+const chapterSeconds = (fromFrame, toFrame, rushing) => {
+  if (rushing) return FAST_CHAPTER_MS / 1000;
+  const source = (Math.abs(toFrame - fromFrame) / 30) * 1000;
+  return Math.max(MIN_CHAPTER_MS, source / PLAYBACK_SPEED) / 1000;
 };
 
 /**
@@ -165,7 +149,7 @@ const VIEWPORT_NOISE = 120;
  * work out what is spare above it before the copy is laid out.
  */
 const sceneBandFor = (roomH, stageW) => {
-  const byWidth = (stageW * COMP_H) / COMP_W;
+  const byWidth = (stageW * COMP_H) / WINDOW_W;
   const wanted = Math.min(byWidth, sceneHeightFor(roomH));
   return wanted * (GROUND_LINE - CONTENT_TOP) + GROUND_SHOW_MIN;
 };
@@ -202,7 +186,17 @@ const stableViewportH = () => {
   return h || window.innerHeight;
 };
 
-const COMP_W = 1440;
+/**
+ * The composition, and the window shown of it.
+ *
+ * The file is 2446 wide; the reference draws all of it behind a 1920-wide
+ * window centred on the character, who stands at x~1223 -- so the window opens
+ * at 1223 - 1920/2 = 263. The stage is that window; the host is the whole comp,
+ * pulled left by CAMERA_X.
+ */
+const COMP_W = 2446;
+const WINDOW_W = 1920;
+const CAMERA_X = 263;
 const COMP_H = 849;
 
 /* How much larger than its window the composition is drawn, from the
@@ -225,8 +219,8 @@ const ZOOM = 1.3;
  * The floor is the first row that is more than half ink, at 711 of 849, and the
  * comp draws 138px of ground below it.
  */
-const CONTENT_TOP = 0.2049;
-const GROUND_LINE = 0.8375;
+const CONTENT_TOP = 0.311;
+const GROUND_LINE = 0.7845;
 
 /**
  * Ground kept below the ground line. It is the part that gives first: the
@@ -245,11 +239,10 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const [data, setData] = useState<object | null>(null);
   const [failed, setFailed] = useState(false);
-  /* The 1440-wide cut. Same artwork as the 1920 one -- the two files differ in
-     exactly one number -- but framed so the scene reads without a camera track
-     to slide it, which is what the reference does. */
+  /* The 2446-wide master. The reference draws all of it and slides it behind a
+     1920-wide window centred on the character, which is the framing here. */
   const dataUrl = useBaseUrl(
-    '/assets/website/home/solution/push-8bit-1440.json'
+    '/assets/website/home/solution/push-8bit-2446.json'
   );
 
   // 3MB of shape data, so it is fetched rather than bundled — it is served
@@ -390,12 +383,13 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // the top and most of the floor off the bottom. Sized to the band
         // instead and the whole thing is always in frame; the width follows,
         // and only narrows past the page when the height demands it.
+        // The window is what has to fit the page; the comp behind it is wider
+        // and is slid into place by the camera below.
         const wantH = sceneHeightFor(stageBox);
-        const renderW = Math.min(stageW, (wantH * COMP_W) / COMP_H);
-        // One height, derived from the width that survived the cap, so the
-        // comp always keeps its aspect.
-        const renderH = (renderW * COMP_H) / COMP_W;
-        sceneScale = renderW / stageW;
+        const windowW = Math.min(stageW, (wantH * WINDOW_W) / COMP_H);
+        const renderH = (windowW * COMP_H) / WINDOW_W;
+        const renderW = (renderH * COMP_W) / COMP_H;
+        sceneScale = windowW / stageW;
         const stageH = stage.offsetHeight;
 
         // Deepest the scene can sit before the cards start leaving the top.
@@ -431,7 +425,11 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
-        host.style.left = `${Math.round((stageW - renderW) / 2)}px`;
+        // Camera, not centring: the comp is wider than the window and the
+        // character does not sit at the comp's middle, so the two differ.
+        host.style.left = `${Math.round(
+          (stageW - windowW) / 2 - CAMERA_X * (renderH / COMP_H)
+        )}px`;
 
         // The floor's position and the scene's drawn width, so the strip that
         // fills the page either side of the scene can line up with it. The
@@ -569,19 +567,34 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     let fromFrame = shown;
     let goneFor = 0;
     let stepSeconds = 0;
-    let lastCalledAt = -1e9;
+    // The reference's fast-scroll test, read off the wheel rather than off the
+    // scroll position: 2400px of travel inside 360ms. Nothing deliberate gets
+    // near that, and neither does a trackpad's inertia tail, so it only fires
+    // when the reader is trying to get past the section. Passive -- the page
+    // still scrolls; this only decides how fast the walk plays.
+    let rushing = false;
+    let gestureFrom = -1e9;
+    let gestureTravel = 0;
+    const onWheel = (e: WheelEvent) => {
+      const now = performance.now();
+      if (now - gestureFrom > FAST_WINDOW_MS) {
+        gestureFrom = now;
+        gestureTravel = 0;
+        rushing = false;
+      }
+      let d = e.deltaY;
+      if (e.deltaMode === 1) d *= 34;
+      else if (e.deltaMode === 2) d *= window.innerHeight;
+      gestureTravel += d;
+      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX) rushing = true;
+    };
+    window.addEventListener('wheel', onWheel, { passive: true });
 
     const walkTo = (to: number) => {
-      const now = performance.now();
-      const since = now - lastCalledAt;
-      lastCalledAt = now;
-      // The gap being crossed is the lower of the two stop indices, so a step
-      // is timed the same whichever way it is walked.
-      const gap = Math.min(idx, to);
       idx = to;
       fromFrame = shown;
       goneFor = 0;
-      stepSeconds = spanSeconds(gap, fromFrame, STOPS[to], since);
+      stepSeconds = chapterSeconds(fromFrame, STOPS[to], rushing);
     };
 
     let drawn = -1;
@@ -617,7 +630,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // which stop is wanted; how fast the walk gets there is the clock's,
         // and the clock is set by how hard they scrolled to ask for it.
         const t = Math.min(1, goneFor / stepSeconds);
-        const eased = easeOutCubic(t);
+        const eased = settle(t);
         shown = fromFrame + (STOPS[idx] - fromFrame) * eased;
         if (t >= 1) shown = STOPS[idx];
       }
@@ -635,6 +648,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     return () => {
       cancelAnimationFrame(raf);
+      window.removeEventListener('wheel', onWheel);
     };
   }, [data]);
 
@@ -766,7 +780,7 @@ const Stage = styled.div`
   /* Unpinned the scene keeps the comp's own aspect; pinned, the effect sets
      an explicit height and the comp is cropped to it. The character is centred,
      so it is the empty ends of the scene that go. */
-  aspect-ratio: ${COMP_W} / ${COMP_H};
+  aspect-ratio: ${WINDOW_W} / ${COMP_H};
 
   ${Runway}[data-pinned='true'] & {
     aspect-ratio: auto;
