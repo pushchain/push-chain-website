@@ -52,27 +52,64 @@ const BODY_TOP = 743; // Frame 37246
 const ROW_ONE_HEIGHT = 400;
 const ROW_TWO_HEIGHT = 330;
 
-/* Where the plate's light peak sits, as the design places it: Rectangle
-   42282's #fbe9fe stop is at 1207 and the visual above ends at 726, so the
-   peak is 481px below the visual -- among the first row of cards. Held as
-   that offset rather than as 1207 from the top, because the visual is a
-   screen tall here and 1207 from the top lands inside it on any tall
-   monitor. */
-const LIGHT_PEAK_BELOW_VISUAL = 1207 - VISUAL_HEIGHT;
+/* Rectangle 42282, read off the file (node 49243:16601 in Push Design
+   Foundations). Its fill is a vertical linear gradient whose four stops sit at
+   0.17308, 0.46008, 0.72196 and 0.9989 of a plate 2623 tall -- so, in design
+   pixels down that plate: 454, 1207, 1893 and 2620. The plate's top is exactly
+   the visual's top, the visual is 726, and the card grid ends at 1771, which is
+   what the offsets below are measured against. */
+const PLATE_HEIGHT = 2623;
+const PLATE_LIGHT_AT = 1207;
+const PLATE_DARK_AT = 1893;
+const PLATE_NEAR_BLACK_AT = 2620;
+const PLATE_CARDS_END = 1771;
+
+/* The light peak, measured down from the visual's end -- the one edge that
+   scales here, since the visual is a screen tall rather than the design's 726
+   while everything below it is fixed-height content. */
+const LIGHT_PEAK_BELOW_VISUAL = PLATE_LIGHT_AT - VISUAL_HEIGHT; // 481
+
+/* The one place this deliberately parts from the file. The design's first stop
+   is at 454, which is 272px above the end of its 726-tall visual -- the plate
+   has already begun lightening under the title. Here the visual is a whole
+   screen, so holding that proportion washed the title out on a tall monitor,
+   and the flat pink is held to the visual's full height instead. Everything
+   below is the file's own. */
+
+/* The dark end is measured up from the plate's own bottom instead. Anchoring
+   it below the visual too would put it in the middle of the card grid on a
+   phone, where the cards stack and the grid runs twice as tall; the design has
+   it arrive just after the cards wherever they end. */
+const DARK_ABOVE_PLATE_END = PLATE_HEIGHT - PLATE_DARK_AT; // 730
+const NEAR_BLACK_ABOVE_PLATE_END = PLATE_HEIGHT - PLATE_NEAR_BLACK_AT; // 3
+
+/* How far the plate outlives the cards. This is why it cannot be the panel's
+   own background: the panel ends a little after the last card, and the design's
+   plate goes on for 852px past that, holding near-black behind the start of the
+   next section. */
+const PLATE_BELOW_CARDS = PLATE_HEIGHT - PLATE_CARDS_END; // 852
+
+/* What the panel already spends below the last card, so the rest is what the
+   plate has to add. */
+const BODY_PAD_BOTTOM = 197;
+const BODY_PAD_BOTTOM_MOBILE = 80;
+const PLATE_TAIL = PLATE_BELOW_CARDS - BODY_PAD_BOTTOM; // 655
+const PLATE_TAIL_MOBILE = PLATE_BELOW_CARDS - BODY_PAD_BOTTOM_MOBILE; // 772
 
 /* The plate's colour ramps are eased, not straight. A straight ramp meets the
    flat pink above it at a corner -- the slope goes from nothing to its full
    rate in one pixel -- and the eye reads that corner as a line drawn across the
    panel however smooth each side of it is. The same happens in reverse at the
-   light peak, where a rise of +7 per 40px becomes a fall of -14 in one step.
-   smoothstep leaves the slope at zero at both ends of a ramp, so the title
-   screen releases into the fade and the peak turns over with nothing to catch
-   on. It has to be walked in enough steps that the polyline between them is
-   not itself a set of corners: at sixteen each joint turns by under two levels
-   of brightness, which is beneath what the panel's own 8-bit dithering shows. */
+   light peak. smoothstep leaves the slope at zero at both ends of a ramp, so
+   the title screen releases into the fade and the peak turns over with nothing
+   to catch on. It has to be walked in enough steps that the polyline between
+   them is not itself a set of corners: at sixteen each joint turns by under two
+   levels of brightness, which is beneath what the panel's own 8-bit dithering
+   shows. */
 const PLATE_PINK = [0xd5, 0x48, 0xec];
 const PLATE_LIGHT = [0xfb, 0xe9, 0xfe];
 const PLATE_DARK = [0x18, 0x06, 0x21];
+const PLATE_NEAR_BLACK = [0x09, 0x09, 0x09];
 const RAMP_STEPS = 16;
 
 const hex = (c) =>
@@ -88,23 +125,23 @@ const easedRamp = (from, to, at) =>
     return `${hex(from.map((v, j) => v + (to[j] - v) * f))} ${at(t)}`;
   }).join(',\n    ');
 
-const PEAK_AT = `calc(var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px)`;
+const PINK_END_AT = 'var(--visual-h)';
+const LIGHT_AT = `calc(var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px)`;
+const DARK_AT = `calc(100% - ${DARK_ABOVE_PLATE_END}px)`;
+const NEAR_BLACK_AT = `calc(100% - ${NEAR_BLACK_ABOVE_PLATE_END}px)`;
 
 const FADE_IN = easedRamp(PLATE_PINK, PLATE_LIGHT, (t) =>
   `calc(var(--visual-h) + ${Math.round(t * LIGHT_PEAK_BELOW_VISUAL)}px)`
 );
 
-/* Past the peak the far end is the panel's own bottom, so each stop is that
-   share of the way from the peak to it. */
+/* This ramp runs from a point measured down from the visual to one measured up
+   from the plate's bottom, so each stop is that share of the way between the
+   two expressions rather than a plain offset. */
 const FADE_OUT = easedRamp(PLATE_LIGHT, PLATE_DARK, (t) =>
   `calc((var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px) * ${(1 - t).toFixed(
     5
-  )} + ${(t * 100).toFixed(3)}%)`
+  )} + (100% - ${DARK_ABOVE_PLATE_END}px) * ${t.toFixed(5)})`
 );
-
-/* How far the plate's tail runs below the panel before it is page colour. Far
-   enough to carry past the section boundary and behind the next heading. */
-const PANEL_TAIL_H = 420;
 
 export default function AgenticScaleSection() {
   const { t } = useTranslation();
@@ -116,6 +153,7 @@ export default function AgenticScaleSection() {
       aria-level='2'
       aria-label={t('pages.home.built-to-scale.section-aria-label')}
     >
+      <Plate aria-hidden='true' />
       <Panel>
         <TopVisual>
           <Artwork aria-hidden='true'>
@@ -153,7 +191,6 @@ export default function AgenticScaleSection() {
           </BodyInner>
         </Body>
       </Panel>
-        <PanelTail aria-hidden='true' />
     </GroundSection>
       <GroundSpacer aria-hidden='true' />
     </GroundGroup>
@@ -192,6 +229,10 @@ const GroundSpacer = styled.div`
    The tile is the design's own (Figma 49456:681) with its top cropped off —
    that part is already drawn by the animation above. */
 const GroundSection = styled(Section)`
+  /* The title's screen. Held here rather than on the panel because the plate
+     is the panel's sibling and has to measure from the same number. */
+  --visual-h: max(100svh, 420px);
+
   position: relative;
 
   @media ${device.laptop} {
@@ -224,38 +265,16 @@ const GroundSection = styled(Section)`
   }
 `;
 
+/* No colour of its own: the plate behind it paints that, and the plate has to
+   run on past this box's bottom edge, which the overflow: hidden that clips the
+   artwork to the rounded corners would otherwise cut off. */
 const Panel = styled.div`
-  /* The title's screen, shared by the artwork above and the wash that blends
-     it into the grid below so the two cannot drift apart. */
-  --visual-h: max(100svh, 420px);
-
   position: relative;
+  z-index: 1;
   flex: 1;
   margin: 0 ${PANEL_INSET}px;
   border-radius: 48px 48px 0 0;
   overflow: hidden;
-  /* Figma's Rectangle 42282, measured from the one edge that scales with it.
-     The design's stops are 454 and 1207 down a plate whose visual is 726 tall;
-     read from the top they only hold at that one height, and the visual here
-     is a whole screen, so on a tall monitor 454 fell part way up the title and
-     washed it out. Anchored to the visual's end instead: the title screen
-     stays flat #d548ec however tall it grows, the fade starts just above the
-     grid's heading, and #fbe9fe peaks among the first row of cards exactly as
-     the design has it. A single peak, not a plateau, so the light stays a
-     narrow band and darkens continuously from there, reaching its darkest at
-     the panel's edge -- reaching it above that made the purple read as
-     starting before the section's block had ended. PanelTail carries the
-     colour on below the section, as the design does; a black stop here would
-     put a seam across the join. */
-  background: linear-gradient(
-    180deg,
-    ${hex(PLATE_PINK)} 0px,
-    ${hex(PLATE_PINK)} var(--visual-h),
-    ${FADE_IN},
-    ${hex(PLATE_LIGHT)} ${PEAK_AT},
-    ${FADE_OUT},
-    ${hex(PLATE_DARK)} 100%
-  );
 
   @media ${device.mobileL} {
     margin: 0 12px;
@@ -263,28 +282,43 @@ const Panel = styled.div`
   }
 `;
 
-/* In the design the plate's dark end carries on past the panel and the next
-   section's heading sits on it; the panel clips its own background, so the
-   tail has to be drawn outside it. Positioned off the section's bottom edge so
-   it adds no height -- it reaches down over the boundary and settles on the
-   page colour, and the section below paints over it in the normal way. */
-const PanelTail = styled.div`
+/* Figma's Rectangle 42282. A sibling of the panel rather than its background,
+   because the design's plate outlives the panel: it holds on for 852px past
+   the last card, going dark and then settling to the page's own colour behind
+   the start of the next section, and a background on a box that ends with the
+   cards has nowhere to put that.
+
+   Two ends, measured from two different edges. The light peak is fixed below
+   the visual, which is the only part of the section whose height tracks the
+   screen. The dark is fixed above the plate's own bottom, so it lands just
+   after the cards wherever they end -- measuring it below the visual instead
+   would drop it into the middle of the grid on a phone, where the cards stack
+   and the grid runs twice as long. */
+const Plate = styled.div`
   position: absolute;
-  top: 100%;
+  top: 0;
   left: ${PANEL_INSET}px;
   right: ${PANEL_INSET}px;
-  height: ${PANEL_TAIL_H}px;
+  height: calc(100% + ${PLATE_TAIL}px);
+  border-radius: 48px 48px 0 0;
+  z-index: 0;
+  pointer-events: none;
   background: linear-gradient(
     180deg,
-    #180621 0%,
-    var(--ifm-color-black) 100%
+    ${hex(PLATE_PINK)} 0px,
+    ${hex(PLATE_PINK)} ${PINK_END_AT},
+    ${FADE_IN},
+    ${hex(PLATE_LIGHT)} ${LIGHT_AT},
+    ${FADE_OUT},
+    ${hex(PLATE_DARK)} ${DARK_AT},
+    ${hex(PLATE_NEAR_BLACK)} ${NEAR_BLACK_AT}
   );
-  pointer-events: none;
 
   @media ${device.mobileL} {
     left: 12px;
     right: 12px;
-    height: ${Math.round(PANEL_TAIL_H * 0.6)}px;
+    height: calc(100% + ${PLATE_TAIL_MOBILE}px);
+    border-radius: 24px 24px 0 0;
   }
 `;
 
