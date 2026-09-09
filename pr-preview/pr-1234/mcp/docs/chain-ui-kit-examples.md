@@ -2,7 +2,7 @@
 title: "Examples Section"
 url: "https://pushchain.github.io/docs/chain/ui-kit/examples/"
 section: "ui-kit"
-lastUpdated: "2026-09-08T11:45:03Z"
+lastUpdated: "2026-09-09T13:08:06Z"
 description: "Examples Section | UI Kit | Push Chain Docs"
 ---
 

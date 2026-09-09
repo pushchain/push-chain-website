@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-09-08T11:45:03Z"
+lastUpdated: "2026-09-09T13:08:06Z"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 

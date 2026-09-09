@@ -2,7 +2,7 @@
 title: "Build Universal Cross-Chain Counters"
 url: "https://pushchain.github.io/docs/chain/tutorials/power-features/tutorial-universal-cross-chain-counters/"
 section: "tutorials"
-lastUpdated: "2026-09-08T11:45:03Z"
+lastUpdated: "2026-09-09T13:08:06Z"
 description: "Build Universal Cross-Chain Counters | Tutorials | Push Chain Docs"
 ---
 
