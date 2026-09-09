@@ -9,6 +9,9 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+// Internal Components
+import { setSmoothScroll } from '@site/src/hooks/smoothScrollControl';
+
 /**
  * Inertial ("smooth") scrolling, in the style of sohub.digital.
  *
@@ -57,6 +60,10 @@ export default function useSmoothScroll(enabled = true) {
           touchMultiplier: 1,
         });
 
+        // Published so a section can hold the page still while something
+        // plays. Lenis owns the wheel, so nothing downstream of it can.
+        setSmoothScroll(lenis);
+
         gsap.registerPlugin(ScrollTrigger);
 
         // Keep ScrollTrigger in step with the eased position.
@@ -77,6 +84,7 @@ export default function useSmoothScroll(enabled = true) {
 
     return () => {
       cancelled = true;
+      setSmoothScroll(null);
       if (rafId) gsap.ticker.remove(rafId);
       if (lenis && onScroll) lenis.off('scroll', onScroll);
       if (lenis) lenis.destroy();

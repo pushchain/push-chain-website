@@ -99,6 +99,19 @@ const CARD_GAP = 48;
 /** Where the incoming card comes to rest, as a percentage of its own height. */
 const DRAWER_REST = 6;
 
+/* How much of the waiting card shows along the bottom of the screen. Capped
+   under its own top padding so the strip is edge and radius and nothing else:
+   a peek deep enough to reach its first line of content reads as a second card
+   half arrived rather than one queued behind the first. */
+const PEEK_MAX = 32;
+const PEEK_MIN = 12;
+const PEEK_MARGIN = 8;
+
+/* Clearance held between the two cards when the screen is too short to show
+   the peek at the fold. The waiting card drops out of sight rather than
+   creeping up over the one it is meant to cover. */
+const PARK_GAP = 24;
+
 const FONT_MONO = "'IBM Plex Mono', monospace";
 
 // Exact 5x5 dot-grid glyph from Figma (node 49322:1879 and its repeats) — red accent
@@ -209,14 +222,6 @@ export default function ProblemNarrative() {
         ? cardBudget(headerHeight)
         : window.innerHeight - PIN_TOP - FLOOR_GAP;
 
-      // Park the group so the cards land at PIN_TOP either way: with the title
-      // dropped that means hanging the group's top above the fold by exactly
-      // the title's height.
-      stage.style.setProperty(
-        '--pin-top',
-        keepHeader ? `${PIN_TOP}px` : `${PIN_TOP - headerHeight - HEADER_GAP}px`
-      );
-
       // Everything in the card that is not the illustration — padding, the gap
       // to the consequences row, and the row itself.
       const chrome = natural - FIGURE_MAX;
@@ -275,6 +280,47 @@ export default function ProblemNarrative() {
       );
       if (!pinned) applyFigure(FIGURE_MAX);
 
+      // Park the group. Held with its title it sits in the middle of what is
+      // left of the screen below the header, not up against it -- the section
+      // is a good deal shorter than a tall monitor, and hugging the top read
+      // as the page having failed to finish loading. With the title dropped
+      // there is nothing spare to centre in, so the group hangs above the fold
+      // by exactly the title's height and the cards still land at PIN_TOP.
+      // Measured, not assumed: the header stays in the box whether or not it
+      // is on screen, and the gap under it is HEADER_GAP on a desktop but 40px
+      // from laptop down, so computing this from the constants put the cards
+      // 16px off their mark on every narrower screen.
+      const areaOffset =
+        area && viewportRef.current
+          ? area.getBoundingClientRect().top -
+            viewportRef.current.getBoundingClientRect().top
+          : headerHeight + HEADER_GAP;
+
+      const spare = window.innerHeight - PIN_TOP - (areaOffset + settled);
+      const pinTop = keepHeader
+        ? PIN_TOP + Math.max(0, Math.round(spare / 2))
+        : PIN_TOP - areaOffset;
+      stage.style.setProperty('--pin-top', `${pinTop}px`);
+
+      // Where the second card waits: its top edge along the bottom of the
+      // screen, stopping short of its own top padding so none of its content
+      // shows. Read from the card rather than fixed, because tight mode and
+      // every breakdown below laptop pad it differently. The floor keeps it
+      // clear of the card above when the screen is too short for a peek.
+      const cardTop = pinTop + areaOffset;
+      const padTop = parseFloat(getComputedStyle(cards[1]).paddingTop) || 0;
+      const peek = Math.max(PEEK_MIN, Math.min(PEEK_MAX, padTop - PEEK_MARGIN));
+      const park = Math.round(
+        Math.max(settled + PARK_GAP, window.innerHeight - peek - cardTop)
+      );
+      stage.style.setProperty('--card-park', `${park}px`);
+
+      // Put the card there now. ScrollTrigger refreshes with
+      // invalidateOnRefresh below, and an invalidated tween re-reads its start
+      // from wherever the element actually is -- so the park has to be a fact
+      // about the element before the refresh, not a number handed to the tween.
+      gsap.set(cards[1], { y: park, yPercent: 0 });
+
       cards.forEach((card) => {
         card.style.minHeight = `${settled}px`;
       });
@@ -287,17 +333,35 @@ export default function ProblemNarrative() {
 
     // Same reason as ignoreMobileResize above: re-measuring on a height-only
     // change means re-measuring on every toolbar slide, which resizes the
-    // pinned box and drags the scroll position with it.
+    // pinned box and drags the scroll position with it. That is the only thing
+    // the threshold is guarding, so it applies to touch alone -- where the
+    // group now centres itself in the height, a mouse dragging the window
+    // shorter by less than the threshold would otherwise leave it off centre
+    // until something else forced a measure.
+    const touch =
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(pointer: coarse)').matches;
+
+    // A drag fires resize on every frame and measure() costs several forced
+    // layouts, so let the drag settle first.
+    let settle = 0;
+    const remeasure = () => {
+      window.clearTimeout(settle);
+      settle = window.setTimeout(measure, 120);
+    };
+
     let lastW = window.innerWidth;
     let lastH = window.innerHeight;
     const onResize = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
       const widthChanged = w !== lastW;
-      const heightJumped = Math.abs(h - lastH) > VIEWPORT_NOISE;
+      const heightChanged = touch
+        ? Math.abs(h - lastH) > VIEWPORT_NOISE
+        : h !== lastH;
       lastW = w;
       lastH = h;
-      if (widthChanged || heightJumped) measure();
+      if (widthChanged || heightChanged) remeasure();
     };
 
     // Re-measure once webfonts land — IBM Plex Mono changes how the story copy
@@ -314,6 +378,7 @@ export default function ProblemNarrative() {
 
     window.addEventListener('resize', onResize);
     return () => {
+      window.clearTimeout(settle);
       window.removeEventListener('resize', onResize);
       figures.forEach((img) => img.removeEventListener('load', measure));
       cards.forEach((card) => {
@@ -343,22 +408,33 @@ export default function ProblemNarrative() {
     const ctx = gsap.context(() => {
       const [beneath, incoming] = cards;
 
+      // The pin offset is decided by the measure above and published on the
+      // stage, so the scrub and the sticky top can never disagree about where
+      // the group parks.
+      const readVar = (name, fallback) => {
+        const v = parseFloat(getComputedStyle(stage).getPropertyValue(name));
+        return Number.isFinite(v) ? v : fallback;
+      };
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: stage,
-          start: () => `top top+=${PIN_TOP}`,
+          start: () => `top top+=${readVar('--pin-top', PIN_TOP)}`,
           end: () => `+=${TRANSITION_SCROLL}`,
           scrub: true,
           invalidateOnRefresh: true,
         },
       });
 
-      tl.fromTo(
+      // A `to` rather than a `fromTo`: the start is whatever measure() parked
+      // the card at, which is the one number that tracks the screen. A fromTo's
+      // explicit start does not survive invalidateOnRefresh -- it is re-read
+      // off the element regardless -- so stating it here only made the two
+      // disagree. Ends just short of covering the card beneath, so its top edge
+      // stays showing and the pair reads as a drawer rather than a swap.
+      tl.to(
         incoming,
-        { yPercent: 108 },
-        // Stops just short of covering the card beneath, so its top edge stays
-        // showing and the pair reads as a drawer rather than a swap.
-        { yPercent: DRAWER_REST, ease: 'none' },
+        { y: 0, yPercent: DRAWER_REST, ease: 'none' },
         0
       ).fromTo(
         beneath,

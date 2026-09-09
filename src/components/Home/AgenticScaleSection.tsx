@@ -48,15 +48,84 @@ const GROUND_TILE_FIT = 39.8 / 63.2;
 // Vertical anchors, in design pixels measured from the top of that plate.
 const VISUAL_HEIGHT = 726; // image 32 — the slot for the incoming animation
 const PINK_CARD_TOP = 177;
-const BLEND_TOP = 552; // Rectangle 42285
-const BLEND_HEIGHT = 544;
 const BODY_TOP = 743; // Frame 37246
-const ROW_ONE_HEIGHT = 400;
-const ROW_TWO_HEIGHT = 330;
+/* The card heights, off the file: Frame 37242's three cards are 488 and Frame
+   37243's two are 401, over a 24px gap. They were 400 and 330 here, which left
+   the grid 792 tall against the design's 930 -- and since the plate's light
+   peak is pinned below the visual while its dark is pinned after the cards, a
+   short grid squeezes the descent between them and leaves the whole card area
+   sitting brighter than the design's. */
+const ROW_ONE_HEIGHT = 488;
+const ROW_TWO_HEIGHT = 401;
 
-/* How far the plate's tail runs below the panel before it is page colour. Far
-   enough to carry past the section boundary and behind the next heading. */
-const PANEL_TAIL_H = 420;
+/* Rectangle 42282, read off the file (node 49243:16601 in Push Design
+   Foundations). Its fill is a vertical linear gradient whose four stops sit at
+   0.17308, 0.46008, 0.72196 and 0.9989 of a plate 2623 tall -- so, in design
+   pixels down that plate: 454, 1207, 1893 and 2620. The plate's top is exactly
+   the visual's top, the visual is 726, and the card grid ends at 1771, which is
+   what the offsets below are measured against. */
+const PLATE_HEIGHT = 2623;
+const PLATE_PINK_END = 454;
+const PLATE_LIGHT_AT = 1207;
+const PLATE_DARK_AT = 1893;
+const PLATE_NEAR_BLACK_AT = 2620;
+const PLATE_CARDS_END = 1771;
+
+/* Both ends of the fade, measured from the visual's end -- the one edge that
+   scales here, since the visual is a screen tall rather than the design's 726
+   while everything on either side of it is fixed-height content. The fade
+   starts 272px ABOVE that edge, so the plate has already been lightening for a
+   while by the time the grid's heading arrives, exactly as the file has it.
+   Held as that distance rather than as a share of the visual: as a share, a
+   screen-tall visual puts the start almost half way up the title and washes it
+   out, which is a different bug entirely. */
+const PINK_END_BELOW_VISUAL = PLATE_PINK_END - VISUAL_HEIGHT; // -272
+const LIGHT_PEAK_BELOW_VISUAL = PLATE_LIGHT_AT - VISUAL_HEIGHT; // 481
+
+/* The dark end is measured up from the plate's own bottom instead. Anchoring
+   it below the visual too would put it in the middle of the card grid on a
+   phone, where the cards stack and the grid runs twice as tall; the design has
+   it arrive just after the cards wherever they end. */
+const DARK_ABOVE_PLATE_END = PLATE_HEIGHT - PLATE_DARK_AT; // 730
+const NEAR_BLACK_ABOVE_PLATE_END = PLATE_HEIGHT - PLATE_NEAR_BLACK_AT; // 3
+
+/* How far the plate outlives the cards. This is why it cannot be the panel's
+   own background: the panel ends a little after the last card, and the design's
+   plate goes on for 852px past that, holding near-black behind the start of the
+   next section. */
+const PLATE_BELOW_CARDS = PLATE_HEIGHT - PLATE_CARDS_END; // 852
+
+/* What the panel already spends below the last card, so the rest is what the
+   plate has to add. */
+const BODY_PAD_BOTTOM = 197;
+const BODY_PAD_BOTTOM_MOBILE = 80;
+const PLATE_TAIL = PLATE_BELOW_CARDS - BODY_PAD_BOTTOM; // 655
+const PLATE_TAIL_MOBILE = PLATE_BELOW_CARDS - BODY_PAD_BOTTOM_MOBILE; // 772
+
+/* Rectangle 42282's four colours, interpolated straight as the file does. An
+   earlier pass eased these to head off Mach banding at the corners; the band it
+   was defending against turned out to be the blurred wash that used to sit over
+   this, and with that gone the easing only pulled the colours off the design's
+   without buying anything back. */
+const PLATE_PINK = [0xd5, 0x48, 0xec];
+const PLATE_LIGHT = [0xfb, 0xe9, 0xfe];
+const PLATE_DARK = [0x18, 0x06, 0x21];
+const PLATE_NEAR_BLACK = [0x09, 0x09, 0x09];
+
+const hex = (c) => '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
+
+/* calc() will not take a signed operand, so the sign picks the operator. */
+const belowVisual = (px) => {
+  const n = Math.round(px);
+  return n < 0
+    ? `calc(var(--visual-h) - ${-n}px)`
+    : `calc(var(--visual-h) + ${n}px)`;
+};
+
+const PINK_END_AT = belowVisual(PINK_END_BELOW_VISUAL);
+const LIGHT_AT = belowVisual(LIGHT_PEAK_BELOW_VISUAL);
+const DARK_AT = `calc(100% - ${DARK_ABOVE_PLATE_END}px)`;
+const NEAR_BLACK_AT = `calc(100% - ${NEAR_BLACK_ABOVE_PLATE_END}px)`;
 
 export default function AgenticScaleSection() {
   const { t } = useTranslation();
@@ -68,9 +137,12 @@ export default function AgenticScaleSection() {
       aria-level='2'
       aria-label={t('pages.home.built-to-scale.section-aria-label')}
     >
+      <Plate aria-hidden='true' />
       <Panel>
         <TopVisual>
-          <GlyphRasterBackdrop />
+          <Artwork aria-hidden='true'>
+            <GlyphRasterBackdrop />
+          </Artwork>
           <PinkCard>
             <LogoMark aria-hidden='true'>
               <PushLogoMark />
@@ -81,9 +153,6 @@ export default function AgenticScaleSection() {
             </BannerHeading>
           </PinkCard>
         </TopVisual>
-
-        {/* Blurred wash that melts the artwork above into the card grid below. */}
-        <BlendWash aria-hidden='true' />
 
         <Body
           id='innovations-of-push-chain'
@@ -106,7 +175,6 @@ export default function AgenticScaleSection() {
           </BodyInner>
         </Body>
       </Panel>
-        <PanelTail aria-hidden='true' />
     </GroundSection>
       <GroundSpacer aria-hidden='true' />
     </GroundGroup>
@@ -145,6 +213,10 @@ const GroundSpacer = styled.div`
    The tile is the design's own (Figma 49456:681) with its top cropped off —
    that part is already drawn by the animation above. */
 const GroundSection = styled(Section)`
+  /* The title's screen. Held here rather than on the panel because the plate
+     is the panel's sibling and has to measure from the same number. */
+  --visual-h: max(100svh, 420px);
+
   position: relative;
 
   @media ${device.laptop} {
@@ -177,68 +249,58 @@ const GroundSection = styled(Section)`
   }
 `;
 
+/* No colour of its own: the plate behind it paints that, and the plate has to
+   run on past this box's bottom edge, which the overflow: hidden that clips the
+   artwork to the rounded corners would otherwise cut off. */
 const Panel = styled.div`
-  /* The title's screen, shared by the artwork above and the wash that blends
-     it into the grid below so the two cannot drift apart. */
-  --visual-h: max(100svh, 420px);
-
   position: relative;
+  z-index: 1;
   flex: 1;
   margin: 0 ${PANEL_INSET}px;
   border-radius: 48px 48px 0 0;
   overflow: hidden;
-  /* Figma's Rectangle 42282 stops, at their design pixel offsets. #fbe9fe is a
-     single peak at 1207px — not a plateau — so the light stays a narrow band
-     around the first card row and darkens continuously from there, reaching
-     its darkest exactly at the panel's edge -- reaching it 144px above that
-     made the purple read as starting before the section's block had ended.
-     PanelTail carries the colour on below the section, as the design does; a
-     black stop here would put a seam across the join. */
-  background: linear-gradient(
-    180deg,
-    #d548ec 0px,
-    #d548ec 454px,
-    #fbe9fe 1207px,
-    #180621 100%
-  );
 
   @media ${device.mobileL} {
     margin: 0 12px;
     border-radius: 24px 24px 0 0;
-    /* Same shape as the design, in percentages — the stacked mobile layout's
-       height varies with copy, so fixed pixel offsets wouldn't line up. */
-    background: linear-gradient(
-      180deg,
-      #d548ec 0%,
-      #d548ec 17%,
-      #fbe9fe 46%,
-      #180621 100%
-    );
   }
 `;
 
-/* In the design the plate's dark end carries on past the panel and the next
-   section's heading sits on it; the panel clips its own background, so the
-   tail has to be drawn outside it. Positioned off the section's bottom edge so
-   it adds no height -- it reaches down over the boundary and settles on the
-   page colour, and the section below paints over it in the normal way. */
-const PanelTail = styled.div`
+/* Figma's Rectangle 42282. A sibling of the panel rather than its background,
+   because the design's plate outlives the panel: it holds on for 852px past
+   the last card, going dark and then settling to the page's own colour behind
+   the start of the next section, and a background on a box that ends with the
+   cards has nowhere to put that.
+
+   Two ends, measured from two different edges. The light peak is fixed below
+   the visual, which is the only part of the section whose height tracks the
+   screen. The dark is fixed above the plate's own bottom, so it lands just
+   after the cards wherever they end -- measuring it below the visual instead
+   would drop it into the middle of the grid on a phone, where the cards stack
+   and the grid runs twice as long. */
+const Plate = styled.div`
   position: absolute;
-  top: 100%;
+  top: 0;
   left: ${PANEL_INSET}px;
   right: ${PANEL_INSET}px;
-  height: ${PANEL_TAIL_H}px;
+  height: calc(100% + ${PLATE_TAIL}px);
+  border-radius: 48px 48px 0 0;
+  z-index: 0;
+  pointer-events: none;
   background: linear-gradient(
     180deg,
-    #180621 0%,
-    var(--ifm-color-black) 100%
+    ${hex(PLATE_PINK)} 0px,
+    ${hex(PLATE_PINK)} ${PINK_END_AT},
+    ${hex(PLATE_LIGHT)} ${LIGHT_AT},
+    ${hex(PLATE_DARK)} ${DARK_AT},
+    ${hex(PLATE_NEAR_BLACK)} ${NEAR_BLACK_AT}
   );
-  pointer-events: none;
 
   @media ${device.mobileL} {
     left: 12px;
     right: 12px;
-    height: ${Math.round(PANEL_TAIL_H * 0.6)}px;
+    height: calc(100% + ${PLATE_TAIL_MOBILE}px);
+    border-radius: 24px 24px 0 0;
   }
 `;
 
@@ -353,27 +415,25 @@ const BannerHeading = styled.h2`
   }
 `;
 
-/* Straddles the join between the artwork and the card grid. It used to sit at
-   a fixed offset that happened to land there; with the artwork now a screen
-   tall that offset fell in the middle of it and bloomed as a white cloud over
-   the title. It is measured back from the artwork's end instead -- the same
-   174px above it and 544px below that the design's offsets described. */
-const BlendWash = styled.div`
+/* The artwork dissolves into the plate rather than being covered by anything.
+   A blurred rectangle used to do this job, and it was the source of both faults
+   in the panel: blur pulls a box's edges inward, so it left a strip of
+   uncovered artwork about 120px down each side, and its lower edge finished
+   111px before the plate reached its own lightest point, so the brightness
+   climbed, levelled off, then climbed again -- a line straight across the
+   panel. Alpha carries no colour of its own and a mask cannot be narrower than
+   the element, so neither fault can come back. */
+const Artwork = styled.div`
   position: absolute;
-  top: calc(var(--visual-h) - ${VISUAL_HEIGHT - BLEND_TOP}px);
-  left: 0;
-  right: 0;
-  height: ${BLEND_HEIGHT}px;
-  z-index: 1;
-  background: linear-gradient(180deg, #de6ef0 0%, #fae7fe 100%);
-  filter: blur(50px);
+  inset: 0;
   pointer-events: none;
-
-  @media ${device.mobileL} {
-    top: calc(var(--visual-h) - 20px);
-    height: 260px;
-    filter: blur(30px);
-  }
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    #000 0%,
+    #000 62%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
 `;
 
 const Body = styled.div`

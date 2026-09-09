@@ -8,6 +8,11 @@ import styled from 'styled-components';
 
 // Internal Configs
 import GLOBALS, { device } from '@site/src/config/globals';
+import {
+  pauseScroll,
+  resumeScroll,
+  jumpScrollTo,
+} from '@site/src/hooks/smoothScrollControl';
 
 /**
  * The 8-bit journey behind "Making AI universally accountable".
@@ -37,16 +42,47 @@ const STOPS = [0, 90, 200, 280, 378, 540];
 const STEP_SCROLL = 400;
 
 /**
- * How fast a step is walked, in animation frames a second, and the shortest and
- * longest one may take. Paced by frame count rather than a flat duration so the
- * character keeps one speed throughout: the last stop is nearly twice the walk
- * of the third, and giving them the same duration ran it at nearly twice the
- * pace. The ceiling is what keeps a fast scroll fast -- several stops at once
- * are walked in one motion rather than one after another.
+ * Pacing, taken from the reference's controls at the settings that were tuned
+ * on it -- not its shipped defaults, which differ.
+ *
+ * Playback speed 1.00x, minimum chapter time 1.5s, settle softness 1.0, fast
+ * chapter time 0.5s. So a chapter runs for its own length at the source's 30fps
+ * unless that is under a second and a half, and softness 1.0 is a straight
+ * line: no ease at either end. Every gap here is longer than the minimum -- the
+ * shortest, 200 to 280, is 2.67s -- so in practice each chapter simply plays at
+ * its true speed.
  */
-const STEP_FPS = 100;
-const STEP_MIN_SECONDS = 0.45;
-const STEP_MAX_SECONDS = 1.7;
+const PLAYBACK_SPEED = 1.0;
+const MIN_CHAPTER_MS = 1500;
+const SETTLE_SOFTNESS = 1.0;
+const FAST_CHAPTER_MS = 500;
+
+/**
+ * What counts as the very fast scroll that rushes through what is left: this
+ * much wheel travel inside FAST_WINDOW_MS. It sets how hard a flick has to be,
+ * not how fast the rush then runs -- that is FAST_CHAPTER_MS. Tuned on the
+ * page: at 600 an ordinary swipe tripped it and the run went by quicker than
+ * intended, so it takes a deliberate flick.
+ */
+const FAST_TRIGGER_PX = 800;
+
+/**
+ * Longest the page may be held for a single chapter. The walk always settles,
+ * so this never fires in practice -- it is here so that a walk which somehow
+ * did not could never leave the page unable to scroll.
+ */
+const HOLD_CEILING_MS = 9000;
+const FAST_WINDOW_MS = 360;
+
+/** Settle softness as the reference applies it. At 1.0 this is the identity. */
+const settle = (t) => 1 - Math.pow(1 - t, SETTLE_SOFTNESS);
+
+/** A chapter's duration in seconds. `rushing` is the fast-scroll case. */
+const chapterSeconds = (fromFrame, toFrame, rushing) => {
+  if (rushing) return FAST_CHAPTER_MS / 1000;
+  const source = (Math.abs(toFrame - fromFrame) / 30) * 1000;
+  return Math.max(MIN_CHAPTER_MS, source / PLAYBACK_SPEED) / 1000;
+};
 
 /**
  * How far past a stop the scroll has to reach, in animation frames, before the
@@ -76,6 +112,26 @@ const HOLD_TAIL = 120;
 const COPY_GAP = 24;
 
 /**
+ * How the room above the scene is split between the header and the copy.
+ *
+ * Not a fixed drop and not dead centre. The scene is sized to its own content
+ * band, so on a tall screen there is height left over and on a short one there
+ * is almost none -- the lead has to be a share of whatever is spare rather than
+ * a number, or a big screen leaves the title stranded at the top and a laptop
+ * has it sitting on the cards. This much of the spare goes above the title and
+ * the rest stays as the gap down to the scene, which is what keeps the title
+ * clear of the animation at every size.
+ */
+const COPY_LEAD_SHARE = 0.55;
+
+/** Never less than this above the title, so it clears the floating navbar. */
+const COPY_LEAD_MIN = 24;
+
+/** Nor more than this, so the title does not drift into the middle of a very
+    tall window and leave the scene marooned at the bottom. */
+const COPY_LEAD_MAX = 240;
+
+/**
  * Below this the scene is too short to read anything but the character, so the
  * section lays out in normal flow at the design's spacing rather than pinning
  * something cramped.
@@ -101,27 +157,83 @@ const VIEWPORT_NOISE = 120;
    its ground line sits exactly GROUND_SHOW_MAX above the stage's bottom, or the
    offset below comes out positive, the stage gives that height back, and the
    section underneath shows through the difference. */
-const sceneScaleFor = (availableH, stageW) => {
-  const withCappedFloor = (availableH - GROUND_SHOW_MAX) / GROUND_LINE;
-  const fillH =
-    withCappedFloor * (1 - GROUND_LINE) >= GROUND_SHOW_MAX
-      ? withCappedFloor
-      : availableH;
-  return Math.max(1, (fillH * COMP_W) / COMP_H / stageW);
+/**
+ * The height the scene wants: its content band drawn as large as the page's
+ * width allows, or as large as the room allows, whichever is smaller. Used to
+ * work out what is spare above it before the copy is laid out.
+ */
+const sceneBandFor = (roomH, stageW) => {
+  const byWidth = (stageW * COMP_H) / WINDOW_W;
+  const wanted = Math.min(byWidth, sceneHeightFor(roomH));
+  return wanted * (GROUND_LINE - CONTENT_TOP) + GROUND_SHOW_MIN;
+};
+
+const sceneHeightFor = (availableH, floorMax = GROUND_SHOW_MAX) => {
+  // Tallest the comp can be drawn and still keep that much floor under the
+  // character.
+  const withCappedFloor = (availableH - floorMax) / (GROUND_LINE - CONTENT_TOP);
+  // If that leaves more floor than the comp actually draws, the floor is the
+  // limit instead and the comp is as tall as the band allows.
+  return withCappedFloor * (1 - GROUND_LINE) >= floorMax
+    ? withCappedFloor
+    : availableH / (1 - CONTENT_TOP);
 };
 
 /** The composition's own size. The wider export needs no scaling to fill. */
-const COMP_W = 1920;
-const COMP_H = 849;
+/**
+ * The viewport height with the browser's chrome hidden -- what CSS calls lvh.
+ * `innerHeight` is the dynamic one: on a phone it changes by the height of the
+ * address bar as it slides, and sizing the scene off it is what made the scene
+ * resize mid-scroll. Read from a probe rather than guessed, and only when the
+ * screen itself changes, so a step is always drawn at the size the one before
+ * it was.
+ */
+const stableViewportH = () => {
+  if (typeof document === 'undefined') return 0;
+  const probe = document.createElement('div');
+  probe.style.cssText =
+    'position:fixed;top:0;left:0;width:0;height:100lvh;visibility:hidden;pointer-events:none';
+  document.body.appendChild(probe);
+  const h = probe.offsetHeight;
+  probe.remove();
+  return h || window.innerHeight;
+};
 
 /**
- * The composition's own landmarks, as fractions of its height, measured off a
- * natural-aspect render: the step cards begin at 179 of 669 and the ground line
- * falls at 504. Everything between them — cards, character, ground — is what
- * has to stay in frame.
+ * The composition, and the window shown of it.
+ *
+ * The file is 2446 wide; the reference draws all of it behind a 1920-wide
+ * window centred on the character, who stands at x~1223 -- so the window opens
+ * at 1223 - 1920/2 = 263. The stage is that window; the host is the whole comp,
+ * pulled left by CAMERA_X.
  */
-const CONTENT_TOP = 0.268;
-const GROUND_LINE = 0.753;
+const COMP_W = 2446;
+const WINDOW_W = 1920;
+const CAMERA_X = 263;
+const COMP_H = 849;
+
+/* How much larger than its window the composition is drawn, from the
+   reference. The scene is framed with room around it, and at 1.0 that room
+   reads as the character standing in an empty field; 1.3 crops into it. */
+const ZOOM = 1.3;
+
+/**
+ * The composition's own landmarks, as fractions of its height.
+ *
+ * Measured on this file rather than carried over: the 1440 cut was stepped
+ * through all six stops at 1:1 and the ink bounds read off each. The stops do
+ * not agree about the top -- 0.425 at the first, 0.293 in the middle, 0.421 at
+ * the last -- because what reaches highest is the allow-list panel that opens
+ * out of Universal Rules at stop 1, at 0.205. That is the one that has to fit,
+ * so CONTENT_TOP is the union and not any single frame; the previous 0.268 was
+ * measured off a frame that does not have the panel open, which is exactly the
+ * thing that was being cut off the top.
+ *
+ * The floor is the first row that is more than half ink, at 711 of 849, and the
+ * comp draws 138px of ground below it.
+ */
+const CONTENT_TOP = 0.311;
+const GROUND_LINE = 0.7845;
 
 /**
  * Ground kept below the ground line. It is the part that gives first: the
@@ -132,6 +244,12 @@ const GROUND_LINE = 0.753;
 const GROUND_SHOW_MAX = 90;
 const GROUND_SHOW_MIN = 40;
 
+/* Below laptop the scene is fighting for every pixel of height, and 90px of
+   floor under the character is a fifth of what it gets. The floor is the part
+   that can afford to go: less of it here buys the scene that much more, which
+   is the difference between the steps reading and not. */
+const GROUND_SHOW_MAX_SMALL = 44;
+
 const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const runwayRef = useRef<HTMLDivElement | null>(null);
   const pinnedRef = useRef<HTMLDivElement | null>(null);
@@ -140,7 +258,11 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const [data, setData] = useState<object | null>(null);
   const [failed, setFailed] = useState(false);
-  const dataUrl = useBaseUrl('/assets/website/home/solution/push-8bit.json');
+  /* The 2446-wide master. The reference draws all of it and slides it behind a
+     1920-wide window centred on the character, which is the framing here. */
+  const dataUrl = useBaseUrl(
+    '/assets/website/home/solution/push-8bit-2446.json'
+  );
 
   // 3MB of shape data, so it is fetched rather than bundled — it is served
   // gzipped at about 83KB and stays out of the JS chunk entirely. The transfer
@@ -216,20 +338,45 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // exactly what is left. Letting the copy scroll out of the pin instead
       // did get the scene running on a phone, but it pushed the title off the
       // top of the screen while the animation played.
-      const copyH = copyEl.offsetHeight;
-      const available = window.innerHeight - PIN_TOP - copyH - COPY_GAP;
+      // True below laptop -- where the comp is far too wide to fill the height
+      // on its own and is scaled up until it does. Needed before the lead is
+      // worked out, which is why it is read here rather than further down.
+      const fillsHeight =
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia(device.laptop).matches;
+
+      // Measure the copy without any lead first -- the lead is what is being
+      // solved for, so leaving last pass's value on it would compound.
+      copyEl.style.setProperty('--solution-copy-lead', '0px');
+      const textH = copyEl.offsetHeight;
+
+      const room = stableViewportH() - PIN_TOP - textH - COPY_GAP;
+
+      // Below laptop there is nothing spare to divide: the copy takes most of
+      // the screen and the scene wants the rest, so the title stays at the top
+      // on a plain gap clear of the navbar. Above it, the title is set into
+      // whatever the scene does not need.
+      let lead = COPY_LEAD_MIN;
+      if (!fillsHeight) {
+        const needs = sceneBandFor(room, stage.offsetWidth);
+        const spare = Math.max(0, room - needs);
+        lead = Math.round(
+          Math.min(
+            COPY_LEAD_MAX,
+            Math.max(COPY_LEAD_MIN, spare * COPY_LEAD_SHARE)
+          )
+        );
+      }
+      copyEl.style.setProperty('--solution-copy-lead', `${lead}px`);
+
+      const copyH = textH + lead;
+      const available = stableViewportH() - PIN_TOP - copyH - COPY_GAP;
 
       // The scene is scaled to whatever that leaves rather than needing a fixed
       // slab of it, so the floor is only what the scene needs to stay legible.
       const pinned = available >= MIN_STAGE;
 
       runway.dataset.pinned = String(pinned);
-
-      // True below laptop -- where the comp is far too wide to fill the height
-      // on its own and is scaled up until it does.
-      const fillsHeight =
-        typeof window.matchMedia === 'function' &&
-        window.matchMedia(device.laptop).matches;
 
       // Published before the stage is measured, because below laptop it is what
       // the stage's height is worked out from in CSS.
@@ -248,18 +395,38 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         pinned && !fillsHeight ? `${Math.round(available)}px` : '';
       const stageBox = pinned ? stage.offsetHeight : available;
 
-      // Slide the comp so its ground line lands just above the stage's bottom
-      // edge. Centring it — which is what a plain `slice` does — cut the
-      // character in half on a short viewport.
-      const sceneScale = fillsHeight
-        ? sceneScaleFor(stageBox, stage.offsetWidth)
-        : 1;
+      // Declared out here: the ground strip below this section is drawn at
+      // whatever scale the scene ended up at, and that is published after the
+      // block closes.
+      let sceneScale = 1;
 
       const host = stage.firstElementChild as HTMLElement | null;
       if (host) {
         const stageW = stage.offsetWidth;
-        const renderW = stageW * sceneScale;
-        const renderH = (renderW * COMP_H) / COMP_W;
+
+        // Height first, at every width. The scene used to be drawn at the full
+        // width of the page and cropped to whatever height was left, which on a
+        // wide screen made it enormous -- the comp came out 891px tall in a
+        // 510px box, so the panel that opens above Universal Rules was cut off
+        // the top and most of the floor off the bottom. Sized to the band
+        // instead and the whole thing is always in frame; the width follows,
+        // and only narrows past the page when the height demands it.
+        // The window is what has to fit the page; the comp behind it is wider
+        // and is slid into place by the camera below.
+        const floorMax = fillsHeight ? GROUND_SHOW_MAX_SMALL : GROUND_SHOW_MAX;
+        const wantH = sceneHeightFor(stageBox, floorMax);
+        const wideEnough = (wantH * WINDOW_W) / COMP_H;
+        // Above laptop the scene is held to the page's width, so nothing is
+        // lost off its sides. Below it that cap is what made the scene a strip:
+        // at a phone's width the comp is only about 170px tall, a fraction of
+        // the height the pin has to give it. There it is drawn as tall as that
+        // height needs and runs off both edges instead -- the camera keeps the
+        // character centred, so what goes is the empty lead-in and run-out
+        // either side of him rather than any of the steps.
+        const windowW = fillsHeight ? wideEnough : Math.min(stageW, wideEnough);
+        const renderH = (windowW * COMP_H) / WINDOW_W;
+        const renderW = (renderH * COMP_W) / COMP_H;
+        sceneScale = windowW / stageW;
         const stageH = stage.offsetHeight;
 
         // Deepest the scene can sit before the cards start leaving the top.
@@ -273,7 +440,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         const drawnBelowGround = renderH * (1 - GROUND_LINE);
         const groundShow = Math.max(
           GROUND_SHOW_MIN,
-          Math.min(GROUND_SHOW_MAX, room, drawnBelowGround)
+          Math.min(floorMax, room, drawnBelowGround)
         );
 
         let offset = pinned
@@ -295,7 +462,22 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
-        host.style.left = `${Math.round((stageW - renderW) / 2)}px`;
+        // Camera, not centring: the comp is wider than the window and the
+        // character does not sit at the comp's middle, so the two differ.
+        host.style.left = `${Math.round(
+          (stageW - windowW) / 2 - CAMERA_X * (renderH / COMP_H)
+        )}px`;
+
+        // The floor's position and the scene's drawn width, so the strip that
+        // fills the page either side of the scene can line up with it. The
+        // scene is no longer as wide as the page -- it is sized to its own
+        // content band -- so without this the checkerboard stopped at the
+        // scene's edges and left black down both sides.
+        stage.style.setProperty(
+          '--scene-floor',
+          `${Math.round(stageH - groundShow)}px`
+        );
+        stage.style.setProperty('--scene-render-w', `${Math.round(renderW)}px`);
 
         // Held against the stage's floor rather than measured down from its
         // top, so the scene stays on the fold when the stage grows underneath
@@ -336,21 +518,14 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     // finger drags the scroll position and reads as the page jumping. Only a
     // width change, or a height change too large to be browser chrome, counts.
     let lastW = window.innerWidth;
-    let lastH = window.innerHeight;
+    let lastH = stableViewportH();
     const onResize = () => {
       const w = window.innerWidth;
-      const h = window.innerHeight;
-      // Below laptop the pinned box, the stage and the runway are all sized by
-      // the stylesheet, so a refit only rescales the scene inside them and
-      // cannot move the scroll. The guard is needed where the effect still sets
-      // heights itself; holding it everywhere is what left the scene scaled for
-      // the screen the bar was covering.
-      const sceneOnly =
-        typeof window.matchMedia === 'function' &&
-        window.matchMedia(device.laptop).matches;
-      const changed =
-        w !== lastW ||
-        (sceneOnly ? h !== lastH : Math.abs(h - lastH) > VIEWPORT_NOISE);
+      // The stable height, so the address bar sliding is not a resize at all.
+      // Compared against innerHeight this fired on every slide, and refitting
+      // mid-scroll is what made the scene change size under the reader.
+      const h = stableViewportH();
+      const changed = w !== lastW || Math.abs(h - lastH) > VIEWPORT_NOISE;
       lastW = w;
       lastH = h;
       if (changed) fit();
@@ -429,15 +604,78 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     let fromFrame = shown;
     let goneFor = 0;
     let stepSeconds = 0;
+    // The reference's fast-scroll test, read off the wheel rather than off the
+    // scroll position: 2400px of travel inside 360ms. Nothing deliberate gets
+    // near that, and neither does a trackpad's inertia tail, so it only fires
+    // when the reader is trying to get past the section. Passive -- the page
+    // still scrolls; this only decides how fast the walk plays.
+    // Which way a rush is running, and whether one is running at all. A
+    // direction rather than a flag so it can be told when it has reached the
+    // end of the run and stop there.
+    let rushDir = 0;
+    let boostInFlight = false;
+    let gestureFrom = -1e9;
+    let gestureTravel = 0;
+
+    // Set by the loop below: true while a chapter is part way through and the
+    // section is in the stretch it holds for.
+    let holding = false;
+    let heldSince = 0;
+
+    /* Whether the scroll is inside the section's hold. Outside it the page is
+       left alone -- holding above or below the section would stop the reader
+       leaving a page they are not even looking at. */
+    const inHold = () => {
+      const { top, travel } = geometry();
+      const y = window.scrollY;
+      return y >= top - 2 && y <= top + travel + 2;
+    };
+
+    /* The hold itself. Non-passive, because preventing the scroll is the whole
+       point: while a chapter plays the wheel and the finger move nothing, so
+       the section cannot leave part way through a walk -- going forwards or
+       back. Momentum left over after a chapter lands simply resumes. */
+    const hold = (e: Event) => {
+      if (holding && e.cancelable) e.preventDefault();
+    };
+    const onWheel = (e: WheelEvent) => {
+      const now = performance.now();
+      if (now - gestureFrom > FAST_WINDOW_MS) {
+        gestureFrom = now;
+        gestureTravel = 0;
+      }
+      let d = e.deltaY;
+      if (e.deltaMode === 1) d *= 34;
+      else if (e.deltaMode === 2) d *= window.innerHeight;
+      gestureTravel += d;
+      // Latched, not momentary. It is read when a chapter starts, and a
+      // chapter runs for seconds where the gesture is over inside 360ms -- so
+      // read momentarily only the first chapter of a rush ever ran fast and
+      // the rest played at full length, which is the "still slow on a fast
+      // scroll" of it. Cleared in the loop once the walk has caught up with
+      // where the scroll is asking for, the way the reference's own sequence
+      // runs itself out.
+      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX && !rushDir) {
+        rushDir = gestureTravel > 0 ? 1 : -1;
+        // Cut the chapter already in flight short as well. The trigger can only
+        // fire once enough scrolling has been seen, which takes a moment, and
+        // that moment lands inside a chapter -- so without this the first one
+        // still plays its full length and the rush only starts from the second.
+        boostInFlight = true;
+      }
+    };
+    window.addEventListener('wheel', onWheel, { passive: true });
+    window.addEventListener('wheel', hold, { passive: false });
+    window.addEventListener('touchmove', hold, { passive: false });
 
     const walkTo = (to: number) => {
+      // Direction first: idx is about to become `to`, and after that the two
+      // are equal and the comparison says nothing.
+      const withRush = rushDir !== 0 && Math.sign(to - idx) === rushDir;
       idx = to;
       fromFrame = shown;
       goneFor = 0;
-      stepSeconds = Math.max(
-        STEP_MIN_SECONDS,
-        Math.min(STEP_MAX_SECONDS, Math.abs(STOPS[to] - shown) / STEP_FPS)
-      );
+      stepSeconds = chapterSeconds(fromFrame, STOPS[to], withRush);
     };
 
     let drawn = -1;
@@ -447,37 +685,84 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const dt = prevAt ? Math.min(0.05, (now - prevAt) / 1000) : 0;
       prevAt = now;
 
-      // Settled in one pass. Advancing a stop per frame instead restarted the
-      // step on each of them, so a scroll that had already reached the third
-      // stop left the character creeping a frame at a time near the first.
       const p = frameFor();
-      // Both tests hang off the same line -- the one the scroll crossed to ask
-      // for this stop -- so they cannot disagree. Hung off the stop itself
-      // instead, the last stop was asked for and taken back on alternate
-      // frames, because the scroll was past the line that called for it and
-      // short of the stop it called for.
-      let want = idx;
-      while (want < LAST && p > STOPS[want] + COMMIT_FRAMES) want += 1;
-      while (want > 0 && p < STOPS[want - 1] + COMMIT_FRAMES - COMMIT_HYST)
-        want -= 1;
-      if (want !== idx) walkTo(want);
+      const landed = shown === STOPS[idx];
+
+      // One chapter at a time, and only once the one before it has landed.
+      // Resolving straight to the furthest stop the scroll had reached walked
+      // the character there in a single motion, so a quick scroll skipped every
+      // chapter in between rather than playing them. Both tests hang off the
+      // line the scroll crossed to ask for the move, not off the stop itself:
+      // hung off the stop, the last one was asked for and taken back on
+      // alternate frames, because the scroll sat past the line that called for
+      // it and short of the stop it called for.
+      if (landed) {
+        let want = idx;
+        if (idx < LAST && p > STOPS[idx] + COMMIT_FRAMES) want = idx + 1;
+        else if (idx > 0 && p < STOPS[idx - 1] + COMMIT_FRAMES - COMMIT_HYST)
+          want = idx - 1;
+        // A rush runs itself to the end of the run, without waiting to be
+        // asked again. It has to: the page is held while a chapter plays and
+        // the scrolling it holds is thrown away, so one flick could only ever
+        // buy one chapter however hard it was -- which is the whole of "no
+        // matter how fast I scroll it still runs slow". Once triggered it
+        // chains its own chapters, the way the reference's sequence does, and
+        // stops at the end of the run.
+        boostInFlight = false;
+        if (rushDir > 0 && idx < LAST) walkTo(idx + 1);
+        else if (rushDir < 0 && idx > 0) walkTo(idx - 1);
+        else if (rushDir) {
+          // Arrived. Put the scroll where the animation now is, or the walk
+          // would be asked to come straight back to wherever the reader had
+          // actually reached.
+          const { top, travel } = geometry();
+          rushDir = 0;
+          // Only ever reached at one end of the run, so the stop says which.
+          jumpScrollTo(idx >= LAST ? top + travel : top);
+        } else if (want !== idx) walkTo(want);
+      }
+
+      // Hold the page while a chapter plays, in either direction, so the
+      // section cannot scroll away part way through one. Released the moment it
+      // lands, so the next scroll moves on normally.
+      const wantHold = !landed && inHold();
+      if (!wantHold) heldSince = 0;
+      else if (!heldSince) heldSince = now;
+      // Never hold longer than a chapter could honestly take. Without this a
+      // walk that failed to settle would leave the page stuck for good.
+      const shouldHold =
+        wantHold && !(heldSince && now - heldSince > HOLD_CEILING_MS);
+
+      // Through Lenis, not through the event. Lenis takes the wheel first and
+      // eases the page from its own loop, so preventing the event after it has
+      // seen it changes nothing -- which is why the section still slid away
+      // mid-chapter. Stopping it is the only thing that holds. The listeners
+      // below stay for touch, which Lenis leaves to the OS.
+      if (shouldHold !== holding) {
+        holding = shouldHold;
+        if (holding) pauseScroll();
+        else resumeScroll();
+      }
 
       if (shown !== STOPS[idx] && dt) {
+        // Re-time the walk in flight, from where it has actually reached.
+        if (boostInFlight) {
+          boostInFlight = false;
+          fromFrame = shown;
+          goneFor = 0;
+          stepSeconds = FAST_CHAPTER_MS / 1000;
+        }
         goneFor += dt;
-        // Whichever is further through the step: the clock, or the reader.
-        // The clock alone gave every step the same length however fast the
-        // page was moving, so a quick scroll met a walk going at its reading
-        // pace. The reader alone stopped the walk dead wherever they stopped.
-        // Taking the greater of the two means the scroll sets the speed while
-        // it is ahead, and the clock carries the step to its end once it is
-        // not -- so a step always finishes, and never lags behind the page.
-        const span = STOPS[idx] - fromFrame;
-        const byScroll = span === 0 ? 1 : (p - fromFrame) / span;
-        const t = Math.min(1, Math.max(goneFor / stepSeconds, byScroll));
-        // Gentle off the mark and gentle into the stop, flat in between, so the
-        // character reads as setting off and arriving rather than being dragged
-        // at one rate and cut off.
-        const eased = t < 0.5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t);
+        // The clock alone, as the reference has it. The scroll used to be
+        // allowed to overtake it -- whichever was further through the step won
+        // -- which meant a step could never actually be slow: an ordinary
+        // trackpad swipe covers more than a step's worth of runway, so the
+        // reader dragged the walk along at their own pace and the jump and the
+        // panel that opens on landing went past unread. The scroll chooses
+        // which stop is wanted; how fast the walk gets there is the clock's,
+        // and the clock is set by how hard they scrolled to ask for it.
+        const t = Math.min(1, goneFor / stepSeconds);
+        const eased = settle(t);
         shown = fromFrame + (STOPS[idx] - fromFrame) * eased;
         if (t >= 1) shown = STOPS[idx];
       }
@@ -495,6 +780,11 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     return () => {
       cancelAnimationFrame(raf);
+      window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('wheel', hold);
+      window.removeEventListener('touchmove', hold);
+      // Never leave the page unable to scroll behind us.
+      resumeScroll();
     };
   }, [data]);
 
@@ -574,7 +864,12 @@ const Pinned = styled.div`
   }
 `;
 
+/* Padding, not margin. The copy is the pinned box's first child and the box has
+   no border or padding of its own, so a top margin collapses straight out of it
+   -- the scene was charged for the lead and the title never moved. The value is
+   set by the fit above, which is the only thing that knows what is spare. */
 const Copy = styled.div`
+  padding-top: var(--solution-copy-lead, ${COPY_LEAD_MIN}px);
   margin-bottom: ${COPY_GAP}px;
 `;
 
@@ -592,6 +887,7 @@ const Stage = styled.div`
   ${fullBleed}
   overflow: hidden;
 
+
   /* Reaching the fold is done here rather than in the effect above, in the
      viewport unit that tracks the address bar sliding. The effect is throttled
      -- it has to be, resizing the pinned box under a moving finger drags the
@@ -599,7 +895,13 @@ const Stage = styled.div`
      gap that left at the bottom is where the section below showed through. */
   @media ${device.laptop} {
     ${Runway}[data-pinned='true'] & {
-      min-height: calc(100dvh - ${PIN_TOP}px - var(--solution-copy, 0px));
+      /* lvh, not dvh. dvh is the one unit that tracks the address bar, so the
+         stage grew and shrank under the scene every time the bar slid and the
+         scene was rescaled to match. lvh is the height with the bar hidden and
+         never changes, so the box is sized once for the screen. When the bar is
+         showing it overlaps the bottom of the scene, which is the ground -- the
+         part that can afford to be covered. */
+      min-height: calc(100lvh - ${PIN_TOP}px - var(--solution-copy, 0px));
     }
   }
   /* The comp is positioned by the effect above, which anchors its ground line
@@ -614,7 +916,7 @@ const Stage = styled.div`
   /* Unpinned the scene keeps the comp's own aspect; pinned, the effect sets
      an explicit height and the comp is cropped to it. The character is centred,
      so it is the empty ends of the scene that go. */
-  aspect-ratio: ${COMP_W} / ${COMP_H};
+  aspect-ratio: ${WINDOW_W} / ${COMP_H};
 
   ${Runway}[data-pinned='true'] & {
     aspect-ratio: auto;

@@ -502,10 +502,14 @@ const HeroBody = styled(ItemV)`
     font-size: 4rem;
 
     @media ${device.mobileL} {
-      /* 2.5rem wrapped "Agentic Internet." onto a fourth line; at 2rem it
-         holds together, giving the three lines the design asks for -- and it
-         matches the section headings. */
-      font-size: 2rem;
+      /* The longest line, "Agentic Internet.", is what caps this, and the cap
+         moves with the screen: at a flat 2.25rem it holds three lines on a
+         390px phone and breaks onto a fourth at 360. So it tracks the width
+         instead: 2.25rem from about 392px up, proportionally less below, and
+         floored at the 2rem it used to be so the narrowest phones are never
+         left worse off than before. Measured at 390 and 360 -- 35.9px and
+         33.1px, three lines at both. */
+      font-size: clamp(2rem, 9.2vw, 2.25rem);
 
       /* Break after "Verification" and keep "Agentic Internet." whole. The
          line break between the two source lines has to go with it -- as blocks
