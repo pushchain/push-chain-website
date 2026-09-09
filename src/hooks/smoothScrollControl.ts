@@ -31,3 +31,16 @@ export function pauseScroll() {
 export function resumeScroll() {
   if (lenis && typeof lenis.start === 'function') lenis.start();
 }
+
+/**
+ * Put the page at an exact position with no easing. Through Lenis where it is
+ * running, because it keeps its own idea of where the page is heading and a
+ * native scrollTo behind its back leaves the two disagreeing.
+ */
+export function jumpScrollTo(y) {
+  if (lenis && typeof lenis.scrollTo === 'function') {
+    lenis.scrollTo(y, { immediate: true, force: true });
+    return;
+  }
+  if (typeof window !== 'undefined') window.scrollTo(0, y);
+}

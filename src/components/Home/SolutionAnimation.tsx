@@ -8,7 +8,11 @@ import styled from 'styled-components';
 
 // Internal Configs
 import GLOBALS, { device } from '@site/src/config/globals';
-import { pauseScroll, resumeScroll } from '@site/src/hooks/smoothScrollControl';
+import {
+  pauseScroll,
+  resumeScroll,
+  jumpScrollTo,
+} from '@site/src/hooks/smoothScrollControl';
 
 /**
  * The 8-bit journey behind "Making AI universally accountable".
@@ -580,7 +584,11 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     // near that, and neither does a trackpad's inertia tail, so it only fires
     // when the reader is trying to get past the section. Passive -- the page
     // still scrolls; this only decides how fast the walk plays.
-    let rushing = false;
+    // Which way a rush is running, and whether one is running at all. A
+    // direction rather than a flag so it can be told when it has reached the
+    // end of the run and stop there.
+    let rushDir = 0;
+    let boostInFlight = false;
     let gestureFrom = -1e9;
     let gestureTravel = 0;
 
@@ -622,17 +630,27 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // scroll" of it. Cleared in the loop once the walk has caught up with
       // where the scroll is asking for, the way the reference's own sequence
       // runs itself out.
-      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX) rushing = true;
+      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX && !rushDir) {
+        rushDir = gestureTravel > 0 ? 1 : -1;
+        // Cut the chapter already in flight short as well. The trigger can only
+        // fire once enough scrolling has been seen, which takes a moment, and
+        // that moment lands inside a chapter -- so without this the first one
+        // still plays its full length and the rush only starts from the second.
+        boostInFlight = true;
+      }
     };
     window.addEventListener('wheel', onWheel, { passive: true });
     window.addEventListener('wheel', hold, { passive: false });
     window.addEventListener('touchmove', hold, { passive: false });
 
     const walkTo = (to: number) => {
+      // Direction first: idx is about to become `to`, and after that the two
+      // are equal and the comparison says nothing.
+      const withRush = rushDir !== 0 && Math.sign(to - idx) === rushDir;
       idx = to;
       fromFrame = shown;
       goneFor = 0;
-      stepSeconds = chapterSeconds(fromFrame, STOPS[to], rushing);
+      stepSeconds = chapterSeconds(fromFrame, STOPS[to], withRush);
     };
 
     let drawn = -1;
@@ -658,9 +676,25 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         if (idx < LAST && p > STOPS[idx] + COMMIT_FRAMES) want = idx + 1;
         else if (idx > 0 && p < STOPS[idx - 1] + COMMIT_FRAMES - COMMIT_HYST)
           want = idx - 1;
-        // Caught up with the scroll, so a rush has run itself out.
-        if (want === idx) rushing = false;
-        else walkTo(want);
+        // A rush runs itself to the end of the run, without waiting to be
+        // asked again. It has to: the page is held while a chapter plays and
+        // the scrolling it holds is thrown away, so one flick could only ever
+        // buy one chapter however hard it was -- which is the whole of "no
+        // matter how fast I scroll it still runs slow". Once triggered it
+        // chains its own chapters, the way the reference's sequence does, and
+        // stops at the end of the run.
+        boostInFlight = false;
+        if (rushDir > 0 && idx < LAST) walkTo(idx + 1);
+        else if (rushDir < 0 && idx > 0) walkTo(idx - 1);
+        else if (rushDir) {
+          // Arrived. Put the scroll where the animation now is, or the walk
+          // would be asked to come straight back to wherever the reader had
+          // actually reached.
+          const { top, travel } = geometry();
+          rushDir = 0;
+          // Only ever reached at one end of the run, so the stop says which.
+          jumpScrollTo(idx >= LAST ? top + travel : top);
+        } else if (want !== idx) walkTo(want);
       }
 
       // Hold the page while a chapter plays, in either direction, so the
@@ -686,6 +720,13 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       }
 
       if (shown !== STOPS[idx] && dt) {
+        // Re-time the walk in flight, from where it has actually reached.
+        if (boostInFlight) {
+          boostInFlight = false;
+          fromFrame = shown;
+          goneFor = 0;
+          stepSeconds = FAST_CHAPTER_MS / 1000;
+        }
         goneFor += dt;
         // The clock alone, as the reference has it. The scroll used to be
         // allowed to overtake it -- whichever was further through the step won
