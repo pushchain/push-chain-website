@@ -67,6 +67,22 @@ const FAST_CHAPTER_MS = 500;
 const FAST_TRIGGER_PX = 800;
 
 /**
+ * The same trigger for a finger.
+ *
+ * Touch fires no wheel event at all, so none of the above ever ran on a
+ * phone: the rush could not arm, and every chapter played its full length
+ * however hard the reader swiped. A finger is not a wheel -- it carries the
+ * page much further than itself -- so it gets its own threshold, measured in
+ * finger travel: this share of the screen crossed inside FAST_WINDOW_MS,
+ * which is a flick rather than a read. Clamped at both ends so a tall phone
+ * does not make it unreachable and a short one does not fire on an ordinary
+ * swipe.
+ */
+const FAST_TRIGGER_TOUCH_SHARE = 0.45;
+const FAST_TRIGGER_TOUCH_MIN = 260;
+const FAST_TRIGGER_TOUCH_MAX = 480;
+
+/**
  * Longest the page may be held for a single chapter. The walk always settles,
  * so this never fires in practice -- it is here so that a walk which somehow
  * did not could never leave the page unable to scroll.
@@ -602,7 +618,16 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     let shown = STOPS[idx];
     let fromFrame = shown;
-    let goneFor = 0;
+    /* Wall clock, not a count of frames.
+
+       This used to add up a per-frame delta capped at 50ms, which is right
+       only while the page renders faster than 20fps. It does not on a phone:
+       measured in the simulator, this composition draws at about 7fps, so
+       the clock took 139ms of real time to advance 50ms and every chapter
+       ran 2.8x its own length -- the first one, nominally 3s, took over 8.
+       Read off the clock instead, a slow device simply shows fewer frames of
+       a chapter rather than stretching it. */
+    let startedAt = 0;
     let stepSeconds = 0;
     // The reference's fast-scroll test, read off the wheel rather than off the
     // scroll position: 2400px of travel inside 360ms. Nothing deliberate gets
@@ -639,6 +664,30 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     const hold = (e: Event) => {
       if (holding && e.cancelable) e.preventDefault();
     };
+    /* The latch itself, shared: the wheel and the finger measure the gesture
+       in their own units and each hands in its own threshold. */
+    const arm = (threshold: number) => {
+      if (Math.abs(gestureTravel) >= threshold && !rushDir && inHold()) {
+        rushDir = gestureTravel > 0 ? 1 : -1;
+        rushWalked = false;
+        // Cut the chapter already in flight short as well. The trigger can
+        // only fire once enough of the gesture has been seen, which takes a
+        // moment, and that moment lands inside a chapter -- so without this
+        // the first one still plays its full length and the rush only starts
+        // from the second.
+        boostInFlight = true;
+      }
+    };
+
+    const touchTrigger = () =>
+      Math.max(
+        FAST_TRIGGER_TOUCH_MIN,
+        Math.min(
+          FAST_TRIGGER_TOUCH_MAX,
+          stableViewportH() * FAST_TRIGGER_TOUCH_SHARE
+        )
+      );
+
     const onWheel = (e: WheelEvent) => {
       const now = performance.now();
       if (now - gestureFrom > FAST_WINDOW_MS) {
@@ -661,18 +710,37 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // and a rush ends by putting the scroll where the animation is, which
       // dragged a reader who had long since scrolled past the section back
       // into it, in either direction.
-      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX && !rushDir && inHold()) {
-        rushDir = gestureTravel > 0 ? 1 : -1;
-        rushWalked = false;
-        // Cut the chapter already in flight short as well. The trigger can only
-        // fire once enough scrolling has been seen, which takes a moment, and
-        // that moment lands inside a chapter -- so without this the first one
-        // still plays its full length and the rush only starts from the second.
-        boostInFlight = true;
-      }
+      arm(FAST_TRIGGER_PX);
     };
+
+    /* A finger, measured the same way. The page runs opposite to the hand,
+       so the travel is negated to keep the sign meaning what it does for a
+       wheel: positive is further down the page. */
+    let fingerY = 0;
+    const onTouchStart = (e: TouchEvent) => {
+      const t = e.touches[0];
+      if (!t) return;
+      fingerY = t.clientY;
+      gestureFrom = performance.now();
+      gestureTravel = 0;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      const t = e.touches[0];
+      if (!t) return;
+      const now = performance.now();
+      if (now - gestureFrom > FAST_WINDOW_MS) {
+        gestureFrom = now;
+        gestureTravel = 0;
+      }
+      gestureTravel += fingerY - t.clientY;
+      fingerY = t.clientY;
+      arm(touchTrigger());
+    };
+
     window.addEventListener('wheel', onWheel, { passive: true });
     window.addEventListener('wheel', hold, { passive: false });
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
     window.addEventListener('touchmove', hold, { passive: false });
 
     const walkTo = (to: number) => {
@@ -681,17 +749,14 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const withRush = rushDir !== 0 && Math.sign(to - idx) === rushDir;
       idx = to;
       fromFrame = shown;
-      goneFor = 0;
+      // Started on the next tick, off that tick's clock.
+      startedAt = 0;
       stepSeconds = chapterSeconds(fromFrame, STOPS[to], withRush);
     };
 
     let drawn = -1;
-    let prevAt = 0;
 
     const tick = (now: number) => {
-      const dt = prevAt ? Math.min(0.05, (now - prevAt) / 1000) : 0;
-      prevAt = now;
-
       const p = frameFor();
       const landed = shown === STOPS[idx];
 
@@ -772,15 +837,15 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         else resumeScroll();
       }
 
-      if (shown !== STOPS[idx] && dt) {
+      if (shown !== STOPS[idx]) {
         // Re-time the walk in flight, from where it has actually reached.
         if (boostInFlight) {
           boostInFlight = false;
           fromFrame = shown;
-          goneFor = 0;
+          startedAt = now;
           stepSeconds = FAST_CHAPTER_MS / 1000;
         }
-        goneFor += dt;
+        if (!startedAt) startedAt = now;
         // The clock alone, as the reference has it. The scroll used to be
         // allowed to overtake it -- whichever was further through the step won
         // -- which meant a step could never actually be slow: an ordinary
@@ -789,7 +854,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // panel that opens on landing went past unread. The scroll chooses
         // which stop is wanted; how fast the walk gets there is the clock's,
         // and the clock is set by how hard they scrolled to ask for it.
-        const t = Math.min(1, goneFor / stepSeconds);
+        const t = Math.min(1, (now - startedAt) / (stepSeconds * 1000));
         const eased = settle(t);
         shown = fromFrame + (STOPS[idx] - fromFrame) * eased;
         if (t >= 1) shown = STOPS[idx];
@@ -810,6 +875,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       cancelAnimationFrame(raf);
       window.removeEventListener('wheel', onWheel);
       window.removeEventListener('wheel', hold);
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
       window.removeEventListener('touchmove', hold);
       // Never leave the page unable to scroll behind us.
       resumeScroll();
