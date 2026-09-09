@@ -37,16 +37,43 @@ const STOPS = [0, 90, 200, 280, 378, 540];
 const STEP_SCROLL = 400;
 
 /**
- * How fast a step is walked, in animation frames a second, and the shortest and
- * longest one may take. Paced by frame count rather than a flat duration so the
- * character keeps one speed throughout: the last stop is nearly twice the walk
- * of the third, and giving them the same duration ran it at nearly twice the
- * pace. The ceiling is what keeps a fast scroll fast -- several stops at once
- * are walked in one motion rather than one after another.
+ * How long a step takes, from the reference's own driver.
+ *
+ * Not a rate: each gap is timed in its own right, because two of them are
+ * deliberately stretched past their real duration. Gap 1 is Universal Rules
+ * pulling itself apart, 3.67s of animation held for 7.34s; gap 4 is the flight
+ * to the end, 5.40s held for 7.40s so the levitation has room to read. The rest
+ * run at their true 30fps length, capped so no single step outstays its
+ * welcome. `null` means automatic.
  */
-const STEP_FPS = 100;
-const STEP_MIN_SECONDS = 0.45;
-const STEP_MAX_SECONDS = 1.7;
+const SPAN_MS = [null, 7340, null, null, 7400];
+const MAX_MS = 6000;
+const PLAYBACK = 1.0;
+
+/**
+ * Skipping. A step called for within FAST_WINDOW of the last one is part of a
+ * burst -- the reader is moving through rather than watching -- and every step
+ * in that burst is capped to FAST_MS. It does not accelerate further, and it
+ * does not reset just because one step happened to finish first.
+ */
+const FAST_MS = 1000;
+const FAST_WINDOW = 1500;
+
+/** The reference's own curve: quick away from the stop, settling into the next. */
+const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+/**
+ * The duration for a step, in seconds. `gap` is the index of the gap being
+ * crossed, which is the lower of the two stop indices.
+ */
+const spanSeconds = (gap, fromFrame, toFrame, bursting) => {
+  const override = SPAN_MS[gap];
+  const natural =
+    override != null
+      ? override
+      : Math.min(MAX_MS, (Math.abs(toFrame - fromFrame) / 30) * 1000) / PLAYBACK;
+  return (bursting ? Math.min(natural, FAST_MS) : natural) / 1000;
+};
 
 /**
  * How far past a stop the scroll has to reach, in animation frames, before the
@@ -74,6 +101,24 @@ const HOLD_TAIL = 120;
 
 /** Gap between the copy and the scene. Every pixel here comes off the scene. */
 const COPY_GAP = 24;
+
+/**
+ * How far the copy is dropped from the top of the pinned box.
+ *
+ * The composition draws nothing in its top CONTENT_TOP of height, so on a
+ * desktop there is nearly a third of a screen of empty scene above the cards
+ * and the copy, pinned to the very top, sat a long way above anything with a
+ * band of black between. Dropping it by this much puts the title into that
+ * band rather than against the header, which is what "almost centred" amounts
+ * to while the scene keeps the bottom two thirds.
+ *
+ * Below laptop the scene is scaled up until it fills the height and that band
+ * closes, so there is nothing to drop into; the lead there is only what it
+ * takes to clear the floating navbar the title was sitting under.
+ */
+const COPY_LEAD = 160;
+const COPY_LEAD_TABLET = 56;
+const COPY_LEAD_MOBILE = 32;
 
 /**
  * Below this the scene is too short to read anything but the character, so the
@@ -111,8 +156,32 @@ const sceneScaleFor = (availableH, stageW) => {
 };
 
 /** The composition's own size. The wider export needs no scaling to fill. */
-const COMP_W = 1920;
+/**
+ * The viewport height with the browser's chrome hidden -- what CSS calls lvh.
+ * `innerHeight` is the dynamic one: on a phone it changes by the height of the
+ * address bar as it slides, and sizing the scene off it is what made the scene
+ * resize mid-scroll. Read from a probe rather than guessed, and only when the
+ * screen itself changes, so a step is always drawn at the size the one before
+ * it was.
+ */
+const stableViewportH = () => {
+  if (typeof document === 'undefined') return 0;
+  const probe = document.createElement('div');
+  probe.style.cssText =
+    'position:fixed;top:0;left:0;width:0;height:100lvh;visibility:hidden;pointer-events:none';
+  document.body.appendChild(probe);
+  const h = probe.offsetHeight;
+  probe.remove();
+  return h || window.innerHeight;
+};
+
+const COMP_W = 1440;
 const COMP_H = 849;
+
+/* How much larger than its window the composition is drawn, from the
+   reference. The scene is framed with room around it, and at 1.0 that room
+   reads as the character standing in an empty field; 1.3 crops into it. */
+const ZOOM = 1.3;
 
 /**
  * The composition's own landmarks, as fractions of its height, measured off a
@@ -140,7 +209,12 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const [data, setData] = useState<object | null>(null);
   const [failed, setFailed] = useState(false);
-  const dataUrl = useBaseUrl('/assets/website/home/solution/push-8bit.json');
+  /* The 1440-wide cut. Same artwork as the 1920 one -- the two files differ in
+     exactly one number -- but framed so the scene reads without a camera track
+     to slide it, which is what the reference does. */
+  const dataUrl = useBaseUrl(
+    '/assets/website/home/solution/push-8bit-1440.json'
+  );
 
   // 3MB of shape data, so it is fetched rather than bundled — it is served
   // gzipped at about 83KB and stays out of the JS chunk entirely. The transfer
@@ -216,8 +290,10 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // exactly what is left. Letting the copy scroll out of the pin instead
       // did get the scene running on a phone, but it pushed the title off the
       // top of the screen while the animation played.
+      // offsetHeight already includes the lead, which is padding on the copy;
+      // only the gap below it is separate.
       const copyH = copyEl.offsetHeight;
-      const available = window.innerHeight - PIN_TOP - copyH - COPY_GAP;
+      const available = stableViewportH() - PIN_TOP - copyH - COPY_GAP;
 
       // The scene is scaled to whatever that leaves rather than needing a fixed
       // slab of it, so the floor is only what the scene needs to stay legible.
@@ -336,21 +412,14 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     // finger drags the scroll position and reads as the page jumping. Only a
     // width change, or a height change too large to be browser chrome, counts.
     let lastW = window.innerWidth;
-    let lastH = window.innerHeight;
+    let lastH = stableViewportH();
     const onResize = () => {
       const w = window.innerWidth;
-      const h = window.innerHeight;
-      // Below laptop the pinned box, the stage and the runway are all sized by
-      // the stylesheet, so a refit only rescales the scene inside them and
-      // cannot move the scroll. The guard is needed where the effect still sets
-      // heights itself; holding it everywhere is what left the scene scaled for
-      // the screen the bar was covering.
-      const sceneOnly =
-        typeof window.matchMedia === 'function' &&
-        window.matchMedia(device.laptop).matches;
-      const changed =
-        w !== lastW ||
-        (sceneOnly ? h !== lastH : Math.abs(h - lastH) > VIEWPORT_NOISE);
+      // The stable height, so the address bar sliding is not a resize at all.
+      // Compared against innerHeight this fired on every slide, and refitting
+      // mid-scroll is what made the scene change size under the reader.
+      const h = stableViewportH();
+      const changed = w !== lastW || Math.abs(h - lastH) > VIEWPORT_NOISE;
       lastW = w;
       lastH = h;
       if (changed) fit();
@@ -429,15 +498,21 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     let fromFrame = shown;
     let goneFor = 0;
     let stepSeconds = 0;
+    let lastCalledAt = -1e9;
 
     const walkTo = (to: number) => {
+      const now = performance.now();
+      // A step called for close behind the last one means the reader is moving
+      // through rather than watching, and the whole burst runs short.
+      const bursting = now - lastCalledAt < FAST_WINDOW;
+      lastCalledAt = now;
+      // The gap being crossed is the lower of the two stop indices, so a step
+      // is timed the same whichever way it is walked.
+      const gap = Math.min(idx, to);
       idx = to;
       fromFrame = shown;
       goneFor = 0;
-      stepSeconds = Math.max(
-        STEP_MIN_SECONDS,
-        Math.min(STEP_MAX_SECONDS, Math.abs(STOPS[to] - shown) / STEP_FPS)
-      );
+      stepSeconds = spanSeconds(gap, fromFrame, STOPS[to], bursting);
     };
 
     let drawn = -1;
@@ -477,7 +552,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // Gentle off the mark and gentle into the stop, flat in between, so the
         // character reads as setting off and arriving rather than being dragged
         // at one rate and cut off.
-        const eased = t < 0.5 ? 2 * t * t : 1 - 2 * (1 - t) * (1 - t);
+        const eased = easeOutCubic(t);
         shown = fromFrame + (STOPS[idx] - fromFrame) * eased;
         if (t >= 1) shown = STOPS[idx];
       }
@@ -575,7 +650,19 @@ const Pinned = styled.div`
 `;
 
 const Copy = styled.div`
+  /* Padding, not margin. The copy is the pinned box's first child and the box
+     has no border or padding of its own, so a top margin collapses straight out
+     of it -- the scene was charged for the lead and the title never moved. */
+  padding-top: ${COPY_LEAD}px;
   margin-bottom: ${COPY_GAP}px;
+
+  @media ${device.laptop} {
+    padding-top: ${COPY_LEAD_TABLET}px;
+  }
+
+  @media ${device.mobileL} {
+    padding-top: ${COPY_LEAD_MOBILE}px;
+  }
 `;
 
 /* Full-bleed out of the page's max-width column. Done with left/margin rather
@@ -599,7 +686,13 @@ const Stage = styled.div`
      gap that left at the bottom is where the section below showed through. */
   @media ${device.laptop} {
     ${Runway}[data-pinned='true'] & {
-      min-height: calc(100dvh - ${PIN_TOP}px - var(--solution-copy, 0px));
+      /* lvh, not dvh. dvh is the one unit that tracks the address bar, so the
+         stage grew and shrank under the scene every time the bar slid and the
+         scene was rescaled to match. lvh is the height with the bar hidden and
+         never changes, so the box is sized once for the screen. When the bar is
+         showing it overlaps the bottom of the scene, which is the ground -- the
+         part that can afford to be covered. */
+      min-height: calc(100lvh - ${PIN_TOP}px - var(--solution-copy, 0px));
     }
   }
   /* The comp is positioned by the effect above, which anchors its ground line
