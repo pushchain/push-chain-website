@@ -49,8 +49,14 @@ const GROUND_TILE_FIT = 39.8 / 63.2;
 const VISUAL_HEIGHT = 726; // image 32 — the slot for the incoming animation
 const PINK_CARD_TOP = 177;
 const BODY_TOP = 743; // Frame 37246
-const ROW_ONE_HEIGHT = 400;
-const ROW_TWO_HEIGHT = 330;
+/* The card heights, off the file: Frame 37242's three cards are 488 and Frame
+   37243's two are 401, over a 24px gap. They were 400 and 330 here, which left
+   the grid 792 tall against the design's 930 -- and since the plate's light
+   peak is pinned below the visual while its dark is pinned after the cards, a
+   short grid squeezes the descent between them and leaves the whole card area
+   sitting brighter than the design's. */
+const ROW_ONE_HEIGHT = 488;
+const ROW_TWO_HEIGHT = 401;
 
 /* Rectangle 42282, read off the file (node 49243:16601 in Push Design
    Foundations). Its fill is a vertical linear gradient whose four stops sit at
