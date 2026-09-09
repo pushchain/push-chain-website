@@ -57,7 +57,14 @@ const FAST_CHAPTER_MS = 500;
  * reference asks for 2400px of wheel inside 0.36s, which no ordinary gesture
  * or trackpad tail reaches.
  */
-const FAST_TRIGGER_PX = 2400;
+const FAST_TRIGGER_PX = 1600;
+
+/**
+ * Longest the page may be held for a single chapter. The walk always settles,
+ * so this never fires in practice -- it is here so that a walk which somehow
+ * did not could never leave the page unable to scroll.
+ */
+const HOLD_CEILING_MS = 9000;
 const FAST_WINDOW_MS = 360;
 
 /** Settle softness as the reference applies it. At 1.0 this is the identity. */
@@ -575,6 +582,28 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     let rushing = false;
     let gestureFrom = -1e9;
     let gestureTravel = 0;
+
+    // Set by the loop below: true while a chapter is part way through and the
+    // section is in the stretch it holds for.
+    let holding = false;
+    let heldSince = 0;
+
+    /* Whether the scroll is inside the section's hold. Outside it the page is
+       left alone -- holding above or below the section would stop the reader
+       leaving a page they are not even looking at. */
+    const inHold = () => {
+      const { top, travel } = geometry();
+      const y = window.scrollY;
+      return y >= top - 2 && y <= top + travel + 2;
+    };
+
+    /* The hold itself. Non-passive, because preventing the scroll is the whole
+       point: while a chapter plays the wheel and the finger move nothing, so
+       the section cannot leave part way through a walk -- going forwards or
+       back. Momentum left over after a chapter lands simply resumes. */
+    const hold = (e: Event) => {
+      if (holding && e.cancelable) e.preventDefault();
+    };
     const onWheel = (e: WheelEvent) => {
       const now = performance.now();
       if (now - gestureFrom > FAST_WINDOW_MS) {
@@ -589,6 +618,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX) rushing = true;
     };
     window.addEventListener('wheel', onWheel, { passive: true });
+    window.addEventListener('wheel', hold, { passive: false });
+    window.addEventListener('touchmove', hold, { passive: false });
 
     const walkTo = (to: number) => {
       idx = to;
@@ -604,20 +635,34 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const dt = prevAt ? Math.min(0.05, (now - prevAt) / 1000) : 0;
       prevAt = now;
 
-      // Settled in one pass. Advancing a stop per frame instead restarted the
-      // step on each of them, so a scroll that had already reached the third
-      // stop left the character creeping a frame at a time near the first.
       const p = frameFor();
-      // Both tests hang off the same line -- the one the scroll crossed to ask
-      // for this stop -- so they cannot disagree. Hung off the stop itself
-      // instead, the last stop was asked for and taken back on alternate
-      // frames, because the scroll was past the line that called for it and
-      // short of the stop it called for.
-      let want = idx;
-      while (want < LAST && p > STOPS[want] + COMMIT_FRAMES) want += 1;
-      while (want > 0 && p < STOPS[want - 1] + COMMIT_FRAMES - COMMIT_HYST)
-        want -= 1;
-      if (want !== idx) walkTo(want);
+      const landed = shown === STOPS[idx];
+
+      // One chapter at a time, and only once the one before it has landed.
+      // Resolving straight to the furthest stop the scroll had reached walked
+      // the character there in a single motion, so a quick scroll skipped every
+      // chapter in between rather than playing them. Both tests hang off the
+      // line the scroll crossed to ask for the move, not off the stop itself:
+      // hung off the stop, the last one was asked for and taken back on
+      // alternate frames, because the scroll sat past the line that called for
+      // it and short of the stop it called for.
+      if (landed) {
+        let want = idx;
+        if (idx < LAST && p > STOPS[idx] + COMMIT_FRAMES) want = idx + 1;
+        else if (idx > 0 && p < STOPS[idx - 1] + COMMIT_FRAMES - COMMIT_HYST)
+          want = idx - 1;
+        if (want !== idx) walkTo(want);
+      }
+
+      // Hold the page while a chapter plays, in either direction, so the
+      // section cannot scroll away part way through one. Released the moment it
+      // lands, so the next scroll moves on normally.
+      holding = !landed && inHold();
+      if (!holding) heldSince = 0;
+      else if (!heldSince) heldSince = now;
+      // Never hold longer than a chapter could honestly take. Without this a
+      // walk that failed to settle would leave the page stuck for good.
+      if (heldSince && now - heldSince > HOLD_CEILING_MS) holding = false;
 
       if (shown !== STOPS[idx] && dt) {
         goneFor += dt;
@@ -649,6 +694,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('wheel', hold);
+      window.removeEventListener('touchmove', hold);
     };
   }, [data]);
 
