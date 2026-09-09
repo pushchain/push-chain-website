@@ -51,28 +51,39 @@ const MAX_MS = 6000;
 const PLAYBACK = 1.0;
 
 /**
- * Skipping. A step called for within FAST_WINDOW of the last one is part of a
- * burst -- the reader is moving through rather than watching -- and every step
- * in that burst is capped to FAST_MS. It does not accelerate further, and it
- * does not reset just because one step happened to finish first.
+ * Three speeds, picked by how hard the reader is scrolling.
+ *
+ * Deliberate is the default and the slowest: the reference's own duration
+ * stretched by DELIBERATE, because at its native pace the jump and the panel
+ * that opens on landing go by before either can be read. A step called for
+ * within HURRY_WINDOW of the last one is someone moving through rather than
+ * watching, and runs at the reference's own pace. One called for within
+ * SKIP_WINDOW is someone leaving, and is cut to SKIP_MS so the section lets go
+ * quickly.
  */
-const FAST_MS = 1000;
-const FAST_WINDOW = 1500;
+const DELIBERATE = 1.6;
+const HURRY_WINDOW = 900;
+const SKIP_WINDOW = 260;
+const SKIP_MS = 700;
 
 /** The reference's own curve: quick away from the stop, settling into the next. */
 const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
 /**
  * The duration for a step, in seconds. `gap` is the index of the gap being
- * crossed, which is the lower of the two stop indices.
+ * crossed, which is the lower of the two stop indices; `since` is how long ago
+ * the previous step was called for, which is the only reading of scroll speed
+ * available at the moment a step starts.
  */
-const spanSeconds = (gap, fromFrame, toFrame, bursting) => {
+const spanSeconds = (gap, fromFrame, toFrame, since) => {
   const override = SPAN_MS[gap];
   const natural =
     override != null
       ? override
       : Math.min(MAX_MS, (Math.abs(toFrame - fromFrame) / 30) * 1000) / PLAYBACK;
-  return (bursting ? Math.min(natural, FAST_MS) : natural) / 1000;
+  if (since < SKIP_WINDOW) return SKIP_MS / 1000;
+  if (since < HURRY_WINDOW) return natural / 1000;
+  return (natural * DELIBERATE) / 1000;
 };
 
 /**
@@ -103,22 +114,24 @@ const HOLD_TAIL = 120;
 const COPY_GAP = 24;
 
 /**
- * How far the copy is dropped from the top of the pinned box.
+ * How the room above the scene is split between the header and the copy.
  *
- * The composition draws nothing in its top CONTENT_TOP of height, so on a
- * desktop there is nearly a third of a screen of empty scene above the cards
- * and the copy, pinned to the very top, sat a long way above anything with a
- * band of black between. Dropping it by this much puts the title into that
- * band rather than against the header, which is what "almost centred" amounts
- * to while the scene keeps the bottom two thirds.
- *
- * Below laptop the scene is scaled up until it fills the height and that band
- * closes, so there is nothing to drop into; the lead there is only what it
- * takes to clear the floating navbar the title was sitting under.
+ * Not a fixed drop and not dead centre. The scene is sized to its own content
+ * band, so on a tall screen there is height left over and on a short one there
+ * is almost none -- the lead has to be a share of whatever is spare rather than
+ * a number, or a big screen leaves the title stranded at the top and a laptop
+ * has it sitting on the cards. This much of the spare goes above the title and
+ * the rest stays as the gap down to the scene, which is what keeps the title
+ * clear of the animation at every size.
  */
-const COPY_LEAD = 160;
-const COPY_LEAD_TABLET = 56;
-const COPY_LEAD_MOBILE = 32;
+const COPY_LEAD_SHARE = 0.55;
+
+/** Never less than this above the title, so it clears the floating navbar. */
+const COPY_LEAD_MIN = 24;
+
+/** Nor more than this, so the title does not drift into the middle of a very
+    tall window and leave the scene marooned at the bottom. */
+const COPY_LEAD_MAX = 240;
 
 /**
  * Below this the scene is too short to read anything but the character, so the
@@ -146,13 +159,27 @@ const VIEWPORT_NOISE = 120;
    its ground line sits exactly GROUND_SHOW_MAX above the stage's bottom, or the
    offset below comes out positive, the stage gives that height back, and the
    section underneath shows through the difference. */
-const sceneScaleFor = (availableH, stageW) => {
-  const withCappedFloor = (availableH - GROUND_SHOW_MAX) / GROUND_LINE;
-  const fillH =
-    withCappedFloor * (1 - GROUND_LINE) >= GROUND_SHOW_MAX
-      ? withCappedFloor
-      : availableH;
-  return Math.max(1, (fillH * COMP_W) / COMP_H / stageW);
+/**
+ * The height the scene wants: its content band drawn as large as the page's
+ * width allows, or as large as the room allows, whichever is smaller. Used to
+ * work out what is spare above it before the copy is laid out.
+ */
+const sceneBandFor = (roomH, stageW) => {
+  const byWidth = (stageW * COMP_H) / COMP_W;
+  const wanted = Math.min(byWidth, sceneHeightFor(roomH));
+  return wanted * (GROUND_LINE - CONTENT_TOP) + GROUND_SHOW_MIN;
+};
+
+const sceneHeightFor = (availableH) => {
+  // Tallest the comp can be drawn and still keep GROUND_SHOW_MAX of floor
+  // under the character.
+  const withCappedFloor =
+    (availableH - GROUND_SHOW_MAX) / (GROUND_LINE - CONTENT_TOP);
+  // If that leaves more floor than the comp actually draws, the floor is the
+  // limit instead and the comp is as tall as the band allows.
+  return withCappedFloor * (1 - GROUND_LINE) >= GROUND_SHOW_MAX
+    ? withCappedFloor
+    : availableH / (1 - CONTENT_TOP);
 };
 
 /** The composition's own size. The wider export needs no scaling to fill. */
@@ -184,13 +211,22 @@ const COMP_H = 849;
 const ZOOM = 1.3;
 
 /**
- * The composition's own landmarks, as fractions of its height, measured off a
- * natural-aspect render: the step cards begin at 179 of 669 and the ground line
- * falls at 504. Everything between them — cards, character, ground — is what
- * has to stay in frame.
+ * The composition's own landmarks, as fractions of its height.
+ *
+ * Measured on this file rather than carried over: the 1440 cut was stepped
+ * through all six stops at 1:1 and the ink bounds read off each. The stops do
+ * not agree about the top -- 0.425 at the first, 0.293 in the middle, 0.421 at
+ * the last -- because what reaches highest is the allow-list panel that opens
+ * out of Universal Rules at stop 1, at 0.205. That is the one that has to fit,
+ * so CONTENT_TOP is the union and not any single frame; the previous 0.268 was
+ * measured off a frame that does not have the panel open, which is exactly the
+ * thing that was being cut off the top.
+ *
+ * The floor is the first row that is more than half ink, at 711 of 849, and the
+ * comp draws 138px of ground below it.
  */
-const CONTENT_TOP = 0.268;
-const GROUND_LINE = 0.753;
+const CONTENT_TOP = 0.2049;
+const GROUND_LINE = 0.8375;
 
 /**
  * Ground kept below the ground line. It is the part that gives first: the
@@ -290,9 +326,23 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // exactly what is left. Letting the copy scroll out of the pin instead
       // did get the scene running on a phone, but it pushed the title off the
       // top of the screen while the animation played.
-      // offsetHeight already includes the lead, which is padding on the copy;
-      // only the gap below it is separate.
-      const copyH = copyEl.offsetHeight;
+      // Measure the copy without any lead first -- the lead is what is being
+      // solved for, so leaving last pass's value on it would compound.
+      copyEl.style.setProperty('--solution-copy-lead', '0px');
+      const textH = copyEl.offsetHeight;
+
+      const room = stableViewportH() - PIN_TOP - textH - COPY_GAP;
+
+      // What the scene needs for its whole content band at the page's width,
+      // and so what is left over to divide between the header and the title.
+      const needs = sceneBandFor(room, stage.offsetWidth);
+      const spare = Math.max(0, room - needs);
+      const lead = Math.round(
+        Math.min(COPY_LEAD_MAX, Math.max(COPY_LEAD_MIN, spare * COPY_LEAD_SHARE))
+      );
+      copyEl.style.setProperty('--solution-copy-lead', `${lead}px`);
+
+      const copyH = textH + lead;
       const available = stableViewportH() - PIN_TOP - copyH - COPY_GAP;
 
       // The scene is scaled to whatever that leaves rather than needing a fixed
@@ -324,18 +374,28 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         pinned && !fillsHeight ? `${Math.round(available)}px` : '';
       const stageBox = pinned ? stage.offsetHeight : available;
 
-      // Slide the comp so its ground line lands just above the stage's bottom
-      // edge. Centring it — which is what a plain `slice` does — cut the
-      // character in half on a short viewport.
-      const sceneScale = fillsHeight
-        ? sceneScaleFor(stageBox, stage.offsetWidth)
-        : 1;
+      // Declared out here: the ground strip below this section is drawn at
+      // whatever scale the scene ended up at, and that is published after the
+      // block closes.
+      let sceneScale = 1;
 
       const host = stage.firstElementChild as HTMLElement | null;
       if (host) {
         const stageW = stage.offsetWidth;
-        const renderW = stageW * sceneScale;
+
+        // Height first, at every width. The scene used to be drawn at the full
+        // width of the page and cropped to whatever height was left, which on a
+        // wide screen made it enormous -- the comp came out 891px tall in a
+        // 510px box, so the panel that opens above Universal Rules was cut off
+        // the top and most of the floor off the bottom. Sized to the band
+        // instead and the whole thing is always in frame; the width follows,
+        // and only narrows past the page when the height demands it.
+        const wantH = sceneHeightFor(stageBox);
+        const renderW = Math.min(stageW, (wantH * COMP_W) / COMP_H);
+        // One height, derived from the width that survived the cap, so the
+        // comp always keeps its aspect.
         const renderH = (renderW * COMP_H) / COMP_W;
+        sceneScale = renderW / stageW;
         const stageH = stage.offsetHeight;
 
         // Deepest the scene can sit before the cards start leaving the top.
@@ -372,6 +432,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         host.style.width = `${Math.round(renderW)}px`;
         host.style.height = `${Math.round(renderH)}px`;
         host.style.left = `${Math.round((stageW - renderW) / 2)}px`;
+
+        // The floor's position and the scene's drawn width, so the strip that
+        // fills the page either side of the scene can line up with it. The
+        // scene is no longer as wide as the page -- it is sized to its own
+        // content band -- so without this the checkerboard stopped at the
+        // scene's edges and left black down both sides.
+        stage.style.setProperty(
+          '--scene-floor',
+          `${Math.round(stageH - groundShow)}px`
+        );
+        stage.style.setProperty('--scene-render-w', `${Math.round(renderW)}px`);
 
         // Held against the stage's floor rather than measured down from its
         // top, so the scene stays on the fold when the stage grows underneath
@@ -502,9 +573,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
     const walkTo = (to: number) => {
       const now = performance.now();
-      // A step called for close behind the last one means the reader is moving
-      // through rather than watching, and the whole burst runs short.
-      const bursting = now - lastCalledAt < FAST_WINDOW;
+      const since = now - lastCalledAt;
       lastCalledAt = now;
       // The gap being crossed is the lower of the two stop indices, so a step
       // is timed the same whichever way it is walked.
@@ -512,7 +581,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       idx = to;
       fromFrame = shown;
       goneFor = 0;
-      stepSeconds = spanSeconds(gap, fromFrame, STOPS[to], bursting);
+      stepSeconds = spanSeconds(gap, fromFrame, STOPS[to], since);
     };
 
     let drawn = -1;
@@ -539,19 +608,15 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
       if (shown !== STOPS[idx] && dt) {
         goneFor += dt;
-        // Whichever is further through the step: the clock, or the reader.
-        // The clock alone gave every step the same length however fast the
-        // page was moving, so a quick scroll met a walk going at its reading
-        // pace. The reader alone stopped the walk dead wherever they stopped.
-        // Taking the greater of the two means the scroll sets the speed while
-        // it is ahead, and the clock carries the step to its end once it is
-        // not -- so a step always finishes, and never lags behind the page.
-        const span = STOPS[idx] - fromFrame;
-        const byScroll = span === 0 ? 1 : (p - fromFrame) / span;
-        const t = Math.min(1, Math.max(goneFor / stepSeconds, byScroll));
-        // Gentle off the mark and gentle into the stop, flat in between, so the
-        // character reads as setting off and arriving rather than being dragged
-        // at one rate and cut off.
+        // The clock alone, as the reference has it. The scroll used to be
+        // allowed to overtake it -- whichever was further through the step won
+        // -- which meant a step could never actually be slow: an ordinary
+        // trackpad swipe covers more than a step's worth of runway, so the
+        // reader dragged the walk along at their own pace and the jump and the
+        // panel that opens on landing went past unread. The scroll chooses
+        // which stop is wanted; how fast the walk gets there is the clock's,
+        // and the clock is set by how hard they scrolled to ask for it.
+        const t = Math.min(1, goneFor / stepSeconds);
         const eased = easeOutCubic(t);
         shown = fromFrame + (STOPS[idx] - fromFrame) * eased;
         if (t >= 1) shown = STOPS[idx];
@@ -649,20 +714,13 @@ const Pinned = styled.div`
   }
 `;
 
+/* Padding, not margin. The copy is the pinned box's first child and the box has
+   no border or padding of its own, so a top margin collapses straight out of it
+   -- the scene was charged for the lead and the title never moved. The value is
+   set by the fit above, which is the only thing that knows what is spare. */
 const Copy = styled.div`
-  /* Padding, not margin. The copy is the pinned box's first child and the box
-     has no border or padding of its own, so a top margin collapses straight out
-     of it -- the scene was charged for the lead and the title never moved. */
-  padding-top: ${COPY_LEAD}px;
+  padding-top: var(--solution-copy-lead, ${COPY_LEAD_MIN}px);
   margin-bottom: ${COPY_GAP}px;
-
-  @media ${device.laptop} {
-    padding-top: ${COPY_LEAD_TABLET}px;
-  }
-
-  @media ${device.mobileL} {
-    padding-top: ${COPY_LEAD_MOBILE}px;
-  }
 `;
 
 /* Full-bleed out of the page's max-width column. Done with left/margin rather
@@ -678,6 +736,7 @@ const fullBleed = `
 const Stage = styled.div`
   ${fullBleed}
   overflow: hidden;
+
 
   /* Reaching the fold is done here rather than in the effect above, in the
      viewport unit that tracks the address bar sliding. The effect is throttled
