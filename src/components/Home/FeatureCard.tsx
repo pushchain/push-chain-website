@@ -42,7 +42,7 @@ export default function FeatureCard({ item }) {
   }
 
   return (
-    <BorderedCard>
+    <BorderedCard $wide={item.imageWide}>
       {item.image && (
         <CardFigure
           src={imageUrl}
@@ -87,8 +87,20 @@ const BorderedCard = styled.div`
       border-box;
   border: 1px solid transparent;
   border-radius: 24px;
-  padding: 24px;
+  /* The row gives the three narrow cards a fixed floor taken from the design,
+     and their content falls about 100px short of it -- all of which sat under
+     the description as dead card. Most of it moves above the mark instead,
+     which is where the design carries its air, and what stays below still
+     reads as the card's own padding rather than as a gap. The wide pair sits
+     close enough to its own floor not to need it. */
+  padding: ${(props) => (props.$wide ? '24px' : '80px 24px 24px')};
   box-sizing: border-box;
+
+  /* Stacked, the cards are only as tall as their content and there is no
+     slack to move -- the extra would just be a hole above the mark. */
+  @media ${device.laptop} {
+    padding: 24px;
+  }
 `;
 
 // The narrow cards carry a square mark centred over the copy; the two wide
