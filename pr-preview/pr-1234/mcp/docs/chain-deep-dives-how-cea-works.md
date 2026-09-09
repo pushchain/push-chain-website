@@ -2,7 +2,7 @@
 title: "How Chain Executor Account (CEA) Works"
 url: "https://pushchain.github.io/docs/chain/deep-dives/how-cea-works/"
 section: "deep-dives"
-lastUpdated: "2026-09-09T14:55:34Z"
+lastUpdated: "2026-09-09T17:35:50Z"
 description: "How Chain Executor Account (CEA) Works | Deep Dives | Push Chain Docs"
 ---
 
