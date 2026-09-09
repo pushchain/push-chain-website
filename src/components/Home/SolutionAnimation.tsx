@@ -613,6 +613,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     // direction rather than a flag so it can be told when it has reached the
     // end of the run and stop there.
     let rushDir = 0;
+    let rushWalked = false;
     let boostInFlight = false;
     let gestureFrom = -1e9;
     let gestureTravel = 0;
@@ -655,8 +656,14 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // scroll" of it. Cleared in the loop once the walk has caught up with
       // where the scroll is asking for, the way the reference's own sequence
       // runs itself out.
-      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX && !rushDir) {
+      // Only while the section is the one being read. The listener is on the
+      // window, so a hard flick anywhere on the page used to latch a rush --
+      // and a rush ends by putting the scroll where the animation is, which
+      // dragged a reader who had long since scrolled past the section back
+      // into it, in either direction.
+      if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX && !rushDir && inHold()) {
         rushDir = gestureTravel > 0 ? 1 : -1;
+        rushWalked = false;
         // Cut the chapter already in flight short as well. The trigger can only
         // fire once enough scrolling has been seen, which takes a moment, and
         // that moment lands inside a chapter -- so without this the first one
@@ -688,6 +695,16 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const p = frameFor();
       const landed = shown === STOPS[idx];
 
+      // A rush belongs to the section. If the scroll has left it, drop the
+      // rush rather than run it out -- finishing it would end in a jump back
+      // to the section the reader has already left.
+      const active = inHold();
+      if (!active && rushDir) {
+        rushDir = 0;
+        rushWalked = false;
+        boostInFlight = false;
+      }
+
       // One chapter at a time, and only once the one before it has landed.
       // Resolving straight to the furthest stop the scroll had reached walked
       // the character there in a single motion, so a quick scroll skipped every
@@ -709,23 +726,34 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // chains its own chapters, the way the reference's sequence does, and
         // stops at the end of the run.
         boostInFlight = false;
-        if (rushDir > 0 && idx < LAST) walkTo(idx + 1);
-        else if (rushDir < 0 && idx > 0) walkTo(idx - 1);
-        else if (rushDir) {
+        if (rushDir > 0 && idx < LAST) {
+          rushWalked = true;
+          walkTo(idx + 1);
+        } else if (rushDir < 0 && idx > 0) {
+          rushWalked = true;
+          walkTo(idx - 1);
+        } else if (rushDir) {
           // Arrived. Put the scroll where the animation now is, or the walk
           // would be asked to come straight back to wherever the reader had
           // actually reached.
           const { top, travel } = geometry();
+          const walked = rushWalked;
           rushDir = 0;
+          rushWalked = false;
+          // Only when the rush actually walked something. The scroll is only
+          // stale because the page was held while it played; a rush latched at
+          // the end of the run, where there is nothing left to walk, holds
+          // nothing -- and re-seating the scroll there is what pulled a reader
+          // leaving the section straight back to its edge.
           // Only ever reached at one end of the run, so the stop says which.
-          jumpScrollTo(idx >= LAST ? top + travel : top);
+          if (walked) jumpScrollTo(idx >= LAST ? top + travel : top);
         } else if (want !== idx) walkTo(want);
       }
 
       // Hold the page while a chapter plays, in either direction, so the
       // section cannot scroll away part way through one. Released the moment it
       // lands, so the next scroll moves on normally.
-      const wantHold = !landed && inHold();
+      const wantHold = !landed && active;
       if (!wantHold) heldSince = 0;
       else if (!heldSince) heldSince = now;
       // Never hold longer than a chapter could honestly take. Without this a
