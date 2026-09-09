@@ -168,14 +168,13 @@ const sceneBandFor = (roomH, stageW) => {
   return wanted * (GROUND_LINE - CONTENT_TOP) + GROUND_SHOW_MIN;
 };
 
-const sceneHeightFor = (availableH) => {
-  // Tallest the comp can be drawn and still keep GROUND_SHOW_MAX of floor
-  // under the character.
-  const withCappedFloor =
-    (availableH - GROUND_SHOW_MAX) / (GROUND_LINE - CONTENT_TOP);
+const sceneHeightFor = (availableH, floorMax = GROUND_SHOW_MAX) => {
+  // Tallest the comp can be drawn and still keep that much floor under the
+  // character.
+  const withCappedFloor = (availableH - floorMax) / (GROUND_LINE - CONTENT_TOP);
   // If that leaves more floor than the comp actually draws, the floor is the
   // limit instead and the comp is as tall as the band allows.
-  return withCappedFloor * (1 - GROUND_LINE) >= GROUND_SHOW_MAX
+  return withCappedFloor * (1 - GROUND_LINE) >= floorMax
     ? withCappedFloor
     : availableH / (1 - CONTENT_TOP);
 };
@@ -244,6 +243,12 @@ const GROUND_LINE = 0.7845;
  */
 const GROUND_SHOW_MAX = 90;
 const GROUND_SHOW_MIN = 40;
+
+/* Below laptop the scene is fighting for every pixel of height, and 90px of
+   floor under the character is a fifth of what it gets. The floor is the part
+   that can afford to go: less of it here buys the scene that much more, which
+   is the difference between the steps reading and not. */
+const GROUND_SHOW_MAX_SMALL = 44;
 
 const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const runwayRef = useRef<HTMLDivElement | null>(null);
@@ -333,6 +338,13 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // exactly what is left. Letting the copy scroll out of the pin instead
       // did get the scene running on a phone, but it pushed the title off the
       // top of the screen while the animation played.
+      // True below laptop -- where the comp is far too wide to fill the height
+      // on its own and is scaled up until it does. Needed before the lead is
+      // worked out, which is why it is read here rather than further down.
+      const fillsHeight =
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia(device.laptop).matches;
+
       // Measure the copy without any lead first -- the lead is what is being
       // solved for, so leaving last pass's value on it would compound.
       copyEl.style.setProperty('--solution-copy-lead', '0px');
@@ -340,13 +352,21 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
 
       const room = stableViewportH() - PIN_TOP - textH - COPY_GAP;
 
-      // What the scene needs for its whole content band at the page's width,
-      // and so what is left over to divide between the header and the title.
-      const needs = sceneBandFor(room, stage.offsetWidth);
-      const spare = Math.max(0, room - needs);
-      const lead = Math.round(
-        Math.min(COPY_LEAD_MAX, Math.max(COPY_LEAD_MIN, spare * COPY_LEAD_SHARE))
-      );
+      // Below laptop there is nothing spare to divide: the copy takes most of
+      // the screen and the scene wants the rest, so the title stays at the top
+      // on a plain gap clear of the navbar. Above it, the title is set into
+      // whatever the scene does not need.
+      let lead = COPY_LEAD_MIN;
+      if (!fillsHeight) {
+        const needs = sceneBandFor(room, stage.offsetWidth);
+        const spare = Math.max(0, room - needs);
+        lead = Math.round(
+          Math.min(
+            COPY_LEAD_MAX,
+            Math.max(COPY_LEAD_MIN, spare * COPY_LEAD_SHARE)
+          )
+        );
+      }
       copyEl.style.setProperty('--solution-copy-lead', `${lead}px`);
 
       const copyH = textH + lead;
@@ -357,12 +377,6 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       const pinned = available >= MIN_STAGE;
 
       runway.dataset.pinned = String(pinned);
-
-      // True below laptop -- where the comp is far too wide to fill the height
-      // on its own and is scaled up until it does.
-      const fillsHeight =
-        typeof window.matchMedia === 'function' &&
-        window.matchMedia(device.laptop).matches;
 
       // Published before the stage is measured, because below laptop it is what
       // the stage's height is worked out from in CSS.
@@ -399,8 +413,17 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // and only narrows past the page when the height demands it.
         // The window is what has to fit the page; the comp behind it is wider
         // and is slid into place by the camera below.
-        const wantH = sceneHeightFor(stageBox);
-        const windowW = Math.min(stageW, (wantH * WINDOW_W) / COMP_H);
+        const floorMax = fillsHeight ? GROUND_SHOW_MAX_SMALL : GROUND_SHOW_MAX;
+        const wantH = sceneHeightFor(stageBox, floorMax);
+        const wideEnough = (wantH * WINDOW_W) / COMP_H;
+        // Above laptop the scene is held to the page's width, so nothing is
+        // lost off its sides. Below it that cap is what made the scene a strip:
+        // at a phone's width the comp is only about 170px tall, a fraction of
+        // the height the pin has to give it. There it is drawn as tall as that
+        // height needs and runs off both edges instead -- the camera keeps the
+        // character centred, so what goes is the empty lead-in and run-out
+        // either side of him rather than any of the steps.
+        const windowW = fillsHeight ? wideEnough : Math.min(stageW, wideEnough);
         const renderH = (windowW * COMP_H) / WINDOW_W;
         const renderW = (renderH * COMP_W) / COMP_H;
         sceneScale = windowW / stageW;
@@ -417,7 +440,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         const drawnBelowGround = renderH * (1 - GROUND_LINE);
         const groundShow = Math.max(
           GROUND_SHOW_MIN,
-          Math.min(GROUND_SHOW_MAX, room, drawnBelowGround)
+          Math.min(floorMax, room, drawnBelowGround)
         );
 
         let offset = pinned
