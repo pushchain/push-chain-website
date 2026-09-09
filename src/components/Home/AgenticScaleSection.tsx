@@ -59,22 +59,22 @@ const ROW_TWO_HEIGHT = 330;
    the visual's top, the visual is 726, and the card grid ends at 1771, which is
    what the offsets below are measured against. */
 const PLATE_HEIGHT = 2623;
+const PLATE_PINK_END = 454;
 const PLATE_LIGHT_AT = 1207;
 const PLATE_DARK_AT = 1893;
 const PLATE_NEAR_BLACK_AT = 2620;
 const PLATE_CARDS_END = 1771;
 
-/* The light peak, measured down from the visual's end -- the one edge that
+/* Both ends of the fade, measured from the visual's end -- the one edge that
    scales here, since the visual is a screen tall rather than the design's 726
-   while everything below it is fixed-height content. */
+   while everything on either side of it is fixed-height content. The fade
+   starts 272px ABOVE that edge, so the plate has already been lightening for a
+   while by the time the grid's heading arrives, exactly as the file has it.
+   Held as that distance rather than as a share of the visual: as a share, a
+   screen-tall visual puts the start almost half way up the title and washes it
+   out, which is a different bug entirely. */
+const PINK_END_BELOW_VISUAL = PLATE_PINK_END - VISUAL_HEIGHT; // -272
 const LIGHT_PEAK_BELOW_VISUAL = PLATE_LIGHT_AT - VISUAL_HEIGHT; // 481
-
-/* The one place this deliberately parts from the file. The design's first stop
-   is at 454, which is 272px above the end of its 726-tall visual -- the plate
-   has already begun lightening under the title. Here the visual is a whole
-   screen, so holding that proportion washed the title out on a tall monitor,
-   and the flat pink is held to the visual's full height instead. Everything
-   below is the file's own. */
 
 /* The dark end is measured up from the plate's own bottom instead. Anchoring
    it below the visual too would put it in the middle of the card grid on a
@@ -96,52 +96,30 @@ const BODY_PAD_BOTTOM_MOBILE = 80;
 const PLATE_TAIL = PLATE_BELOW_CARDS - BODY_PAD_BOTTOM; // 655
 const PLATE_TAIL_MOBILE = PLATE_BELOW_CARDS - BODY_PAD_BOTTOM_MOBILE; // 772
 
-/* The plate's colour ramps are eased, not straight. A straight ramp meets the
-   flat pink above it at a corner -- the slope goes from nothing to its full
-   rate in one pixel -- and the eye reads that corner as a line drawn across the
-   panel however smooth each side of it is. The same happens in reverse at the
-   light peak. smoothstep leaves the slope at zero at both ends of a ramp, so
-   the title screen releases into the fade and the peak turns over with nothing
-   to catch on. It has to be walked in enough steps that the polyline between
-   them is not itself a set of corners: at sixteen each joint turns by under two
-   levels of brightness, which is beneath what the panel's own 8-bit dithering
-   shows. */
+/* Rectangle 42282's four colours, interpolated straight as the file does. An
+   earlier pass eased these to head off Mach banding at the corners; the band it
+   was defending against turned out to be the blurred wash that used to sit over
+   this, and with that gone the easing only pulled the colours off the design's
+   without buying anything back. */
 const PLATE_PINK = [0xd5, 0x48, 0xec];
 const PLATE_LIGHT = [0xfb, 0xe9, 0xfe];
 const PLATE_DARK = [0x18, 0x06, 0x21];
 const PLATE_NEAR_BLACK = [0x09, 0x09, 0x09];
-const RAMP_STEPS = 16;
 
-const hex = (c) =>
-  '#' + c.map((v) => Math.round(v).toString(16).padStart(2, '0')).join('');
-const smoothstep = (t) => t * t * (3 - 2 * t);
+const hex = (c) => '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
 
-/* The stops strictly between two colours, placed by `at` -- the endpoints are
-   written at the call site so each ramp's ends stay readable. */
-const easedRamp = (from, to, at) =>
-  Array.from({ length: RAMP_STEPS - 1 }, (_, i) => {
-    const t = (i + 1) / RAMP_STEPS;
-    const f = smoothstep(t);
-    return `${hex(from.map((v, j) => v + (to[j] - v) * f))} ${at(t)}`;
-  }).join(',\n    ');
+/* calc() will not take a signed operand, so the sign picks the operator. */
+const belowVisual = (px) => {
+  const n = Math.round(px);
+  return n < 0
+    ? `calc(var(--visual-h) - ${-n}px)`
+    : `calc(var(--visual-h) + ${n}px)`;
+};
 
-const PINK_END_AT = 'var(--visual-h)';
-const LIGHT_AT = `calc(var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px)`;
+const PINK_END_AT = belowVisual(PINK_END_BELOW_VISUAL);
+const LIGHT_AT = belowVisual(LIGHT_PEAK_BELOW_VISUAL);
 const DARK_AT = `calc(100% - ${DARK_ABOVE_PLATE_END}px)`;
 const NEAR_BLACK_AT = `calc(100% - ${NEAR_BLACK_ABOVE_PLATE_END}px)`;
-
-const FADE_IN = easedRamp(PLATE_PINK, PLATE_LIGHT, (t) =>
-  `calc(var(--visual-h) + ${Math.round(t * LIGHT_PEAK_BELOW_VISUAL)}px)`
-);
-
-/* This ramp runs from a point measured down from the visual to one measured up
-   from the plate's bottom, so each stop is that share of the way between the
-   two expressions rather than a plain offset. */
-const FADE_OUT = easedRamp(PLATE_LIGHT, PLATE_DARK, (t) =>
-  `calc((var(--visual-h) + ${LIGHT_PEAK_BELOW_VISUAL}px) * ${(1 - t).toFixed(
-    5
-  )} + (100% - ${DARK_ABOVE_PLATE_END}px) * ${t.toFixed(5)})`
-);
 
 export default function AgenticScaleSection() {
   const { t } = useTranslation();
@@ -307,9 +285,7 @@ const Plate = styled.div`
     180deg,
     ${hex(PLATE_PINK)} 0px,
     ${hex(PLATE_PINK)} ${PINK_END_AT},
-    ${FADE_IN},
     ${hex(PLATE_LIGHT)} ${LIGHT_AT},
-    ${FADE_OUT},
     ${hex(PLATE_DARK)} ${DARK_AT},
     ${hex(PLATE_NEAR_BLACK)} ${NEAR_BLACK_AT}
   );
