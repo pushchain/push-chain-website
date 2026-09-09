@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 // Internal Configs
 import GLOBALS, { device } from '@site/src/config/globals';
+import { pauseScroll, resumeScroll } from '@site/src/hooks/smoothScrollControl';
 
 /**
  * The 8-bit journey behind "Making AI universally accountable".
@@ -57,7 +58,7 @@ const FAST_CHAPTER_MS = 500;
  * reference asks for 2400px of wheel inside 0.36s, which no ordinary gesture
  * or trackpad tail reaches.
  */
-const FAST_TRIGGER_PX = 1600;
+const FAST_TRIGGER_PX = 600;
 
 /**
  * Longest the page may be held for a single chapter. The walk always settles,
@@ -609,12 +610,18 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       if (now - gestureFrom > FAST_WINDOW_MS) {
         gestureFrom = now;
         gestureTravel = 0;
-        rushing = false;
       }
       let d = e.deltaY;
       if (e.deltaMode === 1) d *= 34;
       else if (e.deltaMode === 2) d *= window.innerHeight;
       gestureTravel += d;
+      // Latched, not momentary. It is read when a chapter starts, and a
+      // chapter runs for seconds where the gesture is over inside 360ms -- so
+      // read momentarily only the first chapter of a rush ever ran fast and
+      // the rest played at full length, which is the "still slow on a fast
+      // scroll" of it. Cleared in the loop once the walk has caught up with
+      // where the scroll is asking for, the way the reference's own sequence
+      // runs itself out.
       if (Math.abs(gestureTravel) >= FAST_TRIGGER_PX) rushing = true;
     };
     window.addEventListener('wheel', onWheel, { passive: true });
@@ -651,18 +658,32 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         if (idx < LAST && p > STOPS[idx] + COMMIT_FRAMES) want = idx + 1;
         else if (idx > 0 && p < STOPS[idx - 1] + COMMIT_FRAMES - COMMIT_HYST)
           want = idx - 1;
-        if (want !== idx) walkTo(want);
+        // Caught up with the scroll, so a rush has run itself out.
+        if (want === idx) rushing = false;
+        else walkTo(want);
       }
 
       // Hold the page while a chapter plays, in either direction, so the
       // section cannot scroll away part way through one. Released the moment it
       // lands, so the next scroll moves on normally.
-      holding = !landed && inHold();
-      if (!holding) heldSince = 0;
+      const wantHold = !landed && inHold();
+      if (!wantHold) heldSince = 0;
       else if (!heldSince) heldSince = now;
       // Never hold longer than a chapter could honestly take. Without this a
       // walk that failed to settle would leave the page stuck for good.
-      if (heldSince && now - heldSince > HOLD_CEILING_MS) holding = false;
+      const shouldHold =
+        wantHold && !(heldSince && now - heldSince > HOLD_CEILING_MS);
+
+      // Through Lenis, not through the event. Lenis takes the wheel first and
+      // eases the page from its own loop, so preventing the event after it has
+      // seen it changes nothing -- which is why the section still slid away
+      // mid-chapter. Stopping it is the only thing that holds. The listeners
+      // below stay for touch, which Lenis leaves to the OS.
+      if (shouldHold !== holding) {
+        holding = shouldHold;
+        if (holding) pauseScroll();
+        else resumeScroll();
+      }
 
       if (shown !== STOPS[idx] && dt) {
         goneFor += dt;
@@ -696,6 +717,8 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       window.removeEventListener('wheel', onWheel);
       window.removeEventListener('wheel', hold);
       window.removeEventListener('touchmove', hold);
+      // Never leave the page unable to scroll behind us.
+      resumeScroll();
     };
   }, [data]);
 
