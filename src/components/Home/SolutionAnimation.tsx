@@ -128,6 +128,22 @@ const HOLD_TAIL = 120;
 const COPY_GAP = 24;
 
 /**
+ * How far the title drops into the band of nothing above the scene.
+ *
+ * The comp inks nothing for the first CONTENT_TOP of its height, so above
+ * laptop the section reads as a title, a wide void, and then the chain of
+ * nodes. The title moves down into that void rather than the void being closed
+ * up: the copy's lead grows and the stage is pulled up by exactly the same
+ * amount, so the scene keeps the size and the place it had and only the words
+ * move. Half the band, so the title lands between the navbar and the first ink
+ * rather than on top of either.
+ */
+const COPY_DROP_SHARE = 0.5;
+
+/** Kept clear between the bottom of the copy and the scene's first ink. */
+const COPY_DROP_CLEAR = 48;
+
+/**
  * How the room above the scene is split between the header and the copy.
  *
  * Not a fixed drop and not dead centre. The scene is sized to its own content
@@ -144,8 +160,12 @@ const COPY_LEAD_SHARE = 0.55;
 const COPY_LEAD_MIN = 24;
 
 /** Nor more than this, so the title does not drift into the middle of a very
-    tall window and leave the scene marooned at the bottom. */
-const COPY_LEAD_MAX = 240;
+    tall window and leave the scene marooned at the bottom. The design puts the
+    title near the top of the section with a clear gap under the navbar rather
+    than anywhere near the middle, and the scene cannot grow past the page's
+    width without cropping the chain of nodes -- so on a tall screen the height
+    left over is given back rather than spent pushing the title down. */
+const COPY_LEAD_MAX = 96;
 
 /**
  * Below this the scene is too short to read anything but the character, so the
@@ -174,15 +194,20 @@ const VIEWPORT_NOISE = 120;
    offset below comes out positive, the stage gives that height back, and the
    section underneath shows through the difference. */
 /**
- * The height the scene wants: its content band drawn as large as the page's
- * width allows, or as large as the room allows, whichever is smaller. Used to
- * work out what is spare above it before the copy is laid out.
+ * The height the scene will actually be drawn at: as large as the page's width
+ * allows, or as large as the room allows, whichever is smaller. Used to work
+ * out what is spare above it before the copy is laid out.
+ *
+ * The band it inks, rather than the height it draws, used to be what the lead
+ * was charged against -- about half as much. That was fine while the copy took
+ * a third of the screen and there was nothing spare to argue over. Once the
+ * copy came down to a single centred line and a subtitle, the difference
+ * between the two became real: at 1440x900 it handed 180px to the gap above
+ * the title and left the scene cropped by 148, which is the "more space for
+ * the animation" that never reached the animation.
  */
-const sceneBandFor = (roomH, stageW) => {
-  const byWidth = (stageW * COMP_H) / WINDOW_W;
-  const wanted = Math.min(byWidth, sceneHeightFor(roomH));
-  return wanted * (GROUND_LINE - CONTENT_TOP) + GROUND_SHOW_MIN;
-};
+const sceneDrawnFor = (roomH, stageW) =>
+  Math.min((stageW * COMP_H) / WINDOW_W, sceneHeightFor(roomH));
 
 const sceneHeightFor = (availableH, floorMax = GROUND_SHOW_MAX) => {
   // Tallest the comp can be drawn and still keep that much floor under the
@@ -248,7 +273,11 @@ const ZOOM = 1.3;
  * The floor is the first row that is more than half ink, at 711 of 849, and the
  * comp draws 138px of ground below it.
  */
-const CONTENT_TOP = 0.311;
+/* Re-measured on this file across all six stops: the highest ink is row 254 of
+   849, at the stops where the allow list opens out of Universal Rules. 0.311
+   sat ten rows below that, so the top of that panel was the first thing any
+   height-constrained layout gave away. */
+const CONTENT_TOP = 0.2992;
 const GROUND_LINE = 0.7845;
 
 /**
@@ -260,11 +289,12 @@ const GROUND_LINE = 0.7845;
 const GROUND_SHOW_MAX = 90;
 const GROUND_SHOW_MIN = 40;
 
-/* Below laptop the scene is fighting for every pixel of height, and 90px of
-   floor under the character is a fifth of what it gets. The floor is the part
-   that can afford to go: less of it here buys the scene that much more, which
-   is the difference between the steps reading and not. */
-const GROUND_SHOW_MAX_SMALL = 44;
+/* This was 44 below laptop, where the scene was fighting for every pixel and
+   the floor was the part that could afford to go. The copy above it is a single
+   line and a subtitle now rather than a third of the screen, so the height is
+   there and the ground does not have to be cut to the character's feet: the
+   scene comes down a little and stands on all of it, as it does on a desktop. */
+const GROUND_SHOW_MAX_SMALL = GROUND_SHOW_MAX;
 
 const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
   const runwayRef = useRef<HTMLDivElement | null>(null);
@@ -374,7 +404,7 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // whatever the scene does not need.
       let lead = COPY_LEAD_MIN;
       if (!fillsHeight) {
-        const needs = sceneBandFor(room, stage.offsetWidth);
+        const needs = sceneDrawnFor(room, stage.offsetWidth);
         const spare = Math.max(0, room - needs);
         lead = Math.round(
           Math.min(
@@ -462,6 +492,18 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         let offset = pinned
           ? Math.round(stageH - (renderH * GROUND_LINE + groundShow))
           : 0;
+
+        // The title drops into the empty band above the scene's first ink.
+        // Applied here because the band is a share of the height the scene
+        // ended up at. The pull cancels the lead, so nothing measured above
+        // changes -- the box is the same height and the stage is in the same
+        // place; only the copy sits lower inside it.
+        const band = renderH * CONTENT_TOP + COPY_GAP - COPY_DROP_CLEAR;
+        const drop = fillsHeight
+          ? 0
+          : Math.max(0, Math.round(band * COPY_DROP_SHARE));
+        copyEl.style.setProperty('--solution-copy-lead', `${lead + drop}px`);
+        stage.style.marginTop = drop ? `${-drop}px` : '';
 
         // Above laptop a positive offset means the stage is taller than the
         // scene needs, and the height is given back so the box hugs the scene.
@@ -966,6 +1008,11 @@ const Pinned = styled.div`
 const Copy = styled.div`
   padding-top: var(--solution-copy-lead, ${COPY_LEAD_MIN}px);
   margin-bottom: ${COPY_GAP}px;
+  /* The stage is pulled up under the copy so the title can sit in the scene's
+     empty top band; without a stacking context of its own the scene paints
+     over the words. */
+  position: relative;
+  z-index: 1;
 `;
 
 /* Full-bleed out of the page's max-width column. Done with left/margin rather
