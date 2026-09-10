@@ -310,23 +310,23 @@
         "subtitle": "Agents can already move money, but nothing checks their work.",
         "section-aria-label": "The problem with unverified AI agents moving money",
         "vignette1": {
-          "story": "Alice gives her agent a budget. Her rules are simple: trusted contracts only, a fixed amount per day. But no chain enforces these rules everywhere the agent trades.",
-          "consequence1": "Rules hold on some chains. When the agent trades somewhere else, they stop applying.",
+          "story": "Alice gives her agent a budget. Her rules are simple: trusted contracts only, a fixed amount per day.\n\nBut no chain enforces these rules everywhere the agent trades.",
+          "consequence1": "Rules on one chain but when the agent trades somewhere else, they stop applying.",
           "consequence2": "One hallucination or rogue call and the money is lost forever.",
           "image-alt": "Chat between Alice and her agent: the agent approves a lookalike contract called Uniswapp.fi and spends the full 500 USDC budget"
         },
         "vignette2": {
-          "story": "Chad paid an AI agent to grow his Twitter: He gained 10,000 new followers, but every one was a bot. The payment released the instant the goal was reached.",
-          "consequence1": "The job was marked done. The work was never evaluated.",
+          "story": "Chad hired an agent for 4% stablecoin arbitrage. It moved nothing, marked the job complete, and the fee released.\n\nNo verification. Payment releases on incorrect outcome.",
+          "consequence1": "The job was marked done. No checks, Payment completed.",
           "consequence2": "Irreversible: No reputation hit, No recourse.",
-          "image-alt": "Chat between Chad and his agent: the 10,000 new followers are all bots and the payment has already released, with no recourse"
+          "image-alt": "Chat between Chad and his agent: the agent admits it found no opportunities, and refuses to refund the fee because payment was upfront"
         }
       },
       "solution-panel": {
         "title-prefix": "Making AI",
         "title-highlight": "Universally",
         "title-suffix": "accountable",
-        "paragraph": "Before your agent acts, it's held to rules it can't break. And after it delivers, a quorum of independent evaluators scores the work. Payment moves only on their verdict, and it moves on any chain.",
+        "paragraph": "Rules before. Evaluation after. Payment only on the verdict.",
         "section-aria-label": "How Push Chain makes AI agents universally accountable"
       },
       "built-to-scale": {
