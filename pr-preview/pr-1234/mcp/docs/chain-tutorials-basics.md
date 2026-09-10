@@ -2,7 +2,7 @@
 title: "Basics Section"
 url: "https://pushchain.github.io/docs/chain/tutorials/basics/"
 section: "tutorials"
-lastUpdated: "2026-09-09T17:35:50Z"
+lastUpdated: "2026-09-10T13:46:54Z"
 description: "Basics Section | Tutorials | Push Chain Docs"
 ---
 
