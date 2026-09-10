@@ -765,6 +765,10 @@ const StoryText = styled.div`
   }
 
   span {
+    /* The design breaks each story into two paragraphs; the copy carries the
+       break and this is what honours it. */
+    white-space: pre-line;
+
     @media ${device.laptop} {
       font-size: 1.25rem;
     }
