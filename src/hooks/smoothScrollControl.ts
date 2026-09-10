@@ -44,3 +44,21 @@ export function jumpScrollTo(y) {
   }
   if (typeof window !== 'undefined') window.scrollTo(0, y);
 }
+
+/**
+ * Hand touch scrolling to Lenis, or give it back to the OS.
+ *
+ * The instance is built with `syncTouch: false` -- smoothing every touch
+ * scroll on the site fights the OS and feels laggy. The cost is that Lenis is
+ * not driving a touch scroll, so `pauseScroll` is a no-op against one: a
+ * section cannot hold the page while something plays, because `preventDefault`
+ * on `touchmove` only holds while the finger is down and nothing can cancel
+ * the momentum after it lifts.
+ *
+ * Lenis reads the flag off `options` at event time, so a section that does
+ * need the hold can take touch for as long as it is on screen and hand it
+ * straight back. Scoped that way the rest of the page keeps native momentum.
+ */
+export function setTouchSync(on) {
+  if (lenis && lenis.options) lenis.options.syncTouch = !!on;
+}

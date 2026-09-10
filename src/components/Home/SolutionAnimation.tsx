@@ -12,6 +12,7 @@ import {
   pauseScroll,
   resumeScroll,
   jumpScrollTo,
+  setTouchSync,
 } from '@site/src/hooks/smoothScrollControl';
 
 /**
@@ -78,9 +79,20 @@ const FAST_TRIGGER_PX = 800;
  * does not make it unreachable and a short one does not fire on an ordinary
  * swipe.
  */
-const FAST_TRIGGER_TOUCH_SHARE = 0.45;
-const FAST_TRIGGER_TOUCH_MIN = 260;
-const FAST_TRIGGER_TOUCH_MAX = 480;
+const FAST_TRIGGER_TOUCH_SHARE = 0.28;
+const FAST_TRIGGER_TOUCH_MIN = 170;
+const FAST_TRIGGER_TOUCH_MAX = 320;
+
+/**
+ * And the same trigger read as speed rather than distance, in px of finger per
+ * ms. Distance alone is not enough on a phone: a hard flick is short as well as
+ * quick -- the finger is out of room long before a wheel would be -- so at a
+ * threshold high enough not to fire on an ordinary swipe, a genuine flick often
+ * never reached it and the walk played every chapter at full length. That is
+ * the "no matter how fast I swipe it runs slow" of it. Either test arms the
+ * rush. An ordinary swipe runs about 0.6, a flick two to four.
+ */
+const FAST_TRIGGER_TOUCH_V = 1.7;
 
 /**
  * Longest the page may be held for a single chapter. The walk always settles,
@@ -124,8 +136,10 @@ const RUNWAY = (STOPS.length - 1) * STEP_SCROLL;
  */
 const HOLD_TAIL = 120;
 
-/** Gap between the copy and the scene. Every pixel here comes off the scene. */
-const COPY_GAP = 24;
+/** Gap between the copy and the scene. Every pixel here comes off the scene,
+    which is the point: below laptop this is what brings the animation down off
+    the subtitle. */
+const COPY_GAP = 56;
 
 /**
  * How far the title drops into the band of nothing above the scene.
@@ -135,13 +149,18 @@ const COPY_GAP = 24;
  * nodes. The title moves down into that void rather than the void being closed
  * up: the copy's lead grows and the stage is pulled up by exactly the same
  * amount, so the scene keeps the size and the place it had and only the words
- * move. Half the band, so the title lands between the navbar and the first ink
- * rather than on top of either.
+ * move.
+ *
+ * Under a third of the band, not half: the copy sits nearer the navbar than it
+ * does the scene, and what is left of the band then reads as the gap between
+ * the two rather than as a void above the title.
  */
-const COPY_DROP_SHARE = 0.5;
+const COPY_DROP_SHARE = 0.3;
 
-/** Kept clear between the bottom of the copy and the scene's first ink. */
-const COPY_DROP_CLEAR = 48;
+/** Kept clear between the bottom of the copy and the scene's first ink. Above
+    laptop this, not COPY_GAP, is what the gap actually comes to: the title
+    drops into the empty band and stops this far short of the ink. */
+const COPY_DROP_CLEAR = 88;
 
 /**
  * How the room above the scene is split between the header and the copy.
@@ -273,11 +292,19 @@ const ZOOM = 1.3;
  * The floor is the first row that is more than half ink, at 711 of 849, and the
  * comp draws 138px of ground below it.
  */
-/* Re-measured on this file across all six stops: the highest ink is row 254 of
-   849, at the stops where the allow list opens out of Universal Rules. 0.311
-   sat ten rows below that, so the top of that panel was the first thing any
-   height-constrained layout gave away. */
-const CONTENT_TOP = 0.2992;
+/* Measured across the whole run, every fifth frame, not just at the stops:
+   the highest ink is row 254 of 849, first reached at frame 60 -- the blocks
+   that pop out when the character's head hits the tile, and they stay that
+   high for the rest of the walk.
+   Solved to exactly 254 the topmost pixel lands on the stage's own top edge,
+   with nothing to spare. That is fine on a desktop, where the scene is limited
+   by the page's width and never asks for the last pixel of height, but below
+   laptop the fit is solved to this bound and the blocks came and went with the
+   rounding. It carries 16px of clearance so they are always inside the
+   frame. */
+const CONTENT_INK_TOP = 254 / 849;
+const CONTENT_HEADROOM = 16 / 849;
+const CONTENT_TOP = CONTENT_INK_TOP - CONTENT_HEADROOM;
 const GROUND_LINE = 0.7845;
 
 /**
@@ -681,6 +708,9 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
     // end of the run and stop there.
     let rushDir = 0;
     let rushWalked = false;
+    /* Whether Lenis is currently driving touch for us. Off everywhere else on
+       the site, so this is only ever true around this section. */
+    let touchSynced = false;
     let boostInFlight = false;
     let gestureFrom = -1e9;
     let gestureTravel = 0;
@@ -717,6 +747,16 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         // moment, and that moment lands inside a chapter -- so without this
         // the first one still plays its full length and the rush only starts
         // from the second.
+        boostInFlight = true;
+      }
+    };
+
+    /* Same latch, armed on speed. Direction comes from the sign, the way the
+       travel test takes it from its own. */
+    const armVelocity = (v: number) => {
+      if (Math.abs(v) >= FAST_TRIGGER_TOUCH_V && !rushDir && inHold()) {
+        rushDir = v > 0 ? 1 : -1;
+        rushWalked = false;
         boostInFlight = true;
       }
     };
@@ -759,11 +799,15 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
        so the travel is negated to keep the sign meaning what it does for a
        wheel: positive is further down the page. */
     let fingerY = 0;
+    let fingerAt = 0;
+    let fingerV = 0;
     const onTouchStart = (e: TouchEvent) => {
       const t = e.touches[0];
       if (!t) return;
       fingerY = t.clientY;
-      gestureFrom = performance.now();
+      fingerAt = performance.now();
+      fingerV = 0;
+      gestureFrom = fingerAt;
       gestureTravel = 0;
     };
     const onTouchMove = (e: TouchEvent) => {
@@ -774,9 +818,16 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
         gestureFrom = now;
         gestureTravel = 0;
       }
-      gestureTravel += fingerY - t.clientY;
+      const moved = fingerY - t.clientY;
+      const dt = now - fingerAt;
+      // Smoothed, because a single frame of a finger is noisy enough to trip
+      // any threshold worth having.
+      if (dt > 0) fingerV = fingerV * 0.6 + (moved / dt) * 0.4;
+      gestureTravel += moved;
       fingerY = t.clientY;
+      fingerAt = now;
       arm(touchTrigger());
+      armVelocity(fingerV);
     };
 
     window.addEventListener('wheel', onWheel, { passive: true });
@@ -806,6 +857,23 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       // rush rather than run it out -- finishing it would end in a jump back
       // to the section the reader has already left.
       const active = inHold();
+
+      /* Hand touch scrolling to Lenis while the section is anywhere near, and
+         give it straight back afterwards. Without this the hold below is a
+         no-op on a phone: Lenis is not driving the scroll, so stopping it
+         changes nothing, and a flick's momentum carried the reader out of the
+         section mid-chapter however the walk was pacing itself. A screen
+         either side, so the handover never lands mid-gesture. */
+      {
+        const { top, travel } = geometry();
+        const vh = stableViewportH();
+        const y = window.scrollY;
+        const wantSync = y >= top - vh && y <= top + travel + vh;
+        if (wantSync !== touchSynced) {
+          touchSynced = wantSync;
+          setTouchSync(wantSync);
+        }
+      }
       if (!active && rushDir) {
         rushDir = 0;
         rushWalked = false;
@@ -920,8 +988,9 @@ const SolutionAnimation: React.FC<{ copy: React.ReactNode }> = ({ copy }) => {
       window.removeEventListener('touchstart', onTouchStart);
       window.removeEventListener('touchmove', onTouchMove);
       window.removeEventListener('touchmove', hold);
-      // Never leave the page unable to scroll behind us.
+      // Never leave the page unable to scroll, or holding touch, behind us.
       resumeScroll();
+      setTouchSync(false);
     };
   }, [data]);
 
