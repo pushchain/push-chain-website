@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 // Internal Components
-import { Content, H2, ItemH, ItemV, Section, Span } from '@site/src/css/SharedStyling';
+import { Content, H2, ItemV, Section, Span } from '@site/src/css/SharedStyling';
 import SolutionAnimation from '@site/src/components/Home/SolutionAnimation';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
 
@@ -15,6 +15,13 @@ import useMediaQuery from '@site/src/hooks/useMediaQuery';
 import { device } from '@site/src/config/globals';
 
 const FONT_MONO = "'IBM Plex Mono', monospace";
+
+/* Figma sets 32px between the title and the subtitle, but measures it between
+   text boxes trimmed to the cap and the baseline. Our boxes carry their full
+   leading -- about 12px under the 48px title and 8px over the 20px subtitle --
+   so the gap that reproduces the design's 32px on screen is that much smaller.
+   Checked by measuring the rendered cap-to-cap distance, not assumed. */
+const TITLE_GAP = 13;
 
 export default function SolutionPanel() {
   const { t } = useTranslation();
@@ -40,22 +47,27 @@ export default function SolutionPanel() {
                 lineHeight='120%'
                 color='var(--ifm-color-white)'
               >
-                {/* Three fixed lines, per Figma. The design's 530px text box
-                    wraps naturally into "Making AI / Universally / accountable";
-                    forcing the breaks keeps that shape at any container width. */}
-                {t('pages.home.solution-panel.title-prefix')}
-                <br />
+                {/* One line now, centred, per Figma 50179:32. Figma generates
+                    -0.96px on the spans and -2.88px on the paragraph around
+                    them; the two disagree, and the design renders at -2.88px --
+                    its title inks 853px wide, which is what -0.06em gives and
+                    -0.02em misses by 60. Measured off the node rather than read
+                    off the generated code. */}
+                {t('pages.home.solution-panel.title-prefix')}{' '}
                 <GradientWord>
                   {t('pages.home.solution-panel.title-highlight')}
-                </GradientWord>
-                <br />
+                </GradientWord>{' '}
                 {t('pages.home.solution-panel.title-suffix')}
               </H2>
+              {/* Span defaults text-align to initial, which beats the centre
+                  it would otherwise inherit. On one line the shrink-to-fit
+                  box hid that; the second line on a phone gave it away. */}
               <Span
                 fontSize='1.25rem'
                 lineHeight='150%'
                 letterSpacing='0.4px'
                 color='var(--ifm-color-white)'
+                textAlign='center'
               >
                 {t('pages.home.solution-panel.paragraph')}
               </Span>
@@ -81,27 +93,27 @@ const SolutionContent = styled(Content)`
   padding-bottom: 0;
 `;
 
-const TextRow = styled(ItemH)`
+/* Figma 50179:31: a centred column, title over subtitle, 32px apart. It was a
+   two-column row until the copy was cut to a single line each -- the block is
+   80px tall in the design now, where it used to take a third of the screen,
+   and the height it gives back is the room the scene grew into. */
+const TextRow = styled(ItemV)`
+  align-items: center;
+  text-align: center;
+  gap: ${TITLE_GAP}px;
+
   h2 {
     font-size: 3rem;
+    margin: 0;
 
     @media ${device.mobileL} {
       font-size: 2rem;
     }
   }
 
-  align-items: center;
-  gap: 139px;
-
-  h2,
+  /* The design centres the subtitle across the full column width. */
   span {
-    flex: 1;
-  }
-
-  @media ${device.laptop} {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+    max-width: 100%;
   }
 `;
 
