@@ -2,7 +2,7 @@
 title: "Contract-Initiated Examples Section"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-examples/"
 section: "build"
-lastUpdated: "2026-09-10T13:46:54Z"
+lastUpdated: "2026-09-10T15:13:04Z"
 description: "Contract-Initiated Examples Section | Build | Push Chain Docs"
 ---
 

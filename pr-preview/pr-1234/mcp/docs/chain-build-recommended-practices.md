@@ -2,7 +2,7 @@
 title: "Recommended Practices"
 url: "https://pushchain.github.io/docs/chain/build/recommended-practices/"
 section: "build"
-lastUpdated: "2026-09-10T13:46:54Z"
+lastUpdated: "2026-09-10T15:13:04Z"
 description: "Recommended Practices | Build | Push Chain Docs"
 ---
 

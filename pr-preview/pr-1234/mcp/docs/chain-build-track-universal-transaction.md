@@ -2,7 +2,7 @@
 title: "Track Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/track-universal-transaction/"
 section: "build"
-lastUpdated: "2026-09-10T13:46:54Z"
+lastUpdated: "2026-09-10T15:13:04Z"
 description: "Track Universal Transaction | Build | Push Chain Docs"
 ---
 

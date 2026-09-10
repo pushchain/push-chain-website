@@ -2,7 +2,7 @@
 title: "Code Snippet Playground"
 url: "https://pushchain.github.io/docs/chain/code-snippet/"
 section: "chain"
-lastUpdated: "2026-09-10T13:46:54Z"
+lastUpdated: "2026-09-10T15:13:04Z"
 description: "Interactive code playground for Push Chain docs"
 ---
 

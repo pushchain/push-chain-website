@@ -2,7 +2,7 @@
 title: "Contract Helpers"
 url: "https://pushchain.github.io/docs/chain/build/contract-helpers/"
 section: "build"
-lastUpdated: "2026-09-10T13:46:54Z"
+lastUpdated: "2026-09-10T15:13:04Z"
 description: "Contract Helpers | Build | Push Chain Docs"
 ---
 
