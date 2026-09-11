@@ -55,8 +55,19 @@ const BODY_TOP = 743; // Frame 37246
    peak is pinned below the visual while its dark is pinned after the cards, a
    short grid squeezes the descent between them and leaves the whole card area
    sitting brighter than the design's. */
-const ROW_ONE_HEIGHT = 488;
-const ROW_TWO_HEIGHT = 401;
+/* Figma draws these at 488, which is about 60px more than the cards ink at
+   the widths they sit side by side at: 32px of padding, a 168px mark, 32px
+   under it and a title and description that come to 165. The design's own
+   number left the difference as dead card, above the mark or below the
+   description depending on where it was pushed, so the floor is the content
+   instead -- 429, which is exactly the card's own padding clear at the top
+   and the bottom. Still a floor, so the narrower widths where the
+   description takes an extra line grow past it, and the shorter card in the
+   row keeps a little space under it. */
+const ROW_ONE_HEIGHT = 429;
+/* Same, for the wide pair: the taller of the two inks 318, so 382 clears it
+   by the card's padding and leaves the shorter one a little under it. */
+const ROW_TWO_HEIGHT = 382;
 
 /* Rectangle 42282, read off the file (node 49243:16601 in Push Design
    Foundations). Its fill is a vertical linear gradient whose four stops sit at
