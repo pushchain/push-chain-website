@@ -162,7 +162,7 @@ const GLOBALS = {
   },
 
   HEADER: {
-    HEIGHT: 78,
+    HEIGHT: 82,
     OUTER_MARGIN: {
       DESKTOP: {
         TOP: 16,
@@ -185,9 +185,9 @@ const GLOBALS = {
     },
     OUTER_PADDING: {
       DESKTOP: {
-        TOP: 0,
+        TOP: 12,
         LEFT: 12,
-        BOTTOM: 0,
+        BOTTOM: 12,
         RIGHT: 12,
       },
       TABLET: {

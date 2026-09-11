@@ -18,7 +18,7 @@ import {
   Spacer,
 } from '@site/src/components/reusables/date.tsx';
 
-const RecentBlogPosts = () => {
+const RecentBlogPosts = ({ count = 3 }) => {
   const { recentBlogs } = useFetchRecentBlogs();
   const { t } = useTranslation();
 
@@ -48,7 +48,7 @@ const RecentBlogPosts = () => {
       role='list'
       aria-label={t('pages.home.blog-section.blog-posts-list-aria-label')}
     >
-      {recentBlogs?.slice(0, 3).map((postItem, index) => {
+      {recentBlogs?.slice(0, count).map((postItem, index) => {
         const blogPostAriaLabel = t(
           'pages.home.blog-section.blog-post-aria-label',
           {

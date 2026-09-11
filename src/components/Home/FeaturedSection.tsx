@@ -12,23 +12,16 @@ import { useTranslation } from 'react-i18next';
 import { FeaturedSectionMarquee } from './FeaturedSectionMarquee';
 
 import { device } from '@site/src/config/globals';
-import useMediaQuery from '@site/src/hooks/useMediaQuery';
 
 export const FeaturedSection = () => {
   // Internationalization
   const { t, i18n } = useTranslation();
 
-  const isTablet = useMediaQuery(device.tablet);
-  const isLaptop = useMediaQuery(device.laptop);
 
   return (
     <FeatureContent>
       <FeatureWrapper>
-        <ItemV
-          maxWidth={isLaptop ? '100%' : '274px'}
-          padding={isLaptop && '64px 0 24px 0'}
-          alignItems='flex-start'
-        >
+        <FeatureIntro alignItems='flex-start'>
           <StarWithText>
             <StarSolidIcon color='var(--ifm-color-pink-200)' />
             <H2
@@ -57,11 +50,10 @@ export const FeaturedSection = () => {
             fontWeight='400'
             letterSpacing='-0.4px'
             lineHeight='150%'
-            margin={isTablet ? '16px 0 0 0' : '24px 0 0 0'}
           >
             {t('pages.home.featured-section.subtitle')}
           </Span>
-        </ItemV>
+        </FeatureIntro>
 
         <FeaturedSectionMarquee />
       </FeatureWrapper>
@@ -73,6 +65,25 @@ const FeatureContent = styled(Content)`
   padding-top: 0px;
   padding-bottom: 0px;
   margin: 0 auto;
+`;
+
+/* Was sized from media-query hooks, so the built HTML carried the desktop
+   values and re-laid out on hydration. */
+const FeatureIntro = styled(ItemV)`
+  max-width: 274px;
+
+  @media ${device.laptop} {
+    max-width: 100%;
+    padding: 64px 0 24px 0;
+  }
+
+  span {
+    margin: 24px 0 0 0;
+
+    @media ${device.tablet} {
+      margin: 16px 0 0 0;
+    }
+  }
 `;
 
 const FeatureWrapper = styled.div`

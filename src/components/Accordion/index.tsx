@@ -27,6 +27,13 @@ interface AccordionProps {
   firstOpen?: boolean;
   fontWeight?: string;
   fontSize?: string;
+  /**
+   * 'pushCore' applies the Push Core landing spec (Figma node 49245:16793):
+   * 32px item padding, a 12px gap before an open answer, a 1.5px #2d2d32
+   * rule and a 32px toggle. Omit it and the accordion renders exactly as it
+   * does on the other four pages that share this component.
+   */
+  variant?: 'default' | 'pushCore';
 }
 
 const Accordion: React.FC<AccordionProps> = ({
@@ -34,7 +41,9 @@ const Accordion: React.FC<AccordionProps> = ({
   firstOpen,
   fontWeight,
   fontSize,
+  variant = 'default',
 }) => {
+  const isPushCore = variant === 'pushCore';
   const [activeIndex, setActiveIndex] = useState<number | null>(
     firstOpen === false ? null : 0
   );
@@ -49,22 +58,32 @@ const Accordion: React.FC<AccordionProps> = ({
   return (
     <div>
       {items.map((item, index) => (
-        <AccordionSection key={index}>
-          <AccordionParent onClick={() => toggleAccordion(index)}>
+        <AccordionSection key={index} $pushCore={isPushCore}>
+          <AccordionParent
+            onClick={() => toggleAccordion(index)}
+            $pushCore={isPushCore}
+            $open={activeIndex === index}
+          >
             <H3
               color={'var(--ifm-color-white)'}
               fontSize={fontSize ? fontSize : isMobile ? '20px' : '1.5rem'}
               fontFamily={'DM Sans, sans-serif'}
               fontWeight={fontWeight || '600'}
-              lineHeight='140%'
+              lineHeight={isPushCore ? '100%' : '140%'}
             >
               {item.title || item.question}
             </H3>
             <div>
               {activeIndex === index ? (
-                <AiOutlineMinus color={'var(--ifm-color-white)'} size={22} />
+                <AiOutlineMinus
+                  color={'var(--ifm-color-white)'}
+                  size={isPushCore ? 32 : 22}
+                />
               ) : (
-                <AiOutlinePlus color={'var(--ifm-color-white)'} size={22} />
+                <AiOutlinePlus
+                  color={'var(--ifm-color-white)'}
+                  size={isPushCore ? 32 : 22}
+                />
               )}
             </div>
           </AccordionParent>
@@ -107,15 +126,21 @@ const Accordion: React.FC<AccordionProps> = ({
 };
 
 const AccordionSection = styled.div`
-  border-bottom: 1px solid var(--ifm-color-gray-200);
+  border-bottom: ${(props) =>
+    props.$pushCore ? '1.5px solid #2d2d32' : '1px solid var(--ifm-color-gray-200)'};
 
   h3 {
     white-space: pre-wrap;
   }
 `;
 
+// In the pushCore spec an item is 32px-padded, but an open one tightens to a
+// 12px gap before its answer (Figma: header at y=0, answer at y=44).
 const AccordionParent = styled.div`
-  padding: 24px 0;
+  padding: ${(props) => {
+    if (!props.$pushCore) return '24px 0';
+    return props.$open ? '32px 0 12px 0' : '32px 0';
+  }};
   display: flex;
   flex-direction: row;
   flex: 1;

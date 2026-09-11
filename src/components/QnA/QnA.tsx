@@ -30,6 +30,14 @@ interface QnAProps {
   exploreMoreTextKey?: string;
   discordUrl?: string;
   exploreMoreUrl?: string;
+  titleFontFamily?: string;
+  titleFontWeight?: string;
+  /**
+   * 'pushCore' applies the Push Core landing spec (Figma node 49245:16774):
+   * 383/793 columns 24px apart, a 321px-wide title, and the larger Discord
+   * button. Omit it and this renders as it does on the other four pages.
+   */
+  variant?: 'default' | 'pushCore';
   faqsList?: Array<{
     question: string;
     section: string;
@@ -54,6 +62,9 @@ const QnA: FC<QnAProps> = ({
   exploreMoreTextKey = 'components.short-faq-snippet.explore-more-text',
   discordUrl = 'https://discord.com/invite/pushchain',
   exploreMoreUrl = '/knowledge/faq',
+  titleFontFamily = 'DM Sans, sans-serif',
+  titleFontWeight = '600',
+  variant = 'default',
   faqsList,
   getQnAsFunction = getShortFAQsList,
 }) => {
@@ -63,28 +74,32 @@ const QnA: FC<QnAProps> = ({
   const isMobile = useMediaQuery(device.mobileL);
   const isLaptop = useMediaQuery(device.laptop);
   const finalFaqsList = faqsList || getQnAsFunction();
+  const isPushCore = variant === 'pushCore';
 
   return (
     <ItemH
       flexDirection={isLaptop && 'column'}
       alignItems='flex-start'
       justifyContent='space-between'
-      gap={isLaptop ? '24px' : '120px'}
+      gap={isLaptop ? '24px' : isPushCore ? '24px' : '120px'}
     >
       <ItemV
         flexDirection={isLaptop ? 'row' : 'column'}
         alignItems='flex-start'
         justifyContent={isLaptop ? 'space-between' : 'flex-start'}
         flex='0 0 auto'
-        gap='24px'
+        gap={isPushCore ? '32px' : '24px'}
+        width={isPushCore && !isLaptop ? '383px' : undefined}
       >
         <H2
           color='var(--ifm-color-white)'
           fontSize={isMobile ? '2.5rem' : '3rem'}
-          fontFamily='DM Sans, sans-serif'
-          fontWeight='600'
+          fontFamily={titleFontFamily}
+          fontWeight={titleFontWeight}
+          letterSpacing={titleFontFamily.includes('IBM Plex Mono') ? '-0.02em' : undefined}
           lineHeight='120%'
           whiteSpace='break-spaces'
+          maxWidth={isPushCore ? '321px' : undefined}
           role='heading'
           aria-level='2'
           aria-label={t(titleAriaLabelKey)}
@@ -93,13 +108,14 @@ const QnA: FC<QnAProps> = ({
         </H2>
 
         <QnAPrimaryLink
+          $pushCore={isPushCore}
           href={discordUrl}
           target='_blank'
           title={t(discordLinkTitleKey)}
           aria-label={t(discordLinkAriaLabelKey)}
           rel='noopener'
         >
-          <BsDiscord size={28} aria-hidden='true' />
+          <BsDiscord size={isPushCore ? 32 : 28} aria-hidden='true' />
           <p>{t(discordLinkTextKey)}</p>
           <BsArrowRight
             size={24}
@@ -116,7 +132,7 @@ const QnA: FC<QnAProps> = ({
         margin={isLaptop ? '48px 0 0 0' : '-20px 0 0 0'}
       >
         <AccordionGrid role='region' aria-label={t(accordionAriaLabelKey)}>
-          <Accordion items={finalFaqsList} />
+          <Accordion items={finalFaqsList} variant={variant} />
         </AccordionGrid>
 
         <QnAMoreInfoLink
@@ -147,10 +163,12 @@ const QnAPrimaryLink = styled(A)`
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: ${(props) => (props.$pushCore ? '14px 24px' : '12px 16px')};
+  height: ${(props) => (props.$pushCore ? '58px' : 'auto')};
+  box-sizing: border-box;
   text-decoration: none;
   transition: all 0.2s ease;
-  font-size: 16px;
+  font-size: ${(props) => (props.$pushCore ? '18px' : '16px')};
   background: var(--ifm-color-qna-discord);
   color: var(--ifm-color-white);
   font-family: 'DM Sans', sans-serif;
@@ -164,7 +182,8 @@ const QnAPrimaryLink = styled(A)`
 
   p {
     margin: 0;
-    font-weight: 500;
+    font-weight: ${(props) => (props.$pushCore ? '400' : '500')};
+    line-height: ${(props) => (props.$pushCore ? '1.42' : 'inherit')};
     color: inherit;
   }
 `;
