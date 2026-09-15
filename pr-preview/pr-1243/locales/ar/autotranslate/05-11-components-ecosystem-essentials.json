@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "استكشف تطبيقات <testnet> الأساسية",
+      "apps": {
+        "pc-faucet": {
+          "name": "صنبور $PC",
+          "description": "احصل على توكنات شبكة PC التجريبية من هنا"
+        },
+        "push-bridge": {
+          "name": "جسر Push",
+          "description": "نقل الـ توكن بين البلوكشين"
+        },
+        "simulate-tx": {
+          "name": "محاكاة المعاملة",
+          "description": "محاكاة معاملة عالمية"
+        },
+        "push-chain-scan": {
+          "name": "فحص بلوكشين Push Chain",
+          "description": "مستكشف بلوكشين لـ Push Chain"
+        },
+        "wallet": {
+          "name": "محفظة",
+          "description": "محفظة بلوكشين عالمية لـ Push Chain"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "learn-push-chain": {
+                "items": {
+                  "what-is-universal-fee-abstraction": {
+                    "title": "ユニバーサル手数料抽象化とは何か、どのように機能するのか？"
+                  },
+                  "what-are-universal-executor-accounts": {
+                    "title": "ユニバーサルエグゼキューターアカウント (UEA) とは何で、どのように機能するのですか？"
+                  },
+                  "how-universal-transaction-works": {
+                    "title": "ユニバーサル トランザクションの仕組み"
+                  },
+                  "push-chain-silence-labs": {
+                    "title": "Push Chain × Silence Labs: 分散署名メカニズムの構築"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

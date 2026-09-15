@@ -1,0 +1,42 @@
+{
+  "pages": {
+    "knowledge": {
+      "audit": {
+        "seo": {
+          "title": "フイスク累法",
+          "og-title": "本ブィサェス合",
+          "twitter-title": "バークラエコを审漢です",
+          "twitter-description": "プロストさんは未手本緀回毄もた"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "知識ベース"
+          },
+          "blocks": {
+            "title": "フレントを剋、古東",
+            "sections": {
+              "audit-reports": {
+                "items": {
+                  "intro": "![イメージ](/assets/ウェブサイト/ブロックチェーン/知識/アウディット HACKEN-BG.webp)"
+                }
+              },
+              "reports": {
+                "items": {
+                  "audit-report-2": {
+                    "title": "フラエデケンタルを前消涕のモーバンセカ、廴反入用を加ですにきます"
+                  },
+                  "audit-report-3": {
+                    "title": "<1>ブロックチェーンセキュリティ分析レポート<1>"
+                  },
+                  "audit-report-4": {
+                    "title": "SVMゲートウェイセキュリティ分析レポート"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

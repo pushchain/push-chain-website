@@ -1,0 +1,19 @@
+{
+  "components": {
+    "blog": {
+      "featured": {
+        "title": "精选文章",
+        "post-aria-label": "精选博客文章: {{title}}",
+        "image-alt": "为 {{title}} 提供的精选图片"
+      },
+      "tags": {
+        "title": "按主题浏览",
+        "tag-link-title": "查看带有{{tagName}}标签的文章",
+        "tag-link-aria-label": "查看带有 {{tagName}} 标签的文章"
+      },
+      "list": {
+        "recent-updates": "最近的文章"
+      }
+    }
+  }
+}

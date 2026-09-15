@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/universal-transaction-request.json",
+  "title": "UniversalTransactionRequest",
+  "description": "Transaction object passed to pushChainClient.universal.sendTransaction(). Routing is determined by the shape of 'to' and 'from' fields.",
+  "type": "object",
+  "properties": {
+    "to": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$",
+          "description": "Plain address triggers Push Chain execution (Route 1)"
+        },
+        {
+          "type": "object",
+          "description": "Object with address and chain triggers external chain execution (Route 2)",
+          "properties": {
+            "address": {
+              "type": "string",
+              "pattern": "^0x[a-fA-F0-9]{40}$",
+              "description": "Target contract or EOA address on the external chain"
+            },
+            "chain": {
+              "type": "string",
+              "description": "Chain identifier from PushChain.CONSTANTS.CHAIN (e.g., 'eip155:11155111' for Ethereum Sepolia)",
+              "examples": ["eip155:11155111", "eip155:42101", "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"]
+            }
+          },
+          "required": ["address", "chain"],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Defines the execution target. Plain address = Push Chain. Object with chain = external chain."
+    },
+    "from": {
+      "type": "object",
+      "description": "Optional. When set to an external chain, execution uses the Chain Executor Account (CEA) for that chain as the transaction origin (Route 3).",
+      "properties": {
+        "chain": {
+          "type": "string",
+          "description": "Chain identifier from PushChain.CONSTANTS.CHAIN",
+          "examples": ["eip155:11155111", "eip155:1"]
+        }
+      },
+      "required": ["chain"],
+      "additionalProperties": false
+    },
+    "value": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Native value to send as BigInt string. On Push Chain this is uPC (smallest unit, like wei). On external routes, maps to native asset of that chain.",
+      "examples": ["0", "100000000000000000"]
+    },
+    "data": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]*$",
+          "description": "ABI-encoded calldata for a single call"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]*$"
+          },
+          "description": "Array of ABI-encoded calldata for batched multicall payload"
+        }
+      ],
+      "description": "Calldata for contract interaction. String for single call, Array for multicall batch."
+    },
+    "funds": {
+      "type": "object",
+      "description": "Moves supported assets as part of the transaction flow. Asset movement and execution happen atomically when tx.data is provided.",
+      "properties": {
+        "amount": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Amount to move as BigInt string"
+        },
+        "token": {
+          "type": "string",
+          "description": "Token identifier from PushChain.CONSTANTS.MOVEABLE.TOKEN. If omitted, defaults to native asset.",
+          "examples": ["NATIVE", "USDC"]
+        }
+      },
+      "required": ["amount"],
+      "additionalProperties": false
+    },
+    "progressHook": {
+      "description": "Callback function to receive progress updates during transaction lifecycle. Type: (progress: ProgressHookType) => void",
+      "status": "documented"
+    }
+  },
+  "required": ["to"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "to": "0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF",
+      "value": "100000000000000000"
+    },
+    {
+      "to": {
+        "address": "0xContractOnEthereum",
+        "chain": "eip155:11155111"
+      },
+      "data": "0x..."
+    },
+    {
+      "from": {
+        "chain": "eip155:11155111"
+      },
+      "to": "0xContractOnPushChain",
+      "data": "0x..."
+    }
+  ]
+}
