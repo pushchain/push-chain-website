@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "version": "1.2.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "current_sdk_version": "6.0.25",
+  "generated": "2026-09-16T00:00:00.000Z",
   "description": "Catalog of Push Chain SDK error conditions with detection signals, user-visible symptoms, machine recovery steps, and escalation guidance. Cross-reference with agents/recovery-playbook.md for step-by-step procedures.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .errors[]. Change errors.json[N] → errors.json.errors[N].",
   "errors": [
@@ -507,6 +507,61 @@
         "Never hand-construct PC-20 burn payloads"
       ],
       "escalation": "If the current SDK still produces this, escalate with the SDK version and the prepared payload shape.",
+      "confidence": "documented"
+    },
+    {
+      "id": "read_timeout",
+      "name": "ReadTimeoutError",
+      "description": "The client polling deadline elapsed; the request may still complete.",
+      "likely_cause": "The client polling deadline elapsed; the request may still complete.",
+      "detection_signal": "error.code === 'READ_TIMEOUT'",
+      "user_visible_symptom": "Read request or tracking did not complete normally.",
+      "machine_recovery": [
+        "Resume trackRead using requestId or txHash and call wait.",
+        "Do not submit another request solely because the client timed out."
+      ],
+      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
+      "confidence": "documented"
+    },
+    {
+      "id": "read_request_mismatch",
+      "name": "ReadStateError",
+      "description": "Application emitted missing, extra or mismatched request events.",
+      "likely_cause": "Application emitted missing, extra or mismatched request events.",
+      "detection_signal": "error.code === 'READ_REQUEST_MISMATCH'",
+      "user_visible_symptom": "Read request or tracking did not complete normally.",
+      "machine_recovery": [
+        "Recover transactionHashes through trackRead.",
+        "Ensure each request entrypoint emits exactly one matching read."
+      ],
+      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
+      "confidence": "documented"
+    },
+    {
+      "id": "read_request_tx_failed",
+      "name": "ReadStateError",
+      "description": "A request transaction reverted or a sequential batch failed after submission.",
+      "likely_cause": "A request transaction reverted or a sequential batch failed after submission.",
+      "detection_signal": "error.code === 'READ_REQUEST_TX_FAILED'",
+      "user_visible_symptom": "Read request or tracking did not complete normally.",
+      "machine_recovery": [
+        "Recover committed transactionHashes.",
+        "Check pendingTransactionHash receipt before retrying an uncertain broadcast."
+      ],
+      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
+      "confidence": "documented"
+    },
+    {
+      "id": "read_registry_unavailable",
+      "name": "ReadRegistryUnavailableError",
+      "description": "The chosen network has no configured canonical registry.",
+      "likely_cause": "The chosen network has no configured canonical registry.",
+      "detection_signal": "error.code === 'READ_REGISTRY_UNAVAILABLE'",
+      "user_visible_symptom": "Read request or tracking did not complete normally.",
+      "machine_recovery": [
+        "Use TESTNET_DONUT or supply a deployed custom receiver with its ABI/function and callback gas."
+      ],
+      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
       "confidence": "documented"
     }
   ]

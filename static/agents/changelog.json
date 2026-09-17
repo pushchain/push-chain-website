@@ -1,11 +1,21 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.26",
-  "current_sdk_version": "6.0.24",
-  "current_version": "1.0.26",
-  "generated": "2026-09-02T00:00:00.000Z",
+  "version": "1.0.27",
+  "current_sdk_version": "6.0.25",
+  "current_version": "1.0.27",
+  "generated": "2026-09-16T00:00:00.000Z",
   "description": "Version history of all /agents/ layer changes, SDK version bumps, and audit passes. Each entry includes the agent-layer content version, affected files, trigger description, and breaking/migration flags. current_version tracks the latest entry; version tracks this file's own schema revision.",
   "entries": [
+    {
+      "date": "2026-09-16T00:00:00.000Z",
+      "version": "1.0.27",
+      "breaking": false,
+      "migration": "Universal Read is a separate paid capability from ordinary read_blockchain_state RPC queries.",
+      "changes": [
+        "Document core 6.0.25 Universal Read: four methods, internal registry helpers, flattened callback and remaining-lifetime timeout.",
+        "Add workflow, method/capability definitions, error recovery, routing guidance and extracted playgrounds."
+      ]
+    },
     {
       "date": "2026-09-02T00:00:00.000Z",
       "version": "1.0.26",

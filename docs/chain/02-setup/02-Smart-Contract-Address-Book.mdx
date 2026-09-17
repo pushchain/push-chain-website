@@ -41,6 +41,15 @@ Core protocol contracts deployed natively on Push Chain Donut Testnet. These con
 | UEA_SVM Implementation            | [0x3cab28b2d179258ce3246385977aae4b4A4b40C9](https://donut.push.network/address/0x3cab28b2d179258ce3246385977aae4b4A4b40C9?tab=contract) <Details summary="Purpose" className='alert alert--minimal-api-table detail-box'>Logic contract for SVM (Solana)-compatible UEAs</Details>                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | UProxyAdmin                       | [0x00000000000000000000000000000000000000aA](https://donut.push.network/address/0x00000000000000000000000000000000000000aA?tab=contract) `Proxy` <Details summary="Purpose" className='alert alert--minimal-api-table detail-box'>User-facing proxy admin for universal contracts</Details> <Details summary="Other Details" className='alert alert--minimal-api-table detail-box'>Implementation - [0xF1000000000000000000000000000000000000aA](https://donut.push.network/address/0xF1000000000000000000000000000000000000aA?tab=contract)<br/>ProxyAdmin - [0xF2000000000000000000000000000000000000aA](https://donut.push.network/address/0xF2000000000000000000000000000000000000aA?tab=contract)</Details>                                  |
 
+### Universal Read (Donut)
+
+| Contract | Address |
+| --- | --- |
+| UniversalCallback predeploy | `0x00000000000000000000000000000000000000c2` |
+| UniversalReadRegistry proxy | `0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8` |
+
+The SDK defaults to this registry only on `TESTNET_DONUT`. It calls `read(spec, queryKey, callbackGasLimit)` with 500,000 callback gas by default. Other networks need a verified deployment or an application receiver. See [Universal Read](/docs/chain/build/universal-read/).
+
 ### EVM Default Precompiles
 
 Standard precompiles available on all Cosmos EVM chains, including Push Chain.

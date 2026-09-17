@@ -33,6 +33,10 @@ const SDK_METHODS = [
   'PushChain.initialize',
   'pushChainClient.universal.sendTransaction',
   'pushChainClient.universal.trackTransaction',
+  'pushChainClient.universal.read',
+  'pushChainClient.universal.prepareRead',
+  'pushChainClient.universal.executeReads',
+  'pushChainClient.universal.trackRead',
   'pushChainClient.universal.signMessage',
   'pushChainClient.universal.signTypedData',
   'pushChainClient.getAccountStatus',
@@ -414,6 +418,11 @@ const TARGET_PAGES = [
     file: '03-build/01-advanced/01-Custom-Universal-Signer.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/advanced/custom-universal-signer/',
+  },
+  {
+    file: '03-build/13a-Universal-Read.mdx',
+    type: 'sdk',
+    url: 'https://push.org/docs/chain/build/universal-read/',
   },
   {
     file: '03-build/01-advanced/02-Upgrade-Universal-Account.mdx',

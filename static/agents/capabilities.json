@@ -1,10 +1,11 @@
 {
   "schema_version": "1.1.0",
   "version": "1.3.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "current_sdk_version": "6.0.25",
+  "generated": "2026-09-16T00:00:00.000Z",
   "description": "Intent-level agent capabilities — what an agent can do with Push Chain. For the complete SDK method surface with signatures see sdk-capabilities.json. Utilities (parseUnits, formatUnits, encodeTxData, chain/token discovery, constants) and raw ethers.js operations are API primitives consumed inside these capabilities rather than standalone agent intents.",
   "prerequisite_glossary": {
+    "funded_push_account": "The sending Push account can cover request gas, protocol fee and callback budget",
     "sdk_imported": "@pushchain/core is imported — check with `typeof PushChain !== 'undefined'`",
     "universal_signer_created": "A UniversalSigner was created via PushChain.utils.signer.toUniversal() or toUniversalFromKeypair()",
     "network_selected": "A valid PUSH_NETWORK constant has been chosen (e.g. PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT)",
@@ -28,9 +29,16 @@
       "id": "initialize_client",
       "name": "Initialize Push Chain Client",
       "description": "Creates a PushChainClient instance with universal signer for cross-chain transaction execution.",
-      "actor": ["developer", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["universal_signer_created", "network_selected"],
+      "prerequisites": [
+        "universal_signer_created",
+        "network_selected"
+      ],
       "inputs": [
         {
           "name": "signer",
@@ -88,9 +96,15 @@
       "id": "create_universal_signer",
       "name": "Create Universal Signer",
       "description": "Wraps any EVM or non-EVM signer into a UniversalSigner for cross-chain transaction signing.",
-      "actor": ["developer", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["signer_library_available"],
+      "prerequisites": [
+        "signer_library_available"
+      ],
       "inputs": [
         {
           "name": "signer",
@@ -118,9 +132,15 @@
       "id": "create_universal_signer_from_keypair",
       "name": "Create Universal Signer from Keypair",
       "description": "Converts a Solana keypair or similar non-EVM keypair to a UniversalSigner.",
-      "actor": ["developer", "backend"],
+      "actor": [
+        "developer",
+        "backend"
+      ],
       "operation": "write",
-      "prerequisites": ["keypair_available", "chain_and_library_specified"],
+      "prerequisites": [
+        "keypair_available",
+        "chain_and_library_specified"
+      ],
       "inputs": [
         {
           "name": "keypair",
@@ -160,9 +180,17 @@
       "id": "send_universal_transaction",
       "name": "Send Universal Transaction",
       "description": "Executes transfers, contract calls, or batched transactions on Push Chain or external chains via a unified interface.",
-      "actor": ["developer", "end_user", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "end_user",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "tx.to",
@@ -256,9 +284,16 @@
       "id": "send_multichain_transaction",
       "name": "Send Multichain Transaction",
       "description": "Executes transactions targeting external chains via Chain Executor Accounts (CEAs).",
-      "actor": ["developer", "end_user", "agent", "backend"],
+      "actor": [
+        "developer",
+        "end_user",
+        "agent",
+        "backend"
+      ],
       "operation": "write",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "tx.to",
@@ -352,9 +387,14 @@
       "id": "contract_initiated_multichain",
       "name": "Contract-Initiated Multichain Execution",
       "description": "Smart contracts on Push Chain initiate execution on external chains via CEA system using IUniversalGatewayPC.",
-      "actor": ["developer"],
+      "actor": [
+        "developer"
+      ],
       "operation": "write",
-      "prerequisites": ["smart_contract_deployed", "cea_system_configured"],
+      "prerequisites": [
+        "smart_contract_deployed",
+        "cea_system_configured"
+      ],
       "inputs": [
         {
           "name": "req.recipient",
@@ -400,9 +440,17 @@
       "id": "track_transaction",
       "name": "Track Universal Transaction",
       "description": "Resumes tracking any universal transaction by hash and origin chain. Works independently of sendTransaction — use for session restore, backend polling, or monitoring any stored tx hash. On Push Chain Donut, status queries automatically retry the archive RPC endpoints when the default pruned RPC no longer has the transaction (core v6.0.19+), so old hashes still resolve.",
-      "actor": ["developer", "end_user", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "end_user",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "tracking",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "txHash",
@@ -466,9 +514,16 @@
       "id": "sign_universal_message",
       "name": "Sign Universal Message",
       "description": "Signs arbitrary messages using the universal signer for verification purposes.",
-      "actor": ["developer", "end_user", "agent", "browser_agent"],
+      "actor": [
+        "developer",
+        "end_user",
+        "agent",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "message",
@@ -496,9 +551,16 @@
       "id": "read_blockchain_state",
       "name": "Read Blockchain State",
       "description": "Reads on-chain state from Push Chain using Ethers.js JsonRpcProvider or Viem PublicClient connected to the Push Chain EVM RPC endpoint. The default Donut RPC prunes old history — for full-history raw reads (old transactions/receipts) point the provider at the archive endpoint https://archive.evm.donut.rpc.push.org/ (SDK reads fall back to it automatically since core v6.0.19).",
-      "actor": ["developer", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["rpc_url_available"],
+      "prerequisites": [
+        "rpc_url_available"
+      ],
       "inputs": [
         {
           "name": "rpcUrl",
@@ -538,9 +600,16 @@
       "id": "connect_wallet_ui",
       "name": "Connect Wallet via UI Kit",
       "description": "Renders wallet connection modal supporting EVM and non-EVM wallets with email fallback.",
-      "actor": ["developer", "end_user", "browser_agent"],
+      "actor": [
+        "developer",
+        "end_user",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["react_app", "ui_kit_installed"],
+      "prerequisites": [
+        "react_app",
+        "ui_kit_installed"
+      ],
       "inputs": [
         {
           "name": "walletConfig.network",
@@ -573,9 +642,15 @@
       "id": "use_wallet_provider",
       "name": "Use Push Universal Wallet Provider",
       "description": "React context provider that abstracts wallet connections and provides pushChainClient.",
-      "actor": ["developer", "browser_agent"],
+      "actor": [
+        "developer",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["react_app", "ui_kit_installed"],
+      "prerequisites": [
+        "react_app",
+        "ui_kit_installed"
+      ],
       "inputs": [
         {
           "name": "walletConfig",
@@ -603,9 +678,15 @@
       "id": "initialize_evm_client",
       "name": "Initialize EVM Client",
       "description": "Creates ethers.js or viem client connected to Push Chain RPC for direct EVM operations.",
-      "actor": ["developer", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["rpc_url_available"],
+      "prerequisites": [
+        "rpc_url_available"
+      ],
       "inputs": [
         {
           "name": "rpcUrl",
@@ -633,9 +714,16 @@
       "id": "get_constants",
       "name": "Get Constants Reference",
       "description": "Access all PushChain.CONSTANTS values for networks, chains, libraries, and tokens.",
-      "actor": ["developer", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["sdk_imported"],
+      "prerequisites": [
+        "sdk_imported"
+      ],
       "inputs": [],
       "outputs": [
         {
@@ -656,9 +744,15 @@
       "id": "use_utility_functions",
       "name": "Use Utility Functions",
       "description": "Access helper utilities for parsing units, encoding data, account operations, and token resolution — including getPRC20Address (sync, static table — external-born tokens mirrored into Push Chain as PRC-20s) and getPC20Address (async, UniversalCore on-chain registry — Push-born PC-20 tokens and their external wrappers).",
-      "actor": ["developer", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["sdk_imported"],
+      "prerequisites": [
+        "sdk_imported"
+      ],
       "inputs": [],
       "outputs": [
         {
@@ -679,9 +773,13 @@
       "id": "use_contract_helpers",
       "name": "Use Contract Helpers",
       "description": "Access deployed helper contracts for origin chain detection and user categorization.",
-      "actor": ["developer"],
+      "actor": [
+        "developer"
+      ],
       "operation": "read",
-      "prerequisites": ["evm_client_initialized"],
+      "prerequisites": [
+        "evm_client_initialized"
+      ],
       "inputs": [
         {
           "name": "address",
@@ -714,9 +812,16 @@
       "id": "get_account_status",
       "name": "Get Account Status",
       "description": "Returns UEA deployment status, version info, and upgrade requirements for an account.",
-      "actor": ["developer", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "options.forceRefresh",
@@ -764,7 +869,11 @@
       "id": "upgrade_account",
       "name": "Upgrade Universal Account",
       "description": "Upgrades UEA to latest required implementation version via gasless signature operation.",
-      "actor": ["developer", "end_user", "agent"],
+      "actor": [
+        "developer",
+        "end_user",
+        "agent"
+      ],
       "operation": "write",
       "prerequisites": [
         "push_chain_client_initialized",
@@ -797,9 +906,15 @@
       "id": "reinitialize_client",
       "name": "Reinitialize Client",
       "description": "Reinitializes PushChainClient with different signer/account or updated configuration.",
-      "actor": ["developer", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "signerOrAccount",
@@ -833,9 +948,13 @@
       "id": "construct_custom_signer",
       "name": "Construct Custom Universal Signer",
       "description": "Manually constructs a UniversalSigner with custom signing function implementations.",
-      "actor": ["developer"],
+      "actor": [
+        "developer"
+      ],
       "operation": "write",
-      "prerequisites": ["custom_signing_logic"],
+      "prerequisites": [
+        "custom_signing_logic"
+      ],
       "inputs": [
         {
           "name": "account",
@@ -887,9 +1006,14 @@
       "id": "use_push_wallet_context",
       "name": "Use Push Wallet Context Hook",
       "description": "React hook to access wallet connection status and actions from PushUniversalWalletProvider.",
-      "actor": ["developer", "browser_agent"],
+      "actor": [
+        "developer",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["inside_push_wallet_provider"],
+      "prerequisites": [
+        "inside_push_wallet_provider"
+      ],
       "inputs": [],
       "outputs": [
         {
@@ -910,9 +1034,15 @@
       "id": "use_push_chain_client_hook",
       "name": "Use Push Chain Client Hook",
       "description": "React hook to access the initialized pushChainClient from wallet provider context.",
-      "actor": ["developer", "browser_agent"],
+      "actor": [
+        "developer",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["inside_push_wallet_provider", "wallet_connected"],
+      "prerequisites": [
+        "inside_push_wallet_provider",
+        "wallet_connected"
+      ],
       "inputs": [],
       "outputs": [
         {
@@ -933,9 +1063,16 @@
       "id": "execute_transaction_cascade",
       "name": "Execute Transaction Cascade (Multi-Hop)",
       "description": "Prepares multiple universal transactions then executes them atomically as a single-signature multi-hop cascade. Use prepareTransaction() for each hop, then executeTransactions([...]) for submission. Required for any multi-chain sequence that must be signed once — this is the canonical cascade pattern in both backend and frontend skill files.",
-      "actor": ["developer", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "txs[].to",
@@ -1029,9 +1166,16 @@
       "id": "sign_universal_typed_data",
       "name": "Sign Universal Typed Data (EIP-712)",
       "description": "Signs EIP-712 typed structured data using the universal signer. Required for Permit2, Uniswap v3/v4, OpenSea Seaport, and any protocol using off-chain typed-data authorizations (gasless approvals, order matching, etc.).",
-      "actor": ["developer", "end_user", "agent", "browser_agent"],
+      "actor": [
+        "developer",
+        "end_user",
+        "agent",
+        "browser_agent"
+      ],
       "operation": "write",
-      "prerequisites": ["push_chain_client_initialized"],
+      "prerequisites": [
+        "push_chain_client_initialized"
+      ],
       "inputs": [
         {
           "name": "typedDataArgs",
@@ -1059,9 +1203,16 @@
       "id": "derive_executor_account",
       "name": "Derive Executor Account (Off-Chain)",
       "description": "Computes the deterministic UEA (Universal Executor Account on Push Chain) or CEA (Chain Executor Account on an external chain) address for any origin account without an on-chain call. Use for gas-estimation pre-flight, balance checks before transacting, whitelisting the CEA on target contracts, and any identity-resolution flow that needs the address before submitting a tx.",
-      "actor": ["developer", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["sdk_imported"],
+      "prerequisites": [
+        "sdk_imported"
+      ],
       "inputs": [
         {
           "name": "uoa",
@@ -1101,9 +1252,16 @@
       "id": "resolve_controller_account",
       "name": "Resolve Controller Account (Off-Chain)",
       "description": "Recursively resolves the controlling origin wallet (UOA) behind any executor address — UEA → UOA, or CEA → Push account → UOA. Complement of derive_executor_account: where derive goes forward (UOA→executor), resolve goes backward (executor→UOA). Use for identity verification, attribution, and building origin-aware UIs that show which chain/wallet is ultimately in control.",
-      "actor": ["developer", "agent", "backend", "browser_agent"],
+      "actor": [
+        "developer",
+        "agent",
+        "backend",
+        "browser_agent"
+      ],
       "operation": "read",
-      "prerequisites": ["sdk_imported"],
+      "prerequisites": [
+        "sdk_imported"
+      ],
       "inputs": [
         {
           "name": "account",
@@ -1137,6 +1295,50 @@
       "safe_for_autonomous_execution": true,
       "mcp_candidate": true,
       "docs_url": "https://push.org/docs/chain/build/utility-functions/",
+      "stability": "stable"
+    },
+    {
+      "id": "universal_read",
+      "name": "Request external state on Push Chain",
+      "description": "Paid validator-agreed EVM, Solana or Web2 reads delivered to a Push receiver. Distinct from read_blockchain_state RPC queries.",
+      "actor": [
+        "developer",
+        "backend",
+        "agent"
+      ],
+      "operation": "write",
+      "prerequisites": [
+        "push_chain_client_initialized",
+        "universal_signer_created",
+        "funded_push_account"
+      ],
+      "inputs": [
+        {
+          "name": "subject",
+          "type": "string",
+          "required": true,
+          "description": "Holder, contract address or HTTPS URL"
+        },
+        {
+          "name": "options",
+          "type": "ReadOptions",
+          "required": true,
+          "description": "Required chain and exclusive query kind; optional flattened callback configuration"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "UniversalReadResponse",
+          "description": "Lifecycle, raw result, callback delivery, decoded value and observed fees"
+        }
+      ],
+      "sdk_method": "pushChainClient.universal.read",
+      "invocation_type": "sdk",
+      "auth_required": true,
+      "safe_for_autonomous_execution": false,
+      "mcp_candidate": false,
+      "docs_url": "https://push.org/docs/chain/build/universal-read/",
       "stability": "stable"
     }
   ]

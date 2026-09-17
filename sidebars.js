@@ -226,6 +226,10 @@ const sidebars = {
         },
         {
           type: 'doc',
+          id: 'chain/build/docs-chain-build-universal-read',
+        },
+        {
+          type: 'doc',
           id: 'chain/build/docs-chain-build-contract-helpers',
         },
         {

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "version": "1.1.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T22:38:22.658Z",
+  "current_sdk_version": "6.0.25",
+  "generated": "2026-09-16T13:48:01.980Z",
   "description": "Full index of all Push Chain code examples with SDK methods used, prerequisite examples, chains involved, and difficulty metadata. Referenced by agents/index.json as the canonical example catalog.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .examples[]. Change examples/index.json[N] → examples/index.json.examples[N].",
   "examples": [
@@ -840,6 +840,49 @@
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
+    },
+    {
+      "id": "universal-read-registry",
+      "name": "First read: the Donut registry",
+      "file": "universal-read-registry.md",
+      "description": "Code example: First read: the Donut registry — https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-batch",
+      "name": "Prepare and batch reads",
+      "file": "universal-read-batch.md",
+      "description": "Code example: Prepare and batch reads — https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareRead",
+        "pushChainClient.universal.executeReads"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-resume",
+      "name": "Resume a request",
+      "file": "universal-read-resume.md",
+      "description": "Code example: Resume a request — https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.initialize",
+        "pushChainClient.universal.trackRead",
+        "PushChain.utils.account.toUniversal"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
     }
   ]
 }

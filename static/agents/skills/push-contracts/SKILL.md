@@ -5,7 +5,7 @@ metadata:
   id: push-contracts
   intent: 'Write Solidity contracts on Push Chain - identify cross-chain callers, dispatch outbound txs via UGPC, receive inbound callbacks'
   package: 'solidity (EVM-compatible - Hardhat / Foundry / Remix)'
-  current_sdk_version: '6.0.19'
+  current_sdk_version: '6.0.25'
   entry: 'IUniversalGatewayPC.sendUniversalTxOutbound'
   resources: 'https://push.org/agents/resources/push-contracts/index.json'
   references: 'references/contract-interfaces.md'
@@ -974,3 +974,8 @@ Copy these files into your contracts directory - self-contained and ready to com
 - [Universal counter example](https://push.org/agents/examples/tutorial-universal-counter.md)
 - [Derive UEA example](https://push.org/agents/examples/tutorial-derive-uea.md)
 - [Batch transactions example](https://push.org/agents/examples/tutorial-batch-transactions.md)
+
+
+## Universal Read (core 6.0.25)
+
+See [Universal Read](https://push.org/docs/chain/build/universal-read/) and `agents/workflows/universal-read.md`. Paid external-state requests use `read` / `executeReads`; `prepareRead` / `trackRead` do not broadcast. Custom receivers use flattened `callback: { target, gasLimit, abi, functionName, args? }`. Authorize the real Push-side requester (`pushChainClient.universal.account`); an external signer calls through its UEA, so authorizing only the deployment EOA can reject valid requests. Check consensus success, callback delivery and decoding before using the value. Resume timeouts by saved references, and never put secrets in Web2 requests. Registry helpers are internal; do not invent public lookup APIs. Contract callbacks must authenticate the callback predeploy and must not initiate nested reads.

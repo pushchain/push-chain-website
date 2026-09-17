@@ -3,22 +3,22 @@
   "schema_version": "1.0.0",
   "version": "1.3.0",
   "version_policy": "All files in /agents/ carry schema_version (bumps only when the file's field layout changes — signals a consumer code update is needed) and version (bumps when content changes — backward-compatible by default). Per-file versioning is intentional: contract-addresses.json can be at 1.1.0 while index.json remains at 1.0.0 because each file evolves on its own cadence. changelog.json entries additionally carry breaking and migration fields so agents can detect whether a version change requires action.",
-  "current_sdk_version": "6.0.24",
+  "current_sdk_version": "6.0.25",
   "sdk_version": {
-    "@pushchain/core": "6.0.24",
+    "@pushchain/core": "6.0.25",
     "@pushchain/ui-kit": "6.0.24"
   },
-  "generated": "2026-09-02T00:00:00.000Z",
+  "generated": "2026-09-16T00:00:00.000Z",
   "sub_indexes": [
     {
       "category": "examples",
       "path": "agents/examples/index.json",
-      "count": 64
+      "count": 67
     },
     {
       "category": "workflows",
       "path": "agents/workflows/index.json",
-      "count": 18
+      "count": 19
     },
     {
       "category": "resources",
@@ -46,7 +46,12 @@
     "transport": "streamable-http",
     "protocol_version": "2025-11-25",
     "discovery": "https://push.org/.well-known/mcp.json",
-    "tools": ["search_docs", "get_page", "list_sections", "get_agent_resource"],
+    "tools": [
+      "search_docs",
+      "get_page",
+      "list_sections",
+      "get_agent_resource"
+    ],
     "notes": "Read-only docs access; stateless, no API key. SDK-operation tool candidates live in agents/mcp-candidates.json and remain reference definitions."
   },
   "files": [
@@ -348,6 +353,11 @@
   ],
   "canonical_workflows": [
     {
+      "name": "Universal Read",
+      "path": "agents/workflows/universal-read.md",
+      "description": "Request validator-agreed external state, receive a Push callback, and resume by saved request references."
+    },
+    {
       "name": "Initialize and Send First Transaction",
       "path": "agents/workflows/send-universal-transaction.md",
       "description": "Create UniversalSigner, initialize PushChainClient, send a transaction to Push Chain. Start here for most integrations."
@@ -376,7 +386,9 @@
     },
     {
       "source": "Full Documentation Dump",
-      "urls": ["https://push.org/llms-full.txt"],
+      "urls": [
+        "https://push.org/llms-full.txt"
+      ],
       "authority": 1,
       "notes": "Complete text of all documentation pages, use for deep context or when specific page content is needed"
     },
@@ -391,13 +403,17 @@
     },
     {
       "source": "Push Blog",
-      "urls": ["https://push.org/blog/"],
+      "urls": [
+        "https://push.org/blog/"
+      ],
       "authority": 3,
       "notes": "Conceptual explanations and announcements, not API reference"
     },
     {
       "source": "GitHub Repository",
-      "urls": ["https://github.com/push-protocol/push-chain-sdk"],
+      "urls": [
+        "https://github.com/push-protocol/push-chain-sdk"
+      ],
       "authority": 2,
       "notes": "Source code and inline comments, status: inferred"
     }

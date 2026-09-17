@@ -26,6 +26,12 @@ When building smart contract applications on Push Chain, you’ll at times need 
 
 One primary helper is the Universal Executor Account Factory (UEAFactory), which underpins Push Chain’s multi‐chain smart account abstraction.
 
+## UniversalReadClient
+
+Inherit `UniversalReadClient` to request external state and receive it on Push Chain. `_requestRead(spec, localState, callbackGasLimit)` submits the request and preserves local context; `_onReadResult(requestId, resultData, localState)` handles delivery. The base class restricts the public callback to `UniversalCallback`.
+
+Use a payable request entrypoint and a refund recipient that accepts native Push transfers. Authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer. Do not assume the deployment EOA is the runtime caller. Requests initiated during a result callback are unsupported. See the [complete receiver example](/docs/chain/build/universal-read/#integrate-your-own-contract) for constructor configuration, request ABI and SDK usage.
+
 ## Universal Executor Account Factory
 
 > As previously mentioned, [Universal Executor Accounts (UEAs)](/docs/chain/important-concepts#account-types-on-push-chain) are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain.

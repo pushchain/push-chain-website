@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "version": "1.1.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "current_sdk_version": "6.0.25",
+  "generated": "2026-09-16T00:00:00.000Z",
   "description": "Feature availability matrix showing which Push Chain capabilities are supported per actor type (developer, end_user, agent, backend). Cross-reference with capabilities.json for full capability definitions.",
   "legend": {
     "true": "Fully supported for this actor type",
@@ -169,6 +169,14 @@
       "end_user": true,
       "agent": false,
       "backend": false
+    },
+    {
+      "feature": "universal_read",
+      "description": "Paid external-state request with validator quorum and on-chain callback; prepare/track are read-only. Requires core 6.0.25.",
+      "developer": true,
+      "end_user": "partial",
+      "agent": true,
+      "backend": true
     }
   ]
 }

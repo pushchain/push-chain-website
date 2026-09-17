@@ -227,6 +227,12 @@ Push Chain represents tokens in two directions. Which standard a token uses tell
 > PRC-20 = a foreign token, wearing a Push jacket.  
 > PC-20 = a Push token, wearing a foreign jacket.
 
+## Universal Read
+
+[Universal Read](/docs/chain/build/universal-read/) brings validator-agreed state from an external blockchain or HTTPS endpoint into a Push contract. A request is submitted on Push Chain, validators vote on the result, and `UniversalCallback` delivers the bytes to a receiver. Each request has its own expiry and callback budget.
+
+Use ordinary RPC queries when only your frontend/backend needs the data. Use Universal Read when you need on-chain delivery. The SDK can use Donut's shared registry or your own `UniversalReadClient`; initiating a read is a paid transaction, while preparation and tracking are read-only.
+
 ## Next Steps
 
 - Setup your [Environment and Tooling](/docs/chain/setup/)

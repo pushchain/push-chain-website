@@ -5,8 +5,8 @@ metadata:
   id: push-backend
   intent: 'Execute universal transactions from server-side code, scripts, bots, and automation'
   package: '@pushchain/core'
-  package_version: '6.0.24'
-  current_sdk_version: '6.0.24'
+  package_version: '6.0.25'
+  current_sdk_version: '6.0.25'
   entry: 'PushChain.initialize'
   resources: 'https://push.org/agents/resources/push-backend/index.json'
   references: 'references/signer-options.md, references/initialize-client.md, references/send-universal-transaction.md, ../../workflows/send-multichain-transaction.md'
@@ -1193,3 +1193,8 @@ Copy these files into your project - self-contained and ready to run:
 - [Initialize with ethers.js example](https://push.org/agents/examples/initialize-client-ethers.md)
 - [Initialize with viem example](https://push.org/agents/examples/initialize-client-viem.md)
 - [Send to external chain example](https://push.org/agents/examples/send-transaction-external-chain.md)
+
+
+## Universal Read (core 6.0.25)
+
+See [Universal Read](https://push.org/docs/chain/build/universal-read/) and `agents/workflows/universal-read.md`. Paid external-state requests use `read` / `executeReads`; `prepareRead` / `trackRead` do not broadcast. Custom receivers use flattened `callback: { target, gasLimit, abi, functionName, args? }`. Check consensus success, callback delivery and decoding before using the value. Resume timeouts by saved references, and never put secrets in Web2 requests. Registry helpers are internal; do not invent public lookup APIs. Contract callbacks must authenticate the callback predeploy and must not initiate nested reads.

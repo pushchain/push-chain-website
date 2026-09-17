@@ -6,7 +6,7 @@ metadata:
   intent: 'Enable universal transactions in a React frontend app'
   package: '@pushchain/ui-kit'
   package_version: '6.0.24'
-  current_sdk_version: '6.0.24'
+  current_sdk_version: '6.0.25'
   entry: 'usePushChainClient'
   resources: 'https://push.org/agents/resources/push-frontend/index.json'
   references: 'references/ui-components.md'
@@ -646,3 +646,10 @@ Copy these files into your project - self-contained and ready to run:
 - [Sign universal message](https://push.org/agents/workflows/sign-universal-message.md)
 - [Wallet provider React example](https://push.org/agents/examples/wallet-provider-react.md)
 - [Execute transaction examples](https://push.org/agents/examples/execute-transactions.md)
+
+
+## Universal Read (core 6.0.25)
+
+Use a client initialized from `@pushchain/core@6.0.25`. This site's UI Kit pin is still 6.0.24; do not assume its bundled client exposes Read State merely because the application separately installs a newer core SDK.
+
+See [Universal Read](https://push.org/docs/chain/build/universal-read/) and `agents/workflows/universal-read.md`. Paid external-state requests use `read` / `executeReads`; `prepareRead` / `trackRead` do not broadcast. Custom receivers use flattened `callback: { target, gasLimit, abi, functionName, args? }`. Check consensus success, callback delivery and decoding before using the value. Resume timeouts by saved references, and never put secrets in Web2 requests. Registry helpers are internal; do not invent public lookup APIs. Contract callbacks must authenticate the callback predeploy and must not initiate nested reads.

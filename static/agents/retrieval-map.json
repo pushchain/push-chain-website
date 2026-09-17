@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "version": "1.2.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "current_sdk_version": "6.0.25",
+  "generated": "2026-09-16T00:00:00.000Z",
   "base_url": "https://push.org",
   "description": "Maps every major task and capability to its authoritative documentation source. Use this as the entry point for RAG and retrieval systems.",
   "entries": [
@@ -28,7 +28,9 @@
         "agents/examples/initialize-client-ethers.md",
         "agents/examples/initialize-client-solana.md"
       ],
-      "prefer_over": ["npm README"],
+      "prefer_over": [
+        "npm README"
+      ],
       "notes": "Always start here. Returns PushChainClient with .universal, .orchestrator, .explorer namespaces."
     },
     {
@@ -251,7 +253,10 @@
           "normative": false
         }
       ],
-      "agent_files": ["agents/constants.json", "agents/supported-chains.json"],
+      "agent_files": [
+        "agents/constants.json",
+        "agents/supported-chains.json"
+      ],
       "prefer_over": [],
       "notes": "agents/constants.json is the canonical lookup for all CHAIN, PUSH_NETWORK, LIBRARY, and MOVEABLE.TOKEN values."
     },
@@ -304,7 +309,10 @@
           "normative": true
         }
       ],
-      "agent_files": ["agents/capabilities.json", "agents/errors.json"],
+      "agent_files": [
+        "agents/capabilities.json",
+        "agents/errors.json"
+      ],
       "prefer_over": [],
       "notes": "Check before sending if UEA may need upgrade. Returns { uea: { deployed, requiresUpgrade, version } }."
     },
@@ -338,7 +346,9 @@
           "status": "inferred"
         }
       ],
-      "agent_files": ["agents/workflows/initialize-client.md"],
+      "agent_files": [
+        "agents/workflows/initialize-client.md"
+      ],
       "prefer_over": [],
       "notes": "Used when wallet switches or session resets. status: inferred."
     },
@@ -420,7 +430,9 @@
         "agents/capabilities.json",
         "agents/skills/push-contracts/SKILL.md"
       ],
-      "prefer_over": ["blog posts"],
+      "prefer_over": [
+        "blog posts"
+      ],
       "notes": "Smart contract account on Push Chain derived deterministically from (chainNamespace, chainId, walletAddress). Lazy-deployed on first use. When external user calls a Push Chain contract, msg.sender = UEA address. Use IUEAFactory.getOriginForUEA(msg.sender) to recover origin. push-contracts/SKILL.md has the full flow diagram and two-direction comparison table."
     },
     {
@@ -435,8 +447,12 @@
           "normative": true
         }
       ],
-      "agent_files": ["agents/README.md"],
-      "prefer_over": ["blog posts"],
+      "agent_files": [
+        "agents/README.md"
+      ],
+      "prefer_over": [
+        "blog posts"
+      ],
       "notes": "The user's source chain wallet (Ethereum EOA, Solana pubkey). The controller that authorizes execution."
     },
     {
@@ -455,7 +471,9 @@
         "agents/README.md",
         "agents/workflows/send-multichain-transaction.md"
       ],
-      "prefer_over": ["blog posts"],
+      "prefer_over": [
+        "blog posts"
+      ],
       "notes": "Executor account on external chains representing UEA. Used in Route 2 and Route 3."
     },
     {
@@ -476,8 +494,13 @@
           "normative": true
         }
       ],
-      "agent_files": ["agents/README.md", "agents/feature-matrix.json"],
-      "prefer_over": ["blog posts"],
+      "agent_files": [
+        "agents/README.md",
+        "agents/feature-matrix.json"
+      ],
+      "prefer_over": [
+        "blog posts"
+      ],
       "notes": "Users pay gas in native tokens (ETH, SOL). No PC token acquisition required. Route-prefixed progress events handle funding (SEND-TX-105-01/02 on Route 1, SEND-TX-205-* on Route 2)."
     },
     {
@@ -496,7 +519,9 @@
         "agents/README.md",
         "agents/workflows/initialize-client.md"
       ],
-      "prefer_over": ["blog posts"],
+      "prefer_over": [
+        "blog posts"
+      ],
       "notes": "Any supported wallet becomes a UniversalSigner. SDK derives UEA deterministically."
     },
     {
@@ -511,7 +536,10 @@
           "normative": true
         }
       ],
-      "agent_files": ["agents/supported-chains.json", "agents/constants.json"],
+      "agent_files": [
+        "agents/supported-chains.json",
+        "agents/constants.json"
+      ],
       "prefer_over": [],
       "notes": "CAIP-2 format: eip155:<chainId> for EVM, solana:<network> for Solana. Use PushChain.CONSTANTS.CHAIN.* for SDK values."
     },
@@ -690,7 +718,9 @@
           "normative": true
         }
       ],
-      "agent_files": ["agents/index.json"],
+      "agent_files": [
+        "agents/index.json"
+      ],
       "prefer_over": [],
       "notes": "llms-full.txt contains complete documentation dump. llms.txt contains high-level summary with file references. Both carry current SDK version at the top of the file."
     },
@@ -720,7 +750,10 @@
           "normative": false
         }
       ],
-      "agent_files": ["agents/skills/index.json", "agents/task-router.md"],
+      "agent_files": [
+        "agents/skills/index.json",
+        "agents/task-router.md"
+      ],
       "prefer_over": [],
       "notes": "PUSD is a first-party product on Push Chain with its own agent layer at pusd.push.org. Two integration paths: Path A (external-chain wallet, multicall in one signature) and Path B (native Push EOA, two signatures for mint). Donut Testnet contracts: PUSD 0x488d080e16386379561a47A4955D22001d8A9D89, PUSDManager 0x7A24Eea43a1095e9Dc652AB9Cba156a93Ed5Ed46, PUSDPlusVault 0xb55a5B36d82D3B7f18Afe42F390De565080A49a1, InsuranceFund 0xFF7E741621ad5d39015759E3d606A631Fa319a62. PUSD is 6-decimal. The PUSD path uses /agents/skill/ (singular) — treat the URL above as authoritative; do not construct it from a /agents/skills/ pattern."
     },
@@ -752,8 +785,26 @@
         "agents/errors.json",
         "agents/decision-tree.json"
       ],
-      "prefer_over": ["npm README", "blog posts"],
+      "prefer_over": [
+        "npm README",
+        "blog posts"
+      ],
       "notes": "PC-20 = token born ON Push Chain, mirrored outward as wrappers (dynamic UniversalCore registry, async getPC20Address). PRC-20 = token born on an external chain, mirrored inward as a synthetic (static table, sync getPRC20Address). One letter apart, opposite directions — link the important-concepts section rather than re-explaining. funds.token = { chain, address } with NO symbol field; chain = where the tokens sit now. Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight. Typed PC20Error family in agents/errors.json."
+    },
+    {
+      "task": "Request validator-agreed external state with an on-chain callback",
+      "capability_id": "universal_read",
+      "authoritative_sources": [
+        {
+          "url": "https://push.org/docs/chain/build/universal-read/",
+          "type": "docs",
+          "confidence": "high",
+          "normative": true
+        }
+      ],
+      "agent_files": [
+        "agents/workflows/universal-read.md"
+      ]
     }
   ]
 }

@@ -123,6 +123,16 @@ See [Token Types on Push Chain](/docs/chain/important-concepts#token-types-on-pu
 
 </NodeJSVirtualIDE>
 
+## Working with Universal Read
+
+- Save the request transaction hash and request ID before waiting; a client timeout is resumable.
+- Check `status`, `raw.status`, `callbackDelivered`, and `decodeError` before consuming a value.
+- Fund callback gas and choose a refund recipient that accepts native Push transfers.
+- Keep Web2 request data free of secrets and extract stable fields so validators can agree.
+- Recover already-submitted batch hashes before retrying a partially failed batch.
+
+See [Universal Read](/docs/chain/build/universal-read/) for the complete SDK and contract flow.
+
 ## Next Steps
 
 - Create [Universal Signer](/docs/chain/build/create-universal-signer) from existing signer
