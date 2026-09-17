@@ -1,0 +1,298 @@
+---
+title: "Universal Read"
+url: "https://pushchain.github.io/docs/chain/build/universal-read/"
+section: "build"
+lastUpdated: "2026-09-17T11:52:14+05:30"
+description: "Universal Read | Build | Push Chain Docs"
+---
+
+# Universal Read
+
+## Overview
+
+Universal Read lets a Push Chain application request state from an external chain or HTTPS endpoint and receive the validator-agreed result through an on-chain callback. The SDK prepares the query, sizes its payment, submits the request, and tracks the outcome.
+
+| Need | Use |
+| --- | --- |
+| Your frontend or backend needs data directly from an RPC | [Reading Blockchain State](/push-chain-website/pr-preview/pr-1244/docs/chain/build/reading-blockchain-state/) |
+| Your Push contract needs external state delivered on-chain | Universal Read with your own `UniversalReadClient` |
+| You want an SDK request whose result is stored by a shared receiver | Universal Read with the default registry |
+
+Unlike an RPC view call, `read()` broadcasts a transaction and costs Push gas plus the protocol fee and callback budget. Preparing a request and tracking an existing one do not broadcast.
+
+## How a read completes
+
+1.  The SDK encodes the query, selects its reference height where applicable, quotes the protocol fee, and sizes the callback budget.
+2.  A transaction calls the registry or your application's request entrypoint. The contract emits `ReadRequested`.
+3.  Validators read the destination and vote on the result.
+4.  After quorum, `UniversalCallback` calls the receiver. The node reports callback gas and attempts to refund unused budget to `refundTo`.
+
+A transaction can contain several independent reads. Each receives its own `requestId` and settles separately. Request IDs become available after submission; save the transaction hash first.
+
+Check the result, not only the lifecycle status
+
+A successful result requires `status === READ.STATUS.FULFILLED`, `raw.status === READ.RESULT_STATUS.SUCCESS`, and `callbackDelivered === true`. Also inspect `decodeError` before using `value`. A callback can revert while the node still reports `FULFILLED`.
+
+## First read: the Donut registry
+
+Omit `callback` to use the deployed registry. It stores results and lets you use `read()` without deploying an application contract. The default callback gas is `500_000n`; use `callback: { gasLimit: 750_000n }` for a larger result, up to `1_000_000n`.
+
+The playground creates a temporary Donut wallet. Fund only the displayed testnet address; its key stays in the current browser session. Closing or reloading loses access to that wallet, so use test funds only. It prints the request reference before waiting, allowing read-only recovery later.
+
+Live Playground: request a Sepolia balance
+
+VIRTUAL NODE IDE
+
+Copy playground link
+
+Copy code
+
+## Method reference
+
+| Method | Behavior |
+| --- | --- |
+| `read(subject, options)` | Prepare, submit and wait for one decoded read. `waitForCompletion: false` returns a confirmed request snapshot. Requires a signer. |
+| `prepareRead(subject, options)` | Fetch preflight data and build a `PreparedRead` without broadcasting. Works with a read-only client. |
+| `executeReads(preparedReads, options?)` | Submit prepared reads and preserve input order. Uses atomic batching when supported, otherwise sequential transactions. Requires a signer. |
+| `trackRead({ txHash }, options?)` | Return an array of current snapshots, one per read requested in that transaction. |
+| `trackRead({ requestId }, options?)` | Return one current snapshot. Call `.wait()` to wait, or `.refresh()` for an updated snapshot. |
+
+### Supported queries
+
+The subject identifies the holder, contract or URL. Query options are mutually exclusive.
+
+```typescript
+const CHAIN = PushChain.CONSTANTS.CHAIN;
+
+// EVM native balance; Solana uses the same form with a base58 holder.
+await pushChainClient.universal.read(holder, { chain: CHAIN.ETHEREUM_SEPOLIA });
+
+// ERC-20 balanceOf(holder), or the holder's derived SPL token account.
+await pushChainClient.universal.read(holder, {
+  chain: CHAIN.ETHEREUM_SEPOLIA,
+  token: tokenAddress,
+});
+
+// The ABI encodes the call and decodes its output.
+await pushChainClient.universal.read(tokenAddress, {
+  chain: CHAIN.ETHEREUM_SEPOLIA,
+  abi: [{ type: 'function', name: 'totalSupply', stateMutability: 'view',
+    inputs: [], outputs: [{ type: 'uint256' }] }] as const,
+  functionName: 'totalSupply',
+});
+
+await pushChainClient.universal.read(contractAddress, {
+  chain: CHAIN.ETHEREUM_SEPOLIA,
+  storageSlot: 0n,
+});
+
+await pushChainClient.universal.read(solanaHolder, {
+  chain: CHAIN.SOLANA_DEVNET,
+  token: mintAddress,
+  tokenProgram: 'token-2022', // default: 'spl-token'
+});
+
+await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/todos/1', {
+  chain: CHAIN.WEB2,
+  web2: { extract: [
+    { path: '$.id', valueType: 'uint256' },
+    { path: '$.completed', valueType: 'bool' },
+  ] },
+});
+```
+
+EVM calls require `view`/`pure` functions and correctly typed ABI arguments. One output is unwrapped; multiple outputs form a tuple. Web2 values are always an array in extraction order.
+
+Solana reads use finalized state. Public `blockNumber` and `minConfirmations` options are EVM-only. Raw Solana account bytes are not part of the high-level `read(subject, options)` grammar.
+
+### Query and lifecycle options
+
+| Option | Meaning |
+| --- | --- |
+| `chain` | Required source destination; `CHAIN.WEB2` is read-only and is not a transaction destination. |
+| `token` | ERC-20 address or SPL mint. The SDK derives the holder's associated token account for Solana. |
+| `tokenProgram` | `'spl-token'` or `'token-2022'`; only valid for Solana token reads. |
+| `abi / functionName / args` | Typed EVM query. These top-level fields describe the external view call. |
+| `storageSlot` | EVM slot as bigint or a hex word. |
+| `blockNumber` | EVM pin. Defaults to oracle-observed height minus confirmations; the oracle may lag the actual head. |
+| `minConfirmations` | EVM confirmation requirement, default `1`. |
+| `expiryBlocks` | Request lifetime in Push blocks, default `300n`. |
+| `maxFee` | Cap on the upfront protocol fee plus callback budget. |
+| `refundTo` | Destination for unused callback budget; defaults to your sending Push account. |
+| `callback` | Optional receiver/request configuration; see the contract example below. |
+| `waitForCompletion` | Default `true` for `read`/`executeReads`. Set false to obtain confirmed request references first. |
+| `progressHook` | Receives `READ-TX-*` events and underlying send events. |
+| `advanced.pollingIntervalMs` | Default 2,000 ms; minimum 500 ms. |
+| `advanced.timeout` | Explicit client wait timeout in milliseconds; overrides the default policy. |
+| `advanced.enforceGasCheck` | Default false: warn on insufficient balance; true: fail before broadcasting. Not a tracking option. |
+
+`prepareRead` accepts query, pinning, refund and callback options, not lifecycle settings. `executeReads` accepts lifecycle settings. `trackRead` accepts polling/timeout options plus `resultShape` for decoding results whose ABI is not recoverable from the on-chain query.
+
+### Web2 options and quorum
+
+`web2.extract` contains 1–16 JSONPath entries. Each has `path` and `valueType`: `uint256`, `int256`, `bool`, `string` or `bytes`. Numeric entries may specify `decimals`; values are multiplied by 10 to that power and truncated.
+
+`method` defaults to `GET`; `POST` may supply a string or byte-array `body`. A body on GET is rejected. `timeoutMs` defaults to 5,000 and is validator-clamped.
+
+Validators vote on **identical extracted bytes**. A rapidly changing API may not reach quorum. Lower precision can help similar values match, but truncation does not guarantee agreement. Median aggregation is not supported.
+
+Request data is public
+
+URLs, headers and bodies are recorded publicly. Never include API keys, bearer tokens or other secrets. The SDK's sensitive-header warning is advisory.
+
+## Integrate your own contract
+
+A custom receiver controls how an on-chain result is stored or used. Inherit `UniversalReadClient` from a verified checkout of `push-chain-core-contracts`. The example imports assume a Solidity remapping named `push-chain-core-contracts/` pointing to that checkout.
+
+This minimal receiver stores raw bytes. It does not treat callback arrival as proof of a successful source read. Before adding business actions, define how your app validates query identity, freshness, error results and caller authorization.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+
+import {UniversalReadClient} from "push-chain-core-contracts/src/UniversalReadClient.sol";
+import {ReadSpec} from "push-chain-core-contracts/src/libraries/ReadTypes.sol";
+
+contract ExternalStateInbox is UniversalReadClient {
+    address public immutable REQUESTER;
+    mapping(uint256 => bytes) public results;
+
+    constructor(address callbackAddress, address requester_)
+        UniversalReadClient(callbackAddress)
+    {
+        require(requester_ != address(0), "zero requester");
+        REQUESTER = requester_;
+    }
+
+    function request(ReadSpec calldata spec, uint64 gasLimit)
+        external payable returns (uint256)
+    {
+        require(msg.sender == REQUESTER, "only requester");
+        return _requestRead(spec, abi.encode(msg.sender), gasLimit);
+    }
+
+    function _onReadResult(uint256 requestId, bytes calldata resultData, bytes memory)
+        internal override
+    {
+        results[requestId] = resultData;
+    }
+
+    receive() external payable {}
+}
+```
+
+On Donut, pass `0x00000000000000000000000000000000000000c2` as `callbackAddress`. Pass the Push-side account that will submit requests as `requester_`: normally `pushChainClient.universal.account`. For an external-chain signer this is its UEA; for a Push-native signer it is the native Push address. Authorizing the deployment EOA by accident can reject valid UEA calls. The base client restricts `onUniversalData` to the callback contract. Do not expose an unprotected replacement callback.
+
+After deploying the receiver, use its ABI:
+
+```typescript
+const result = await pushChainClient.universal.read(holder, {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  callback: {
+    target: myReceiverAddress,
+    gasLimit: 200_000n,
+    abi: myReceiverAbi,
+    functionName: 'request',
+    // Optional mapper; default is (spec, gas) => [spec, gas].
+    args: (spec, gas) => [spec, gas],
+  },
+});
+```
+
+`callback.abi/functionName/args` describe the **payable request entrypoint** on Push, while `callback.gasLimit` controls the **later result callback**. Top-level `abi/functionName/args` describe the external read. The entrypoint must emit exactly one matching request per prepared read.
+
+For application entrypoints you construct separately, prepare with just `callback: { target, gasLimit }`, insert `prepared.specTuple` and `prepared.value` into your transaction, then track its hash. Preparation does not require an entrypoint ABI; executing through `read` or `executeReads` does.
+
+Nested reads initiated during a result callback are unsupported. Initiate follow-up reads in a separate transaction.
+
+## Prepare and batch reads
+
+Live Playground: batch EVM, Solana and Web2 reads
+
+VIRTUAL NODE IDE
+
+Copy playground link
+
+Copy code
+
+`executeReads` preserves prepared input order. The playground covers an EVM native balance, Web2 extraction, a typed ERC-20 view call, and a finalized Solana balance in one batch. The SDK matches the emitted spec, callback target and gas limit; extra or missing requests cause `READ_REQUEST_MISMATCH`.
+
+`atomic` describes request submission, not all-or-nothing validator fulfillment. With sequential fallback, inspect `transactionHashes`: earlier requests may already exist if a later transaction fails. Errors may include `transactionHashes` for committed calls and `pendingTransactionHash` for an uncertain broadcast. Check that receipt before retrying.
+
+## Resume a request
+
+Live Playground: resume without a signing key
+
+VIRTUAL NODE IDE
+
+Copy playground link
+
+Copy code
+
+A request ID is the durable per-read reference. A transaction hash can identify several reads, so its tracking overload returns an array. For a typed EVM call resumed in a new session, supply the ABI through `resultShape`:
+
+```typescript
+const snapshot = await pushChainClient.universal.trackRead(
+  { requestId },
+  { resultShape: { kind: 'evmCall', abi: tokenAbi, functionName: 'totalSupply' } },
+);
+const done = await snapshot.wait();
+```
+
+Keep any ABI needed for decoding with your stored request reference. `resultShape` supplies runtime decoding information; it does not automatically infer a TypeScript return type from a transaction hash.
+
+## Responses and failure handling
+
+| Field | What to inspect |
+| --- | --- |
+| `requestId / txHash` | Per-read identity and the Push request transaction. |
+| `status / isTerminal` | Lifecycle: `PENDING`, `VOTING`, `FULFILLED`, `EXPIRED`, `FAILED`, `ABORTED`. |
+| `raw` | Consensus status, bytes and error code; may be null before a result exists. |
+| `callbackDelivered / callbackFailReason` | Whether the application callback ran; failure bytes come from the callback event. |
+| `value / decodeError` | Decoded value or an explanation of why decoding failed. |
+| `fees` | `paid`, `protocolFee`, `callbackBudget` and observed `burned/refunded/refundFailed`. Unknown accounting stays undefined. |
+| `request` | Spec, callback target, original funder, refund recipient, gas, creation height and log index. |
+| `pcTx` | Node-reported fulfillment/settlement/expiry execution references. |
+| `wait() / refresh()` | Wait for terminal state, or retrieve a new snapshot. |
+
+Terminal lifecycle failures resolve as responses; validation, broadcast, RPC, lookup and timeout failures can reject. Catch `ReadTimeoutError` by its `code === 'READ_TIMEOUT'` and resume the same reference. Do not submit another paid request just because your client stopped polling.
+
+Callback delivery and settlement information are recovered from contract events, including Cosmos EndBlock events for expiry. `decodeError` is computed by the SDK; these fields are not all direct node-record fields.
+
+## Fees, refunds and timeouts
+
+The upfront payment is **protocol fee + callback budget**. The protocol fee is not refunded. Callback execution burns part of the budget; the remainder is pushed to `refundTo`. On expiry, the unused callback budget is returned if the recipient accepts it. A recipient that rejects native Push transfers can lose the refund to the admin rescue pool.
+
+A warning for a non-UEA contract refund recipient does not prove it lacks `receive()`. Ensure your chosen recipient accepts the native transfer.
+
+| Setting | Actor | Meaning |
+| --- | --- | --- |
+| `web2.timeoutMs` | Validator | HTTP fetch timeout, default 5 seconds. |
+| `expiryBlocks` | Chain | Request lifetime, default 300 Push blocks. |
+| `advanced.timeout` | SDK caller | How long this caller waits; timing out does not cancel the request. |
+
+Each default `wait()` fetches a fresh Push height and uses:
+
+```text
+min(180_000, max(0, expiryHeight - currentPushHeight) × 1_340 + 10_000) milliseconds
+```
+
+The 10-second observation margin is not a settlement guarantee. Explicit timeouts take precedence, including values above 180 seconds. Failed height lookups reject; stalled height lookups are bounded by the default ceiling.
+
+## Common mistakes
+
+| Symptom | Action |
+| --- | --- |
+| `FULFILLED` but `value` is absent | Inspect `raw.status`, `callbackDelivered` and `decodeError`. |
+| Callback failed for a large result | Submit a new request with more callback gas, up to 1,000,000. The failed request is not automatically retried. |
+| Request timed out at the client | Resume by the saved request ID or transaction hash. |
+| Only some batch calls were submitted | Recover committed hashes; check the pending hash before resubmitting. |
+| Web2 never reaches quorum | Choose stable extraction fields and appropriate numeric precision. |
+| `ReadRegistryUnavailableError` | Use Donut or provide your deployed application receiver and request ABI. |
+| Prepared read fails revalidation | Prepare a fresh request; old pins, expiry or budgets may no longer be valid. |
+
+## Next steps
+
+-   [Contract Helpers](/push-chain-website/pr-preview/pr-1244/docs/chain/build/contract-helpers/) for other Push contract integrations.
+-   [Smart Contract Address Book](/push-chain-website/pr-preview/pr-1244/docs/chain/setup/smart-contract-address-book/) for Donut deployments.
+-   [Constants Reference](/push-chain-website/pr-preview/pr-1244/docs/chain/build/constants/#universal-read) for Read State limits and defaults.

@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "universal-apps": {
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "शेयर्ड स्टेट के साथ ही संभव ऐप्स - वॉल्यूम 1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "शेयर्ड स्टेट के साथ ही संभव ऐप्‍स - खंड 2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

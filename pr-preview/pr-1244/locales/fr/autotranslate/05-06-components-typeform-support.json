@@ -1,0 +1,120 @@
+{
+  "components": {
+    "typeform-support": {
+      "collapsed-text-for-support": "Ouvrir un ticket d'assistance",
+      "expanded-title-for-support": "Besoin d'aide ? 👋",
+      "collapsed-text-for-contact": "Contacter l'équipe",
+      "expanded-title-for-contact": "Salut ! 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 Support Technique",
+          "description": "Rapports de bugs, SDK/API, smart contracts, aide à l'intégration"
+        },
+        "network": {
+          "label": "🌐 Réseau et testnet",
+          "description": "Explorateur/Push Scan, RPC, Robinet, problèmes Donut testnet"
+        },
+        "wallet": {
+          "label": "👛 Wallet Universel",
+          "description": "Push Wallet, connexion universelle à la chaîne ou autres problèmes de wallet"
+        },
+        "identity": {
+          "label": "🪪 Comptes & Identité",
+          "description": "UEA/UOA, signatures, questions d'attribution"
+        },
+        "security": {
+          "label": "🛡️ Sécurité",
+          "description": "Signalement de vulnérabilités, divulgation responsable (security@push.org)"
+        },
+        "general": {
+          "label": "💬 Demande générale",
+          "description": "Questions, commentaires, autres sujets"
+        },
+        "partnerships": {
+          "label": "🤝 Partenariats & Intégrations",
+          "description": "BD, intégrations écosystème (wallets, infra, exchanges, protocols)"
+        },
+        "grants": {
+          "label": "💰 Subventions & Programmes Écosystème",
+          "description": "BRB, Bootcamp, subventions, demandes de financement"
+        },
+        "media": {
+          "label": "📰 Média & Presse",
+          "description": "Entretiens, déclarations, ressources, vérifications des faits"
+        },
+        "events": {
+          "label": "🎤 Conférences & Événements",
+          "description": "Conférences, ateliers, hackathons, partenariats"
+        },
+        "careers": {
+          "label": "👩‍💻 Carrières",
+          "description": "Postes ouverts, stages, opportunités de sous-traitance"
+        },
+        "validators": {
+          "label": "🧡 Validateur / Opérateurs de nœuds",
+          "description": "Intérêt des opérateurs, fournisseurs RPC, partenaires d'infrastructure"
+        },
+        "legal": {
+          "label": "⚖️ Légal & Conformité",
+          "description": "Marques de commerce, demandes de données, accords"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "Comment pouvons-nous vous aider ?",
+            "subtitle": "Choisissez la catégorie qui décrit le mieux votre demande"
+          },
+          "contact": {
+            "title": "Faisons connaissance",
+            "subtitle": "Nous utiliserons ces informations pour vous recontacter",
+            "name-label": "Votre nom",
+            "name-placeholder": "Entrez votre nom complet",
+            "name-aftergreet": "Ravi de vous rencontrer, ",
+            "email-label": "Adresse e-mail",
+            "email-placeholder": "Entrez votre adresse e-mail"
+          },
+          "details": {
+            "title": "Parlez-nous en plus",
+            "subtitle": "Décrivez en détail votre demande",
+            "subject-label": "Sujet",
+            "subject-placeholder": "Bref résumé de votre problème",
+            "message-label": "Message",
+            "message-placeholder": "Décrivez votre problème en détail. Incluez tous les messages d'erreur, les étapes à reproduire ou toute information pertinente."
+          },
+          "submit": {
+            "title": "Vérifier et soumettre",
+            "subtitle": "Veuillez vérifier vos informations avant de soumettre",
+            "placeholder": "Dites-nous en plus sur ce dont vous avez besoin..."
+          }
+        },
+        "buttons": {
+          "next": "Suivant",
+          "previous": "Précédent",
+          "submit": "Envoyer le ticket",
+          "submitting": "En cours d'envoi..."
+        },
+        "validation": {
+          "name-required": "Le nom est requis",
+          "name-min-length": "Le nom doit comporter au moins 2 caractères",
+          "email-required": "L'adresse e-mail est obligatoire",
+          "email-invalid": "Veuillez entrer une adresse e-mail valide",
+          "subject-required": "Le sujet est obligatoire",
+          "message-required": "Le message est obligatoire",
+          "category-required": "Veuillez sélectionner une catégorie",
+          "default": "Ce champ est obligatoire"
+        },
+        "success": {
+          "title": "Ticket soumis avec succès !",
+          "message": "Merci de nous avoir contactés. Nous avons bien reçu votre demande d'assistance et nous vous répondrons dès que possible.",
+          "button": "Envoyer un autre ticket"
+        },
+        "error": {
+          "title": "Envoi échoué",
+          "message": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ou contactez-nous directement.",
+          "button": "Réessayer"
+        }
+      }
+    }
+  }
+}

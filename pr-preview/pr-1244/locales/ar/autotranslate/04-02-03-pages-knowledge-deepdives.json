@@ -1,0 +1,30 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "learn-push-chain": {
+                "items": {
+                  "what-is-universal-fee-abstraction": {
+                    "title": "ما هي تجريد الرسوم الشاملة (Universal Fee Abstraction) وكيف تعمل؟"
+                  },
+                  "what-are-universal-executor-accounts": {
+                    "title": "ما هي الحسابات التنفيذية الشاملة (UEAs) وكيف تعمل؟"
+                  },
+                  "how-universal-transaction-works": {
+                    "title": "كيف تعمل المعاملة العالمية"
+                  },
+                  "push-chain-silence-labs": {
+                    "title": "بلوكشين × Silence Labs: بناء آلية التوقيع الموزعة"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
