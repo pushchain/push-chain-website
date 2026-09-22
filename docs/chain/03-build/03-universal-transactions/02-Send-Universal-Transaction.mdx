@@ -2,9 +2,9 @@
 id: docs-chain-build-send-universal-transaction
 title: Send Universal Transaction
 hide_title: false
-slug: ./send-universal-transaction
+slug: /chain/build/send-universal-transaction
 displayed_sidebar: pushChainSidebar
-sidebar_position: 6
+sidebar_position: 2
 image: "/assets/docs/previews/docs_chain_build--send_universal_transaction.png"
 ---
 
@@ -65,6 +65,19 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `tx.progressHook` | `(progress: ProgressHookType) => void`                           | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions.                                                                                                                                                                    |
 
 </PushAPIReference>
+
+<Details summary="Advanced Arguments" className="alert alert--minimal code">
+
+| Arguments                 | Type                                                                                                   | Default         | Description                                                                                                                                                                                                                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tx.gasLimit`             | `BigInt`                                                                                               | `SDK Estimated` | Optional override for transaction gas limit. If omitted, the SDK estimates it.                                                                                                                                                                                                                       |
+| `tx.maxFeePerGas`         | `BigInt`                                                                                               | `SDK Estimated` | Optional override for max fee per gas. If omitted, the SDK estimates it when applicable.                                                                                                                                                                                                             |
+| `tx.maxPriorityFeePerGas` | `BigInt`                                                                                               | `SDK Estimated` | Optional override for priority fee. If omitted, the SDK estimates it when applicable.                                                                                                                                                                                                                |
+| `tx.options.enforceGasCheck` | `boolean`                                             | `false` | Controls how the SDK reacts when the pre-flight gas / balance check detects a shortfall on the UEA (native PC) or, for `funds` flows, the bridged PRC-20 balance.<br /><br />`false` will still emit a `WARNING`-level progress event and proceed. The transaction may still succeed (UEA gas is auto-refilled via fee locking; PRC-20 may settle on a follow-up leg).<br /><br />`true` will emit an `ERROR`-level progress event and throw `InsufficientUEABalanceError` before broadcast, leaving on-chain state untouched. Use this when you want pre-flight guarantees over best-effort retries. |
+| `tx.payGasWith`           | `{ token?: PushChain.CONSTANTS.PAYABLE.TOKEN; slippageBps?: number; minAmountOut?: bigint \| string }` | -               | Pay universal transaction fees using a supported token (e.g., `PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT`).<br />&nbsp;<br />Optional `slippageBps` (e.g., `100` = 1%) and `minAmountOut` (wei) let you control on-chain swap execution. <ConstantsDropdown variant="PAYABLE_TOKEN" /> |
+| `tx.deadline`             | `BigInt`                                                                                               | -               | Optional execution deadline for the transaction.                                                                                                                                                                                                                                                     |
+
+</Details>
 
 <h2 className="anchor" id="progress-hook-type-and-response" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Progress Hook Type and Response</h2>
 
@@ -180,20 +193,6 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-999-01` | All Multichain Transactions Successful | `<hopCount>`-hop transaction confirmed across all chains | SUCCESS | `{ hopCount }` |
 | `SEND-TX-999-02` | Multichain Transactions Failed | Cascade failed at hop `<failedAt>` of `<total>`: `<error>` | ERROR | `{ failedAt, total, error }` |
 | `SEND-TX-999-03` | Multichain Transactions Timeout | Cascade timed out at hop `<failedAt>` of `<total>` | ERROR | `{ failedAt, total, error: 'cascade timeout' }` |
-
-</Details>
-
-
-<Details summary="Advanced Arguments" className="alert alert--minimal code">
-
-| Arguments                 | Type                                                                                                   | Default         | Description                                                                                                                                                                                                                                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------------------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tx.gasLimit`             | `BigInt`                                                                                               | `SDK Estimated` | Optional override for transaction gas limit. If omitted, the SDK estimates it.                                                                                                                                                                                                                       |
-| `tx.maxFeePerGas`         | `BigInt`                                                                                               | `SDK Estimated` | Optional override for max fee per gas. If omitted, the SDK estimates it when applicable.                                                                                                                                                                                                             |
-| `tx.maxPriorityFeePerGas` | `BigInt`                                                                                               | `SDK Estimated` | Optional override for priority fee. If omitted, the SDK estimates it when applicable.                                                                                                                                                                                                                |
-| `tx.options.enforceGasCheck` | `boolean`                                             | `false` | Controls how the SDK reacts when the pre-flight gas / balance check detects a shortfall on the UEA (native PC) or, for `funds` flows, the bridged PRC-20 balance.<br /><br />`false` will still emit a `WARNING`-level progress event and proceed. The transaction may still succeed (UEA gas is auto-refilled via fee locking; PRC-20 may settle on a follow-up leg).<br /><br />`true` will emit an `ERROR`-level progress event and throw `InsufficientUEABalanceError` before broadcast, leaving on-chain state untouched. Use this when you want pre-flight guarantees over best-effort retries. |
-| `tx.payGasWith`           | `{ token?: PushChain.CONSTANTS.PAYABLE.TOKEN; slippageBps?: number; minAmountOut?: bigint \| string }` | -               | Pay universal transaction fees using a supported token (e.g., `PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT`).<br />&nbsp;<br />Optional `slippageBps` (e.g., `100` = 1%) and `minAmountOut` (wei) let you control on-chain swap execution. <ConstantsDropdown variant="PAYABLE_TOKEN" /> |
-| `tx.deadline`             | `BigInt`                                                                                               | -               | Optional execution deadline for the transaction.                                                                                                                                                                                                                                                     |
 
 </Details>
 

@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/universal-read-response.json",
+  "title": "UniversalReadResponse",
+  "description": "Response object returned by pushChainClient.universal.read(), by each entry of executeReads(...).reads and wait(), and by trackRead(). value is the success signal: it is present only when the read is fulfilled, the callback was delivered, the source returned success and the result decoded. When value is undefined, status, raw.status, callbackDelivered and decodeError say why.",
+  "type": "object",
+  "properties": {
+    "requestId": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "Unique identifier of this read (hex). Use it to resume tracking in another session with trackRead({ requestId })."
+    },
+    "requestIdUint": {
+      "description": "The same request ID as a bigint. Matches the uint256 requestId a UniversalReadClient receives in _onReadResult."
+    },
+    "txHash": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "Push Chain transaction that submitted the request."
+    },
+    "chain": {
+      "type": "string",
+      "description": "Destination that was read, as a CHAIN constant (CAIP-2, or web2:https)."
+    },
+    "destination": {
+      "type": "object",
+      "description": "Parsed destination: chainNamespace, chainId, caip2, namespace."
+    },
+    "status": {
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "READ.STATUS lifecycle: 1 PENDING, 2 VOTING, 3 FULFILLED, 4 EXPIRED, 5 FAILED, 6 ABORTED (0 UNSPECIFIED). FULFILLED means the read completed; it does not by itself mean the callback succeeded."
+    },
+    "isTerminal": {
+      "type": "boolean",
+      "description": "true once the read can no longer change."
+    },
+    "callbackDelivered": {
+      "type": "boolean",
+      "description": "FULFILLED only. true when the receiver ran; false when it reverted or ran out of gas."
+    },
+    "callbackFailReason": {
+      "type": "string",
+      "description": "Revert data from a failed callback."
+    },
+    "value": {
+      "description": "Decoded result, typed from the query: bigint for balances, Hex for storage, the ABI return type for calls, an array for Web2 (one entry per extract path, in order). Present only when fulfilled, delivered, successful and decodable."
+    },
+    "decoded": {
+      "type": "object",
+      "description": "Decoded result with its kind, for example { kind: 'uint256', value }."
+    },
+    "decodeError": {
+      "type": "string",
+      "description": "Why value is absent although the read succeeded, for example an ABI that does not match the query."
+    },
+    "raw": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Consensus result, null before validators have voted.",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "description": "READ.RESULT_STATUS: 1 SUCCESS, 2 ERROR (0 UNSPECIFIED)."
+        },
+        "resultData": {
+          "type": "string",
+          "description": "Result bytes (hex)."
+        },
+        "errorCode": {
+          "type": "integer",
+          "description": "READ.ERROR_CODE when raw.status is ERROR."
+        }
+      }
+    },
+    "errorMsg": {
+      "type": "string",
+      "description": "Node-reported error, if any."
+    },
+    "fees": {
+      "type": "object",
+      "description": "paid, protocolFee, callbackBudget, plus burned, refunded and refundFailed once settled (bigint values)."
+    },
+    "request": {
+      "type": "object",
+      "description": "The on-chain request: spec (ReadSpec), callbackTarget, originalFunder, refundTo, callbackGasLimit, logIndex, createdAtHeight."
+    },
+    "pcTx": {
+      "type": "array",
+      "description": "Push Chain transactions the node sent for this read (fulfil, settle, expiry): { txHash, blockHeight, status, errorMsg }."
+    },
+    "explorerUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Explorer link for the request transaction."
+    },
+    "wait": {
+      "description": "Polls until the read is terminal and returns the final UniversalReadResponse. Only a timeout throws (ReadTimeoutError, code READ_TIMEOUT). Type: () => Promise<UniversalReadResponse>"
+    },
+    "refresh": {
+      "description": "Returns one fresh snapshot without polling. Type: () => Promise<UniversalReadResponse>"
+    }
+  },
+  "required": [
+    "requestId",
+    "txHash",
+    "chain",
+    "status",
+    "isTerminal"
+  ],
+  "additionalProperties": true,
+  "status": "documented",
+  "notes": "Documented at https://push.org/docs/chain/build/universal-read/#returns-universal-read-response. bigint fields (value for numeric reads, fees, requestIdUint) are JavaScript bigint at runtime."
+}

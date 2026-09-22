@@ -27,8 +27,8 @@ const SDK_VERSIONS = {
   core: '6.0.25',
   uiKit: '6.0.24',
 };
-const AGENT_LAYER_VERSION = '1.0.27';
-const AGENT_LAYER_DATE = '2026-09-16';
+const AGENT_LAYER_VERSION = '1.0.28';
+const AGENT_LAYER_DATE = '2026-09-22';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -234,7 +234,9 @@ const buildLlmsTxt = async (
     '- **PC-20**: A token born *on* Push Chain, mirrored outward as a wrapper on external chains. Dynamic — lives in UniversalCore’s on-chain registry, async lookup via `getPC20Address`. Move it with a `{ chain, address }` reference in `tx.funds` (never add `symbol`). One letter apart from PRC-20 and the opposite direction — canonical definition: https://push.org/docs/chain/important-concepts/#token-types-on-push-chain'
   );
   // Route prose pulled from agents/routes.json (single source of truth).
-  lines.push('- **Universal Read (core 6.0.25)**: paid external-state requests delivered to a Push contract or the Donut registry. Use `pushChainClient.universal.read`, `prepareRead`, `executeReads`, and `trackRead`; preparation/tracking do not broadcast. Custom receivers use flattened `callback: { target, gasLimit, abi, functionName, args? }`. Check lifecycle FULFILLED, raw SUCCESS and callbackDelivered before using a value. Resume timeouts by saved references. Registry helper APIs are internal. Default wait uses remaining Push lifetime + 10 seconds, capped at 180 seconds. Guide: https://push.org/docs/chain/build/universal-read/');
+  lines.push(
+    "- **Universal Read**: brings state from another chain (EVM or Solana) or from an HTTPS endpoint onto Push Chain with validator agreement. Results land in the Universal Read Registry (`0x00000000000000000000000000000000000000b2`, the default) or in your own contract that inherits `UniversalReadClient` (pass `callback: { target, gasLimit, abi, functionName, args? }`). Read with `pushChainClient.universal.read(subject, { chain, token | abi or idl + functionName + args | storageSlot | web2 })`, batch with `prepareRead` + `executeReads`, and resume with `trackRead({ requestId } | { txHash })`. A read is paid and asynchronous. `value` is the success signal; when it is `undefined`, check `status`, `raw.status`, `callbackDelivered` and `decodeError`. A contract can also build a `ReadSpec` and call `_requestRead` itself, with no SDK in the loop. Guide: https://push.org/docs/chain/build/universal-read/"
+  );
   // Falls back to inline strings only if the JSON failed to load.
   if (routes.length > 0) {
     for (const route of routes) {
@@ -273,7 +275,7 @@ const buildLlmsTxt = async (
   );
   lines.push('');
   lines.push(
-    '> Reading blockchain state from Push Chain can be done with any EVM-compatible library (ethers.js, viem, etc.) via the Push Chain RPC URL. Only transaction execution and signing require the Push Chain SDK.'
+    '> Reading blockchain state from Push Chain can be done with any EVM-compatible library (ethers.js, viem, etc.) via the Push Chain RPC URL. Only transaction execution and signing require the Push Chain SDK. When state from another chain or a web API must be delivered on-chain to a Push Chain contract, use Universal Read (`pushChainClient.universal.read`) instead.'
   );
   lines.push('');
 
@@ -445,7 +447,7 @@ const buildLlmsTxt = async (
     `- [Schemas](${BASE_URL}/agents/schemas/index.json): JSON schemas for all SDK request and response types including universal transaction, signer, and chain config.`
   );
   lines.push(
-    `- [Examples](${BASE_URL}/agents/examples/index.json): 60+ minimal, self-contained TypeScript code snippets ready to execute.`
+    `- [Examples](${BASE_URL}/agents/examples/index.json): 75+ minimal, self-contained TypeScript code snippets ready to execute, including one per Universal Read playground.`
   );
   lines.push(
     `- [Retrieval Map](${BASE_URL}/agents/retrieval-map.json): Maps every capability to its authoritative documentation source — use for RAG grounding.`
@@ -655,6 +657,9 @@ const buildLlmsTxt = async (
     `> Machine-readable version: [changelog.json](${BASE_URL}/agents/changelog.json)`
   );
   lines.push('');
+  lines.push(
+    '- **2026-09-22 v1.0.28**: Universal Read sync with the restructured docs. Read pages now live under Build > Universal Reads (Read Universal State, Read Multiple Universal States, Contract-Initiated Universal Read and Callback, Track Universal Read); Contract Helpers gained the Universal Read Client. Universal Read Registry moved to `0x00000000000000000000000000000000000000b2`; the Universal Callback proxy `0x00000000000000000000000000000000000000c2` and every proxy implementation and admin were refreshed from the address book. Read options list `abi` or `idl`; `value` is the success signal with `status`, `raw.status`, `callbackDelivered` and `decodeError` for debugging; `trackRead` takes `{ requestId }` or `{ txHash }`. New examples for all eleven read playgrounds and both Universal Read Client playgrounds; llms-full.txt now inlines MDX partial tables and keeps code, generics and Details labels verbatim.'
+  );
   lines.push(
     '- **2026-09-16 v1.0.27** — Universal Read documentation for core 6.0.25: request/prepare/batch/track, contract callbacks, refund and timeout recovery, registry defaults, and separate routing from ordinary RPC reads.'
   );

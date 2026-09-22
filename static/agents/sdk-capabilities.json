@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "current_sdk_version": "6.0.25",
-  "generated": "2026-09-16T00:00:00.000Z",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Complete SDK method surface for @pushchain/core and @pushchain/ui-kit: all namespaces, method signatures, parameter types, return types, and safe_for_autonomous_execution flags. For intent-level capability definitions (what an agent can do) see capabilities.json. For routing logic see decision-tree.json and task-router.md.",
   "namespaces": [
     {
@@ -32,7 +32,7 @@
         {
           "name": "CHAIN",
           "signature": "PushChain.CONSTANTS.CHAIN.<CHAIN_NAME>",
-          "description": "Chain identifiers in CAIP-2 format",
+          "description": "Chain identifiers in CAIP-2 format. CHAIN.WEB2 (web2:https) is a read-only destination for Universal Read, not a transaction destination.",
           "returns": "string",
           "safe_for_autonomous_execution": true
         },
@@ -55,6 +55,13 @@
           "signature": "PushChain.CONSTANTS.PAYABLE.TOKEN.<TOKEN_NAME>",
           "description": "Supported tokens for paying gas fees via tx.payGasWith",
           "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "READ",
+          "signature": "PushChain.CONSTANTS.READ.STATUS | RESULT_STATUS | UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT",
+          "description": "Universal Read constants. READ.STATUS is the request lifecycle (PENDING, VOTING, FULFILLED, EXPIRED, FAILED, ABORTED); READ.RESULT_STATUS is what the source returned (SUCCESS or ERROR); READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT is the Universal Read Registry (0x00000000000000000000000000000000000000b2). Full values in agents/constants.json.",
+          "returns": "object",
           "safe_for_autonomous_execution": true
         }
       ]
@@ -416,35 +423,307 @@
         },
         {
           "name": "read",
-          "signature": "pushChainClient.universal.read(subject, options): Promise<UniversalReadResponse>",
-          "description": "Paid cross-chain read via Donut registry or custom receiver; check lifecycle, raw result status and callback delivery.",
+          "signature": "pushChainClient.universal.read(subject: string, options: { chain: CHAIN, token?: string, abi?: any[], idl?: any, functionName?: string, args?: any[], storageSlot?: bigint | Hex, web2?: { extract: Array<{ path: string, valueType: 'uint256' | 'int256' | 'bool' | 'string' | 'bytes', decimals?: number }>, method?: 'GET' | 'POST', headers?: Record<string, string>, body?: string | Uint8Array, timeoutMs?: number }, callback?: { target: string, gasLimit: bigint, abi: Abi, functionName: string, args?: (spec, gasLimit) => unknown[] }, waitForCompletion?: boolean, progressHook?: (progress: ProgressEvent) => void, blockNumber?: bigint, minConfirmations?: number, expiryBlocks?: bigint, maxFee?: bigint, refundTo?: string, advanced?: { pollingIntervalMs?: number, timeout?: number, enforceGasCheck?: boolean } }): Promise<UniversalReadResponse>",
+          "description": "Requests state from an EVM chain, Solana or an HTTPS endpoint and has validators deliver the agreed result on-chain to Push Chain: to the Universal Read Registry (0x00000000000000000000000000000000000000b2, the default) or to your own UniversalReadClient receiver via callback. One query option picks the read: none = native balance, token = ERC-20 or SPL balance, abi or idl + functionName (+ args) = typed contract call or Solana program account, storageSlot = EVM storage word, web2 = JSON fields from an HTTPS endpoint (chain: CHAIN.WEB2). Paid and asynchronous. value is the success signal; when it is undefined, check status, raw.status, callbackDelivered and decodeError. Response: requestId, requestIdUint, txHash, chain, status (READ.STATUS), isTerminal, callbackDelivered, callbackFailReason, value, decodeError, raw { status, resultData, errorCode }, errorMsg, fees, request, pcTx, explorerUrl, wait(), refresh().",
+          "arguments": [
+            {
+              "name": "subject",
+              "type": "string",
+              "required": true,
+              "description": "What to read: an account address for a balance, a contract address for a contract call or storage slot, or a URL for a Web2 read. Solana subjects are base58."
+            },
+            {
+              "name": "options.chain",
+              "type": "CHAIN",
+              "required": true,
+              "description": "Where to read from: any supported EVM or Solana chain, or CHAIN.WEB2 for an HTTPS endpoint. Pass at most one query option; with none, read returns the subject's native balance."
+            },
+            {
+              "name": "options.token",
+              "type": "string",
+              "required": false,
+              "description": "Web3 chains. Token balance of subject. EVM: the ERC-20 contract address, read via balanceOf. Solana: the SPL mint address; the SDK derives the associated token account."
+            },
+            {
+              "name": "options.abi | options.idl",
+              "type": "any[]",
+              "required": false,
+              "description": "Web3 chains. An EVM ABI array or an Anchor IDL object. The input shape determines the encoding and how value is decoded, so the result is typed. With an IDL and no functionName, a Solana program account is read and decoded."
+            },
+            {
+              "name": "options.functionName",
+              "type": "string",
+              "required": false,
+              "description": "Web3 chains. The function (EVM) or instruction (Solana) to encode. snake_case and camelCase are both accepted and matched against the IDL."
+            },
+            {
+              "name": "options.args",
+              "type": "any[]",
+              "required": false,
+              "description": "Web3 chains. Positional arguments. Use BigInt for u64/u128; 0x-hex 32-byte strings become Solana PublicKey when the IDL declares a pubkey arg."
+            },
+            {
+              "name": "options.storageSlot",
+              "type": "bigint | Hex",
+              "required": false,
+              "description": "EVM only. One storage word from the subject contract."
+            },
+            {
+              "name": "options.web2",
+              "type": "{ extract, method?, headers?, body?, timeoutMs? }",
+              "required": false,
+              "description": "Required when chain is CHAIN.WEB2. extract: 1 to 16 entries of { path (JSONPath), valueType ('uint256' | 'int256' | 'bool' | 'string' | 'bytes'), decimals? }; results come back as an array in the same order. method defaults to GET; body is POST only; timeoutMs defaults to 5000. URL, headers and body are written to a public event log, so never include secrets."
+            },
+            {
+              "name": "options.callback",
+              "type": "{ target, gasLimit, abi, functionName, args? }",
+              "required": false,
+              "description": "Routes the request through your own receiver contract (inherits UniversalReadClient) instead of the Universal Read Registry. gasLimit is the gas for _onReadResult (default 500_000n, at most 1_000_000n); functionName is the payable request entrypoint, which must emit exactly one ReadRequested per prepared read; args maps (spec, gasLimit) onto a different entrypoint argument order."
+            },
+            {
+              "name": "options.waitForCompletion",
+              "type": "boolean",
+              "required": false,
+              "description": "Default true. false resolves once the request is confirmed on Push Chain, before validators vote; call wait() on the response to finish."
+            },
+            {
+              "name": "options.progressHook",
+              "type": "(progress: ProgressEvent) => void",
+              "required": false,
+              "description": "Progress events READ-TX-101 through READ-TX-199-99."
+            },
+            {
+              "name": "options.blockNumber",
+              "type": "bigint",
+              "required": false,
+              "description": "EVM only. Pins the read to a destination block. Default: oracle height minus minConfirmations."
+            },
+            {
+              "name": "options.minConfirmations",
+              "type": "number",
+              "required": false,
+              "description": "EVM only. Confirmations the destination block must have. Default 1."
+            },
+            {
+              "name": "options.expiryBlocks",
+              "type": "bigint",
+              "required": false,
+              "description": "Request lifetime in Push Chain blocks. Default 300n. An unfulfilled request expires and refunds the unused callback budget."
+            },
+            {
+              "name": "options.maxFee",
+              "type": "bigint",
+              "required": false,
+              "description": "Cap on the upfront payment (protocol fee plus callback budget). Default: SDK estimated."
+            },
+            {
+              "name": "options.refundTo",
+              "type": "string",
+              "required": false,
+              "description": "Where unused callback budget is sent. Default: your Push account. Must accept native transfers."
+            },
+            {
+              "name": "options.advanced.pollingIntervalMs",
+              "type": "number",
+              "required": false,
+              "description": "Milliseconds between status polls. Default 2000, minimum 500."
+            },
+            {
+              "name": "options.advanced.timeout",
+              "type": "number",
+              "required": false,
+              "description": "Maximum milliseconds this caller waits. Default derived from expiry, at most 180000. Timing out does not cancel the request; resume with trackRead."
+            },
+            {
+              "name": "options.advanced.enforceGasCheck",
+              "type": "boolean",
+              "required": false,
+              "description": "Default false: warn and proceed when the pre-flight balance check finds a shortfall. true throws before broadcasting."
+            }
+          ],
+          "returns": "UniversalReadResponse",
           "safe_for_autonomous_execution": false,
-          "docs_url": "https://push.org/docs/chain/build/universal-read/",
-          "minimum_sdk_version": "6.0.25"
+          "docs_url": "https://push.org/docs/chain/build/universal-read/"
         },
         {
           "name": "prepareRead",
-          "signature": "pushChainClient.universal.prepareRead(subject, options): Promise<PreparedRead>",
-          "description": "Read-only preparation of query, reference, payment and callback; no broadcast.",
+          "signature": "pushChainClient.universal.prepareRead(subject: string, options: { chain: CHAIN, token? | abi? | idl? + functionName? + args? | storageSlot? | web2?, callback?, blockNumber?, minConfirmations?, expiryBlocks?, maxFee?, refundTo? }): Promise<PreparedRead>",
+          "description": "Prepares a read without executing it: nothing is broadcast and nothing is paid, so no funds are needed. Takes the same subject and query options as read, but not waitForCompletion, progressHook or advanced (those belong to executeReads). Returns PreparedRead { queryKey, chain, spec, specTuple, encodedSpec, value, fees { protocolFee, callbackBudget, total }, callbackGasLimit, callback, resultShape, preflight, warnings }. value (equal to fees.total) is the msg.value the request carries; specTuple is the positional ReadSpec for a hand-built call to your own entrypoint.",
+          "arguments": [
+            {
+              "name": "subject",
+              "type": "string",
+              "required": true,
+              "description": "What to read: an account address for a balance, a contract address for a contract call or storage slot, or a URL for a Web2 read. Solana subjects are base58."
+            },
+            {
+              "name": "options.chain",
+              "type": "CHAIN",
+              "required": true,
+              "description": "Where to read from: any supported EVM or Solana chain, or CHAIN.WEB2 for an HTTPS endpoint. Pass at most one query option; with none, read returns the subject's native balance."
+            },
+            {
+              "name": "options.token",
+              "type": "string",
+              "required": false,
+              "description": "Web3 chains. Token balance of subject. EVM: the ERC-20 contract address, read via balanceOf. Solana: the SPL mint address; the SDK derives the associated token account."
+            },
+            {
+              "name": "options.abi | options.idl",
+              "type": "any[]",
+              "required": false,
+              "description": "Web3 chains. An EVM ABI array or an Anchor IDL object. The input shape determines the encoding and how value is decoded, so the result is typed. With an IDL and no functionName, a Solana program account is read and decoded."
+            },
+            {
+              "name": "options.functionName",
+              "type": "string",
+              "required": false,
+              "description": "Web3 chains. The function (EVM) or instruction (Solana) to encode. snake_case and camelCase are both accepted and matched against the IDL."
+            },
+            {
+              "name": "options.args",
+              "type": "any[]",
+              "required": false,
+              "description": "Web3 chains. Positional arguments. Use BigInt for u64/u128; 0x-hex 32-byte strings become Solana PublicKey when the IDL declares a pubkey arg."
+            },
+            {
+              "name": "options.storageSlot",
+              "type": "bigint | Hex",
+              "required": false,
+              "description": "EVM only. One storage word from the subject contract."
+            },
+            {
+              "name": "options.web2",
+              "type": "{ extract, method?, headers?, body?, timeoutMs? }",
+              "required": false,
+              "description": "Required when chain is CHAIN.WEB2. extract: 1 to 16 entries of { path (JSONPath), valueType ('uint256' | 'int256' | 'bool' | 'string' | 'bytes'), decimals? }; results come back as an array in the same order. method defaults to GET; body is POST only; timeoutMs defaults to 5000. URL, headers and body are written to a public event log, so never include secrets."
+            },
+            {
+              "name": "options.callback",
+              "type": "{ target, gasLimit, abi, functionName, args? }",
+              "required": false,
+              "description": "Routes the request through your own receiver contract (inherits UniversalReadClient) instead of the Universal Read Registry. gasLimit is the gas for _onReadResult (default 500_000n, at most 1_000_000n); functionName is the payable request entrypoint, which must emit exactly one ReadRequested per prepared read; args maps (spec, gasLimit) onto a different entrypoint argument order."
+            },
+            {
+              "name": "options.blockNumber",
+              "type": "bigint",
+              "required": false,
+              "description": "EVM only. Pins the read to a destination block. Default: oracle height minus minConfirmations."
+            },
+            {
+              "name": "options.minConfirmations",
+              "type": "number",
+              "required": false,
+              "description": "EVM only. Confirmations the destination block must have. Default 1."
+            },
+            {
+              "name": "options.expiryBlocks",
+              "type": "bigint",
+              "required": false,
+              "description": "Request lifetime in Push Chain blocks. Default 300n. An unfulfilled request expires and refunds the unused callback budget."
+            },
+            {
+              "name": "options.maxFee",
+              "type": "bigint",
+              "required": false,
+              "description": "Cap on the upfront payment (protocol fee plus callback budget). Default: SDK estimated."
+            },
+            {
+              "name": "options.refundTo",
+              "type": "string",
+              "required": false,
+              "description": "Where unused callback budget is sent. Default: your Push account. Must accept native transfers."
+            }
+          ],
+          "returns": "PreparedRead",
           "safe_for_autonomous_execution": true,
-          "docs_url": "https://push.org/docs/chain/build/universal-read/",
-          "minimum_sdk_version": "6.0.25"
+          "docs_url": "https://push.org/docs/chain/build/read-multiple-universal-states/"
         },
         {
           "name": "executeReads",
-          "signature": "pushChainClient.universal.executeReads(reads, options?): Promise<BatchReadResponse>",
-          "description": "Broadcast prepared reads; preserve order and all sequential transaction hashes.",
+          "signature": "pushChainClient.universal.executeReads(preparedReads: PreparedRead[], options?: { waitForCompletion?: boolean, progressHook?: (progress: ProgressEvent) => void, advanced?: { pollingIntervalMs?: number, timeout?: number, enforceGasCheck?: boolean } }): Promise<BatchReadResponse>",
+          "description": "Executes an ordered array of prepared reads as one flow: a single transaction (one signature) where the wallet supports atomic batching, otherwise sequential transactions listed in transactionHashes. Returns BatchReadResponse { txHash, transactionHashes, reads, count, atomic, wait() }; wait() returns the UniversalReadResponse array in prepared order. atomic describes submission only; validators fulfill each read on its own, so check value on every response. With sequential submission, check the hashes on an error before resubmitting.",
+          "arguments": [
+            {
+              "name": "preparedReads",
+              "type": "PreparedRead[]",
+              "required": true,
+              "description": "Reads returned by prepareRead. Results come back in this order."
+            },
+            {
+              "name": "options.waitForCompletion",
+              "type": "boolean",
+              "required": false,
+              "description": "Default true. false returns once the requests are submitted; call wait() to finish."
+            },
+            {
+              "name": "options.progressHook",
+              "type": "(progress: ProgressEvent) => void",
+              "required": false,
+              "description": "Batch events READ-TX-001 to READ-TX-999-03 plus each read's own READ-TX-1xx events."
+            },
+            {
+              "name": "options.advanced.pollingIntervalMs",
+              "type": "number",
+              "required": false,
+              "description": "Milliseconds between status polls. Default 2000, minimum 500."
+            },
+            {
+              "name": "options.advanced.timeout",
+              "type": "number",
+              "required": false,
+              "description": "Maximum milliseconds this caller waits. Timing out cancels nothing."
+            },
+            {
+              "name": "options.advanced.enforceGasCheck",
+              "type": "boolean",
+              "required": false,
+              "description": "true throws before broadcasting when the balance check finds a shortfall."
+            }
+          ],
+          "returns": "BatchReadResponse",
           "safe_for_autonomous_execution": false,
-          "docs_url": "https://push.org/docs/chain/build/universal-read/",
-          "minimum_sdk_version": "6.0.25"
+          "docs_url": "https://push.org/docs/chain/build/read-multiple-universal-states/"
         },
         {
           "name": "trackRead",
-          "signature": "pushChainClient.universal.trackRead({ txHash } | { requestId }, options?): Promise<UniversalReadResponse[] | UniversalReadResponse>",
-          "description": "Read-only snapshot lookup. Call wait() to poll; resultShape supports runtime decoding on resume.",
+          "signature": "pushChainClient.universal.trackRead({ requestId } | { txHash }, options?: { resultShape?: { kind: 'evmCall', abi, functionName } | ..., progressHook?: (progress: ProgressEvent) => void, advanced?: { pollingIntervalMs?: number, timeout?: number } }): Promise<UniversalReadResponse | UniversalReadResponse[]>",
+          "description": "Returns the current state of a read by its request ID (hex or numeric), or of every read submitted by a Push Chain transaction (an array, since one transaction can carry several reads). Works with a read-only client that has no signer and no funds, from any session. Call wait() on a snapshot to poll to a terminal status, or refresh() for one fresh snapshot. Balances, storage and Web2 reads decode automatically; pass resultShape to decode a typed contract call resumed in a new session. A wait() timeout throws ReadTimeoutError (code READ_TIMEOUT) and cancels nothing.",
+          "arguments": [
+            {
+              "name": "ref.requestId | ref.txHash",
+              "type": "string | bigint",
+              "required": true,
+              "description": "The read's request ID (hex or numeric), or the Push Chain transaction that submitted it. Pass one."
+            },
+            {
+              "name": "options.resultShape",
+              "type": "{ kind: 'evmCall', abi, functionName } and others",
+              "required": false,
+              "description": "How to decode resultData. Inferred for balances, storage and Web2; a typed contract call resumed in a new session needs it, or value stays raw bytes."
+            },
+            {
+              "name": "options.progressHook",
+              "type": "(progress: ProgressEvent) => void",
+              "required": false,
+              "description": "Invoked at each lifecycle step while wait() polls."
+            },
+            {
+              "name": "options.advanced.pollingIntervalMs",
+              "type": "number",
+              "required": false,
+              "description": "Milliseconds between polls in wait(). Default 2000, minimum 500."
+            },
+            {
+              "name": "options.advanced.timeout",
+              "type": "number",
+              "required": false,
+              "description": "Maximum milliseconds wait() polls before throwing ReadTimeoutError. Default derived from expiry, at most 180000."
+            }
+          ],
+          "returns": "UniversalReadResponse | UniversalReadResponse[]",
           "safe_for_autonomous_execution": true,
-          "docs_url": "https://push.org/docs/chain/build/universal-read/",
-          "minimum_sdk_version": "6.0.25"
+          "docs_url": "https://push.org/docs/chain/build/track-universal-read/"
         }
       ]
     },
@@ -528,7 +807,7 @@
         {
           "name": "usePushChainClient",
           "type": "hook",
-          "description": "Returns the initialized PushChainClient (from @pushchain/core) after wallet connection. Exposes all core transaction methods: sendTransaction, signMessage, prepareTransaction, executeTransactions. This is the primary way to execute universal transactions in a React app. Note on multicall: browser wallets connect as JSON-RPC accounts and cannot sign EIP-7702 authorizations, so a native-Push-EOA batch sent from the browser falls back to sequential (non-atomic) execution — check response.atomic to see which path ran. Push Wallet email/google logins and backend local-key signers can use the atomic path.",
+          "description": "Returns the initialized PushChainClient (from @pushchain/core) after wallet connection. Exposes all core transaction methods: sendTransaction, signMessage, prepareTransaction, executeTransactions, and the Universal Read methods read, prepareRead, executeReads and trackRead. This is the primary way to execute universal transactions in a React app. Note on multicall: browser wallets connect as JSON-RPC accounts and cannot sign EIP-7702 authorizations, so a native-Push-EOA batch sent from the browser falls back to sequential (non-atomic) execution; check response.atomic to see which path ran. Push Wallet email/google logins and backend local-key signers can use the atomic path.",
           "safe_for_autonomous_execution": true
         },
         {

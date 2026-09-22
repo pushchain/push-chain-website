@@ -48,7 +48,8 @@ const walkDir = async (dir, extensions = ['.mdx', '.md']) => {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       results.push(...(await walkDir(fullPath, extensions)));
-    } else if (extensions.includes(path.extname(entry.name))) {
+    } else if (extensions.includes(path.extname(entry.name)) && !entry.name.startsWith('_')) {
+      // Skip MDX partials (_*.mdx): Docusaurus excludes them from routing too.
       results.push(fullPath);
     }
   }
@@ -101,31 +102,135 @@ const getSectionLabel = (filePath) => {
   return SECTION_LABEL_MAP[subDir] ?? subDir;
 };
 
-// Strip MDX/JSX noise from content for llms-full.txt
+// Inline MDX partials so agents see their content instead of a component tag.
+// A page that does `import ReadParameters from './_read-parameters.mdx';` and
+// renders `<ReadParameters hideRows={['options.progressHook']} />` gets the
+// partial's body in place of the tag. Table rows whose first cell (with
+// `&nbsp;`, code ticks and emphasis stripped) is named in that usage's
+// `hideRows` array are dropped, mirroring what <HideTableRows> does on the
+// site. Partials may import partials of their own; they are expanded too.
+const PARTIAL_IMPORT_RE =
+  /^import\s+([A-Za-z_$][\w$]*)\s+from\s+['"](\.{1,2}\/[^'"]+\.mdx?)['"]\s*;?[ \t]*$/gm;
+
+// Split a Markdown table row on unescaped pipes and return its first cell,
+// normalized the same way src/components/HideTableRows names a row.
+const firstTableCell = (line) => {
+  const cells = line.trim().replace(/^\|/, '').split(/(?<!\\)\|/);
+  return (cells[0] ?? '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/`|\*\*/g, '')
+    .trim()
+    .replace(/\s*\[collapsed\]$/, '')
+    .replace(/^(↳|::)\s*/, '')
+    .replace(/^_+|_+$/g, '')
+    .trim();
+};
+
+const parseHideRows = (attrs) => {
+  const m = attrs.match(/hideRows\s*=\s*\{\s*\[([\s\S]*?)\]\s*\}/);
+  if (!m) return [];
+  return [...m[1].matchAll(/['"]([^'"]+)['"]/g)].map((x) => x[1].trim());
+};
+
+const dropHiddenRows = (body, hideRows) => {
+  if (hideRows.length === 0) return body;
+  const hidden = new Set(hideRows);
+  return body
+    .split('\n')
+    .filter((line) => {
+      if (!line.trim().startsWith('|')) return true;
+      return !hidden.has(firstTableCell(line));
+    })
+    .join('\n');
+};
+
+const expandPartials = async (raw, filePath, depth = 0) => {
+  if (depth > 5) return raw;
+  const imports = [...raw.matchAll(PARTIAL_IMPORT_RE)];
+  if (imports.length === 0) return raw;
+
+  let out = raw;
+  for (const [, name, relPath] of imports) {
+    const partialPath = path.resolve(path.dirname(filePath), relPath);
+    let partial;
+    try {
+      partial = await fs.readFile(partialPath, 'utf-8');
+    } catch {
+      continue; // unresolved partial: leave the tag for the stripper
+    }
+    partial = await expandPartials(partial, partialPath, depth + 1);
+    // The partial's own imports are removed later by stripMdxNoise.
+    const usageRe = new RegExp(`<${name}\\b([^>]*?)\\/>`, 'g');
+    out = out.replace(usageRe, (_m, attrs) =>
+      `\n${dropHiddenRows(partial, parseHideRows(attrs)).trim()}\n`
+    );
+  }
+  return out;
+};
+
+// Strip MDX/JSX noise from content for llms-full.txt.
+//
+// Code is protected before any stripping: fenced blocks, live-playground
+// template literals ({`...`}) and inline code spans are swapped for
+// placeholders, so TypeScript generics (`Promise<PreparedRead>`,
+// `Array<{ path, valueType }>`), column-0 `import` lines inside examples and
+// anything else that looks like markup survive verbatim. `<Details summary>`
+// labels ("Advanced Arguments", "Live Playground: ...") are kept as bold
+// lines, and the tag stripper honours quoted attributes so a `<` or `>`
+// inside an attribute value does not cut a tag short.
+const TAG_RE = /<\/?[A-Za-z][^>"']*(?:(?:"[^"]*"|'[^']*'|\{[^}]*\})[^>"']*)*\/?>/g;
+
 const stripMdxNoise = (raw) => {
-  return (
-    raw
-      // Remove frontmatter
-      .replace(/^---[\s\S]*?---\n?/, '')
-      // Remove HTML comments (multi-line). Must run BEFORE the JSX/HTML
-      // tag stripper below — that pass treats `<!--` and `-->` as
-      // independent tags and would leave the comment body in the output.
-      .replace(/<!--[\s\S]*?-->/g, '')
-      // Remove JSX/MDX comments: {/* ... */} (multi-line). Same reason —
-      // the stripper below doesn't recognise them as comments.
-      .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-      // Remove multi-line import blocks: import { ... } from '...';
-      .replace(/^import\s+\{[^}]*\}\s+from\s+['"][^'"]+['"]\s*;?\n?/gms, '')
-      // Remove single-line import statements
-      .replace(/^import\s+\S.*from\s+['"][^'"]+['"]\s*;?\n?/gm, '')
-      // Remove export statements
-      .replace(/^export .+\n?/gm, '')
-      // Remove JSX/HTML tags while preserving inner text (best-effort)
-      .replace(/<[^>]+>/g, '')
-      // Collapse multiple blank lines
-      .replace(/\n{3,}/g, '\n\n')
-      .trim()
-  );
+  const saved = [];
+  const protect = (m) => {
+    saved.push(m);
+    return `\u0000${saved.length - 1}\u0000`;
+  };
+  const restore = (text) => {
+    let out = text;
+    // Placeholders can nest (inline code inside a restored block never
+    // happens, but restore until stable to be safe).
+    for (let i = 0; i < 3 && out.includes('\u0000'); i++) {
+      out = out.replace(/\u0000(\d+)\u0000/g, (_m, n) => saved[Number(n)]);
+    }
+    return out;
+  };
+
+  let text = raw
+    // Remove frontmatter
+    .replace(/^---[\s\S]*?---\n?/, '');
+
+  text = text
+    // Fenced code blocks
+    .replace(/^([ \t]*)(`{3,})[^\n]*\n[\s\S]*?\n\1\2[ \t]*$/gm, protect)
+    // Live-playground template literals: {`...`}
+    .replace(/\{`[\s\S]*?`\}/g, protect)
+    // Inline code spans
+    .replace(/`[^`\n]+`/g, protect);
+
+  text = text
+    // Remove HTML comments (multi-line). Must run BEFORE the JSX/HTML
+    // tag stripper below, which would leave the comment body in the output.
+    .replace(/<!--[\s\S]*?-->/g, '')
+    // Remove JSX/MDX comments: {/* ... */} (multi-line).
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+    // Remove multi-line import blocks: import { ... } from '...';
+    .replace(/^import\s+\{[^}]*\}\s+from\s+['"][^'"]+['"]\s*;?\n?/gms, '')
+    // Remove single-line import statements
+    .replace(/^import\s+\S.*from\s+['"][^'"]+['"]\s*;?\n?/gm, '')
+    // Remove export statements
+    .replace(/^export .+\n?/gm, '')
+    // Keep <Details summary="..."> labels as bold lines
+    .replace(/<Details\s+summary="([^"]*)"[^>]*>/g, (_m, label) =>
+      `\n**${label.trim()}**\n`
+    )
+    // Remove JSX/HTML tags while preserving inner text (best-effort)
+    .replace(TAG_RE, '')
+    // Collapse multiple blank lines
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+
+  return restore(text);
 };
 
 // Gather all docs with their metadata
@@ -148,7 +253,7 @@ const gatherDocs = async () => {
     const url = computeDocUrl(filePath, slug);
     const section = getSectionLabel(filePath);
     if (section === null) continue;
-    const strippedContent = stripMdxNoise(raw);
+    const strippedContent = stripMdxNoise(await expandPartials(raw, filePath));
 
     docs.push({
       filePath,

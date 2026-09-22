@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "current_sdk_version": "6.0.25",
-  "generated": "2026-09-16T00:00:00.000Z",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Canonical workflow manifest for Push Chain agent layer",
   "workflows": [
     {
@@ -261,9 +261,9 @@
     {
       "id": "use-contract-helpers",
       "category": "reading-utilities",
-      "name": "Use Contract Helpers (IUEAFactory)",
+      "name": "Use Contract Helpers (IUEAFactory, UniversalReadClient)",
       "file": "agents/workflows/use-contract-helpers.md",
-      "purpose": "Query IUEAFactory (0x00000000000000000000000000000000000000eA) to identify cross-chain callers (getOriginForUEA) or derive a deterministic UEA address for any external wallet (getUEAForOrigin). Works on-chain (Solidity) and off-chain (ethers.js).",
+      "purpose": "Query IUEAFactory (0x00000000000000000000000000000000000000eA) to identify cross-chain callers (getOriginForUEA) or derive a deterministic UEA address for any external wallet (getUEAForOrigin). Works on-chain (Solidity) and off-chain (ethers.js). Also covers the Universal Read Client base contract: inherit it to request external state with _requestRead and receive the validator-agreed result in _onReadResult.",
       "actor": "developer",
       "operation": "read",
       "prerequisites": [
@@ -303,7 +303,7 @@
       "category": "reading-utilities",
       "name": "Constants Reference",
       "file": "agents/workflows/constants-reference.md",
-      "purpose": "Reference all SDK constants including chain identifiers, networks, and token enums.",
+      "purpose": "Reference all SDK constants including chain identifiers (with the read-only CHAIN.WEB2), networks, token enums, and the Universal Read READ constants.",
       "actor": "developer",
       "operation": "read",
       "prerequisites": [],
@@ -362,7 +362,7 @@
       "category": "reading-utilities",
       "name": "ProgressHook Events Reference",
       "file": "agents/workflows/progress-hook-events.md",
-      "purpose": "Complete reference of all progressHook event IDs emitted by sendTransaction and executeTransactions, including event shape, per-route tables (Route 1/2/3, multichain), and response payloads.",
+      "purpose": "Complete reference of all progressHook event IDs emitted by sendTransaction and executeTransactions, including event shape, per-route tables (Route 1/2/3, multichain), and response payloads. Also lists the Universal Read READ-TX-* events for read, executeReads and trackRead.",
       "actor": "developer",
       "operation": "read",
       "prerequisites": [],
@@ -380,7 +380,7 @@
       "category": "core-execution",
       "name": "Universal Read",
       "file": "agents/workflows/universal-read.md",
-      "purpose": "Prepare, submit and recover validator-agreed external reads.",
+      "purpose": "Bring EVM, Solana or Web2 state onto Push Chain with validator agreement: read (registry or your own UniversalReadClient receiver), prepareRead + executeReads for batches, trackRead to resume, and contract-initiated reads that build a ReadSpec and call _requestRead.",
       "actor": "developer",
       "operation": "write",
       "prerequisites": [
@@ -388,20 +388,24 @@
       ],
       "deterministic": false,
       "safe_for_autonomous_execution": false,
-      "mcp_mapping_candidates": [],
+      "mcp_mapping_candidates": [
+        "request_universal_read",
+        "prepare_universal_read",
+        "track_universal_read"
+      ],
       "status": "documented"
     }
   ],
   "metadata": {
-    "total_workflows": 18,
+    "total_workflows": 19,
     "operation_breakdown": {
       "read": 7,
-      "write": 10,
+      "write": 11,
       "tracking": 1,
       "simulation": 0
     },
     "actor_breakdown": {
-      "developer": 14,
+      "developer": 15,
       "frontend_developer": 3,
       "smart_contract": 1
     },

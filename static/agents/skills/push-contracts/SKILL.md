@@ -1,9 +1,9 @@
 ---
 name: push-contracts
-description: "Use when writing Solidity contracts deployed on Push Chain - covers IUEAFactory for identifying cross-chain callers (UEA), IUniversalGatewayPC (UGPC) for dispatching outbound cross-chain transactions, executeUniversalTx inbound callbacks, UniversalCore oracle reads, and Foundry/Hardhat deployment. No SDK inside .sol files. Triggers on: 'identify cross-chain caller in Solidity', 'dispatch outbound tx from Push Chain contract', 'implement executeUniversalTx callback', 'deploy Solidity contract with Foundry on Push Chain'."
+description: "Use when writing Solidity contracts deployed on Push Chain - covers IUEAFactory for identifying cross-chain callers (UEA), IUniversalGatewayPC (UGPC) for dispatching outbound cross-chain transactions, executeUniversalTx inbound callbacks, UniversalCore oracle reads, UniversalReadClient for receiving external chain or Web2 state (Universal Read callbacks, contract-built ReadSpec), and Foundry/Hardhat deployment. No SDK inside .sol files. Triggers on: 'identify cross-chain caller in Solidity', 'dispatch outbound tx from Push Chain contract', 'implement executeUniversalTx callback', 'deploy Solidity contract with Foundry on Push Chain', 'read another chain's state from a Push Chain contract'."
 metadata:
   id: push-contracts
-  intent: 'Write Solidity contracts on Push Chain - identify cross-chain callers, dispatch outbound txs via UGPC, receive inbound callbacks'
+  intent: 'Write Solidity contracts on Push Chain - identify cross-chain callers, dispatch outbound txs via UGPC, receive inbound callbacks, receive Universal Read results'
   package: 'solidity (EVM-compatible - Hardhat / Foundry / Remix)'
   current_sdk_version: '6.0.25'
   entry: 'IUniversalGatewayPC.sendUniversalTxOutbound'
@@ -14,7 +14,7 @@ metadata:
 
 # Skill: Smart Contracts on Push Chain
 
-**Intent**: Write Solidity contracts that run on Push Chain, identify cross-chain callers, dispatch outbound transactions to external chains, and receive inbound callbacks.
+**Intent**: Write Solidity contracts that run on Push Chain, identify cross-chain callers, dispatch outbound transactions to external chains, receive inbound callbacks, and receive external chain or Web2 state through Universal Read.
 **Tooling**: Standard EVM (Hardhat / Foundry / Remix) - Push Chain is fully EVM-compatible. No special SDK needed inside Solidity.
 
 > **Full agent layer:** [push.org/llms.txt](https://push.org/llms.txt) indexes every skill, workflow, example, error code, constant, and routing decision in the Push Chain agent layer. Pull it when this skill points outside its domain — cross-skill context, unknown progress-hook IDs, error recovery, or constants lookups.
@@ -56,6 +56,8 @@ push_donut = "https://evm.donut.rpc.push.org/"
 | **UniversalGatewayPC (UGPC)** | `0x00000000000000000000000000000000000000C1` | Dispatch outbound cross-chain txs from your Push Chain contract                           |
 | **Universal Executor Module** | `0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7` | Delivers inbound callbacks - only valid caller of `executeUniversalTx()`                  |
 | **UniversalCore**             | `0x00000000000000000000000000000000000000C0` | On-chain oracle - read gas price, block height, observed timestamp for any external chain |
+| **Universal Callback**        | `0x00000000000000000000000000000000000000c2` | "Universal Read / Callback": accepts read requests and delivers results; constructor argument for `UniversalReadClient` |
+| **Universal Read Registry**   | `0x00000000000000000000000000000000000000b2` | Default Universal Read receiver used by the SDK when no `callback` is passed |
 
 > Full address book: see https://push.org/agents/contract-addresses.json
 
@@ -837,6 +839,287 @@ function getChainState(string calldata chainNs)
 
 ---
 
+## 4 - UniversalReadClient: Receive External State
+
+Universal Read brings state from another chain (EVM or Solana) or from an HTTPS endpoint onto Push Chain. Validators read the source and agree on the bytes, and **Universal Callback** (`0x00000000000000000000000000000000000000c2`) delivers them into a function on your contract. The result becomes contract state in the same transaction that delivers it: settle, unlock, pay out or rebalance with no off-chain relayer. The read is paid and asynchronous; your callback runs inside a gas bound you choose, up to 1,000,000 gas.
+
+If only an app or backend needs the value, you do not need a contract: omit `callback` and the Universal Read Registry (`0x00000000000000000000000000000000000000b2`) stores the result (push-backend skill, `client.universal.read`).
+
+**Universal Callback key properties:**
+
+- **Single entry**: `requestExternalReadSelf(spec, callbackSelector, callbackGasLimit)` is the only way in. `UniversalReadClient` calls it for you.
+- **Single delivery**: only Universal Callback may call your contract with a result. The base contract enforces this.
+- **Gas bound**: `callbackGasLimit` caps what your callback may consume. The hard cap is 1,000,000 gas; the registry uses 500,000.
+- **Lifecycle**: `PENDING`, `EXECUTED` (callback ran), `SETTLED` (gas reported, refund sent), or `EXPIRED`. `statusOf(requestId)` returns the current state; an unknown ID reads as `NONE`.
+- **Fees**: `estimateFee(chainNamespace, chainId)` quotes the protocol fee.
+
+### UniversalReadClient
+
+Inherit `UniversalReadClient` (`import {UniversalReadClient} from "push-chain-core-contracts/src/UniversalReadClient.sol";`, types in `push-chain-core-contracts/src/libraries/ReadTypes.sol`). You write two functions:
+
+- a **payable request entrypoint** that calls `_requestRead(ReadSpec spec, bytes localState, uint64 callbackGasLimit) returns (uint256 requestId)`, forwarding `msg.value` (protocol fee plus callback budget);
+- **`_onReadResult(uint256 requestId, bytes calldata resultData, bytes memory localState)`**, which receives the validator-agreed bytes and the `localState` you passed at request time.
+
+The base contract's `onUniversalData(requestId, resultData)` rejects every caller except Universal Callback (`UnauthorizedCaller`) and forwards to `_onReadResult`; never override it. `getLocalContext(requestId)` returns the pending `localState`; `universalCallback()` returns the bound address. `_requestRead` sets `revertRecipient` to your contract when you leave it empty, so declare `receive() external payable {}` or point it at an EOA.
+
+### ReadSpec
+
+```solidity
+struct ReadSpec {
+    UniversalAccountId account;      // { chainNamespace, chainId, owner }: where to read
+    bytes   query;                   // Encoded query envelope for that chain family
+    uint16  minConfirmations;        // At least 1
+    uint64  blockNumber;             // Pinned source block, at most the oracle height
+    uint64  expiryPushChainHeight;   // Push Chain block after which the request expires
+    uint256 maxFee;                  // Upper bound on msg.value the request accepts
+    address revertRecipient;         // Receives the unused callback budget
+}
+```
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `account.chainNamespace` | `string` | Bare namespace: `eip155`, `solana` or `web2`. |
+| `account.chainId` | `string` | Chain ID within the namespace, for example `11155111` for Ethereum Sepolia. |
+| `account.owner` | `bytes` | The account being read on Solana (32 bytes). For EVM reads validators do not use it; any non-empty bytes are accepted. |
+| `query` | `bytes` | The chain family's query envelope. For EVM: `abi.encode` of `(uint8 queryType, (uint8 refType, uint64 blockNumber) blockRef, bytes payload)`. |
+| `minConfirmations` | `uint16` | Confirmations the source block must have before validators read it. Minimum `1`. |
+| `blockNumber` | `uint64` | Source block to read at. Must be non-zero and at most the height Universal Core has observed for that chain. `0` for Web2. |
+| `expiryPushChainHeight` | `uint64` | Must be greater than the current Push Chain block. The SDK uses the current block plus 300. |
+| `maxFee` | `uint256` | The request reverts when `msg.value` exceeds it. Set it to `msg.value` when you have no separate cap. |
+| `revertRecipient` | `address` | Receives the unused callback budget on settlement and the full budget on expiry. Must accept native transfers. |
+
+### Deploy a Receiver
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+
+import {UniversalReadClient} from "push-chain-core-contracts/src/UniversalReadClient.sol";
+import {ReadSpec} from "push-chain-core-contracts/src/libraries/ReadTypes.sol";
+
+/**
+ * @title ExternalStateInbox
+ * @notice Requests universal reads and stores each delivered result by request ID.
+ */
+contract ExternalStateInbox is UniversalReadClient {
+    /// @notice The only Push Chain account allowed to submit requests
+    address public immutable REQUESTER;
+
+    /// @notice Raw result bytes, keyed by the numeric request ID
+    mapping(uint256 => bytes) public results;
+
+    /**
+     * @param callbackAddress The Universal Callback contract that delivers results
+     * @param requester_ The Push Chain account that will submit requests
+     */
+    constructor(address callbackAddress, address requester_)
+        UniversalReadClient(callbackAddress)
+    {
+        require(requester_ != address(0), "zero requester");
+        REQUESTER = requester_;
+    }
+
+    /**
+     * @notice Payable request entrypoint the SDK calls
+     * @param spec The prepared read, supplied by the SDK
+     * @param gasLimit Gas reserved for _onReadResult
+     * @return The numeric request ID
+     */
+    function request(ReadSpec calldata spec, uint64 gasLimit)
+        external payable returns (uint256)
+    {
+        require(msg.sender == REQUESTER, "only requester");
+        return _requestRead(spec, abi.encode(msg.sender), gasLimit);
+    }
+
+    /**
+     * @dev Called by the base contract when Universal Callback delivers a result.
+     *      Empty resultData means the source returned an error.
+     */
+    function _onReadResult(uint256 requestId, bytes calldata resultData, bytes memory)
+        internal override
+    {
+        if (resultData.length == 0) return;
+        results[requestId] = resultData;
+    }
+
+    /// @dev Receives the unused callback budget
+    receive() external payable {}
+}
+```
+
+| Argument | Value |
+| -------- | ----- |
+| `callbackAddress` | `0x00000000000000000000000000000000000000c2`, the [Universal Read / Callback](/docs/chain/setup/smart-contract-address-book/#push-chain-core-functionalities) contract. |
+| `requester_` | The address that will submit requests. For an SDK caller, `pushChainClient.universal.account`. |
+
+> **`requester_` must equal the `msg.sender` your receiver sees when a read is requested.** For a caller using the SDK that is `pushChainClient.universal.account` on the client that will call `read`, which is not always the wallet that deployed the contract (an external signer calls through its UEA).
+
+### Request a Read: Two Paths
+
+**Path A, through the SDK.** Off-chain code points `read` at your receiver by passing `callback`. The SDK prepares the read, calls your payable entrypoint with the prepared `ReadSpec` and the callback gas, and waits for the result.
+
+```typescript
+const result = await pushChainClient.universal.read(holder, {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  callback: {
+    target: receiverAddress,
+    gasLimit: 200_000n,       // gas for _onReadResult, up to 1_000_000n
+    abi: receiverAbi,
+    functionName: 'request',  // your payable request entrypoint
+  },
+});
+
+console.log(result.callbackDelivered); // true once _onReadResult ran
+```
+
+**Path B, from within your contract.** A contract that requests on its own builds the `ReadSpec` itself, with no SDK in the loop. This example pins the read at the height Universal Core observed for Ethereum Sepolia and stores the ETH balance of `holder`.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+
+import {UniversalReadClient} from "push-chain-core-contracts/src/UniversalReadClient.sol";
+import {ReadSpec} from "push-chain-core-contracts/src/libraries/ReadTypes.sol";
+import {UniversalAccountId} from "push-chain-core-contracts/src/libraries/Types.sol";
+
+interface IUniversalCore {
+    function chainHeightByChainNamespace(string calldata caip2) external view returns (uint256);
+}
+
+/**
+ * @title BalanceWatcher
+ * @notice Requests the Ethereum Sepolia ETH balance of an address with no SDK in the loop.
+ */
+contract BalanceWatcher is UniversalReadClient {
+    /// @dev EVM query envelope. abi.encode of this struct is what validators decode.
+    struct BlockRef { uint8 refType; uint64 blockNumber; }
+    struct EvmQuery { uint8 queryType; BlockRef blockRef; bytes payload; }
+
+    address public constant UNIVERSAL_CORE = 0x00000000000000000000000000000000000000C0;
+    uint8 public constant QUERY_ACCOUNT_BALANCE = 0;
+
+    /// @notice Latest delivered balance per holder, in wei
+    mapping(address => uint256) public balances;
+
+    constructor(address callbackAddress) UniversalReadClient(callbackAddress) {}
+
+    /**
+     * @notice Request the Sepolia ETH balance of `holder`
+     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee.
+     *      The excess is the callback budget; what the callback does not use comes back.
+     */
+    function requestBalance(address holder) external payable returns (uint256) {
+        uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111"));
+
+        bytes memory query = abi.encode(EvmQuery({
+            queryType: QUERY_ACCOUNT_BALANCE,
+            blockRef: BlockRef({ refType: 0, blockNumber: height }),
+            payload: abi.encode(holder)
+        }));
+
+        ReadSpec memory spec = ReadSpec({
+            account: UniversalAccountId({ chainNamespace: "eip155", chainId: "11155111", owner: abi.encodePacked(holder) }),
+            query: query,
+            minConfirmations: 1,
+            blockNumber: height,
+            expiryPushChainHeight: uint64(block.number + 300),
+            maxFee: msg.value,
+            revertRecipient: address(this)
+        });
+
+        return _requestRead(spec, abi.encode(holder), 200_000);
+    }
+
+    /// @dev Empty resultData means the source returned an error; nothing is stored.
+    function _onReadResult(uint256, bytes calldata resultData, bytes memory localState)
+        internal override
+    {
+        if (resultData.length == 0) return;
+        address holder = abi.decode(localState, (address));
+        balances[holder] = abi.decode(resultData, (uint256));
+    }
+
+    /// @dev Receives the unused callback budget
+    receive() external payable {}
+}
+```
+
+The query envelope is rigid: validators decode `query` as one ABI-encoded tuple, so build it with `abi.encode` of a struct, never as three separate parameters.
+
+| Query | `queryType` | `payload` | `resultData` |
+|-------|-------------|-----------|--------------|
+| Native balance | `0` | `abi.encode(address holder)` | `abi.encode(uint256)` |
+| Contract call | `1` | `abi.encode(address target, bytes callData)` | Raw return bytes of the call |
+| Storage slot | `2` | `abi.encode(address target, bytes32 slot)` | The 32-byte word |
+
+Solana and Web2 envelopes carry more fields. Build those off-chain with the SDK's `prepareRead` and pass `prepared.specTuple` to your entrypoint.
+
+### Read the Result On-Chain
+
+```solidity
+uint256 balance = abi.decode(resultData, (uint256));   // balance, token balance, lamports
+address holder = abi.decode(localState, (address));    // whatever you stored at request time
+```
+
+**Empty `resultData` means the source returned an error** (the target had no code at that block, the call reverted, or the endpoint failed). Return early rather than decoding, as both examples do; decoding empty bytes reverts, burns the callback budget and marks the callback as failed. An expired request never reaches your callback.
+
+### Verify From Off-Chain
+
+```typescript
+const done = await pushChainClient.universal.trackRead({ requestId: result.requestId }).then((read) => read.wait());
+if (done.callbackDelivered !== true) throw new Error('Receiver did not run');
+
+const inbox = new ethers.Contract(receiverAddress, receiverAbi, provider);
+const stored = await inbox.results(result.requestIdUint);
+```
+
+`callbackDelivered` is `false` when `_onReadResult` reverted or ran out of gas. `results` is keyed by the numeric request ID, which the SDK exposes as `requestIdUint`.
+
+### Fees and Refunds
+
+| Item | What happens |
+|------|--------------|
+| **Protocol fee** | Quoted by `estimateFee(chainNamespace, chainId)` on Universal Callback. Taken from `msg.value` at request time and not refunded. |
+| **Callback budget** | Everything in `msg.value` above the protocol fee. After the callback runs, the gas it consumed is burned from the budget and the rest is sent to `revertRecipient`. |
+| **Expiry** | A request that is not executed by `expiryPushChainHeight` expires and the full callback budget is refunded. The protocol fee is not. |
+| **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push and the refund is not delivered. |
+
+### Security Rules
+
+- **Only Universal Callback can deliver.** Do not override `onUniversalData`; put your logic in `_onReadResult`.
+- **Gate the request entrypoint.** A payable entrypoint anyone can call lets anyone write into your request bookkeeping. Restrict it (as `REQUESTER` does) or make it deliberately public and treat each result as untrusted input.
+- **The result is only as good as the request.** Callback arrival proves validators agreed on the bytes for the spec that was submitted. When the SDK builds the spec, record what you expect (a query key or target address) in `localState` and check it in the callback.
+- **Empty bytes are an error, not a zero.** Check `resultData.length` first.
+- **No reads from inside a callback.** Start follow-up reads in a separate transaction.
+
+### Limitations
+
+| Area | Constraint |
+|------|------------|
+| **No synchronous result** | The request and the delivery are separate transactions. There is no in-call return value. |
+| **Callback gas** | At most 1,000,000 gas per callback. Larger work must be split across transactions. |
+| **One request per prepared read** | On the SDK path the entrypoint must call `_requestRead` exactly once per prepared read. |
+| **Query envelopes** | EVM envelopes are simple enough to build in Solidity. Solana and Web2 envelopes should come from the SDK. |
+| **Supported sources** | Ethereum Sepolia, Arbitrum Sepolia, Base Sepolia, BNB Testnet, Solana Devnet and HTTPS endpoints on Donut. |
+
+### Troubleshooting
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `callbackDelivered` is `false` | `_onReadResult` reverted or ran out of gas | Raise `gasLimit`, up to `1_000_000n`, and make sure the callback cannot revert on empty `resultData`. |
+| Entrypoint reverts with `only requester` | The caller is not the account you authorized | Pass `pushChainClient.universal.account` as `requester_`, not the deploying EOA. See [Deploy a Receiver](#deploy-a-receiver). |
+| Request reverts with `InvalidBlockNumber` | `blockNumber` is `0` or above the height Universal Core has observed | Read `chainHeightByChainNamespace` with the full CAIP-2 key, for example `eip155:11155111`, and pin at or below it. |
+| Request reverts with `InvalidExpiryHeight` | `expiryPushChainHeight` is not above the current block | Use `block.number + 300` or another future height. |
+| Request reverts with `InsufficientFee` or `ExcessiveFee` | `msg.value` is below `estimateFee` or above `spec.maxFee` | Quote `estimateFee` before sending and set `maxFee` to `msg.value` when you have no separate cap. |
+| SDK rejects the transaction over `ReadRequested` | Your entrypoint called `_requestRead` more or fewer than once | Keep one `_requestRead` per prepared read. |
+| Refund never arrives | `revertRecipient` is a contract without a payable `receive()` | Add `receive() external payable {}` or point `revertRecipient` at an EOA. |
+| Callback ran but stored nothing | The source returned an error and `resultData` was empty | Check the target, ABI and pinned block. The SDK shows the reason as `raw.errorCode`. |
+
+Full reference: https://push.org/agents/workflows/universal-read.md
+
+---
+
 ## Deploy
 
 ### Foundry
@@ -941,10 +1224,17 @@ cast code $CONTRACT --rpc-url https://evm.donut.rpc.push.org/
 | Solana outbound from a Push contract reverts with `STF` (SafeTransferFrom)                                               | `msg.value` to UGPC must cover the on-chain $PC → pSOL Uniswap V3 swap. A flat `balance/2` doesn't size against current pool depth. Off-chain compute via `UniversalCore.getOutboundTxGasAndFees(pSOL, gasLimit)` + pool slot0 math (mirrors the SDK's `estimateNativeValueForSwap`). Store the result on the contract via a setter; never use a flat fraction of balance. |
 | TSS dispatches to the 2-arg `executeUniversalTx(UniversalPayload, bytes)` overload and the 6-arg version is never called | For Push-native contracts, TSS calls only the **6-arg** signature `executeUniversalTx(string, bytes, bytes, uint256, address, bytes32)`. The 2-arg signature is reserved for actual UEA proxy accounts. Implement the 6-arg version.                                                                                                                                       |
 | Refunds drain the EOA over many runs                                                                                     | UGPC routes surplus refund to `address(this)`, not back to the user EOA that called your function. Plan a `withdraw()` path or treasury sweep. Expected behavior, not a bug.                                                                                                                                                                                               |
+| Universal Read receiver entrypoint reverts with `only requester` | The gate authorized the deploying EOA, but `msg.sender` is the SDK caller's `pushChainClient.universal.account` (its UEA for an external signer). Pass that account as `requester_`. |
+| `_onReadResult` decodes empty `resultData` and reverts - `callbackDelivered` is `false` | Empty `resultData` means the source returned an error. `if (resultData.length == 0) return;` before `abi.decode`. |
+| Contract-built read reverts with `InvalidBlockNumber` | `blockNumber` must be non-zero and at most `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` (full CAIP-2 key), and must match the block inside `query`. |
+| Validators cannot decode a contract-built `query` | Build it as `abi.encode(EvmQuery({ queryType, blockRef: BlockRef({ refType, blockNumber }), payload }))`, one tuple. For Solana and Web2, use the SDK's `prepareRead(...).specTuple`. |
+| Universal Read refund never arrives | `revertRecipient` defaults to your receiver; add `receive() external payable {}` or point it at an EOA. |
 
 ## Source
 
 - UEAFactory interface: https://github.com/pushchain/push-chain-core-contracts/blob/main/src/Interfaces/IUEAFactory.sol
+- UniversalReadClient: https://github.com/pushchain/push-chain-core-contracts/blob/core-testnet/src/UniversalReadClient.sol
+- ReadTypes (ReadSpec): https://github.com/pushchain/push-chain-core-contracts/blob/core-testnet/src/libraries/ReadTypes.sol
 - UGPC: https://github.com/pushchain/push-chain-gateway-contracts/blob/main/contracts/evm-gateway/src/UniversalGatewayPC.sol
 - UEA_EVM: https://github.com/pushchain/push-chain-core-contracts/blob/main/src/uea/UEA_EVM.sol
 - UEA_SVM: https://github.com/pushchain/push-chain-core-contracts/blob/main/src/uea/UEA_SVM.sol
@@ -967,15 +1257,13 @@ Copy these files into your contracts directory - self-contained and ready to com
 ## Extended Reference
 
 - [Contract-initiated multichain execution (full workflow)](https://push.org/agents/workflows/contract-initiated-multichain-execution.md)
-- [Use contract helpers (UEA Factory)](https://push.org/agents/workflows/use-contract-helpers.md)
+- [Use contract helpers (UEA Factory, UniversalReadClient)](https://push.org/agents/workflows/use-contract-helpers.md)
+- [Universal Read, including contract-initiated reads and callbacks](https://push.org/agents/workflows/universal-read.md)
+- [UniversalReadClient: what `_requestRead` recorded on the registry](https://push.org/agents/examples/read-client-request-context.md)
+- [UniversalReadClient: what `_onReadResult` stored on the registry](https://push.org/agents/examples/read-client-stored-result.md)
 - [Configure dev environment](https://push.org/agents/workflows/configure-dev-environment.md)
 - [Read blockchain state](https://push.org/agents/workflows/read-blockchain-state.md)
 - [Mint ERC-20 tutorial](https://push.org/agents/examples/tutorial-mint-erc20.md)
 - [Universal counter example](https://push.org/agents/examples/tutorial-universal-counter.md)
 - [Derive UEA example](https://push.org/agents/examples/tutorial-derive-uea.md)
 - [Batch transactions example](https://push.org/agents/examples/tutorial-batch-transactions.md)
-
-
-## Universal Read (core 6.0.25)
-
-See [Universal Read](https://push.org/docs/chain/build/universal-read/) and `agents/workflows/universal-read.md`. Paid external-state requests use `read` / `executeReads`; `prepareRead` / `trackRead` do not broadcast. Custom receivers use flattened `callback: { target, gasLimit, abi, functionName, args? }`. Authorize the real Push-side requester (`pushChainClient.universal.account`); an external signer calls through its UEA, so authorizing only the deployment EOA can reject valid requests. Check consensus success, callback delivery and decoding before using the value. Resume timeouts by saved references, and never put secrets in Web2 requests. Registry helpers are internal; do not invent public lookup APIs. Contract callbacks must authenticate the callback predeploy and must not initiate nested reads.

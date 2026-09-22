@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "current_sdk_version": "6.0.25",
-  "generated": "2026-09-16T00:00:00.000Z",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Decision trees for Push Chain agent routing and action selection. Most trees route through SDK capabilities; one tree (`choose_pusd_product`) routes through an external first-party skill (push-pusd) for PUSD / PUSD+ stablecoin integration.",
   "trees": [
     {
@@ -572,24 +572,57 @@
       "question": "Does the application need on-chain delivery of external state?",
       "branches": [
         {
-          "condition": "Only frontend/backend needs RPC data",
-          "action": "Use direct RPC queries",
+          "condition": "Only the frontend or backend needs the data; nothing on-chain acts on it",
+          "action": "Use an ordinary RPC call (ethers/viem against the chain's RPC). It is cheaper and instant; Universal Read is paid and asynchronous.",
           "capability_ids": [
             "read_blockchain_state"
           ]
         },
         {
-          "condition": "Push contract needs external state or shared registry storage",
-          "action": "Use Universal Read; request submission requires a signer and payment",
+          "condition": "One value from an EVM chain, Solana or an HTTPS endpoint must be agreed on by validators and stored on Push Chain, with no custom contract logic",
+          "action": "Call pushChainClient.universal.read(subject, { chain, ...one query option }) without callback; the Universal Read Registry stores the result. Save requestId and txHash, then use value.",
           "capability_ids": [
             "universal_read"
+          ],
+          "details": {
+            "query_option": "none = native balance; token = ERC-20 or SPL balance; abi or idl + functionName (+ args) = typed contract call or Solana program account; storageSlot = EVM storage word; web2 = JSON fields (chain: CHAIN.WEB2)",
+            "registry": "0x00000000000000000000000000000000000000b2 (PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT)"
+          }
+        },
+        {
+          "condition": "Several reads across chains or Web2 should be requested with one user signature",
+          "action": "prepareRead each (no funds needed), then executeReads([...]); results come back in prepared order. Check value on every response.",
+          "capability_ids": [
+            "execute_universal_reads"
           ]
         },
         {
-          "condition": "A request already exists or the client timed out",
-          "action": "trackRead the saved requestId/txHash and wait; do not resubmit automatically",
+          "condition": "A Push Chain contract must act on the result (settle, unlock, pay out, rebalance)",
+          "action": "Deploy a receiver that inherits UniversalReadClient and overrides _onReadResult. Request through the SDK with read(..., { callback: { target, gasLimit, abi, functionName } }), or have the contract build the ReadSpec and call _requestRead itself.",
           "capability_ids": [
+            "contract_initiated_universal_read",
             "universal_read"
+          ],
+          "details": {
+            "universal_callback": "0x00000000000000000000000000000000000000c2 (constructor argument)",
+            "requester": "If the entrypoint is gated, authorize the msg.sender it will see: pushChainClient.universal.account for an SDK caller",
+            "contract_built_specs": "EVM specs can be built in Solidity; build Solana and Web2 envelopes with prepareRead and pass prepared.specTuple",
+            "empty_result": "Empty resultData means the source returned an error; return early"
+          }
+        },
+        {
+          "condition": "A request already exists, the page reloaded, or the client timed out",
+          "action": "trackRead({ requestId } | { txHash }) with any client (read-only is enough) and call wait(); do not resubmit automatically.",
+          "capability_ids": [
+            "track_universal_read"
+          ]
+        },
+        {
+          "condition": "A read finished but value is undefined",
+          "action": "Read status, raw.status (and raw.errorCode), callbackDelivered (and callbackFailReason) and decodeError to see why, then fix the query, ABI, callback gas or receiver and submit a new request.",
+          "capability_ids": [
+            "universal_read",
+            "track_universal_read"
           ]
         }
       ]
