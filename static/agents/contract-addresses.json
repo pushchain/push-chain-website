@@ -32,9 +32,9 @@
         "purpose": "Genesis predeploy for Universal Read request lifecycle, validator fulfillment, application callbacks, settlement and expiry. Pass this address to UniversalReadClient on Donut."
       },
       "UniversalReadRegistry": {
-        "proxy": "0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8",
-        "implementation": "0x67ff18c8972b088670656d448881a026314d900f",
-        "implementation_verified_at": "2026-09-17",
+        "proxy": "0x00000000000000000000000000000000000000b2",
+        "implementation": "0x793ecbbe9bcf2824105575a6fc6cbe19d5653e9a",
+        "implementation_verified_at": "2026-09-22",
         "purpose": "Canonical Donut receiver for SDK Universal Read. Stores per-request results and latestResult(reader, queryKey); SDK callback gas defaults to 500,000."
       },
       "UniversalExecutorModule": {

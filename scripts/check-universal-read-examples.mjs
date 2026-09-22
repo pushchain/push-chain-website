@@ -42,7 +42,9 @@ assert.deepEqual(constants.READ.STATUS, Object.fromEntries(Object.entries(PushCh
 const addresses = JSON.parse(fs.readFileSync(new URL('../static/agents/contract-addresses.json', import.meta.url), 'utf8'));
 const readContracts = addresses.push_chain.core_contracts;
 assert.equal(readContracts.UniversalCallback.address.toLowerCase(), PushChain.CONSTANTS.READ.UNIVERSAL_CALLBACK_ADDRESSES.TESTNET_DONUT.toLowerCase());
-assert.equal(readContracts.UniversalReadRegistry.proxy.toLowerCase(), PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT.toLowerCase());
+// Deployment catalog can precede the SDK release bundled by the playground.
+assert.equal(readContracts.UniversalReadRegistry.proxy.toLowerCase(), '0x00000000000000000000000000000000000000b2');
+assert.equal(readContracts.UniversalReadRegistry.proxy, constants.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT);
 const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 for (const sample of samples) {
   sample.body = sample.code.replace(/^\s*import.*$/gm, '')
