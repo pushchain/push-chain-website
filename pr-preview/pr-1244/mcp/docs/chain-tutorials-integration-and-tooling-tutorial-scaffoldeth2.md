@@ -2,7 +2,7 @@
 title: "Setup Scaffold-ETH for Push"
 url: "https://pushchain.github.io/docs/chain/tutorials/integration-and-tooling/tutorial-scaffoldeth2/"
 section: "tutorials"
-lastUpdated: "2026-09-17T11:52:14+05:30"
+lastUpdated: "2026-09-22T12:24:13Z"
 description: "{Configure Scaffold‑ETH 2 for Push Chain: Deploy and Interact with a Contract | Tutorials | Push Chain Docs}"
 ---
 

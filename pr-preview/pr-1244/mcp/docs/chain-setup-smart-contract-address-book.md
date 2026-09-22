@@ -2,7 +2,7 @@
 title: "Smart Contract Address Book"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-address-book/"
 section: "setup"
-lastUpdated: "2026-09-17T11:52:14+05:30"
+lastUpdated: "2026-09-22T12:24:13Z"
 description: "Smart Contract Address Book | Setup | Push Chain Docs"
 ---
 
@@ -92,10 +92,12 @@ ProxyAdmin - [0xF2000000000000000000000000000000000000aA](https://donut.push.net
 
 ### Universal Read (Donut)
 
+Registry updated on 2026-09-22. The website's pinned SDK 6.0.25 still contains the previous default; the new default takes effect in the SDK release containing this address update. Previous stored results remain on the previous registry.
+
 | Contract | Address |
 | --- | --- |
 | UniversalCallback predeploy | `0x00000000000000000000000000000000000000c2` |
-| UniversalReadRegistry proxy | `0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8` |
+| UniversalReadRegistry proxy | `0x00000000000000000000000000000000000000b2` |
 
 The SDK defaults to this registry only on `TESTNET_DONUT`. It calls `read(spec, queryKey, callbackGasLimit)` with 500,000 callback gas by default. Other networks need a verified deployment or an application receiver. See [Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/).
 

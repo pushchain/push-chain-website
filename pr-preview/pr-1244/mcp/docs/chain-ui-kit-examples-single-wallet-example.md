@@ -2,7 +2,7 @@
 title: "Single Wallet Example"
 url: "https://pushchain.github.io/docs/chain/ui-kit/examples/single-wallet-example/"
 section: "ui-kit"
-lastUpdated: "2026-09-17T11:52:14+05:30"
+lastUpdated: "2026-09-22T12:24:13Z"
 description: "Single Wallets Example | Examples | UI Kit | Push Chain Docs"
 ---
 

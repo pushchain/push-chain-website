@@ -7782,7 +7782,7 @@ await pushChainClient.universal.read(contractAddress, {
 await pushChainClient.universal.read(solanaHolder, {
   chain: CHAIN.SOLANA_DEVNET,
   token: mintAddress,
-  tokenProgram: 'token-2022', // default: 'spl-token'
+  // SDK detects SPL Token or Token-2022 from the mint owner.
 });
 
 await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/todos/1', {
@@ -7796,7 +7796,25 @@ await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/todos
 
 EVM calls require `view`/`pure` functions and correctly typed ABI arguments. One output is unwrapped; multiple outputs form a tuple. Web2 values are always an array in extraction order.
 
-Solana reads use finalized state. Public `blockNumber` and `minConfirmations` options are EVM-only. Raw Solana account bytes are not part of the high-level `read(subject, options)` grammar.
+Solana reads use finalized state. Public `blockNumber` and `minConfirmations` options are EVM-only.
+
+### Solana account decoding (upcoming SDK release)
+
+The SDK changes below are not included in this site's pinned 6.0.25 playground runtime yet. After upgrading to the release containing them, token reads detect the mint's owning program automatically; remove `tokenProgram` from existing calls.
+
+Read an Anchor account's stored state by passing its account address and IDL layout:
+
+```typescript
+const result = await pushChainClient.universal.read(counterAccountAddress, {
+  chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+  idl: counterIdl,
+  accountName: 'counter', // exact account name in the IDL
+});
+```
+
+This reads finalized account bytes; it does not execute a program instruction. `idl` is exclusive with `abi`, `token`, `storageSlot`, and `web2`, and does not accept `functionName` or `args`. The SDK checks the account discriminator and decodes with Anchor: large integers use BN and public keys use PublicKey. A mismatched layout appears as `decodeError`, with no usable `value`.
+
+Preparation and batching retain the decoder. For resumed reads, pass `resultShape: { kind: 'svmAccount', idl: counterIdl, accountName: 'counter' }` to `trackRead`. The IDL is not stored on-chain. Raw account results do not attest program ownership; verify the owner separately if your application relies on it.
 
 ### Query and lifecycle options
 
@@ -7804,7 +7822,7 @@ Solana reads use finalized state. Public `blockNumber` and `minConfirmations` op
 | --- | --- |
 | `chain` | Required source destination; `CHAIN.WEB2` is read-only and is not a transaction destination. |
 | `token` | ERC-20 address or SPL mint. The SDK derives the holder's associated token account for Solana. |
-| `tokenProgram` | `'spl-token'` or `'token-2022'`; only valid for Solana token reads. |
+| `idl / accountName` | Upcoming SDK: Anchor layout for a Solana account-state read. See the release note above. |
 | `abi / functionName / args` | Typed EVM query. These top-level fields describe the external view call. |
 | `storageSlot` | EVM slot as bigint or a hex word. |
 | `blockNumber` | EVM pin. Defaults to oracle-observed height minus confirmations; the oracle may lag the actual head. |
@@ -8376,7 +8394,7 @@ All constants are accessed via the `PushChain.CONSTANTS` namespace.
 | `WEB2_MAX_EXTRACT_ENTRIES` | `16` |
 | `WEB2_DEFAULT_TIMEOUT_MS` | `5_000` |
 | `WEB2` | `'web2:https'`, also `PushChain.CONSTANTS.CHAIN.WEB2` |
-| `UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8` |
+| `UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x00000000000000000000000000000000000000b2` |
 
 Use `READ.STATUS.FULFILLED` for lifecycle status and `READ.RESULT_STATUS.SUCCESS` for source-result status. These are different enums. Check `callbackDelivered` too. `CHAIN.WEB2` is a read destination, not a transaction destination.
 
@@ -11594,10 +11612,12 @@ Core protocol contracts deployed natively on Push Chain Donut Testnet. These con
 
 ### Universal Read (Donut)
 
+Registry updated on 2026-09-22. The website's pinned SDK 6.0.25 still contains the previous default; the new default takes effect in the SDK release containing this address update. Previous stored results remain on the previous registry.
+
 | Contract | Address |
 | --- | --- |
 | UniversalCallback predeploy | `0x00000000000000000000000000000000000000c2` |
-| UniversalReadRegistry proxy | `0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8` |
+| UniversalReadRegistry proxy | `0x00000000000000000000000000000000000000b2` |
 
 The SDK defaults to this registry only on `TESTNET_DONUT`. It calls `read(spec, queryKey, callbackGasLimit)` with 500,000 callback gas by default. Other networks need a verified deployment or an application receiver. See [Universal Read](/docs/chain/build/universal-read/).
 

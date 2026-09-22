@@ -2,7 +2,7 @@
 title: "Constants Reference"
 url: "https://pushchain.github.io/docs/chain/build/constants/"
 section: "build"
-lastUpdated: "2026-09-17T11:52:14+05:30"
+lastUpdated: "2026-09-22T12:24:13Z"
 description: "Constants Reference | Build | Push Chain Docs"
 ---
 
@@ -27,7 +27,7 @@ All constants are accessed via the `PushChain.CONSTANTS` namespace.
 | `WEB2_MAX_EXTRACT_ENTRIES` | `16` |
 | `WEB2_DEFAULT_TIMEOUT_MS` | `5_000` |
 | `WEB2` | `'web2:https'`, also `PushChain.CONSTANTS.CHAIN.WEB2` |
-| `UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8` |
+| `UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x00000000000000000000000000000000000000b2` |
 
 Use `READ.STATUS.FULFILLED` for lifecycle status and `READ.RESULT_STATUS.SUCCESS` for source-result status. These are different enums. Check `callbackDelivered` too. `CHAIN.WEB2` is a read destination, not a transaction destination.
 
