@@ -1,11 +1,30 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "current_sdk_version": "6.0.25",
-  "current_version": "1.0.27",
-  "generated": "2026-09-16T00:00:00.000Z",
+  "current_version": "1.0.28",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Version history of all /agents/ layer changes, SDK version bumps, and audit passes. Each entry includes the agent-layer content version, affected files, trigger description, and breaking/migration flags. current_version tracks the latest entry; version tracks this file's own schema revision.",
   "entries": [
+    {
+      "date": "2026-09-22T00:00:00.000Z",
+      "version": "1.0.28",
+      "breaking": true,
+      "migration": "Universal Read Registry is 0x00000000000000000000000000000000000000b2 (was 0x91b09DAd1774bAfDE679F9ebB5F9046AE2b928C8): update any hardcoded registry address or read PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT. In contract-addresses.json, core_contracts.UniversalCallback now uses proxy / implementation / proxy_admin (read .proxy instead of .address), UProxyAdmin now uses address, and UniversalGatewayPC.proxy_admin is 0xF2000000000000000000000000000000000000C1. Read options list abi or idl next to each other. Decide success on value alone.",
+      "changes": [
+        "Synced the agent layer with the restructured Universal Read docs: Build > Universal Reads now has Read Universal State, Read Multiple Universal States, Contract-Initiated Universal Read and Callback, and Track Universal Read (docs/chain/03-build/04-universal-reads/01..04, parameter tables in the _read-parameters.mdx and _read-advanced-arguments.mdx partials). Universal transaction pages moved to docs/chain/03-build/03-universal-transactions/01..06; slugs unchanged. Contract Helpers (08-Contract-Helpers.mdx) gained the Universal Read Client section; 13a-Universal-Read.mdx and 14-Contract-Helpers.mdx are gone.",
+        "contract-addresses.json: Universal Read Registry proxy 0x00000000000000000000000000000000000000b2 (impl 0x793eCbBE9bcf2824105575a6fC6CBE19d5653E9A, admin 0xF2000000000000000000000000000000000000b2); Universal Callback ('Universal Read / Callback') recorded as proxy 0x00000000000000000000000000000000000000c2 (impl 0xa481F5b0d8c2C279Bf5872b26E35A039bbDa1F63, admin 0xF2000000000000000000000000000000000000c2); every other proxy implementation and ProxyAdmin (Universal Core, UGPC, VaultPC, UEA Factory, each external-chain Universal Gateway, Vault and CEAFactory) refreshed from the Smart Contract Address Book.",
+        "constants.json: READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT = 0x00000000000000000000000000000000000000b2; READ note points at the read pages and Contract Helpers now that the Constants page lists CHAIN.WEB2 as a read-only destination instead of a Universal Read section.",
+        "sdk-capabilities.json: read, prepareRead, executeReads and trackRead rewritten with full signatures and argument lists from the docs (abi or idl, any ABI function, web2 extract / method / headers / body / timeoutMs, callback, advanced arguments); trackRead is one signature, trackRead({ requestId } | { txHash }), returning UniversalReadResponse | UniversalReadResponse[]; PushChain.CONSTANTS.READ added; version-gate fields removed.",
+        "capabilities.json, feature-matrix.json, decision-tree.json, retrieval-map.json, mcp-candidates.json: universal_read split into universal_read, execute_universal_reads, track_universal_read and contract_initiated_universal_read; choose_read_path tree covers RPC vs registry vs batch vs contract receiver vs resume vs value undefined; three MCP candidates (request_universal_read, prepare_universal_read, track_universal_read).",
+        "errors.json and recovery-playbook.md: six new Universal Read entries (read_value_undefined, read_callback_not_delivered, read_web2_no_quorum, read_prepared_revalidation_failed, read_request_reverted, read_refund_not_delivered) and a Universal Read recovery section built on the value-first success rule.",
+        "workflows/universal-read.md rewritten from the four read pages (parameters, callback and advanced arguments, EVM / Solana / Web2 query types, value-first result check, batches, tracking, ExternalStateInbox and BalanceWatcher receivers, both request paths, EVM query envelope, empty resultData rule, requester_ = msg.sender rule, fees, security, limitations, troubleshooting). read-blockchain-state.md, use-contract-helpers.md (Universal Read Client), constants-reference.md (CHAIN.WEB2, READ) and contract-initiated-multichain-execution.md cross-link it.",
+        "Skills: push-backend and push-frontend gained Universal Read sections; push-contracts gained section 4, UniversalReadClient (ReadSpec, receiver, SDK path and contract-built path, envelope table, security, troubleshooting) plus the Universal Callback and Universal Read Registry addresses. Frontmatter descriptions and skills/index.json updated.",
+        "New schema schemas/universal-read-response.json. supported-chains.json lists CHAIN.WEB2 as a read-only destination and marks Universal Read sources. routes.json shared.universal_read states that reads are not a route.",
+        "Examples regenerated with build.agents.examples.mjs: one file per read playground (universal-read-evm-balance, -erc20-balance, -contract-call, -storage-slot, -sol-balance, -spl-token, -web2, -prepare, -batch, -batch-three-sources, -resume) plus the Contract Helpers playgrounds (read-client-request-context, read-client-stored-result, get-origin-for-uea, get-uea-for-origin). The stale universal-read-registry example was retired. The generator now refreshes pages marked refresh: true and titles examples from their Live Playground summary.",
+        "llms-full.txt: build.agents.preseed.mjs inlines MDX partials (<ReadParameters /> and <ReadAdvancedArguments /> tables, honouring hideRows), keeps fenced code, playground code, inline code and TypeScript generics verbatim, and keeps Details labels. llms.txt Universal Read summary rewritten; scripts/check-universal-read-examples.mjs checks the registry address against the address book."
+      ]
+    },
     {
       "date": "2026-09-16T00:00:00.000Z",
       "version": "1.0.27",

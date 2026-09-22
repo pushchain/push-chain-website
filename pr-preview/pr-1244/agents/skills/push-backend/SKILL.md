@@ -1,6 +1,6 @@
 ---
 name: push-backend
-description: "Use when writing Node.js scripts, bots, or server-side code with @pushchain/core - covers PushChain.initialize, wrapping ethers/viem/Solana keypairs into a UniversalSigner, all three routes, multichain cascades, transaction tracking, and utility functions. Not for browser or React code. Triggers on: 'initialize PushChain client in Node.js', 'send transaction from backend script', 'wrap ethers signer with toUniversal', 'track transaction by hash'."
+description: "Use when writing Node.js scripts, bots, or server-side code with @pushchain/core - covers PushChain.initialize, wrapping ethers/viem/Solana keypairs into a UniversalSigner, all three routes, multichain cascades, transaction tracking, Universal Read (read, prepareRead, executeReads, trackRead: EVM, Solana and Web2 state delivered on-chain to Push Chain), and utility functions. Not for browser or React code. Triggers on: 'initialize PushChain client in Node.js', 'send transaction from backend script', 'wrap ethers signer with toUniversal', 'track transaction by hash', 'read a balance or contract value from another chain onto Push Chain'."
 metadata:
   id: push-backend
   intent: 'Execute universal transactions from server-side code, scripts, bots, and automation'
@@ -9,7 +9,7 @@ metadata:
   current_sdk_version: '6.0.25'
   entry: 'PushChain.initialize'
   resources: 'https://push.org/agents/resources/push-backend/index.json'
-  references: 'references/signer-options.md, references/initialize-client.md, references/send-universal-transaction.md, ../../workflows/send-multichain-transaction.md'
+  references: 'references/signer-options.md, references/initialize-client.md, references/send-universal-transaction.md, ../../workflows/send-multichain-transaction.md, ../../workflows/universal-read.md'
 ---
 
 # Skill: Universal Transactions - Backend (Node.js / Scripts)
@@ -738,6 +738,203 @@ try {
 
 ---
 
+## Universal Read
+
+Brings state from another blockchain (EVM or Solana) or from an HTTPS endpoint onto Push Chain, agreed on by validators and delivered on-chain: to the **Universal Read Registry** (`0x00000000000000000000000000000000000000b2`, the default) or to your own contract that inherits `UniversalReadClient` (see the push-contracts skill). A read is a **paid, asynchronous request**: gas plus a protocol fee and a callback budget, with the result arriving after validators reach quorum. If only your script needs the value and nothing on-chain acts on it, use an ordinary RPC call instead (see Read Blockchain State above).
+
+| Method | Broadcasts | Use |
+| ------ | ---------- | --- |
+| `client.universal.read(subject, {options})` → `Promise<UniversalReadResponse>` | Yes, paid | Read one value |
+| `client.universal.prepareRead(subject, {options})` → `Promise<PreparedRead>` | No, no funds needed | Quote a read; build a batch |
+| `client.universal.executeReads(preparedReads, {options})` → `Promise<BatchReadResponse>` | Yes, paid | Several reads with one signature |
+| `client.universal.trackRead({ requestId } \| { txHash }, {options})` → `Promise<UniversalReadResponse \| UniversalReadResponse[]>` | No, read-only client is enough | Resume after a restart or timeout |
+
+### `read(subject, options)` - one value
+
+`subject` is what to read: an account for a balance, a contract for a contract call or storage slot, or a URL for a Web2 read. `options.chain` is any supported EVM or Solana chain, or `CHAIN.WEB2`. Pass at most one query option; with none, `read` returns the native balance.
+
+| Option | Reads |
+| ------ | ----- |
+| _(none)_ | Native balance of `subject` (ETH, BNB, SOL lamports) |
+| `token` | ERC-20 balance (EVM, `token` = contract) or SPL balance (Solana, `token` = mint) of `subject` |
+| `abi` or `idl` + `functionName` + `args` | Typed contract call on EVM (any function in the ABI) or a Solana program; `value` is decoded from the ABI or IDL |
+| `idl` alone | A Solana program account at `subject`, decoded with the program's Anchor IDL |
+| `storageSlot` | One EVM storage word of `subject` |
+| `web2: { extract, method?, headers?, body?, timeoutMs? }` | JSON fields from an HTTPS endpoint (`chain: CHAIN.WEB2`), 1 to 16 `{ path, valueType, decimals? }` entries |
+
+Other options: `callback` (your own receiver), `waitForCompletion` (default `true`), `progressHook`, and advanced `blockNumber` / `minConfirmations` (EVM only), `expiryBlocks` (default `300n`), `maxFee`, `refundTo`, `advanced.pollingIntervalMs`, `advanced.timeout` (at most 180 s by default), `advanced.enforceGasCheck`. Full tables: https://push.org/agents/workflows/universal-read.md
+
+```typescript
+const CHAIN = PushChain.CONSTANTS.CHAIN;
+
+// Native balance (ETH)
+await pushChainClient.universal.read(holder, { chain: CHAIN.ETHEREUM_SEPOLIA });
+
+// Token balance: ERC-20 balanceOf(holder)
+await pushChainClient.universal.read(holder, {
+  chain: CHAIN.ETHEREUM_SEPOLIA,
+  token: '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238',
+});
+
+// Typed contract call: the ABI encodes the call and decodes the result
+await pushChainClient.universal.read(tokenAddress, {
+  chain: CHAIN.ETHEREUM_SEPOLIA,
+  abi: [
+    {
+      type: 'function',
+      name: 'totalSupply',
+      stateMutability: 'view',
+      inputs: [],
+      outputs: [{ type: 'uint256' }],
+    },
+  ] as const,
+  functionName: 'totalSupply',
+});
+
+// Storage slot
+await pushChainClient.universal.read(contractAddress, {
+  chain: CHAIN.ETHEREUM_SEPOLIA,
+  storageSlot: 0n,
+});
+```
+
+```typescript
+const CHAIN = PushChain.CONSTANTS.CHAIN;
+
+// Native balance (lamports)
+await pushChainClient.universal.read(solanaHolder, { chain: CHAIN.SOLANA_DEVNET });
+
+// Token balance: the holder's SPL token account for the mint
+await pushChainClient.universal.read(solanaHolder, {
+  chain: CHAIN.SOLANA_DEVNET,
+  token: mintAddress,
+});
+
+// Program account, decoded with the program's Anchor IDL (the closest thing to a storage slot on Solana)
+await pushChainClient.universal.read(accountAddress, {
+  chain: CHAIN.SOLANA_DEVNET,
+  idl: programIdl,
+});
+```
+
+```typescript
+const CHAIN = PushChain.CONSTANTS.CHAIN;
+
+// Web2: JSON fields from an HTTPS endpoint
+await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/users/1', {
+  chain: CHAIN.WEB2,
+  web2: {
+    extract: [
+      { path: '$.id', valueType: 'uint256' },
+      { path: '$.name', valueType: 'string' },
+    ],
+  },
+});
+```
+
+### Submit, save references, check `value`
+
+```ts
+const pending = await client.universal.read('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045', {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  waitForCompletion: false,
+  progressHook: (p) => console.log(`${p.id}: ${p.title}`),
+});
+// Persist both before waiting; either one resumes the read from any process.
+await db.save({ requestId: pending.requestId, txHash: pending.txHash });
+
+const done = await pending.wait();
+if (done.value !== undefined) {
+  console.log('ETH:', ethers.formatEther(done.value));
+} else {
+  console.error('No value', {
+    status: done.status,
+    rawStatus: done.raw?.status,
+    errorCode: done.raw?.errorCode,
+    callbackDelivered: done.callbackDelivered,
+    decodeError: done.decodeError,
+  });
+}
+```
+
+**`value` is the success signal.** The SDK sets it only when the read completed, the source returned data, your callback ran, and the bytes decoded. When `value` is `undefined`, the response says why:
+
+| Field | What it tells you |
+| ----- | ----------------- |
+| `status` | Lifecycle of the request: `PENDING`, `VOTING`, `FULFILLED`, `EXPIRED`, `FAILED`, `ABORTED`. `FULFILLED` means the read completed; it does not by itself mean your callback succeeded. |
+| `raw.status` | What the source returned: `READ.RESULT_STATUS.SUCCESS`, or `ERROR` with `raw.errorCode`. |
+| `callbackDelivered` | Whether the receiver contract ran. `false` when it reverted or ran out of gas; `callbackFailReason` carries the revert data. |
+| `decodeError` | Why the result bytes could not be decoded into `value`, for example an ABI that does not match the query. |
+
+### Batch - `prepareRead` + `executeReads`
+
+`prepareRead` takes the same subject and query options (not `waitForCompletion`, `progressHook` or `advanced`) and returns a `PreparedRead` with `fees.total`, `value`, `spec`, `specTuple` and `resultShape`. `executeReads` submits them as one transaction where the wallet supports atomic batching, otherwise as sequential transactions listed in `transactionHashes`. It returns `{ txHash, transactionHashes, reads, count, atomic, wait() }`; `atomic` describes submission only, so check `value` on every read.
+
+```typescript
+const CHAIN = PushChain.CONSTANTS.CHAIN;
+
+const ethBalance = await pushChainClient.universal.prepareRead(holder, { chain: CHAIN.ETHEREUM_SEPOLIA });
+const solBalance = await pushChainClient.universal.prepareRead(solanaHolder, { chain: CHAIN.SOLANA_DEVNET });
+
+// Live progress for submission and every read in the batch.
+const batch = await pushChainClient.universal.executeReads([ethBalance, solBalance], {
+  progressHook: (event) => {
+    console.log('[' + event.id + '] ' + event.level + ' - ' + event.title);
+  },
+});
+
+const [eth, sol] = await batch.wait(); // results in prepared order
+```
+
+### Resume - `trackRead`
+
+```typescript
+const snapshot = await pushChainClient.universal.trackRead(
+  { requestId },
+  {
+    progressHook: (progress) => {
+      console.log(progress.id + ': ' + progress.title);
+    },
+  }
+);
+
+const done = await snapshot.wait();
+console.log(done.status, done.value);
+```
+
+Pass `{ txHash }` instead to get an array of every read that transaction submitted. A typed contract call has no ABI on chain, so resume it with `resultShape`:
+
+```typescript
+const snapshot = await pushChainClient.universal.trackRead(
+  { requestId },
+  { resultShape: { kind: 'evmCall', abi: tokenAbi, functionName: 'totalSupply' } },
+);
+```
+
+### Custom receiver - `callback`
+
+```typescript
+const result = await pushChainClient.universal.read(holder, {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+  callback: {
+    target: receiverAddress,
+    gasLimit: 200_000n,       // gas for _onReadResult, up to 1_000_000n
+    abi: receiverAbi,
+    functionName: 'request',  // your payable request entrypoint
+  },
+});
+
+console.log(result.callbackDelivered); // true once _onReadResult ran
+```
+
+`callback.gasLimit` is the gas for your `_onReadResult` (default `500_000n`, at most `1_000_000n`), not for the request entrypoint. If the receiver gates its entrypoint, authorize `client.universal.account`, the `msg.sender` the receiver sees (for an external signer that is its UEA, not the wallet that deployed the contract). Receiver contract, `ReadSpec` and contract-built requests: see the push-contracts skill.
+
+> **Rules**: `CHAIN.WEB2` is a read-only destination, never a `sendTransaction` target. URL, headers and body of a Web2 read are written to a public event log, so never include secrets. Validators only agree on identical Web2 bytes; extract stable fields or lower precision with `decimals`. A client timeout (`READ_TIMEOUT`) cancels nothing: resume with `trackRead`, do not resubmit. Failed requests are not retried automatically. The registry lives on Donut; elsewhere pass your own receiver through `callback`.
+
+Examples: [EVM balance](https://push.org/agents/examples/universal-read-evm-balance.md), [ERC-20](https://push.org/agents/examples/universal-read-erc20-balance.md), [contract call](https://push.org/agents/examples/universal-read-contract-call.md), [storage slot](https://push.org/agents/examples/universal-read-storage-slot.md), [SOL](https://push.org/agents/examples/universal-read-sol-balance.md), [SPL](https://push.org/agents/examples/universal-read-spl-token.md), [Web2](https://push.org/agents/examples/universal-read-web2.md), [prepare](https://push.org/agents/examples/universal-read-prepare.md), [batch](https://push.org/agents/examples/universal-read-batch.md), [three sources](https://push.org/agents/examples/universal-read-batch-three-sources.md), [resume](https://push.org/agents/examples/universal-read-resume.md).
+
+---
+
 ## Account & CEA Maintenance
 
 ### `migrateCEA(chain)` - upgrade a CEA to the latest version
@@ -1101,6 +1298,8 @@ for (const { chainName, urls } of explorers) {
 
 > For **off-chain** UEA/CEA derivation from TypeScript, use `PushChain.utils.account.deriveExecutorAccount()` - see Utility Functions above. The UEAFactory below is for **on-chain Solidity** identity resolution. For the full Solidity contract pattern, see the `push-contracts` skill.
 
+> The other contract helper is the **Universal Read Client** (`UniversalReadClient`), an abstract base contract a Push Chain contract inherits to receive [Universal Read](#universal-read) results in `_onReadResult`. It is inherited, not called; see the `push-contracts` skill and https://push.org/agents/workflows/use-contract-helpers.md.
+
 ### UEAFactory - Identity Resolution On-Chain
 
 The Universal Executor Account Factory is deployed at a fixed address on Push Chain and lets your smart contract identify callers from external chains.
@@ -1161,10 +1360,15 @@ Full reference: https://push.org/agents/workflows/use-contract-helpers.md
 | PC-20 transfer throws `PC20_TOKEN_CHAIN_MISMATCH` | `funds.token.chain` was set to the destination. It must be where the tokens sit **right now**; the destination goes in `to.chain`. |
 | PC-20 wrapper address empty after an export | It was read from `receipt.externalAssetAddr`, a best-effort mirror that is `undefined` while the outbound is in flight (the raw chain field is only observed on a first deployment; the SDK backfills it from UniversalCore). Resolve wrappers from `getPC20Address(...).registry` - the authoritative record. |
 | `PC20_EXPECTED_BUT_PRC20` thrown on a token transfer | A synthetic PRC-20 (`USDC.eth`, `pETH`) was passed as a PC-20 reference. External-born tokens move via their `MoveableToken` accessor, not `{ chain, address }`. |
+| Universal Read result used without checking `value` | `value` is the success signal: it is set only when the read completed, the source returned data, the callback ran and the bytes decoded. When it is `undefined`, read `status`, `raw.status`, `callbackDelivered` and `decodeError`. |
+| Universal Read resubmitted after `READ_TIMEOUT` - paid twice | A client timeout cancels nothing. Save `requestId` / `txHash` before `wait()` and resume with `client.universal.trackRead({ requestId })`. |
+| `CHAIN.WEB2` passed to `sendTransaction` | `CHAIN.WEB2` is a read-only destination for `client.universal.read`. |
+| Web2 read never reaches quorum | Validators need identical bytes. Extract stable fields, or lower numeric precision with `extract[].decimals`. |
+| API key in a Web2 read URL or header | Request data is written to a public event log forever. Never include secrets. |
 
 > For Solana targets, use `encodeTxData({ idl, functionName, args })` and pass the result as `tx.data` - same `{ to, value, data }` shape as EVM. The SDK resolves program accounts, PDAs, and the sender's CEA automatically from the IDL.
 >
-> For read-only queries, use ethers.js or viem directly with RPC `https://evm.donut.rpc.push.org/` - `@pushchain/core` is not required.
+> For read-only queries, use ethers.js or viem directly with RPC `https://evm.donut.rpc.push.org/` - `@pushchain/core` is not required. When a Push Chain contract must act on state from another chain or a web API, use [Universal Read](#universal-read) instead.
 
 ## Downloadable Resources
 
@@ -1189,12 +1393,8 @@ Copy these files into your project - self-contained and ready to run:
 - [Read blockchain state](https://push.org/agents/workflows/read-blockchain-state.md)
 - [Constants reference](https://push.org/agents/workflows/constants-reference.md)
 - [Utility functions - full API](https://push.org/agents/workflows/use-utility-functions.md)
-- [Contract helpers - UEAFactory](https://push.org/agents/workflows/use-contract-helpers.md)
+- [Contract helpers - UEAFactory and UniversalReadClient](https://push.org/agents/workflows/use-contract-helpers.md)
+- [Universal Read (read, prepareRead, executeReads, trackRead, contract callbacks)](https://push.org/agents/workflows/universal-read.md)
 - [Initialize with ethers.js example](https://push.org/agents/examples/initialize-client-ethers.md)
 - [Initialize with viem example](https://push.org/agents/examples/initialize-client-viem.md)
 - [Send to external chain example](https://push.org/agents/examples/send-transaction-external-chain.md)
-
-
-## Universal Read (core 6.0.25)
-
-See [Universal Read](https://push.org/docs/chain/build/universal-read/) and `agents/workflows/universal-read.md`. Paid external-state requests use `read` / `executeReads`; `prepareRead` / `trackRead` do not broadcast. Custom receivers use flattened `callback: { target, gasLimit, abi, functionName, args? }`. Check consensus success, callback delivery and decoding before using the value. Resume timeouts by saved references, and never put secrets in Web2 requests. Registry helpers are internal; do not invent public lookup APIs. Contract callbacks must authenticate the callback predeploy and must not initiate nested reads.

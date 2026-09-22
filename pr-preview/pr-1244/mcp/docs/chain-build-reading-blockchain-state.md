@@ -2,15 +2,13 @@
 title: "Reading Blockchain State"
 url: "https://pushchain.github.io/docs/chain/build/reading-blockchain-state/"
 section: "build"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Reading Blockchain State | Build | Push Chain Docs"
 ---
 
 # Reading Blockchain State
 
 ## Overview
-
-This page covers direct RPC queries. To deliver validator-agreed state from an external chain or HTTPS endpoint to a Push contract, use [Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/). Universal Read submits a paid request on Push Chain and completes asynchronously.
 
 Push Chain is an EVM-compatible blockchain, so you can use familiar Ethereum tools to fetch on-chain data. This guide shows you how to:
 
@@ -24,6 +22,10 @@ For full reference on each library, see:
 
 -   [ethers.js documentation](https://docs.ethers.org/)
 -   [viem documentation](https://viem.sh/)
+
+Looking for state from other chains?
+
+This page is about reading state over RPC from your frontend or backend, using standard tools like ethers and viem. If you need state from another chain (or from a web API) delivered on-chain to a Push Chain contract, with validators agreeing on the result and an optional callback, use [Read Universal State](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/).
 
 ## Initialize HTTP Client
 

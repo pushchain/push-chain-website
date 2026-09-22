@@ -2,7 +2,7 @@
 title: "Build Section"
 url: "https://pushchain.github.io/docs/chain/build/"
 section: "build"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Build Section | Push Chain Docs"
 ---
 
@@ -46,51 +46,19 @@ Initialize EVM Client | Build | Push Chain Docs
 
 [
 
-## Understanding Universal Transactions
+## 🗃️ Universal Transactions
 
-Understanding Universal Transactions | Build | Push Chain Docs
+6 items
 
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/understanding-universal-transactions/)
-
-[
-
-## Send Universal Transaction
-
-Send Universal Transaction | Build | Push Chain Docs
-
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/send-universal-transaction/)
+](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-transactions/)
 
 [
 
-## Universal Transaction Scenarios
+## 🗃️ Universal Reads
 
-Universal Transaction Scenarios | Build | Push Chain Docs
+4 items
 
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-transaction-scenarios/)
-
-[
-
-## Send Multichain Transactions
-
-Send Multichain Transactions | Build | Push Chain Docs
-
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/send-multichain-transactions/)
-
-[
-
-## Contract-Initiated Multichain Execution
-
-Contract-Initiated Multichain Execution | Build | Push Chain Docs
-
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/contract-initiated-multichain-execution/)
-
-[
-
-## Track Universal Transaction
-
-Track Universal Transaction | Build | Push Chain Docs
-
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/track-universal-transaction/)
+](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-reads/)
 
 [
 
@@ -115,14 +83,6 @@ Utility Functions | Build | Push Chain Docs
 Reading Blockchain State | Build | Push Chain Docs
 
 ](/push-chain-website/pr-preview/pr-1244/docs/chain/build/reading-blockchain-state/)
-
-[
-
-## Universal Read
-
-Universal Read | Build | Push Chain Docs
-
-](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/)
 
 [
 

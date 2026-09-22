@@ -2,7 +2,7 @@
 title: "Smart Contract Address Book"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-address-book/"
 section: "setup"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Smart Contract Address Book | Setup | Push Chain Docs"
 ---
 
@@ -25,7 +25,7 @@ Mints PRC-20 tokens and manages cross-chain native token pricing
 
 Other Details
 
-Implementation - [0xF1000000000000000000000000000000000000c0](https://donut.push.network/address/0xF1000000000000000000000000000000000000c0?tab=contract)  
+Implementation - [0xa0023B356344ff623C7E20679CF9d170E44fbbD1](https://donut.push.network/address/0xa0023B356344ff623C7E20679CF9d170E44fbbD1?tab=contract)  
 ProxyAdmin - [0xF2000000000000000000000000000000000000c0](https://donut.push.network/address/0xF2000000000000000000000000000000000000c0?tab=contract)
 
  |
@@ -35,8 +35,8 @@ Push-side gateway for sending and processing outward cross-chain messages
 
 Other Details
 
-Implementation - [0xF1000000000000000000000000000000000000C2](https://donut.push.network/address/0xF1000000000000000000000000000000000000C2?tab=contract)  
-ProxyAdmin - [0xF2000000000000000000000000000000000000C3](https://donut.push.network/address/0xF2000000000000000000000000000000000000C3?tab=contract)
+Implementation - [0x1e412939780f2b834DC42C7AC58d9f99888Da659](https://donut.push.network/address/0x1e412939780f2b834DC42C7AC58d9f99888Da659?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000C1](https://donut.push.network/address/0xF2000000000000000000000000000000000000C1?tab=contract)
 
  |
 | Universal Executor Module | [0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7](https://donut.push.network/address/0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7?tab=contract) Purpose
@@ -55,7 +55,7 @@ Reserved vault contract for custody of chain assets
 
 Other Details
 
-Implementation - [0xF1000000000000000000000000000000000000B0](https://donut.push.network/address/0xF1000000000000000000000000000000000000B0?tab=contract)  
+Implementation - [0x2e512D101da5AaCCEb178b142Bf66Ca2A158D621](https://donut.push.network/address/0x2e512D101da5AaCCEb178b142Bf66Ca2A158D621?tab=contract)  
 ProxyAdmin - [0xF2000000000000000000000000000000000000B0](https://donut.push.network/address/0xF2000000000000000000000000000000000000B0?tab=contract)
 
  |
@@ -65,8 +65,8 @@ Deploys and manages Universal Execution Accounts (UEAs) for each user
 
 Other Details
 
-Implementation - [0xF1000000000000000000000000000000000000eA](https://donut.push.network/address/0xF1000000000000000000000000000000000000eA?tab=contract)  
-ProxyAdmin - [0xF2000000000000000000000000000000000000eA](https://donut.push.network/address/0xF2000000000000000000000000000000000000eA?tab=contract)
+Implementation - [0xb6DC6F8894caa866a9DB1D158C57FDd1bE165B2F](https://donut.push.network/address/0xb6DC6F8894caa866a9DB1D158C57FDd1bE165B2F?tab=contract)  
+ProxyAdmin - [0x00000000000000000000000000000000000000aA](https://donut.push.network/address/0x00000000000000000000000000000000000000aA?tab=contract)
 
  |
 | UEA\_EVM Implementation | [0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF](https://donut.push.network/address/0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF?tab=contract) Purpose
@@ -79,27 +79,31 @@ Logic contract for EVM-compatible UEAs
 Logic contract for SVM (Solana)-compatible UEAs
 
  |
-| UProxyAdmin | [0x00000000000000000000000000000000000000aA](https://donut.push.network/address/0x00000000000000000000000000000000000000aA?tab=contract) `Proxy` Purpose
+| UProxyAdmin | [0x00000000000000000000000000000000000000aA](https://donut.push.network/address/0x00000000000000000000000000000000000000aA?tab=contract) Purpose
 
 User-facing proxy admin for universal contracts
 
+ |
+| Universal Read / Callback | [0x00000000000000000000000000000000000000c2](https://donut.push.network/address/0x00000000000000000000000000000000000000c2?tab=contract) `Proxy` Purpose
+
+Reads state (balances, contract state) from other blockchains such as Ethereum and Solana, and optionally calls back a contract on Push Chain with the result
+
 Other Details
 
-Implementation - [0xF1000000000000000000000000000000000000aA](https://donut.push.network/address/0xF1000000000000000000000000000000000000aA?tab=contract)  
-ProxyAdmin - [0xF2000000000000000000000000000000000000aA](https://donut.push.network/address/0xF2000000000000000000000000000000000000aA?tab=contract)
+Implementation - [0xa481F5b0d8c2C279Bf5872b26E35A039bbDa1F63](https://donut.push.network/address/0xa481F5b0d8c2C279Bf5872b26E35A039bbDa1F63?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000c2](https://donut.push.network/address/0xF2000000000000000000000000000000000000c2?tab=contract)
 
  |
+| Universal Read Registry | [0x00000000000000000000000000000000000000b2](https://donut.push.network/address/0x00000000000000000000000000000000000000b2?tab=contract) `Proxy` Purpose
 
-### Universal Read (Donut)
+Default contract that stores Universal Read results, for apps that don't want to deploy their own callback contract
 
-Registry updated on 2026-09-22. The website's pinned SDK 6.0.25 still contains the previous default; the new default takes effect in the SDK release containing this address update. Previous stored results remain on the previous registry.
+Other Details
 
-| Contract | Address |
-| --- | --- |
-| UniversalCallback predeploy | `0x00000000000000000000000000000000000000c2` |
-| UniversalReadRegistry proxy | `0x00000000000000000000000000000000000000b2` |
+Implementation - [0x793eCbBE9bcf2824105575a6fC6CBE19d5653E9A](https://donut.push.network/address/0x793eCbBE9bcf2824105575a6fC6CBE19d5653E9A?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000b2](https://donut.push.network/address/0xF2000000000000000000000000000000000000b2?tab=contract)
 
-The SDK defaults to this registry only on `TESTNET_DONUT`. It calls `read(spec, queryKey, callbackGasLimit)` with 500,000 callback gas by default. Other networks need a verified deployment or an application receiver. See [Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/).
+ |
 
 ### EVM Default Precompiles
 
@@ -210,7 +214,7 @@ Accepts deposits and initiates cross-chain transactions routed through Push Chai
 
 Other Details
 
-Implementation - [0xa594c32593eD1E0Fce83fa1b3A56870b4a1b4ec1](https://sepolia.etherscan.io/address/0xa594c32593eD1E0Fce83fa1b3A56870b4a1b4ec1#code)  
+Implementation - [0xb2da9444AE2B88e339E6511B034FFe0e6d290A75](https://sepolia.etherscan.io/address/0xb2da9444AE2B88e339E6511B034FFe0e6d290A75#code)  
 ProxyAdmin - [0x756C0bEa91F5692384AEe147C10409BB062Bf39b](https://sepolia.etherscan.io/address/0x756C0bEa91F5692384AEe147C10409BB062Bf39b#code)
 
  |
@@ -222,8 +226,8 @@ Chain Execution Account (CEA) contracts enable contract-initiated cross-chain tr
 | Contract | Address |
 | --- | --- |
 | CEAFactory | [0x5E191fbBe22F8866C5e4250557664fCE760e8870](https://sepolia.etherscan.io/address/0x5E191fbBe22F8866C5e4250557664fCE760e8870#code) `Proxy` Other Details
-Implementation - [0xe5B51807f2252A5Ea9B591fE02285954446c8cAD](https://sepolia.etherscan.io/address/0xe5B51807f2252A5Ea9B591fE02285954446c8cAD#code)  
-ProxyAdmin - [0xF920e3D1420885A117Cb59830d0474aD5690dd82](https://sepolia.etherscan.io/address/0xF920e3D1420885A117Cb59830d0474aD5690dd82#code)
+Implementation - [0x7103465B8FA1Ea34EA30731a8fd2Ad5DDb10A872](https://sepolia.etherscan.io/address/0x7103465B8FA1Ea34EA30731a8fd2Ad5DDb10A872#code)  
+ProxyAdmin - [0x283e174d89BBABf202E154760bEB78CcF012e643](https://sepolia.etherscan.io/address/0x283e174d89BBABf202E154760bEB78CcF012e643#code)
 
  |
 | CEA (logic) | [0x1939376ce03998F638b8760c7a13C9A379A053C0](https://sepolia.etherscan.io/address/0x1939376ce03998F638b8760c7a13C9A379A053C0#code) |
@@ -240,7 +244,7 @@ Custodies deposited funds and coordinates cross-chain finalization
 
 Other Details
 
-Implementation - [0x493F3a9Be4841445Db6Cb87FcBe45377f4E82e8C](https://sepolia.etherscan.io/address/0x493F3a9Be4841445Db6Cb87FcBe45377f4E82e8C#code)  
+Implementation - [0xfB6Daef9C72A08800E09B1C8e971565920077360](https://sepolia.etherscan.io/address/0xfB6Daef9C72A08800E09B1C8e971565920077360#code)  
 ProxyAdmin - [0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3](https://sepolia.etherscan.io/address/0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3#code)
 
  |
@@ -271,7 +275,7 @@ Accepts deposits and initiates cross-chain transactions routed through Push Chai
 
 Other Details
 
-Implementation - [0xa81a398289D04503Aab64C4276CdB99Ff1594801](https://sepolia.arbiscan.io/address/0xa81a398289D04503Aab64C4276CdB99Ff1594801#code)  
+Implementation - [0xB29e090b4D18F1F1d8e02f682d9e8b5C52AD8491](https://sepolia.arbiscan.io/address/0xB29e090b4D18F1F1d8e02f682d9e8b5C52AD8491#code)  
 ProxyAdmin - [0xF838473Ddc2228267023A319c7305564391313f7](https://sepolia.arbiscan.io/address/0xF838473Ddc2228267023A319c7305564391313f7#code)
 
  |
@@ -283,8 +287,8 @@ Chain Execution Account (CEA) contracts enabling contract-initiated cross-chain 
 | Contract | Address |
 | --- | --- |
 | CEAFactory | [0x65572FFa81c230360a8a53C1682C7f0Ee321E5E7](https://sepolia.arbiscan.io/address/0x65572FFa81c230360a8a53C1682C7f0Ee321E5E7#code) `Proxy` Other Details
-Implementation - [0xd8335e762E42b7f9610293707d6d8A6b97578bFb](https://sepolia.arbiscan.io/address/0xd8335e762E42b7f9610293707d6d8A6b97578bFb#code)  
-ProxyAdmin - [0x6349546d872d483A35bdD165c9ef85757e064D4E](https://sepolia.arbiscan.io/address/0x6349546d872d483A35bdD165c9ef85757e064D4E#code)
+Implementation - [0x4e90BC631Efa5dA0592428d5cF8527775bF1091b](https://sepolia.arbiscan.io/address/0x4e90BC631Efa5dA0592428d5cF8527775bF1091b#code)  
+ProxyAdmin - [0x0DC4e7c0E6D95e3c63ad0818318a8C9f9441572B](https://sepolia.arbiscan.io/address/0x0DC4e7c0E6D95e3c63ad0818318a8C9f9441572B#code)
 
  |
 | CEA (logic) | [0x2c933Ff6FBcD479055F344691bc628F51DcE871A](https://sepolia.arbiscan.io/address/0x2c933Ff6FBcD479055F344691bc628F51DcE871A#code) |
@@ -301,7 +305,7 @@ Custodies deposited funds and coordinates cross-chain finalization
 
 Other Details
 
-Implementation - [0x60326FA4dD66CEA3637f4Dd6B4D65ad3112B87Ef](https://sepolia.arbiscan.io/address/0x60326FA4dD66CEA3637f4Dd6B4D65ad3112B87Ef#code)  
+Implementation - [0x626344f390216a990222C3aEC8ee8ae0A7e9b623](https://sepolia.arbiscan.io/address/0x626344f390216a990222C3aEC8ee8ae0A7e9b623#code)  
 ProxyAdmin - [0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2](https://sepolia.arbiscan.io/address/0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2#code)
 
  |
@@ -331,7 +335,7 @@ Accepts deposits and initiates cross-chain transactions routed through Push Chai
 
 Other Details
 
-Implementation - [0x9f63e2bCFC19994c664a7d7265dCfAb206634612](https://sepolia.basescan.org/address/0x9f63e2bCFC19994c664a7d7265dCfAb206634612#code)  
+Implementation - [0x34B2a6B88E1549381BFda9a42C7C684b84Aa4B74](https://sepolia.basescan.org/address/0x34B2a6B88E1549381BFda9a42C7C684b84Aa4B74#code)  
 ProxyAdmin - [0x0b30F0ECd37B8D44FE1d2b98d5Dc64654d9ac9b3](https://sepolia.basescan.org/address/0x0b30F0ECd37B8D44FE1d2b98d5Dc64654d9ac9b3#code)
 
  |
@@ -343,8 +347,8 @@ Chain Execution Account (CEA) contracts enabling contract-initiated cross-chain 
 | Contract | Address |
 | --- | --- |
 | CEAFactory | [0x7e8CeeDA043ED1460540616103dD57581a66C856](https://sepolia.basescan.org/address/0x7e8CeeDA043ED1460540616103dD57581a66C856#code) `Proxy` Other Details
-Implementation - [0xd26E793Ef931EB62AeBc6e87DE1FEEF4fDbA01F5](https://sepolia.basescan.org/address/0xd26E793Ef931EB62AeBc6e87DE1FEEF4fDbA01F5#code)  
-ProxyAdmin - [0x413A39fFA85657A25768799f7fd64A917eceDe48](https://sepolia.basescan.org/address/0x413A39fFA85657A25768799f7fd64A917eceDe48#code)
+Implementation - [0x046Bb9b8Ed376b7623EE6aBfBD1d6f244f38335D](https://sepolia.basescan.org/address/0x046Bb9b8Ed376b7623EE6aBfBD1d6f244f38335D#code)  
+ProxyAdmin - [0xcc2d246D761325Bef3AaF54D8FC7DAa0d3980509](https://sepolia.basescan.org/address/0xcc2d246D761325Bef3AaF54D8FC7DAa0d3980509#code)
 
  |
 | CEA (logic) | [0x733078bA1dFDDDB68A9E082696A256AEcBFb26b8](https://sepolia.basescan.org/address/0x733078bA1dFDDDB68A9E082696A256AEcBFb26b8#code) |
@@ -361,7 +365,7 @@ Custodies deposited funds and coordinates cross-chain finalization
 
 Other Details
 
-Implementation - [0x3F9ba2dFCe97Ef55b7a03C455911fd25f8f12B3b](https://sepolia.basescan.org/address/0x3F9ba2dFCe97Ef55b7a03C455911fd25f8f12B3b#code)  
+Implementation - [0x7979bd067ca33f91AA9d08f807AE7a43Ff17909d](https://sepolia.basescan.org/address/0x7979bd067ca33f91AA9d08f807AE7a43Ff17909d#code)  
 ProxyAdmin - [0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d](https://sepolia.basescan.org/address/0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d#code)
 
  |
@@ -391,7 +395,7 @@ Accepts deposits and initiates cross-chain transactions routed through Push Chai
 
 Other Details
 
-Implementation - [0x1f5afA0eEDC2F7E2442D8a51E8A892C98517De1E](https://testnet.bscscan.com//address/0x1f5afA0eEDC2F7E2442D8a51E8A892C98517De1E#code)  
+Implementation - [0x467537aBa6F54014858132F93384199F72f27A11](https://testnet.bscscan.com//address/0x467537aBa6F54014858132F93384199F72f27A11#code)  
 ProxyAdmin - [0x5Cef317D8392dF9F8C8E8a696c6893FD4112542C](https://testnet.bscscan.com//address/0x5Cef317D8392dF9F8C8E8a696c6893FD4112542C#code)
 
  |
@@ -403,8 +407,8 @@ Chain Execution Account (CEA) contracts enabling contract-initiated cross-chain 
 | Contract | Address |
 | --- | --- |
 | CEAFactory | [0x3f1B16e0B072d472951C4563d29d3da6a3EE3Ce8](https://testnet.bscscan.com/address/0x3f1B16e0B072d472951C4563d29d3da6a3EE3Ce8#code) `Proxy` Other Details
-Implementation - [0xC0D35725Dd054B09931740DC231cDea89B0FEd3b](https://testnet.bscscan.com/address/0xC0D35725Dd054B09931740DC231cDea89B0FEd3b#code)  
-ProxyAdmin - [0xf33CBb6a1c1D511dF40764063a11978D640C41A7](https://testnet.bscscan.com/address/0xf33CBb6a1c1D511dF40764063a11978D640C41A7#code)
+Implementation - [0xDfeBecDA7b15Ab4071012C47176631098914eB16](https://testnet.bscscan.com/address/0xDfeBecDA7b15Ab4071012C47176631098914eB16#code)  
+ProxyAdmin - [0x75e53Cf1501692bFa0115888Ff5ee59d03BAc3d9](https://testnet.bscscan.com/address/0x75e53Cf1501692bFa0115888Ff5ee59d03BAc3d9#code)
 
  |
 | CEA (logic) | [0xdC3A3a18a17EB4FDa9cF34a8CEee8540e6F2b5Fd](https://testnet.bscscan.com/address/0xdC3A3a18a17EB4FDa9cF34a8CEee8540e6F2b5Fd#code) |

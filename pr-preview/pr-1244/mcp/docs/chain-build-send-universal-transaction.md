@@ -2,7 +2,7 @@
 title: "Send Universal Transaction"
 url: "https://pushchain.github.io/docs/chain/build/send-universal-transaction/"
 section: "build"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Send Universal Transaction | Build | Push Chain Docs"
 ---
 
@@ -70,6 +70,26 @@ Pass a `MoveableToken`, or `{ chain, address }` for a [PC-20](#moving-pc-20-toke
 
  |
 | `tx.progressHook` | `(progress: ProgressHookType) => void` | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions. |
+
+Advanced Arguments
+
+| Arguments | Type | Default | Description |
+| --- | --- | --- | --- |
+| `tx.gasLimit` | `BigInt` | `SDK Estimated` | Optional override for transaction gas limit. If omitted, the SDK estimates it. |
+| `tx.maxFeePerGas` | `BigInt` | `SDK Estimated` | Optional override for max fee per gas. If omitted, the SDK estimates it when applicable. |
+| `tx.maxPriorityFeePerGas` | `BigInt` | `SDK Estimated` | Optional override for priority fee. If omitted, the SDK estimates it when applicable. |
+| `tx.options.enforceGasCheck` | `boolean` | `false` | Controls how the SDK reacts when the pre-flight gas / balance check detects a shortfall on the UEA (native PC) or, for `funds` flows, the bridged PRC-20 balance.  
+  
+`false` will still emit a `WARNING`\-level progress event and proceed. The transaction may still succeed (UEA gas is auto-refilled via fee locking; PRC-20 may settle on a follow-up leg).  
+  
+`true` will emit an `ERROR`\-level progress event and throw `InsufficientUEABalanceError` before broadcast, leaving on-chain state untouched. Use this when you want pre-flight guarantees over best-effort retries. |
+| `tx.payGasWith` | `{ token?: PushChain.CONSTANTS.PAYABLE.TOKEN; slippageBps?: number; minAmountOut?: bigint | string }` | \- | Pay universal transaction fees using a supported token (e.g., `PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT`).  
+   
+Optional `slippageBps` (e.g., `100` = 1%) and `minAmountOut` (wei) let you control on-chain swap execution. PushChain.CONSTANTS.PAYABLE.TOKEN
+`PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.ETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.WETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.stETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ARBITRUM_SEPOLIA.ETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ARBITRUM_SEPOLIA.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.ARBITRUM_SEPOLIA.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.BASE_SEPOLIA.ETH``PushChain.CONSTANTS.PAYABLE.TOKEN.BASE_SEPOLIA.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.BASE_SEPOLIA.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.BNB_TESTNET.BNB``PushChain.CONSTANTS.PAYABLE.TOKEN.BNB_TESTNET.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.BNB_TESTNET.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.SOLANA_DEVNET.SOL``PushChain.CONSTANTS.PAYABLE.TOKEN.SOLANA_DEVNET.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.SOLANA_DEVNET.USDC`
+
+ |
+| `tx.deadline` | `BigInt` | \- | Optional execution deadline for the transaction. |
 
 ## Progress Hook Type and Response
 
@@ -185,26 +205,6 @@ ProgressHook Type and Response
 | `SEND-TX-999-01` | All Multichain Transactions Successful | `<hopCount>`\-hop transaction confirmed across all chains | SUCCESS | `{ hopCount }` |
 | `SEND-TX-999-02` | Multichain Transactions Failed | Cascade failed at hop `<failedAt>` of `<total>`: `<error>` | ERROR | `{ failedAt, total, error }` |
 | `SEND-TX-999-03` | Multichain Transactions Timeout | Cascade timed out at hop `<failedAt>` of `<total>` | ERROR | `{ failedAt, total, error: 'cascade timeout' }` |
-
-Advanced Arguments
-
-| Arguments | Type | Default | Description |
-| --- | --- | --- | --- |
-| `tx.gasLimit` | `BigInt` | `SDK Estimated` | Optional override for transaction gas limit. If omitted, the SDK estimates it. |
-| `tx.maxFeePerGas` | `BigInt` | `SDK Estimated` | Optional override for max fee per gas. If omitted, the SDK estimates it when applicable. |
-| `tx.maxPriorityFeePerGas` | `BigInt` | `SDK Estimated` | Optional override for priority fee. If omitted, the SDK estimates it when applicable. |
-| `tx.options.enforceGasCheck` | `boolean` | `false` | Controls how the SDK reacts when the pre-flight gas / balance check detects a shortfall on the UEA (native PC) or, for `funds` flows, the bridged PRC-20 balance.  
-  
-`false` will still emit a `WARNING`\-level progress event and proceed. The transaction may still succeed (UEA gas is auto-refilled via fee locking; PRC-20 may settle on a follow-up leg).  
-  
-`true` will emit an `ERROR`\-level progress event and throw `InsufficientUEABalanceError` before broadcast, leaving on-chain state untouched. Use this when you want pre-flight guarantees over best-effort retries. |
-| `tx.payGasWith` | `{ token?: PushChain.CONSTANTS.PAYABLE.TOKEN; slippageBps?: number; minAmountOut?: bigint | string }` | \- | Pay universal transaction fees using a supported token (e.g., `PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT`).  
-   
-Optional `slippageBps` (e.g., `100` = 1%) and `minAmountOut` (wei) let you control on-chain swap execution. PushChain.CONSTANTS.PAYABLE.TOKEN
-`PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.ETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.WETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.stETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ARBITRUM_SEPOLIA.ETH``PushChain.CONSTANTS.PAYABLE.TOKEN.ARBITRUM_SEPOLIA.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.ARBITRUM_SEPOLIA.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.BASE_SEPOLIA.ETH``PushChain.CONSTANTS.PAYABLE.TOKEN.BASE_SEPOLIA.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.BASE_SEPOLIA.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.BNB_TESTNET.BNB``PushChain.CONSTANTS.PAYABLE.TOKEN.BNB_TESTNET.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.BNB_TESTNET.USDC``PushChain.CONSTANTS.PAYABLE.TOKEN.SOLANA_DEVNET.SOL``PushChain.CONSTANTS.PAYABLE.TOKEN.SOLANA_DEVNET.USDT``PushChain.CONSTANTS.PAYABLE.TOKEN.SOLANA_DEVNET.USDC`
-
- |
-| `tx.deadline` | `BigInt` | \- | Optional execution deadline for the transaction. |
 
 ## Returns TxResponse
 

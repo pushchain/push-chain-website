@@ -3,9 +3,9 @@
   "title": "Push Chain Schema Index",
   "description": "Index of all JSON Schema definitions for Push Chain data structures",
   "schema_version": "1.0.0",
-  "version": "1.0.1",
-  "current_sdk_version": "6.0.19",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.25",
+  "generated": "2026-09-22T00:00:00.000Z",
   "schemas": [
     {
       "name": "UniversalTransactionRequest",
@@ -18,6 +18,12 @@
       "file": "universal-transaction-response.json",
       "description": "Schema for the TxResponse object returned by sendTransaction()",
       "authority": "inferred"
+    },
+    {
+      "name": "UniversalReadResponse",
+      "file": "universal-read-response.json",
+      "description": "Schema for the UniversalReadResponse returned by read(), executeReads(...).reads and trackRead()",
+      "authority": "documented"
     },
     {
       "name": "TransactionReceipt",

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "current_sdk_version": "6.0.25",
-  "generated": "2026-09-17T00:00:00.000Z",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "All PushChain.CONSTANTS.* values as a structured reference. Source: https://push.org/docs/chain/build/constants/",
   "PUSH_NETWORK": {
     "TESTNET": "TESTNET",
@@ -91,7 +91,7 @@
     }
   },
   "READ": {
-    "_note": "Universal Read constants from @pushchain/core 6.0.25. WEB2 is a read destination, not a transaction destination.",
+    "_note": "PushChain.CONSTANTS.READ values used by Universal Read. Documented on https://push.org/docs/chain/build/universal-read/ (READ.STATUS, READ.RESULT_STATUS) and https://push.org/docs/chain/build/contract-helpers/#universal-read-client (READ.UNIVERSAL_READ_REGISTRY_ADDRESS). WEB2 is a read destination, not a transaction destination; CHAIN.WEB2 is listed with the chain constants.",
     "WEB2": "web2:https",
     "NAMESPACE": {
       "EVM": "eip155",

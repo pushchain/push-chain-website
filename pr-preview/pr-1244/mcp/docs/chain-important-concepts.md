@@ -2,7 +2,7 @@
 title: "Important Concepts"
 url: "https://pushchain.github.io/docs/chain/important-concepts/"
 section: "chain"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Important Concepts | Push Chain Docs"
 ---
 
@@ -35,6 +35,18 @@ Push Chain lets users execute contracts without holding $PC (Push Chain native t
 When a user signs a transaction from a source chain such as Ethereum Sepolia or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload.
 
 **Your users interact exactly as they would on their home chain**, with no additional steps.
+
+## Universal Read (External State on Push Chain)
+
+Fee abstraction lets Push Chain act on other chains. Universal Read is the other direction: it brings state from other chains, or from a web API, onto Push Chain. A request is submitted on Push Chain, validators read the source and vote on the answer, and a callback delivers the agreed result to a contract.
+
+| Aspect | Detail |
+| --- | --- |
+| **What you can read** | Native and token balances, contract calls, storage slots, and JSON fields from HTTPS endpoints. |
+| **Where the result lands** | The shared Universal Read Registry, which stores results for you, or your own contract that inherits `UniversalReadClient` and acts on the result in its callback. |
+| **When to use it** | When something on-chain must act on the data. If only your frontend or backend needs it, an ordinary RPC call is cheaper and instant. |
+
+**A read is a paid, asynchronous request.** It costs gas plus a protocol fee and a callback budget, and completes after validators reach quorum. See [Read Universal State](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/) for the SDK flow.
 
 ## Universal Gateway (UG) Contracts
 
@@ -162,12 +174,6 @@ Push Chain represents tokens in two directions. Which standard a token uses tell
 > **Mental model**  
 > PRC-20 = a foreign token, wearing a Push jacket.  
 > PC-20 = a Push token, wearing a foreign jacket.
-
-## Universal Read
-
-[Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/) brings validator-agreed state from an external blockchain or HTTPS endpoint into a Push contract. A request is submitted on Push Chain, validators vote on the result, and `UniversalCallback` delivers the bytes to a receiver. Each request has its own expiry and callback budget.
-
-Use ordinary RPC queries when only your frontend/backend needs the data. Use Universal Read when you need on-chain delivery. The SDK can use Donut's shared registry or your own `UniversalReadClient`; initiating a read is a paid transaction, while preparation and tracking are read-only.
 
 ## Next Steps
 

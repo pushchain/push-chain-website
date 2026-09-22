@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "current_sdk_version": "6.0.25",
-  "generated": "2026-09-17T00:00:00.000Z",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Authoritative contract address registry for Push Chain. Use this file as the ground-truth source for all smart contract addresses. Do not hallucinate or infer addresses — always fetch from this file.",
   "note": "Mainnet has not launched. All addresses are on testnet only. Addresses may change with redeploys — check the changelog or explorer before using in production.",
   "docs": "https://push.org/docs/chain/setup/smart-contract-address-book/",
@@ -16,26 +16,29 @@
     "core_contracts": {
       "UniversalCore": {
         "proxy": "0x00000000000000000000000000000000000000C0",
-        "implementation": "0xF1000000000000000000000000000000000000c0",
+        "implementation": "0xa0023B356344ff623C7E20679CF9d170E44fbbD1",
         "proxy_admin": "0xF2000000000000000000000000000000000000c0",
         "purpose": "Mints PRC-20 tokens and manages cross-chain native token pricing. Use IUniversalCore to read chainHeight, gasPrice, and observedAt for any external chain."
       },
       "UniversalGatewayPC": {
         "proxy": "0x00000000000000000000000000000000000000C1",
         "alias": "UGPC",
-        "implementation": "0xF1000000000000000000000000000000000000C2",
-        "proxy_admin": "0xF2000000000000000000000000000000000000C3",
+        "implementation": "0x1e412939780f2b834DC42C7AC58d9f99888Da659",
+        "proxy_admin": "0xF2000000000000000000000000000000000000C1",
         "purpose": "Push-side gateway for dispatching outbound cross-chain transactions from a Push Chain contract to external chains. Use inside Solidity via IUniversalGatewayPC."
       },
       "UniversalCallback": {
-        "address": "0x00000000000000000000000000000000000000c2",
-        "purpose": "Genesis predeploy for Universal Read request lifecycle, validator fulfillment, application callbacks, settlement and expiry. Pass this address to UniversalReadClient on Donut."
+        "proxy": "0x00000000000000000000000000000000000000c2",
+        "implementation": "0xa481F5b0d8c2C279Bf5872b26E35A039bbDa1F63",
+        "proxy_admin": "0xF2000000000000000000000000000000000000c2",
+        "alias": "Universal Read / Callback",
+        "purpose": "Accepts Universal Read requests, holds the callback budget, delivers validator-agreed results to receiver contracts and settles refunds. Pass this address to the UniversalReadClient constructor. requestExternalReadSelf(spec, callbackSelector, callbackGasLimit) is the only entry; estimateFee(chainNamespace, chainId) quotes the protocol fee; statusOf(requestId) returns NONE, PENDING, EXECUTED, SETTLED or EXPIRED."
       },
       "UniversalReadRegistry": {
         "proxy": "0x00000000000000000000000000000000000000b2",
-        "implementation": "0x793ecbbe9bcf2824105575a6fc6cbe19d5653e9a",
-        "implementation_verified_at": "2026-09-22",
-        "purpose": "Canonical Donut receiver for SDK Universal Read. Stores per-request results and latestResult(reader, queryKey); SDK callback gas defaults to 500,000."
+        "implementation": "0x793eCbBE9bcf2824105575a6fC6CBE19d5653E9A",
+        "proxy_admin": "0xF2000000000000000000000000000000000000b2",
+        "purpose": "Default receiver for SDK Universal Read when no callback is passed (PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT). A UniversalReadClient that stores each result by request ID (hasResult, resultByRequestId) and records the reader, query key and request order (readerOf, queryKeyOf, requestOrderOf). Callback gas defaults to 500,000."
       },
       "UniversalExecutorModule": {
         "address": "0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7",
@@ -44,14 +47,14 @@
       },
       "VaultPC": {
         "proxy": "0x00000000000000000000000000000000000000B0",
-        "implementation": "0xF1000000000000000000000000000000000000B0",
+        "implementation": "0x2e512D101da5AaCCEb178b142Bf66Ca2A158D621",
         "proxy_admin": "0xF2000000000000000000000000000000000000B0",
         "purpose": "Reserved vault contract for custody of chain assets."
       },
       "UEAFactory": {
         "proxy": "0x00000000000000000000000000000000000000eA",
-        "implementation": "0xF1000000000000000000000000000000000000eA",
-        "proxy_admin": "0xF2000000000000000000000000000000000000eA",
+        "implementation": "0xb6DC6F8894caa866a9DB1D158C57FDd1bE165B2F",
+        "proxy_admin": "0x00000000000000000000000000000000000000aA",
         "purpose": "Deploys and manages Universal Executor Accounts (UEAs). Use getOriginForUEA() to identify cross-chain callers, getUEAForOrigin() to derive UEA address from a UOA."
       },
       "UEA_EVM_Implementation": {
@@ -63,10 +66,8 @@
         "purpose": "Logic contract for SVM (Solana)-compatible UEAs."
       },
       "UProxyAdmin": {
-        "proxy": "0x00000000000000000000000000000000000000aA",
-        "implementation": "0xF1000000000000000000000000000000000000aA",
-        "proxy_admin": "0xF2000000000000000000000000000000000000aA",
-        "purpose": "User-facing proxy admin for universal contracts."
+        "address": "0x00000000000000000000000000000000000000aA",
+        "purpose": "User-facing proxy admin for universal contracts. ProxyAdmin of the UEA Factory proxy."
       },
       "PushBatchExecutor": {
         "address": "0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796",
@@ -161,18 +162,18 @@
       "explorer": "https://sepolia.etherscan.io",
       "universal_gateway": {
         "proxy": "0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A",
-        "implementation": "0xa594c32593eD1E0Fce83fa1b3A56870b4a1b4ec1",
+        "implementation": "0xb2da9444AE2B88e339E6511B034FFe0e6d290A75",
         "proxy_admin": "0x756C0bEa91F5692384AEe147C10409BB062Bf39b"
       },
       "cea": {
         "CEAFactory_proxy": "0x5E191fbBe22F8866C5e4250557664fCE760e8870",
-        "CEAFactory_impl": "0xe5B51807f2252A5Ea9B591fE02285954446c8cAD",
+        "CEAFactory_impl": "0x7103465B8FA1Ea34EA30731a8fd2Ad5DDb10A872",
         "CEA_logic": "0x1939376ce03998F638b8760c7a13C9A379A053C0",
         "CEAMigration": "0x97BCEba9c6f13B0E12Fde0E4D2697F74A79899de"
       },
       "vault": {
         "proxy": "0xD019Eb12D0d6eF8D299661f22B4B7d262eD4b965",
-        "implementation": "0x493F3a9Be4841445Db6Cb87FcBe45377f4E82e8C",
+        "implementation": "0xfB6Daef9C72A08800E09B1C8e971565920077360",
         "proxy_admin": "0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3"
       },
       "supported_tokens": {
@@ -206,18 +207,18 @@
       "explorer": "https://sepolia.arbiscan.io",
       "universal_gateway": {
         "proxy": "0x2cd870e0166Ba458dEC615168Fd659AacD795f34",
-        "implementation": "0xa81a398289D04503Aab64C4276CdB99Ff1594801",
+        "implementation": "0xB29e090b4D18F1F1d8e02f682d9e8b5C52AD8491",
         "proxy_admin": "0xF838473Ddc2228267023A319c7305564391313f7"
       },
       "cea": {
         "CEAFactory_proxy": "0x65572FFa81c230360a8a53C1682C7f0Ee321E5E7",
-        "CEAFactory_impl": "0xd8335e762E42b7f9610293707d6d8A6b97578bFb",
+        "CEAFactory_impl": "0x4e90BC631Efa5dA0592428d5cF8527775bF1091b",
         "CEA_logic": "0x2c933Ff6FBcD479055F344691bc628F51DcE871A",
         "CEAMigration": "0x81f33160020AaDF47000E85915d332943b69F9f9"
       },
       "vault": {
         "proxy": "0x233B1B1B378eb0Aa723097634025A47C4b73A8F7",
-        "implementation": "0x60326FA4dD66CEA3637f4Dd6B4D65ad3112B87Ef",
+        "implementation": "0x626344f390216a990222C3aEC8ee8ae0A7e9b623",
         "proxy_admin": "0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2"
       },
       "supported_tokens": {
@@ -243,18 +244,18 @@
       "explorer": "https://sepolia.basescan.org",
       "universal_gateway": {
         "proxy": "0xFD4fef1F43aFEc8b5bcdEEc47f35a1431479aC16",
-        "implementation": "0x9f63e2bCFC19994c664a7d7265dCfAb206634612",
+        "implementation": "0x34B2a6B88E1549381BFda9a42C7C684b84Aa4B74",
         "proxy_admin": "0x0b30F0ECd37B8D44FE1d2b98d5Dc64654d9ac9b3"
       },
       "cea": {
         "CEAFactory_proxy": "0x7e8CeeDA043ED1460540616103dD57581a66C856",
-        "CEAFactory_impl": "0xd26E793Ef931EB62AeBc6e87DE1FEEF4fDbA01F5",
+        "CEAFactory_impl": "0x046Bb9b8Ed376b7623EE6aBfBD1d6f244f38335D",
         "CEA_logic": "0x733078bA1dFDDDB68A9E082696A256AEcBFb26b8",
         "CEAMigration": "0x95c453fDFf55Afc5754c1fA95Ad6607273D71B20"
       },
       "vault": {
         "proxy": "0xb4Ba4D5542D1dD48BD3589543660B265B41f16CB",
-        "implementation": "0x3F9ba2dFCe97Ef55b7a03C455911fd25f8f12B3b",
+        "implementation": "0x7979bd067ca33f91AA9d08f807AE7a43Ff17909d",
         "proxy_admin": "0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d"
       },
       "supported_tokens": {
@@ -280,12 +281,12 @@
       "explorer": "https://testnet.bscscan.com",
       "universal_gateway": {
         "proxy": "0x44aFFC61983F4348DdddB886349eb992C061EaC0",
-        "implementation": "0x1f5afA0eEDC2F7E2442D8a51E8A892C98517De1E",
+        "implementation": "0x467537aBa6F54014858132F93384199F72f27A11",
         "proxy_admin": "0x5Cef317D8392dF9F8C8E8a696c6893FD4112542C"
       },
       "cea": {
         "CEAFactory_proxy": "0x3f1B16e0B072d472951C4563d29d3da6a3EE3Ce8",
-        "CEAFactory_impl": "0xC0D35725Dd054B09931740DC231cDea89B0FEd3b",
+        "CEAFactory_impl": "0xDfeBecDA7b15Ab4071012C47176631098914eB16",
         "CEA_logic": "0xdC3A3a18a17EB4FDa9cF34a8CEee8540e6F2b5Fd",
         "CEAMigration": "0x2a06BF2A9C19dacbb38852f846B42e278e82e855"
       },

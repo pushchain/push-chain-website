@@ -2,7 +2,7 @@
 title: "Recommended Practices"
 url: "https://pushchain.github.io/docs/chain/build/recommended-practices/"
 section: "build"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Recommended Practices | Build | Push Chain Docs"
 ---
 
@@ -37,15 +37,23 @@ Push Chain also offers [@pushchain/ui-kit](https://npmjs.com/package/@pushchain/
 -   Multi-chain connections: Users can sign in and connect using wallets from other blockchains
 -   Email login: For non-crypto native users, Push Wallet supports email login and onboarding, enabling apps to attract wider audiences
 
-## Smart Contract Helper Functions
+## Working with Users from Other Chains
 
-To understand where your users are coming from—whether directly on Push Chain or via another chain like Sepolia or Solana Devnet—Push Chain provides helper smart contracts. These helpers make it easy to track and categorize users/protocol usage depending on their origin chain. This is especially useful if you want to:
+On Push Chain, a user can call your contract directly or from another chain like Ethereum Sepolia or Solana Devnet. Either way the call arrives as a normal transaction, so by default your contract has no idea where the user came from. Push Chain provides helper contracts that resolve any caller to its origin: the chain they came from and their address on it. This lets you:
 
--   Tailor app behavior depending on user origin
--   Monitor multichain adoption
--   Incentivize or reward activity coming from specific chains
+-   Tailor app behavior depending on user origin, such as showing chain-specific flows
+-   Monitor multichain adoption of your app
+-   Reward or incentivize activity coming from specific chains
 
-These helpers are already deployed and maintained, so you can easily integrate them into your logic with minimal effort.
+The helpers are deployed and maintained by Push Chain, so it is one call from your contract. See [Contract Helpers](/push-chain-website/pr-preview/pr-1244/docs/chain/build/contract-helpers/) for the interface and examples.
+
+## Working with Universal Read
+
+[Read Universal State](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/) brings state from other blockchains, or from HTTPS endpoints, onto Push Chain with validator agreement. A typical use is a contract that needs a user's balance on Ethereum, a price from an API, or the state of a contract on Solana before it acts.
+
+Use it when the result needs to land on-chain. When only your frontend or backend needs the data, a plain RPC call is cheaper and faster, and there is nothing to wait for.
+
+A read is a paid, asynchronous request: it costs gas plus a protocol fee, and the result arrives after validators agree on it. So save the request references before waiting, and check the full result before using the value. The Read Universal State page covers the flow, failure handling and recovery.
 
 ## Moving Tokens Across Chains
 
@@ -72,16 +80,6 @@ VIRTUAL NODE IDE
 Copy playground link
 
 Copy code
-
-## Working with Universal Read
-
--   Save the request transaction hash and request ID before waiting; a client timeout is resumable.
--   Check `status`, `raw.status`, `callbackDelivered`, and `decodeError` before consuming a value.
--   Fund callback gas and choose a refund recipient that accepts native Push transfers.
--   Keep Web2 request data free of secrets and extract stable fields so validators can agree.
--   Recover already-submitted batch hashes before retrying a partially failed batch.
-
-See [Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/) for the complete SDK and contract flow.
 
 ## Next Steps
 

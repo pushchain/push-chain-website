@@ -2,7 +2,7 @@
 title: "Constants Reference"
 url: "https://pushchain.github.io/docs/chain/build/constants/"
 section: "build"
-lastUpdated: "2026-09-22T12:24:13Z"
+lastUpdated: "2026-09-23T01:14:55+04:00"
 description: "Constants Reference | Build | Push Chain Docs"
 ---
 
@@ -13,23 +13,6 @@ description: "Constants Reference | Build | Push Chain Docs"
 This page provides a comprehensive reference for all constants available in the Push Chain Core SDK (`@pushchain/core`). These constants are used throughout the SDK to ensure type safety and consistency when working with chains, networks, libraries, and other configurations.
 
 All constants are accessed via the `PushChain.CONSTANTS` namespace.
-
-## Universal Read
-
-`PushChain.CONSTANTS.READ` provides the limits and enums for [Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/), available from core 6.0.25.
-
-| Constant | Value |
-| --- | --- |
-| `REGISTRY_CALLBACK_GAS` | `500_000n` |
-| `MAX_CALLBACK_GAS_LIMIT` | `1_000_000n` |
-| `MIN_CONFIRMATIONS_FLOOR` | `1` |
-| `DEFAULT_EXPIRY_BLOCKS` | `300n` |
-| `WEB2_MAX_EXTRACT_ENTRIES` | `16` |
-| `WEB2_DEFAULT_TIMEOUT_MS` | `5_000` |
-| `WEB2` | `'web2:https'`, also `PushChain.CONSTANTS.CHAIN.WEB2` |
-| `UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x00000000000000000000000000000000000000b2` |
-
-Use `READ.STATUS.FULFILLED` for lifecycle status and `READ.RESULT_STATUS.SUCCESS` for source-result status. These are different enums. Check `callbackDelivered` too. `CHAIN.WEB2` is a read destination, not a transaction destination.
 
 ## Push Network
 
@@ -85,6 +68,7 @@ Defines all supported blockchain chains across the Push Chain ecosystem. These c
 | `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` | `solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp` | Solana mainnet-beta |
 | `PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET` | `solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z` | Solana testnet |
 | `PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET` | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` | Solana devnet |
+| `PushChain.CONSTANTS.CHAIN.WEB2` | `web2:https` | Web2 / HTTPS endpoint. A read-only destination for [Read Universal State](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/), not a transaction destination |
 
 ### Usage Examples
 
