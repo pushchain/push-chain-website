@@ -510,11 +510,8 @@ function EthBalanceOnPush({ holder }: { holder: string }) {
       .then((snapshot) => snapshot.wait())
       .then((done) => {
         localStorage.removeItem('pendingRead');
-        if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) setValue(done.value);
-        else setReason(done.outcome);
-      })
-      // READ_NOT_FOUND / READ_TIMEOUT: keep the saved requestId and retry later; never resubmit.
-      .catch((err) => setReason(err.code ?? String(err)));
+        if (done.value !== undefined) setValue(done.value);
+      });
   }, [pushChainClient]);
 
   const readBalance = async () => {
@@ -530,13 +527,13 @@ function EthBalanceOnPush({ holder }: { holder: string }) {
 
     const done = await pending.wait();
     localStorage.removeItem('pendingRead');
-    if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) setValue(done.value);
-    else setReason(`${done.outcome}: errorCode ${done.raw?.errorCode}, callbackFailReason ${done.callbackFailReason ?? 'none'}, decodeError ${done.decodeError ?? 'none'}`);
+    if (done.value !== undefined) setValue(done.value);
+    else setReason(`status ${done.status}, source ${done.raw?.status}, callbackDelivered ${done.callbackDelivered}, decodeError ${done.decodeError ?? 'none'}`);
   };
 
   return (
     <div>
-      <button onClick={() => readBalance().catch((err) => setReason(err.code ?? String(err)))}>Read Sepolia balance onto Push Chain</button>
+      <button onClick={readBalance}>Read Sepolia balance onto Push Chain</button>
       {value !== undefined && <p>{PushChain.utils.helpers.formatUnits(value, 18)} ETH</p>}
       {reason && <p>No value: {reason}</p>}
     </div>
@@ -544,8 +541,8 @@ function EthBalanceOnPush({ holder }: { holder: string }) {
 }
 ```
 
-- **`outcome` is the success signal.** `done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS` means `value` is usable. Otherwise show the outcome (`SOURCE_ERROR`, `CALLBACK_FAILED`, `DECODE_FAILED`, `EXPIRED`, `FAILED`, `ABORTED`, `UNKNOWN`) with `raw.errorCode`, `callbackFailReason` and `decodeError`. On `UNKNOWN`, `READ_NOT_FOUND` or `READ_TIMEOUT`, keep the saved reference and retry tracking; never resubmit.
-- **Query options**: none = native balance, `token` = ERC-20 or SPL balance, `abi` + `functionName` + `args` = typed contract call (any function in the ABI, simulated with `eth_call`), `idl` (+ optional `functionName`; + `args` as PDA seeds when the subject is the program id) = decoded Solana program account, `storageSlot` = EVM storage word, `web2: { extract: [{ path, valueType }] }` with `chain: CHAIN.WEB2` = JSON fields from an HTTPS endpoint.
+- **`value` is the success signal.** When it is `undefined`, show `status`, `raw.status`, `callbackDelivered` and `decodeError`.
+- **Query options**: none = native balance, `token` = ERC-20 or SPL balance, `abi` or `idl` + `functionName` + `args` = typed contract call (any function in the ABI) or Solana program, `storageSlot` = EVM storage word, `web2: { extract: [{ path, valueType }] }` with `chain: CHAIN.WEB2` = JSON fields from an HTTPS endpoint.
 - **Several reads, one signature**: `prepareRead` each (no funds needed), then `executeReads([...])`; results come back in prepared order.
 - **Never put secrets in a Web2 read** (URL, headers and body are public), and never pass `CHAIN.WEB2` to `sendTransaction`.
 
@@ -685,7 +682,7 @@ For wallets that implement ERC-1271 (multisigs, account-abstraction wallets, UEA
 | `wallet: true` in `login` config — `pushChainClient` stays `null` after external-wallet connect | Use the object form `wallet: { enabled: true }`. The bare boolean is silently ignored by the provider. See [Setup - Wrap Your App](#setup---wrap-your-app). |
 | `app`, `themeMode`, `themeOverrides` placed inside `config` — they're ignored and the provider falls back to defaults | These are **top-level props** on `PushUniversalWalletProvider`, NOT keys in `config`. `config` carries `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`. |
 | `symbol` added to a PC-20 `funds.token` reference — transfer misroutes or throws | A PC-20 reference is exactly `{ chain, address }`; the SDK detects it by the **absence** of `symbol`. `chain` = where the tokens sit now, not the destination. See [Moving a PC-20](#moving-a-pc-20-push-born-token). |
-| Universal Read value used without a check, or read resubmitted after a refresh | `value` is set only when `outcome` is `SUCCESS`; otherwise `outcome` names the failure (debug with `raw.errorCode`, `callbackFailReason`, `decodeError`). Save `requestId` before `wait()` and resume with `trackRead({ requestId })` instead of paying again. See [Universal Read from a Component](#universal-read-from-a-component). |
+| Universal Read value used without a check, or read resubmitted after a refresh | `value` is set only when the read succeeded end to end; when it is `undefined`, read `status`, `raw.status`, `callbackDelivered` and `decodeError`. Save `requestId` before `wait()` and resume with `trackRead({ requestId })` instead of paying again. See [Universal Read from a Component](#universal-read-from-a-component). |
 
 > For read-only state queries (no transactions): use ethers.js or viem directly with `https://evm.donut.rpc.push.org/` (HTTP) or `wss://evm.donut.rpc.push.org` (WebSocket - for `watchBlocks`, event subscriptions). See [read-blockchain-state.md](https://push.org/agents/workflows/read-blockchain-state.md). To deliver state from another chain or a web API on-chain to Push Chain, use [Universal Read](#universal-read-from-a-component).
 

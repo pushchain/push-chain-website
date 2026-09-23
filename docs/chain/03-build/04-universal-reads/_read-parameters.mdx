@@ -8,31 +8,28 @@ import HideTableRows from '@site/src/components/HideTableRows/HideTableRows';
 
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
-| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, a Solana account (or its program id, to derive a PDA) for an `idl` read, or an `https://` URL for a Web2 read. Solana subjects are base58. |
+| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, or a URL for a Web2 read. Solana subjects are base58. |
 | _`options.chain`_ | `CHAIN` | Where to read from. Any supported EVM or Solana chain, or `CHAIN.WEB2` for an HTTPS endpoint. Decides which query option applies; see the branches below. Pass at most one query option; with none, `read` returns the subject's native balance. <ConstantsDropdown variant="CHAIN" /> |
 | :: Pass one of the following, based on `options.chain` | | |
 | ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
-| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK reads the mint's owner to detect SPL Token or Token-2022 and derives the associated token account. A missing or uninitialized mint throws before broadcast. |
-| &nbsp;&nbsp;`options.abi` | `Abi` | EVM only. The contract's ABI. Encodes the call and types the decoded `value`. Declare it `as const` so `value` is typed. |
-| &nbsp;&nbsp;`options.functionName` (with `abi`) | `string` | Required with `abi`. The function to call. Any mutability works, including `nonpayable` and `payable`: validators run the call as an `eth_call` simulation at the pinned block, so it returns data and never executes. |
-| &nbsp;&nbsp;`options.args` (with `abi`) | `any[]` | Positional function arguments, type-checked against the ABI. |
-| &nbsp;&nbsp;`options.idl` | `Idl` | Solana only. The program's Anchor IDL object. The subject account is decoded with the layout whose 8-byte discriminator matches its data. Reads never execute an instruction. |
-| &nbsp;&nbsp;`options.functionName` (with `idl`) | `string` | Optional. The account layout to decode, in `snake_case`, `camelCase` or the IDL's own spelling. When omitted, the layout is inferred from the discriminator. Passing it types `value` at compile time. Required when `subject` is the program id. |
-| &nbsp;&nbsp;`options.args` (with `idl`) | `any[]` | Only when `subject` is the program id: the non-constant PDA seeds of the `functionName` account, in the order the IDL declares them. The SDK derives the account address. Pubkey seeds accept base58, 0x-hex 32-byte strings or `PublicKey`; integer seeds take `bigint`. |
+| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `any[]` | Either an EVM ABI array or an Anchor IDL object. The input shape determines which encoding is produced and how `value` is decoded, so the result is typed. |
+| &nbsp;&nbsp;`options.functionName` | `string` | The function (EVM) or instruction (Solana) name to encode. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | Positional arguments. Use `BigInt` for `u64`/`u128`; 0x-hex 32-byte strings are auto-converted to Solana `PublicKey` when the IDL declares a `pubkey` arg. |
 | &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
 | ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
 | &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract` | `Array<{ path, valueType, decimals? }>` | Required. 1 to 16 JSONPath entries. Results come back as an array in this order. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, starting with `$`, for example `$.data.price`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, for example `$.data.price`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].valueType` | `'uint256'` \| `'int256'` \| `'bool'` \| `'string'` \| `'bytes'` | How the extracted value is encoded on-chain. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only, `0` to `255`. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.method` | `'GET'` \| `'POST'` | Optional. Defaults to `GET`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.headers` | `Record<string, string>` | Optional. Request headers. Written to a public event log forever, so never include secrets. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.body` | `string` \| `Uint8Array` | Optional, `POST` only. A body on `GET` is rejected. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`. Values above `15000` only produce an SDK warning; validators clamp them to `15000`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`, clamped by validators. |
 | :: | | |
 | `options.callback` | `{ target, gasLimit, abi, functionName, args? }` | Optional. Routes the request through your own receiver contract instead of the registry; fields in [Callback Arguments](/docs/chain/build/universal-read/#callback-arguments). |
-| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves once the request transaction is mined and the node has indexed the request (usually a few seconds, at most about 30 s), before validators vote. If the node has not indexed it by then, it throws `ReadNotFoundError`; the fees are already paid, so resume with `trackRead({ txHash })`.<br /><br />Call `wait()` on the response to finish. |
+| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves as soon as the request is confirmed on Push Chain, before validators vote.<br /><br />Call `wait()` on the response to finish. |
 | `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for progress updates through the read lifecycle. |
 
 </PushAPIReference>

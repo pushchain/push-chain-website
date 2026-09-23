@@ -45,10 +45,6 @@ async function main() {
 
     console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
     const done = await pending.wait();
-    if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-      console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-      return;
-    }
     console.log('Value:', ethers.formatUnits(done.value, 8), 'USD per ETH');
   } finally {
     rl.close();

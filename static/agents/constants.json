@@ -142,18 +142,6 @@
       "NOT_FOUND": 4,
       "INVALID_RESULT": 5,
       "REJECTED": 6
-    },
-    "OUTCOME": {
-      "_note": "response.outcome — the single success signal. Derived by the SDK from status, raw.status, callbackDelivered and decodeError. Check outcome === SUCCESS before trusting value.",
-      "PENDING": "PENDING",
-      "SUCCESS": "SUCCESS",
-      "SOURCE_ERROR": "SOURCE_ERROR",
-      "CALLBACK_FAILED": "CALLBACK_FAILED",
-      "DECODE_FAILED": "DECODE_FAILED",
-      "EXPIRED": "EXPIRED",
-      "FAILED": "FAILED",
-      "ABORTED": "ABORTED",
-      "UNKNOWN": "UNKNOWN"
     }
   },
   "UI_KIT": {

@@ -371,7 +371,7 @@ The [Universal Read Client](https://github.com/pushchain/push-chain-core-contrac
 
 - **Request with local context**: `_requestRead` stores per-request bytes that you get back in the callback
 - **Guarded callback**: `onUniversalData` accepts calls only from Universal Callback
-- **Refund safety**: when a spec your contract builds leaves `revertRecipient` as `address(0)`, it defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA. Specs prepared by the SDK already carry the caller's Push account
+- **Refund safety**: `revertRecipient` defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA
 - **Gas bound**: Callback gas is capped at `MAX_CALLBACK_GAS_LIMIT` (1,000,000)
 
 <br />
@@ -460,7 +460,7 @@ A contract can build one itself when no SDK is in the loop. See [Contract-Initia
 | `blockNumber` | The source block to read at. Take `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` and subtract `minConfirmations`. Must match the block inside `query`. |
 | `expiryPushChainHeight` | When the request lapses, in Push Chain blocks: `block.number + N`. |
 | `maxFee` | Upper bound on what you are paying; `msg.value` may not exceed it. |
-| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. The SDK fills it with the caller's Push account, or `refundTo`. |
+| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. |
 
 </PushAPIReference>
 
@@ -484,7 +484,7 @@ Submits a Universal Read request to Universal Callback and stores `localState` u
 - Requesting external chain or web2 state from a payable entrypoint in your contract.
 - Carrying per-request context (such as the original requester) through to the callback.
 
-> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. The budget must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires. Forward the spec and gas limit unchanged: the SDK matches the request it sent by target, gas limit and spec, and throws `READ_REQUEST_MISMATCH` after the transaction is mined if they differ. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
+> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
 
 ```solidity
 /**
@@ -572,9 +572,9 @@ You do not need your own receiver to see what `_requestRead` records: the deploy
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
-    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
-    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
+    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
+    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
 
     const RegistryABI = [
       'function readerOf(uint256 requestId) view returns (address)',
@@ -588,14 +588,14 @@ You do not need your own receiver to see what `_requestRead` records: the deploy
       const registry = new ethers.Contract(REGISTRY_ADDRESS, RegistryABI, provider);
       console.log('Reading request context from the registry...');
 
-      // 2) read back what the registry's read(spec, queryKey, callbackGasLimit) entrypoint recorded
-      //    alongside the _requestRead call for this request
+      // 2) read back what the registry's entrypoint passed into _requestRead as localState
+      //    (it encodes msg.sender, the query key and a request order, then mirrors them into these mappings)
       const requestId = BigInt(REQUEST_ID);
       // the account that called read(), i.e. msg.sender when the request was made
       console.log('Reader (msg.sender at request):', await registry.readerOf(requestId));
-      // the logical query key the SDK computed from the query and passed to read(); it groups reads of the same query
+      // the key the registry derives from the ReadSpec to group reads of the same query
       console.log('Query key:', await registry.queryKeyOf(requestId));
-      // a registry-wide, increasing sequence number across all requests; it orders latestResult
+      // the position of this request among reads of that query key
       console.log('Request order:', (await registry.requestOrderOf(requestId)).toString());
 
       provider.destroy();
@@ -695,9 +695,9 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
-    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
-    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
+    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
+    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
 
     const RegistryABI = [
       'function hasResult(uint256 requestId) view returns (bool)',
@@ -719,8 +719,8 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
       });
 
-      // 2) confirm the callback ran: outcome SUCCESS means FULFILLED, source SUCCESS and callbackDelivered
-      //    (the hook prints READ-TX-104-03 Looking Up Request while the SDK finds the record)
+      // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
+      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain. This takes 15 to 20 seconds.');
       const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
         progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
       });
@@ -728,11 +728,7 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
       const done = await snapshot.wait();
       const READ = PushChain.CONSTANTS.READ;
       const statusName = done.status === READ.STATUS.FULFILLED ? 'FULFILLED' : String(done.status);
-      console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered, '| Outcome:', done.outcome);
-      if (done.outcome !== READ.OUTCOME.SUCCESS) {
-        console.log('The read did not succeed, so the registry stored no usable result.');
-        return;
-      }
+      console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered);
 
       // 3) describe what was read, decoded from the request's own ReadSpec
       const [env] = abi.decode([QueryEnvelope], done.request.spec.query);
@@ -764,7 +760,7 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
 
 </NodeJSVirtualIDE>
 
-`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case, and `outcome` is `CALLBACK_FAILED`. See [Track Universal Read](/docs/chain/build/track-universal-read/).
+`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case. See [Track Universal Read](/docs/chain/build/track-universal-read/).
 
 </Details>
 

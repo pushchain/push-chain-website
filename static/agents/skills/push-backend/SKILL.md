@@ -832,7 +832,7 @@ await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/users
 });
 ```
 
-### Submit, save references, check `outcome`
+### Submit, save references, check `value`
 
 ```ts
 const pending = await client.universal.read('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045', {
@@ -844,11 +844,10 @@ const pending = await client.universal.read('0xd8dA6BF26964aF9D7eEd9e03E53415D37
 await db.save({ requestId: pending.requestId, txHash: pending.txHash });
 
 const done = await pending.wait();
-if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
+if (done.value !== undefined) {
   console.log('ETH:', ethers.formatEther(done.value));
 } else {
-  console.error('Read did not succeed', {
-    outcome: done.outcome,
+  console.error('No value', {
     status: done.status,
     rawStatus: done.raw?.status,
     errorCode: done.raw?.errorCode,
@@ -858,7 +857,7 @@ if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
 }
 ```
 
-**`outcome` is the success signal.** `READ.OUTCOME.SUCCESS` means the source read succeeded, your callback ran, and `value` is set. Other outcomes: `SOURCE_ERROR` (see `raw.errorCode`), `CALLBACK_FAILED` (see `callbackFailReason`), `DECODE_FAILED` (see `decodeError`), `EXPIRED`, `FAILED`, `ABORTED`, `PENDING`, and `UNKNOWN` (fulfil receipt unreadable: `refresh()` later, never resubmit). The debugging fields behind it:
+**`value` is the success signal.** The SDK sets it only when the read completed, the source returned data, your callback ran, and the bytes decoded. When `value` is `undefined`, the response says why:
 
 | Field | What it tells you |
 | ----- | ----------------- |
@@ -869,7 +868,7 @@ if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
 
 ### Batch - `prepareRead` + `executeReads`
 
-`prepareRead` takes the same subject and query options (not `waitForCompletion`, `progressHook` or `advanced`) and returns a `PreparedRead` with `fees.total`, `value`, `spec`, `specTuple` and `resultShape`. `executeReads` submits them as one transaction where the wallet supports atomic batching, otherwise as sequential transactions listed in `transactionHashes`. It returns `{ txHash, transactionHashes, reads, count, atomic, wait() }`; `atomic` describes submission only, so check `outcome` on every read.
+`prepareRead` takes the same subject and query options (not `waitForCompletion`, `progressHook` or `advanced`) and returns a `PreparedRead` with `fees.total`, `value`, `spec`, `specTuple` and `resultShape`. `executeReads` submits them as one transaction where the wallet supports atomic batching, otherwise as sequential transactions listed in `transactionHashes`. It returns `{ txHash, transactionHashes, reads, count, atomic, wait() }`; `atomic` describes submission only, so check `value` on every read.
 
 ```typescript
 const CHAIN = PushChain.CONSTANTS.CHAIN;
@@ -900,10 +899,8 @@ const snapshot = await pushChainClient.universal.trackRead(
 );
 
 const done = await snapshot.wait();
-console.log(done.outcome, done.value); // value is set only when outcome is SUCCESS
+console.log(done.status, done.value);
 ```
-
-The lookup emits `READ-TX-104-03` / `104-04` and retries for up to 30 s while the node indexes the request, then throws `ReadNotFoundError` (`READ_NOT_FOUND`): retry with the same reference, never resubmit. `snapshot.wait({ timeoutMs?, pollingIntervalMs?, resultShape? })` takes flat options; `trackRead` options carry into it.
 
 Pass `{ txHash }` instead to get an array of every read that transaction submitted. A typed contract call has no ABI on chain, so resume it with `resultShape`:
 
@@ -1363,7 +1360,7 @@ Full reference: https://push.org/agents/workflows/use-contract-helpers.md
 | PC-20 transfer throws `PC20_TOKEN_CHAIN_MISMATCH` | `funds.token.chain` was set to the destination. It must be where the tokens sit **right now**; the destination goes in `to.chain`. |
 | PC-20 wrapper address empty after an export | It was read from `receipt.externalAssetAddr`, a best-effort mirror that is `undefined` while the outbound is in flight (the raw chain field is only observed on a first deployment; the SDK backfills it from UniversalCore). Resolve wrappers from `getPC20Address(...).registry` - the authoritative record. |
 | `PC20_EXPECTED_BUT_PRC20` thrown on a token transfer | A synthetic PRC-20 (`USDC.eth`, `pETH`) was passed as a PC-20 reference. External-born tokens move via their `MoveableToken` accessor, not `{ chain, address }`. |
-| Universal Read result used without checking `outcome` | `outcome` is the success signal: `value` is set only when it is `SUCCESS`. Otherwise it names the failure; debug with `raw.errorCode`, `callbackFailReason` and `decodeError`. On `UNKNOWN` or `READ_NOT_FOUND`, retry tracking instead of resubmitting. |
+| Universal Read result used without checking `value` | `value` is the success signal: it is set only when the read completed, the source returned data, the callback ran and the bytes decoded. When it is `undefined`, read `status`, `raw.status`, `callbackDelivered` and `decodeError`. |
 | Universal Read resubmitted after `READ_TIMEOUT` - paid twice | A client timeout cancels nothing. Save `requestId` / `txHash` before `wait()` and resume with `client.universal.trackRead({ requestId })`. |
 | `CHAIN.WEB2` passed to `sendTransaction` | `CHAIN.WEB2` is a read-only destination for `client.universal.read`. |
 | Web2 read never reaches quorum | Validators need identical bytes. Extract stable fields, or lower numeric precision with `extract[].decimals`. |

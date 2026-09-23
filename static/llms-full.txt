@@ -783,35 +783,18 @@ const result = await pushChainClient.universal.read(
   { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, // native ETH balance on Sepolia
 );
 
-const READ = PushChain.CONSTANTS.READ;
-if (result.outcome === READ.OUTCOME.SUCCESS) {
-  console.log(result.value); // set only when the outcome is SUCCESS
-} else {
-  console.log('Read did not succeed:', result.outcome);
-}
+console.log(result.status); // READ.STATUS.FULFILLED once the read completes
+console.log(result.value); // defined only when the read succeeded end to end
 ```
 
-**outcome** is the success signal. It is `SUCCESS` only when the read completed, the source returned data, your callback ran, and the bytes decoded; only then is **value** set.
+**value** is the success signal. The SDK sets it only when the read completed, the source returned data, your callback ran, and the bytes decoded, so if **value** is defined you can use it.
 
-Any other **outcome** names what happened:
-
-| `outcome` | Meaning |
-| --------- | ------- |
-| `SUCCESS` | The source read succeeded, the callback ran, and `value` is set (when a result shape is known) |
-| `SOURCE_ERROR` | The destination chain or URL returned an error. See `raw.errorCode` |
-| `CALLBACK_FAILED` | The receiver callback reverted or ran out of gas. See `callbackFailReason` |
-| `DECODE_FAILED` | The result arrived but did not match the expected shape. See `decodeError` |
-| `EXPIRED` | Validators did not agree before the request expired. The unused budget is refunded |
-| `FAILED` | The request was settled another way on-chain |
-| `ABORTED` | The request was aborted |
-| `PENDING` | The read has not finished yet |
-| `UNKNOWN` | Fulfilled, but delivery could not be confirmed because the fulfil receipt was unavailable. Call `refresh()` later; do not resubmit |
+When **value** is `undefined`, the response says why.
 
 **How to debug the response**
 
 | Field | What it tells you |
 | ----- | ----------------- |
-| `outcome` | The single answer, derived from the fields below. |
 | `status` | Lifecycle of the request: `PENDING`, `VOTING`, `FULFILLED`, `EXPIRED`, `FAILED`, `ABORTED`. `FULFILLED` means the read completed; it does not by itself mean your callback succeeded. |
 | `raw.status` | What the source returned: `READ.RESULT_STATUS.SUCCESS`, or `ERROR` with `raw.errorCode`. |
 | `callbackDelivered` | Whether the receiver contract ran. `false` when it reverted or ran out of gas; `callbackFailReason` carries the revert data. |
@@ -821,31 +804,28 @@ Read Parameters
 
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
-| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, a Solana account (or its program id, to derive a PDA) for an `idl` read, or an `https://` URL for a Web2 read. Solana subjects are base58. |
+| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, or a URL for a Web2 read. Solana subjects are base58. |
 | _`options.chain`_ | `CHAIN` | Where to read from. Any supported EVM or Solana chain, or `CHAIN.WEB2` for an HTTPS endpoint. Decides which query option applies; see the branches below. Pass at most one query option; with none, `read` returns the subject's native balance.  |
 | :: Pass one of the following, based on `options.chain` | | |
 | ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
-| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK reads the mint's owner to detect SPL Token or Token-2022 and derives the associated token account. A missing or uninitialized mint throws before broadcast. |
-| &nbsp;&nbsp;`options.abi` | `Abi` | EVM only. The contract's ABI. Encodes the call and types the decoded `value`. Declare it `as const` so `value` is typed. |
-| &nbsp;&nbsp;`options.functionName` (with `abi`) | `string` | Required with `abi`. The function to call. Any mutability works, including `nonpayable` and `payable`: validators run the call as an `eth_call` simulation at the pinned block, so it returns data and never executes. |
-| &nbsp;&nbsp;`options.args` (with `abi`) | `any[]` | Positional function arguments, type-checked against the ABI. |
-| &nbsp;&nbsp;`options.idl` | `Idl` | Solana only. The program's Anchor IDL object. The subject account is decoded with the layout whose 8-byte discriminator matches its data. Reads never execute an instruction. |
-| &nbsp;&nbsp;`options.functionName` (with `idl`) | `string` | Optional. The account layout to decode, in `snake_case`, `camelCase` or the IDL's own spelling. When omitted, the layout is inferred from the discriminator. Passing it types `value` at compile time. Required when `subject` is the program id. |
-| &nbsp;&nbsp;`options.args` (with `idl`) | `any[]` | Only when `subject` is the program id: the non-constant PDA seeds of the `functionName` account, in the order the IDL declares them. The SDK derives the account address. Pubkey seeds accept base58, 0x-hex 32-byte strings or `PublicKey`; integer seeds take `bigint`. |
+| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `any[]` | Either an EVM ABI array or an Anchor IDL object. The input shape determines which encoding is produced and how `value` is decoded, so the result is typed. |
+| &nbsp;&nbsp;`options.functionName` | `string` | The function (EVM) or instruction (Solana) name to encode. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | Positional arguments. Use `BigInt` for `u64`/`u128`; 0x-hex 32-byte strings are auto-converted to Solana `PublicKey` when the IDL declares a `pubkey` arg. |
 | &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
 | ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
 | &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract` | `Array<{ path, valueType, decimals? }>` | Required. 1 to 16 JSONPath entries. Results come back as an array in this order. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, starting with `$`, for example `$.data.price`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, for example `$.data.price`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].valueType` | `'uint256'` \| `'int256'` \| `'bool'` \| `'string'` \| `'bytes'` | How the extracted value is encoded on-chain. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only, `0` to `255`. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.method` | `'GET'` \| `'POST'` | Optional. Defaults to `GET`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.headers` | `Record<string, string>` | Optional. Request headers. Written to a public event log forever, so never include secrets. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.body` | `string` \| `Uint8Array` | Optional, `POST` only. A body on `GET` is rejected. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`. Values above `15000` only produce an SDK warning; validators clamp them to `15000`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`, clamped by validators. |
 | :: | | |
 | `options.callback` | `{ target, gasLimit, abi, functionName, args? }` | Optional. Routes the request through your own receiver contract instead of the registry; fields in [Callback Arguments](/docs/chain/build/universal-read/#callback-arguments). |
-| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves once the request transaction is mined and the node has indexed the request (usually a few seconds, at most about 30 s), before validators vote. If the node has not indexed it by then, it throws `ReadNotFoundError`; the fees are already paid, so resume with `trackRead({ txHash })`.Call `wait()` on the response to finish. |
+| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves as soon as the request is confirmed on Push Chain, before validators vote.Call `wait()` on the response to finish. |
 | `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for progress updates through the read lifecycle. |
 
 Callback Arguments
@@ -855,7 +835,7 @@ Callback Arguments
 | Arguments | Type | Default | Description |
 | --------- | ---- | ------- | ----------- |
 | `options.callback.target` | `string` | Universal Read Registry | Address of your receiver contract on Push Chain (inherits `UniversalReadClient`). Omit to use the registry. |
-| `options.callback.gasLimit` | `bigint` | `500_000n` | Gas reserved for the result callback (`_onReadResult`), not for the request entrypoint. The same default applies to the registry and to your own receiver; at most `1_000_000n`. Unused callback budget is refunded. Pass it without `target` to raise the registry's callback gas. |
+| `options.callback.gasLimit` | `bigint` | `500_000n` | Gas reserved for the result callback (`_onReadResult`), not for the request entrypoint. |
 | `options.callback.abi` | `Abi` | - | ABI of your receiver, used to call its payable request entrypoint. Required with `target`. |
 | `options.callback.functionName` | `string` | - | The payable request entrypoint on your receiver, for example `request`. Required with `target`. It must emit exactly one `ReadRequested` per prepared read. |
 | `options.callback.args` | `(spec, gasLimit) => unknown[]` | `(spec, gas) => [spec, gas]` | Optional. Only needed when your entrypoint does not take `(spec, gasLimit)` in that order.The SDK builds the request for you and calls this to map it and the callback gas onto your entrypoint's argument list, for example `(spec, gas) => [gas, spec, extra]`. |
@@ -867,7 +847,7 @@ Callback Arguments
 | `options.blockNumber` | `bigint` | Oracle height minus `minConfirmations` | EVM only. Pins the read to a specific destination block. The oracle-observed height can lag the real head. |
 | `options.minConfirmations` | `number` | `1` | EVM only. Confirmations the destination block must have before validators read it. |
 | `options.expiryBlocks` | `bigint` | `300n` | Request lifetime in Push Chain blocks. An unfulfilled request expires and refunds the unused callback budget. |
-| `options.maxFee` | `bigint` | The estimated payment | Upper bound the contract enforces on the payment (protocol fee plus callback budget). It does not lower the payment: a value below the estimate throws `InvalidReadSpecError` with violation `EXCESSIVE_FEE`. |
+| `options.maxFee` | `bigint` | SDK estimated | Cap on the upfront payment (protocol fee plus callback budget). |
 | `options.refundTo` | `string` | Your Push account | Where unused callback budget is sent. Must accept native Push transfers; a contract without a payable `receive()` forfeits the refund. |
 | `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between status polls. Minimum `500`. |
 | `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds this caller waits. Timing out does not cancel the request; resume it with [`trackRead`](/docs/chain/build/track-universal-read/). An explicit value overrides the cap. |
@@ -883,7 +863,7 @@ Read Progress Hook
 | `progress.id`        | `string`                       | Unique identifier for the progress event.                                      |
 | `progress.title`     | `string`                       | Brief title of the progress event.                                             |
 | `progress.message`   | `string`                       | Detailed message describing the event.                                         |
-| `progress.level`     | `INFO` \| `SUCCESS` \| `WARNING` \| `ERROR` | Severity level of the event.                                      |
+| `progress.level`     | `INFO` \| `SUCCESS` \| `ERROR` | Severity level of the event.                                                   |
 | `progress.response`  | `object` \| `null`             | Additional data object for the event, or `null` if not applicable.             |
 | `progress.timestamp` | `string`                       | ISO-8601 timestamp when the event occurred (e.g. `2025-06-26T15:04:05.000Z`). |
 
@@ -893,27 +873,27 @@ Read Progress Hook
 | `READ-TX-102-01` | Fetching Destination Height & Fee | Reading the oracle height and protocol fee for `<chain>` | INFO | `{ chain, stage: 'preflight' }` |
 | `READ-TX-102-02` | Read Spec Assembled | Pinned at block `<n>`, expires at Push height `<n>`; fee + budget = `<total>` UPC | SUCCESS | `{ protocolFee, callbackBudget, totalValue, blockNumber, expiryPushChainHeight }` |
 | `READ-TX-102-03` | Destination Height Unavailable | The oracle has no height for `<chain>`, so it is not readable | ERROR | `{ chain }` |
-| `READ-TX-102-04` | Preflight Stale, Refetching | A read prepared more than 60 s earlier is revalidated against fresh preflight in `executeReads` | WARNING | `{ fetchedAt, ageMs }` |
+| `READ-TX-102-04` | Preflight Stale, Refetching | Preflight is `<n>`s old, refetching the Push height | WARNING | `{ fetchedAt, ageMs }` |
 | `READ-TX-102-05` | Refund Target Is A Contract | `<refundTo>` is a non-UEA contract; it needs a payable `receive()` or the unspent budget is forfeited | WARNING | `{ refundTo }` |
 | `READ-TX-103-01` | Checking Balance Requirements | Balance `<n>` UPC covers / is short of the `<n>` UPC read | INFO when sufficient / WARNING when short | `{ required, available, sufficient, shortfall, enforceGasCheck }` |
 | `READ-TX-103-02` | Insufficient Balance | Need `<n>` UPC, have `<n>` UPC | ERROR (only when `enforceGasCheck` is `true`) | `{ required, available, shortfall }` |
 | `READ-TX-103-03` | Sensitive Header Detected | Headers are written to a public event log forever: `<headers>` | WARNING | `{ matchedHeaders }` |
 | `READ-TX-104-01` | Broadcasting Read Request | Sending the read request to Push Chain | INFO | `{ stage: 'broadcasting' }` |
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
-| `READ-TX-104-03` | Looking Up Request | Looking up the read on Push Chain | INFO | `{ requestId }` or `{ txHash }` |
-| `READ-TX-104-04` | Request Found | Read `<requestId>` found (status `<status>`), once per request | SUCCESS | `{ requestId, status }` |
-| `READ-TX-104-05` | Request Not Found | No read found after `<n>`s (the lookup gives up at 30 s) | ERROR | `{ requestId }` or `{ txHash }`, plus `elapsedMs` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires; fires once per `wait()` at 30 or fewer blocks left | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
+| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
-| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>`, for fulfilled and expired reads | INFO | `{ requestId, amount, refundTo }` |
+| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
 | `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered; fires only when `outcome` is `SUCCESS` | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. Every terminal read that did not succeed ends here; for a fulfilled read, `status` is its outcome (`SOURCE_ERROR`, `CALLBACK_FAILED`, `DECODE_FAILED`, `UNKNOWN`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
+| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
 Returns UniversalReadResponse
 
@@ -922,7 +902,6 @@ Returns UniversalReadResponse
 ```typescript
 {
   requestId: '0x9c1f3c2b5c0d4a7e8f6b1a2c3d4e5f60718293a4b5c6d7e8f9a0b1c2d3e4f5a6',
-  requestIdUint: 70615991911750399052925665541914898891038219178489833404284146365146480309670n,
   txHash: '0xe2302bd21ab0902f37cb605d491ce5f95ee35ce4083405dddf3657d782acae35',
   chain: 'eip155:11155111',
   destination: {
@@ -931,7 +910,6 @@ Returns UniversalReadResponse
     caip2: 'eip155:11155111',
     namespace: 'eip155',
   },
-  outcome: 'SUCCESS', // READ.OUTCOME.SUCCESS
   status: 3, // READ.STATUS.FULFILLED
   isTerminal: true,
   callbackDelivered: true,
@@ -965,23 +943,21 @@ Returns UniversalReadResponse
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `requestId` | `string` | Unique identifier of this read. Use it to resume tracking in another session. |
-| `requestIdUint` | `bigint` | `requestId` as the `uint256` contracts key results by, for example the registry's `resultByRequestId`. |
 | `txHash` | `string` | Push Chain transaction that submitted the request. |
 | `chain` | `CHAIN` | Destination that was read. |
-| `outcome` | `READ.OUTCOME` | The success signal: `SUCCESS` or the reason it did not work (see the table above). |
 | `status` | `READ.STATUS` | Lifecycle: `PENDING`, `VOTING`, `FULFILLED`, `EXPIRED`, `FAILED`, `ABORTED`. |
 | `isTerminal` | `boolean` | `true` once the read can no longer change. |
-| `callbackDelivered` | `boolean` | `FULFILLED` only. `true` when the receiver ran; `false` when it reverted or ran out of gas; `undefined` if the fulfil receipt could not be read (`outcome` is then `UNKNOWN`). |
+| `callbackDelivered` | `boolean` | `FULFILLED` only. `true` when the receiver ran; `false` when it reverted or ran out of gas. |
 | `callbackFailReason` | `string` | Revert data from a failed callback. |
-| `value` | `T` | Decoded result. Present only when `outcome` is `SUCCESS`. Typed from your query: `bigint` for balances, `Hex` for storage, the ABI return type for calls, an array for Web2. |
+| `value` | `T` | Decoded result. Present only when fulfilled, delivered, successful and decodable. Typed from your query: `bigint` for balances, `Hex` for storage, the ABI return type for calls, an array for Web2. |
 | `decodeError` | `string` | Why `value` is absent although the read succeeded. |
 | `raw` | `object` \| `null` | Consensus result: `status` (`READ.RESULT_STATUS`), `resultData` bytes and `errorCode`. `null` before validators have voted. |
 | `errorMsg` | `string` | Node-reported error, if any. |
-| `fees` | `object` | `paid`, `protocolFee`, `callbackBudget`, plus `burned`, `refunded` and `refundFailed` once settled. The settlement fields stay `undefined` when the settle receipt or block results cannot be read; expired reads never have `burned`. |
+| `fees` | `object` | `paid`, `protocolFee`, `callbackBudget`, plus `burned`, `refunded` and `refundFailed` once settled. |
 | `request` | `object` | The on-chain request: `spec`, `callbackTarget`, `originalFunder`, `refundTo`, `callbackGasLimit`, `logIndex`, `createdAtHeight`. |
 | `pcTx` | `array` | Push Chain transactions the node sent for this read (fulfil, settle, expiry). |
 | `explorerUrl` | `string` | Explorer link for the request transaction. |
-| `wait` | `function` | `wait({ timeoutMs?, pollingIntervalMs?, resultShape? })`. Polls until the read is terminal and returns the final response. Only a timeout throws (`ReadTimeoutError`). |
+| `wait` | `function` | Polls until the read is terminal and returns the final response. Only a timeout throws. |
 | `refresh` | `function` | Returns one fresh snapshot without polling. |
 
 ## Types of Universal Read
@@ -1024,8 +1000,6 @@ await pushChainClient.universal.read(contractAddress, {
 });
 ```
 
-`functionName` can name a function of any mutability, including `nonpayable` and `payable`. Validators run the call as an `eth_call` simulation at the pinned block, so it returns data and never executes. This makes view-like functions such as quoters readable.
-
 `blockNumber` and `minConfirmations` pin an EVM read to a specific block; see Advanced Arguments.
 
 Run each of these against a real address in the [EVM Playground](#evm-playground).
@@ -1038,37 +1012,20 @@ const CHAIN = PushChain.CONSTANTS.CHAIN;
 // Native balance (lamports)
 await pushChainClient.universal.read(solanaHolder, { chain: CHAIN.SOLANA_DEVNET });
 
-// Token balance: the holder's token account for the mint (SPL Token or Token-2022, detected from the mint)
+// Token balance: the holder's SPL token account for the mint
 await pushChainClient.universal.read(solanaHolder, {
   chain: CHAIN.SOLANA_DEVNET,
   token: mintAddress,
 });
 
-// Program account, decoded with the program's Anchor IDL (the closest thing to a storage slot on Solana).
-// The layout is picked by the account's 8-byte discriminator.
+// Program account, decoded with the program's Anchor IDL (the closest thing to a storage slot on Solana)
 await pushChainClient.universal.read(accountAddress, {
   chain: CHAIN.SOLANA_DEVNET,
   idl: programIdl,
-});
-
-// Name the layout to type `value` at compile time (snake_case, camelCase or the IDL's spelling)
-await pushChainClient.universal.read(accountAddress, {
-  chain: CHAIN.SOLANA_DEVNET,
-  idl: programIdl,
-  functionName: 'counter',
-});
-
-// PDA: pass the program id as the subject, the account layout, and its seeds.
-// The SDK derives the address from the seeds the IDL declares.
-await pushChainClient.universal.read(programIdl.address, {
-  chain: CHAIN.SOLANA_DEVNET,
-  idl: programIdl,
-  functionName: 'stake',
-  args: [authority], // non-constant seeds in IDL order; pubkeys as base58, 0x-hex or PublicKey
 });
 ```
 
-Solana reads use finalized state, so there is nothing to pin. Solana has no storage slots; a program account holds the state, and `idl` decodes it the way `abi` decodes a call result on EVM. Reads never execute an instruction. `value` is the decoded Anchor account, and `decoded.accountName` is the layout it matched.
+Solana reads use finalized state, so there is nothing to pin. Solana has no storage slots; a program account holds the state, and `idl` decodes it the way `abi` decodes a call result on EVM.
 
 Run these against a real address in the [Solana Playground](#solana-playground).
 
@@ -1089,9 +1046,9 @@ await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/users
 });
 ```
 
-**Note:** `extract` can take up to 16 entries that need to be extracted. Results come back as an array in the same order. Each `path` starts with `$`, and the subject must be an `https://` URL.
+**Note:** `extract` can take up to 16 entries that need to be extracted. Results come back as an array in the same order.
 
-Requests are GET by default. Set **method** to POST to send a body, and **timeoutMs** to change the 5 second fetch timeout. Validators clamp timeouts above 15 seconds.
+Requests are GET by default. Set **method** to POST to send a body, and **timeoutMs** to change the 5 second fetch timeout.
 
 **Note:** Validators only agree when every one of them extracted identical bytes, so a value that changes between fetches (a live price at full precision) may never reach quorum. Pick stable fields, or lower the precision with **decimals**.
 
@@ -1150,10 +1107,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', ethers.formatEther(done.value), 'ETH');
       } finally {
         rl.close();
@@ -1204,10 +1157,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', ethers.formatUnits(done.value, 6), 'USDC');
       } finally {
         rl.close();
@@ -1259,10 +1208,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', ethers.formatUnits(done.value, 8), 'USD per ETH');
       } finally {
         rl.close();
@@ -1310,10 +1255,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', done.value);
         console.log('Decoded:', BigInt(done.value).toString(), '(WETH decimals)');
       } finally {
@@ -1365,10 +1306,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', ethers.formatUnits(done.value, 9), 'SOL');
       } finally {
         rl.close();
@@ -1419,10 +1356,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', ethers.formatUnits(done.value, 6), 'USDC');
       } finally {
         rl.close();
@@ -1479,10 +1412,6 @@ Every example reads real state on a real address. Each one says where the addres
 
         console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
         const done = await pending.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
-          return;
-        }
         console.log('Value:', JSON.stringify(done.value, (_, value) => typeof value === 'bigint' ? value.toString() : value));
         console.log('id:', done.value[0].toString(), 'name:', done.value[1]);
       } finally {
@@ -1497,20 +1426,13 @@ Every example reads real state on a real address. Each one says where the addres
 
 | Symptom | Action |
 | ------- | ------ |
-| `outcome` is not `SUCCESS` and `value` is `undefined` | `outcome` names the cause. `SOURCE_ERROR`: check `raw.errorCode`. `CALLBACK_FAILED`: check `callbackFailReason`. `DECODE_FAILED`: check `decodeError`. `UNKNOWN`: the fulfil receipt was unavailable; call `refresh()` later instead of resubmitting. |
+| `value` is `undefined` (the playground fails inside `formatEther` or `formatUnits`) | The read did not produce a usable result. Open the "How to debug the response" dropdown above and check `status`, `raw.status`, `callbackDelivered` and `decodeError`. |
 | Callback failed on a large result | Submit a new request with more callback gas, up to `1_000_000n`. Failed requests are not retried automatically. |
-| Client timed out (`ReadTimeoutError`, code `READ_TIMEOUT`) | The request continues on-chain. Resume with [`trackRead`](/docs/chain/build/track-universal-read/) using `err.requestId` or `err.txHash`; `err.lastStatus` is the last status seen. |
-| `ReadNotFoundError` (code `READ_NOT_FOUND`) | The node had not indexed the request within 30 s, or the transaction made no read. If the transaction succeeded, retry `trackRead({ txHash })` later; the fees are already paid, so do not resubmit. |
-| Only some batch calls were submitted (code `READ_REQUEST_TX_FAILED`) | `err.transactionHashes` lists the mined requests; resume each with `trackRead({ txHash })`. Check `err.pendingTransactionHash` before resubmitting anything. |
+| Client timed out | Resume with [`trackRead`](/docs/chain/build/track-universal-read/) using the saved request ID or transaction hash. |
+| Only some batch calls were submitted | Recover committed hashes; check the pending hash before resubmitting. |
 | Web2 read never reaches quorum | Extract stable fields, or lower numeric precision with `decimals`. |
 | `ReadRegistryUnavailableError` | The registry exists on Donut only. On other networks, provide your own receiver and request ABI. |
-| `InvalidReadSpecError` (code `INVALID_READ_SPEC`) | `err.violations` lists what failed, for example `EXCESSIVE_FEE` (`maxFee` below the payment) or `INSUFFICIENT_CALLBACK_BUDGET`. A prepared read that fails revalidation is stale: prepare a fresh request. |
-| `InvalidReadQueryError` (code `INVALID_READ_QUERY`) | The options are malformed, for example two query options at once, `accountName` or `tokenProgram` passed, or a Solana token mint that does not exist. The message says which. |
-| `ReadHeightUnavailableError` (code `READ_HEIGHT_UNAVAILABLE`) | The destination has no oracle height on Push Chain, so it cannot be read. Check the chain. |
-| `UnsupportedReadDestinationError` (code `UNSUPPORTED_READ_DESTINATION`) | The destination is not routable or is blocked on-chain. |
-| Code `INSUFFICIENT_READ_BALANCE` | The account cannot cover the reads (only thrown when `enforceGasCheck` is `true`). Fund it and retry. |
-
-Every error extends `ReadStateError` and carries a stable `code` plus a `hint`. A result that does not decode is not thrown: it is reported as `decodeError` with `outcome` `DECODE_FAILED` (`ReadDecodeError`, code `READ_DECODE_FAILED`, is thrown only by the standalone decoder).
+| Prepared read fails revalidation | Prepare a fresh request; the old pin, expiry or budget is no longer valid. |
 
 ## Next Steps
 
@@ -2917,28 +2839,25 @@ console.log(prepared.fees.total); // what this read will cost, in PC
 
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
-| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, a Solana account (or its program id, to derive a PDA) for an `idl` read, or an `https://` URL for a Web2 read. Solana subjects are base58. |
+| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, or a URL for a Web2 read. Solana subjects are base58. |
 | _`options.chain`_ | `CHAIN` | Where to read from. Any supported EVM or Solana chain, or `CHAIN.WEB2` for an HTTPS endpoint. Decides which query option applies; see the branches below. Pass at most one query option; with none, `read` returns the subject's native balance.  |
 | :: Pass one of the following, based on `options.chain` | | |
 | ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
-| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK reads the mint's owner to detect SPL Token or Token-2022 and derives the associated token account. A missing or uninitialized mint throws before broadcast. |
-| &nbsp;&nbsp;`options.abi` | `Abi` | EVM only. The contract's ABI. Encodes the call and types the decoded `value`. Declare it `as const` so `value` is typed. |
-| &nbsp;&nbsp;`options.functionName` (with `abi`) | `string` | Required with `abi`. The function to call. Any mutability works, including `nonpayable` and `payable`: validators run the call as an `eth_call` simulation at the pinned block, so it returns data and never executes. |
-| &nbsp;&nbsp;`options.args` (with `abi`) | `any[]` | Positional function arguments, type-checked against the ABI. |
-| &nbsp;&nbsp;`options.idl` | `Idl` | Solana only. The program's Anchor IDL object. The subject account is decoded with the layout whose 8-byte discriminator matches its data. Reads never execute an instruction. |
-| &nbsp;&nbsp;`options.functionName` (with `idl`) | `string` | Optional. The account layout to decode, in `snake_case`, `camelCase` or the IDL's own spelling. When omitted, the layout is inferred from the discriminator. Passing it types `value` at compile time. Required when `subject` is the program id. |
-| &nbsp;&nbsp;`options.args` (with `idl`) | `any[]` | Only when `subject` is the program id: the non-constant PDA seeds of the `functionName` account, in the order the IDL declares them. The SDK derives the account address. Pubkey seeds accept base58, 0x-hex 32-byte strings or `PublicKey`; integer seeds take `bigint`. |
+| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `any[]` | Either an EVM ABI array or an Anchor IDL object. The input shape determines which encoding is produced and how `value` is decoded, so the result is typed. |
+| &nbsp;&nbsp;`options.functionName` | `string` | The function (EVM) or instruction (Solana) name to encode. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | Positional arguments. Use `BigInt` for `u64`/`u128`; 0x-hex 32-byte strings are auto-converted to Solana `PublicKey` when the IDL declares a `pubkey` arg. |
 | &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
 | ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
 | &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract` | `Array<{ path, valueType, decimals? }>` | Required. 1 to 16 JSONPath entries. Results come back as an array in this order. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, starting with `$`, for example `$.data.price`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, for example `$.data.price`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].valueType` | `'uint256'` \| `'int256'` \| `'bool'` \| `'string'` \| `'bytes'` | How the extracted value is encoded on-chain. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only, `0` to `255`. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.method` | `'GET'` \| `'POST'` | Optional. Defaults to `GET`. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.headers` | `Record<string, string>` | Optional. Request headers. Written to a public event log forever, so never include secrets. |
 | &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.body` | `string` \| `Uint8Array` | Optional, `POST` only. A body on `GET` is rejected. |
-| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`. Values above `15000` only produce an SDK warning; validators clamp them to `15000`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`, clamped by validators. |
 | :: | | |
 | `options.callback` | `{ target, gasLimit, abi, functionName, args? }` | Optional. Routes the request through your own receiver contract instead of the registry; fields in [Callback Arguments](/docs/chain/build/universal-read/#callback-arguments). |
 
@@ -2951,7 +2870,7 @@ console.log(prepared.fees.total); // what this read will cost, in PC
 | `options.blockNumber` | `bigint` | Oracle height minus `minConfirmations` | EVM only. Pins the read to a specific destination block. The oracle-observed height can lag the real head. |
 | `options.minConfirmations` | `number` | `1` | EVM only. Confirmations the destination block must have before validators read it. |
 | `options.expiryBlocks` | `bigint` | `300n` | Request lifetime in Push Chain blocks. An unfulfilled request expires and refunds the unused callback budget. |
-| `options.maxFee` | `bigint` | The estimated payment | Upper bound the contract enforces on the payment (protocol fee plus callback budget). It does not lower the payment: a value below the estimate throws `InvalidReadSpecError` with violation `EXCESSIVE_FEE`. |
+| `options.maxFee` | `bigint` | SDK estimated | Cap on the upfront payment (protocol fee plus callback budget). |
 | `options.refundTo` | `string` | Your Push account | Where unused callback budget is sent. Must accept native Push transfers; a contract without a payable `receive()` forfeits the refund. |
 
 **Returns `PreparedRead` **
@@ -3020,7 +2939,7 @@ console.log(prepared.fees.total); // what this read will cost, in PC
 
 **_`pushChainClient.universal.executeReads(preparedReads: PreparedRead[], options?: { waitForCompletion?, progressHook?, advanced? }): Promise<BatchReadResponse>`_**
 
-Executes an ordered array of prepared reads as one flow. With an external-chain wallet (UEA), or a Push Chain wallet that can sign EIP-7702 authorizations, this is submitted as a **single atomic transaction**: you sign once, and the SDK submits every read and collects every result. A Push Chain wallet without EIP-7702 support sends one transaction per read instead; `atomic` is then `false` and `transactionHashes` lists every transaction.
+Executes an ordered array of prepared reads as one flow. Where the wallet supports atomic batching this is submitted as a **single transaction**; you sign once, and the SDK submits every read and collects every result.
 
 Each prepared read becomes one read in the batch, and results come back in the same order.
 
@@ -3042,7 +2961,7 @@ const [eth, sol] = await batch.wait(); // results in prepared order
 
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
-| _`preparedReads`_ | `PreparedRead[]` | Reads returned by `prepareRead`. Results come back in this order. Each read is revalidated against current chain state before anything is sent. Without atomic batching in the wallet, they are submitted as sequential transactions. |
+| _`preparedReads`_ | `PreparedRead[]` | Reads returned by `prepareRead`. Results come back in this order. Without atomic batching in the wallet, they are submitted as sequential transactions. |
 | `options.waitForCompletion` | `boolean` | Default `true`. When `false`, returns as soon as the requests are submitted, before validators vote.Call `wait()` on the response to finish. |
 | `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for batch and per-read progress events; see [ProgressHook Type and Response](#execute-reads). |
 
@@ -3058,7 +2977,7 @@ const [eth, sol] = await batch.wait(); // results in prepared order
 
 **ProgressHook Type and Response**
 
-Batch events wrap the single-read events documented in [Read Universal State](/docs/chain/build/universal-read/#read-progress-hook); each read in the batch also emits its own `READ-TX-1xx` events. The `READ-TX-001`, `002` and `999` events below fire only when more than one read is executed.
+Batch events wrap the single-read events documented in [Read Universal State](/docs/chain/build/universal-read/#read-progress-hook); each read in the batch also emits its own `READ-TX-1xx` events.
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |
@@ -3130,10 +3049,6 @@ Batch events wrap the single-read events documented in [Read Universal State](/d
 
         console.log('Waiting for validators to reach quorum and deliver both callbacks (usually under a minute)...');
         const [eth, sol] = await batch.wait();
-        // outcome is the success signal; value is set only when it is SUCCESS
-        for (const read of [eth, sol]) {
-          if (read.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read ' + read.requestId + ' ended ' + read.outcome);
-        }
         console.log('Value:', ethers.formatEther(eth.value), 'ETH');
         console.log('Value:', ethers.formatUnits(sol.value, 9), 'SOL');
       } finally {
@@ -3223,10 +3138,6 @@ Read a Chainlink price on Ethereum Sepolia, a USDC balance on Solana Devnet and 
 
         console.log('Waiting for validators to reach quorum and deliver all three callbacks (usually under a minute)...');
         const [priceResult, usdcResult, userResult] = await batch.wait();
-        // outcome is the success signal; value is set only when it is SUCCESS
-        for (const read of [priceResult, usdcResult, userResult]) {
-          if (read.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read ' + read.requestId + ' ended ' + read.outcome);
-        }
         console.log('Value:', ethers.formatUnits(priceResult.value, 8), 'USD per ETH');
         console.log('Value:', ethers.formatUnits(usdcResult.value, 6), 'USDC');
         console.log('Value:', JSON.stringify(userResult.value, (_, value) => typeof value === 'bigint' ? value.toString() : value));
@@ -3241,10 +3152,9 @@ Read a Chainlink price on Ethereum Sepolia, a USDC balance on Solana Devnet and 
 
 ## Key Considerations
 
-- **Single signature**: one atomic transaction submits every read with an external-chain wallet or an EIP-7702-capable Push Chain wallet. Otherwise the reads go out as sequential transactions (the SDK logs a warning), listed in **transactionHashes**.
-- **Fulfillment is per read**: **atomic** only describes the submission. Validators fulfill each read on its own, so check `outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS` on every response before using its **value**.
-- **Partial batches**: with sequential submission, an earlier read can exist even if a later transaction fails. The SDK then throws a `ReadStateError` with code `READ_REQUEST_TX_FAILED`, carrying `transactionHashes` (mined) and `pendingTransactionHash` (outcome unknown). Resume the mined ones with `trackRead({ txHash })` and check the pending receipt before resubmitting, or you pay twice.
-- **Prepare right before executing**: a prepared read fixes its expiry at prepare time (300 Push blocks by default, about 6.7 minutes). `executeReads` revalidates every read first and throws `InvalidReadSpecError` if one is no longer valid; a read prepared more than 60 seconds earlier is announced with `READ-TX-102-04`. Prepare it again rather than retrying.
+- **Single signature**: one transaction submits every read when the wallet supports atomic batching. Otherwise the reads go out as sequential transactions, listed in **transactionHashes**.
+- **Fulfillment is per read**: **atomic** only describes the submission. Validators fulfill each read on its own, so check **value** on every response.
+- **Partial batches**: with sequential submission, an earlier read can exist even if a later transaction fails. Check the hashes on the error before resubmitting, or you pay twice. A prepared read that fails revalidation must be prepared again.
 - **Fees**: each read carries its own fee and the batch costs their sum. Nothing is charged at prepare time.
 - **Tracking**: the progress hook streams batch events plus each read's own events. A timed-out wait cancels nothing; resume with [Track Universal Read](/docs/chain/build/track-universal-read/).
 
@@ -5438,7 +5348,7 @@ Universal Read is consumed by an app through the SDK. Contract-initiated read an
 | **Where the result lives** | Registry storage, exposed by the SDK as `value`. | Your storage, in whatever shape you write. |
 | **Who requests** | The SDK, through `read`. | The SDK through `read` with `callback`, or your contract on its own. |
 | **Who pays** | The requesting wallet. | `msg.value` on your request entrypoint. The SDK quotes it; a contract sends it. |
-| **Refunds** | Back to the requesting account. | To `revertRecipient`. On the SDK path that is the caller's Push account (`refundTo`); a spec your contract builds with `revertRecipient` left as `address(0)` refunds to your contract. |
+| **Refunds** | Back to the requesting account. | To `revertRecipient`, which defaults to your contract. |
 | **SDK involvement** | Required. | Optional. A contract can build the request itself. |
 
 The key distinction is that the result becomes **contract state in the same transaction that delivers it**. Settling a position, unlocking a pending action, gating a payout on external state, all of it runs inside your callback without an off-chain relayer.
@@ -5452,8 +5362,8 @@ Universal Callback is the predeploy on Push Chain that accepts read requests, ho
 Key properties:
 - **Single entry**: `requestExternalReadSelf(spec, callbackSelector, callbackGasLimit)` is the only way in. `UniversalReadClient` calls it for you.
 - **Single delivery**: only Universal Callback may call your contract with a result. The base contract enforces this.
-- **Gas bound**: `callbackGasLimit` caps what your callback may consume. The hard cap is 1,000,000 gas; the SDK defaults to 500,000 (`PushChain.CONSTANTS.READ.REGISTRY_CALLBACK_GAS`) when you pass no `gasLimit`.
-- **Lifecycle**: a request moves through `PENDING`, `EXECUTED` (result delivered; the callback was attempted, even if it reverted) and `SETTLED` (gas reported, refund sent), or `EXPIRED`. `statusOf(requestId)` returns the current state; an unknown ID reads as `NONE`. Whether your callback succeeded is the `ReadFulfilled` or `CallbackFailed` event, which the SDK reports as `callbackDelivered`.
+- **Gas bound**: `callbackGasLimit` caps what your callback may consume. The hard cap is 1,000,000 gas; the registry uses 500,000.
+- **Lifecycle**: a request moves through `PENDING`, `EXECUTED` (callback ran) and `SETTLED` (gas reported, refund sent), or `EXPIRED`. `statusOf(requestId)` returns the current state; an unknown ID reads as `NONE`.
 
 ### UniversalReadClient
 
@@ -5479,7 +5389,7 @@ flowchart LR
 Key properties:
 - **You write two functions**: a payable request entrypoint that calls `_requestRead`, and `_onReadResult`, which receives the bytes.
 - **Local state travels with the request**: the `localState` bytes you pass to `_requestRead` come back with the result, so your callback knows what it asked for.
-- **Refunds follow `revertRecipient`**: when your contract builds the spec and leaves `revertRecipient` as `address(0)`, `_requestRead` sets it to your contract, so your contract needs a payable `receive()` or the refund is not delivered. Specs prepared by the SDK already carry the caller's Push account (or `refundTo`).
+- **Refunds default to the contract**: `_requestRead` sets `revertRecipient` to your contract when you leave it empty, so your contract needs a payable `receive()` or the refund is not delivered.
 
 ### ReadSpec
 
@@ -5601,17 +5511,14 @@ const result = await pushChainClient.universal.read(holder, {
   chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
   callback: {
     target: receiverAddress,
-    gasLimit: 200_000n,       // gas for _onReadResult, up to 1_000_000n (default 500_000n)
+    gasLimit: 200_000n,       // gas for _onReadResult, up to 1_000_000n
     abi: receiverAbi,
     functionName: 'request',  // your payable request entrypoint
   },
 });
 
 console.log(result.callbackDelivered); // true once _onReadResult ran
-console.log(result.outcome);           // PushChain.CONSTANTS.READ.OUTCOME.SUCCESS when it all worked
 ```
-
-Your entrypoint must forward the spec and gas limit it receives unchanged and call `_requestRead` exactly once itself. The SDK matches the `ReadRequested` event to the prepared read by target, gas limit and spec. If they differ, it throws `READ_REQUEST_MISMATCH` **after** the request transaction was mined and paid; resume with the hashes on the error instead of resubmitting.
 
 ### From Within Your Contract
 
@@ -5640,7 +5547,6 @@ contract BalanceWatcher is UniversalReadClient {
 
     address public constant UNIVERSAL_CORE = 0x00000000000000000000000000000000000000C0;
     uint8 public constant QUERY_ACCOUNT_BALANCE = 0;
-    uint64 public constant CALLBACK_GAS = 200_000;
 
     /// @notice Latest delivered balance per holder, in wei
     mapping(address => uint256) public balances;
@@ -5649,15 +5555,11 @@ contract BalanceWatcher is UniversalReadClient {
 
     /**
      * @notice Request the Sepolia ETH balance of `holder`
-     * @dev msg.value = protocol fee (Universal Callback's estimateFee, 0 on Donut today)
-     *      + callback budget. The node only fulfils a request whose budget covers
-     *      CALLBACK_GAS at the Push base fee; below that the request expires unfulfilled.
-     *      Fund it with headroom; what the callback does not use comes back.
+     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee.
+     *      The excess is the callback budget; what the callback does not use comes back.
      */
     function requestBalance(address holder) external payable returns (uint256) {
-        require(msg.value >= 2 * CALLBACK_GAS * block.basefee, "fund the callback budget");
-        // Pin one block below the observed height so minConfirmations = 1 is already met.
-        uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111")) - 1;
+        uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111"));
 
         bytes memory query = abi.encode(EvmQuery({
             queryType: QUERY_ACCOUNT_BALANCE,
@@ -5675,7 +5577,7 @@ contract BalanceWatcher is UniversalReadClient {
             revertRecipient: address(this)
         });
 
-        return _requestRead(spec, abi.encode(holder), CALLBACK_GAS);
+        return _requestRead(spec, abi.encode(holder), 200_000);
     }
 
     /// @dev Empty resultData means the source returned an error; nothing is stored.
@@ -5700,17 +5602,7 @@ The query envelope is rigid. Validators decode `query` as one ABI-encoded tuple,
 | Contract call | `1` | `abi.encode(address target, bytes callData)` | Raw return bytes of the call |
 | Storage slot | `2` | `abi.encode(address target, bytes32 slot)` | The 32-byte word |
 
-> **Note**: Solana and Web2 envelopes carry more fields. Build those with the SDK's `prepareRead` and send them to your entrypoint with `toCallData`, which encodes `(spec, callbackGasLimit)` into your function and returns the `msg.value` to send:
->
-> ```typescript
-> import { toCallData } from '@pushchain/core';
->
-> const prepared = await pushChainClient.universal.prepareRead(account, { chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET });
-> const { data, value } = toCallData(prepared, { abi: receiverAbi, functionName: 'request' }); // value === prepared.value
-> const tx = await pushChainClient.universal.sendTransaction({ to: receiverAddress, data, value });
-> ```
->
-> Pass `args: (spec, gasLimit) => [...]` when your entrypoint takes its arguments in another order. Prepare right before sending: the spec's expiry is fixed at prepare time.
+> **Note**: Solana and Web2 envelopes carry more fields. Build those with the SDK's `prepareRead` and pass `prepared.specTuple` to your entrypoint, as described in [Read Multiple Universal States](/docs/chain/build/read-multiple-universal-states/).
 
 ## Read the Result On-Chain
 
@@ -5735,18 +5627,18 @@ const inbox = new ethers.Contract(receiverAddress, receiverAbi, provider);
 const stored = await inbox.results(result.requestIdUint);
 ```
 
-`callbackDelivered` is `false` when `_onReadResult` reverted or ran out of gas, and `outcome` is then `CALLBACK_FAILED`. `results` is keyed by the numeric request ID, which the SDK exposes as `requestIdUint` next to the hex `requestId`. See [Track Universal Read](/docs/chain/build/track-universal-read/) for resuming by request ID or transaction hash.
+`callbackDelivered` is `false` when `_onReadResult` reverted or ran out of gas. `results` is keyed by the numeric request ID, which the SDK exposes as `requestIdUint` next to the hex `requestId`. See [Track Universal Read](/docs/chain/build/track-universal-read/) for resuming by request ID or transaction hash.
 
 ## Fees and Refunds
 
 | Item | What happens |
 |------|--------------|
 | **Protocol fee** | Quoted by `estimateFee(chainNamespace, chainId)` on Universal Callback. Taken from `msg.value` at request time and not refunded. |
-| **Callback budget** | Everything in `msg.value` above the protocol fee. It must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires. After the callback runs, the gas it consumed is burned from the budget and the rest is sent to `revertRecipient`. |
+| **Callback budget** | Everything in `msg.value` above the protocol fee. After the callback runs, the gas it consumed is burned from the budget and the rest is sent to `revertRecipient`. |
 | **Expiry** | A request that is not executed by `expiryPushChainHeight` expires and the full callback budget is refunded. The protocol fee is not. |
-| **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push; Universal Callback emits `RefundFailed` and keeps the amount, and the SDK reports `fees.refundFailed`. |
+| **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push and the refund is not delivered. |
 
-The SDK quotes all of this as `prepared.fees` and `prepared.value`, sizing the budget at three times `callbackGasLimit × gas price`. A contract that requests on its own must send at least `estimateFee(chainNamespace, chainId) + callbackGasLimit × block.basefee`, with headroom because the base fee can rise before fulfilment. `estimateFee` returns 0 on Donut today, so the budget is the whole requirement.
+The SDK quotes all of this as `prepared.fees` and `prepared.value`. A contract that requests on its own reads `estimateFee` and sends more than it.
 
 ## Security Considerations
 
@@ -5781,14 +5673,10 @@ The SDK quotes all of this as `prepared.fees` and `prepared.value`, sizing the b
 |---|---|---|
 | `callbackDelivered` is `false` | `_onReadResult` reverted or ran out of gas | Raise `gasLimit`, up to `1_000_000n`, and make sure the callback cannot revert on empty `resultData`. |
 | Entrypoint reverts with `only requester` | The caller is not the account you authorized | Pass `pushChainClient.universal.account` as `requester_`, not the deploying EOA. See [Deploy a Receiver](#deploy-a-receiver). |
-| Request reverts with `InvalidBlockNumber` | `blockNumber` is `0` or above the height Universal Core has observed | Read `chainHeightByChainNamespace` with the full CAIP-2 key, for example `eip155:11155111`, and pin `minConfirmations` below it (height − 1 for the minimum of 1). Web2 reads must use `0`. |
+| Request reverts with `InvalidBlockNumber` | `blockNumber` is `0` or above the height Universal Core has observed | Read `chainHeightByChainNamespace` with the full CAIP-2 key, for example `eip155:11155111`, and pin at or below it. |
 | Request reverts with `InvalidExpiryHeight` | `expiryPushChainHeight` is not above the current block | Use `block.number + 300` or another future height. |
 | Request reverts with `InsufficientFee` or `ExcessiveFee` | `msg.value` is below `estimateFee` or above `spec.maxFee` | Quote `estimateFee` before sending and set `maxFee` to `msg.value` when you have no separate cap. |
-| SDK throws `READ_REQUEST_MISMATCH` after the transaction is mined | Your entrypoint called `_requestRead` more or fewer than once, or changed the spec or gas limit | Forward the prepared spec and gas limit unchanged and call `_requestRead` once per prepared read. The fee is already paid; resume with the hashes on the error. |
-| Request reverts with `InvalidAccountId`, `EmptyQuery` or `InvalidMinConfirmations` | `account` has an empty namespace, chain ID or owner, `query` is empty, or `minConfirmations` is 0 | Fill every `account` field (any non-empty owner for EVM), build `query` as shown above, and use at least 1 confirmation. |
-| Request reverts with `ZeroCallbackGasLimit` or `CallbackGasLimitExceeded` | `callbackGasLimit` is 0 or above 1,000,000 | Pass a gas limit between 1 and `1_000_000`. |
-| Request reverts with `DomainBlocked` | The source chain is blocked on Universal Callback | Choose a supported source from Limitations. |
-| Request succeeds but never fulfils, then `EXPIRED` | The callback budget is below `callbackGasLimit × base fee` | Send more `msg.value`; see [Fees and Refunds](#fees-and-refunds). |
+| SDK rejects the transaction over `ReadRequested` | Your entrypoint called `_requestRead` more or fewer than once | Keep one `_requestRead` per prepared read. |
 | Refund never arrives | `revertRecipient` is a contract without a payable `receive()` | Add `receive() external payable {}` or point `revertRecipient` at an EOA. |
 | Callback ran but stored nothing | The source returned an error and `resultData` was empty | Check the target, ABI and pinned block. The SDK shows the reason as `raw.errorCode`. |
 
@@ -6717,51 +6605,21 @@ const snapshot = await pushChainClient.universal.trackRead(
 );
 
 const done = await snapshot.wait();
-if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-  console.log('Value:', done.value);
-} else {
-  console.log('Read did not succeed:', done.outcome);
-}
+console.log(done.status, done.value);
 ```
-
-`done.outcome` is the success signal. `value` is set only when `outcome` is `SUCCESS`. For the other outcomes, see [Outcome](#track-outcome) below.
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | ------------- | -------- | ----------- | --------------- |
-| _`ref.requestId`_ \| _`ref.txHash`_ | `Hex` \| `bigint` (`requestId`), `Hex` (`txHash`) | - | The read's request ID (0x-hex or `bigint`), or the Push Chain transaction that submitted it. Pass one. |
+| _`ref.requestId`_ \| _`ref.txHash`_ | `string` \| `bigint` | - | The read's request ID (hex or numeric), or the Push Chain transaction that submitted it. Pass one. |
 | `options.resultShape` | `{ kind: 'evmCall', abi, functionName }` and others | Inferred | How to decode `resultData`. Balances, storage and Web2 reads are inferred from the on-chain query. A typed contract call resumed in a new session needs it because the ABI is not on chain; without it `value` stays raw bytes. |
-| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked while the request is looked up, on `refresh()`, and at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
+| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
 
 **Advanced Arguments**
 
 | Arguments | Type | Default | Description |
 | --------- | ---- | ------- | ----------- |
-| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls, both while the request is looked up and when calling `wait()`. Minimum: `500`. |
-| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. It does not change the lookup window below. |
-
-`trackRead()` first looks the request up on Push Chain. A request is indexed once its block is processed, so the lookup retries for up to 30 seconds. If no record appears, it throws `ReadNotFoundError` with `code === 'READ_NOT_FOUND'`. A settled read is found on the first try. Retry `trackRead()` with the same reference; do not submit a new request.
-
-`wait()` and `refresh()` are on every snapshot. `wait({ timeoutMs?, pollingIntervalMs?, resultShape? })` takes flat options (not `advanced.*`); options you passed to `trackRead()` carry into the snapshot's `wait()`. `refresh()` fetches one fresh snapshot without polling.
-
-Outcome
-
-**Outcome: what `done.outcome` means**
-
-`PushChain.CONSTANTS.READ.OUTCOME` gives one answer to "did the read work". `status`, `raw.status`, `callbackDelivered` and `decodeError` stay available for debugging.
-
-| Outcome | Meaning | What to do |
-| ------- | ------- | ---------- |
-| `SUCCESS` | The source read succeeded, the callback ran, and `value` is set (raw bytes when no shape is known) | Use `value` |
-| `SOURCE_ERROR` | FULFILLED, but the destination returned an error | Check `raw.errorCode`; fix the query and submit a new read |
-| `CALLBACK_FAILED` | FULFILLED, but the receiver callback reverted or ran out of gas | Check `callbackFailReason`; raise `callback.gasLimit` or fix the receiver |
-| `DECODE_FAILED` | Delivered, but `resultData` did not match the expected shape | Check `decodeError`; resume with the right `resultShape` |
-| `EXPIRED` | Validators did not agree before the request expired | Check `fees.refunded`; submit a new read if still needed |
-| `FAILED` | The request was settled another way on chain | Inspect `pcTx` |
-| `ABORTED` | The request was aborted | Inspect `errorMsg` |
-| `PENDING` | Not terminal yet | Call `wait()` |
-| `UNKNOWN` | FULFILLED, but the fulfil receipt could not be read, so delivery is unconfirmed | Call `refresh()` later or check `pcTx` in the explorer. Do not resubmit |
-
-`fees.burned`, `fees.refunded` and `fees.refundFailed` come from settlement logs. They stay `undefined` while a read is pending, for ABORTED reads, and when those receipts or block results cannot be read.
+| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls when calling `wait()`. Minimum: `500`. |
+| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. |
 
 ProgressHook Type and Response
 
@@ -6769,21 +6627,21 @@ ProgressHook Type and Response
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |
-| `READ-TX-104-03` | Looking Up Request | Looking up read `<requestId>` (or reads in `<txHash>`) on Push Chain | INFO | `{ requestId }` or `{ txHash }` |
-| `READ-TX-104-04` | Request Found | Read `<requestId>` found (status `<status>`); once per record | SUCCESS | `{ requestId, status }` |
-| `READ-TX-104-05` | Request Not Found | No read found for `<ref>` after `<n>`s | ERROR | `{ requestId \| txHash, elapsedMs }` |
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires; once per `wait()`, at 30 or fewer blocks left | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
+| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
-| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>`; also for expired reads | INFO | `{ requestId, amount, refundTo }` |
-| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool; also for expired reads | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered. Fires only when `outcome` is `SUCCESS` | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. For a FULFILLED read that did not work, `status` is its outcome (`SOURCE_ERROR`, `CALLBACK_FAILED`, `DECODE_FAILED`, `UNKNOWN`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
+| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
+| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
 **Returns `UniversalReadResponse` **
 
@@ -6842,18 +6700,19 @@ Tracking needs no wallet and no funds. Pick a predefined read, or track a reques
         const target = await returnUserTrackSelection();
 
         if (target.txHash) {
+          console.log('Looking up every read submitted in', target.txHash, '...');
           const reads = await pushChainClient.universal.trackRead({ txHash: target.txHash }, {
             progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
           });
           console.log('Reads in this transaction:', reads.length);
           for (const read of reads) {
             const done = await read.wait();
-            if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) console.log('Value:', ethers.formatEther(done.value), 'ETH');
-            else console.log('Outcome:', done.outcome, print({ errorCode: done.raw?.errorCode, callbackFailReason: done.callbackFailReason, decodeError: done.decodeError }));
+            console.log('Value:', ethers.formatEther(done.value), 'ETH');
           }
           return;
         }
 
+        console.log('Looking up request', target.requestId, '...');
         const snapshot = await pushChainClient.universal.trackRead({ requestId: target.requestId }, {
           progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
         });
@@ -6861,10 +6720,6 @@ Tracking needs no wallet and no funds. Pick a predefined read, or track a reques
 
         console.log('Waiting for the read to reach a terminal state...');
         const done = await snapshot.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Outcome:', done.outcome, print({ errorCode: done.raw?.errorCode, callbackFailReason: done.callbackFailReason, decodeError: done.decodeError }));
-          return;
-        }
         console.log('Value:', target.decimals ? ethers.formatUnits(done.value, target.decimals) + ' ' + target.symbol : print(done.value));
       } finally {
         rl.close();
@@ -9999,7 +9854,7 @@ The [Universal Read Client](https://github.com/pushchain/push-chain-core-contrac
 
 - **Request with local context**: `_requestRead` stores per-request bytes that you get back in the callback
 - **Guarded callback**: `onUniversalData` accepts calls only from Universal Callback
-- **Refund safety**: when a spec your contract builds leaves `revertRecipient` as `address(0)`, it defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA. Specs prepared by the SDK already carry the caller's Push account
+- **Refund safety**: `revertRecipient` defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA
 - **Gas bound**: Callback gas is capped at `MAX_CALLBACK_GAS_LIMIT` (1,000,000)
 
 ### UniversalReadClient Interface
@@ -10079,7 +9934,7 @@ A contract can build one itself when no SDK is in the loop. See [Contract-Initia
 | `blockNumber` | The source block to read at. Take `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` and subtract `minConfirmations`. Must match the block inside `query`. |
 | `expiryPushChainHeight` | When the request lapses, in Push Chain blocks: `block.number + N`. |
 | `maxFee` | Upper bound on what you are paying; `msg.value` may not exceed it. |
-| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. The SDK fills it with the caller's Push account, or `refundTo`. |
+| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. |
 
 ### UniversalReadClient → What You Implement
 
@@ -10098,7 +9953,7 @@ Submits a Universal Read request to Universal Callback and stores `localState` u
 - Requesting external chain or web2 state from a payable entrypoint in your contract.
 - Carrying per-request context (such as the original requester) through to the callback.
 
-> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. The budget must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires. Forward the spec and gas limit unchanged: the SDK matches the request it sent by target, gas limit and spec, and throws `READ_REQUEST_MISMATCH` after the transaction is mined if they differ. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
+> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
 
 ```solidity
 /**
@@ -10176,9 +10031,9 @@ You do not need your own receiver to see what `_requestRead` records: the deploy
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
-    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
-    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
+    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
+    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
 
     const RegistryABI = [
       'function readerOf(uint256 requestId) view returns (address)',
@@ -10192,14 +10047,14 @@ You do not need your own receiver to see what `_requestRead` records: the deploy
       const registry = new ethers.Contract(REGISTRY_ADDRESS, RegistryABI, provider);
       console.log('Reading request context from the registry...');
 
-      // 2) read back what the registry's read(spec, queryKey, callbackGasLimit) entrypoint recorded
-      //    alongside the _requestRead call for this request
+      // 2) read back what the registry's entrypoint passed into _requestRead as localState
+      //    (it encodes msg.sender, the query key and a request order, then mirrors them into these mappings)
       const requestId = BigInt(REQUEST_ID);
       // the account that called read(), i.e. msg.sender when the request was made
       console.log('Reader (msg.sender at request):', await registry.readerOf(requestId));
-      // the logical query key the SDK computed from the query and passed to read(); it groups reads of the same query
+      // the key the registry derives from the ReadSpec to group reads of the same query
       console.log('Query key:', await registry.queryKeyOf(requestId));
-      // a registry-wide, increasing sequence number across all requests; it orders latestResult
+      // the position of this request among reads of that query key
       console.log('Request order:', (await registry.requestOrderOf(requestId)).toString());
 
       provider.destroy();
@@ -10276,15 +10131,16 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
     // customPropHighlightRegexEnd=\\);
     // customPropGTagEvent=read_client_stored_result
     import { PushChain } from '@pushchain/core';
+    import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
 
     // CONFIG
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
-    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
-    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
+    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
+    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
 
     const RegistryABI = [
       'function hasResult(uint256 requestId) view returns (bool)',
@@ -10306,8 +10162,8 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
       });
 
-      // 2) confirm the callback ran: outcome SUCCESS means FULFILLED, source SUCCESS and callbackDelivered
-      //    (the hook prints READ-TX-104-03 Looking Up Request while the SDK finds the record)
+      // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
+      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain. This takes 15 to 20 seconds.');
       const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
         progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
       });
@@ -10315,11 +10171,7 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
       const done = await snapshot.wait();
       const READ = PushChain.CONSTANTS.READ;
       const statusName = done.status === READ.STATUS.FULFILLED ? 'FULFILLED' : String(done.status);
-      console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered, '| Outcome:', done.outcome);
-      if (done.outcome !== READ.OUTCOME.SUCCESS) {
-        console.log('The read did not succeed, so the registry stored no usable result.');
-        return;
-      }
+      console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered);
 
       // 3) describe what was read, decoded from the request's own ReadSpec
       const [env] = abi.decode([QueryEnvelope], done.request.spec.query);
@@ -10349,7 +10201,7 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
 
 `}
 
-`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case, and `outcome` is `CALLBACK_FAILED`. See [Track Universal Read](/docs/chain/build/track-universal-read/).
+`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case. See [Track Universal Read](/docs/chain/build/track-universal-read/).
 
 ### UniversalReadClient → Also On The Base Contract
 
@@ -10628,72 +10480,6 @@ const arbTxHash = await pushChainClient.universal.sendTransaction({
     slippageBps: 50, // 0.5% slippage tolerance
   },
 });
-```
-
-## Read Constants
-
-**_`PushChain.CONSTANTS.READ`_**
-
-Values used by [Read Universal State](/docs/chain/build/universal-read/). Use them to compare a read's status and outcome, and to find the contracts that receive reads on Push Chain.
-
-| Constant | Value | Description |
-| -------- | ----- | ----------- |
-| `PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x00000000000000000000000000000000000000b2` | Universal Read Registry. The default receiver when a read passes no callback; it stores every result by request ID |
-| `PushChain.CONSTANTS.READ.UNIVERSAL_CALLBACK_ADDRESSES.TESTNET_DONUT` | `0x00000000000000000000000000000000000000c2` | Universal Callback. Accepts read requests and delivers results to receivers |
-| `PushChain.CONSTANTS.READ.WEB2` | `web2:https` | Web2 read destination. Same as `PushChain.CONSTANTS.CHAIN.WEB2` |
-| `PushChain.CONSTANTS.READ.DEFAULT_EXPIRY_BLOCKS` | `300n` | Push blocks a request stays open before it expires |
-| `PushChain.CONSTANTS.READ.REGISTRY_CALLBACK_GAS` | `500000n` | Callback gas the registry receiver uses by default |
-| `PushChain.CONSTANTS.READ.MAX_CALLBACK_GAS_LIMIT` | `1000000n` | Highest callback gas a read can declare |
-
-**_`PushChain.CONSTANTS.READ.OUTCOME`_**
-
-One field that answers "did the read work". Check `outcome` before trusting `value`.
-
-| Constant | Meaning |
-| -------- | ------- |
-| `SUCCESS` | The source read succeeded, the callback ran, and `value` is set |
-| `SOURCE_ERROR` | The destination chain or URL returned an error. See `raw.errorCode` |
-| `CALLBACK_FAILED` | The receiver callback reverted or ran out of gas. See `callbackFailReason` |
-| `DECODE_FAILED` | The result arrived but did not match the expected shape. See `decodeError` |
-| `EXPIRED` | Validators did not agree before the request expired. The callback budget is pushed back to `refundTo`; check `fees.refundFailed` for a rejected refund |
-| `FAILED` | The request was settled another way on-chain |
-| `ABORTED` | The request was aborted |
-| `PENDING` | The read has not finished yet |
-| `UNKNOWN` | Fulfilled, but delivery could not be confirmed because the fulfil receipt was unavailable |
-
-**_`PushChain.CONSTANTS.READ.STATUS`_** is the raw lifecycle status: `PENDING` (1), `VOTING` (2), `FULFILLED` (3), `EXPIRED` (4), `FAILED` (5), `ABORTED` (6). `FULFILLED` only means the result transaction landed, so prefer `OUTCOME`. **_`PushChain.CONSTANTS.READ.RESULT_STATUS`_** is the validators' result: `SUCCESS` (1) or `ERROR` (2).
-
-**_`PushChain.CONSTANTS.READ.ERROR_CODE`_** explains an `ERROR` result, read from `raw.errorCode`:
-
-| Constant | Value | Meaning |
-| -------- | ----- | ------- |
-| `UNSPECIFIED` | `0` | No specific reason (also the value on a `SUCCESS` result) |
-| `INVALID_QUERY` | `1` | The query envelope or parameters could not be decoded for this chain |
-| `UNSUPPORTED` | `2` | The chain does not support this query type or option |
-| `REVERTED` | `3` | The destination ran the request and returned a failure: an EVM revert, or an HTTP 4xx |
-| `NOT_FOUND` | `4` | The queried account, state or JSON field does not exist at the pinned point |
-| `INVALID_RESULT` | `5` | The destination returned data that could not be interpreted or encoded |
-| `REJECTED` | `6` | Validator policy refused the request before running it, for example a blocked Web2 URL |
-
-### Usage Examples
-
-```typescript
-import { PushChain } from '@pushchain/core';
-
-const READ = PushChain.CONSTANTS.READ;
-
-const result = await pushChainClient.universal.read('0x000000000000000000000000000000000000dEaD', {
-  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
-});
-
-if (result.outcome === READ.OUTCOME.SUCCESS) {
-  console.log('Balance:', result.value);
-} else {
-  console.log('Read did not succeed:', result.outcome);
-}
-
-// Where reads without a callback are stored
-console.log(READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT);
 ```
 
 ## Common Patterns
@@ -11763,8 +11549,8 @@ Fee abstraction lets Push Chain act on other chains. Universal Read is the other
 
 | Aspect | Detail |
 | --- | --- |
-| **What you can read** | Native and token balances, contract calls (any mutability, simulated), storage slots, Solana program accounts decoded with an Anchor IDL, and JSON fields from HTTPS endpoints. |
-| **Where the result lands** | The shared Universal Read Registry, which stores results for you (deployed on Donut testnet only), or your own contract that inherits `UniversalReadClient` and acts on the result in its callback. |
+| **What you can read** | Native and token balances, contract calls, storage slots, and JSON fields from HTTPS endpoints. |
+| **Where the result lands** | The shared Universal Read Registry, which stores results for you, or your own contract that inherits `UniversalReadClient` and acts on the result in its callback. |
 | **When to use it** | When something on-chain must act on the data. If only your frontend or backend needs it, an ordinary RPC call is cheaper and instant. |
 
 **A read is a paid, asynchronous request.** It costs gas plus a protocol fee and a callback budget, and completes after validators reach quorum. See [Read Universal State](/docs/chain/build/universal-read/) for the SDK flow.

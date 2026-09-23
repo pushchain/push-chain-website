@@ -158,7 +158,7 @@ Emitted by the auto-upgrade flow when `getAccountStatus().uea.requiresUpgrade ==
 
 ## Universal Read (`read`, `executeReads`, `trackRead`)
 
-Same event object shape. Single reads (`read`, and `trackRead`: the lookup emits `READ-TX-104-03` / `104-04` (again on `refresh()`), then `wait()` continues from `READ-TX-104-02`). The final event follows `response.outcome`: `READ-TX-199-01` only for `SUCCESS`, otherwise `READ-TX-199-02`:
+Same event object shape. Single reads (`read`, and `trackRead` while `wait()` polls, which starts at `READ-TX-104-02`):
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |
@@ -166,29 +166,29 @@ Same event object shape. Single reads (`read`, and `trackRead`: the lookup emits
 | `READ-TX-102-01` | Fetching Destination Height & Fee | Reading the oracle height and protocol fee for `<chain>` | INFO | `{ chain, stage: 'preflight' }` |
 | `READ-TX-102-02` | Read Spec Assembled | Pinned at block `<n>`, expires at Push height `<n>`; fee + budget = `<total>` UPC | SUCCESS | `{ protocolFee, callbackBudget, totalValue, blockNumber, expiryPushChainHeight }` |
 | `READ-TX-102-03` | Destination Height Unavailable | The oracle has no height for `<chain>`, so it is not readable | ERROR | `{ chain }` |
-| `READ-TX-102-04` | Preflight Stale, Refetching | Preflight is `<n>`s old, refetching the Push height. `executeReads` emits it for a read prepared more than 60 s earlier, before revalidating it | WARNING | `{ fetchedAt, ageMs }` |
+| `READ-TX-102-04` | Preflight Stale, Refetching | Preflight is `<n>`s old, refetching the Push height | WARNING | `{ fetchedAt, ageMs }` |
 | `READ-TX-102-05` | Refund Target Is A Contract | `<refundTo>` is a non-UEA contract; it needs a payable `receive()` or the unspent budget is forfeited | WARNING | `{ refundTo }` |
 | `READ-TX-103-01` | Checking Balance Requirements | Balance `<n>` UPC covers / is short of the `<n>` UPC read | INFO when sufficient / WARNING when short | `{ required, available, sufficient, shortfall, enforceGasCheck }` |
 | `READ-TX-103-02` | Insufficient Balance | Need `<n>` UPC, have `<n>` UPC | ERROR (only when `enforceGasCheck` is `true`) | `{ required, available, shortfall }` |
 | `READ-TX-103-03` | Sensitive Header Detected | Headers are written to a public event log forever: `<headers>` | WARNING | `{ matchedHeaders }` |
 | `READ-TX-104-01` | Broadcasting Read Request | Sending the read request to Push Chain | INFO | `{ stage: 'broadcasting' }` |
-| `READ-TX-104-03` | Looking Up Request | Looking up read `<requestId>` (or reads in `<txHash>`) on Push Chain | INFO | `{ requestId }` or `{ txHash }` |
-| `READ-TX-104-04` | Request Found | Read `<requestId>` found (status `<status>`); once per record | SUCCESS | `{ requestId, status }` (status is a name, e.g. `'FULFILLED'`) |
-| `READ-TX-104-05` | Request Not Found | No read found for `<ref>` after `<n>`s; `trackRead` then throws `ReadNotFoundError` (`READ_NOT_FOUND`) | ERROR | `{ requestId \| txHash, elapsedMs }` |
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires; once per `wait()`, at 30 or fewer blocks left | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
+| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
-| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` (fulfilled and expired reads) | INFO | `{ requestId, amount, refundTo }` |
-| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool (fulfilled and expired reads) | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered. Only when `outcome` is `SUCCESS` | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. `status` is `EXPIRED` / `FAILED` / `ABORTED`, or the outcome of a FULFILLED read that did not work (`SOURCE_ERROR`, `CALLBACK_FAILED`, `DECODE_FAILED`, `UNKNOWN`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
+| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
+| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
-Batches (`executeReads` with more than one read) wrap the single-read events; each read in the batch also emits its own `READ-TX-1xx` events. A single-read `executeReads` emits no `READ-TX-0xx` / `999` events:
+Batches (`executeReads`) wrap the single-read events; each read in the batch also emits its own `READ-TX-1xx` events:
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |

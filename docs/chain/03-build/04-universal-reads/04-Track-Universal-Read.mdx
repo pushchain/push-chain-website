@@ -42,22 +42,16 @@ const snapshot = await pushChainClient.universal.trackRead(
 );
 
 const done = await snapshot.wait();
-if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-  console.log('Value:', done.value);
-} else {
-  console.log('Read did not succeed:', done.outcome);
-}
+console.log(done.status, done.value);
 ```
-
-`done.outcome` is the success signal. `value` is set only when `outcome` is `SUCCESS`. For the other outcomes, see [Outcome](#track-outcome) below.
 
 <PushAPIReference>
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | ------------- | -------- | ----------- | --------------- |
-| _`ref.requestId`_ \| _`ref.txHash`_ | `Hex` \| `bigint` (`requestId`), `Hex` (`txHash`) | - | The read's request ID (0x-hex or `bigint`), or the Push Chain transaction that submitted it. Pass one. |
+| _`ref.requestId`_ \| _`ref.txHash`_ | `string` \| `bigint` | - | The read's request ID (hex or numeric), or the Push Chain transaction that submitted it. Pass one. |
 | `options.resultShape` | `{ kind: 'evmCall', abi, functionName }` and others | Inferred | How to decode `resultData`. Balances, storage and Web2 reads are inferred from the on-chain query. A typed contract call resumed in a new session needs it because the ABI is not on chain; without it `value` stays raw bytes. |
-| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked while the request is looked up, on `refresh()`, and at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
+| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
 
 </PushAPIReference>
 
@@ -65,34 +59,8 @@ if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
 
 | Arguments | Type | Default | Description |
 | --------- | ---- | ------- | ----------- |
-| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls, both while the request is looked up and when calling `wait()`. Minimum: `500`. |
-| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. It does not change the lookup window below. |
-
-</Details>
-
-`trackRead()` first looks the request up on Push Chain. A request is indexed once its block is processed, so the lookup retries for up to 30 seconds. If no record appears, it throws `ReadNotFoundError` with `code === 'READ_NOT_FOUND'`. A settled read is found on the first try. Retry `trackRead()` with the same reference; do not submit a new request.
-
-`wait()` and `refresh()` are on every snapshot. `wait({ timeoutMs?, pollingIntervalMs?, resultShape? })` takes flat options (not `advanced.*`); options you passed to `trackRead()` carry into the snapshot's `wait()`. `refresh()` fetches one fresh snapshot without polling.
-
-<h2 className="anchor" id="track-outcome" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>Outcome</h2>
-
-<Details summary="Outcome: what `done.outcome` means" className="alert alert--minimal code">
-
-`PushChain.CONSTANTS.READ.OUTCOME` gives one answer to "did the read work". `status`, `raw.status`, `callbackDelivered` and `decodeError` stay available for debugging.
-
-| Outcome | Meaning | What to do |
-| ------- | ------- | ---------- |
-| `SUCCESS` | The source read succeeded, the callback ran, and `value` is set (raw bytes when no shape is known) | Use `value` |
-| `SOURCE_ERROR` | FULFILLED, but the destination returned an error | Check `raw.errorCode`; fix the query and submit a new read |
-| `CALLBACK_FAILED` | FULFILLED, but the receiver callback reverted or ran out of gas | Check `callbackFailReason`; raise `callback.gasLimit` or fix the receiver |
-| `DECODE_FAILED` | Delivered, but `resultData` did not match the expected shape | Check `decodeError`; resume with the right `resultShape` |
-| `EXPIRED` | Validators did not agree before the request expired | Check `fees.refunded`; submit a new read if still needed |
-| `FAILED` | The request was settled another way on chain | Inspect `pcTx` |
-| `ABORTED` | The request was aborted | Inspect `errorMsg` |
-| `PENDING` | Not terminal yet | Call `wait()` |
-| `UNKNOWN` | FULFILLED, but the fulfil receipt could not be read, so delivery is unconfirmed | Call `refresh()` later or check `pcTx` in the explorer. Do not resubmit |
-
-`fees.burned`, `fees.refunded` and `fees.refundFailed` come from settlement logs. They stay `undefined` while a read is pending, for ABORTED reads, and when those receipts or block results cannot be read.
+| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls when calling `wait()`. Minimum: `500`. |
+| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. |
 
 </Details>
 
@@ -102,21 +70,21 @@ if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |
-| `READ-TX-104-03` | Looking Up Request | Looking up read `<requestId>` (or reads in `<txHash>`) on Push Chain | INFO | `{ requestId }` or `{ txHash }` |
-| `READ-TX-104-04` | Request Found | Read `<requestId>` found (status `<status>`); once per record | SUCCESS | `{ requestId, status }` |
-| `READ-TX-104-05` | Request Not Found | No read found for `<ref>` after `<n>`s | ERROR | `{ requestId \| txHash, elapsedMs }` |
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires; once per `wait()`, at 30 or fewer blocks left | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
+| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
-| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>`; also for expired reads | INFO | `{ requestId, amount, refundTo }` |
-| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool; also for expired reads | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered. Fires only when `outcome` is `SUCCESS` | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. For a FULFILLED read that did not work, `status` is its outcome (`SOURCE_ERROR`, `CALLBACK_FAILED`, `DECODE_FAILED`, `UNKNOWN`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
+| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
+| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
 </Details>
 
@@ -181,18 +149,19 @@ Tracking needs no wallet and no funds. Pick a predefined read, or track a reques
         const target = await returnUserTrackSelection();
 
         if (target.txHash) {
+          console.log('Looking up every read submitted in', target.txHash, '...');
           const reads = await pushChainClient.universal.trackRead({ txHash: target.txHash }, {
             progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
           });
           console.log('Reads in this transaction:', reads.length);
           for (const read of reads) {
             const done = await read.wait();
-            if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) console.log('Value:', ethers.formatEther(done.value), 'ETH');
-            else console.log('Outcome:', done.outcome, print({ errorCode: done.raw?.errorCode, callbackFailReason: done.callbackFailReason, decodeError: done.decodeError }));
+            console.log('Value:', ethers.formatEther(done.value), 'ETH');
           }
           return;
         }
 
+        console.log('Looking up request', target.requestId, '...');
         const snapshot = await pushChainClient.universal.trackRead({ requestId: target.requestId }, {
           progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
         });
@@ -200,10 +169,6 @@ Tracking needs no wallet and no funds. Pick a predefined read, or track a reques
 
         console.log('Waiting for the read to reach a terminal state...');
         const done = await snapshot.wait();
-        if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-          console.log('Outcome:', done.outcome, print({ errorCode: done.raw?.errorCode, callbackFailReason: done.callbackFailReason, decodeError: done.decodeError }));
-          return;
-        }
         console.log('Value:', target.decimals ? ethers.formatUnits(done.value, target.decimals) + ' ' + target.symbol : print(done.value));
       } finally {
         rl.close();

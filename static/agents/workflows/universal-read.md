@@ -72,7 +72,7 @@ Pass at most one query option (`token`, `abi` or `idl` with `functionName` and `
 | `options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`, clamped by validators. |
 | :: | | |
 | `options.callback` | `{ target, gasLimit, abi, functionName, args? }` | Optional. Routes the request through your own receiver contract instead of the registry; fields in [Callback Arguments](/docs/chain/build/universal-read/#callback-arguments). |
-| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves once the request is confirmed on Push Chain and indexed by the node (up to 30 s), before validators vote. If it is not indexed in that window it throws `ReadNotFoundError`; the request is already paid, so resume with `trackRead({ txHash: err.txHash })`.<br /><br />Call `wait()` on the response to finish. |
+| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves as soon as the request is confirmed on Push Chain, before validators vote.<br /><br />Call `wait()` on the response to finish. |
 | `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for progress updates through the read lifecycle. |
 
 ### Callback Arguments
@@ -176,19 +176,7 @@ await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/users
 
 ## Step 2: Check the Result
 
-**`outcome` is the success signal.** `done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS` means the source read succeeded, your callback ran and `value` is set. Any other outcome names what went wrong:
-
-| `outcome` | Meaning | What to do |
-| --------- | ------- | ---------- |
-| `SUCCESS` | Source succeeded, callback delivered, `value` set (raw bytes when no shape is known) | Use `value` |
-| `SOURCE_ERROR` | FULFILLED, but the destination returned an error | Check `raw.errorCode`; fix the query, submit a new read |
-| `CALLBACK_FAILED` | FULFILLED, but the receiver reverted or ran out of gas | Check `callbackFailReason`; raise `callback.gasLimit` or fix the receiver |
-| `DECODE_FAILED` | Delivered, but `resultData` did not match the expected shape | Check `decodeError`; resume with the right `resultShape` |
-| `EXPIRED` / `FAILED` / `ABORTED` | The terminal status | Check `fees.refunded`, `errorMsg`, `pcTx` |
-| `PENDING` | Not terminal yet | Call `wait()` |
-| `UNKNOWN` | FULFILLED, but the fulfil receipt could not be read; delivery unconfirmed | `refresh()` later or check `pcTx`; never resubmit |
-
-The debugging fields behind it:
+**`value` is the success signal.** The SDK sets it only when the read completed, the source returned data, your callback ran, and the bytes decoded. If `value` is defined, use it. When `value` is `undefined`, the response says why:
 
 | Field | What it tells you |
 | ----- | ----------------- |
@@ -203,10 +191,9 @@ const pending = await pushChainClient.universal.read(subject, { chain, waitForCo
 save({ requestId: pending.requestId, txHash: pending.txHash });
 
 const done = await pending.wait();
-if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
-  // The outcome says why: see the tables above.
+if (done.value === undefined) {
+  // The response says why: see the table above.
   console.log({
-    outcome: done.outcome,
     status: done.status,
     rawStatus: done.raw?.status,
     errorCode: done.raw?.errorCode,
@@ -224,30 +211,28 @@ if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `requestId` | `string` | Unique identifier of this read. Use it to resume tracking in another session. |
-| `requestIdUint` | `bigint` | The same ID as the `uint256` contracts key results by, for example registry `resultByRequestId`. |
 | `txHash` | `string` | Push Chain transaction that submitted the request. |
 | `chain` | `CHAIN` | Destination that was read. |
-| `outcome` | `READ.OUTCOME` | The success signal: `SUCCESS`, `SOURCE_ERROR`, `CALLBACK_FAILED`, `DECODE_FAILED`, `EXPIRED`, `FAILED`, `ABORTED`, `PENDING`, `UNKNOWN`. |
 | `status` | `READ.STATUS` | Lifecycle: `PENDING`, `VOTING`, `FULFILLED`, `EXPIRED`, `FAILED`, `ABORTED`. |
 | `isTerminal` | `boolean` | `true` once the read can no longer change. |
-| `callbackDelivered` | `boolean` | `FULFILLED` only. `true` when the receiver ran; `false` when it reverted or ran out of gas; `undefined` when the fulfil receipt could not be read (`outcome` `UNKNOWN`). |
+| `callbackDelivered` | `boolean` | `FULFILLED` only. `true` when the receiver ran; `false` when it reverted or ran out of gas. |
 | `callbackFailReason` | `string` | Revert data from a failed callback. |
-| `value` | `T` | Decoded result. Present only when `outcome` is `SUCCESS`. Typed from your query: `bigint` for balances, `Hex` for storage, the ABI return type for calls, an array for Web2. |
+| `value` | `T` | Decoded result. Present only when fulfilled, delivered, successful and decodable. Typed from your query: `bigint` for balances, `Hex` for storage, the ABI return type for calls, an array for Web2. |
 | `decodeError` | `string` | Why `value` is absent although the read succeeded. |
 | `raw` | `object` \| `null` | Consensus result: `status` (`READ.RESULT_STATUS`), `resultData` bytes and `errorCode`. `null` before validators have voted. |
 | `errorMsg` | `string` | Node-reported error, if any. |
-| `fees` | `object` | `paid`, `protocolFee`, `callbackBudget`, plus `burned`, `refunded` and `refundFailed` from settlement logs. They stay `undefined` while pending, for aborted reads, and when those receipts or block results cannot be read. |
+| `fees` | `object` | `paid`, `protocolFee`, `callbackBudget`, plus `burned`, `refunded` and `refundFailed` once settled. |
 | `request` | `object` | The on-chain request: `spec`, `callbackTarget`, `originalFunder`, `refundTo`, `callbackGasLimit`, `logIndex`, `createdAtHeight`. |
 | `pcTx` | `array` | Push Chain transactions the node sent for this read (fulfil, settle, expiry). |
-| `explorerUrl` | `string` | Explorer link for the request transaction (`https://donut.push.network/tx/<txHash>`). |
-| `wait` | `function` | `wait({ timeoutMs?, pollingIntervalMs?, resultShape? })` polls until the read is terminal and returns the final response. Options are flat and optional. Only a timeout throws. |
-| `refresh` | `function` | Re-runs the lookup and returns one fresh snapshot without polling. |
+| `explorerUrl` | `string` | Explorer link for the request transaction. |
+| `wait` | `function` | Polls until the read is terminal and returns the final response. Only a timeout throws. |
+| `refresh` | `function` | Returns one fresh snapshot without polling. |
 
 JSON Schema: https://push.org/agents/schemas/universal-read-response.json
 
 ### Progress Events
 
-`progressHook` receives `READ-TX-101` (read requested) through `READ-TX-104-02` (request confirmed, `requestId` known); `READ-TX-104-03` / `104-04` / `104-05` while the request is looked up (looking up, found, not found); `READ-TX-105-*` (awaiting quorum, voting, approaching expiry at 30 or fewer Push blocks left); `READ-TX-106-*` (callback delivered, reverted, gas settled, refund sent or rejected, including on expiry) and a terminal `READ-TX-199-01` (only when `outcome` is `SUCCESS`), `READ-TX-199-02` (any other terminal outcome; `status` names it) or `READ-TX-199-03` (client timeout; resume with `trackRead`). Batches add `READ-TX-001` to `READ-TX-999-03`. Full table: https://push.org/docs/chain/build/universal-read/#read-progress-hook
+`progressHook` receives `READ-TX-101` (read requested) through `READ-TX-104-02` (request confirmed, `requestId` known), `READ-TX-105-*` (awaiting quorum, voting, confirmations, approaching expiry), `READ-TX-106-*` (callback delivered, reverted, gas settled, refund sent or rejected) and a terminal `READ-TX-199-01` (fulfilled), `READ-TX-199-02` (failed, expired or aborted) or `READ-TX-199-03` (client timeout; resume with `trackRead`). Batches add `READ-TX-001` to `READ-TX-999-03`. Full table: https://push.org/docs/chain/build/universal-read/#read-progress-hook
 
 ## Step 3: Read Multiple Universal States (optional)
 
@@ -332,23 +317,19 @@ const snapshot = await pushChainClient.universal.trackRead(
 );
 
 const done = await snapshot.wait();
-console.log(done.outcome, done.value); // value is set only when outcome is SUCCESS
+console.log(done.status, done.value);
 ```
-
-`trackRead()` first looks the request up. It retries for up to 30 seconds while the node indexes the request, then throws `ReadNotFoundError` (`code === 'READ_NOT_FOUND'`); retry with the same reference, never resubmit. A settled read is found on the first try.
 
 | **Arguments** | **Type** | **Default** | **Description** |
 | ------------- | -------- | ----------- | --------------- |
-| _`ref.requestId`_ \| _`ref.txHash`_ | `Hex` \| `bigint` (`requestId`), `Hex` (`txHash`) | - | The read's request ID (0x-hex or `bigint`), or the Push Chain transaction that submitted it. Pass one. |
+| _`ref.requestId`_ \| _`ref.txHash`_ | `string` \| `bigint` | - | The read's request ID (hex or numeric), or the Push Chain transaction that submitted it. Pass one. |
 | `options.resultShape` | `{ kind: 'evmCall', abi, functionName }` and others | Inferred | How to decode `resultData`. Balances, storage and Web2 reads are inferred from the on-chain query. A typed contract call resumed in a new session needs it because the ABI is not on chain; without it `value` stays raw bytes. |
-| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked during the lookup, on `refresh()`, and at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
+| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
 
 | Arguments | Type | Default | Description |
 | --------- | ---- | ------- | ----------- |
-| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls, during the lookup and when calling `wait()`. Minimum: `500`. |
-| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. It does not change the 30-second lookup window. |
-
-Options passed to `trackRead()` carry into the snapshot's `wait()`, which also accepts flat `{ timeoutMs, pollingIntervalMs, resultShape }`.
+| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls when calling `wait()`. Minimum: `500`. |
+| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. |
 
 A typed contract call has no ABI on chain, so pass the ABI and function name through `resultShape` when you resume it in a new session:
 
@@ -586,7 +567,7 @@ address holder = abi.decode(localState, (address));    // whatever you stored at
 
 ```typescript
 const done = await pushChainClient.universal.trackRead({ requestId: result.requestId }).then((read) => read.wait());
-if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read did not succeed: ' + done.outcome);
+if (done.callbackDelivered !== true) throw new Error('Receiver did not run');
 
 const inbox = new ethers.Contract(receiverAddress, receiverAbi, provider);
 const stored = await inbox.results(result.requestIdUint);
@@ -633,8 +614,6 @@ const stored = await inbox.results(result.requestIdUint);
     caip2: 'eip155:11155111',
     namespace: 'eip155',
   },
-  requestIdUint: 70615991911750399052925665541914898891038219178489833404284146365146480309670n,
-  outcome: 'SUCCESS', // READ.OUTCOME.SUCCESS
   status: 3, // READ.STATUS.FULFILLED
   isTerminal: true,
   callbackDelivered: true,
@@ -648,7 +627,6 @@ const stored = await inbox.results(result.requestIdUint);
     callbackBudget: 1500000000000000n,
     burned: 61200000000000n,
     refunded: 1438800000000000n,
-    refundFailed: false,
   },
   request: {
     spec: { ... },
@@ -670,21 +648,19 @@ const stored = await inbox.results(result.requestIdUint);
 
 | Symptom | Action |
 | ------- | ------ |
-| `value` is `undefined` (the playground fails inside `formatEther` or `formatUnits`) | `outcome` is not `SUCCESS`. Switch on `outcome` (Step 2); `raw.errorCode`, `callbackFailReason` and `decodeError` say why. |
-| `outcome` is `UNKNOWN` | The fulfil receipt could not be read. Call `refresh()` later or check `pcTx`; never resubmit. |
-| `ReadNotFoundError` (`READ_NOT_FOUND`) | The node had not indexed the request within 30 s. Retry `trackRead` with `err.txHash` or `err.requestId`; never resubmit. |
+| `value` is `undefined` (the playground fails inside `formatEther` or `formatUnits`) | The read did not produce a usable result. Open the "How to debug the response" dropdown above and check `status`, `raw.status`, `callbackDelivered` and `decodeError`. |
 | Callback failed on a large result | Submit a new request with more callback gas, up to `1_000_000n`. Failed requests are not retried automatically. |
 | Client timed out | Resume with [`trackRead`](/docs/chain/build/track-universal-read/) using the saved request ID or transaction hash. |
 | Only some batch calls were submitted | Recover committed hashes; check the pending hash before resubmitting. |
 | Web2 read never reaches quorum | Extract stable fields, or lower numeric precision with `decimals`. |
 | `ReadRegistryUnavailableError` | The registry exists on Donut only. On other networks, provide your own receiver and request ABI. |
-| Prepared read fails revalidation (`INVALID_READ_SPEC`) | Prepare a fresh request right before executing; the old pin, expiry (fixed at prepare time, about 6.7 minutes) or budget is no longer valid. |
+| Prepared read fails revalidation | Prepare a fresh request; the old pin, expiry or budget is no longer valid. |
 
 Contract-initiated reads:
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| `outcome` is `CALLBACK_FAILED` (`callbackDelivered` is `false`) | `_onReadResult` reverted or ran out of gas | Raise `gasLimit`, up to `1_000_000n`, and make sure the callback cannot revert on empty `resultData`. |
+| `callbackDelivered` is `false` | `_onReadResult` reverted or ran out of gas | Raise `gasLimit`, up to `1_000_000n`, and make sure the callback cannot revert on empty `resultData`. |
 | Entrypoint reverts with `only requester` | The caller is not the account you authorized | Pass `pushChainClient.universal.account` as `requester_`, not the deploying EOA. See [Deploy a Receiver](#deploy-a-receiver). |
 | Request reverts with `InvalidBlockNumber` | `blockNumber` is `0` or above the height Universal Core has observed | Read `chainHeightByChainNamespace` with the full CAIP-2 key, for example `eip155:11155111`, and pin at or below it. |
 | Request reverts with `InvalidExpiryHeight` | `expiryPushChainHeight` is not above the current block | Use `block.number + 300` or another future height. |
@@ -693,11 +669,11 @@ Contract-initiated reads:
 | Refund never arrives | `revertRecipient` is a contract without a payable `receive()` | Add `receive() external payable {}` or point `revertRecipient` at an EOA. |
 | Callback ran but stored nothing | The source returned an error and `resultData` was empty | Check the target, ABI and pinned block. The SDK shows the reason as `raw.errorCode`. |
 
-Error entries: https://push.org/agents/errors.json (`read_timeout`, `read_not_found`, `read_invalid_query`, `read_invalid_spec`, `read_height_unavailable`, `read_unsupported_destination`, `read_decode_failed`, `read_insufficient_balance`, `read_callback_base_fee_unavailable`, `read_record_incomplete`, `read_request_mismatch`, `read_request_tx_failed`, `read_registry_unavailable`, `read_value_undefined`, `read_callback_not_delivered`, `read_web2_no_quorum`, `read_prepared_revalidation_failed`, `read_request_reverted`, `read_refund_not_delivered`).
+Error entries: https://push.org/agents/errors.json (`read_timeout`, `read_request_mismatch`, `read_request_tx_failed`, `read_registry_unavailable`, `read_value_undefined`, `read_callback_not_delivered`, `read_web2_no_quorum`, `read_prepared_revalidation_failed`, `read_request_reverted`, `read_refund_not_delivered`).
 
 ## Agent Notes
 
-- **Check `outcome` to decide success.** `SUCCESS` means `value` is usable. Otherwise report `outcome` with `raw.errorCode`, `callbackFailReason` and `decodeError`. On `UNKNOWN` or `READ_NOT_FOUND`, retry tracking; never resubmit.
+- **Check `value` to decide success.** When it is `undefined`, report `status`, `raw.status`, `callbackDelivered` and `decodeError`.
 - **Save `requestId` and `txHash` before waiting.** Submit with `waitForCompletion: false`, persist both, then call `wait()`. A client timeout (`READ_TIMEOUT`) cancels nothing: resume with `trackRead`; never resubmit just because the client timed out.
 - **`read` and `executeReads` spend funds** and need user authorization. `prepareRead` and `trackRead` never broadcast.
 - **`CHAIN.WEB2` is a read-only destination.** Never pass it to `sendTransaction`.
