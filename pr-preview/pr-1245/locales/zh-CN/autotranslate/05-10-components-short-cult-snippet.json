@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Cult - 为创作者献血的血盟",
+      "title": "信徒\n指南",
+      "title-aria-label": "Push Cult 弟子指南和要求",
+      "discord-link-text": "加入 Discord 上的 Cult 社区",
+      "discord-link-title": "加入 Push Chain Discord #push-cult 频道",
+      "discord-link-aria-label": "在新标签页中打开 Discord 社区",
+      "explore-more-text": "查看完整Pact",
+      "explore-more-title": "阅读完整的 Push Cult 清单和项目详情",
+      "explore-more-aria-label": "跳转到完整的 Push Cult 博客文章",
+      "accordion-aria-label": "Push Cult 指南和要求",
+      "answer-aria-label": "回答问题 - ",
+      "qnas": {
+        "qna1": {
+          "question": "什么是 Push Cult？",
+          "answer": "<1>Push Cult 是一个精挑细选的、仅限邀请的计划，为 <2>50 位精英创作者</2> 提供纯粹的信号，而非垃圾信息。</1><1>我们奖励有远见卓识的引领者，他们通过帖子、视频或文章引导他们的社群，真诚地与受众建立联系。</1><1>排名前 50 的门徒将根据可衡量的影响力瓜分 <2>20,000,000 PC 奖金</2>。</1>",
+          "discord-url-title": "加入 Push Chain Discord。",
+          "support-url-title": "了解更多关于该计划的信息。"
+        },
+        "qna2": {
+          "question": "谁应该申请？",
+          "answer": "<1><2>创作者，他们：</2>已经创作指南、帖子或解释，拥有活跃的受众（不一定很大）。</1><1><2>关心：</2>交付清晰而非炒作，建设遗产而非快速交易。</1><1><2>想要尽早：</2>宣传 Push Chain 的 Universal Execution 时代，并将信徒带入 Season 3。</1><1>如果您寻求快速交易，请离开。如果您寻求建设遗产，<3>向前一步</3>.</1>",
+          "scan-url-title": "申请加入 Push Cult",
+          "support-url-title": "阅读完整的宣言。"
+        },
+        "qna3": {
+          "question": "门徒是如何选拔和评估的？",
+          "answer": "<1>我们限制在<2>50 名信徒</2>以内，以确保专注。参与度每周更新，取决于您的<2>虔诚度</2>。<1><2>虔诚度</2>结合了：信号（触达范围）、聚集（新信徒入会）、信仰（留存率）和工艺（手动审核）。</1><1>如果您的分数低于阈值，您将被轮换出去。优秀的创作者在质量上竞争，而不是数量。</1>",
+          "faucet-url-title": "了解评估标准。",
+          "discord-url-title": "在 Discord 上提问。"
+        },
+        "qna4": {
+          "question": "信徒们实际上都在做什么？",
+          "answer": "<1>用<2>你喜欢的格式</2>创作内容。可以是帖子、视频、文章或任何适合你的风格。你的任务：解释 Push Chain 的概念，引导用户通过 Testnet，引导用户参与 Season 3。<1>我们提供：每周任务、主题和在公开之前提供的 alpha 信息。你塑造叙事。</1><1>垃圾信息化为灰烬。只有真相才能幸存。</1>",
+          "support-url-title": "查看内容示例。",
+          "discord-url-title": "加入 Discord。"
+        },
+        "qna5": {
+          "question": "有哪些奖励？",
+          "answer": "<1><2>表现优异者将获得：</2> 20M $PC 奖励池的保证分配，以及主网上 Ultra Rare Shiny Pass。</1><1><2>Shiny Pass 授予：</2> 链费收入分成、验证者奖励参与、staking 倍数和 VIP 生态系统特权。</1><1>排名决定收获。没有参与奖。</1>",
+          "docs-url-title": "了解奖励。",
+          "kb-url-title": "阅读代币经济学。"
+        },
+        "qna6": {
+          "question": "如何加入？",
+          "answer": "<1>大门已开，证明你的奉献，<3>立即申请</3>.</1><1>注册将使您获得程序详细信息、评估机制和初步入职步骤。</1><1>从那里，<2>表现决定一切</2>.</1>",
+          "contact-url-title": "申请加入 Push Cult",
+          "github-url-title": "阅读完整的 pact。"
+        }
+      }
+    }
+  }
+}

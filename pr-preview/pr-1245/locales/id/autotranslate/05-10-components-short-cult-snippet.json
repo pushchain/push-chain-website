@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Cult - Perjanjian Darah untuk Kreator",
+      "title": "Pedoman\nPengikut",
+      "title-aria-label": "Panduan dan persyaratan untuk Murid-Murid Kultus Push",
+      "discord-link-text": "Bergabunglah dengan Komunitas di Discord",
+      "discord-link-title": "Bergabunglah dengan saluran #push-cult di Discord Push Chain",
+      "discord-link-aria-label": "Buka komunitas Discord di tab baru",
+      "explore-more-text": "Lihat Pact Lengkap",
+      "explore-more-title": "Baca manifesto lengkap Push Cult dan detail programnya",
+      "explore-more-aria-label": "Buka postingan blog Push Cult lengkap",
+      "accordion-aria-label": "Panduan dan persyaratan Push Cult",
+      "answer-aria-label": "Jawaban untuk pertanyaan - ",
+      "qnas": {
+        "qna1": {
+          "question": "Apa itu Push Cult?",
+          "answer": "<1>Push Cult adalah program kurasi eksklusif berdasarkan undangan untuk <2>50 kreator elite</2> yang memberikan sinyal murni, bukan spam.</1><1>Kami menghargai para visioner yang memandu komunitas mereka dengan kebenaran, melalui utas, video, atau artikel yang benar-benar terhubung dengan audiens.</1><1>50 Murid teratas membagi hadiah <2>20,000,000 PC</2> berdasarkan dampak terukur.</1>",
+          "discord-url-title": "Bergabunglah dengan Discord Push Chain.",
+          "support-url-title": "Pelajari lebih lanjut tentang program ini."
+        },
+        "qna2": {
+          "question": "Siapa yang sebaiknya mendaftar?",
+          "answer": "<1><2>Kreator yang:</2> sudah membuat panduan, utas, atau penjelasan dengan audiens yang terlibat (tidak harus besar).</1><1><2>Peduli tentang:</2> mengirimkan kejelasan daripada hype, membangun warisan daripada keuntungan cepat.</1><1><2>Ingin menjadi yang pertama:</2> menyebarkan era Universal Execution Push Chain dan mengundang para pengikut untuk Musim 3.</1><1>Jika Anda mencari keuntungan cepat, mundur. Jika Anda ingin membangun warisan, <3>maju</3>.</1>",
+          "scan-url-title": "Ajukan untuk bergabung dengan Push Cult",
+          "support-url-title": "Baca manifesto lengkapnya."
+        },
+        "qna3": {
+          "question": "Bagaimana Murid dipilih dan dievaluasi?",
+          "answer": "<1>Kami membatasi jumlah menjadi <2>50 Murid</2> untuk memastikan fokus. Partisipasi diperbarui setiap minggu berdasarkan <2>Skor Pengabdian</2> Anda.</1><1><2>Skor Pengabdian</2> menggabungkan: Sinyal (jangkauan), Pengumpulan (pendatang baru yang bergabung), Iman (retensi), dan Keterampilan (tinjauan manual).</1><1>Jika Anda berada di bawah ambang batas, Anda akan digantikan. Pencipta hebat bersaing dalam kualitas, bukan volume.</1>",
+          "faucet-url-title": "Pelajari tentang kriteria evaluasi.",
+          "discord-url-title": "Ajukan pertanyaan di Discord."
+        },
+        "qna4": {
+          "question": "Apa sebenarnya yang dilakukan oleh Murid?",
+          "answer": "<1>Buat konten dalam <2>formatmu</2>. Bisa berupa utas, video, artikel, atau apa pun yang sesuai dengan gayamu. Tugasmu: jelaskan konsep Push Chain, pandu Flock melalui Testnet, dan sambut para pengikut di Season 3.</1><1>Kami menyediakan: misi mingguan, tema, dan informasi penting sebelum publik mengetahuinya. Kamu membentuk narasi.</1><1>Spam akan terbakar habis. Hanya kebenaran yang bertahan.</1>",
+          "support-url-title": "Lihat contoh konten.",
+          "discord-url-title": "Bergabunglah dengan Discord."
+        },
+        "qna5": {
+          "question": "Apa saja keuntungannya?",
+          "answer": "<1><2>Para pemain terbaik akan menerima:</2> Alokasi terjamin dari pool 20M PC, ditambah Ultra Rare Shiny Pass (di mainnet).</1><1><2>Shiny Pass memberikan:</2> pembagian pendapatan dari biaya chain, partisipasi dalam hadiah validator, pengganda staking, dan keuntungan eksklusif ekosistem.</1><1>Peringkat menentukan panen. Tidak ada penghargaan partisipasi.</1>",
+          "docs-url-title": "Pelajari tentang hadiah.",
+          "kb-url-title": "Baca tentang tokenomics."
+        },
+        "qna6": {
+          "question": "Bagaimana cara bergabung?",
+          "answer": "<1>Gerbang terbuka, buktikan dedikasimu, <3>daftar sekarang</3>.</1><1>Pendaftaran memberimu akses ke detail program, mekanisme evaluasi, dan langkah-langkah orientasi awal.</1><1>Dari sana, <2>kinerja menentukan segalanya</2>.</1>",
+          "contact-url-title": "Daftar ke Push Cult",
+          "github-url-title": "Baca lengkap pact-nya."
+        }
+      }
+    }
+  }
+}

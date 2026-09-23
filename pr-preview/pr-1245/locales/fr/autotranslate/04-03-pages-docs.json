@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "pusd": {
+                  "title": "PUSD",
+                  "subtitle": "Stablecoin indexé à 1:1 combinant la liquidité USD de toutes les chaînes.",
+                  "ctatitle": "En savoir plus"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

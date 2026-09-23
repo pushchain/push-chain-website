@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "knowledge": {
+      "audit": {
+        "seo": {
+          "description": "Push Zinciri'nin denetim raporlarını keşfet ve ne kadar bağımsız güvenlik incelemeleri büyük firmalardan altyapıyı inşa ettiğiniz yapınızı doğruluyor.",
+          "og-description": "Push Zinciri'nin mimarisine, modüllerine ve akıllı sözleşmelere bağımsız güvenlik denetleme raporlarını okuyun.",
+          "twitter-title": "Push Zinciri İzleme Raporları"
+        },
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "audit-reports": {
+                "items": {
+                  "intro": "![](/assets/website/çevrimiçi/knowledge/ audit/hacken-bg.webp)"
+                }
+              },
+              "reports": {
+                "items": {
+                  "audit-report-1": {
+                    "title": "Blok Zinciri Protokol Güvenliği Analizi Raporu"
+                  },
+                  "audit-report-2": {
+                    "title": "Blockchain Güvenlik Analizi Raporu"
+                  },
+                  "audit-report-3": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
