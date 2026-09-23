@@ -12,6 +12,8 @@ Query on-chain data from Push Chain - transactions, blocks, balances, contract s
 - Querying contract state without signing
 - Building analytics dashboards or indexers
 
+> **Looking for state from other chains?** This workflow reads state over RPC from your frontend or backend. If you need state from another chain (or from a web API) delivered on-chain to a Push Chain contract, with validators agreeing on the result and an optional callback, use Universal Read instead: [universal-read.md](https://push.org/agents/workflows/universal-read.md).
+
 ## Prerequisites
 
 | Requirement | Details |
@@ -255,6 +257,7 @@ const oldTx = await archiveProvider.getTransaction(oldTxHash);
 - **WebSocket for real-time**: use `WebSocketProvider` / `webSocket` transport for subscriptions; HTTP for one-off queries.
 - **Pruned vs archive history**: the default Donut RPC prunes old history; use the archive endpoints for full-history reads. SDK reads fall back to archive automatically - only direct ethers/viem reads need the archive URL.
 - **Block explorer**: for human-readable transaction lookup, use `https://donut.push.network`.
+- **RPC read or Universal Read?** RPC reads (this workflow) are free and instant but only reach your app. When a Push Chain contract must act on state from another chain or a web API, use `pushChainClient.universal.read` ([universal-read.md](https://push.org/agents/workflows/universal-read.md)); it is paid and asynchronous.
 
 ## MCP Mapping Candidates
 
@@ -266,6 +269,7 @@ const oldTx = await archiveProvider.getTransaction(oldTxHash);
 ## See Also
 
 - Track transaction (SDK trackTransaction method): https://push.org/agents/workflows/track-transaction.md
+- Universal Read (external state delivered on-chain): https://push.org/agents/workflows/universal-read.md
 - Constants (CHAIN, RPC URLs): https://push.org/agents/workflows/constants-reference.md
 - Initialize client: https://push.org/agents/skills/push-backend/references/initialize-client.md
 

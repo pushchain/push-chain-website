@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "version": "1.2.0",
+  "current_sdk_version": "6.0.26",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Machine-readable definition of Push Chain's three universal transaction routes. Consumed by build.agents.llms.mjs to generate the route bullets in llms.txt. Other agent surfaces (README.md, task-router.md, decision-tree.json, workflows, skills) carry the same route concepts in prose form intended for human / LLM reading.",
   "routes": [
     {
@@ -101,6 +101,11 @@
       "description": "On every route, funds.token accepts two forms. (1) MoveableToken accessor (PushChain.CONSTANTS.MOVEABLE.TOKEN.*): a token born on an external chain — locked at origin, minted as its PRC-20 representation on Push Chain (static SDK table, sync lookup via getPRC20Address). (2) PC-20 reference { chain, address }: a token born ON Push Chain — resolved against UniversalCore's on-chain registry (async lookup via getPC20Address) and exported as a wrapper on the destination chain.",
       "chain_semantics": "funds.token.chain is where the tokens sit RIGHT NOW; to.chain is the destination. A mismatch throws PC20TokenChainMismatchError before broadcast.",
       "anti_pattern": "Never add `symbol` to a PC-20 reference — the SDK tells a PC-20 reference apart from a MoveableToken by the ABSENCE of `symbol`. Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight."
+    },
+    "universal_read": {
+      "description": "Universal Read is not a route. It brings state from another chain or an HTTPS endpoint onto Push Chain (pushChainClient.universal.read / prepareRead / executeReads / trackRead) instead of executing anywhere, so none of Route 1/2/3 applies.",
+      "chain_semantics": "PushChain.CONSTANTS.CHAIN.WEB2 is a read-only destination for Universal Read. Never pass it as tx.to.chain or tx.from.chain.",
+      "anti_pattern": "Building a Route 2 transaction that calls a view function on an external chain to fetch a value. Use Universal Read, or an ordinary RPC call when only the app needs the value."
     }
   }
 }

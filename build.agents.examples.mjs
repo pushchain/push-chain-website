@@ -33,6 +33,10 @@ const SDK_METHODS = [
   'PushChain.initialize',
   'pushChainClient.universal.sendTransaction',
   'pushChainClient.universal.trackTransaction',
+  'pushChainClient.universal.read',
+  'pushChainClient.universal.prepareRead',
+  'pushChainClient.universal.executeReads',
+  'pushChainClient.universal.trackRead',
   'pushChainClient.universal.signMessage',
   'pushChainClient.universal.signTypedData',
   'pushChainClient.getAccountStatus',
@@ -98,6 +102,23 @@ function nearestHeading(content, index) {
     }
   }
   return 'Code Example';
+}
+
+/**
+ * When the template literal sits inside a
+ * `<Details summary="Live Playground: <title>">` block, return <title>.
+ * Pages with several playgrounds under one heading (e.g. "EVM Playground")
+ * name each one in its summary, so the heading alone is ambiguous.
+ */
+function playgroundTitle(content, index) {
+  const before = content.substring(0, index);
+  const open = before.lastIndexOf('<Details summary="');
+  if (open === -1) return null;
+  if (before.indexOf('</Details>', open) !== -1) return null;
+  const m = before
+    .substring(open)
+    .match(/^<Details summary="Live Playground:\s*([^"]+)"/);
+  return m ? m[1].trim() : null;
 }
 
 /**
@@ -186,7 +207,7 @@ function extractTemplateLiterals(content, pageUrl) {
 
     examples.push({
       id,
-      title: nearestHeading(content, m.index),
+      title: playgroundTitle(content, m.index) ?? nearestHeading(content, m.index),
       code,
       lang: 'typescript',
       sourceUrl: pageUrl,
@@ -386,27 +407,27 @@ const TARGET_PAGES = [
     url: 'https://push.org/docs/chain/build/initialize-evm-client/',
   },
   {
-    file: '03-build/06-Send-Universal-Transaction.mdx',
+    file: '03-build/03-universal-transactions/02-Send-Universal-Transaction.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/send-universal-transaction/',
   },
   {
-    file: '03-build/08-Send-Multichain-Transactions.mdx',
+    file: '03-build/03-universal-transactions/04-Send-Multichain-Transactions.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/send-multichain-transactions/',
   },
   {
-    file: '03-build/10-Track-Universal-Transaction.mdx',
+    file: '03-build/03-universal-transactions/06-Track-Universal-Transaction.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/track-universal-transaction/',
   },
   {
-    file: '03-build/11-Sign-Universal-Message.mdx',
+    file: '03-build/05-Sign-Universal-Message.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/sign-universal-message/',
   },
   {
-    file: '03-build/12-Utility-Functions.mdx',
+    file: '03-build/06-Utility-Functions.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/utility-functions/',
   },
@@ -414,6 +435,39 @@ const TARGET_PAGES = [
     file: '03-build/01-advanced/01-Custom-Universal-Signer.mdx',
     type: 'sdk',
     url: 'https://push.org/docs/chain/build/advanced/custom-universal-signer/',
+  },
+  // `refresh: true` re-extracts a page's playgrounds on every run, even when
+  // their IDs are already in the index, so the example files and their index
+  // entries follow the docs instead of freezing at first extraction.
+  {
+    file: '03-build/04-universal-reads/01-Read-Universal-State.mdx',
+    type: 'sdk',
+    url: 'https://push.org/docs/chain/build/universal-read/',
+    refresh: true,
+  },
+  {
+    file: '03-build/04-universal-reads/02-Read-Multiple-Universal-States.mdx',
+    type: 'sdk',
+    url: 'https://push.org/docs/chain/build/read-multiple-universal-states/',
+    refresh: true,
+  },
+  {
+    file: '03-build/04-universal-reads/03-Contract-Initiated-Universal-Read-and-Callback.mdx',
+    type: 'sdk',
+    url: 'https://push.org/docs/chain/build/contract-initiated-universal-read-and-callback/',
+    refresh: true,
+  },
+  {
+    file: '03-build/04-universal-reads/04-Track-Universal-Read.mdx',
+    type: 'sdk',
+    url: 'https://push.org/docs/chain/build/track-universal-read/',
+    refresh: true,
+  },
+  {
+    file: '03-build/08-Contract-Helpers.mdx',
+    type: 'sdk',
+    url: 'https://push.org/docs/chain/build/contract-helpers/',
+    refresh: true,
   },
   {
     file: '03-build/01-advanced/02-Upgrade-Universal-Account.mdx',
@@ -456,6 +510,7 @@ export const buildAgentsExamples = async () => {
   const newEntries = [];
   let written = 0;
   let skipped = 0;
+  let refreshed = 0;
 
   for (const page of TARGET_PAGES) {
     const filePath = path.join(DOCS_DIR, page.file);
@@ -521,9 +576,36 @@ export const buildAgentsExamples = async () => {
     }
 
     for (const example of examples) {
+      const description = `Code example: ${example.title}. Source: ${page.url}`;
       if (existingIds.has(example.id)) {
-        console.log(chalk.gray(`  ↷  ${example.id} (already in index)`));
-        skipped++;
+        if (!page.refresh) {
+          console.log(chalk.gray(`  ↷  ${example.id} (already in index)`));
+          skipped++;
+          continue;
+        }
+        const filePath = path.join(AGENTS_EXAMPLES_DIR, `${example.id}.md`);
+        const md = buildSdkExampleMarkdown(example);
+        let onDiskMd = null;
+        try {
+          onDiskMd = await fs.readFile(filePath, 'utf-8');
+        } catch {
+          // missing on disk: rewrite below
+        }
+        if (onDiskMd !== md) await fs.writeFile(filePath, md, 'utf-8');
+        const entry =
+          existingIndex.find((e) => e.id === example.id) ??
+          newEntries.find((e) => e.id === example.id);
+        if (entry) {
+          entry.name = example.title;
+          entry.file = `${example.id}.md`;
+          entry.description = description;
+          entry.sdk_methods_used = example.sdkMethods;
+          entry.source_url = page.url;
+        }
+        if (onDiskMd !== md) {
+          refreshed++;
+          console.log(chalk.green(`  ↻  ${example.id}.md`) + chalk.gray(' refreshed'));
+        }
         continue;
       }
 
@@ -538,7 +620,7 @@ export const buildAgentsExamples = async () => {
         id: example.id,
         name: example.title,
         file: `${example.id}.md`,
-        description: `Code example: ${example.title} — ${page.url}`,
+        description,
         sdk_methods_used: example.sdkMethods,
         chains_involved: [],
         prerequisite_examples: [],
@@ -712,7 +794,9 @@ export const buildAgentsExamples = async () => {
   console.log(
     chalk.green(
       `\n✅ Done: ${written} new example${written !== 1 ? 's' : ''} written`
-    ) + (skipped ? chalk.gray(`, ${skipped} skipped`) : '')
+    ) +
+      (refreshed ? chalk.gray(`, ${refreshed} refreshed`) : '') +
+      (skipped ? chalk.gray(`, ${skipped} skipped`) : '')
   );
 };
 

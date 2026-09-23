@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.4.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "version": "1.5.0",
+  "current_sdk_version": "6.0.26",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Decision trees for Push Chain agent routing and action selection. Most trees route through SDK capabilities; one tree (`choose_pusd_product`) routes through an external first-party skill (push-pusd) for PUSD / PUSD+ stablecoin integration.",
   "trees": [
     {
@@ -12,7 +12,9 @@
         {
           "condition": "tx.to is a plain address string (e.g., '0x...')",
           "action": "Use Route 1: Execute on Push Chain via UEA",
-          "capability_ids": ["send_universal_transaction"],
+          "capability_ids": [
+            "send_universal_transaction"
+          ],
           "details": {
             "execution_target": "Push Chain",
             "executor": "UEA (Universal Executor Account)",
@@ -28,7 +30,9 @@
         {
           "condition": "tx.to is an object with { address, chain } where chain is an external chain",
           "action": "Use Route 2: Execute on external chain via CEA",
-          "capability_ids": ["send_multichain_transaction"],
+          "capability_ids": [
+            "send_multichain_transaction"
+          ],
           "details": {
             "execution_target": "External chain (e.g., Ethereum Sepolia, BNB Chain)",
             "executor": "CEA (Chain Executor Account)",
@@ -44,7 +48,9 @@
         {
           "condition": "tx.to is a plain address AND tx.from.chain is set to an external chain",
           "action": "Use Route 3: Execute on Push Chain with CEA as the bridge",
-          "capability_ids": ["send_multichain_transaction"],
+          "capability_ids": [
+            "send_multichain_transaction"
+          ],
           "details": {
             "execution_target": "Push Chain",
             "origin": "Push Account (UEA, native Push Chain wallet, or smart contract on Push) acting through its CEA on the specified external chain",
@@ -68,7 +74,9 @@
         {
           "condition": "User has an ethers.js Wallet or Signer (v5 or v6)",
           "action": "Use PushChain.utils.signer.toUniversal(ethersSigner)",
-          "capability_ids": ["create_universal_signer"],
+          "capability_ids": [
+            "create_universal_signer"
+          ],
           "details": {
             "import": "import { ethers } from 'ethers';",
             "provider_note": "RPC URL determines chain: Sepolia RPC → Ethereum Sepolia account"
@@ -78,7 +86,9 @@
         {
           "condition": "User has a viem WalletClient",
           "action": "Use PushChain.utils.signer.toUniversal(viemWalletClient)",
-          "capability_ids": ["create_universal_signer"],
+          "capability_ids": [
+            "create_universal_signer"
+          ],
           "details": {
             "import": "import { createWalletClient, http } from 'viem';",
             "provider_note": "RPC URL determines chain"
@@ -88,7 +98,9 @@
         {
           "condition": "User has a Solana Keypair (@solana/web3.js)",
           "action": "Use PushChain.utils.signer.toUniversalFromKeypair(keypair, { chain, library })",
-          "capability_ids": ["create_universal_signer_from_keypair"],
+          "capability_ids": [
+            "create_universal_signer_from_keypair"
+          ],
           "details": {
             "import": "import { Keypair } from '@solana/web3.js';",
             "chain_param": "PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET",
@@ -118,7 +130,10 @@
         {
           "condition": "Building a React frontend with wallet connection UI",
           "action": "Use @pushchain/ui-kit with PushUniversalWalletProvider",
-          "capability_ids": ["connect_wallet_ui", "use_wallet_provider"],
+          "capability_ids": [
+            "connect_wallet_ui",
+            "use_wallet_provider"
+          ],
           "details": {
             "package": "@pushchain/ui-kit",
             "components": [
@@ -137,7 +152,10 @@
         {
           "condition": "Building a backend service, bot, or script",
           "action": "Use @pushchain/core directly",
-          "capability_ids": ["initialize_client", "send_universal_transaction"],
+          "capability_ids": [
+            "initialize_client",
+            "send_universal_transaction"
+          ],
           "details": {
             "package": "@pushchain/core",
             "flow": "Create signer → PushChain.initialize() → pushChainClient.universal.sendTransaction()"
@@ -147,7 +165,10 @@
         {
           "condition": "Building a React frontend but need full control over wallet logic",
           "action": "Use @pushchain/core with custom wallet integration",
-          "capability_ids": ["initialize_client", "create_universal_signer"],
+          "capability_ids": [
+            "initialize_client",
+            "create_universal_signer"
+          ],
           "details": {
             "package": "@pushchain/core",
             "note": "You manage wallet connection yourself, then create UniversalSigner and initialize client"
@@ -203,7 +224,10 @@
         {
           "condition": "UEA requires upgrade (getAccountStatus shows requiresUpgrade: true)",
           "action": "Call pushChainClient.upgradeAccount() before retrying",
-          "capability_ids": ["upgrade_account", "get_account_status"],
+          "capability_ids": [
+            "upgrade_account",
+            "get_account_status"
+          ],
           "details": {
             "method": "await pushChainClient.upgradeAccount({ progressHook })",
             "note": "Gasless operation, handled automatically by SDK"
@@ -213,7 +237,10 @@
         {
           "condition": "Network or RPC error",
           "action": "Retry with exponential backoff or use custom RPC",
-          "capability_ids": ["initialize_client", "reinitialize_client"],
+          "capability_ids": [
+            "initialize_client",
+            "reinitialize_client"
+          ],
           "details": {
             "custom_rpc": "Pass rpcUrls option to PushChain.initialize()"
           },
@@ -228,7 +255,9 @@
         {
           "condition": "Need simple confirmation wait after sendTransaction",
           "action": "Use tx.wait() on the returned transaction response",
-          "capability_ids": ["track_transaction"],
+          "capability_ids": [
+            "track_transaction"
+          ],
           "details": {
             "method": "const receipt = await txResponse.wait();",
             "returns": "Transaction receipt with status, logs, gas used",
@@ -239,7 +268,9 @@
         {
           "condition": "Need to track a transaction by hash (e.g., resuming tracking, monitoring)",
           "action": "Use pushChainClient.universal.trackTransaction(txHash)",
-          "capability_ids": ["track_transaction"],
+          "capability_ids": [
+            "track_transaction"
+          ],
           "details": {
             "method": "const receipt = await pushChainClient.universal.trackTransaction(txHash);",
             "best_for": "Tracking transactions you didn't send, resuming after page reload"
@@ -249,7 +280,9 @@
         {
           "condition": "Building UI with real-time progress updates",
           "action": "Use progressHook callback in sendTransaction",
-          "capability_ids": ["send_universal_transaction"],
+          "capability_ids": [
+            "send_universal_transaction"
+          ],
           "details": {
             "method": "sendTransaction({ ..., progressHook: (progress) => updateUI(progress) })",
             "events": "Route 1: SEND-TX-1xx, Route 2: SEND-TX-2xx, Route 3: SEND-TX-3xx. Cascade: SEND-TX-001/002/999-xx prefixes wrap each hop."
@@ -265,7 +298,9 @@
         {
           "condition": "User has native tokens on their origin chain (ETH on Ethereum, SOL on Solana)",
           "action": "SDK handles fee abstraction automatically",
-          "capability_ids": ["send_universal_transaction"],
+          "capability_ids": [
+            "send_universal_transaction"
+          ],
           "details": {
             "how_it_works": "User pays in native token on origin chain; SDK converts and funds UEA",
             "no_pc_required": "Users do not need to hold PC tokens for gas"
@@ -307,7 +342,9 @@
         {
           "condition": "Single chain target — user signs once and execution is complete",
           "action": "Use sendTransaction() directly",
-          "capability_ids": ["send_universal_transaction"],
+          "capability_ids": [
+            "send_universal_transaction"
+          ],
           "details": {
             "method": "pushChainClient.universal.sendTransaction({ to, data, value, funds, ... })",
             "returns": "UniversalTxResponse with .wait() and tx hash"
@@ -317,7 +354,9 @@
         {
           "condition": "Multiple hops required — e.g. Push Chain then Ethereum then BNB, signed once",
           "action": "Use prepareTransaction() + executeTransactions() cascade pattern",
-          "capability_ids": ["execute_transaction_cascade"],
+          "capability_ids": [
+            "execute_transaction_cascade"
+          ],
           "details": {
             "step_1": "const hop1 = await pushChainClient.universal.prepareTransaction({ to: '0x...', data })",
             "step_2": "const hop2 = await pushChainClient.universal.prepareTransaction({ to: { address: '0x...', chain: CHAIN.ETHEREUM_SEPOLIA }, data })",
@@ -336,7 +375,9 @@
         {
           "condition": "Sign arbitrary bytes for off-chain verification (authentication, attestation)",
           "action": "Use pushChainClient.universal.signMessage(message)",
-          "capability_ids": ["sign_universal_message"],
+          "capability_ids": [
+            "sign_universal_message"
+          ],
           "details": {
             "input": "message: Uint8Array — use new TextEncoder().encode('text') for strings",
             "returns": "Uint8Array signature",
@@ -347,7 +388,9 @@
         {
           "condition": "Sign EIP-712 typed data (Permit2, Uniswap v3/v4, Seaport, gasless approvals, order matching)",
           "action": "Use pushChainClient.universal.signTypedData(typedDataArgs)",
-          "capability_ids": ["sign_universal_typed_data"],
+          "capability_ids": [
+            "sign_universal_typed_data"
+          ],
           "details": {
             "input": "typedDataArgs: { domain: TypedDataDomain, types: Record<string, TypedDataField[]>, value: Record<string, unknown> }",
             "returns": "Uint8Array — EIP-712 signature bytes",
@@ -370,7 +413,9 @@
         {
           "condition": "Need UEA address on Push Chain for a given origin wallet (pre-flight balance check, gas estimation)",
           "action": "Use PushChain.utils.account.deriveExecutorAccount(uoa, { chain: CHAIN.PUSH_TESTNET_DONUT })",
-          "capability_ids": ["derive_executor_account"],
+          "capability_ids": [
+            "derive_executor_account"
+          ],
           "details": {
             "capability": "derive_executor_account",
             "returns": "{ address: string } — deterministic, no on-chain call",
@@ -385,7 +430,9 @@
         {
           "condition": "Need CEA address on an external chain (whitelist the CEA on a target contract, check CEA balance)",
           "action": "Use PushChain.utils.account.deriveExecutorAccount(uoa, { chain: CHAIN.<EXTERNAL> })",
-          "capability_ids": ["derive_executor_account"],
+          "capability_ids": [
+            "derive_executor_account"
+          ],
           "details": {
             "capability": "derive_executor_account",
             "returns": "{ address: string } — same deterministic derivation, different chain",
@@ -396,7 +443,9 @@
         {
           "condition": "Have a UEA or CEA address and need to find the origin wallet that controls it (reverse lookup, attribution, identity verification)",
           "action": "Use PushChain.utils.account.resolveControllerAccount(address, { chain? })",
-          "capability_ids": ["resolve_controller_account"],
+          "capability_ids": [
+            "resolve_controller_account"
+          ],
           "details": {
             "capability": "resolve_controller_account",
             "input": "UEA, CEA, or any Push Chain address as a plain string",
@@ -508,11 +557,73 @@
         {
           "condition": "A PRC-20 address (synthetic, external-born) was supplied where a PC-20 was expected",
           "action": "Switch to the MoveableToken API — the SDK throws PC20ExpectedButPRC20Error (a PRC-20 is a legitimate token on the wrong API, not a broken one)",
-          "capability_ids": ["send_universal_transaction"],
+          "capability_ids": [
+            "send_universal_transaction"
+          ],
           "details": {
             "mnemonic": "PRC-20 = a foreign token wearing a Push jacket (mirrored INTO Push). PC-20 = a Push token wearing a foreign jacket (mirrored OUT of Push)."
           },
           "next": null
+        }
+      ]
+    },
+    {
+      "id": "choose_read_path",
+      "question": "Does the application need on-chain delivery of external state?",
+      "branches": [
+        {
+          "condition": "Only the frontend or backend needs the data; nothing on-chain acts on it",
+          "action": "Use an ordinary RPC call (ethers/viem against the chain's RPC). It is cheaper and instant; Universal Read is paid and asynchronous.",
+          "capability_ids": [
+            "read_blockchain_state"
+          ]
+        },
+        {
+          "condition": "One value from an EVM chain, Solana or an HTTPS endpoint must be agreed on by validators and stored on Push Chain, with no custom contract logic",
+          "action": "Call pushChainClient.universal.read(subject, { chain, ...one query option }) without callback; the Universal Read Registry stores the result. Save requestId and txHash, then use value.",
+          "capability_ids": [
+            "universal_read"
+          ],
+          "details": {
+            "query_option": "none = native balance; token = ERC-20 or SPL balance; abi or idl + functionName (+ args) = typed contract call or Solana program account; storageSlot = EVM storage word; web2 = JSON fields (chain: CHAIN.WEB2)",
+            "registry": "0x00000000000000000000000000000000000000b2 (PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT)"
+          }
+        },
+        {
+          "condition": "Several reads across chains or Web2 should be requested with one user signature",
+          "action": "prepareRead each (no funds needed), then executeReads([...]); results come back in prepared order. Check value on every response.",
+          "capability_ids": [
+            "execute_universal_reads"
+          ]
+        },
+        {
+          "condition": "A Push Chain contract must act on the result (settle, unlock, pay out, rebalance)",
+          "action": "Deploy a receiver that inherits UniversalReadClient and overrides _onReadResult. Request through the SDK with read(..., { callback: { target, gasLimit, abi, functionName } }), or have the contract build the ReadSpec and call _requestRead itself.",
+          "capability_ids": [
+            "contract_initiated_universal_read",
+            "universal_read"
+          ],
+          "details": {
+            "universal_callback": "0x00000000000000000000000000000000000000c2 (constructor argument)",
+            "requester": "If the entrypoint is gated, authorize the msg.sender it will see: pushChainClient.universal.account for an SDK caller",
+            "contract_built_specs": "EVM specs can be built in Solidity; build Solana and Web2 envelopes with prepareRead and pass prepared.specTuple",
+            "empty_result": "Empty resultData means the source returned an error; return early"
+          }
+        },
+        {
+          "condition": "A request already exists, the page reloaded, or the client timed out",
+          "action": "trackRead({ requestId } | { txHash }) with any client (read-only is enough) and call wait(); do not resubmit automatically.",
+          "capability_ids": [
+            "track_universal_read"
+          ]
+        },
+        {
+          "condition": "A read finished but value is undefined",
+          "action": "Read status, raw.status (and raw.errorCode), callbackDelivered (and callbackFailReason) and decodeError to see why, then fix the query, ABI, callback gas or receiver and submit a new request.",
+          "capability_ids": [
+            "universal_read",
+            "track_universal_read"
+          ]
         }
       ]
     }

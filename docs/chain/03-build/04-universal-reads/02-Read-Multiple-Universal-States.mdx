@@ -1,0 +1,380 @@
+---
+id: docs-chain-build-read-multiple-universal-states
+title: Read Multiple Universal States
+hide_title: false
+slug: /chain/build/read-multiple-universal-states
+displayed_sidebar: pushChainSidebar
+sidebar_position: 2
+---
+
+<head>
+  <title>Read Multiple Universal States | Build | Push Chain Docs</title>
+</head>
+
+import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+import ReadParameters from './_read-parameters.mdx';
+import ReadAdvancedArguments from './_read-advanced-arguments.mdx';
+
+{/* Content Start */}
+
+
+## Overview
+
+Multiple reads let you compose several universal reads into a single ordered flow across chains and Web2 endpoints.
+
+This allows you to submit a **single user-signed transaction** to Push Chain that requests state from Ethereum, Solana, HTTPS endpoints, or all three, and returns the results in the order you prepared them.
+
+**Prerequisite:** Familiarize yourself with [Read Universal State](/docs/chain/build/universal-read/) before reading this page.
+
+### Mental Model
+
+1. **Prepare** each read with `prepareRead`
+2. **Execute** all reads together with `executeReads`
+
+## Prepare Read
+
+**_`pushChainClient.universal.prepareRead(subject, {options}): Promise<PreparedRead>`_**
+
+Prepares a read without executing it. Returns a **PreparedRead** object that you pass to **executeReads**. Nothing is broadcast and nothing is paid until you execute.
+
+```typescript
+const prepared = await pushChainClient.universal.prepareRead('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045', {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+});
+
+console.log(prepared.fees.total); // what this read will cost, in PC
+```
+
+:::info
+**PreparedRead** is an intermediate object that you pass to `executeReads`. Most apps do not need to manually inspect or modify its fields.
+:::
+
+<ReadParameters hideRows={['options.waitForCompletion', 'options.progressHook']} />
+
+> `prepareRead` accepts the same subject and query options as [Read Universal State](/docs/chain/build/universal-read/#read-parameters). It does not take **waitForCompletion**, **progressHook** or **advanced**; those belong to [Execute Reads](#execute-reads).
+
+<ReadAdvancedArguments hideRows={['options.advanced.pollingIntervalMs', 'options.advanced.timeout', 'options.advanced.enforceGasCheck']} />
+
+<Details summary="Returns `PreparedRead` <object>" className="alert alert--fn-args">
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `queryKey` | `string` | Logical identity of the query, independent of pinning and payment. |
+| `chain` | `CHAIN` | Destination the read was prepared for. |
+| `spec` | `ReadSpec` | The validated on-chain request struct. |
+| `specTuple` | `array` | Positional form of `spec` for `encodeFunctionData`. |
+| `encodedSpec` | `string` | `abi.encode(spec)` for hand-assembled calldata. |
+| `value` | `bigint` | `msg.value` to send: protocol fee plus callback budget. |
+| `fees` | `object` | `protocolFee`, `callbackBudget` and `total` (equal to `value`). |
+| `callbackGasLimit` | `bigint` | Gas reserved for the result callback. |
+| `callback` | `object` | The request entrypoint retained for `executeReads`. |
+| `resultShape` | `object` | How the result is decoded, retained through execution. |
+| `preflight` | `object` | Oracle height, Push height, gas price and contract addresses used to build the spec. |
+| `warnings` | `string[]` | Advisories such as a sensitive header or a non-UEA refund recipient. |
+
+</Details>
+
+<Details summary="Live Playground: Inspect PreparedRead" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={null}>
+
+{`
+// customPropHighlightRegexStart=universal\.prepareRead
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=universal_read_prepare
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    // vitalik.eth on Ethereum Sepolia, the public ENS address.
+    // https://sepolia.etherscan.io/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+    const HOLDER = '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045';
+
+    async function main() {
+      // Preparing a read costs nothing and needs no funds, so a fresh wallet is enough.
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
+      const wallet = ethers.Wallet.createRandom().connect(provider);
+      try {
+        const signer = await PushChain.utils.signer.toUniversal(wallet);
+        const pushChainClient = await PushChain.initialize(signer, {
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        });
+
+        console.log('Preparing the read...');
+        const prepared = await pushChainClient.universal.prepareRead(HOLDER, {
+          chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+        });
+
+        console.log('Query key:', prepared.queryKey);
+        console.log('Chain:', prepared.chain);
+        console.log('Pinned to block:', prepared.spec.blockNumber.toString());
+        console.log('Expires at Push Chain height:', prepared.spec.expiryPushChainHeight.toString());
+        console.log('Callback gas limit:', prepared.callbackGasLimit.toString());
+        console.log('Result shape:', prepared.resultShape.kind);
+        console.log('Protocol fee:', ethers.formatEther(prepared.fees.protocolFee), 'PC');
+        console.log('Callback budget:', ethers.formatEther(prepared.fees.callbackBudget), 'PC');
+        console.log('Total fee:', ethers.formatEther(prepared.fees.total), 'PC');
+        console.log('Warnings:', prepared.warnings.length ? prepared.warnings.join('; ') : 'none');
+      } finally {
+        provider.destroy();
+      }
+    }
+    main().catch(error => { console.error(error.message); process.exitCode = 1; });
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+
+
+## Execute Reads
+
+**_`pushChainClient.universal.executeReads(preparedReads: PreparedRead[], options?: { waitForCompletion?, progressHook?, advanced? }): Promise<BatchReadResponse>`_**
+
+Executes an ordered array of prepared reads as one flow. Where the wallet supports atomic batching this is submitted as a **single transaction**; you sign once, and the SDK submits every read and collects every result.
+
+Each prepared read becomes one read in the batch, and results come back in the same order.
+
+```typescript
+const CHAIN = PushChain.CONSTANTS.CHAIN;
+
+const ethBalance = await pushChainClient.universal.prepareRead(holder, { chain: CHAIN.ETHEREUM_SEPOLIA });
+const solBalance = await pushChainClient.universal.prepareRead(solanaHolder, { chain: CHAIN.SOLANA_DEVNET });
+
+// Live progress for submission and every read in the batch.
+const batch = await pushChainClient.universal.executeReads([ethBalance, solBalance], {
+  progressHook: (event) => {
+    console.log('[' + event.id + '] ' + event.level + ' - ' + event.title);
+  },
+});
+
+const [eth, sol] = await batch.wait(); // results in prepared order
+```
+
+<PushAPIReference>
+
+| **Arguments** | **Type** | **Description** |
+| ------------- | -------- | --------------- |
+| _`preparedReads`_ | `PreparedRead[]` | Reads returned by `prepareRead`. Results come back in this order. Without atomic batching in the wallet, they are submitted as sequential transactions. |
+| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, returns as soon as the requests are submitted, before validators vote.<br /><br />Call `wait()` on the response to finish. |
+| `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for batch and per-read progress events; see [ProgressHook Type and Response](#execute-reads). |
+
+</PushAPIReference>
+
+> In the API response, each executed read is reported in `reads`, in the order you prepared them.
+
+<ReadAdvancedArguments hideRows={['options.blockNumber', 'options.minConfirmations', 'options.expiryBlocks', 'options.maxFee', 'options.refundTo']} />
+
+<Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
+
+Batch events wrap the single-read events documented in [Read Universal State](/docs/chain/build/universal-read/#read-progress-hook); each read in the batch also emits its own `READ-TX-1xx` events.
+
+| ID | Title | Message | Level | Response |
+| -- | ----- | ------- | ----- | -------- |
+| `READ-TX-001` | Batch Read Initiated | Preparing `<count>` reads across `<chains>` | INFO | `{ count, chains }` |
+| `READ-TX-002-01` | Starting Read #`<n>`/`<total>` | Read `<n>` of `<total>` targets `<chain>` | INFO | `{ n, total, chain }` |
+| `READ-TX-002-99-99` | Read #`<n>`/`<total>` Complete | Read `<n>` of `<total>` settled as `<requestId>` | INFO | `{ n, total, requestId }` |
+| `READ-TX-999-01` | All Reads Fulfilled | All `<count>` reads fulfilled | SUCCESS | `{ count }` |
+| `READ-TX-999-02` | Batch Reads Failed | Batch failed at read `<n>` of `<total>`: `<error>` | ERROR | `{ failedAt, total, error }` |
+| `READ-TX-999-03` | Batch Reads Timeout | Batch timed out at read `<n>` of `<total>` | ERROR | `{ failedAt, total, error: 'read timeout' }` |
+
+</Details>
+
+<Details summary="Returns `BatchReadResponse` <object>" className="alert alert--fn-args">
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| `txHash` | `string` | Primary Push Chain transaction hash. |
+| `transactionHashes` | `string[]` | All request transactions in submission order when execution was not atomic. |
+| `reads` | `UniversalReadResponse[]` | One response per prepared read, in input order. |
+| `count` | `number` | Number of reads submitted. |
+| `atomic` | `boolean` | Whether submission was all-or-nothing. It says nothing about validator fulfillment, which is per read. |
+| `wait` | `function` | Waits until every read is terminal and returns the responses in input order. Only a timeout throws. |
+
+</Details>
+
+
+
+<Details summary="Live Playground: Execute Multiple Reads in One Flow" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={null}>
+
+{`
+// customPropHighlightRegexStart=universal\.executeReads
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=universal_read_batch
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    // vitalik.eth on Ethereum Sepolia, the public ENS address.
+    // https://sepolia.etherscan.io/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+    const HOLDER = '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045';
+
+    // Push gateway vault PDA on Solana Devnet, derived with the seed 'vault' from the Solana Universal Gateway in the Smart Contract Address Book.
+    // https://explorer.solana.com/address/89q1AUFb7YREHtjc1aYaPywovPq6tb3GYNPyDUJ3rshi?cluster=devnet
+    const VAULT_PDA = '89q1AUFb7YREHtjc1aYaPywovPq6tb3GYNPyDUJ3rshi';
+
+    async function main() {
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
+      const wallet = ethers.Wallet.createRandom().connect(provider);
+      const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+      try {
+        console.log('Temporary Donut wallet:', wallet.address);
+        await rl.question(':::prompt:::Fund this temporary wallet with test PC, then press Enter: ' + wallet.address + ' Faucet: https://faucet.push.org/');
+        const signer = await PushChain.utils.signer.toUniversal(wallet);
+        const pushChainClient = await PushChain.initialize(signer, {
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        });
+
+        console.log('Preparing two reads and quoting their fees...');
+        const ethBalance = await pushChainClient.universal.prepareRead(HOLDER, {
+          chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+        });
+        const solBalance = await pushChainClient.universal.prepareRead(VAULT_PDA, {
+          chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+        });
+        console.log('Total fee:', ethers.formatEther(ethBalance.fees.total + solBalance.fees.total), 'PC');
+
+        console.log('Submitting both reads to Push Chain...');
+        const batch = await pushChainClient.universal.executeReads([ethBalance, solBalance], {
+          waitForCompletion: false,
+          progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
+        });
+        console.log('Submission is atomic:', batch.atomic);
+        console.log('Save request IDs:', batch.reads.map(read => read.requestId).join(', '));
+        console.log('Save transaction hashes:', (batch.transactionHashes || [batch.txHash]).join(', '));
+
+        console.log('Waiting for validators to reach quorum and deliver both callbacks (usually under a minute)...');
+        const [eth, sol] = await batch.wait();
+        console.log('Value:', ethers.formatEther(eth.value), 'ETH');
+        console.log('Value:', ethers.formatUnits(sol.value, 9), 'SOL');
+      } finally {
+        rl.close();
+        provider.destroy();
+      }
+    }
+    main().catch(error => { console.error(error.message); process.exitCode = 1; });
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+
+## More Examples
+
+### Read Ethereum, Solana and Web2 in One Signature
+
+Read a Chainlink price on Ethereum Sepolia, a USDC balance on Solana Devnet and two fields from a public API, all requested with a single user signature and returned in order.
+
+<Details summary="Live Playground: Cross-Chain Reads in One Batch" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={null}>
+
+{`
+// customPropHighlightRegexStart=universal\.executeReads
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=universal_read_batch_three_sources
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    // Chainlink ETH / USD price feed on Ethereum Sepolia, from Chainlink Data Feeds. The answer has 8 decimals.
+    // https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1#sepolia-testnet
+    const FEED = '0x694AA1769357215DE4FAC081bf1f309aDC325306';
+    const FEED_ABI = [
+      { type: 'function', name: 'latestAnswer', stateMutability: 'view', inputs: [], outputs: [{ type: 'int256' }] },
+    ];
+
+    // Push gateway vault PDA on Solana Devnet, derived with the seed 'vault' from the Solana Universal Gateway in the Smart Contract Address Book.
+    // https://explorer.solana.com/address/89q1AUFb7YREHtjc1aYaPywovPq6tb3GYNPyDUJ3rshi?cluster=devnet
+    const VAULT_PDA = '89q1AUFb7YREHtjc1aYaPywovPq6tb3GYNPyDUJ3rshi';
+
+    // USDC mint on Solana Devnet, Circle's deployment, listed in the Smart Contract Address Book.
+    // https://explorer.solana.com/address/4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU?cluster=devnet
+    const USDC_MINT = '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU';
+
+    // JSONPlaceholder, a free public test API whose values do not change between fetches.
+    // https://jsonplaceholder.typicode.com/users/1
+    const ENDPOINT = 'https://jsonplaceholder.typicode.com/users/1';
+
+    async function main() {
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
+      const wallet = ethers.Wallet.createRandom().connect(provider);
+      const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+      try {
+        console.log('Temporary Donut wallet:', wallet.address);
+        await rl.question(':::prompt:::Fund this temporary wallet with test PC, then press Enter: ' + wallet.address + ' Faucet: https://faucet.push.org/');
+        const signer = await PushChain.utils.signer.toUniversal(wallet);
+        const pushChainClient = await PushChain.initialize(signer, {
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        });
+
+        console.log('Preparing three reads across Ethereum, Solana and Web2...');
+        const price = await pushChainClient.universal.prepareRead(FEED, {
+          chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+          abi: FEED_ABI,
+          functionName: 'latestAnswer',
+        });
+        const usdc = await pushChainClient.universal.prepareRead(VAULT_PDA, {
+          chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+          token: USDC_MINT,
+        });
+        const user = await pushChainClient.universal.prepareRead(ENDPOINT, {
+          chain: PushChain.CONSTANTS.CHAIN.WEB2,
+          web2: {
+            extract: [
+              { path: '$.id', valueType: 'uint256' },
+              { path: '$.name', valueType: 'string' },
+            ],
+          },
+        });
+        console.log('Total fee:', ethers.formatEther(price.fees.total + usdc.fees.total + user.fees.total), 'PC');
+
+        console.log('Submitting all three reads to Push Chain...');
+        const batch = await pushChainClient.universal.executeReads([price, usdc, user], {
+          waitForCompletion: false,
+          progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
+        });
+        console.log('Submission is atomic:', batch.atomic);
+        console.log('Save request IDs:', batch.reads.map(read => read.requestId).join(', '));
+        console.log('Save transaction hashes:', (batch.transactionHashes || [batch.txHash]).join(', '));
+
+        console.log('Waiting for validators to reach quorum and deliver all three callbacks (usually under a minute)...');
+        const [priceResult, usdcResult, userResult] = await batch.wait();
+        console.log('Value:', ethers.formatUnits(priceResult.value, 8), 'USD per ETH');
+        console.log('Value:', ethers.formatUnits(usdcResult.value, 6), 'USDC');
+        console.log('Value:', JSON.stringify(userResult.value, (_, value) => typeof value === 'bigint' ? value.toString() : value));
+        console.log('id:', userResult.value[0].toString(), 'name:', userResult.value[1]);
+      } finally {
+        rl.close();
+        provider.destroy();
+      }
+    }
+    main().catch(error => { console.error(error.message); process.exitCode = 1; });
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+
+
+## Key Considerations
+
+- **Single signature**: one transaction submits every read when the wallet supports atomic batching. Otherwise the reads go out as sequential transactions, listed in **transactionHashes**.
+- **Fulfillment is per read**: **atomic** only describes the submission. Validators fulfill each read on its own, so check **value** on every response.
+- **Partial batches**: with sequential submission, an earlier read can exist even if a later transaction fails. Check the hashes on the error before resubmitting, or you pay twice. A prepared read that fails revalidation must be prepared again.
+- **Fees**: each read carries its own fee and the batch costs their sum. Nothing is charged at prepare time.
+- **Tracking**: the progress hook streams batch events plus each read's own events. A timed-out wait cancels nothing; resume with [Track Universal Read](/docs/chain/build/track-universal-read/).
+
+
+## Next Steps
+
+- Track a batch by transaction hash with [Track Universal Read](/docs/chain/build/track-universal-read/)
+- Act on results on-chain with [Contract-Initiated Universal Read and Callback](/docs/chain/build/contract-initiated-universal-read-and-callback/)
+- Go back to single reads in [Read Universal State](/docs/chain/build/universal-read/)
+- Find every supported chain, including `CHAIN.WEB2`, in [Constants Reference](/docs/chain/build/constants/#chain-constants)

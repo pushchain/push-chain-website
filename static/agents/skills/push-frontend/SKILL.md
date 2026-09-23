@@ -1,12 +1,12 @@
 ---
 name: push-frontend
-description: "Use when building React apps with @pushchain/ui-kit - covers PushUniversalWalletProvider setup, PushUniversalAccountButton, usePushChainClient hook, theme customization, and sending universal transactions (Route 1/2/3) from the browser. Triggers on: 'add wallet connect button in React', 'use @pushchain/ui-kit in Next.js or Vite', 'send universal transaction from browser', 'customize PushUniversalWalletProvider theme'."
+description: "Use when building React apps with @pushchain/ui-kit - covers PushUniversalWalletProvider setup, PushUniversalAccountButton, usePushChainClient hook, theme customization, sending universal transactions (Route 1/2/3) from the browser, and Universal Read (read, prepareRead, executeReads, trackRead) from a component. Triggers on: 'add wallet connect button in React', 'use @pushchain/ui-kit in Next.js or Vite', 'send universal transaction from browser', 'customize PushUniversalWalletProvider theme', 'read another chain's state onto Push Chain from React'."
 metadata:
   id: push-frontend
   intent: 'Enable universal transactions in a React frontend app'
   package: '@pushchain/ui-kit'
   package_version: '6.0.24'
-  current_sdk_version: '6.0.24'
+  current_sdk_version: '6.0.26'
   entry: 'usePushChainClient'
   resources: 'https://push.org/agents/resources/push-frontend/index.json'
   references: 'references/ui-components.md'
@@ -487,6 +487,67 @@ if (!result.success) throw new Error('Cascade failed');
 // progressHook event IDs (SEND-TX-001, SEND-TX-999-01, etc.): https://push.org/agents/workflows/progress-hook-events.md
 ```
 
+## Universal Read from a Component
+
+`pushChainClient` from `usePushChainClient()` exposes Universal Read: `read`, `prepareRead`, `executeReads` and `trackRead`. A read brings state from another chain (EVM or Solana) or an HTTPS endpoint onto Push Chain with validator agreement, stored in the Universal Read Registry (`0x00000000000000000000000000000000000000b2`) unless you pass `callback` to your own receiver contract. It is paid (the connected wallet signs and funds it) and asynchronous. If only the UI needs the value, use an ordinary RPC call instead.
+
+```tsx
+import { useEffect, useState } from 'react';
+import { usePushChainClient, usePushChain } from '@pushchain/ui-kit';
+
+function EthBalanceOnPush({ holder }: { holder: string }) {
+  const { pushChainClient } = usePushChainClient();
+  const { PushChain } = usePushChain();
+  const [value, setValue] = useState<bigint>();
+  const [reason, setReason] = useState<string>();
+
+  // After a refresh, resume a saved read: tracking needs no signature and no funds.
+  useEffect(() => {
+    const requestId = localStorage.getItem('pendingRead');
+    if (!pushChainClient || !requestId) return;
+    pushChainClient.universal
+      .trackRead({ requestId })
+      .then((snapshot) => snapshot.wait())
+      .then((done) => {
+        localStorage.removeItem('pendingRead');
+        if (done.value !== undefined) setValue(done.value);
+      });
+  }, [pushChainClient]);
+
+  const readBalance = async () => {
+    if (!pushChainClient) return; // guard: null before wallet connects
+
+    const pending = await pushChainClient.universal.read(holder, {
+      chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+      waitForCompletion: false,
+      progressHook: (p) => console.log(`${p.id}: ${p.title}`),
+    });
+    // Save the reference so a page refresh can resume with trackRead.
+    localStorage.setItem('pendingRead', pending.requestId);
+
+    const done = await pending.wait();
+    localStorage.removeItem('pendingRead');
+    if (done.value !== undefined) setValue(done.value);
+    else setReason(`status ${done.status}, source ${done.raw?.status}, callbackDelivered ${done.callbackDelivered}, decodeError ${done.decodeError ?? 'none'}`);
+  };
+
+  return (
+    <div>
+      <button onClick={readBalance}>Read Sepolia balance onto Push Chain</button>
+      {value !== undefined && <p>{PushChain.utils.helpers.formatUnits(value, 18)} ETH</p>}
+      {reason && <p>No value: {reason}</p>}
+    </div>
+  );
+}
+```
+
+- **`value` is the success signal.** When it is `undefined`, show `status`, `raw.status`, `callbackDelivered` and `decodeError`.
+- **Query options**: none = native balance, `token` = ERC-20 or SPL balance, `abi` or `idl` + `functionName` + `args` = typed contract call (any function in the ABI) or Solana program, `storageSlot` = EVM storage word, `web2: { extract: [{ path, valueType }] }` with `chain: CHAIN.WEB2` = JSON fields from an HTTPS endpoint.
+- **Several reads, one signature**: `prepareRead` each (no funds needed), then `executeReads([...])`; results come back in prepared order.
+- **Never put secrets in a Web2 read** (URL, headers and body are public), and never pass `CHAIN.WEB2` to `sendTransaction`.
+
+Full reference: [universal-read.md](https://push.org/agents/workflows/universal-read.md).
+
 ## Sign a Message
 
 ```tsx
@@ -621,8 +682,9 @@ For wallets that implement ERC-1271 (multisigs, account-abstraction wallets, UEA
 | `wallet: true` in `login` config — `pushChainClient` stays `null` after external-wallet connect | Use the object form `wallet: { enabled: true }`. The bare boolean is silently ignored by the provider. See [Setup - Wrap Your App](#setup---wrap-your-app). |
 | `app`, `themeMode`, `themeOverrides` placed inside `config` — they're ignored and the provider falls back to defaults | These are **top-level props** on `PushUniversalWalletProvider`, NOT keys in `config`. `config` carries `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`. |
 | `symbol` added to a PC-20 `funds.token` reference — transfer misroutes or throws | A PC-20 reference is exactly `{ chain, address }`; the SDK detects it by the **absence** of `symbol`. `chain` = where the tokens sit now, not the destination. See [Moving a PC-20](#moving-a-pc-20-push-born-token). |
+| Universal Read value used without a check, or read resubmitted after a refresh | `value` is set only when the read succeeded end to end; when it is `undefined`, read `status`, `raw.status`, `callbackDelivered` and `decodeError`. Save `requestId` before `wait()` and resume with `trackRead({ requestId })` instead of paying again. See [Universal Read from a Component](#universal-read-from-a-component). |
 
-> For read-only state queries (no transactions): use ethers.js or viem directly with `https://evm.donut.rpc.push.org/` (HTTP) or `wss://evm.donut.rpc.push.org` (WebSocket - for `watchBlocks`, event subscriptions). See [read-blockchain-state.md](https://push.org/agents/workflows/read-blockchain-state.md).
+> For read-only state queries (no transactions): use ethers.js or viem directly with `https://evm.donut.rpc.push.org/` (HTTP) or `wss://evm.donut.rpc.push.org` (WebSocket - for `watchBlocks`, event subscriptions). See [read-blockchain-state.md](https://push.org/agents/workflows/read-blockchain-state.md). To deliver state from another chain or a web API on-chain to Push Chain, use [Universal Read](#universal-read-from-a-component).
 
 ## Downloadable Resources
 
@@ -644,5 +706,6 @@ Copy these files into your project - self-contained and ready to run:
 - [Send multichain transaction](https://push.org/agents/workflows/send-multichain-transaction.md)
 - [Track transaction lifecycle](https://push.org/agents/workflows/track-transaction.md)
 - [Sign universal message](https://push.org/agents/workflows/sign-universal-message.md)
+- [Universal Read](https://push.org/agents/workflows/universal-read.md)
 - [Wallet provider React example](https://push.org/agents/examples/wallet-provider-react.md)
 - [Execute transaction examples](https://push.org/agents/examples/execute-transactions.md)

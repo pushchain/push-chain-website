@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "version": "1.2.0",
+  "current_sdk_version": "6.0.26",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "Feature availability matrix showing which Push Chain capabilities are supported per actor type (developer, end_user, agent, backend). Cross-reference with capabilities.json for full capability definitions.",
   "legend": {
     "true": "Fully supported for this actor type",
@@ -169,6 +169,38 @@
       "end_user": true,
       "agent": false,
       "backend": false
+    },
+    {
+      "feature": "universal_read",
+      "description": "Read Universal State: paid, asynchronous request for EVM, Solana or Web2 state that validators agree on and deliver on-chain to the Universal Read Registry or your own receiver contract.",
+      "developer": true,
+      "end_user": "partial",
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "universal_read_batch",
+      "description": "Read Multiple Universal States: prepareRead (no funds needed) then executeReads submits several reads under one signature where the wallet supports atomic batching.",
+      "developer": true,
+      "end_user": "partial",
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "track_universal_read",
+      "description": "Track Universal Read: resume a read by requestId or txHash from any session with a read-only client (no signer, no funds).",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "contract_initiated_universal_read",
+      "description": "A Push Chain contract inheriting UniversalReadClient requests a read (through the SDK or by building the ReadSpec itself) and receives the result in _onReadResult.",
+      "developer": true,
+      "end_user": false,
+      "agent": false,
+      "backend": "partial"
     }
   ]
 }

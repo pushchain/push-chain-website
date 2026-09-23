@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "version": "1.1.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T22:38:22.658Z",
+  "current_sdk_version": "6.0.26",
+  "generated": "2026-09-22T20:31:15.893Z",
   "description": "Full index of all Push Chain code examples with SDK methods used, prerequisite examples, chains involved, and difficulty metadata. Referenced by agents/index.json as the canonical example catalog.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .examples[]. Change examples/index.json[N] → examples/index.json.examples[N].",
   "examples": [
@@ -840,6 +840,206 @@
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/utility-functions/"
+    },
+    {
+      "id": "universal-read-batch",
+      "name": "Execute Multiple Reads in One Flow",
+      "file": "universal-read-batch.md",
+      "description": "Code example: Execute Multiple Reads in One Flow. Source: https://push.org/docs/chain/build/read-multiple-universal-states/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareRead",
+        "pushChainClient.universal.executeReads"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/read-multiple-universal-states/"
+    },
+    {
+      "id": "universal-read-resume",
+      "name": "Track a Read",
+      "file": "universal-read-resume.md",
+      "description": "Code example: Track a Read. Source: https://push.org/docs/chain/build/track-universal-read/",
+      "sdk_methods_used": [
+        "PushChain.initialize",
+        "pushChainClient.universal.trackRead",
+        "PushChain.utils.account.toUniversal"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/track-universal-read/"
+    },
+    {
+      "id": "universal-read-evm-balance",
+      "name": "Native Balance (ETH of vitalik.eth)",
+      "file": "universal-read-evm-balance.md",
+      "description": "Code example: Native Balance (ETH of vitalik.eth). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-erc20-balance",
+      "name": "ERC-20 Balance (USDC held by the Push Vault)",
+      "file": "universal-read-erc20-balance.md",
+      "description": "Code example: ERC-20 Balance (USDC held by the Push Vault). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-contract-call",
+      "name": "Contract Call (Chainlink ETH / USD price)",
+      "file": "universal-read-contract-call.md",
+      "description": "Code example: Contract Call (Chainlink ETH / USD price). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-storage-slot",
+      "name": "Storage Slot (WETH decimals)",
+      "file": "universal-read-storage-slot.md",
+      "description": "Code example: Storage Slot (WETH decimals). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-sol-balance",
+      "name": "Native Balance (SOL held by the Push gateway vault)",
+      "file": "universal-read-sol-balance.md",
+      "description": "Code example: Native Balance (SOL held by the Push gateway vault). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-spl-token",
+      "name": "SPL Token Balance (USDC held by the same vault)",
+      "file": "universal-read-spl-token.md",
+      "description": "Code example: SPL Token Balance (USDC held by the same vault). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-web2",
+      "name": "JSON Fields (id and name from a public API)",
+      "file": "universal-read-web2.md",
+      "description": "Code example: JSON Fields (id and name from a public API). Source: https://push.org/docs/chain/build/universal-read/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.read"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/universal-read/"
+    },
+    {
+      "id": "universal-read-prepare",
+      "name": "Inspect PreparedRead",
+      "file": "universal-read-prepare.md",
+      "description": "Code example: Inspect PreparedRead. Source: https://push.org/docs/chain/build/read-multiple-universal-states/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareRead"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/read-multiple-universal-states/"
+    },
+    {
+      "id": "universal-read-batch-three-sources",
+      "name": "Cross-Chain Reads in One Batch",
+      "file": "universal-read-batch-three-sources.md",
+      "description": "Code example: Cross-Chain Reads in One Batch. Source: https://push.org/docs/chain/build/read-multiple-universal-states/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareRead",
+        "pushChainClient.universal.executeReads"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/read-multiple-universal-states/"
+    },
+    {
+      "id": "get-origin-for-uea",
+      "name": "UEAFactory → getOriginForUEA",
+      "file": "get-origin-for-uea.md",
+      "description": "Code example: UEAFactory → getOriginForUEA. Source: https://push.org/docs/chain/build/contract-helpers/",
+      "sdk_methods_used": [],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/contract-helpers/"
+    },
+    {
+      "id": "get-uea-for-origin",
+      "name": "UEAFactory → getUEAForOrigin",
+      "file": "get-uea-for-origin.md",
+      "description": "Code example: UEAFactory → getUEAForOrigin. Source: https://push.org/docs/chain/build/contract-helpers/",
+      "sdk_methods_used": [],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/contract-helpers/"
+    },
+    {
+      "id": "read-client-request-context",
+      "name": "UniversalReadClient → _requestRead",
+      "file": "read-client-request-context.md",
+      "description": "Code example: UniversalReadClient → _requestRead. Source: https://push.org/docs/chain/build/contract-helpers/",
+      "sdk_methods_used": [],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/contract-helpers/"
+    },
+    {
+      "id": "read-client-stored-result",
+      "name": "UniversalReadClient → _onReadResult",
+      "file": "read-client-stored-result.md",
+      "description": "Code example: UniversalReadClient → _onReadResult. Source: https://push.org/docs/chain/build/contract-helpers/",
+      "sdk_methods_used": [
+        "PushChain.initialize",
+        "pushChainClient.universal.trackRead",
+        "PushChain.utils.account.toUniversal"
+      ],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/contract-helpers/"
     }
   ]
 }

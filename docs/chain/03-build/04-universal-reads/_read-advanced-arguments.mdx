@@ -1,0 +1,21 @@
+import Details from '@theme/Details';
+import HideTableRows from '@site/src/components/HideTableRows/HideTableRows';
+
+<HideTableRows rows={props.hideRows}>
+
+<Details summary="Advanced Arguments" className="alert alert--minimal code">
+
+| Arguments | Type | Default | Description |
+| --------- | ---- | ------- | ----------- |
+| `options.blockNumber` | `bigint` | Oracle height minus `minConfirmations` | EVM only. Pins the read to a specific destination block. The oracle-observed height can lag the real head. |
+| `options.minConfirmations` | `number` | `1` | EVM only. Confirmations the destination block must have before validators read it. |
+| `options.expiryBlocks` | `bigint` | `300n` | Request lifetime in Push Chain blocks. An unfulfilled request expires and refunds the unused callback budget. |
+| `options.maxFee` | `bigint` | SDK estimated | Cap on the upfront payment (protocol fee plus callback budget). |
+| `options.refundTo` | `string` | Your Push account | Where unused callback budget is sent. Must accept native Push transfers; a contract without a payable `receive()` forfeits the refund. |
+| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between status polls. Minimum `500`. |
+| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds this caller waits. Timing out does not cancel the request; resume it with [`trackRead`](/docs/chain/build/track-universal-read/). An explicit value overrides the cap. |
+| `options.advanced.enforceGasCheck` | `boolean` | `false` | `false` warns and proceeds when the pre-flight balance check finds a shortfall. `true` throws before broadcasting. |
+
+</Details>
+
+</HideTableRows>

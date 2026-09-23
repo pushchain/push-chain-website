@@ -1,0 +1,206 @@
+---
+id: docs-chain-build-track-universal-read
+title: Track Universal Read
+hide_title: false
+slug: /chain/build/track-universal-read
+displayed_sidebar: pushChainSidebar
+sidebar_position: 4
+---
+
+<head>
+  <title>Track Universal Read | Build | Push Chain Docs</title>
+</head>
+
+import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+{/* Content Start */}
+
+## Overview
+
+Track a Universal Read by its request ID, or by the Push Chain transaction that submitted it. You get the current state of the request and can wait for it to reach a terminal status.
+
+Tracking works with a read-only client that has no signer and no funds. That makes it the right tool after a page refresh, from a backend, or when `read()` timed out at the client while the request kept running on chain.
+
+> **Note**: `trackRead()` can be used independently of `read()`. Save the request ID or transaction hash and resume from any session.
+
+## Track Universal Read
+
+**_`pushChainClient.universal.trackRead({ requestId } | { txHash }, {options}): Promise<UniversalReadResponse | UniversalReadResponse[]>`_**
+
+Tracking by transaction hash returns an array because one transaction can carry several reads.
+
+```typescript
+const snapshot = await pushChainClient.universal.trackRead(
+  { requestId },
+  {
+    progressHook: (progress) => {
+      console.log(progress.id + ': ' + progress.title);
+    },
+  }
+);
+
+const done = await snapshot.wait();
+console.log(done.status, done.value);
+```
+
+<PushAPIReference>
+
+| **Arguments** | **Type** | **Default** | **Description** |
+| ------------- | -------- | ----------- | --------------- |
+| _`ref.requestId`_ \| _`ref.txHash`_ | `string` \| `bigint` | - | The read's request ID (hex or numeric), or the Push Chain transaction that submitted it. Pass one. |
+| `options.resultShape` | `{ kind: 'evmCall', abi, functionName }` and others | Inferred | How to decode `resultData`. Balances, storage and Web2 reads are inferred from the on-chain query. A typed contract call resumed in a new session needs it because the ABI is not on chain; without it `value` stays raw bytes. |
+| `options.progressHook` | `(progress: ProgressEvent) => void` | `undefined` | Callback invoked at each lifecycle step while `wait()` polls. See [ProgressHook Type and Response](#track-progress-hook) below. |
+
+</PushAPIReference>
+
+<Details summary="Advanced Arguments" className="alert alert--minimal code">
+
+| Arguments | Type | Default | Description |
+| --------- | ---- | ------- | ----------- |
+| `options.advanced.pollingIntervalMs` | `number` | `2000` | Milliseconds between polls when calling `wait()`. Minimum: `500`. |
+| `options.advanced.timeout` | `number` | Derived from expiry, at most `180000` | Maximum milliseconds `wait()` polls before throwing `ReadTimeoutError` with `code === 'READ_TIMEOUT'`. Timing out cancels nothing; the request keeps running and you can track it again. |
+
+</Details>
+
+<h2 className="anchor" id="track-progress-hook" style={{ height: '0px', overflow: 'hidden', margin: 0, padding: 0 }}>ProgressHook Type and Response</h2>
+
+<Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
+
+| ID | Title | Message | Level | Response |
+| -- | ----- | ------- | ----- | -------- |
+| `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
+| `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
+| `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
+| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
+| `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
+| `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
+| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
+| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. A fulfilled read whose callback was not delivered also ends here, with status `CALLBACK_FAILED` (or `SOURCE_ERROR`, `DECODE_FAILED`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
+
+</Details>
+
+<Details summary="Returns `UniversalReadResponse` <object>" className="alert alert--fn-args">
+
+The returned snapshot is the current state of the request. Call `wait()` to poll until the read reaches a terminal status, or `refresh()` to fetch one fresh snapshot.<br /><br />
+
+For the full response shape, see [Read Universal State - Returns UniversalReadResponse](/docs/chain/build/universal-read/#returns-universal-read-response).
+
+</Details>
+
+## Resume a Typed Contract Call
+
+A typed contract call has no ABI on chain, so pass the ABI and function name through `resultShape` when you resume it in a new session.
+
+```typescript
+const snapshot = await pushChainClient.universal.trackRead(
+  { requestId },
+  { resultShape: { kind: 'evmCall', abi: tokenAbi, functionName: 'totalSupply' } },
+);
+```
+
+> **Note**: Keep the ABI next to your stored request reference. `resultShape` supplies runtime decoding only; it cannot infer a TypeScript return type from a hash.
+
+## Live Playground
+
+Tracking needs no wallet and no funds. Pick a predefined read, or track a request ID of your own.
+
+<Details summary="Live Playground: Track a Read" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={null}>
+
+{`
+// customPropHighlightRegexStart=universal\.trackRead
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=universal_read_resume
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    // A completed read: USDC held by the Push gateway vault on Solana Devnet, stored on the Universal Read Registry.
+    // https://donut.push.network/tx/0xf7efe7f3908f0fd4c8480352c23e678b55deeb5537ac8c2a7f6abdd6b6bb71d5
+    const REQUEST_ID = '0xcb23af06c1b2b933cb58240f72df881b2d3ca3d82021cbe1649dcee0ec92af3c';
+
+    // A Push Chain transaction that submitted one read: the ETH balance of vitalik.eth on Ethereum Sepolia.
+    // https://donut.push.network/tx/0x8a04e913102ae2db75ef6146b5cc25241637614b17b95b51008e3613d5fab544
+    const TX_HASH = '0x8a04e913102ae2db75ef6146b5cc25241637614b17b95b51008e3613d5fab544';
+
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+    const print = (value) => JSON.stringify(value, (_, v) => typeof v === 'bigint' ? v.toString() : v);
+
+    async function main() {
+      try {
+        // Tracking needs no signer and no funds, so a read-only client is enough
+        const account = PushChain.utils.account.toUniversal('0x000000000000000000000000000000000000dEaD', {
+          chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+        });
+        const pushChainClient = await PushChain.initialize(account, {
+          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        });
+
+        const target = await returnUserTrackSelection();
+
+        if (target.txHash) {
+          console.log('Looking up every read submitted in', target.txHash, '...');
+          const reads = await pushChainClient.universal.trackRead({ txHash: target.txHash }, {
+            progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
+          });
+          console.log('Reads in this transaction:', reads.length);
+          for (const read of reads) {
+            const done = await read.wait();
+            console.log('Value:', ethers.formatEther(done.value), 'ETH');
+          }
+          return;
+        }
+
+        console.log('Looking up request', target.requestId, '...');
+        const snapshot = await pushChainClient.universal.trackRead({ requestId: target.requestId }, {
+          progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
+        });
+        console.log('Current status:', PushChain.CONSTANTS.READ.STATUS[snapshot.status]);
+
+        console.log('Waiting for the read to reach a terminal state...');
+        const done = await snapshot.wait();
+        console.log('Value:', target.decimals ? ethers.formatUnits(done.value, target.decimals) + ' ' + target.symbol : print(done.value));
+      } finally {
+        rl.close();
+      }
+    }
+
+    async function returnUserTrackSelection() {
+      const selection = await rl.question('Select what to track (1 for a predefined request ID, 2 for a predefined transaction hash, 3 for your own request ID): ');
+      if (selection !== '1' && selection !== '2' && selection !== '3') {
+        console.log('Invalid selection. Please pick 1, 2 or 3.');
+        process.exit(0);
+      }
+      if (selection === '2') return { txHash: TX_HASH };
+      if (selection === '3') {
+        const requestId = (await rl.question('Request ID (0x-prefixed, 32 bytes): ')).trim();
+        if (!/^0x[0-9a-fA-F]{64}$/.test(requestId)) {
+          console.log('Expected a 32-byte request ID.');
+          process.exit(0);
+        }
+        return { requestId };
+      }
+      return { requestId: REQUEST_ID, decimals: 6, symbol: 'USDC' };
+    }
+    main().catch(error => { console.error(error.message); process.exitCode = 1; });
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<br />
+
+## Next Steps
+
+- Read a single value on any chain with [Read Universal State](/docs/chain/build/universal-read/)
+- Batch several reads into one transaction with [Read Multiple Universal States](/docs/chain/build/read-multiple-universal-states/)
+- Trigger reads from Solidity with [Contract-Initiated Universal Read and Callback](/docs/chain/build/contract-initiated-universal-read-and-callback/)
+- Follow the transaction that carried your request with [Track Universal Transaction](/docs/chain/build/track-universal-transaction/)

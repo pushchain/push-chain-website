@@ -156,6 +156,48 @@ Emitted by the auto-upgrade flow when `getAccountStatus().uea.requiresUpgrade ==
 | `UEA-MIG-9902` | UEA Migration Failed | ERROR | `{ error: 'UEA migration failed' }` |
 | `UEA-MIG-9903` | UEA Migration Skipped | INFO | `null` |
 
+## Universal Read (`read`, `executeReads`, `trackRead`)
+
+Same event object shape. Single reads (`read`, and `trackRead` while `wait()` polls, which starts at `READ-TX-104-02`):
+
+| ID | Title | Message | Level | Response |
+| -- | ----- | ------- | ----- | -------- |
+| `READ-TX-101` | `<chain>` Read Requested | Preparing a `<namespace>` read of `<chain>` | INFO | `{ chain, namespace, queryType }` |
+| `READ-TX-102-01` | Fetching Destination Height & Fee | Reading the oracle height and protocol fee for `<chain>` | INFO | `{ chain, stage: 'preflight' }` |
+| `READ-TX-102-02` | Read Spec Assembled | Pinned at block `<n>`, expires at Push height `<n>`; fee + budget = `<total>` UPC | SUCCESS | `{ protocolFee, callbackBudget, totalValue, blockNumber, expiryPushChainHeight }` |
+| `READ-TX-102-03` | Destination Height Unavailable | The oracle has no height for `<chain>`, so it is not readable | ERROR | `{ chain }` |
+| `READ-TX-102-04` | Preflight Stale, Refetching | Preflight is `<n>`s old, refetching the Push height | WARNING | `{ fetchedAt, ageMs }` |
+| `READ-TX-102-05` | Refund Target Is A Contract | `<refundTo>` is a non-UEA contract; it needs a payable `receive()` or the unspent budget is forfeited | WARNING | `{ refundTo }` |
+| `READ-TX-103-01` | Checking Balance Requirements | Balance `<n>` UPC covers / is short of the `<n>` UPC read | INFO when sufficient / WARNING when short | `{ required, available, sufficient, shortfall, enforceGasCheck }` |
+| `READ-TX-103-02` | Insufficient Balance | Need `<n>` UPC, have `<n>` UPC | ERROR (only when `enforceGasCheck` is `true`) | `{ required, available, shortfall }` |
+| `READ-TX-103-03` | Sensitive Header Detected | Headers are written to a public event log forever: `<headers>` | WARNING | `{ matchedHeaders }` |
+| `READ-TX-104-01` | Broadcasting Read Request | Sending the read request to Push Chain | INFO | `{ stage: 'broadcasting' }` |
+| `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
+| `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
+| `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
+| `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
+| `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
+| `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
+| `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
+| `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
+| `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. A fulfilled read whose callback was not delivered also ends here, with status `CALLBACK_FAILED` (or `SOURCE_ERROR`, `DECODE_FAILED`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
+
+Batches (`executeReads`) wrap the single-read events; each read in the batch also emits its own `READ-TX-1xx` events:
+
+| ID | Title | Message | Level | Response |
+| -- | ----- | ------- | ----- | -------- |
+| `READ-TX-001` | Batch Read Initiated | Preparing `<count>` reads across `<chains>` | INFO | `{ count, chains }` |
+| `READ-TX-002-01` | Starting Read #`<n>`/`<total>` | Read `<n>` of `<total>` targets `<chain>` | INFO | `{ n, total, chain }` |
+| `READ-TX-002-99-99` | Read #`<n>`/`<total>` Complete | Read `<n>` of `<total>` settled as `<requestId>` | INFO | `{ n, total, requestId }` |
+| `READ-TX-999-01` | All Reads Fulfilled | All `<count>` reads fulfilled | SUCCESS | `{ count }` |
+| `READ-TX-999-02` | Batch Reads Failed | Batch failed at read `<n>` of `<total>`: `<error>` | ERROR | `{ failedAt, total, error }` |
+| `READ-TX-999-03` | Batch Reads Timeout | Batch timed out at read `<n>` of `<total>` | ERROR | `{ failedAt, total, error: 'read timeout' }` |
+
+Workflow: https://push.org/agents/workflows/universal-read.md
+
 ## Changed in 6.0.17-6.0.19
 
 No event IDs were added, removed, or renumbered between `6.0.16` and `6.0.19` - all tables above are unchanged. One additive payload change: the outbound wait-stage markers (the awaiting / polling / timeout / failed relay events, e.g. `SEND-TX-209-01/-02`, `SEND-TX-299-02/-03` and their Route 3 `309-xx` / `399-xx` counterparts) now include the coordinating Push Chain tx hash as `pushTxHash` in `response`; the failed marker can additionally carry the destination chain `txHash`.

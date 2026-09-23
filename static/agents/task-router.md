@@ -1,4 +1,4 @@
-<!-- version: 1.2.1 | schema_version: 1.0.0 | current_sdk_version: 6.0.19 | generated: 2026-05-15T00:00:00.000Z -->
+<!-- version: 1.3.0 | schema_version: 1.0.0 | current_sdk_version: 6.0.26 | generated: 2026-09-22T00:00:00.000Z -->
 
 # Push Chain Task Router
 
@@ -126,7 +126,7 @@ function MyComponent() {
 | **Recommended Approach** | Initialize client in read-only mode with `UniversalAccount` instead of `UniversalSigner` |
 | **SDK Method** | `PushChain.initialize(universalAccount, { network })` |
 | **What's Available** | `universal.origin`, `universal.account`, `explorer.getTransactionUrl()`, `getAccountStatus()` |
-| **Caveats** | - Cannot call `signMessage`, `signTypedData`, or `sendTransaction`<br>- For direct contract reads, use ethers.js or viem with Push Chain RPC directly |
+| **Caveats** | - Cannot call `signMessage`, `signTypedData`, or `sendTransaction`<br>- For direct contract reads, use ethers.js or viem with Push Chain RPC directly<br>- A read-only client can still `trackRead` a Universal Read by request ID or transaction hash |
 
 **Example:**
 ```typescript
@@ -147,6 +147,44 @@ const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
 const contract = new ethers.Contract(address, abi, provider);
 const result = await contract.someViewFunction();
 ```
+
+---
+
+## Read State from Another Chain or a Web API onto Push Chain
+
+<!-- capability_ids: [universal_read, execute_universal_reads, track_universal_read, contract_initiated_universal_read] -->
+
+| Aspect | Details |
+|--------|---------|
+| **Problem** | A Push Chain contract (or a shared on-chain record) needs a balance, contract value, storage slot or Solana account from another chain, or a JSON field from an HTTPS endpoint |
+| **Recommended Approach** | Universal Read: validators read the source, agree on the bytes and deliver them on-chain to the Universal Read Registry (`0x00000000000000000000000000000000000000b2`) or to your own contract inheriting `UniversalReadClient` |
+| **SDK Method** | `pushChainClient.universal.read(subject, { chain, token \| abi/idl + functionName + args \| storageSlot \| web2 })`; batches: `prepareRead` then `executeReads([...])`; resume: `trackRead({ requestId } \| { txHash })` |
+| **Route Used** | N/A. Universal Read is not a transaction route; `CHAIN.WEB2` is a read-only destination |
+| **Caveats** | - Paid and asynchronous: gas plus protocol fee plus callback budget; results arrive after validator quorum<br>- `value` is the success signal; when it is `undefined`, check `status`, `raw.status`, `callbackDelivered`, `decodeError`<br>- Save `requestId` / `txHash` before `wait()`; a client timeout cancels nothing<br>- Never put secrets in Web2 URL, headers or body (public event log)<br>- If only the app needs the value, an ordinary RPC call is cheaper and instant |
+
+**Example:**
+```typescript
+const pending = await pushChainClient.universal.read('https://jsonplaceholder.typicode.com/users/1', {
+  chain: PushChain.CONSTANTS.CHAIN.WEB2,
+  web2: {
+    extract: [
+      { path: '$.id', valueType: 'uint256' },
+      { path: '$.name', valueType: 'string' },
+    ],
+  },
+  waitForCompletion: false,
+});
+console.log('Save requestId:', pending.requestId, 'txHash:', pending.txHash);
+
+const done = await pending.wait();
+if (done.value !== undefined) {
+  console.log('id:', done.value[0].toString(), 'name:', done.value[1]);
+} else {
+  console.log('No value:', done.status, done.raw?.status, done.callbackDelivered, done.decodeError);
+}
+```
+
+**Contract that acts on the result:** inherit `UniversalReadClient` (constructor argument: Universal Callback `0x00000000000000000000000000000000000000c2`), call `_requestRead(spec, localState, callbackGasLimit)` from a payable entrypoint, override `_onReadResult(requestId, resultData, localState)`, and return early on empty `resultData` (source error). Request through the SDK with `read(subject, { chain, callback: { target, gasLimit, abi, functionName } })`, or build the `ReadSpec` in the contract. See [push-contracts SKILL.md](https://push.org/agents/skills/push-contracts/SKILL.md) and [universal-read.md](https://push.org/agents/workflows/universal-read.md).
 
 ---
 
@@ -486,6 +524,10 @@ const expectedReserve = await vault.previewBurnPlus(plusAmount);
 | Derive UEA / CEA address off-chain | `deriveExecutorAccount(uoa, { chain })` | N/A |
 | Resolve UEA/CEA → controlling wallet | `resolveControllerAccount(address, { chain? })` | N/A |
 | Track transaction | `tx.wait()` or `trackTransaction(hash)` | N/A |
+| Read external state onto Push Chain | `universal.read(subject, { chain, ...query })` | N/A (Universal Read) |
+| Read several external states, one signature | `prepareRead()` × N → `executeReads([...])` | N/A (Universal Read) |
+| Resume a Universal Read | `trackRead({ requestId } \| { txHash })` | N/A |
+| Receive external state in a contract | inherit `UniversalReadClient`: `_requestRead` / `_onReadResult` | N/A (Universal Read) |
 | Check account status | `getAccountStatus()` | N/A |
 | Upgrade UEA | `upgradeAccount()` | N/A |
 | Mint / redeem PUSD or PUSD+ | `PUSDManager.deposit` / `redeem` / `depositToPlus` / `redeemFromPlus` (external skill) | N/A |

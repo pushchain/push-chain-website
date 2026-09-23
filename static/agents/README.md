@@ -1,8 +1,8 @@
 ---
 schema_version: 1.0.0
-version: 1.0.1
-current_sdk_version: 6.0.19
-generated: 2026-05-15
+version: 1.0.2
+current_sdk_version: 6.0.26
+generated: 2026-09-22
 description: Human and agent orientation doc for the /agents/ directory
 ---
 
@@ -27,6 +27,7 @@ Push Chain is a universal L1 blockchain that enables applications to deploy smar
 | Handle an error or failure | [errors.json](https://push.org/agents/errors.json) → [recovery-playbook.md](https://push.org/agents/recovery-playbook.md) |
 | See all available code examples | [examples/index.json](https://push.org/agents/examples/index.json) |
 | Check supported chains | [supported-chains.json](https://push.org/agents/supported-chains.json) |
+| Read state from another chain or a web API onto Push Chain | [workflows/universal-read.md](https://push.org/agents/workflows/universal-read.md) |
 
 ## Skills
 
@@ -34,9 +35,9 @@ Skills are the authoritative guides for building with Push Chain. Load the one t
 
 | Skill | Use When | File |
 |-------|----------|------|
-| **push-frontend** | Building a React app with `@pushchain/ui-kit` - wallet connection, hooks, `sendTransaction` from components, Route 1/2/3 from the browser | [skills/push-frontend/SKILL.md](https://push.org/agents/skills/push-frontend/SKILL.md) |
-| **push-backend** | Writing Node.js scripts, bots, or backend services with `@pushchain/core` - ethers/viem/Solana signers, transaction cascades, lifecycle tracking | [skills/push-backend/SKILL.md](https://push.org/agents/skills/push-backend/SKILL.md) |
-| **push-contracts** | Writing Solidity that dispatches cross-chain via UGPC, handles inbound callbacks via `executeUniversalTx`, or resolves UEA/CEA identity on-chain | [skills/push-contracts/SKILL.md](https://push.org/agents/skills/push-contracts/SKILL.md) |
+| **push-frontend** | Building a React app with `@pushchain/ui-kit` - wallet connection, hooks, `sendTransaction` from components, Route 1/2/3 from the browser, Universal Read from a component | [skills/push-frontend/SKILL.md](https://push.org/agents/skills/push-frontend/SKILL.md) |
+| **push-backend** | Writing Node.js scripts, bots, or backend services with `@pushchain/core` - ethers/viem/Solana signers, transaction cascades, lifecycle tracking, Universal Read (`read`, `prepareRead`, `executeReads`, `trackRead`) | [skills/push-backend/SKILL.md](https://push.org/agents/skills/push-backend/SKILL.md) |
+| **push-contracts** | Writing Solidity that dispatches cross-chain via UGPC, handles inbound callbacks via `executeUniversalTx`, resolves UEA/CEA identity on-chain, or receives Universal Read results via `UniversalReadClient` | [skills/push-contracts/SKILL.md](https://push.org/agents/skills/push-contracts/SKILL.md) |
 | **push-pusd** _(external)_ | Integrating PUSD / PUSD+ (par-backed USD stablecoin + NAV-bearing variant) - mint, redeem, NAV quotes, cross-chain deposits. Hosted on `pusd.push.org`. | [pusd.push.org/agents/skill/push-pusd/SKILL.md](https://pusd.push.org/agents/skill/push-pusd/SKILL.md) |
 
 > See [skills/index.json](https://push.org/agents/skills/index.json) for machine-readable skill metadata.
@@ -73,6 +74,16 @@ const response = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+### pushChainClient.universal.read(subject, options)
+Brings state from another chain (EVM or Solana) or an HTTPS endpoint onto Push Chain with validator agreement (Universal Read). The result lands in the Universal Read Registry (`0x00000000000000000000000000000000000000b2`) or in your own `UniversalReadClient` contract via `callback`. Paid and asynchronous; `value` is the success signal. Batch with `prepareRead` + `executeReads`, resume with `trackRead({ requestId } | { txHash })`. See [workflows/universal-read.md](https://push.org/agents/workflows/universal-read.md).
+
+```typescript
+const result = await pushChainClient.universal.read('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045', {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, // native ETH balance
+});
+if (result.value === undefined) console.log(result.status, result.raw?.status, result.callbackDelivered, result.decodeError);
+```
+
 ### PushChain.utils.signer.toUniversal(signer)
 Converts ethers/viem signer to UniversalSigner.
 
@@ -88,6 +99,8 @@ Converts Solana keypair to UniversalSigner.
 | CEA | Chain Executor Account | Executor account on external chains, derived from UEA or Push Chain account. Enables execution on Ethereum, Solana, etc. | [push-contracts skill](https://push.org/agents/skills/push-contracts/SKILL.md) |
 | UniversalAccount | - | Chain-agnostic address format: `{ address: "0x...", chain: "eip155:11155111" }` | [sdk-capabilities.json](https://push.org/agents/sdk-capabilities.json) |
 | UniversalSigner | - | UniversalAccount with signing capabilities. Created via `toUniversal()` or `toUniversalFromKeypair()`. | [workflows/create-universal-signer.md](https://push.org/agents/workflows/create-universal-signer.md) |
+| Universal Read | - | Validator-agreed read of another chain's state or a web API, delivered on-chain to Push Chain. Distinct from ordinary RPC reads. | [workflows/universal-read.md](https://push.org/agents/workflows/universal-read.md) |
+| UniversalReadClient | - | Abstract base contract a Push Chain contract inherits to request reads (`_requestRead`) and receive results (`_onReadResult`) from Universal Callback (`0x...c2`). | [push-contracts skill](https://push.org/agents/skills/push-contracts/SKILL.md) |
 | PushChainClient | - | SDK client instance returned by `PushChain.initialize()`. Has `.universal`, `.orchestrator`, `.explorer` namespaces. | [push-backend skill](https://push.org/agents/skills/push-backend/SKILL.md) |
 
 ## SDK Packages

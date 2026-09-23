@@ -95,6 +95,7 @@
   --ifm-table-body-border: 1px solid #eaebf2;
   --ifm-table-inactive-tagbg: #fff;
   --ifm-table-inactive-tagborder: 1px solid #c4cbd5;
+  --ifm-table-section-bar: #c4cbd5;
   --ifm-playground-border-info: #a2c9ff;
   --ifm-playground-border-warning: #f3aeff;
   --ifm-playground-border-stable: #c4cbd5;
@@ -480,6 +481,7 @@
   --ifm-table-body-border: 1px solid #313338;
   --ifm-table-inactive-tagbg: #202124;
   --ifm-table-inactive-tagborder: 1px solid #484d58;
+  --ifm-table-section-bar: #484d58;
   --ifm-playground-border-info: #0056d0;
   --ifm-playground-border-warning: #d548ec;
   --ifm-playground-border-stable: #484d58;

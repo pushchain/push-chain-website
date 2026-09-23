@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.0",
-  "current_sdk_version": "6.0.24",
-  "generated": "2026-09-01T00:00:00.000Z",
+  "version": "1.2.0",
+  "current_sdk_version": "6.0.26",
+  "generated": "2026-09-22T00:00:00.000Z",
   "description": "MCP tool definitions for Push Chain operations. Each entry is a candidate MCP tool ready for Model Context Protocol integration — includes inputs, safety metadata, and mapping to the corresponding SDK method and workflow.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .candidates[]. Change mcp-candidates.json[N] → mcp-candidates.json.candidates[N].",
   "candidates": [
@@ -642,7 +642,196 @@
       "availability": "ready",
       "corresponding_sdk_method": "PushChain.utils.tokens.getPC20Address",
       "corresponding_workflow": "send-universal-transaction",
-      "notes": "Async — PC-20 mappings are dynamic and live on chain, unlike getPRC20Address (sync, static table, for external-born tokens mirrored into Push Chain). Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight. Throws the typed PC20Error family with stable codes — see agents/errors.json. Documented in docs/chain/03-build/12-Utility-Functions.mdx."
+      "notes": "Async — PC-20 mappings are dynamic and live on chain, unlike getPRC20Address (sync, static table, for external-born tokens mirrored into Push Chain). Resolve wrapper addresses from getPC20Address(...).registry — the authoritative record. receipt.externalAssetAddr is a best-effort mirror: the raw chain field is only observed when a wrapper is newly deployed, and although the SDK backfills it from UniversalCore it is undefined while an outbound is still in flight. Throws the typed PC20Error family with stable codes — see agents/errors.json. Documented in docs/chain/03-build/06-Utility-Functions.mdx."
+    },
+    {
+      "tool_name": "request_universal_read",
+      "purpose": "Requests state from an EVM chain, Solana or an HTTPS endpoint and has validators deliver the agreed result on-chain to Push Chain (Universal Read Registry by default).",
+      "inputs": [
+        {
+          "name": "push_chain_client",
+          "type": "PushChainClient",
+          "required": true,
+          "description": "An initialized PushChainClient with signing capabilities and a funded Push account."
+        },
+        {
+          "name": "subject",
+          "type": "string",
+          "required": true,
+          "description": "Account address (balance), contract address (contract call or storage slot), or HTTPS URL (Web2)."
+        },
+        {
+          "name": "chain",
+          "type": "PushChain.CONSTANTS.CHAIN",
+          "required": true,
+          "description": "Any supported EVM or Solana chain, or CHAIN.WEB2."
+        },
+        {
+          "name": "token",
+          "type": "string",
+          "required": false,
+          "description": "ERC-20 contract or SPL mint for a token balance."
+        },
+        {
+          "name": "abi | idl",
+          "type": "Array | object",
+          "required": false,
+          "description": "EVM ABI or Anchor IDL for a typed contract call or Solana program account."
+        },
+        {
+          "name": "function_name",
+          "type": "string",
+          "required": false,
+          "description": "Function (EVM) or instruction (Solana) to encode."
+        },
+        {
+          "name": "args",
+          "type": "Array<any>",
+          "required": false,
+          "description": "Positional arguments."
+        },
+        {
+          "name": "storage_slot",
+          "type": "bigint | Hex",
+          "required": false,
+          "description": "EVM only. Storage word to read."
+        },
+        {
+          "name": "web2",
+          "type": "{ extract: Array<{ path, valueType, decimals? }>, method?, headers?, body?, timeoutMs? }",
+          "required": false,
+          "description": "Required with CHAIN.WEB2. Request data is public; never include secrets."
+        },
+        {
+          "name": "callback",
+          "type": "{ target, gasLimit, abi, functionName, args? }",
+          "required": false,
+          "description": "Deliver to your own UniversalReadClient receiver instead of the registry."
+        }
+      ],
+      "return_type": "UniversalReadResponse: value (success signal), status, raw, callbackDelivered, decodeError, requestId, txHash, fees, wait(), refresh()",
+      "idempotent": false,
+      "read_only": false,
+      "state_changing": true,
+      "safety_risks": [
+        "Spends the protocol fee and callback budget from the user's Push account",
+        "URL, headers and body of a Web2 read are written to a public event log"
+      ],
+      "user_confirmation_required": true,
+      "availability": "ready",
+      "corresponding_sdk_method": "pushChainClient.universal.read(subject, options)",
+      "corresponding_workflow": "universal-read",
+      "notes": "Paid and asynchronous. Save requestId and txHash before waiting. value is defined only when the read succeeded end to end; when it is undefined, return status, raw.status, callbackDelivered and decodeError. Documented at /docs/chain/build/universal-read/."
+    },
+    {
+      "tool_name": "prepare_universal_read",
+      "purpose": "Prepares a Universal Read and quotes its fee without broadcasting or paying.",
+      "inputs": [
+        {
+          "name": "push_chain_client",
+          "type": "PushChainClient",
+          "required": true,
+          "description": "An initialized PushChainClient (read-only sufficient)."
+        },
+        {
+          "name": "subject",
+          "type": "string",
+          "required": true,
+          "description": "Account address (balance), contract address (contract call or storage slot), or HTTPS URL (Web2)."
+        },
+        {
+          "name": "chain",
+          "type": "PushChain.CONSTANTS.CHAIN",
+          "required": true,
+          "description": "Any supported EVM or Solana chain, or CHAIN.WEB2."
+        },
+        {
+          "name": "token",
+          "type": "string",
+          "required": false,
+          "description": "ERC-20 contract or SPL mint for a token balance."
+        },
+        {
+          "name": "abi | idl",
+          "type": "Array | object",
+          "required": false,
+          "description": "EVM ABI or Anchor IDL for a typed contract call or Solana program account."
+        },
+        {
+          "name": "function_name",
+          "type": "string",
+          "required": false,
+          "description": "Function (EVM) or instruction (Solana) to encode."
+        },
+        {
+          "name": "args",
+          "type": "Array<any>",
+          "required": false,
+          "description": "Positional arguments."
+        },
+        {
+          "name": "storage_slot",
+          "type": "bigint | Hex",
+          "required": false,
+          "description": "EVM only. Storage word to read."
+        },
+        {
+          "name": "web2",
+          "type": "{ extract: Array<{ path, valueType, decimals? }>, method?, headers?, body?, timeoutMs? }",
+          "required": false,
+          "description": "Required with CHAIN.WEB2. Request data is public; never include secrets."
+        }
+      ],
+      "return_type": "PreparedRead: queryKey, chain, spec, specTuple, encodedSpec, value, fees { protocolFee, callbackBudget, total }, callbackGasLimit, resultShape, preflight, warnings",
+      "idempotent": true,
+      "read_only": true,
+      "state_changing": false,
+      "safety_risks": [],
+      "user_confirmation_required": false,
+      "availability": "ready",
+      "corresponding_sdk_method": "pushChainClient.universal.prepareRead(subject, options)",
+      "corresponding_workflow": "universal-read",
+      "notes": "No funds needed. Pass the result to executeReads to submit several reads with one signature. Documented at /docs/chain/build/read-multiple-universal-states/."
+    },
+    {
+      "tool_name": "track_universal_read",
+      "purpose": "Returns the current state of a Universal Read by request ID, or of every read submitted by a Push Chain transaction, and optionally waits for a terminal status.",
+      "inputs": [
+        {
+          "name": "push_chain_client",
+          "type": "PushChainClient",
+          "required": true,
+          "description": "An initialized PushChainClient (read-only sufficient)."
+        },
+        {
+          "name": "request_id | tx_hash",
+          "type": "string",
+          "required": true,
+          "description": "The read's request ID (hex or numeric) or the submitting Push Chain transaction hash."
+        },
+        {
+          "name": "result_shape",
+          "type": "{ kind: 'evmCall', abi, functionName }",
+          "required": false,
+          "description": "Decodes a typed contract call resumed in a new session."
+        },
+        {
+          "name": "wait",
+          "type": "boolean",
+          "required": false,
+          "description": "Call wait() on the snapshot to poll until terminal."
+        }
+      ],
+      "return_type": "UniversalReadResponse (request ID) or UniversalReadResponse[] (transaction hash)",
+      "idempotent": true,
+      "read_only": true,
+      "state_changing": false,
+      "safety_risks": [],
+      "user_confirmation_required": false,
+      "availability": "ready",
+      "corresponding_sdk_method": "pushChainClient.universal.trackRead({ requestId } | { txHash }, options)",
+      "corresponding_workflow": "universal-read",
+      "notes": "Works without a signer or funds. A wait() timeout throws ReadTimeoutError (READ_TIMEOUT) and cancels nothing. Documented at /docs/chain/build/track-universal-read/."
     }
   ]
 }

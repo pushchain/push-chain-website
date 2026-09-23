@@ -119,6 +119,8 @@ yarn build --locale en
 
 ## 🏗️ Architecture
 
+Read [ARCHITECTURE.md](ARCHITECTURE.md) for the source-backed build, agent/MCP and Universal Read map. Verify relevant claims against implementation before cross-module work; refresh affected diagrams when module boundaries or read flows change. The map records its evidence and verification limits.
+
 ### Tech Stack
 
 - **Framework**: [Docusaurus 3](https://docusaurus.io/) - Modern static site generator

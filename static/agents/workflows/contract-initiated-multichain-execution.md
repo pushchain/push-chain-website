@@ -21,6 +21,8 @@ Enable a **Push Chain smart contract** to autonomously trigger execution on an e
 | **SDK involved** | Yes (client side) | No (fully on-chain) |
 | **Response handling** | SDK receives TxResponse | `executeUniversalTx()` callback on contract |
 
+> **Need to read external state rather than execute on another chain?** Outbound execution through UGPC is for writes. To bring a balance, contract value, storage slot or web API field onto Push Chain and act on it in your contract, inherit `UniversalReadClient` and use Contract-Initiated Universal Read and Callback: [universal-read.md](https://push.org/agents/workflows/universal-read.md) (Step 5).
+
 ## Key Contracts
 
 | Contract | Address | Description |

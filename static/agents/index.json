@@ -1,24 +1,24 @@
 {
   "description": "Push Chain agent-layer root index. Curated discovery entry points for agents and retrieval systems — see sub-index files (workflows/index.json, examples/index.json, resources/index.json, schemas/index.json, skills/index.json) for complete per-category listings. Push Chain is a universal L1 blockchain enabling apps to deploy once and execute across all supported chains.",
   "schema_version": "1.0.0",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "version_policy": "All files in /agents/ carry schema_version (bumps only when the file's field layout changes — signals a consumer code update is needed) and version (bumps when content changes — backward-compatible by default). Per-file versioning is intentional: contract-addresses.json can be at 1.1.0 while index.json remains at 1.0.0 because each file evolves on its own cadence. changelog.json entries additionally carry breaking and migration fields so agents can detect whether a version change requires action.",
-  "current_sdk_version": "6.0.24",
+  "current_sdk_version": "6.0.26",
   "sdk_version": {
-    "@pushchain/core": "6.0.24",
+    "@pushchain/core": "6.0.26",
     "@pushchain/ui-kit": "6.0.24"
   },
-  "generated": "2026-09-02T00:00:00.000Z",
+  "generated": "2026-09-22T00:00:00.000Z",
   "sub_indexes": [
     {
       "category": "examples",
       "path": "agents/examples/index.json",
-      "count": 64
+      "count": 79
     },
     {
       "category": "workflows",
       "path": "agents/workflows/index.json",
-      "count": 18
+      "count": 19
     },
     {
       "category": "resources",
@@ -28,7 +28,7 @@
     {
       "category": "schemas",
       "path": "agents/schemas/index.json",
-      "count": 7
+      "count": 8
     },
     {
       "category": "skills",
@@ -46,7 +46,12 @@
     "transport": "streamable-http",
     "protocol_version": "2025-11-25",
     "discovery": "https://push.org/.well-known/mcp.json",
-    "tools": ["search_docs", "get_page", "list_sections", "get_agent_resource"],
+    "tools": [
+      "search_docs",
+      "get_page",
+      "list_sections",
+      "get_agent_resource"
+    ],
     "notes": "Read-only docs access; stateless, no API key. SDK-operation tool candidates live in agents/mcp-candidates.json and remain reference definitions."
   },
   "files": [
@@ -77,7 +82,7 @@
     },
     {
       "path": "agents/contract-addresses.json",
-      "purpose": "Authoritative registry of all Push Chain smart contract addresses — Push Chain native contracts (UEAFactory, UGPC, UniversalExecutorModule) and Universal Gateway addresses on each external chain. Use this as ground truth; never hallucinate addresses.",
+      "purpose": "Authoritative registry of all Push Chain smart contract addresses: Push Chain native contracts (UEAFactory, UGPC, UniversalExecutorModule, Universal Callback, Universal Read Registry) and Universal Gateway addresses on each external chain. Use this as ground truth; never hallucinate addresses.",
       "type": "capability"
     },
     {
@@ -207,12 +212,17 @@
     },
     {
       "path": "agents/workflows/use-contract-helpers.md",
-      "purpose": "Workflow for interacting with UEAFactory and other deployed helper contracts",
+      "purpose": "Workflow for the contract helpers: UEAFactory (origin detection, UEA derivation) and the UniversalReadClient base contract (receive Universal Read results)",
       "type": "workflow"
     },
     {
       "path": "agents/workflows/contract-initiated-multichain-execution.md",
       "purpose": "Workflow for triggering cross-chain execution from a Push Chain smart contract",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/universal-read.md",
+      "purpose": "Workflow for Universal Read: read EVM, Solana or Web2 state onto Push Chain (read), batch (prepareRead + executeReads), resume (trackRead), and receive results in a contract (UniversalReadClient, ReadSpec, _requestRead / _onReadResult)",
       "type": "workflow"
     },
     {
@@ -291,6 +301,11 @@
       "type": "schema"
     },
     {
+      "path": "agents/schemas/universal-read-response.json",
+      "purpose": "JSON schema for the UniversalReadResponse returned by read(), executeReads(...).reads and trackRead()",
+      "type": "schema"
+    },
+    {
       "path": "agents/schemas/transaction-receipt.json",
       "purpose": "JSON schema for transaction receipt after confirmation",
       "type": "schema"
@@ -307,7 +322,7 @@
     },
     {
       "path": "agents/examples/index.json",
-      "purpose": "Full index of all 60+ code examples with tags, prerequisites, and difficulty levels",
+      "purpose": "Full index of all 75+ code examples with tags, prerequisites, and difficulty levels, including one per Universal Read playground",
       "type": "example"
     },
     {
@@ -361,6 +376,11 @@
       "name": "Initialize Client from Any Wallet",
       "path": "agents/workflows/initialize-client.md",
       "description": "Convert ethers, viem, or Solana signers to UniversalSigner and initialize the SDK client."
+    },
+    {
+      "name": "Universal Read",
+      "path": "agents/workflows/universal-read.md",
+      "description": "Read EVM, Solana or Web2 state onto Push Chain with validator agreement, batch reads under one signature, resume by requestId or txHash, and receive results in a UniversalReadClient contract."
     }
   ],
   "authority_ranking": [
@@ -376,7 +396,9 @@
     },
     {
       "source": "Full Documentation Dump",
-      "urls": ["https://push.org/llms-full.txt"],
+      "urls": [
+        "https://push.org/llms-full.txt"
+      ],
       "authority": 1,
       "notes": "Complete text of all documentation pages, use for deep context or when specific page content is needed"
     },
@@ -391,13 +413,17 @@
     },
     {
       "source": "Push Blog",
-      "urls": ["https://push.org/blog/"],
+      "urls": [
+        "https://push.org/blog/"
+      ],
       "authority": 3,
       "notes": "Conceptual explanations and announcements, not API reference"
     },
     {
       "source": "GitHub Repository",
-      "urls": ["https://github.com/push-protocol/push-chain-sdk"],
+      "urls": [
+        "https://github.com/push-protocol/push-chain-sdk"
+      ],
       "authority": 2,
       "notes": "Source code and inline comments, status: inferred"
     }

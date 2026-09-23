@@ -1,0 +1,37 @@
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+import ConstantsDropdown from '@site/src/components/ConstantsDropdown/ConstantsDropdown';
+import HideTableRows from '@site/src/components/HideTableRows/HideTableRows';
+
+<HideTableRows rows={props.hideRows}>
+
+<PushAPIReference>
+
+| **Arguments** | **Type** | **Description** |
+| ------------- | -------- | --------------- |
+| _`subject`_ | `string` | What to read: an account address for a balance, a contract address for a contract call or storage slot, or a URL for a Web2 read. Solana subjects are base58. |
+| _`options.chain`_ | `CHAIN` | Where to read from. Any supported EVM or Solana chain, or `CHAIN.WEB2` for an HTTPS endpoint. Decides which query option applies; see the branches below. Pass at most one query option; with none, `read` returns the subject's native balance. <ConstantsDropdown variant="CHAIN" /> |
+| :: Pass one of the following, based on `options.chain` | | |
+| ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
+| &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `Abi` \| `Idl` | EVM: the contract ABI, used to encode the call and decode `value`. Solana: the program's Anchor IDL; the subject account is decoded with the layout whose discriminator matches its data. Reads never execute an instruction. |
+| &nbsp;&nbsp;`options.functionName` | `string` | EVM: the function to call (required with `abi`). Solana: the account layout to decode; optional, since it is inferred from the discriminator. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | EVM: positional function arguments. Solana: only when `subject` is the program id, the PDA seeds of the `functionName` account in IDL order; pubkeys accept base58 or 0x-hex 32-byte strings, integers take `BigInt`. |
+| &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
+| ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
+| &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract` | `Array<{ path, valueType, decimals? }>` | Required. 1 to 16 JSONPath entries. Results come back as an array in this order. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].path` | `string` | JSONPath into the response body, for example `$.data.price`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].valueType` | `'uint256'` \| `'int256'` \| `'bool'` \| `'string'` \| `'bytes'` | How the extracted value is encoded on-chain. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.extract[].decimals` | `number` | Optional, numeric types only. The value is multiplied by 10 to this power and truncated before encoding, so `1.2345` with `decimals: 2` becomes `123`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.method` | `'GET'` \| `'POST'` | Optional. Defaults to `GET`. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.headers` | `Record<string, string>` | Optional. Request headers. Written to a public event log forever, so never include secrets. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.body` | `string` \| `Uint8Array` | Optional, `POST` only. A body on `GET` is rejected. |
+| &nbsp;&nbsp;&nbsp;&nbsp;`options.web2.timeoutMs` | `number` | Optional. Validator fetch timeout, default `5000`, clamped by validators. |
+| :: | | |
+| `options.callback` | `{ target, gasLimit, abi, functionName, args? }` | Optional. Routes the request through your own receiver contract instead of the registry; fields in [Callback Arguments](/docs/chain/build/universal-read/#callback-arguments). |
+| `options.waitForCompletion` | `boolean` | Default `true`. When `false`, resolves as soon as the request is confirmed on Push Chain, before validators vote.<br /><br />Call `wait()` on the response to finish. |
+| `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for progress updates through the read lifecycle. |
+
+</PushAPIReference>
+
+</HideTableRows>

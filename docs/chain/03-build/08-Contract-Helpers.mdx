@@ -1,0 +1,794 @@
+---
+id: docs-chain-build-contract-helpers
+title: Contract Helpers
+hide_title: false
+slug: ./contract-helpers
+displayed_sidebar: pushChainSidebar
+sidebar_position: 8
+image: "/assets/docs/previews/docs_chain_build--contract_helpers.png"
+---
+
+<head>
+  <title>Contract Helpers | Build | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+<!-- Content Start -->
+
+## Overview
+
+When building smart contract applications on Push Chain, you’ll at times need helper contracts to surface on-chain metadata, like identifying external chain users or computing deterministic smart account addresses. Push Chain provides a set of helper interfaces under the hood to simplify these workflows.
+
+Two helpers are covered here: the Universal Executor Account Factory (UEAFactory), which underpins Push Chain's multi-chain smart account abstraction, and the Universal Read Client, the base contract your app inherits to receive external chain state through Universal Read.
+
+## Universal Executor Account Factory
+
+> As previously mentioned, [Universal Executor Accounts (UEAs)](/docs/chain/important-concepts#account-types-on-push-chain) are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain.
+
+The [Universal Executor Account Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol) is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains.
+
+<br />
+<br />
+
+### UEAFactory Features
+
+The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/UEAFactoryV1.sol) serves these key features:
+
+- **Multi-Chain Support**: Register and manage UEAs for users from different blockchains
+- **Deterministic Addresses**: Uses `CREATE2` + minimal proxies for predictable UEA addresses
+- **Deployment Status**: Optionally check if a UEA is already deployed
+- **Owner ↔ UEA Mapping**: Bidirectional mapping between Universal Accounts and their UEAs, VM types and implementations.
+
+<br />
+<br />
+
+### UEAFactory Interface
+
+**Deployed Address**: **_`0x00000000000000000000000000000000000000eA`_**
+
+This helper contract helps in fetching cross-chain information about an address. It also provides identity-mapping between source chain wallet address and Push Chain address and can determine if the address is native to Push Chain or is proxy for external chain user.
+
+In order to use the UEAFactory in your contract, you can either:
+
+#### 1. Import it directly from Push Chain Core Repository
+
+```solidity
+import "push-chain-core-contracts/src/Interfaces/IUEAFactory.sol";
+```
+
+<Details summary="For Foundry Developers">
+Do the additional steps to enable the same in your Foundry:<br />
+<br />
+
+1. Run forge install
+```bash
+forge install pushchain/push-chain-core-contracts
+```
+
+2. Add remappings to your **foundry.toml** file
+```toml
+remappings = ["push-chain-core-contracts/=lib/push-chain-core-contracts/"]
+```
+</Details>
+
+
+#### Or 2. Define the interface manually in your solidity contract
+
+<Details summary="Use the following interface directly in your contract">
+
+```solidity
+pragma solidity ^0.8.0;
+
+struct UniversalAccountId {
+    string chainNamespace; // Chain namespace identifier of the owner account (e.g., "eip155" or "solana")
+    string chainId; // Chain ID of the source chain of the owner of this UEA.
+    bytes owner; // Owner's public key or address in bytes format
+}
+
+/// @title Universal Executor Account Factory Interface
+/// @notice Helper interface for deploying and querying UEAs on Push Chain
+interface IUEAFactory {
+    /**
+     * @dev Returns the owner key (UOA) for a given UEA address
+     * @param addr Any given address ( msg.sender ) on push chain
+     * @return account The Universal Account identity information associated with this UEA
+     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)
+     */
+    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);
+
+    /**
+     * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
+     * @param _id The Universal Account identity information
+     * @return uea The address of the UEA (computed deterministically)
+     * @return isDeployed True if the UEA has already been deployed
+     */
+    function getUEAForOrigin(UniversalAccountId memory _id) external view returns (address uea, bool isDeployed);
+}
+```
+
+</Details>
+
+<br />
+<br />
+
+### UEAFactory Methods
+
+### UEAFactory → getOriginForUEA
+
+**_`getOriginForUEA(address): (UniversalAccountId, bool)`_** <div style={{textAlign: 'right', fontSize: '1rem'}}>is <em><code style={{color: 'var(--ifm-sidebar-activetext-color)', background: 'transparent'}}>external view</code></em></div>
+
+Returns the owner information and UEA status for a given address on Push Chain.
+
+**Commonly used for**:
+
+- Checking if a given address is a native account on Push Chain or is controlled by another chain user.
+- Determining the source chain of a given address on Push Chain.
+- Getting the Universal Account identity information associated with this address.
+
+> Note: The returned origin address will be encoded in Hex format. For example, for Solana addresses, a base58 conversion should be done to get the readable format.
+
+```solidity
+/**
+ * @dev Returns the owner key (UOA) for a given UEA address
+ * @param addr Any given address ( msg.sender ) on push chain
+ * @return account The Universal Account identity information associated with this UEA
+ * @return isUEA True if the address addr is a UEA contract. False if it is a native account on PUSH chain (i.e., isUEA = false)
+*/
+function getOriginForUEA(
+    address addr
+)
+    external
+    view
+    returns (
+        UniversalAccountId memory account,
+        bool isUEA
+    );
+```
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Arguments | Type      | Description                                       |
+| --------- | --------- | ------------------------------------------------- |
+| _`addr`_      | `address` | Any address on Push Chain (typically msg.sender). |
+
+</PushAPIReference>
+
+<Details summary="Returns `UniversalAccountId`<struct> and `bool`" className="alert alert--fn-args">
+
+| Response | Type               | Description                                                                                                            |
+| -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| account  | `UniversalAccountId` | The Universal Account identity information containing:<br/>&nbsp;<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+| isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false).        |
+
+</Details>
+
+<Details summary="On-chain usage" className="alert alert--live-play">
+
+```solidity
+function checkCallerType() public view returns (bool isUEA) {
+  (UniversalAccountId memory account, bool isUEA) = IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(msg.sender);
+
+  if (isUEA) {
+      // Do something with the UEA
+  } else {
+      // Do something with the native account
+  }
+}
+```
+
+</Details>
+
+<Details summary="Off-chain usage" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/others-contract-helpers"}}>
+
+{`
+
+    // customPropHighlightRegexStart=factory\.getOriginForUEA
+    // customPropHighlightRegexEnd=\\);
+    // customPropGTagEvent=get_origin_for_uea
+    import { ethers } from 'ethers';
+    import { bs58 } from 'bs58';
+
+    // ——— CONFIG ———
+    const RPC_URL          = 'https://evm.donut.rpc.push.org/';
+    const FACTORY_ADDRESS  = '0x00000000000000000000000000000000000000eA';
+
+    // Corrected ABI
+    const IUEAFactoryABI = [
+      // returns (UniversalAccountId account, bool isUEA)
+      "function getOriginForUEA(address addr) view returns (tuple(string chainNamespace, string chainId, bytes owner) account, bool isUEA)"
+    ]
+
+    async function main() {
+      // 1) set up
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const factory  = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+
+      // 2) <insert any address ( UEA or Native Addresses) to check its origin details>
+      const someAddress = '0xbCfaD05E5f19Ae46feAab2F72Ad9977BC239b395';
+
+      // 3) call getOriginForUEA
+      console.log("Calling getOriginForUEA on PushChain");
+      const originResult = await factory.getOriginForUEA(someAddress);
+      console.log("Note: The address returned are always in hex format even for non-EVM chains.")
+      console.log("Result -", JSON.stringify(originResult));
+
+      // 4) optional: convert non-evm chain address according to their standards
+      if (originResult[0][0] === "solana") {
+        // Convert hex-encoded address to base58 address format
+        const bytesAddress = ethers.getBytes(originResult[0][2]);
+        const base58Address = bs58.encode(bytesAddress);
+        console.log("Solana (Base58) Address -", base58Address);
+      }
+      
+      // Note: If the origin is Solana (chainNamespace === "solana"), the owner address 
+      // will be in hex format and needs to be converted to base58 for readable format
+    }
+
+await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<br />
+<br />
+
+### UEAFactory → getUEAForOrigin
+
+**_`getUEAForOrigin(UniversalAccountId): (address, bool)`_** <div style={{textAlign: 'right', fontSize: '1rem'}}>is <em><code style={{color: 'var(--ifm-sidebar-activetext-color)', background: 'transparent'}}>external view</code></em></div>
+
+Returns the computed UEA address for a given Universal Account.
+Additionaly, it also returns the deployment status of the UEA.
+
+**Commonly used for**:
+
+- Get or compute the UEA address for a given Universal Account.
+- Check if a given Universal Account is deployed or not.
+
+> Note: UniversalAccountId is a struct that returns chainNamespace, chainId and owner. `chainNamespace` contains the [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.) and `chainId` contains the chain ID of the source chain of the owner of this UEA. `owner` contains the wallet address in bytes.
+
+```solidity
+/**
+ * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
+ * @param _id The Universal Account identity information
+ * @return uea The address of the UEA (computed deterministically)
+ * @return isDeployed True if the UEA has already been deployed
+*/
+function getUEAForOrigin(
+    UniversalAccountId memory _id
+)
+    external
+    view
+    returns (
+        address uea,
+        bool    isDeployed
+    );
+```
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Arguments | Type             | Description                                                                                                                                                |
+| --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`_id`_      | UniversalAccountId | The Universal Account identity information containing:<br/>&nbsp;<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+
+</PushAPIReference>
+
+<Details summary="Returns `address` and `bool`" className="alert alert--fn-args">
+
+| Response   | Type    | Description                                          |
+| ---------- | ------- | ---------------------------------------------------- |
+| uea        | address | The address of the UEA (computed deterministically). |
+| isDeployed | bool    | True if the UEA has already been deployed.           |
+
+</Details>
+
+<Details summary="On-chain usage" className="alert alert--live-play">
+
+```solidity
+function checkUEAType() public view returns (address uea, bool isDeployed) {
+    (address uea, bool isDeployed) = IUEAFactory(0x00000000000000000000000000000000000000eA).getUEAForOrigin(account);
+
+    if (isDeployed) {
+        // Do something with the deployed UEA
+    } else {
+        // UEA is not deployed yet but you have deterministic address for the UEA.
+    }
+}
+```
+
+</Details>
+
+<Details summary="Off-chain usage" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/others-contract-helpers"}}>
+
+{`
+// customPropHighlightRegexStart=factory\.getUEAForOrigin
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=get_uea_for_origin
+    import { ethers } from 'ethers';
+
+    // ——— CONFIG ———
+    const RPC_URL = 'https://evm.donut.rpc.push.org/';
+    const FACTORY_ADDRESS = '0x00000000000000000000000000000000000000eA';
+
+    // Corrected ABI
+    const IUEAFactoryABI = [
+    "function getUEAForOrigin(tuple(string chainNamespace, string chainId, bytes owner) _id) view returns (address uea, bool isDeployed)"
+  ]
+
+    async function main() {
+      // 1) set up
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const factory = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+
+      // 2) create UniversalAccountId struct
+      const universalAccountId = {
+        chainNamespace: 'eip155', // EVM chain
+        chainId: '11155111', // Sepolia testnet (more likely to be registered on Push testnet)
+        owner: '0xa96CaA79eb2312DbEb0B8E93c1Ce84C98b67bF11', // owner address in bytes format
+      };
+
+      // 3) call getUEAForOrigin
+      console.log('Calling getUEAForOrigin on PushChain');
+      const originResult = await factory.getUEAForOrigin(universalAccountId);
+      console.log('Result -', JSON.stringify(originResult));
+    }
+
+    await main().catch(console.error);
+
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<br />
+<br />
+
+## Universal Read Client
+
+The [Universal Read Client](https://github.com/pushchain/push-chain-core-contracts/blob/core-testnet/src/UniversalReadClient.sol) is an abstract base contract you inherit so your contract can request external state through [Universal Read](/docs/chain/important-concepts#universal-read-external-state-on-push-chain) and receive the validator-agreed result in a callback. The SDK side of the flow is covered in [Contract-Initiated Universal Read and Callback](/docs/chain/build/contract-initiated-universal-read-and-callback/).
+
+It is not a deployed helper you call. You deploy your own contract that inherits it, passing the Universal Callback address (`0x00000000000000000000000000000000000000c2` on Push Chain Donut Testnet, see the [Smart Contract Address Book](/docs/chain/setup/smart-contract-address-book/)) to the constructor.
+
+<br />
+<br />
+
+### UniversalReadClient Features
+
+The [Universal Read Client](https://github.com/pushchain/push-chain-core-contracts/blob/core-testnet/src/UniversalReadClient.sol) serves these key features:
+
+- **Request with local context**: `_requestRead` stores per-request bytes that you get back in the callback
+- **Guarded callback**: `onUniversalData` accepts calls only from Universal Callback
+- **Refund safety**: `revertRecipient` defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA
+- **Gas bound**: Callback gas is capped at `MAX_CALLBACK_GAS_LIMIT` (1,000,000)
+
+<br />
+<br />
+
+### UniversalReadClient Interface
+
+**Universal Callback Address**: **_`0x00000000000000000000000000000000000000c2`_**
+
+This is the constructor argument on Push Chain Donut Testnet: your inheriting contract sends read requests to Universal Callback and only accepts results delivered by it. The request types live in [ReadTypes.sol](https://github.com/pushchain/push-chain-core-contracts/blob/core-testnet/src/libraries/ReadTypes.sol).
+
+<Details summary="UniversalReadClient (abstract)">
+
+```solidity
+pragma solidity ^0.8.0;
+
+/// @title Universal Read Client
+/// @notice Abstract base contract for requesting external state through Universal Read
+abstract contract UniversalReadClient is IUniversalReadClient {
+    IUniversalCallback internal immutable UNIVERSAL_CALLBACK;
+    mapping(uint256 => bytes) private _localContext;
+
+    /// @dev Reverts with ZeroAddressInit if universalCallback_ is the zero address
+    constructor(address universalCallback_);
+
+    /**
+     * @dev Submits a read request and stores localState under the returned requestId.
+     * Defaults `revertRecipient` to this contract when unset. Refunds are PUSHED there on
+     * settlement, so an inheriting contract that keeps the default MUST declare a payable
+     * receive(); otherwise the push is rejected and the refund is forfeited. Point
+     * revertRecipient at an EOA to avoid that entirely.
+     */
+    function _requestRead(ReadSpec memory spec, bytes memory localState, uint64 callbackGasLimit)
+        internal
+        returns (uint256 requestId);
+    // Forwards msg.value to UNIVERSAL_CALLBACK.requestExternalReadSelf(spec, this.onUniversalData.selector, callbackGasLimit)
+
+    /// @dev Reverts with UnauthorizedCaller unless msg.sender is UNIVERSAL_CALLBACK.
+    /// Loads and deletes the stored localState, then calls _onReadResult.
+    function onUniversalData(uint256 requestId, bytes calldata resultData) external;
+
+    /// @dev Override to handle the delivered result
+    function _onReadResult(uint256 requestId, bytes calldata resultData, bytes memory localState) internal virtual;
+
+    /// @dev Returns the Universal Callback contract this client is bound to
+    function universalCallback() external view returns (IUniversalCallback);
+
+    /// @dev Returns the localState still pending for requestId (empty once delivered)
+    function getLocalContext(uint256 requestId) external view returns (bytes memory);
+}
+```
+
+</Details>
+
+<Details summary="ReadSpec struct">
+
+```solidity
+pragma solidity ^0.8.0;
+
+struct ReadSpec {
+    UniversalAccountId account;   // chainNamespace, chainId, owner (bytes)
+    bytes query;                  // encoded query envelope, built by the SDK
+    uint16 minConfirmations;      // >= 1
+    uint64 blockNumber;           // pinned source height; 0 for heightless sources (web2)
+    uint64 expiryPushChainHeight; // > current Push height
+    uint256 maxFee;               // >= msg.value
+    address revertRecipient;      // where unused callback budget is pushed; must accept native transfers
+}
+
+uint64 constant MAX_CALLBACK_GAS_LIMIT = 1_000_000;
+```
+
+</Details>
+
+Most apps do not build a **ReadSpec** by hand. The SDK's [Universal Read](/docs/chain/build/universal-read/) abstracts it if you are using the SDK.
+
+A contract can build one itself when no SDK is in the loop. See [Contract-Initiated Universal Read and Callback](/docs/chain/build/contract-initiated-universal-read-and-callback/) for the end to end contract flow.
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Field | What to put there |
+| ----- | ----------------- |
+| `account` | The source chain as `chainNamespace` and `chainId` (for example `"eip155"` and `"11155111"`), plus `owner` bytes. Validators ignore `owner` for EVM reads. |
+| `query` | The encoded read: which account, contract call or storage slot to read, and at which block. The layout is fixed by the validators; the SDK's `read-state/envelopes/` is the reference encoding. |
+| `minConfirmations` | Confirmations the source block must have. At least `1`. |
+| `blockNumber` | The source block to read at. Take `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` and subtract `minConfirmations`. Must match the block inside `query`. |
+| `expiryPushChainHeight` | When the request lapses, in Push Chain blocks: `block.number + N`. |
+| `maxFee` | Upper bound on what you are paying; `msg.value` may not exceed it. |
+| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. |
+
+</PushAPIReference>
+
+<br />
+<br />
+
+### UniversalReadClient → What You Implement
+
+Two members are your contract's contact points with Universal Read: you call `_requestRead` from your own payable entrypoint, and you override `_onReadResult` to receive the result.
+
+> Note: The numeric `requestId` used by these methods matches `requestIdUint` in the SDK response. The SDK's hex `requestId` is the same value.
+
+### UniversalReadClient → _requestRead
+
+**_`_requestRead(ReadSpec, bytes, uint64): uint256`_** <div style={{textAlign: 'right', fontSize: '1rem'}}>is <em><code style={{color: 'var(--ifm-sidebar-activetext-color)', background: 'transparent'}}>internal</code></em></div>
+
+Submits a Universal Read request to Universal Callback and stores `localState` under the returned `requestId`.
+
+**Commonly used for**:
+
+- Requesting external chain or web2 state from a payable entrypoint in your contract.
+- Carrying per-request context (such as the original requester) through to the callback.
+
+> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
+
+```solidity
+/**
+ * @dev Submits a read request and stores localState under the returned requestId
+ * @param spec The read specification (source account, query, confirmations, pinned height, expiry, max fee, refund recipient)
+ * @param localState Arbitrary bytes handed back to _onReadResult on delivery
+ * @param callbackGasLimit Gas budget for the callback, at most MAX_CALLBACK_GAS_LIMIT
+ * @return requestId The numeric id of the request
+*/
+function _requestRead(
+    ReadSpec memory spec,
+    bytes memory localState,
+    uint64 callbackGasLimit
+)
+    internal
+    returns (
+        uint256 requestId
+    );
+```
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Arguments | Type | Description |
+| --------- | ---- | ----------- |
+| _`spec`_ | `ReadSpec` | The read specification: source `account`, encoded `query`, `minConfirmations`, pinned `blockNumber`, `expiryPushChainHeight`, `maxFee` and `revertRecipient`. See the ReadSpec struct above. |
+| _`localState`_ | `bytes` | Arbitrary bytes stored under the request id and passed back to `_onReadResult`. |
+| _`callbackGasLimit`_ | `uint64` | Gas budget for the callback, at most `MAX_CALLBACK_GAS_LIMIT` (1,000,000). |
+
+</PushAPIReference>
+
+<Details summary="Returns `uint256`" className="alert alert--fn-args">
+
+| Response | Type | Description |
+| -------- | ---- | ----------- |
+| requestId | `uint256` | The numeric id of the request. Matches `requestIdUint` in the SDK response. |
+
+</Details>
+
+<Details summary="On-chain usage" className="alert alert--live-play">
+
+```solidity
+contract ExternalStateReader is UniversalReadClient {
+    address public immutable authorizedRequester;
+    mapping(uint256 => bytes) public results;
+
+    constructor(address universalCallback_, address authorizedRequester_)
+        UniversalReadClient(universalCallback_)
+    {
+        authorizedRequester = authorizedRequester_;
+    }
+
+    function request(ReadSpec calldata spec, uint64 gasLimit) external payable returns (uint256) {
+        require(msg.sender == authorizedRequester, "not authorized");
+        return _requestRead(spec, abi.encode(msg.sender), gasLimit);
+    }
+
+    function _onReadResult(uint256 requestId, bytes calldata resultData, bytes memory) internal override {
+        results[requestId] = resultData;
+    }
+
+    // Required while revertRecipient defaults to this contract
+    receive() external payable {}
+}
+```
+
+The deployed [Universal Read Registry](https://donut.push.network/address/0x00000000000000000000000000000000000000b2?tab=contract) is a production example of this pattern.
+
+</Details>
+
+<Details summary="Off-chain usage" className="alert alert--live-play">
+
+You do not need your own receiver to see what `_requestRead` records: the deployed [Universal Read Registry](https://donut.push.network/address/0x00000000000000000000000000000000000000b2?tab=contract) is a `UniversalReadClient`, and its `read` entrypoint calls `_requestRead` with the caller and query key as local context. This reads that context back for a request that already completed:
+
+<NodeJSVirtualIDE repo={null}>
+
+{`
+
+    // customPropHighlightRegexStart=registry\.readerOf
+    // customPropHighlightRegexEnd=\\);
+    // customPropGTagEvent=read_client_request_context
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    // CONFIG
+    const RPC_URL = 'https://evm.donut.rpc.push.org/';
+    // The Universal Read Registry the SDK uses on Donut
+    const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
+    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
+    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+
+    const RegistryABI = [
+      'function readerOf(uint256 requestId) view returns (address)',
+      'function queryKeyOf(uint256 requestId) view returns (bytes32)',
+      'function requestOrderOf(uint256 requestId) view returns (uint256)',
+    ];
+
+    async function main() {
+      // 1) set up a read-only provider and the registry contract (no signer needed)
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const registry = new ethers.Contract(REGISTRY_ADDRESS, RegistryABI, provider);
+      console.log('Reading request context from the registry...');
+
+      // 2) read back what the registry's entrypoint passed into _requestRead as localState
+      //    (it encodes msg.sender, the query key and a request order, then mirrors them into these mappings)
+      const requestId = BigInt(REQUEST_ID);
+      // the account that called read(), i.e. msg.sender when the request was made
+      console.log('Reader (msg.sender at request):', await registry.readerOf(requestId));
+      // the key the registry derives from the ReadSpec to group reads of the same query
+      console.log('Query key:', await registry.queryKeyOf(requestId));
+      // the position of this request among reads of that query key
+      console.log('Request order:', (await registry.requestOrderOf(requestId)).toString());
+
+      provider.destroy();
+    }
+    main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+With your own receiver, the SDK calls your entrypoint instead when you pass `callback`; see [Contract-Initiated Universal Read and Callback](/docs/chain/build/contract-initiated-universal-read-and-callback/).
+
+</Details>
+
+<br />
+<br />
+
+### UniversalReadClient → _onReadResult
+
+**_`_onReadResult(uint256, bytes, bytes)`_** <div style={{textAlign: 'right', fontSize: '1rem'}}>is <em><code style={{color: 'var(--ifm-sidebar-activetext-color)', background: 'transparent'}}>internal virtual</code></em></div>
+
+Handles a delivered result. You override this in your contract; the base contract calls it from `onUniversalData` with the `localState` you stored at request time.
+
+**Commonly used for**:
+
+- Storing the result for later reads.
+- Decoding the result bytes into typed values.
+- Acting on the result, such as updating balances or releasing a pending action.
+
+> Note: The callback arriving does not by itself prove the source read succeeded. Validate the result bytes and their freshness before acting on them. Starting another read from inside this callback is unsupported.
+
+```solidity
+/**
+ * @dev Override to handle the delivered result
+ * @param requestId The numeric id of the request
+ * @param resultData The validator-agreed result bytes
+ * @param localState The bytes stored with the request, deleted after delivery
+*/
+function _onReadResult(
+    uint256 requestId,
+    bytes calldata resultData,
+    bytes memory localState
+)
+    internal
+    virtual;
+```
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Arguments | Type | Description |
+| --------- | ---- | ----------- |
+| _`requestId`_ | `uint256` | The numeric id of the request. |
+| _`resultData`_ | `bytes` | The validator-agreed result bytes. |
+| _`localState`_ | `bytes` | The bytes you passed to `_requestRead` for this request. |
+
+</PushAPIReference>
+
+<Details summary="Returns nothing" className="alert alert--fn-args">
+
+This function has no return value.
+
+</Details>
+
+<Details summary="On-chain usage" className="alert alert--live-play">
+
+```solidity
+mapping(uint256 => bytes) public results;
+
+function _onReadResult(
+    uint256 requestId,
+    bytes calldata resultData,
+    bytes memory /* localState */
+) internal override {
+    results[requestId] = resultData;
+}
+```
+
+The deployed [Universal Read Registry](https://donut.push.network/address/0x00000000000000000000000000000000000000b2?tab=contract) is a production example of this pattern.
+
+</Details>
+
+<Details summary="Off-chain usage" className="alert alert--live-play">
+
+`_onReadResult` runs on-chain when validators deliver the result. The registry's override stores it, so you can confirm the callback landed and read what it stored, for the same completed request:
+
+<NodeJSVirtualIDE repo={null}>
+
+{`
+
+    // customPropHighlightRegexStart=universal\.trackRead
+    // customPropHighlightRegexEnd=\\);
+    // customPropGTagEvent=read_client_stored_result
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    // CONFIG
+    const RPC_URL = 'https://evm.donut.rpc.push.org/';
+    // The Universal Read Registry the SDK uses on Donut
+    const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
+    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
+    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+
+    const RegistryABI = [
+      'function hasResult(uint256 requestId) view returns (bool)',
+      'function resultByRequestId(uint256 requestId) view returns (tuple(uint256 requestId, bytes resultData, uint64 updatedAtBlock))',
+    ];
+
+    // Shape of the EVM query envelope stored in ReadSpec.query (see Read Universal State)
+    const QueryEnvelope = 'tuple(uint8 queryType, tuple(uint8 refType, uint64 blockNumber) blockRef, bytes payload)';
+    const QUERY_TYPE = { 0: 'native balance', 1: 'contract call', 2: 'storage slot' };
+
+    async function main() {
+      const abi = ethers.AbiCoder.defaultAbiCoder();
+
+      // 1) read-only Push Chain client (tracking needs no signer or funds)
+      const account = PushChain.utils.account.toUniversal('0x000000000000000000000000000000000000dEaD', {
+        chain: PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT,
+      });
+      const pushChainClient = await PushChain.initialize(account, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+      });
+
+      // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
+      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain...');
+      const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
+        progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
+      });
+      // wait() replays the read's lifecycle events through the hook; the read is already terminal, so this is instant
+      const done = await snapshot.wait();
+      const READ = PushChain.CONSTANTS.READ;
+      const statusName = done.status === READ.STATUS.FULFILLED ? 'FULFILLED' : String(done.status);
+      console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered);
+
+      // 3) describe what was read, decoded from the request's own ReadSpec
+      const [env] = abi.decode([QueryEnvelope], done.request.spec.query);
+      const [target] = abi.decode(['address'], env.payload);
+      console.log('Read type:', QUERY_TYPE[Number(env.queryType)] || String(env.queryType));
+      console.log('Source:', done.request.spec.account.chainNamespace + ':' + done.request.spec.account.chainId, '(Ethereum Sepolia)');
+      console.log('Target:', target, '(USDC)', 'at block', String(env.blockRef.blockNumber));
+
+      // 4) read what _onReadResult stored on the registry
+      console.log('Reading the stored result from the registry...');
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const registry = new ethers.Contract(REGISTRY_ADDRESS, RegistryABI, provider);
+      const requestId = BigInt(REQUEST_ID);
+      console.log('hasResult:', await registry.hasResult(requestId));
+      const stored = await registry.resultByRequestId(requestId);
+      console.log('Stored at Push block:', stored.updatedAtBlock.toString());
+      console.log('Result bytes:', stored.resultData);
+
+      // 5) decode the bytes. totalSupply() returns a uint256; USDC has 6 decimals.
+      //    A native-balance read would be wei (18 decimals); a storage-slot read is a bytes32 word.
+      const [supply] = abi.decode(['uint256'], stored.resultData);
+      console.log('USDC total supply on Sepolia at that block:', ethers.formatUnits(supply, 6), 'USDC');
+
+      provider.destroy();
+    }
+    main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case. See [Track Universal Read](/docs/chain/build/track-universal-read/).
+
+</Details>
+
+<br />
+<br />
+
+### UniversalReadClient → Also On The Base Contract
+
+You do not call these in normal use, but they are part of the contract you deploy.
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Member | Visibility | Purpose |
+| ------ | ---------- | ------- |
+| `onUniversalData(uint256 requestId, bytes resultData)` | `external` | The entry Universal Callback uses to deliver a result. Reverts `UnauthorizedCaller` for any other sender and forwards to `_onReadResult`. Never call it yourself and never expose a replacement. |
+| `getLocalContext(uint256 requestId)` | `external view` | Returns the `localState` stored by `_requestRead` while the request is pending; empty once the result has been delivered. |
+| `universalCallback()` | `external view` | Returns the Universal Callback address this client was constructed with. |
+
+</PushAPIReference>
+
+<br />
+<br />
+
+## Next Steps
+
+- Wire up your SDK in [Initialize Push Chain Client](/docs/chain/build/initialize-push-chain-client)
+- Simplify cross-chain workflows via [Utility Functions](/docs/chain/build/utility-functions)
+- Dive into on-chain reads with [Reading Blockchain State](/docs/chain/build/reading-blockchain-state)
+- Receive external chain state in your contract with [Contract-Initiated Universal Read and Callback](/docs/chain/build/contract-initiated-universal-read-and-callback/)
+- Abstract wallet & UI flows with our [UI Kit](/docs/chain/ui-kit)
+- Go deeper into advanced patterns in [Deep Dives](/docs/chain/deep-dives)

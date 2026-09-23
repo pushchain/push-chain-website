@@ -24,11 +24,11 @@ const BASE_URL = 'https://push.org';
 const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
-  core: '6.0.24',
+  core: '6.0.26',
   uiKit: '6.0.24',
 };
-const AGENT_LAYER_VERSION = '1.0.26';
-const AGENT_LAYER_DATE = '2026-09-02';
+const AGENT_LAYER_VERSION = '1.0.28';
+const AGENT_LAYER_DATE = '2026-09-22';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -234,6 +234,9 @@ const buildLlmsTxt = async (
     '- **PC-20**: A token born *on* Push Chain, mirrored outward as a wrapper on external chains. Dynamic — lives in UniversalCore’s on-chain registry, async lookup via `getPC20Address`. Move it with a `{ chain, address }` reference in `tx.funds` (never add `symbol`). One letter apart from PRC-20 and the opposite direction — canonical definition: https://push.org/docs/chain/important-concepts/#token-types-on-push-chain'
   );
   // Route prose pulled from agents/routes.json (single source of truth).
+  lines.push(
+    "- **Universal Read**: brings state from another chain (EVM or Solana) or from an HTTPS endpoint onto Push Chain with validator agreement. Results land in the Universal Read Registry (`0x00000000000000000000000000000000000000b2`, the default) or in your own contract that inherits `UniversalReadClient` (pass `callback: { target, gasLimit, abi, functionName, args? }`). Read with `pushChainClient.universal.read(subject, { chain, token | abi or idl + functionName + args | storageSlot | web2 })`, batch with `prepareRead` + `executeReads`, and resume with `trackRead({ requestId } | { txHash })`. A read is paid and asynchronous. `value` is the success signal; when it is `undefined`, check `status`, `raw.status`, `callbackDelivered` and `decodeError`. A contract can also build a `ReadSpec` and call `_requestRead` itself, with no SDK in the loop. Guide: https://push.org/docs/chain/build/universal-read/"
+  );
   // Falls back to inline strings only if the JSON failed to load.
   if (routes.length > 0) {
     for (const route of routes) {
@@ -272,7 +275,7 @@ const buildLlmsTxt = async (
   );
   lines.push('');
   lines.push(
-    '> Reading blockchain state from Push Chain can be done with any EVM-compatible library (ethers.js, viem, etc.) via the Push Chain RPC URL. Only transaction execution and signing require the Push Chain SDK.'
+    '> Reading blockchain state from Push Chain can be done with any EVM-compatible library (ethers.js, viem, etc.) via the Push Chain RPC URL. Only transaction execution and signing require the Push Chain SDK. When state from another chain or a web API must be delivered on-chain to a Push Chain contract, use Universal Read (`pushChainClient.universal.read`) instead.'
   );
   lines.push('');
 
@@ -444,7 +447,7 @@ const buildLlmsTxt = async (
     `- [Schemas](${BASE_URL}/agents/schemas/index.json): JSON schemas for all SDK request and response types including universal transaction, signer, and chain config.`
   );
   lines.push(
-    `- [Examples](${BASE_URL}/agents/examples/index.json): 60+ minimal, self-contained TypeScript code snippets ready to execute.`
+    `- [Examples](${BASE_URL}/agents/examples/index.json): 75+ minimal, self-contained TypeScript code snippets ready to execute, including one per Universal Read playground.`
   );
   lines.push(
     `- [Retrieval Map](${BASE_URL}/agents/retrieval-map.json): Maps every capability to its authoritative documentation source — use for RAG grounding.`
@@ -655,7 +658,13 @@ const buildLlmsTxt = async (
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 **PC-20 agent-layer propagation** (the follow-up deferred from the PC-20 docs PR) plus \`@pushchain/core\` 6.0.19 \u2192 6.0.24 and \`@pushchain/ui-kit\` 6.0.18 \u2192 6.0.24. PC-20 = a token born ON Push Chain, mirrored outward as wrappers on external chains via UniversalCore's on-chain registry (async \`getPC20Address\`); PRC-20 = a token born on an external chain, mirrored inward as a synthetic (static table, sync \`getPRC20Address\`) \u2014 one letter apart, opposite directions. \`errors.json\` gained the full typed PC-20 error family (base \`PC20Error\` + 14 concrete classes with stable \`PC20_*\` codes, curated context fields, and remediation hints). \`sdk-capabilities.json\` gained \`PushChain.utils.tokens.getPC20Address\`; \`capabilities.json\` \`tx.funds\` now documents both token forms (MoveableToken accessor vs \`{ chain, address }\` PC-20 reference \u2014 never add \`symbol\`; \`funds.token.chain\` = where the tokens sit now, \`to.chain\` = destination). New \`choose_token_standard\` decision tree, \`pc20_token_movement\` feature-matrix row, \`routes.json\` \`shared.funds_token_forms\`, a PC-20 retrieval-map entry, and a read-only \`get_pc20_address\` MCP candidate (16 total). Unfroze \`examples/index.json\` regeneration (wrapper metadata was carried over verbatim since 2026-07-03; the builder now refreshes \`current_sdk_version\` from the installed SDK, stamps \`generated\` only on real changes, writes a trailing newline, and backfills empty \`sdk_methods_used\` \u2014 10 entries backfilled, 2 removed-API tombstones deliberately left empty, boundary-aware method matching so prefixes like \`getChainName\` no longer match \`getChainNamespace\`, \`fromChainAgnostic\` + \`getSupportedChainsByName\` added to detection). Skills and workflows gained the same coverage: push-backend SKILL.md has a full "Moving Tokens with tx.funds - PRC-20 vs PC-20" section plus a \`getPC20Address\` utility entry and four new Common Mistakes rows, push-frontend a compact PC-20 send section, and the send-universal-transaction / use-utility-functions workflows the step-by-step PC-20 form (push-backend and push-frontend frontmatter pins refreshed to 6.0.24; push-contracts untouched \u2014 no contract-side PC-20 interface is documented yet). Fixed 8 \`source-freshness.json\` paths broken by the docs renumbering. Naming pass completed: "Get PRC-20 Address" hyphenated in prose everywhere.`
+    '- **2026-09-22 v1.0.28**: Universal Read sync with the restructured docs. Read pages now live under Build > Universal Reads (Read Universal State, Read Multiple Universal States, Contract-Initiated Universal Read and Callback, Track Universal Read); Contract Helpers gained the Universal Read Client. Universal Read Registry moved to `0x00000000000000000000000000000000000000b2`; the Universal Callback proxy `0x00000000000000000000000000000000000000c2` and every proxy implementation and admin were refreshed from the address book. Read options list `abi` or `idl`; `value` is the success signal with `status`, `raw.status`, `callbackDelivered` and `decodeError` for debugging; `trackRead` takes `{ requestId }` or `{ txHash }`. New examples for all eleven read playgrounds and both Universal Read Client playgrounds; llms-full.txt now inlines MDX partial tables and keeps code, generics and Details labels verbatim.'
+  );
+  lines.push(
+    '- **2026-09-16 v1.0.27** — Universal Read documentation for core 6.0.25: request/prepare/batch/track, contract callbacks, refund and timeout recovery, registry defaults, and separate routing from ordinary RPC reads.'
+  );
+  lines.push(
+    `- **2026-09-02 v1.0.26** \u2014 **PC-20 agent-layer propagation** (the follow-up deferred from the PC-20 docs PR) plus \`@pushchain/core\` 6.0.19 \u2192 6.0.24 and \`@pushchain/ui-kit\` 6.0.18 \u2192 6.0.24. PC-20 = a token born ON Push Chain, mirrored outward as wrappers on external chains via UniversalCore's on-chain registry (async \`getPC20Address\`); PRC-20 = a token born on an external chain, mirrored inward as a synthetic (static table, sync \`getPRC20Address\`) \u2014 one letter apart, opposite directions. \`errors.json\` gained the full typed PC-20 error family (base \`PC20Error\` + 14 concrete classes with stable \`PC20_*\` codes, curated context fields, and remediation hints). \`sdk-capabilities.json\` gained \`PushChain.utils.tokens.getPC20Address\`; \`capabilities.json\` \`tx.funds\` now documents both token forms (MoveableToken accessor vs \`{ chain, address }\` PC-20 reference \u2014 never add \`symbol\`; \`funds.token.chain\` = where the tokens sit now, \`to.chain\` = destination). New \`choose_token_standard\` decision tree, \`pc20_token_movement\` feature-matrix row, \`routes.json\` \`shared.funds_token_forms\`, a PC-20 retrieval-map entry, and a read-only \`get_pc20_address\` MCP candidate (16 total). Unfroze \`examples/index.json\` regeneration (wrapper metadata was carried over verbatim since 2026-07-03; the builder now refreshes \`current_sdk_version\` from the installed SDK, stamps \`generated\` only on real changes, writes a trailing newline, and backfills empty \`sdk_methods_used\` \u2014 10 entries backfilled, 2 removed-API tombstones deliberately left empty, boundary-aware method matching so prefixes like \`getChainName\` no longer match \`getChainNamespace\`, \`fromChainAgnostic\` + \`getSupportedChainsByName\` added to detection). Skills and workflows gained the same coverage: push-backend SKILL.md has a full "Moving Tokens with tx.funds - PRC-20 vs PC-20" section plus a \`getPC20Address\` utility entry and four new Common Mistakes rows, push-frontend a compact PC-20 send section, and the send-universal-transaction / use-utility-functions workflows the step-by-step PC-20 form (push-backend and push-frontend frontmatter pins refreshed to 6.0.24; push-contracts untouched \u2014 no contract-side PC-20 interface is documented yet). Fixed 8 \`source-freshness.json\` paths broken by the docs renumbering. Naming pass completed: "Get PRC-20 Address" hyphenated in prose everywhere.`
   );
   lines.push(
     `- **2026-07-15 v1.0.25** \u2014 Launched the push.org docs **MCP server** at \`https://mcp.push.org/api\` (Streamable HTTP, spec revision 2025-11-25; stateless, read-only, no API key). Four tools: \`search_docs\` (ranked full-text search over the indexed docs), \`get_page\` (full page as clean markdown with title/url/section/lastUpdated), \`list_sections\` (hierarchical docs tree), \`get_agent_resource\` (raw JSON of \`capabilities\`, \`errors\`, \`contract-addresses\`, \`supported-chains\`, \`sdk-capabilities\`, or \`changelog\` \u2014 snapshotted at site build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin (MiniSearch index, per-page markdown, manifest with build hash); pages containing raw i18n placeholder keys are excluded from the index and logged to \`build/mcp/skipped.json\`. Discovery document at \`/.well-known/mcp.json\`. Updated the \`mcp-candidates.json\` description \u2014 docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework.`

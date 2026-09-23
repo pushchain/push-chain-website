@@ -54,6 +54,7 @@ const client = await PushChain.initialize(universalSigner, {
 | `CHAIN.SOLANA_MAINNET` | `solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp` | Solana mainnet-beta |
 | `CHAIN.SOLANA_TESTNET` | `solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z` | Solana testnet |
 | `CHAIN.SOLANA_DEVNET` | `solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1` | Solana devnet |
+| `CHAIN.WEB2` | `web2:https` | Web2 / HTTPS endpoint. A read-only destination for [Universal Read](https://push.org/agents/workflows/universal-read.md), not a transaction destination |
 
 ```typescript
 // Convert address to UniversalAccount
@@ -183,6 +184,26 @@ await pushChainClient.universal.sendTransaction({
 });
 ```
 
+## Universal Read Constants
+
+**`PushChain.CONSTANTS.READ`** - values used by Universal Read (full list in [constants.json](https://push.org/agents/constants.json) under `READ`)
+
+| Constant | Value | Description |
+|----------|-------|-------------|
+| `READ.STATUS` | `PENDING` 1, `VOTING` 2, `FULFILLED` 3, `EXPIRED` 4, `FAILED` 5, `ABORTED` 6 | Request lifecycle, `response.status`. `FULFILLED` does not by itself mean the callback succeeded |
+| `READ.RESULT_STATUS` | `SUCCESS` 1, `ERROR` 2 | What the source returned, `response.raw.status` |
+| `READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x00000000000000000000000000000000000000b2` | Universal Read Registry, the default receiver when no `callback` is passed |
+
+```typescript
+const READ = PushChain.CONSTANTS.READ;
+const done = await pending.wait();
+if (done.value === undefined) {
+  // value is the success signal; these say why it is missing
+  console.log('Lifecycle:', done.status === READ.STATUS.FULFILLED ? 'FULFILLED' : done.status);
+  console.log('Source:', done.raw?.status === READ.RESULT_STATUS.SUCCESS ? 'SUCCESS' : 'ERROR');
+}
+```
+
 ## Common Patterns
 
 ```typescript
@@ -205,6 +226,7 @@ const chains = PushChain.utils.chains.getSupportedChains(
 - **`PUSH_NETWORK.TESTNET` vs `TESTNET_DONUT`**: `TESTNET` always points to the latest testnet version; prefer `TESTNET` for development code.
 - **CAIP-2 format**: all `CHAIN` constants use CAIP-2 format (`namespace:chainId`). This is what appears in `universalSigner.account.chain`.
 - **MOVEABLE vs PAYABLE**: `MOVEABLE.TOKEN` is for `tx.funds` (what you move); `PAYABLE.TOKEN` is for `tx.payGasWith` (how you pay gas).
+- **`CHAIN.WEB2` is read-only**: pass it as `options.chain` to `pushChainClient.universal.read` / `prepareRead`; never as a `sendTransaction` destination.
 - **Solana addresses are hex-encoded on-chain**: when reading origin addresses via UEAFactory, Solana addresses come back as hex and must be base58-decoded.
 - **Donut archive RPCs (informational, not in `CONSTANTS`)**: the default Donut RPC serves recent (pruned) history; full-history endpoints are `https://archive.evm.donut.rpc.push.org/` (EVM) and `https://archive.donut.rpc.push.org/` (Tendermint). The SDK falls back to them automatically for history-sensitive reads.
 - **PushBatchExecutor address (internal, not public API)**: the EIP-7702 batch executor backing atomic native-EOA multicall is deployed on Donut at `0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796` (mainnet: not yet deployed). The SDK resolves it internally; the constant is not re-exported from `@pushchain/core`.
