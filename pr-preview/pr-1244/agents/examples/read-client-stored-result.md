@@ -10,15 +10,16 @@ See the [source documentation](https://push.org/docs/chain/build/contract-helper
 
 ```typescript
 import { PushChain } from '@pushchain/core';
+import { PushChain } from '@pushchain/core';
 import { ethers } from 'ethers';
 
 // CONFIG
 const RPC_URL = 'https://evm.donut.rpc.push.org/';
 // The Universal Read Registry the SDK uses on Donut
 const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-// A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
-// https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
-const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
+// A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
+// https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
+const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
 
 const RegistryABI = [
   'function hasResult(uint256 requestId) view returns (bool)',
@@ -40,8 +41,8 @@ async function main() {
     network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
   });
 
-  // 2) confirm the callback ran: outcome SUCCESS means FULFILLED, source SUCCESS and callbackDelivered
-  //    (the hook prints READ-TX-104-03 Looking Up Request while the SDK finds the record)
+  // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
+  console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain. This takes 15 to 20 seconds.');
   const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
     progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
   });
@@ -49,11 +50,7 @@ async function main() {
   const done = await snapshot.wait();
   const READ = PushChain.CONSTANTS.READ;
   const statusName = done.status === READ.STATUS.FULFILLED ? 'FULFILLED' : String(done.status);
-  console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered, '| Outcome:', done.outcome);
-  if (done.outcome !== READ.OUTCOME.SUCCESS) {
-    console.log('The read did not succeed, so the registry stored no usable result.');
-    return;
-  }
+  console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered);
 
   // 3) describe what was read, decoded from the request's own ReadSpec
   const [env] = abi.decode([QueryEnvelope], done.request.spec.query);

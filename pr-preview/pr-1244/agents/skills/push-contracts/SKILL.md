@@ -849,9 +849,9 @@ If only an app or backend needs the value, you do not need a contract: omit `cal
 
 - **Single entry**: `requestExternalReadSelf(spec, callbackSelector, callbackGasLimit)` is the only way in. `UniversalReadClient` calls it for you.
 - **Single delivery**: only Universal Callback may call your contract with a result. The base contract enforces this.
-- **Gas bound**: `callbackGasLimit` caps what your callback may consume. The hard cap is 1,000,000 gas; the SDK defaults to 500,000 (`PushChain.CONSTANTS.READ.REGISTRY_CALLBACK_GAS`) when no `gasLimit` is passed.
-- **Lifecycle**: `PENDING`, `EXECUTED` (result delivered; the callback was attempted, even if it reverted), `SETTLED` (gas reported, refund sent), or `EXPIRED`. `statusOf(requestId)` returns the current state; an unknown ID reads as `NONE`. Callback success is the `ReadFulfilled` / `CallbackFailed` event (SDK: `callbackDelivered`).
-- **Fees**: `estimateFee(chainNamespace, chainId)` quotes the protocol fee (0 on Donut today). The callback budget on top must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires.
+- **Gas bound**: `callbackGasLimit` caps what your callback may consume. The hard cap is 1,000,000 gas; the registry uses 500,000.
+- **Lifecycle**: `PENDING`, `EXECUTED` (callback ran), `SETTLED` (gas reported, refund sent), or `EXPIRED`. `statusOf(requestId)` returns the current state; an unknown ID reads as `NONE`.
+- **Fees**: `estimateFee(chainNamespace, chainId)` quotes the protocol fee.
 
 ### UniversalReadClient
 
@@ -860,7 +860,7 @@ Inherit `UniversalReadClient` (`import {UniversalReadClient} from "push-chain-co
 - a **payable request entrypoint** that calls `_requestRead(ReadSpec spec, bytes localState, uint64 callbackGasLimit) returns (uint256 requestId)`, forwarding `msg.value` (protocol fee plus callback budget);
 - **`_onReadResult(uint256 requestId, bytes calldata resultData, bytes memory localState)`**, which receives the validator-agreed bytes and the `localState` you passed at request time.
 
-The base contract's `onUniversalData(requestId, resultData)` rejects every caller except Universal Callback (`UnauthorizedCaller`) and forwards to `_onReadResult`; never override it. `getLocalContext(requestId)` returns the pending `localState`; `universalCallback()` returns the bound address. When a spec your contract builds leaves `revertRecipient` as `address(0)`, `_requestRead` sets it to your contract, so declare `receive() external payable {}` or point it at an EOA. Specs prepared by the SDK already carry the caller's Push account (or `refundTo`). On the SDK path, forward the spec and gas limit unchanged and call `_requestRead` exactly once: the SDK matches the request by target, gas limit and spec and throws `READ_REQUEST_MISMATCH` after the transaction is mined (fee already paid) if they differ.
+The base contract's `onUniversalData(requestId, resultData)` rejects every caller except Universal Callback (`UnauthorizedCaller`) and forwards to `_onReadResult`; never override it. `getLocalContext(requestId)` returns the pending `localState`; `universalCallback()` returns the bound address. `_requestRead` sets `revertRecipient` to your contract when you leave it empty, so declare `receive() external payable {}` or point it at an EOA.
 
 ### ReadSpec
 
@@ -964,17 +964,16 @@ const result = await pushChainClient.universal.read(holder, {
   chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
   callback: {
     target: receiverAddress,
-    gasLimit: 200_000n,       // gas for _onReadResult, up to 1_000_000n (default 500_000n)
+    gasLimit: 200_000n,       // gas for _onReadResult, up to 1_000_000n
     abi: receiverAbi,
     functionName: 'request',  // your payable request entrypoint
   },
 });
 
 console.log(result.callbackDelivered); // true once _onReadResult ran
-console.log(result.outcome);           // PushChain.CONSTANTS.READ.OUTCOME.SUCCESS when it all worked
 ```
 
-**Path B, from within your contract.** A contract that requests on its own builds the `ReadSpec` itself, with no SDK in the loop. This example pins the read one block below the height Universal Core observed for Ethereum Sepolia (so `minConfirmations: 1` is met) and stores the ETH balance of `holder`.
+**Path B, from within your contract.** A contract that requests on its own builds the `ReadSpec` itself, with no SDK in the loop. This example pins the read at the height Universal Core observed for Ethereum Sepolia and stores the ETH balance of `holder`.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -999,7 +998,6 @@ contract BalanceWatcher is UniversalReadClient {
 
     address public constant UNIVERSAL_CORE = 0x00000000000000000000000000000000000000C0;
     uint8 public constant QUERY_ACCOUNT_BALANCE = 0;
-    uint64 public constant CALLBACK_GAS = 200_000;
 
     /// @notice Latest delivered balance per holder, in wei
     mapping(address => uint256) public balances;
@@ -1008,15 +1006,11 @@ contract BalanceWatcher is UniversalReadClient {
 
     /**
      * @notice Request the Sepolia ETH balance of `holder`
-     * @dev msg.value = protocol fee (Universal Callback's estimateFee, 0 on Donut today)
-     *      + callback budget. The node only fulfils a request whose budget covers
-     *      CALLBACK_GAS at the Push base fee; below that the request expires unfulfilled.
-     *      Fund it with headroom; what the callback does not use comes back.
+     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee.
+     *      The excess is the callback budget; what the callback does not use comes back.
      */
     function requestBalance(address holder) external payable returns (uint256) {
-        require(msg.value >= 2 * CALLBACK_GAS * block.basefee, "fund the callback budget");
-        // Pin one block below the observed height so minConfirmations = 1 is already met.
-        uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111")) - 1;
+        uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111"));
 
         bytes memory query = abi.encode(EvmQuery({
             queryType: QUERY_ACCOUNT_BALANCE,
@@ -1034,7 +1028,7 @@ contract BalanceWatcher is UniversalReadClient {
             revertRecipient: address(this)
         });
 
-        return _requestRead(spec, abi.encode(holder), CALLBACK_GAS);
+        return _requestRead(spec, abi.encode(holder), 200_000);
     }
 
     /// @dev Empty resultData means the source returned an error; nothing is stored.
@@ -1059,17 +1053,7 @@ The query envelope is rigid: validators decode `query` as one ABI-encoded tuple,
 | Contract call | `1` | `abi.encode(address target, bytes callData)` | Raw return bytes of the call |
 | Storage slot | `2` | `abi.encode(address target, bytes32 slot)` | The 32-byte word |
 
-Solana and Web2 envelopes carry more fields. Build those off-chain with the SDK's `prepareRead` and send them to your entrypoint with `toCallData`, which encodes `(spec, callbackGasLimit)` and returns the `msg.value` to send (`prepared.value`):
-
-```typescript
-import { toCallData } from '@pushchain/core';
-
-const prepared = await pushChainClient.universal.prepareRead(account, { chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET });
-const { data, value } = toCallData(prepared, { abi: receiverAbi, functionName: 'request' }); // args?: (spec, gasLimit) => [...] to reorder
-const tx = await pushChainClient.universal.sendTransaction({ to: receiverAddress, data, value });
-```
-
-Prepare right before sending: the spec's expiry is fixed at prepare time (300 Push blocks, about 6.7 minutes).
+Solana and Web2 envelopes carry more fields. Build those off-chain with the SDK's `prepareRead` and pass `prepared.specTuple` to your entrypoint.
 
 ### Read the Result On-Chain
 
@@ -1090,18 +1074,16 @@ const inbox = new ethers.Contract(receiverAddress, receiverAbi, provider);
 const stored = await inbox.results(result.requestIdUint);
 ```
 
-`callbackDelivered` is `false` when `_onReadResult` reverted or ran out of gas, and `outcome` is then `CALLBACK_FAILED`. `results` is keyed by the numeric request ID, which the SDK exposes as `requestIdUint` (a `bigint`) next to the hex `requestId`.
+`callbackDelivered` is `false` when `_onReadResult` reverted or ran out of gas. `results` is keyed by the numeric request ID, which the SDK exposes as `requestIdUint`.
 
 ### Fees and Refunds
 
 | Item | What happens |
 |------|--------------|
 | **Protocol fee** | Quoted by `estimateFee(chainNamespace, chainId)` on Universal Callback. Taken from `msg.value` at request time and not refunded. |
-| **Callback budget** | Everything in `msg.value` above the protocol fee. It must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires. After the callback runs, the gas it consumed is burned from the budget and the rest is sent to `revertRecipient`. |
+| **Callback budget** | Everything in `msg.value` above the protocol fee. After the callback runs, the gas it consumed is burned from the budget and the rest is sent to `revertRecipient`. |
 | **Expiry** | A request that is not executed by `expiryPushChainHeight` expires and the full callback budget is refunded. The protocol fee is not. |
-| **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push; Universal Callback emits `RefundFailed` and keeps the amount, and the SDK reports `fees.refundFailed`. |
-
-The SDK sizes the budget at three times `callbackGasLimit × gas price`. A contract that requests on its own must send at least `estimateFee(chainNamespace, chainId) + callbackGasLimit × block.basefee`, with headroom because the base fee can rise before fulfilment.
+| **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push and the refund is not delivered. |
 
 ### Security Rules
 
@@ -1127,14 +1109,10 @@ The SDK sizes the budget at three times `callbackGasLimit × gas price`. A contr
 |---|---|---|
 | `callbackDelivered` is `false` | `_onReadResult` reverted or ran out of gas | Raise `gasLimit`, up to `1_000_000n`, and make sure the callback cannot revert on empty `resultData`. |
 | Entrypoint reverts with `only requester` | The caller is not the account you authorized | Pass `pushChainClient.universal.account` as `requester_`, not the deploying EOA. See [Deploy a Receiver](#deploy-a-receiver). |
-| Request reverts with `InvalidBlockNumber` | `blockNumber` is `0` or above the height Universal Core has observed | Read `chainHeightByChainNamespace` with the full CAIP-2 key, for example `eip155:11155111`, and pin `minConfirmations` below it (height − 1 for the minimum of 1). Web2 reads must use `0`. |
+| Request reverts with `InvalidBlockNumber` | `blockNumber` is `0` or above the height Universal Core has observed | Read `chainHeightByChainNamespace` with the full CAIP-2 key, for example `eip155:11155111`, and pin at or below it. |
 | Request reverts with `InvalidExpiryHeight` | `expiryPushChainHeight` is not above the current block | Use `block.number + 300` or another future height. |
 | Request reverts with `InsufficientFee` or `ExcessiveFee` | `msg.value` is below `estimateFee` or above `spec.maxFee` | Quote `estimateFee` before sending and set `maxFee` to `msg.value` when you have no separate cap. |
-| SDK throws `READ_REQUEST_MISMATCH` after the transaction is mined | Your entrypoint called `_requestRead` more or fewer than once, or changed the spec or gas limit | Forward the prepared spec and gas limit unchanged and call `_requestRead` once per prepared read. The fee is already paid; resume with the hashes on the error. |
-| Request reverts with `InvalidAccountId`, `EmptyQuery` or `InvalidMinConfirmations` | `account` has an empty namespace, chain ID or owner, `query` is empty, or `minConfirmations` is 0 | Fill every `account` field (any non-empty owner for EVM), build `query` as one tuple, and use at least 1 confirmation. |
-| Request reverts with `ZeroCallbackGasLimit` or `CallbackGasLimitExceeded` | `callbackGasLimit` is 0 or above 1,000,000 | Pass a gas limit between 1 and `1_000_000`. |
-| Request reverts with `DomainBlocked` | The source chain is blocked on Universal Callback | Use a supported source. |
-| Request succeeds but never fulfils, then `EXPIRED` | The callback budget is below `callbackGasLimit × base fee` | Send more `msg.value`. |
+| SDK rejects the transaction over `ReadRequested` | Your entrypoint called `_requestRead` more or fewer than once | Keep one `_requestRead` per prepared read. |
 | Refund never arrives | `revertRecipient` is a contract without a payable `receive()` | Add `receive() external payable {}` or point `revertRecipient` at an EOA. |
 | Callback ran but stored nothing | The source returned an error and `resultData` was empty | Check the target, ABI and pinned block. The SDK shows the reason as `raw.errorCode`. |
 
@@ -1248,9 +1226,9 @@ cast code $CONTRACT --rpc-url https://evm.donut.rpc.push.org/
 | Refunds drain the EOA over many runs                                                                                     | UGPC routes surplus refund to `address(this)`, not back to the user EOA that called your function. Plan a `withdraw()` path or treasury sweep. Expected behavior, not a bug.                                                                                                                                                                                               |
 | Universal Read receiver entrypoint reverts with `only requester` | The gate authorized the deploying EOA, but `msg.sender` is the SDK caller's `pushChainClient.universal.account` (its UEA for an external signer). Pass that account as `requester_`. |
 | `_onReadResult` decodes empty `resultData` and reverts - `callbackDelivered` is `false` | Empty `resultData` means the source returned an error. `if (resultData.length == 0) return;` before `abi.decode`. |
-| Contract-built read reverts with `InvalidBlockNumber` | `blockNumber` must be non-zero and at most `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` (full CAIP-2 key); pin at height − `minConfirmations`, and it must match the block inside `query`. |
-| Validators cannot decode a contract-built `query` | Build it as `abi.encode(EvmQuery({ queryType, blockRef: BlockRef({ refType, blockNumber }), payload }))`, one tuple. For Solana and Web2, use the SDK's `prepareRead` and `toCallData`. |
-| Universal Read refund never arrives | A contract-built spec with `revertRecipient = address(0)` defaults it to your receiver; add `receive() external payable {}` or point it at an EOA. SDK-prepared specs refund to the caller's Push account. |
+| Contract-built read reverts with `InvalidBlockNumber` | `blockNumber` must be non-zero and at most `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` (full CAIP-2 key), and must match the block inside `query`. |
+| Validators cannot decode a contract-built `query` | Build it as `abi.encode(EvmQuery({ queryType, blockRef: BlockRef({ refType, blockNumber }), payload }))`, one tuple. For Solana and Web2, use the SDK's `prepareRead(...).specTuple`. |
+| Universal Read refund never arrives | `revertRecipient` defaults to your receiver; add `receive() external payable {}` or point it at an EOA. |
 
 ## Source
 

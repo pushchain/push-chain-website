@@ -2,7 +2,7 @@
 title: "Integrate Push Universal Wallet"
 url: "https://pushchain.github.io/docs/chain/ui-kit/integrate-push-universal-wallet/"
 section: "ui-kit"
-lastUpdated: "2026-09-23T13:23:26Z"
+lastUpdated: "2026-09-23T14:39:51Z"
 description: "{Integrate Push Universal Wallet | Customizations | UI Kit | Push Chain Docs}"
 ---
 

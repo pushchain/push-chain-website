@@ -763,17 +763,13 @@ Universal Read (`read`, `prepareRead`, `executeReads`, `trackRead`) is paid and 
 ```
 Universal Read did not give a usable result?
 ├── Did the client throw READ_TIMEOUT (ReadTimeoutError)?
-│   └── YES → [AUTO] trackRead({ requestId: err.requestId } | { txHash: err.txHash }) and wait() again; the request kept running
+│   └── YES → [AUTO] trackRead({ requestId } | { txHash }) and wait() again; the request kept running
 │
-├── Did trackRead / read() throw READ_NOT_FOUND (ReadNotFoundError)?
-│   └── YES → [AUTO] wait, then trackRead again with err.txHash / err.requestId; NEVER resubmit (it may be paid and running)
-│
-├── Did wait() return with outcome !== READ.OUTCOME.SUCCESS?
-│   ├── EXPIRED / FAILED / ABORTED → [AUTO] fix the query, submit a NEW request
-│   ├── SOURCE_ERROR → source failed (raw.errorCode); check target, ABI, pinned block
-│   ├── CALLBACK_FAILED → receiver reverted or ran out of gas (callbackFailReason); raise callback.gasLimit (max 1_000_000n)
-│   ├── DECODE_FAILED → ABI / IDL / resultShape does not match the query (decodeError); pass resultShape on trackRead
-│   └── UNKNOWN → fulfil receipt unreadable; [AUTO] refresh() later or check pcTx; NEVER resubmit
+├── Did wait() return with value === undefined?
+│   ├── status is EXPIRED / FAILED / ABORTED → [AUTO] fix the query, submit a NEW request
+│   ├── raw.status is READ.RESULT_STATUS.ERROR → source failed (raw.errorCode); check target, ABI, pinned block
+│   ├── callbackDelivered === false → receiver reverted or ran out of gas; raise callback.gasLimit (max 1_000_000n)
+│   └── decodeError is set → ABI / IDL / resultShape does not match the query; pass resultShape on trackRead
 │
 ├── Did a batch fail part-way (READ_REQUEST_TX_FAILED)?
 │   └── YES → [AUTO] recover transactionHashes, check the pending hash, resubmit only missing reads
@@ -793,24 +789,16 @@ Universal Read did not give a usable result?
 async function resumeRead(client, saved: { requestId?: string; txHash?: string }) {
   // Works with a read-only client: no signer, no funds.
   const ref = saved.requestId ? { requestId: saved.requestId } : { txHash: saved.txHash! };
-  let snapshot;
-  try {
-    snapshot = await client.universal.trackRead(ref);
-  } catch (err) {
-    // Not indexed within the 30 s lookup: retry later with the same reference, never resubmit.
-    if (err?.code === 'READ_NOT_FOUND') return [{ ...ref, retryLater: true }];
-    throw err;
-  }
+  const snapshot = await client.universal.trackRead(ref);
   const reads = Array.isArray(snapshot) ? snapshot : [snapshot];
   const results = [];
   for (const read of reads) {
     const done = await read.wait();
     results.push(
-      done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS
+      done.value !== undefined
         ? { requestId: done.requestId, value: done.value }
         : {
             requestId: done.requestId,
-            outcome: done.outcome, // UNKNOWN → refresh() later, never resubmit
             status: done.status,
             rawStatus: done.raw?.status,
             errorCode: done.raw?.errorCode,
@@ -824,15 +812,15 @@ async function resumeRead(client, saved: { requestId?: string; txHash?: string }
 }
 ```
 
-1. On `READ_TIMEOUT` or `READ_NOT_FOUND`, call `resumeRead` with the saved references (or `err.txHash` / `err.requestId`). Do not submit another request: the original is paid and may still complete.
-2. When `outcome` is not `SUCCESS`, switch on it to classify the failure, fix the cause, and submit a new request. `UNKNOWN` is the exception: refresh later instead. Failed requests are not retried automatically.
+1. On `READ_TIMEOUT`, call `resumeRead` with the saved references. Do not submit another request solely because the client timed out.
+2. When `value` is `undefined`, read the fields above to classify the failure, fix the cause, and submit a new request. Failed requests are not retried automatically.
 3. On `READ_REGISTRY_UNAVAILABLE`, the network has no Universal Read Registry (it exists on Donut, `0x00000000000000000000000000000000000000b2`). Pass your own receiver through `callback`.
-4. On a prepared read that fails revalidation (`INVALID_READ_SPEC`, see `error.violations`), run `prepareRead` again right before executing; the old pin, expiry or budget is no longer valid.
+4. On a prepared read that fails revalidation, run `prepareRead` again; the old pin, expiry or budget is no longer valid.
 5. If the refund never arrives, the refund target is a contract without a payable `receive()`; the protocol fee is never refunded, only the unused callback budget.
 
 **Escalation**: If a read stays `PENDING` or `VOTING` past its expiry height, or `raw.status` is `SUCCESS` but `decodeError` persists with the correct ABI, escalate with the `requestId`, the submitting `txHash`, the chain read and the query options (never signing keys or Web2 secrets).
 
-*References: [universal-read.md](https://push.org/agents/workflows/universal-read.md) · errors `read_timeout`, `read_not_found`, `read_invalid_spec`, `read_decode_failed`, `read_request_mismatch`, `read_request_tx_failed`, `read_registry_unavailable`, `read_value_undefined`, `read_callback_not_delivered`, `read_web2_no_quorum`, `read_prepared_revalidation_failed`, `read_request_reverted`, `read_refund_not_delivered`*
+*References: [universal-read.md](https://push.org/agents/workflows/universal-read.md) · errors `read_timeout`, `read_request_mismatch`, `read_request_tx_failed`, `read_registry_unavailable`, `read_value_undefined`, `read_callback_not_delivered`, `read_web2_no_quorum`, `read_prepared_revalidation_failed`, `read_request_reverted`, `read_refund_not_delivered`*
 
 ---
 

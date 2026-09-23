@@ -512,141 +512,15 @@
     {
       "id": "read_timeout",
       "name": "ReadTimeoutError",
-      "description": "The client polling deadline elapsed before a terminal status; the request may still complete. The error carries lastStatus (READ.STATUS number), requestId and txHash.",
+      "description": "The client polling deadline elapsed; the request may still complete.",
       "likely_cause": "The client polling deadline elapsed; the request may still complete.",
       "detection_signal": "error.code === 'READ_TIMEOUT'",
       "user_visible_symptom": "Read request or tracking did not complete normally.",
       "machine_recovery": [
-        "Resume with trackRead({ requestId: err.requestId }) (or { txHash: err.txHash }) and call wait(); the saved references work from any session.",
-        "err.lastStatus is the last status seen (for example 1 PENDING, 2 VOTING).",
+        "Resume with trackRead({ requestId } | { txHash }) and call wait(); the saved references work from any session.",
         "Do not submit another request solely because the client timed out."
       ],
       "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_not_found",
-      "name": "ReadNotFoundError",
-      "description": "No read record was found for the reference after the 30-second lookup window.",
-      "likely_cause": "The request's block is not indexed yet, or the transaction emitted no ReadRequested log. Also thrown by read(), executeReads() and waitForCompletion: false after the request transaction was mined and paid.",
-      "detection_signal": "error.code === 'READ_NOT_FOUND' (progress event READ-TX-104-05 Request Not Found)",
-      "user_visible_symptom": "trackRead or read() rejects without a snapshot.",
-      "machine_recovery": [
-        "Retry trackRead({ txHash: err.txHash } | { requestId: err.requestId }) after a short wait.",
-        "Never submit a new request: the original may already be paid and running.",
-        "A transaction with no ReadRequested log never gets a record; check the receipt."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_invalid_query",
-      "name": "InvalidReadQueryError",
-      "description": "The read options are malformed and nothing was sent.",
-      "likely_cause": "Mutually exclusive query keys, an option used on the wrong chain (idl on EVM, storageSlot on Solana), a removed option (tokenProgram, accountName), a bad address, functionName not in the ABI or IDL, wrong PDA seed args, or a Web2 read with too many extracts.",
-      "detection_signal": "error.code === 'INVALID_READ_QUERY'",
-      "user_visible_symptom": "prepareRead or read() rejects before any transaction.",
-      "machine_recovery": [
-        "Read error.message; it names the offending option.",
-        "Fix the options and call again; no fees were paid."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_invalid_spec",
-      "name": "InvalidReadSpecError",
-      "description": "The ReadSpec would revert on Universal Callback, so the SDK refuses to send it.",
-      "likely_cause": "A contract precondition the SDK mirrors client-side. error.violations lists them: INVALID_ACCOUNT_ID, EMPTY_QUERY, INVALID_MIN_CONFIRMATIONS, DOMAIN_BLOCKED, INVALID_BLOCK_NUMBER, INVALID_EXPIRY_HEIGHT, ZERO_REVERT_RECIPIENT, ZERO_CALLBACK_GAS_LIMIT, CALLBACK_GAS_LIMIT_EXCEEDED, INSUFFICIENT_FEE, EXCESSIVE_FEE, ZERO_CALLBACK_BUDGET, INSUFFICIENT_CALLBACK_BUDGET, SVM_OWNER_NOT_32_BYTES.",
-      "detection_signal": "error.code === 'INVALID_READ_SPEC' (inspect error.violations)",
-      "user_visible_symptom": "prepareRead or executeReads rejects before broadcasting.",
-      "machine_recovery": [
-        "EXCESSIVE_FEE: maxFee is below the required payment; raise it or omit it.",
-        "CALLBACK_GAS_LIMIT_EXCEEDED: callback.gasLimit must be at most 1_000_000n.",
-        "INVALID_EXPIRY_HEIGHT or INSUFFICIENT_CALLBACK_BUDGET on executeReads: the prepared read went stale; prepare it again.",
-        "ZERO_REVERT_RECIPIENT: pass refundTo on a client without a resolvable account."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_height_unavailable",
-      "name": "ReadHeightUnavailableError",
-      "description": "The destination has no observed chain height on Universal Core, so it cannot be read.",
-      "likely_cause": "The chain is not configured for Universal Read (no chain-meta oracle).",
-      "detection_signal": "error.code === 'READ_HEIGHT_UNAVAILABLE'",
-      "user_visible_symptom": "prepareRead rejects for that chain.",
-      "machine_recovery": [
-        "Use a supported destination from PushChain.CONSTANTS.CHAIN; check the CAIP-2 id."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_unsupported_destination",
-      "name": "UnsupportedReadDestinationError",
-      "description": "The destination cannot be routed by the read path.",
-      "likely_cause": "An unknown chain namespace, or the destination is on the Universal Callback blocklist.",
-      "detection_signal": "error.code === 'UNSUPPORTED_READ_DESTINATION'",
-      "user_visible_symptom": "prepareRead rejects for that chain.",
-      "machine_recovery": [
-        "Read from a supported, unblocked destination."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_decode_failed",
-      "name": "ReadDecodeError",
-      "description": "resultData does not match the shape the query declared; the SDK never mis-decodes.",
-      "likely_cause": "An ABI, IDL or resultShape that does not match the query, or empty result bytes.",
-      "detection_signal": "error.code === 'READ_DECODE_FAILED' when calling the decoder directly. Tracking does not throw it: the snapshot has outcome DECODE_FAILED and decodeError set.",
-      "user_visible_symptom": "value is undefined although the read was delivered.",
-      "machine_recovery": [
-        "Resume with trackRead({ requestId }, { resultShape }) using the correct ABI or IDL.",
-        "raw.resultData keeps the bytes for manual decoding."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_insufficient_balance",
-      "name": "ReadStateError",
-      "description": "The funding account cannot pay for the reads and advanced.enforceGasCheck is true.",
-      "likely_cause": "The account's UPC balance is below the sum of the prepared reads' value.",
-      "detection_signal": "error.code === 'INSUFFICIENT_READ_BALANCE' (progress event READ-TX-103-02)",
-      "user_visible_symptom": "executeReads rejects before broadcasting.",
-      "machine_recovery": [
-        "Fund the Push account, or reduce the number of reads.",
-        "Without enforceGasCheck the SDK only warns (READ-TX-103-01) and sends anyway."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_callback_base_fee_unavailable",
-      "name": "ReadStateError",
-      "description": "The SDK could not read the current Push base fee needed to check callback affordability.",
-      "likely_cause": "The latest Push block returned no baseFeePerGas (RPC issue).",
-      "detection_signal": "error.code === 'READ_CALLBACK_BASE_FEE_UNAVAILABLE'",
-      "user_visible_symptom": "executeReads rejects before broadcasting.",
-      "machine_recovery": [
-        "Retry; if it persists, check the Push RPC."
-      ],
-      "escalation": "Include SDK version and public request references; never include signing keys or Web2 secrets.",
-      "confidence": "documented"
-    },
-    {
-      "id": "read_record_incomplete",
-      "name": "ReadStateError",
-      "description": "The node returned a read record without its request.",
-      "likely_cause": "A node indexing issue.",
-      "detection_signal": "error.code === 'READ_RECORD_INCOMPLETE'",
-      "user_visible_symptom": "trackRead rejects.",
-      "machine_recovery": [
-        "Retry trackRead later; escalate if it persists."
-      ],
-      "escalation": "Include the requestId, the submitting txHash and the chain read; never include signing keys or Web2 secrets.",
       "confidence": "documented"
     },
     {
@@ -693,18 +567,16 @@
     {
       "id": "read_value_undefined",
       "name": "Universal Read Returned No Value",
-      "description": "A read reached a terminal state but value is undefined. value is set only when response.outcome is READ.OUTCOME.SUCCESS; any other outcome names the failure.",
+      "description": "A read reached a terminal state but value is undefined. value is set only when the read completed, the source returned data, the receiver callback ran and the bytes decoded, so its absence is the failure signal.",
       "likely_cause": "The source returned an error, the callback reverted or ran out of gas, the ABI or IDL does not match the query, or the request expired, failed or aborted.",
-      "detection_signal": "(await response.wait()).outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS",
+      "detection_signal": "(await response.wait()).value === undefined",
       "user_visible_symptom": "The playground fails inside formatEther or formatUnits, or the app shows no result.",
       "machine_recovery": [
-        "Switch on response.outcome.",
-        "SOURCE_ERROR: the source failed; raw.errorCode (READ.ERROR_CODE) says why. Fix the query and submit a new request.",
-        "CALLBACK_FAILED: the receiver reverted or ran out of gas; callbackFailReason carries the revert data.",
-        "DECODE_FAILED: the bytes did not decode, for example an ABI that does not match the query; decodeError says why. Resume with trackRead and the right resultShape.",
-        "EXPIRED, FAILED or ABORTED: the read did not complete (READ.STATUS).",
-        "UNKNOWN: FULFILLED but the fulfil receipt could not be read. Call refresh() later or check pcTx in the explorer. Never resubmit.",
-        "A finished request is not retried."
+        "Read status: EXPIRED, FAILED or ABORTED means the read did not complete (READ.STATUS).",
+        "Read raw.status: READ.RESULT_STATUS.ERROR means the source failed; raw.errorCode says why.",
+        "Read callbackDelivered: false means the receiver reverted or ran out of gas; callbackFailReason carries the revert data.",
+        "Read decodeError: the result bytes did not decode, for example an ABI that does not match the query.",
+        "Fix the cause and submit a new request; a finished request is not retried."
       ],
       "escalation": "Include the requestId, the submitting txHash and the chain read; never include signing keys or Web2 secrets.",
       "confidence": "documented"
@@ -714,7 +586,7 @@
       "name": "Universal Read Callback Not Delivered",
       "description": "The read is FULFILLED but callbackDelivered is false: the receiver's _onReadResult reverted or ran out of gas. value stays undefined.",
       "likely_cause": "callback.gasLimit too low for the result (large results need more), or _onReadResult reverts on empty resultData or on an unexpected shape.",
-      "detection_signal": "response.outcome === READ.OUTCOME.CALLBACK_FAILED (callbackDelivered === false; progress events READ-TX-106-03, then READ-TX-199-02 with status CALLBACK_FAILED)",
+      "detection_signal": "response.status === READ.STATUS.FULFILLED && response.callbackDelivered === false (progress event READ-TX-106-03)",
       "user_visible_symptom": "The read shows as fulfilled but the receiver contract stored nothing.",
       "machine_recovery": [
         "Submit a new request with more callback gas, up to 1_000_000n (options.callback.gasLimit).",
@@ -729,7 +601,7 @@
       "name": "Web2 Read Never Reaches Quorum",
       "description": "Validators only agree when every one of them extracted identical bytes from the HTTPS endpoint.",
       "likely_cause": "The extracted field changes between fetches (a live price at full precision, a timestamp).",
-      "detection_signal": "A CHAIN.WEB2 read stays PENDING or VOTING until it expires: READ-TX-105-04 Approaching Expiry may fire during wait(), then READ-TX-199-02 with status EXPIRED (outcome EXPIRED).",
+      "detection_signal": "A CHAIN.WEB2 read stays PENDING or VOTING until it expires (READ-TX-105-04 Approaching Expiry, then EXPIRED).",
       "user_visible_symptom": "The Web2 read never completes.",
       "machine_recovery": [
         "Extract stable fields.",
@@ -742,12 +614,12 @@
     {
       "id": "read_prepared_revalidation_failed",
       "name": "Prepared Read Fails Revalidation",
-      "description": "A PreparedRead passed to executeReads is no longer valid: its pinned block, expiry or callback budget went stale between prepare and execute. expiryPushChainHeight is fixed at prepare time (300 Push blocks, about 6.7 minutes by default).",
+      "description": "A PreparedRead passed to executeReads is no longer valid: its pinned block, expiry or budget went stale between prepare and execute.",
       "likely_cause": "Too much time passed between prepareRead and executeReads, or fees moved.",
-      "detection_signal": "executeReads rejects before broadcasting with InvalidReadSpecError (error.code === 'INVALID_READ_SPEC'); error.violations names the rule, for example INVALID_EXPIRY_HEIGHT or INSUFFICIENT_CALLBACK_BUDGET. READ-TX-102-04 Preflight Stale fires first for a read prepared more than 60 s earlier.",
+      "detection_signal": "executeReads rejects a prepared read before broadcasting.",
       "user_visible_symptom": "The batch is not submitted.",
       "machine_recovery": [
-        "Prepare a fresh request with prepareRead right before executeReads and execute again."
+        "Prepare a fresh request with prepareRead and execute again."
       ],
       "escalation": "Include the requestId, the submitting txHash and the chain read; never include signing keys or Web2 secrets.",
       "confidence": "documented"
@@ -774,7 +646,7 @@
       "name": "Universal Read Refund Not Delivered",
       "description": "The unused callback budget was pushed to refundTo / revertRecipient and rejected.",
       "likely_cause": "revertRecipient (which _requestRead defaults to the receiver contract) is a contract without a payable receive().",
-      "detection_signal": "fees.refundFailed === true on the response, or progress event READ-TX-106-06 Refund Rejected (fires for fulfilled and expired reads).",
+      "detection_signal": "Progress event READ-TX-106-06 Refund Rejected, or fees.refundFailed on the response.",
       "user_visible_symptom": "The requester does not get the unused callback budget back.",
       "machine_recovery": [
         "Add receive() external payable {} to the receiver, or point refundTo / revertRecipient at an EOA.",

@@ -2,7 +2,7 @@
 title: "Contract Helpers"
 url: "https://pushchain.github.io/docs/chain/build/contract-helpers/"
 section: "build"
-lastUpdated: "2026-09-23T13:23:26Z"
+lastUpdated: "2026-09-23T14:39:51Z"
 description: "Contract Helpers | Build | Push Chain Docs"
 ---
 
@@ -268,7 +268,7 @@ The [Universal Read Client](https://github.com/pushchain/push-chain-core-contrac
 
 -   **Request with local context**: `_requestRead` stores per-request bytes that you get back in the callback
 -   **Guarded callback**: `onUniversalData` accepts calls only from Universal Callback
--   **Refund safety**: when a spec your contract builds leaves `revertRecipient` as `address(0)`, it defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA. Specs prepared by the SDK already carry the caller's Push account
+-   **Refund safety**: `revertRecipient` defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA
 -   **Gas bound**: Callback gas is capped at `MAX_CALLBACK_GAS_LIMIT` (1,000,000)
 
   
@@ -351,7 +351,7 @@ A contract can build one itself when no SDK is in the loop. See [Contract-Initia
 | `blockNumber` | The source block to read at. Take `UniversalCore.chainHeightByChainNamespace("eip155:11155111")` and subtract `minConfirmations`. Must match the block inside `query`. |
 | `expiryPushChainHeight` | When the request lapses, in Push Chain blocks: `block.number + N`. |
 | `maxFee` | Upper bound on what you are paying; `msg.value` may not exceed it. |
-| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. The SDK fills it with the caller's Push account, or `refundTo`. |
+| `revertRecipient` | Where unused callback budget is returned. `_requestRead` sets it to your contract when zero, so keep a payable `receive()` or point it at an EOA. |
 
   
   
@@ -375,7 +375,7 @@ Submits a Universal Read request to Universal Callback and stores `localState` u
 -   Requesting external chain or web2 state from a payable entrypoint in your contract.
 -   Carrying per-request context (such as the original requester) through to the callback.
 
-> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. The budget must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires. Forward the spec and gas limit unchanged: the SDK matches the request it sent by target, gas limit and spec, and throws `READ_REQUEST_MISMATCH` after the transaction is mined if they differ. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
+> Note: `_requestRead` forwards `msg.value`, so the calling entrypoint must be `payable`. The value is the protocol fee plus the callback budget, as prepared by the SDK. If you gate the entrypoint, authorize the Push-side account that actually submits the request: `pushChainClient.universal.account` is a UEA for an external signer and the native address for a Push signer.
 
 ```solidity
 /**
@@ -520,7 +520,7 @@ Copy playground link
 
 Copy code
 
-`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case, and `outcome` is `CALLBACK_FAILED`. See [Track Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/track-universal-read/).
+`callbackDelivered` is `false` when the override reverted or ran out of gas; the read is still `FULFILLED` in that case. See [Track Universal Read](/push-chain-website/pr-preview/pr-1244/docs/chain/build/track-universal-read/).
 
   
   
