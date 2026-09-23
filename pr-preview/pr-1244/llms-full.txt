@@ -809,9 +809,9 @@ Read Parameters
 | :: Pass one of the following, based on `options.chain` | | |
 | ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
 | &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
-| &nbsp;&nbsp;`options.abi` \| `options.idl` | `any[]` | Either an EVM ABI array or an Anchor IDL object. The input shape determines which encoding is produced and how `value` is decoded, so the result is typed. |
-| &nbsp;&nbsp;`options.functionName` | `string` | The function (EVM) or instruction (Solana) name to encode. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
-| &nbsp;&nbsp;`options.args` | `any[]` | Positional arguments. Use `BigInt` for `u64`/`u128`; 0x-hex 32-byte strings are auto-converted to Solana `PublicKey` when the IDL declares a `pubkey` arg. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `Abi` \| `Idl` | EVM: the contract ABI, used to encode the call and decode `value`. Solana: the program's Anchor IDL; the subject account is decoded with the layout whose discriminator matches its data. Reads never execute an instruction. |
+| &nbsp;&nbsp;`options.functionName` | `string` | EVM: the function to call (required with `abi`). Solana: the account layout to decode; optional, since it is inferred from the discriminator. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | EVM: positional function arguments. Solana: only when `subject` is the program id, the PDA seeds of the `functionName` account in IDL order; pubkeys accept base58 or 0x-hex 32-byte strings, integers take `BigInt`. |
 | &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
 | ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
 | &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |
@@ -882,18 +882,15 @@ Read Progress Hook
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
 | `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
-| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
 | `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
 | `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. A fulfilled read whose callback was not delivered also ends here, with status `CALLBACK_FAILED` (or `SOURCE_ERROR`, `DECODE_FAILED`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
-| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
 Returns UniversalReadResponse
 
@@ -2844,9 +2841,9 @@ console.log(prepared.fees.total); // what this read will cost, in PC
 | :: Pass one of the following, based on `options.chain` | | |
 | ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
 | &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
-| &nbsp;&nbsp;`options.abi` \| `options.idl` | `any[]` | Either an EVM ABI array or an Anchor IDL object. The input shape determines which encoding is produced and how `value` is decoded, so the result is typed. |
-| &nbsp;&nbsp;`options.functionName` | `string` | The function (EVM) or instruction (Solana) name to encode. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
-| &nbsp;&nbsp;`options.args` | `any[]` | Positional arguments. Use `BigInt` for `u64`/`u128`; 0x-hex 32-byte strings are auto-converted to Solana `PublicKey` when the IDL declares a `pubkey` arg. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `Abi` \| `Idl` | EVM: the contract ABI, used to encode the call and decode `value`. Solana: the program's Anchor IDL; the subject account is decoded with the layout whose discriminator matches its data. Reads never execute an instruction. |
+| &nbsp;&nbsp;`options.functionName` | `string` | EVM: the function to call (required with `abi`). Solana: the account layout to decode; optional, since it is inferred from the discriminator. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | EVM: positional function arguments. Solana: only when `subject` is the program id, the PDA seeds of the `functionName` account in IDL order; pubkeys accept base58 or 0x-hex 32-byte strings, integers take `BigInt`. |
 | &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
 | ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
 | &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |
@@ -5555,8 +5552,9 @@ contract BalanceWatcher is UniversalReadClient {
 
     /**
      * @notice Request the Sepolia ETH balance of `holder`
-     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee.
-     *      The excess is the callback budget; what the callback does not use comes back.
+     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee
+     *      plus a callback budget of at least callbackGasLimit * block.basefee (with headroom);
+     *      below that the request is never fulfilled and expires. Unused budget comes back.
      */
     function requestBalance(address holder) external payable returns (uint256) {
         uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111"));
@@ -5638,7 +5636,7 @@ const stored = await inbox.results(result.requestIdUint);
 | **Expiry** | A request that is not executed by `expiryPushChainHeight` expires and the full callback budget is refunded. The protocol fee is not. |
 | **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push and the refund is not delivered. |
 
-The SDK quotes all of this as `prepared.fees` and `prepared.value`. A contract that requests on its own reads `estimateFee` and sends more than it.
+The SDK quotes all of this as `prepared.fees` and `prepared.value`. A contract that requests on its own must send at least `estimateFee(chainNamespace, chainId) + callbackGasLimit × block.basefee`, with headroom because the base fee can rise before fulfilment. `estimateFee` returns 0 on Donut today, so the callback budget is the whole requirement; a request below it is never fulfilled and expires.
 
 ## Security Considerations
 
@@ -6630,18 +6628,15 @@ ProgressHook Type and Response
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
 | `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
-| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
 | `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
 | `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. A fulfilled read whose callback was not delivered also ends here, with status `CALLBACK_FAILED` (or `SOURCE_ERROR`, `DECODE_FAILED`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
-| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
 **Returns `UniversalReadResponse` **
 
@@ -10031,9 +10026,9 @@ You do not need your own receiver to see what `_requestRead` records: the deploy
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
-    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
-    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
+    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
+    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
 
     const RegistryABI = [
       'function readerOf(uint256 requestId) view returns (address)',
@@ -10137,9 +10132,9 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
-    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
-    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
+    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
+    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
 
     const RegistryABI = [
       'function hasResult(uint256 requestId) view returns (bool)',
@@ -10162,7 +10157,7 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
       });
 
       // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
-      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain. This takes 15 to 20 seconds.');
+      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain...');
       const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
         progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
       });

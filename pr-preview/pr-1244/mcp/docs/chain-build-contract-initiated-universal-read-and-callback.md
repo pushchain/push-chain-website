@@ -2,7 +2,7 @@
 title: "Contract-Initiated Universal Read and Callback"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-universal-read-and-callback/"
 section: "build"
-lastUpdated: "2026-09-23T14:39:51Z"
+lastUpdated: "2026-09-23T14:55:22Z"
 description: "Contract-Initiated Universal Read and Callback | Build | Push Chain Docs"
 ---
 
@@ -221,8 +221,9 @@ contract BalanceWatcher is UniversalReadClient {
 
     /**
      * @notice Request the Sepolia ETH balance of `holder`
-     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee.
-     *      The excess is the callback budget; what the callback does not use comes back.
+     * @dev msg.value must cover the protocol fee quoted by Universal Callback's estimateFee
+     *      plus a callback budget of at least callbackGasLimit * block.basefee (with headroom);
+     *      below that the request is never fulfilled and expires. Unused budget comes back.
      */
     function requestBalance(address holder) external payable returns (uint256) {
         uint64 height = uint64(IUniversalCore(UNIVERSAL_CORE).chainHeightByChainNamespace("eip155:11155111"));
@@ -304,7 +305,7 @@ const stored = await inbox.results(result.requestIdUint);
 | **Expiry** | A request that is not executed by `expiryPushChainHeight` expires and the full callback budget is refunded. The protocol fee is not. |
 | **Refund delivery** | Refunds are pushed to `revertRecipient`. A contract without a payable `receive()` rejects the push and the refund is not delivered. |
 
-The SDK quotes all of this as `prepared.fees` and `prepared.value`. A contract that requests on its own reads `estimateFee` and sends more than it.
+The SDK quotes all of this as `prepared.fees` and `prepared.value`. A contract that requests on its own must send at least `estimateFee(chainNamespace, chainId) + callbackGasLimit × block.basefee`, with headroom because the base fee can rise before fulfilment. `estimateFee` returns 0 on Donut today, so the callback budget is the whole requirement; a request below it is never fulfilled and expires.
 
 ## Security Considerations
 
