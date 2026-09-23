@@ -175,18 +175,15 @@ Same event object shape. Single reads (`read`, and `trackRead` while `wait()` po
 | `READ-TX-104-02` | Request Confirmed, Read Detected | Read `<requestId>` requested in `<txHash>` | SUCCESS | `{ txHash, requestId, logIndex }` |
 | `READ-TX-105-01` | Awaiting Quorum | Validators are observing the destination for `<requestId>` | INFO | `{ requestId, status: 'PENDING' }` |
 | `READ-TX-105-02` | Voting In Progress | Validators are voting on the result of `<requestId>` | INFO | `{ requestId, status: 'VOTING' }` |
-| `READ-TX-105-03` | Awaiting Destination Confirmations | `<current>` of `<required>` confirmations on the destination | INFO | `{ requestId, current, required }` |
 | `READ-TX-105-04` | Approaching Expiry | `<n>` Push blocks until `<requestId>` expires | WARNING | `{ requestId, pushBlocksRemaining }` |
-| `READ-TX-106-01` | Quorum Reached, Executing Callback | Delivering the result of `<requestId>` to `<callbackTarget>` | INFO | `{ requestId, callbackTarget }` |
 | `READ-TX-106-02` | Callback Delivered | `ReadFulfilled` emitted for `<requestId>` | SUCCESS | `{ requestId }` |
 | `READ-TX-106-03` | Callback Reverted | `CallbackFailed` for `<requestId>`; the read is still FULFILLED but your callback did not run | WARNING | `{ requestId, reason }` |
 | `READ-TX-106-04` | Callback Gas Settled | Burned `<n>` UPC, refunding `<n>` UPC | INFO | `{ requestId, burned, refunded }` |
 | `READ-TX-106-05` | Refund Sent | `<amount>` UPC pushed to `<refundTo>` | INFO | `{ requestId, amount, refundTo }` |
 | `READ-TX-106-06` | Refund Rejected | `<refundTo>` rejected the refund; it sits in the admin rescue pool | WARNING | `{ requestId, amount, refundTo }` |
-| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered / fulfilled, callback not delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
-| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>` | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
+| `READ-TX-199-01` | Read Fulfilled | Read `<requestId>` fulfilled and delivered | SUCCESS | `{ requestId, value, resultData, callbackDelivered }` |
+| `READ-TX-199-02` | Read Failed / Expired / Aborted | Read `<requestId>` ended `<status>`: `<error>`. A fulfilled read whose callback was not delivered also ends here, with status `CALLBACK_FAILED` (or `SOURCE_ERROR`, `DECODE_FAILED`) | ERROR | `{ requestId, status, errorCode, errorMsg, refunded }` |
 | `READ-TX-199-03` | Read Timeout | Gave up waiting for `<requestId>` after `<n>`s; resume with `trackRead` | ERROR | `{ requestId, lastStatus, elapsedMs }` |
-| `READ-TX-199-99` | Intermediate Read Step Completed | Read `<requestId>` advanced in `<txHash>` | INFO | `{ requestId, txHash }` |
 
 Batches (`executeReads`) wrap the single-read events; each read in the batch also emits its own `READ-TX-1xx` events:
 

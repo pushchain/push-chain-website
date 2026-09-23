@@ -13,9 +13,9 @@ import HideTableRows from '@site/src/components/HideTableRows/HideTableRows';
 | :: Pass one of the following, based on `options.chain` | | |
 | ↳ **If `options.chain` is a Web3 chain** [collapsed] | | |
 | &nbsp;&nbsp;`options.token` | `string` | Token balance of `subject`. EVM: the ERC-20 contract address, read via `balanceOf`. Solana: the SPL mint address; the SDK derives the associated token account. |
-| &nbsp;&nbsp;`options.abi` \| `options.idl` | `any[]` | Either an EVM ABI array or an Anchor IDL object. The input shape determines which encoding is produced and how `value` is decoded, so the result is typed. |
-| &nbsp;&nbsp;`options.functionName` | `string` | The function (EVM) or instruction (Solana) name to encode. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
-| &nbsp;&nbsp;`options.args` | `any[]` | Positional arguments. Use `BigInt` for `u64`/`u128`; 0x-hex 32-byte strings are auto-converted to Solana `PublicKey` when the IDL declares a `pubkey` arg. |
+| &nbsp;&nbsp;`options.abi` \| `options.idl` | `Abi` \| `Idl` | EVM: the contract ABI, used to encode the call and decode `value`. Solana: the program's Anchor IDL; the subject account is decoded with the layout whose discriminator matches its data. Reads never execute an instruction. |
+| &nbsp;&nbsp;`options.functionName` | `string` | EVM: the function to call (required with `abi`). Solana: the account layout to decode; optional, since it is inferred from the discriminator. Both `snake_case` and `camelCase` are accepted and matched against the IDL. |
+| &nbsp;&nbsp;`options.args` | `any[]` | EVM: positional function arguments. Solana: only when `subject` is the program id, the PDA seeds of the `functionName` account in IDL order; pubkeys accept base58 or 0x-hex 32-byte strings, integers take `BigInt`. |
 | &nbsp;&nbsp;`options.storageSlot` | `bigint` \| `Hex` | EVM only. One storage word from the subject contract. Not needed for Solana, as Solana has no storage slots. |
 | ↳ **If `options.chain` is a Web2 / HTTPS endpoint** [collapsed] | | |
 | &nbsp;&nbsp;`options.web2` | `object` | Required. Describes the HTTPS request and which JSON fields to extract. Fields below. |

@@ -572,9 +572,9 @@ You do not need your own receiver to see what `_requestRead` records: the deploy
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
-    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
-    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
+    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
+    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
 
     const RegistryABI = [
       'function readerOf(uint256 requestId) view returns (address)',
@@ -695,9 +695,9 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
     const RPC_URL = 'https://evm.donut.rpc.push.org/';
     // The Universal Read Registry the SDK uses on Donut
     const REGISTRY_ADDRESS = PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT;
-    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11721896
-    // https://donut.push.network/tx/0xace51f0b7b3d073aa2c3662df12509a41ae342af3572b5f42cae6b18409cb478
-    const REQUEST_ID = '0x9d276d87071f8478f817ef893d8fbb1ca4d8319f14bbf1dfba12cd73d02867f3';
+    // A completed read on this registry: USDC totalSupply() on Ethereum Sepolia, pinned at Sepolia block 11763025
+    // https://donut.push.network/tx/0xe56ca590ba08fd2d09d04e478b16933f215f0c64e435c0e8be0b9d85116fe369
+    const REQUEST_ID = '0x9dd18b4139fe335e1848022503aabb699f319be395df5109c4e48754ea3d5bbe';
 
     const RegistryABI = [
       'function hasResult(uint256 requestId) view returns (bool)',
@@ -720,7 +720,7 @@ The deployed [Universal Read Registry](https://donut.push.network/address/0x0000
       });
 
       // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
-      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain. This takes 15 to 20 seconds.');
+      console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain...');
       const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
         progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
       });
