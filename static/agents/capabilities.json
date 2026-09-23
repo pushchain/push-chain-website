@@ -713,7 +713,7 @@
     {
       "id": "get_constants",
       "name": "Get Constants Reference",
-      "description": "Access all PushChain.CONSTANTS values for networks, chains, libraries, tokens, and Universal Read (READ.STATUS, READ.RESULT_STATUS, READ.UNIVERSAL_READ_REGISTRY_ADDRESS). CHAIN.WEB2 is a read-only destination for Universal Read.",
+      "description": "Access all PushChain.CONSTANTS values for networks, chains, libraries, tokens, and Universal Read (READ.OUTCOME, READ.STATUS, READ.RESULT_STATUS, READ.ERROR_CODE, READ.UNIVERSAL_READ_REGISTRY_ADDRESS). CHAIN.WEB2 is a read-only destination for Universal Read.",
       "actor": [
         "developer",
         "agent",
@@ -1334,21 +1334,21 @@
         },
         {
           "name": "options.abi | options.idl",
-          "type": "any[]",
+          "type": "Abi | Idl",
           "required": false,
-          "description": "EVM ABI array or Anchor IDL object; decodes value into a typed result. Contract calls accept any function in the ABI."
+          "description": "abi (EVM): ABI array; value is decoded and typed from it. Any mutability is accepted (validators simulate with eth_call at the pinned block). idl (Solana): Anchor IDL object; the account is decoded with the layout its 8-byte discriminator names. Reads never execute an instruction."
         },
         {
           "name": "options.functionName",
           "type": "string",
           "required": false,
-          "description": "Function (EVM) or instruction (Solana) to encode."
+          "description": "With abi: the function to call (required). With idl: the account layout (optional, inferred from the discriminator; snake_case, camelCase or PascalCase)."
         },
         {
           "name": "options.args",
           "type": "any[]",
           "required": false,
-          "description": "Positional arguments for functionName."
+          "description": "With abi: positional call arguments. With idl and the program id as subject: the PDA seeds of functionName's account, in IDL order."
         },
         {
           "name": "options.storageSlot",
@@ -1385,7 +1385,7 @@
         {
           "name": "result",
           "type": "UniversalReadResponse",
-          "description": "value is the success signal (typed from the query). When value is undefined, status, raw.status, callbackDelivered and decodeError say why. Also requestId, txHash, fees, explorerUrl, wait() and refresh()."
+          "description": "outcome (READ.OUTCOME) is the success signal: SUCCESS means value (typed from the query) is usable; SOURCE_ERROR, CALLBACK_FAILED, DECODE_FAILED, EXPIRED, FAILED, ABORTED, PENDING or UNKNOWN name what happened (UNKNOWN: refresh() later, never resubmit). status, raw.status, callbackDelivered and decodeError are debugging fields. Also requestId, requestIdUint, txHash, fees, explorerUrl, wait() and refresh()."
         }
       ],
       "sdk_method": "pushChainClient.universal.read(subject, options)",
@@ -1479,7 +1479,7 @@
           "name": "options.progressHook",
           "type": "(progress: ProgressEvent) => void",
           "required": false,
-          "description": "Invoked at each lifecycle step while wait() polls."
+          "description": "Invoked during the lookup (READ-TX-104-03/04/05), on refresh(), and at each lifecycle step while wait() polls."
         },
         {
           "name": "options.advanced.pollingIntervalMs",
@@ -1491,7 +1491,7 @@
           "name": "options.advanced.timeout",
           "type": "number",
           "required": false,
-          "description": "Maximum milliseconds wait() polls before ReadTimeoutError; cancels nothing."
+          "description": "Maximum milliseconds wait() polls before ReadTimeoutError; cancels nothing. The initial lookup retries for up to 30 s, then throws ReadNotFoundError (READ_NOT_FOUND)."
         }
       ],
       "outputs": [

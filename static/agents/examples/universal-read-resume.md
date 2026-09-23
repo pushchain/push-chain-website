@@ -37,19 +37,18 @@ async function main() {
     const target = await returnUserTrackSelection();
 
     if (target.txHash) {
-      console.log('Looking up every read submitted in', target.txHash, '...');
       const reads = await pushChainClient.universal.trackRead({ txHash: target.txHash }, {
         progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
       });
       console.log('Reads in this transaction:', reads.length);
       for (const read of reads) {
         const done = await read.wait();
-        console.log('Value:', ethers.formatEther(done.value), 'ETH');
+        if (done.outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) console.log('Value:', ethers.formatEther(done.value), 'ETH');
+        else console.log('Outcome:', done.outcome, print({ errorCode: done.raw?.errorCode, callbackFailReason: done.callbackFailReason, decodeError: done.decodeError }));
       }
       return;
     }
 
-    console.log('Looking up request', target.requestId, '...');
     const snapshot = await pushChainClient.universal.trackRead({ requestId: target.requestId }, {
       progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
     });
@@ -57,6 +56,10 @@ async function main() {
 
     console.log('Waiting for the read to reach a terminal state...');
     const done = await snapshot.wait();
+    if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
+      console.log('Outcome:', done.outcome, print({ errorCode: done.raw?.errorCode, callbackFailReason: done.callbackFailReason, decodeError: done.decodeError }));
+      return;
+    }
     console.log('Value:', target.decimals ? ethers.formatUnits(done.value, target.decimals) + ' ' + target.symbol : print(done.value));
   } finally {
     rl.close();

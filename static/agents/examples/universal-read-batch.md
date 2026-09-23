@@ -53,6 +53,10 @@ async function main() {
 
     console.log('Waiting for validators to reach quorum and deliver both callbacks (usually under a minute)...');
     const [eth, sol] = await batch.wait();
+    // outcome is the success signal; value is set only when it is SUCCESS
+    for (const read of [eth, sol]) {
+      if (read.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read ' + read.requestId + ' ended ' + read.outcome);
+    }
     console.log('Value:', ethers.formatEther(eth.value), 'ETH');
     console.log('Value:', ethers.formatUnits(sol.value, 9), 'SOL');
   } finally {

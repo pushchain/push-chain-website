@@ -59,8 +59,8 @@
         },
         {
           "name": "READ",
-          "signature": "PushChain.CONSTANTS.READ.STATUS | RESULT_STATUS | UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT",
-          "description": "Universal Read constants. READ.STATUS is the request lifecycle (PENDING, VOTING, FULFILLED, EXPIRED, FAILED, ABORTED); READ.RESULT_STATUS is what the source returned (SUCCESS or ERROR); READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT is the Universal Read Registry (0x00000000000000000000000000000000000000b2). Full values in agents/constants.json.",
+          "signature": "PushChain.CONSTANTS.READ.OUTCOME | STATUS | RESULT_STATUS | ERROR_CODE | UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT",
+          "description": "Universal Read constants. READ.OUTCOME is the success signal on each response (SUCCESS, SOURCE_ERROR, CALLBACK_FAILED, DECODE_FAILED, EXPIRED, FAILED, ABORTED, PENDING, UNKNOWN); READ.ERROR_CODE explains raw.errorCode (INVALID_QUERY, UNSUPPORTED, REVERTED, NOT_FOUND, INVALID_RESULT, REJECTED). READ.STATUS is the request lifecycle (PENDING, VOTING, FULFILLED, EXPIRED, FAILED, ABORTED); READ.RESULT_STATUS is what the source returned (SUCCESS or ERROR); READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT is the Universal Read Registry (0x00000000000000000000000000000000000000b2). Full values in agents/constants.json.",
           "returns": "object",
           "safe_for_autonomous_execution": true
         }
@@ -424,7 +424,7 @@
         {
           "name": "read",
           "signature": "pushChainClient.universal.read(subject: string, options: { chain: CHAIN, token?: string, abi?: any[], idl?: any, functionName?: string, args?: any[], storageSlot?: bigint | Hex, web2?: { extract: Array<{ path: string, valueType: 'uint256' | 'int256' | 'bool' | 'string' | 'bytes', decimals?: number }>, method?: 'GET' | 'POST', headers?: Record<string, string>, body?: string | Uint8Array, timeoutMs?: number }, callback?: { target: string, gasLimit: bigint, abi: Abi, functionName: string, args?: (spec, gasLimit) => unknown[] }, waitForCompletion?: boolean, progressHook?: (progress: ProgressEvent) => void, blockNumber?: bigint, minConfirmations?: number, expiryBlocks?: bigint, maxFee?: bigint, refundTo?: string, advanced?: { pollingIntervalMs?: number, timeout?: number, enforceGasCheck?: boolean } }): Promise<UniversalReadResponse>",
-          "description": "Requests state from an EVM chain, Solana or an HTTPS endpoint and has validators deliver the agreed result on-chain to Push Chain: to the Universal Read Registry (0x00000000000000000000000000000000000000b2, the default) or to your own UniversalReadClient receiver via callback. One query option picks the read: none = native balance, token = ERC-20 or SPL balance, abi or idl + functionName (+ args) = typed contract call or Solana program account, storageSlot = EVM storage word, web2 = JSON fields from an HTTPS endpoint (chain: CHAIN.WEB2). Paid and asynchronous. value is the success signal; when it is undefined, check status, raw.status, callbackDelivered and decodeError. Response: requestId, requestIdUint, txHash, chain, status (READ.STATUS), isTerminal, callbackDelivered, callbackFailReason, value, decodeError, raw { status, resultData, errorCode }, errorMsg, fees, request, pcTx, explorerUrl, wait(), refresh().",
+          "description": "Requests state from an EVM chain, Solana or an HTTPS endpoint and has validators deliver the agreed result on-chain to Push Chain: to the Universal Read Registry (0x00000000000000000000000000000000000000b2, the default) or to your own UniversalReadClient receiver via callback. One query option picks the read: none = native balance, token = ERC-20 or SPL balance, abi or idl + functionName (+ args) = typed contract call or Solana program account, storageSlot = EVM storage word, web2 = JSON fields from an HTTPS endpoint (chain: CHAIN.WEB2). Paid and asynchronous. outcome is the success signal: READ.OUTCOME.SUCCESS means value is usable; any other outcome names the failure (status, raw.status, callbackDelivered and decodeError are debugging fields). Response: requestId, requestIdUint (bigint), txHash, chain, outcome (READ.OUTCOME), status (READ.STATUS), isTerminal, callbackDelivered, callbackFailReason, value, decodeError, raw { status, resultData, errorCode }, errorMsg, fees, request, pcTx, explorerUrl, wait(), refresh().",
           "arguments": [
             {
               "name": "subject",
@@ -446,21 +446,21 @@
             },
             {
               "name": "options.abi | options.idl",
-              "type": "any[]",
+              "type": "Abi | Idl",
               "required": false,
-              "description": "Web3 chains. An EVM ABI array or an Anchor IDL object. The input shape determines the encoding and how value is decoded, so the result is typed. With an IDL and no functionName, a Solana program account is read and decoded."
+              "description": "abi (EVM only): an ABI array; the call is encoded and value decoded and typed from it. Any mutability is accepted: validators run the call as an eth_call simulation at the pinned block, so nonpayable/payable functions return data and never execute. idl (Solana only): an Anchor IDL object; the subject account is decoded with the layout whose 8-byte discriminator matches its data. Reads never execute an instruction. abi on Solana or idl on EVM is rejected (INVALID_READ_QUERY)."
             },
             {
               "name": "options.functionName",
               "type": "string",
               "required": false,
-              "description": "Web3 chains. The function (EVM) or instruction (Solana) to encode. snake_case and camelCase are both accepted and matched against the IDL."
+              "description": "With abi: the function to call (required). With idl: the account layout name (optional; inferred from the discriminator when omitted; snake_case, camelCase or the IDL's PascalCase accepted); passing it types value at compile time. accountName is not supported and throws."
             },
             {
               "name": "options.args",
               "type": "any[]",
               "required": false,
-              "description": "Web3 chains. Positional arguments. Use BigInt for u64/u128; 0x-hex 32-byte strings become Solana PublicKey when the IDL declares a pubkey arg."
+              "description": "With abi: positional call arguments. With idl: allowed only when subject is the program id; they are the non-constant PDA seeds of functionName's account, in the order the IDL declares them (pubkey: base58, 0x-hex 32-byte string or PublicKey; integers: bigint; also bool, string, bytes). The seed count must match."
             },
             {
               "name": "options.storageSlot",
@@ -478,19 +478,19 @@
               "name": "options.callback",
               "type": "{ target, gasLimit, abi, functionName, args? }",
               "required": false,
-              "description": "Routes the request through your own receiver contract (inherits UniversalReadClient) instead of the Universal Read Registry. gasLimit is the gas for _onReadResult (default 500_000n, at most 1_000_000n); functionName is the payable request entrypoint, which must emit exactly one ReadRequested per prepared read; args maps (spec, gasLimit) onto a different entrypoint argument order."
+              "description": "Routes the request through your own receiver contract (inherits UniversalReadClient) instead of the Universal Read Registry. target, abi and functionName are required together; gasLimit is the gas for _onReadResult (optional, default 500_000n for the registry and custom targets, at most 1_000_000n); functionName is the payable request entrypoint, which must emit exactly one ReadRequested per prepared read; args maps (spec, gasLimit) onto a different entrypoint argument order."
             },
             {
               "name": "options.waitForCompletion",
               "type": "boolean",
               "required": false,
-              "description": "Default true. false resolves once the request is confirmed on Push Chain, before validators vote; call wait() on the response to finish."
+              "description": "Default true. false resolves once the request is confirmed on Push Chain and indexed by the node (up to 30 s; ReadNotFoundError / READ_NOT_FOUND after that, with the request already paid), before validators vote; call wait() on the response to finish."
             },
             {
               "name": "options.progressHook",
               "type": "(progress: ProgressEvent) => void",
               "required": false,
-              "description": "Progress events READ-TX-101 through READ-TX-199-99."
+              "description": "Progress events READ-TX-101 through READ-TX-199-03 (see agents/workflows/progress-hook-events.md). READ-TX-199-01 fires only when outcome is SUCCESS; other terminal outcomes end on READ-TX-199-02."
             },
             {
               "name": "options.blockNumber",
@@ -570,21 +570,21 @@
             },
             {
               "name": "options.abi | options.idl",
-              "type": "any[]",
+              "type": "Abi | Idl",
               "required": false,
-              "description": "Web3 chains. An EVM ABI array or an Anchor IDL object. The input shape determines the encoding and how value is decoded, so the result is typed. With an IDL and no functionName, a Solana program account is read and decoded."
+              "description": "abi (EVM only): an ABI array; the call is encoded and value decoded and typed from it. Any mutability is accepted: validators run the call as an eth_call simulation at the pinned block, so nonpayable/payable functions return data and never execute. idl (Solana only): an Anchor IDL object; the subject account is decoded with the layout whose 8-byte discriminator matches its data. Reads never execute an instruction. abi on Solana or idl on EVM is rejected (INVALID_READ_QUERY)."
             },
             {
               "name": "options.functionName",
               "type": "string",
               "required": false,
-              "description": "Web3 chains. The function (EVM) or instruction (Solana) to encode. snake_case and camelCase are both accepted and matched against the IDL."
+              "description": "With abi: the function to call (required). With idl: the account layout name (optional; inferred from the discriminator when omitted; snake_case, camelCase or the IDL's PascalCase accepted); passing it types value at compile time. accountName is not supported and throws."
             },
             {
               "name": "options.args",
               "type": "any[]",
               "required": false,
-              "description": "Web3 chains. Positional arguments. Use BigInt for u64/u128; 0x-hex 32-byte strings become Solana PublicKey when the IDL declares a pubkey arg."
+              "description": "With abi: positional call arguments. With idl: allowed only when subject is the program id; they are the non-constant PDA seeds of functionName's account, in the order the IDL declares them (pubkey: base58, 0x-hex 32-byte string or PublicKey; integers: bigint; also bool, string, bytes). The seed count must match."
             },
             {
               "name": "options.storageSlot",
@@ -602,7 +602,7 @@
               "name": "options.callback",
               "type": "{ target, gasLimit, abi, functionName, args? }",
               "required": false,
-              "description": "Routes the request through your own receiver contract (inherits UniversalReadClient) instead of the Universal Read Registry. gasLimit is the gas for _onReadResult (default 500_000n, at most 1_000_000n); functionName is the payable request entrypoint, which must emit exactly one ReadRequested per prepared read; args maps (spec, gasLimit) onto a different entrypoint argument order."
+              "description": "Routes the request through your own receiver contract (inherits UniversalReadClient) instead of the Universal Read Registry. target, abi and functionName are required together; gasLimit is the gas for _onReadResult (optional, default 500_000n for the registry and custom targets, at most 1_000_000n); functionName is the payable request entrypoint, which must emit exactly one ReadRequested per prepared read; args maps (spec, gasLimit) onto a different entrypoint argument order."
             },
             {
               "name": "options.blockNumber",
@@ -692,9 +692,9 @@
           "arguments": [
             {
               "name": "ref.requestId | ref.txHash",
-              "type": "string | bigint",
+              "type": "requestId: Hex | bigint; txHash: Hex",
               "required": true,
-              "description": "The read's request ID (hex or numeric), or the Push Chain transaction that submitted it. Pass one."
+              "description": "The read's request ID (0x-hex or bigint), or the Push Chain transaction that submitted it. Pass one. The lookup retries for up to 30 s while the node indexes the request, then throws ReadNotFoundError (code READ_NOT_FOUND): retry with the same reference, never resubmit."
             },
             {
               "name": "options.resultShape",
@@ -706,19 +706,19 @@
               "name": "options.progressHook",
               "type": "(progress: ProgressEvent) => void",
               "required": false,
-              "description": "Invoked at each lifecycle step while wait() polls."
+              "description": "Invoked during the lookup (READ-TX-104-03/04/05), on refresh(), and at each lifecycle step while wait() polls."
             },
             {
               "name": "options.advanced.pollingIntervalMs",
               "type": "number",
               "required": false,
-              "description": "Milliseconds between polls in wait(). Default 2000, minimum 500."
+              "description": "Milliseconds between polls, during the lookup and in wait(). Default 2000, minimum 500."
             },
             {
               "name": "options.advanced.timeout",
               "type": "number",
               "required": false,
-              "description": "Maximum milliseconds wait() polls before throwing ReadTimeoutError. Default derived from expiry, at most 180000."
+              "description": "Maximum milliseconds wait() polls before throwing ReadTimeoutError (code READ_TIMEOUT, with lastStatus, requestId, txHash). Default derived from expiry, at most 180000. Does not change the 30 s lookup window. snapshot.wait() also takes flat { timeoutMs, pollingIntervalMs, resultShape }; trackRead options carry into it."
             }
           ],
           "returns": "UniversalReadResponse | UniversalReadResponse[]",

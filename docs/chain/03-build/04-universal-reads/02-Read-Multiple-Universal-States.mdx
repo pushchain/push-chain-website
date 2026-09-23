@@ -133,7 +133,7 @@ console.log(prepared.fees.total); // what this read will cost, in PC
 
 **_`pushChainClient.universal.executeReads(preparedReads: PreparedRead[], options?: { waitForCompletion?, progressHook?, advanced? }): Promise<BatchReadResponse>`_**
 
-Executes an ordered array of prepared reads as one flow. Where the wallet supports atomic batching this is submitted as a **single transaction**; you sign once, and the SDK submits every read and collects every result.
+Executes an ordered array of prepared reads as one flow. With an external-chain wallet (UEA), or a Push Chain wallet that can sign EIP-7702 authorizations, this is submitted as a **single atomic transaction**: you sign once, and the SDK submits every read and collects every result. A Push Chain wallet without EIP-7702 support sends one transaction per read instead; `atomic` is then `false` and `transactionHashes` lists every transaction.
 
 Each prepared read becomes one read in the batch, and results come back in the same order.
 
@@ -157,7 +157,7 @@ const [eth, sol] = await batch.wait(); // results in prepared order
 
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
-| _`preparedReads`_ | `PreparedRead[]` | Reads returned by `prepareRead`. Results come back in this order. Without atomic batching in the wallet, they are submitted as sequential transactions. |
+| _`preparedReads`_ | `PreparedRead[]` | Reads returned by `prepareRead`. Results come back in this order. Each read is revalidated against current chain state before anything is sent. Without atomic batching in the wallet, they are submitted as sequential transactions. |
 | `options.waitForCompletion` | `boolean` | Default `true`. When `false`, returns as soon as the requests are submitted, before validators vote.<br /><br />Call `wait()` on the response to finish. |
 | `options.progressHook` | `(progress: ProgressEvent) => void` | Callback for batch and per-read progress events; see [ProgressHook Type and Response](#execute-reads). |
 
@@ -169,7 +169,7 @@ const [eth, sol] = await batch.wait(); // results in prepared order
 
 <Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
 
-Batch events wrap the single-read events documented in [Read Universal State](/docs/chain/build/universal-read/#read-progress-hook); each read in the batch also emits its own `READ-TX-1xx` events.
+Batch events wrap the single-read events documented in [Read Universal State](/docs/chain/build/universal-read/#read-progress-hook); each read in the batch also emits its own `READ-TX-1xx` events. The `READ-TX-001`, `002` and `999` events below fire only when more than one read is executed.
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |
@@ -249,6 +249,10 @@ Batch events wrap the single-read events documented in [Read Universal State](/d
 
         console.log('Waiting for validators to reach quorum and deliver both callbacks (usually under a minute)...');
         const [eth, sol] = await batch.wait();
+        // outcome is the success signal; value is set only when it is SUCCESS
+        for (const read of [eth, sol]) {
+          if (read.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read ' + read.requestId + ' ended ' + read.outcome);
+        }
         console.log('Value:', ethers.formatEther(eth.value), 'ETH');
         console.log('Value:', ethers.formatUnits(sol.value, 9), 'SOL');
       } finally {
@@ -345,6 +349,10 @@ Read a Chainlink price on Ethereum Sepolia, a USDC balance on Solana Devnet and 
 
         console.log('Waiting for validators to reach quorum and deliver all three callbacks (usually under a minute)...');
         const [priceResult, usdcResult, userResult] = await batch.wait();
+        // outcome is the success signal; value is set only when it is SUCCESS
+        for (const read of [priceResult, usdcResult, userResult]) {
+          if (read.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read ' + read.requestId + ' ended ' + read.outcome);
+        }
         console.log('Value:', ethers.formatUnits(priceResult.value, 8), 'USD per ETH');
         console.log('Value:', ethers.formatUnits(usdcResult.value, 6), 'USDC');
         console.log('Value:', JSON.stringify(userResult.value, (_, value) => typeof value === 'bigint' ? value.toString() : value));
@@ -365,9 +373,10 @@ Read a Chainlink price on Ethereum Sepolia, a USDC balance on Solana Devnet and 
 
 ## Key Considerations
 
-- **Single signature**: one transaction submits every read when the wallet supports atomic batching. Otherwise the reads go out as sequential transactions, listed in **transactionHashes**.
-- **Fulfillment is per read**: **atomic** only describes the submission. Validators fulfill each read on its own, so check **value** on every response.
-- **Partial batches**: with sequential submission, an earlier read can exist even if a later transaction fails. Check the hashes on the error before resubmitting, or you pay twice. A prepared read that fails revalidation must be prepared again.
+- **Single signature**: one atomic transaction submits every read with an external-chain wallet or an EIP-7702-capable Push Chain wallet. Otherwise the reads go out as sequential transactions (the SDK logs a warning), listed in **transactionHashes**.
+- **Fulfillment is per read**: **atomic** only describes the submission. Validators fulfill each read on its own, so check `outcome === PushChain.CONSTANTS.READ.OUTCOME.SUCCESS` on every response before using its **value**.
+- **Partial batches**: with sequential submission, an earlier read can exist even if a later transaction fails. The SDK then throws a `ReadStateError` with code `READ_REQUEST_TX_FAILED`, carrying `transactionHashes` (mined) and `pendingTransactionHash` (outcome unknown). Resume the mined ones with `trackRead({ txHash })` and check the pending receipt before resubmitting, or you pay twice.
+- **Prepare right before executing**: a prepared read fixes its expiry at prepare time (300 Push blocks by default, about 6.7 minutes). `executeReads` revalidates every read first and throws `InvalidReadSpecError` if one is no longer valid; a read prepared more than 60 seconds earlier is announced with `READ-TX-102-04`. Prepare it again rather than retrying.
 - **Fees**: each read carries its own fee and the batch costs their sum. Nothing is charged at prepare time.
 - **Tracking**: the progress hook streams batch events plus each read's own events. A timed-out wait cancels nothing; resume with [Track Universal Read](/docs/chain/build/track-universal-read/).
 

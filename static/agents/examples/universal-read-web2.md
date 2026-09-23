@@ -46,6 +46,10 @@ async function main() {
 
     console.log('Waiting for validators to reach quorum and deliver the callback (usually under a minute)...');
     const done = await pending.wait();
+    if (done.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) {
+      console.log('Read did not succeed:', done.outcome, done.raw?.errorCode ?? '', done.callbackFailReason ?? '', done.decodeError ?? '');
+      return;
+    }
     console.log('Value:', JSON.stringify(done.value, (_, value) => typeof value === 'bigint' ? value.toString() : value));
     console.log('id:', done.value[0].toString(), 'name:', done.value[1]);
   } finally {

@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://push.org/schemas/universal-read-response.json",
   "title": "UniversalReadResponse",
-  "description": "Response object returned by pushChainClient.universal.read(), by each entry of executeReads(...).reads and wait(), and by trackRead(). value is the success signal: it is present only when the read is fulfilled, the callback was delivered, the source returned success and the result decoded. When value is undefined, status, raw.status, callbackDelivered and decodeError say why.",
+  "description": "Response object returned by pushChainClient.universal.read(), by each entry of executeReads(...).reads and wait(), and by trackRead(). outcome is the success signal: outcome === READ.OUTCOME.SUCCESS means the source read succeeded, the callback ran and value is set. Any other outcome names what went wrong; status, raw.status, callbackDelivered and decodeError are debugging fields.",
   "type": "object",
   "properties": {
     "requestId": {
@@ -11,7 +11,7 @@
       "description": "Unique identifier of this read (hex). Use it to resume tracking in another session with trackRead({ requestId })."
     },
     "requestIdUint": {
-      "description": "The same request ID as a bigint. Matches the uint256 requestId a UniversalReadClient receives in _onReadResult."
+      "description": "The same request ID as a JavaScript bigint (not JSON-serializable). Matches the uint256 requestId a UniversalReadClient receives in _onReadResult and the key of registry resultByRequestId."
     },
     "txHash": {
       "type": "string",
@@ -25,6 +25,21 @@
     "destination": {
       "type": "object",
       "description": "Parsed destination: chainNamespace, chainId, caip2, namespace."
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "SUCCESS",
+        "SOURCE_ERROR",
+        "CALLBACK_FAILED",
+        "DECODE_FAILED",
+        "EXPIRED",
+        "FAILED",
+        "ABORTED",
+        "UNKNOWN"
+      ],
+      "description": "READ.OUTCOME, derived by the SDK. SUCCESS: source SUCCESS, callback delivered, value set (raw bytes when no shape is known). SOURCE_ERROR: FULFILLED with raw.status ERROR (see raw.errorCode). CALLBACK_FAILED: FULFILLED but the receiver reverted or ran out of gas (see callbackFailReason). DECODE_FAILED: delivered but resultData did not match the shape (see decodeError). EXPIRED / FAILED / ABORTED: the terminal status. PENDING: not terminal. UNKNOWN: FULFILLED but the fulfil receipt could not be read, so delivery is unconfirmed: refresh() later or check pcTx; never resubmit."
     },
     "status": {
       "type": "integer",
@@ -45,14 +60,14 @@
     },
     "callbackDelivered": {
       "type": "boolean",
-      "description": "FULFILLED only. true when the receiver ran; false when it reverted or ran out of gas."
+      "description": "FULFILLED only. true when the receiver ran; false when it reverted or ran out of gas; undefined when the read is not FULFILLED or the fulfil receipt could not be read (outcome UNKNOWN)."
     },
     "callbackFailReason": {
       "type": "string",
       "description": "Revert data from a failed callback."
     },
     "value": {
-      "description": "Decoded result, typed from the query: bigint for balances, Hex for storage, the ABI return type for calls, an array for Web2 (one entry per extract path, in order). Present only when fulfilled, delivered, successful and decodable."
+      "description": "Decoded result, typed from the query: bigint for balances, Hex for storage, the ABI return type for calls, the decoded Anchor account for idl reads, an array for Web2 (one entry per extract path, in order). Present only when outcome is SUCCESS."
     },
     "decoded": {
       "type": "object",
@@ -94,7 +109,7 @@
     },
     "fees": {
       "type": "object",
-      "description": "paid, protocolFee, callbackBudget, plus burned, refunded and refundFailed once settled (bigint values)."
+      "description": "paid, protocolFee, callbackBudget (bigint), plus burned, refunded and refundFailed from settlement logs. burned is set for FULFILLED / FAILED reads; refunded and refundFailed also for EXPIRED. They stay undefined while pending, for ABORTED reads, and when the receipts or block results cannot be read."
     },
     "request": {
       "type": "object",
@@ -107,21 +122,32 @@
     "explorerUrl": {
       "type": "string",
       "format": "uri",
-      "description": "Explorer link for the request transaction."
+      "description": "Explorer link for the request transaction: https://donut.push.network/tx/<txHash> on Donut."
     },
     "wait": {
-      "description": "Polls until the read is terminal and returns the final UniversalReadResponse. Only a timeout throws (ReadTimeoutError, code READ_TIMEOUT). Type: () => Promise<UniversalReadResponse>"
+      "description": "Polls until the read is terminal and returns the final UniversalReadResponse. Resolves on every terminal status; only a timeout throws (ReadTimeoutError, code READ_TIMEOUT, with lastStatus, requestId, txHash). Options are flat and optional; options given to trackRead carry into it. Type: (opts?: { timeoutMs?: number; pollingIntervalMs?: number; resultShape?: ReadResultShape }) => Promise<UniversalReadResponse>"
     },
     "refresh": {
-      "description": "Returns one fresh snapshot without polling. Type: () => Promise<UniversalReadResponse>"
+      "description": "Re-runs the lookup and returns one fresh snapshot without polling (the progressHook sees READ-TX-104-03/04 again). Type: () => Promise<UniversalReadResponse>"
     }
   },
   "required": [
     "requestId",
+    "requestIdUint",
     "txHash",
     "chain",
+    "destination",
+    "outcome",
     "status",
-    "isTerminal"
+    "isTerminal",
+    "raw",
+    "errorMsg",
+    "fees",
+    "request",
+    "pcTx",
+    "explorerUrl",
+    "wait",
+    "refresh"
   ],
   "additionalProperties": true,
   "status": "documented",
