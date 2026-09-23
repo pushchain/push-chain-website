@@ -5387,9 +5387,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:6.0.25":
-  version: 6.0.25
-  resolution: "@pushchain/core@npm:6.0.25"
+"@pushchain/core@npm:6.0.26":
+  version: 6.0.26
+  resolution: "@pushchain/core@npm:6.0.26"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     "@cosmjs/crypto": "npm:0.33.1"
@@ -5414,7 +5414,7 @@ __metadata:
       optional: true
     tweetnacl:
       optional: true
-  checksum: 10c0/11d99b6a4999c5cc9dd1886bd6463559d45bd25c96e56e2d52073181d53d416479841c560a31af2d82509b42e34028a92dec6ac2dde7a72f009835404073a0ff
+  checksum: 10c0/ecbc2be3f93f9346ff415ce261fe833c56b78f9eb90a3354f280c4816c46da03aa4603825e5817076630bd7698f9aef4eeb352f2d80ca1f2f577b4069013918c
   languageName: node
   linkType: hard
 
@@ -20227,7 +20227,7 @@ __metadata:
     "@modelcontextprotocol/sdk": "npm:^1.29.0"
     "@openzeppelin/merkle-tree": "npm:^1.0.8"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.6.2"
-    "@pushchain/core": "npm:6.0.25"
+    "@pushchain/core": "npm:6.0.26"
     "@pushchain/ui-kit": "npm:^6.0.24"
     "@radix-ui/react-dialog": "npm:^1.1.2"
     "@solana/web3.js": "npm:^1.98.2"

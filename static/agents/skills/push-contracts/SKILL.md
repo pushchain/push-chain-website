@@ -5,7 +5,7 @@ metadata:
   id: push-contracts
   intent: 'Write Solidity contracts on Push Chain - identify cross-chain callers, dispatch outbound txs via UGPC, receive inbound callbacks, receive Universal Read results'
   package: 'solidity (EVM-compatible - Hardhat / Foundry / Remix)'
-  current_sdk_version: '6.0.25'
+  current_sdk_version: '6.0.26'
   entry: 'IUniversalGatewayPC.sendUniversalTxOutbound'
   resources: 'https://push.org/agents/resources/push-contracts/index.json'
   references: 'references/contract-interfaces.md'

@@ -5,7 +5,7 @@ The working tree was clean before this documentation pass. This map and its READ
 
 ## Scope and evidence
 
-This repository publishes the website, developer documentation, browser playgrounds, agent resources and a read-only documentation MCP endpoint. It consumes Universal Read through the installed `@pushchain/core@6.0.25`; it does not implement validator consensus or the receiver contracts.
+This repository publishes the website, developer documentation, browser playgrounds, agent resources and a read-only documentation MCP endpoint. It consumes Universal Read through the installed `@pushchain/core@6.0.26`; it does not implement validator consensus or the receiver contracts.
 
 The website/build relationships below are implementation-backed. The SDK flow was checked against the installed package. Validator and contract behavior is documented integration behavior, not independently verified node/contract implementation or live execution. Landing-page internals, translation correctness and the full SDK are outside this review.
 
@@ -47,7 +47,7 @@ The MCP mirror derives from the main Docusaurus config but excludes pages, blogs
 ```mermaid
 sequenceDiagram
   participant App as Application or playground
-  participant SDK as Core SDK 6.0.25
+  participant SDK as Core SDK 6.0.26
   participant Push as Push RPC and request receiver
   participant Validators as Validators and external source
   participant Callback as UniversalCallback and receiver

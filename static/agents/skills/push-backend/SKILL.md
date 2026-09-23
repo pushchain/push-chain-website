@@ -5,8 +5,8 @@ metadata:
   id: push-backend
   intent: 'Execute universal transactions from server-side code, scripts, bots, and automation'
   package: '@pushchain/core'
-  package_version: '6.0.25'
-  current_sdk_version: '6.0.25'
+  package_version: '6.0.26'
+  current_sdk_version: '6.0.26'
   entry: 'PushChain.initialize'
   resources: 'https://push.org/agents/resources/push-backend/index.json'
   references: 'references/signer-options.md, references/initialize-client.md, references/send-universal-transaction.md, ../../workflows/send-multichain-transaction.md, ../../workflows/universal-read.md'

@@ -1,5 +1,5 @@
 /**
- * Validate the exact Universal Read playgrounds from MDX against core 6.0.25.
+ * Validate the exact Universal Read playgrounds from MDX against core 6.0.26.
  * Default: offline syntax check. --live needs a funded Donut PUSH_PRIVATE_KEY,
  * checks all 11 playgrounds (7 single-read, prepare, 2 batches, resume), funds
  * nine temporary wallets with 0.05 test PC each and returns unused funds.
@@ -12,7 +12,7 @@ import { createRequire } from 'node:module';
 import vm from 'node:vm';
 
 const require = createRequire(import.meta.url);
-assert.equal(require('@pushchain/core/package.json').version, '6.0.25');
+assert.equal(require('@pushchain/core/package.json').version, '6.0.26');
 const readPages = [
   '04-universal-reads/01-Read-Universal-State.mdx',
   '04-universal-reads/02-Read-Multiple-Universal-States.mdx',
@@ -86,7 +86,7 @@ const constants = JSON.parse(
     'utf8'
   )
 );
-assert.equal(constants.current_sdk_version, '6.0.25');
+assert.equal(constants.current_sdk_version, '6.0.26');
 assert.equal(constants.CHAIN.WEB2, PushChain.CONSTANTS.CHAIN.WEB2);
 assert.equal(constants.READ.WEB2, PushChain.CONSTANTS.READ.WEB2);
 assert.equal(
