@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Push Cult में शामिल हों - शपथ लें",
+      "expanded-title": "शपथ",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "आपकी ईमेल आईडी क्या है? 📧",
+            "subtitle": "हमें आपसे संपर्क करने के लिए इसकी आवश्यकता है",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "आपका X (Twitter) यूज़रनेम क्या है?",
+            "subtitle": "हमें आपकी सामग्री और जुड़ाव देखना है",
+            "placeholder": "@yourhandle"
+          },
+          "telegram-id": {
+            "title": "आपका टेलीग्राम ID क्या है?",
+            "subtitle": "हम सीधे शिष्यों के साथ संवाद करने के लिए Telegram का उपयोग करते हैं",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "अपना सबसे अच्छा कंटेंट शेयर करें",
+            "subtitle": "अपने बेहतरीन थ्रेड, वीडियो या लेख का लिंक दें जो आपके काम को दिखाता है",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "अपना दृष्टिकोण साझा करें",
+            "subtitle": "हमें अपनी सामग्री, दर्शकों और जुड़ने के अपने कारणों के बारे में बताएं",
+            "placeholder": "पुश कल्ट में शामिल होने की आपकी इच्छा, आपकी सामग्री और दर्शकों के बारे में हमें बताएं..."
+          }
+        },
+        "buttons": {
+          "next": "अगला",
+          "previous": "पिछला",
+          "submit": "आवेदन जमा करें",
+          "submitting": "सबमिट किया जा रहा है..."
+        },
+        "validation": {
+          "email-required": "ईमेल पता आवश्यक है",
+          "email-invalid": "कृपया एक मान्य ईमेल पता दर्ज करें",
+          "x-username-required": "X यूज़रनेम ज़रूरी है",
+          "telegram-id-required": "टेलीग्राम ID आवश्यक है",
+          "best-content-required": "सबसे अच्छी सामग्री का लिंक आवश्यक है",
+          "best-content-invalid": "कृपया एक मान्य URL दर्ज करें",
+          "message-required": "संदेश आवश्यक है",
+          "default": "यह फ़ील्ड ज़रूरी है"
+        },
+        "success": {
+          "title": "आवेदन जमा कर दिया गया!",
+          "message-before-link": "जुड़ें",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "और <1>पर नज़र रखें",
+          "channel-name": "#push-cult",
+          "message-end": "अगले कदमों के लिए चैनल।",
+          "button": "एक और आवेदन जमा करें"
+        },
+        "progress": {
+          "step-counter": "{{current}} में से {{total}}"
+        }
+      }
+    }
+  }
+}

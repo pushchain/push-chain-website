@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "探索重要的测试网应用",
+      "apps": {
+        "pc-faucet": {
+          "name": "PC 水龙头",
+          "description": "在这里获取您的 PC <testnet> 代币"
+        },
+        "push-bridge": {
+          "name": "Push 桥接",
+          "description": "跨链桥接代币"
+        },
+        "simulate-tx": {
+          "name": "模拟交易",
+          "description": "模拟一个通用的交易"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Push Chain 的区块链浏览器"
+        },
+        "wallet": {
+          "name": "钱包",
+          "description": "区块链的通用<wallet>"
+        }
+      }
+    }
+  }
+}

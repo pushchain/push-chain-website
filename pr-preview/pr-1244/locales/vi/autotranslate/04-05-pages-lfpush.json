@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "lfpush": {
+      "seo": {
+        "title": "Hãy Cùng Push — Sáng Kiến Cộng Đồng",
+        "description": "Các sáng kiến cộng đồng Push, bài đăng và nhiều hơn nữa.",
+        "og-title": "Hãy Cùng Push - Sáng Kiến Cộng Đồng cho Push Chain",
+        "og-description": "Sáng kiến cộng đồng và chia sẻ cho Push Chain.",
+        "twitter-title": "Hãy cùng Push | Sáng kiến cộng đồng",
+        "twitter-description": "Xem sáng kiến cộng đồng Push dành cho Push Chain."
+      },
+      "hero-section": {
+        "title": "Hãy cùng Push",
+        "description": "Cộng đồng những người xây dựng LF Push—tôn vinh những thành tựu bạn đạt được và những người bạn giúp đỡ. Chia sẻ những chiến thắng của bạn, gắn thẻ <hashtag>#LFPush</hashtag> hoặc <mention>@PushChain</mention>, và chúng tôi sẽ lan tỏa."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Chia sẻ Chiến Thắng Của Bạn",
+          "join-community": "Tham gia cộng đồng",
+          "learn-more": "Tìm hiểu thêm"
+        },
+        "meta": {
+          "tweet-alt": "Tweet từ thành viên cộng đồng Push Chain",
+          "loading-alt": "Đang tải thêm bài viết cộng đồng"
+        },
+        "tweets-counter": "{{count}} Tweets và vẫn đang tăng!",
+        "loading": "Đang tải thêm các tweet...",
+        "end-message": "Bạn đã đến cuối rồi! 🎉"
+      }
+    }
+  }
+}
