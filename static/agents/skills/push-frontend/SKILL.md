@@ -5,7 +5,7 @@ metadata:
   id: push-frontend
   intent: 'Enable universal transactions in a React frontend app'
   package: '@pushchain/ui-kit'
-  package_version: '6.0.24'
+  package_version: '6.0.26'
   current_sdk_version: '6.0.26'
   entry: 'usePushChainClient'
   resources: 'https://push.org/agents/resources/push-frontend/index.json'

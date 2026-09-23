@@ -25,7 +25,7 @@ const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
   core: '6.0.26',
-  uiKit: '6.0.24',
+  uiKit: '6.0.26',
 };
 const AGENT_LAYER_VERSION = '1.0.28';
 const AGENT_LAYER_DATE = '2026-09-22';
