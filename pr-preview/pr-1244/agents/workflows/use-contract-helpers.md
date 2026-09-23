@@ -170,7 +170,7 @@ Features:
 
 - **Request with local context**: `_requestRead` stores per-request bytes that you get back in the callback
 - **Guarded callback**: `onUniversalData` accepts calls only from Universal Callback
-- **Refund safety**: `revertRecipient` defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA
+- **Refund safety**: when a spec your contract builds leaves `revertRecipient` as `address(0)`, it defaults to the contract itself, so the contract needs a payable `receive()`, or you point `revertRecipient` at an EOA. Specs prepared by the SDK already carry the caller's Push account (or `refundTo`)
 - **Gas bound**: callback gas is capped at `MAX_CALLBACK_GAS_LIMIT` (1,000,000)
 
 ### Interface
@@ -216,7 +216,7 @@ abstract contract UniversalReadClient is IUniversalReadClient {
 
 ### What You Implement
 
-- **`_requestRead(ReadSpec spec, bytes localState, uint64 callbackGasLimit) returns (uint256 requestId)`** (`internal`): call it from your own `payable` entrypoint; it forwards `msg.value` (protocol fee plus callback budget) to Universal Callback. The numeric `requestId` matches `requestIdUint` in the SDK response.
+- **`_requestRead(ReadSpec spec, bytes localState, uint64 callbackGasLimit) returns (uint256 requestId)`** (`internal`): call it from your own `payable` entrypoint; it forwards `msg.value` (protocol fee plus callback budget) to Universal Callback. The budget must cover `callbackGasLimit × Push base fee`, or the node never fulfils the request and it expires (`estimateFee` is 0 on Donut today). On the SDK path, forward the prepared spec and gas limit unchanged and call `_requestRead` exactly once; otherwise the SDK throws `READ_REQUEST_MISMATCH` after the transaction is mined. For Solana and Web2 envelopes, build the call with the SDK's `toCallData(prepared, { abi, functionName })`, which returns `{ data, value }`. The numeric `requestId` matches `requestIdUint` (a `bigint`) in the SDK response.
 - **`_onReadResult(uint256 requestId, bytes resultData, bytes localState)`** (`internal virtual`): override it to store, decode or act on the result. Empty `resultData` means the source returned an error; return early. Starting another read from inside this callback is unsupported.
 
 ```solidity
@@ -285,8 +285,9 @@ The full flow (ReadSpec fields, both request paths, the EVM query envelope, fees
 | `factory is not a contract` | Wrong address or wrong network | Verify you're on Push Chain (`chainId: 42101`) |
 | `forge install` fails | No git available | Run in a git-initialized project directory |
 | `UnauthorizedCaller` on `onUniversalData` | Something other than Universal Callback called the receiver | Never call or re-expose `onUniversalData`; only `0x00000000000000000000000000000000000000c2` delivers results |
-| Read result never stored | `_onReadResult` reverted or ran out of gas (`callbackDelivered` is `false`), or `resultData` was empty (source error) | Raise the callback gas (up to 1,000,000) and return early on empty `resultData` |
-| Refund not delivered | The receiver has no payable `receive()` while `revertRecipient` defaults to it | Add `receive() external payable {}` or set `revertRecipient` to an EOA |
+| Read result never stored | `_onReadResult` reverted or ran out of gas (`callbackDelivered` is `false`, `outcome` is `CALLBACK_FAILED`), or `resultData` was empty (source error, `outcome` is `SOURCE_ERROR`) | Raise the callback gas (up to 1,000,000) and return early on empty `resultData` |
+| Request never fulfils, then `EXPIRED` | The callback budget is below `callbackGasLimit × Push base fee` | Send more `msg.value` |
+| Refund not delivered | The receiver has no payable `receive()` while `revertRecipient` defaults to it (a contract-built spec with `revertRecipient = address(0)`) | Add `receive() external payable {}` or set `revertRecipient` to an EOA; the SDK reports it as `fees.refundFailed` |
 
 ## Agent Notes
 

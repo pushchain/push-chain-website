@@ -2,7 +2,7 @@
 title: "Constants Reference"
 url: "https://pushchain.github.io/docs/chain/build/constants/"
 section: "build"
-lastUpdated: "2026-09-23T13:14:19Z"
+lastUpdated: "2026-09-23T13:23:26Z"
 description: "Constants Reference | Build | Push Chain Docs"
 ---
 
@@ -281,13 +281,25 @@ One field that answers "did the read work". Check `outcome` before trusting `val
 | `SOURCE_ERROR` | The destination chain or URL returned an error. See `raw.errorCode` |
 | `CALLBACK_FAILED` | The receiver callback reverted or ran out of gas. See `callbackFailReason` |
 | `DECODE_FAILED` | The result arrived but did not match the expected shape. See `decodeError` |
-| `EXPIRED` | Validators did not agree before the request expired. The budget is refunded |
+| `EXPIRED` | Validators did not agree before the request expired. The callback budget is pushed back to `refundTo`; check `fees.refundFailed` for a rejected refund |
 | `FAILED` | The request was settled another way on-chain |
 | `ABORTED` | The request was aborted |
 | `PENDING` | The read has not finished yet |
 | `UNKNOWN` | Fulfilled, but delivery could not be confirmed because the fulfil receipt was unavailable |
 
 **_`PushChain.CONSTANTS.READ.STATUS`_** is the raw lifecycle status: `PENDING` (1), `VOTING` (2), `FULFILLED` (3), `EXPIRED` (4), `FAILED` (5), `ABORTED` (6). `FULFILLED` only means the result transaction landed, so prefer `OUTCOME`. **_`PushChain.CONSTANTS.READ.RESULT_STATUS`_** is the validators' result: `SUCCESS` (1) or `ERROR` (2).
+
+**_`PushChain.CONSTANTS.READ.ERROR_CODE`_** explains an `ERROR` result, read from `raw.errorCode`:
+
+| Constant | Value | Meaning |
+| --- | --- | --- |
+| `UNSPECIFIED` | `0` | No specific reason (also the value on a `SUCCESS` result) |
+| `INVALID_QUERY` | `1` | The query envelope or parameters could not be decoded for this chain |
+| `UNSUPPORTED` | `2` | The chain does not support this query type or option |
+| `REVERTED` | `3` | The destination ran the request and returned a failure: an EVM revert, or an HTTP 4xx |
+| `NOT_FOUND` | `4` | The queried account, state or JSON field does not exist at the pinned point |
+| `INVALID_RESULT` | `5` | The destination returned data that could not be interpreted or encoded |
+| `REJECTED` | `6` | Validator policy refused the request before running it, for example a blocked Web2 URL |
 
 ### Usage Examples
 

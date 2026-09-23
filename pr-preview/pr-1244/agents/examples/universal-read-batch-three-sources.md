@@ -76,6 +76,10 @@ async function main() {
 
     console.log('Waiting for validators to reach quorum and deliver all three callbacks (usually under a minute)...');
     const [priceResult, usdcResult, userResult] = await batch.wait();
+    // outcome is the success signal; value is set only when it is SUCCESS
+    for (const read of [priceResult, usdcResult, userResult]) {
+      if (read.outcome !== PushChain.CONSTANTS.READ.OUTCOME.SUCCESS) throw new Error('Read ' + read.requestId + ' ended ' + read.outcome);
+    }
     console.log('Value:', ethers.formatUnits(priceResult.value, 8), 'USD per ETH');
     console.log('Value:', ethers.formatUnits(usdcResult.value, 6), 'USDC');
     console.log('Value:', JSON.stringify(userResult.value, (_, value) => typeof value === 'bigint' ? value.toString() : value));

@@ -2,7 +2,7 @@
 title: "Important Concepts"
 url: "https://pushchain.github.io/docs/chain/important-concepts/"
 section: "chain"
-lastUpdated: "2026-09-23T13:14:19Z"
+lastUpdated: "2026-09-23T13:23:26Z"
 description: "Important Concepts | Push Chain Docs"
 ---
 
@@ -42,8 +42,8 @@ Fee abstraction lets Push Chain act on other chains. Universal Read is the other
 
 | Aspect | Detail |
 | --- | --- |
-| **What you can read** | Native and token balances, contract calls, storage slots, and JSON fields from HTTPS endpoints. |
-| **Where the result lands** | The shared Universal Read Registry, which stores results for you, or your own contract that inherits `UniversalReadClient` and acts on the result in its callback. |
+| **What you can read** | Native and token balances, contract calls (any mutability, simulated), storage slots, Solana program accounts decoded with an Anchor IDL, and JSON fields from HTTPS endpoints. |
+| **Where the result lands** | The shared Universal Read Registry, which stores results for you (deployed on Donut testnet only), or your own contract that inherits `UniversalReadClient` and acts on the result in its callback. |
 | **When to use it** | When something on-chain must act on the data. If only your frontend or backend needs it, an ordinary RPC call is cheaper and instant. |
 
 **A read is a paid, asynchronous request.** It costs gas plus a protocol fee and a callback budget, and completes after validators reach quorum. See [Read Universal State](/push-chain-website/pr-preview/pr-1244/docs/chain/build/universal-read/) for the SDK flow.

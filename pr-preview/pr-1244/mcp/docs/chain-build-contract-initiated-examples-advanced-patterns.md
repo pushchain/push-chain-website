@@ -2,7 +2,7 @@
 title: "Advanced Patterns"
 url: "https://pushchain.github.io/docs/chain/build/contract-initiated-examples/advanced-patterns/"
 section: "build"
-lastUpdated: "2026-09-23T13:14:19Z"
+lastUpdated: "2026-09-23T13:23:26Z"
 description: "Advanced Patterns | Contract-Initiated Examples | Build | Push Chain Docs"
 ---
 

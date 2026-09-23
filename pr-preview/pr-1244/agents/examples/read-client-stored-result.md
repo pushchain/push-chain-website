@@ -10,7 +10,6 @@ See the [source documentation](https://push.org/docs/chain/build/contract-helper
 
 ```typescript
 import { PushChain } from '@pushchain/core';
-import { PushChain } from '@pushchain/core';
 import { ethers } from 'ethers';
 
 // CONFIG
@@ -41,8 +40,8 @@ async function main() {
     network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
   });
 
-  // 2) confirm the callback ran: the read must be FULFILLED and callbackDelivered
-  console.log('Looking up request ' + REQUEST_ID.slice(0, 10) + '... on Push Chain. This takes 15 to 20 seconds.');
+  // 2) confirm the callback ran: outcome SUCCESS means FULFILLED, source SUCCESS and callbackDelivered
+  //    (the hook prints READ-TX-104-03 Looking Up Request while the SDK finds the record)
   const snapshot = await pushChainClient.universal.trackRead({ requestId: REQUEST_ID }, {
     progressHook: (progress) => console.log(progress.id + ': ' + progress.title),
   });
@@ -50,7 +49,11 @@ async function main() {
   const done = await snapshot.wait();
   const READ = PushChain.CONSTANTS.READ;
   const statusName = done.status === READ.STATUS.FULFILLED ? 'FULFILLED' : String(done.status);
-  console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered);
+  console.log('Status:', statusName, '| Callback delivered:', done.callbackDelivered, '| Outcome:', done.outcome);
+  if (done.outcome !== READ.OUTCOME.SUCCESS) {
+    console.log('The read did not succeed, so the registry stored no usable result.');
+    return;
+  }
 
   // 3) describe what was read, decoded from the request's own ReadSpec
   const [env] = abi.decode([QueryEnvelope], done.request.spec.query);

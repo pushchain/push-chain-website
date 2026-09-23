@@ -2,7 +2,7 @@
 title: "Upgrade Universal Account"
 url: "https://pushchain.github.io/docs/chain/build/advanced/upgrade-universal-account/"
 section: "build"
-lastUpdated: "2026-09-23T13:14:19Z"
+lastUpdated: "2026-09-23T13:23:26Z"
 description: "Upgrade Universal Account | Advanced | Build | Push Chain Docs"
 ---
 

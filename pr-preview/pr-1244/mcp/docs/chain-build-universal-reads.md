@@ -2,7 +2,7 @@
 title: "Universal Reads"
 url: "https://pushchain.github.io/docs/chain/build/universal-reads/"
 section: "build"
-lastUpdated: "2026-09-23T13:14:19Z"
+lastUpdated: "2026-09-23T13:23:26Z"
 description: "Universal Reads | Build | Push Chain Docs"
 ---
 
