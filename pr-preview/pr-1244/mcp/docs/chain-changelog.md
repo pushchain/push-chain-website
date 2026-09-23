@@ -2,7 +2,7 @@
 title: "Changelog"
 url: "https://pushchain.github.io/docs/chain/changelog/"
 section: "chain"
-lastUpdated: "2026-09-23T01:14:55+04:00"
+lastUpdated: "2026-09-23T13:14:19Z"
 description: "Changelog | Push Chain Docs"
 ---
 
@@ -11,6 +11,32 @@ description: "Changelog | Push Chain Docs"
 Keep track of the latest changes and updates to the Push Chain Core and UI Kit SDKs.
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
+
+### 6.0.25 (2026-09-16)
+
+#### Features
+
+-   align read-state API with v3 review
+-   integrate universal read registry
+-   align read-state API with v2 spec
+-   read-state PR7 — custom-receiver read() / executeReads(), review fixes
+-   read-state PR6 — live e2e tree, CI `read` group, wait() option fix
+-   read-state PR5 — public universal surface, CONSTANTS.READ, exports
+-   read-state PR4 — trackRead, wait/refresh, READ-TX progress band
+-   prepareRead — validated ReadSpec builder, refundTo default, simulate
+-   read-state chain client — ucallback queries, preflight, budget sizing
+-   read-state foundation — envelopes, decoders, ucallback codecs, ABIs, constants
+
+#### Fixes
+
+-   harden gasless and cross-chain transaction handling
+-   validate prepared reads and infer typed results
+-   preserve read-state recovery and expand test coverage
+
+#### Other Changes
+
+-   docs: document read-state and transaction fixes
+-   test: consolidate read-state e2e harnesses
 
 ### 6.0.23 (2026-09-01)
 

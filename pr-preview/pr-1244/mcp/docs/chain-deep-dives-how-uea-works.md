@@ -2,7 +2,7 @@
 title: "How Universal Executor Account (UEA) Works"
 url: "https://pushchain.github.io/docs/chain/deep-dives/how-uea-works/"
 section: "deep-dives"
-lastUpdated: "2026-09-23T01:14:55+04:00"
+lastUpdated: "2026-09-23T13:14:19Z"
 description: "How Universal Executor Account (UEA) Works | Deep Dives | Push Chain Docs"
 ---
 

@@ -2,11 +2,118 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/</id>
     <title>Push Chain — Universal Blockchain for Apps Blog</title>
-    <updated>2026-09-14T00:00:00.000Z</updated>
+    <updated>2026-09-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/"/>
     <subtitle>Push Chain — Universal Blockchain for Apps Blog</subtitle>
     <icon>https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/assets/website/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[5 Types of AI Agent Hacks You Should Be Aware Of]]></title>
+        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/</id>
+        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/"/>
+        <updated>2026-09-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn about the 5 most dangerous onchain AI agent hacks and how to avoid them]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of 5 Types of AI Agent Hacks You Should Be Aware Of" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/assets/images/cover-image-eec1b55627ab8f17fc1fac15fcb6a200.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>At this point, we are more scared of AI than we were excited about it 6 months ago.</p>
+<p>You know shit is getting real when almost all of the CEOs of leading AI companies are calling for a global slowdown in development.</p>
+<p>Agents are swarming into the infra of big tech companies, stealing data and performing unverified actions with their own consciousness and decision-making capabilities without any user's input.</p>
+<p>What if things go south onchain as well?</p>
+<p>Here are 5 different ways in which your crypto agents could get compromised.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-goal-hijacking">1. Goal Hijacking<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#1-goal-hijacking" class="hash-link" aria-label="Direct link to 1. Goal Hijacking" title="Direct link to 1. Goal Hijacking" translate="no">​</a></h2>
+<p>Goal hijacking is the agent form of prompt injection.</p>
+<p>The attacker or a rogue agent embeds instructions inside data that the agent is expected to read.</p>
+<p>That data can be:</p>
+<ul>
+<li class="">a webpage</li>
+<li class="">email</li>
+<li class="">PDF</li>
+<li class="">support ticket</li>
+<li class="">GitHub issue</li>
+<li class="">database result</li>
+<li class="">image</li>
+<li class="">message from another agent</li>
+</ul>
+<p>So when untrusted content is retrieved into the agent's context, it confuses data with instructions, which leads to the planner changing its goal and executing the malicious instructions set by the attacker.</p>
+<p>OWASP (Open Web Application Security Project) names this a classic <a href="https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/" target="_blank" rel="noopener noreferrer" class=""><strong>Agent Goal Hijack</strong></a>.</p>
+<p>Goal hijacking is seriously dangerous because the final action could be anything ranging from approving fund transfers, transferring funds, swapping out tokens and more.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-helps">What helps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#what-helps" class="hash-link" aria-label="Direct link to What helps" title="Direct link to What helps" translate="no">​</a></h3>
+<ul>
+<li class="">separate <strong>instructions</strong> from <strong>retrieved data</strong></li>
+<li class="">tag untrusted inputs at ingestion time</li>
+<li class="">require deterministic policy checks before any tool or wallet action</li>
+<li class="">isolate planner output from execution output</li>
+<li class="">use allowlisted intent types, not free-form execution</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-tool-hijacking-and-agent-supply-chain-abuse">2. Tool Hijacking and Agent Supply-Chain Abuse<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#2-tool-hijacking-and-agent-supply-chain-abuse" class="hash-link" aria-label="Direct link to 2. Tool Hijacking and Agent Supply-Chain Abuse" title="Direct link to 2. Tool Hijacking and Agent Supply-Chain Abuse" translate="no">​</a></h2>
+<p>Although tools give agents a diverse range of powers, they also expose a wide surface area for attackers to exploit.</p>
+<p>A tool-hijacking attack happens when the attacker causes the agent to invoke a legitimate tool in an unsafe way, or when the tool itself is malicious or compromised.</p>
+<p>Suppose an agent has:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">swap(tokenIn, tokenOut, amount, router)</span><br></div></code></pre></div></div>
+<p>The intended call is:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">swap(USDC, ETH, 500, UniswapRouter)</span><br></div></code></pre></div></div>
+<p>A compromised planner can produce:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">swap(USDC, FAKE, 500, MaliciousRouter)</span><br></div></code></pre></div></div>
+<p>If the application only checks that <code>swap()</code> is an allowed tool, the security check is too weak. The system must validate <strong>arguments</strong>, not only function names.</p>
+<p>Now consider MCP.</p>
+<p>An agent connects to an external MCP server because it advertises useful tools.</p>
+<p>That server can expose descriptions such as:</p>
+<ul>
+<li class=""><code>getMarketPrice()</code></li>
+<li class=""><code>executeTrade()</code></li>
+<li class=""><code>readPortfolio()</code></li>
+</ul>
+<p>If the server is compromised, its implementation or tool metadata can become malicious.</p>
+<p><a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/" target="_blank" rel="noopener noreferrer" class="">Microsoft reported in May 2026</a> that <strong>15% of remote MCP servers observed through Defender for Cloud were severely insecure</strong>, including systems that exposed sensitive capabilities without proper authentication.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-rogue-agent--policy-evasion">3. Rogue Agent / Policy Evasion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#3-rogue-agent--policy-evasion" class="hash-link" aria-label="Direct link to 3. Rogue Agent / Policy Evasion" title="Direct link to 3. Rogue Agent / Policy Evasion" translate="no">​</a></h2>
+<p>A rogue-agent event happens when an autonomous agent <strong>acts outside the rules, goals, or operating limits that its owner intended it to follow</strong>. This kind of attack is different from regular prompt injection where an external input changes the agent's behavior.</p>
+<p>In a rogue-agent event, the important failure is that the agent reaches a forbidden action <strong>despite the rules that were supposed to constrain it</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="autonomous-policy-evasion">Autonomous policy evasion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#autonomous-policy-evasion" class="hash-link" aria-label="Direct link to Autonomous policy evasion" title="Direct link to Autonomous policy evasion" translate="no">​</a></h3>
+<p>The agent itself finds a path around a restriction while trying to complete its objective.</p>
+<p><strong>For example, suppose a coding agent is told:</strong> <em>"Do not bypass security controls." "Do not execute blocked commands."</em></p>
+<p>The agent tries a command which is blocked by the system. Now instead of stopping, the agent tries to encode the command, split it into smaller operations, or find another execution path.</p>
+<p><strong>The agent does not need human-like "consciousness" to violate a rule.</strong></p>
+<p>A model can simply optimize for its assigned objective and treat the restriction as an obstacle.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="agent-takeover">Agent takeover<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#agent-takeover" class="hash-link" aria-label="Direct link to Agent takeover" title="Direct link to Agent takeover" translate="no">​</a></h3>
+<p>The second case occurs when an attacker gains control of the agent runtime, credentials, planner, or execution channel.</p>
+<p>The compromised agent now tries to transfer funds, call malicious contracts and even change the approvals.</p>
+<p>If the restrictions exist only inside the prompt or application logic, the attacker can often remove them.</p>
+<p>This is why the real security boundary must sit <strong>outside the agent runtime</strong>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-trust-layer-manipulation-fake-reputation-sybil-agents-and-validator-collusion">4. Trust-Layer Manipulation: Fake Reputation, Sybil Agents, and Validator Collusion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#4-trust-layer-manipulation-fake-reputation-sybil-agents-and-validator-collusion" class="hash-link" aria-label="Direct link to 4. Trust-Layer Manipulation: Fake Reputation, Sybil Agents, and Validator Collusion" title="Direct link to 4. Trust-Layer Manipulation: Fake Reputation, Sybil Agents, and Validator Collusion" translate="no">​</a></h2>
+<p>As agent ecosystems continue to flourish, a new security dependency has risen. Agents must decide which other agents to trust. Suppose your agent needs a smart-contract audit.</p>
+<p>Agent B has:</p>
+<ul>
+<li class=""><em>4.9 / 5</em></li>
+<li class=""><em>2,000 reviews</em></li>
+<li class=""><em>98% success rate</em></li>
+</ul>
+<p>Your agent selects it. But what if those reviews were artificially gamed by Agent B's operator? In the onchain world, no one can stop someone from creating thousands of alt identities and artificially manufacturing 'trust'.</p>
+<p>A June 2026 <a href="https://arxiv.org/abs/2606.26028" target="_blank" rel="noopener noreferrer" class="">empirical study</a> examined ERC-8004 activity across Ethereum, BNB Smart Chain, and Base. It found coordinated Sybil behavior among <strong>73.6% of reviewers</strong> <strong>on Ethereum, 59.2% on BSC, and 90.6% on Base</strong>.</p>
+<p>The same research found that only <strong>3% of Ethereum registrations, 4% on BSC, and 15% on Base</strong> exposed both a valid registration file and at least one live service endpoint.</p>
+<p><strong>Onchain registered agents ≠ operationally secure &amp; trustworthy agents</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-memory-poisoning-and-persistent-context-attacks">5. Memory Poisoning and Persistent Context Attacks<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#5-memory-poisoning-and-persistent-context-attacks" class="hash-link" aria-label="Direct link to 5. Memory Poisoning and Persistent Context Attacks" title="Direct link to 5. Memory Poisoning and Persistent Context Attacks" translate="no">​</a></h2>
+<p><strong>Memory poisoning is an attack in which malicious or false information is inserted into an AI agent's persistent memory so that the information influences the agent's decisions in future sessions.</strong></p>
+<p>A normal prompt injection can manipulate an agent during one interaction. When that interaction ends, the malicious instruction can disappear with the context window.</p>
+<p>Memory poisoning tries to make the compromise <strong>persistent</strong>.</p>
+<p>The attacker wants the agent to store malicious information as something it later considers trusted knowledge.</p>
+<p>Do not let arbitrary model output write directly into permanent memory.</p>
+<p>Use separate memory classes:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#2B2B30"><span class="token plain">Working Context</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">      ↓</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Temporary Memory</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">      ↓</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Persistent Memory</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">      ↓</span><br></div><div class="token-line" style="color:#2B2B30"><span class="token plain">Security-Critical State</span><br></div></code></pre></div></div>
+<p>The requirements should become stronger as information moves downward.</p>
+<p>Every persistent memory record should carry provenance. At minimum, store its source, creation time, trust level, expiry, and integrity information.</p>
+<p>Use Sybil-resistant weighting. A thousand reviews from newly created wallets should not carry the same weight as independent reviewers with long transaction histories and proven interactions.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-secure-on-chain-agent-stack">The secure on-chain agent stack<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/5-types-of-ai-agent-hacks-you-should-be-aware-of/#the-secure-on-chain-agent-stack" class="hash-link" aria-label="Direct link to The secure on-chain agent stack" title="Direct link to The secure on-chain agent stack" translate="no">​</a></h2>
+<p>This is what a secure onchain AI agent system looks like:</p>
+<p><img decoding="async" loading="lazy" alt="Diagram of an AI agent secure runtime: integration workflow with a policy engine" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/assets/images/image-1-ed09342f5d477b39520564551ff230a3.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>On-chain systems need three separate concepts:</p>
+<table><thead><tr><th>Concept</th><th>Standard</th><th>Answers</th></tr></thead><tbody><tr><td><strong>Identity</strong></td><td><a href="https://push.org/blog/ai-agent-identities-in-crypto/" target="_blank" rel="noopener noreferrer" class=""><strong>ERC-8004</strong></a></td><td><em>Who is this agent?</em></td></tr><tr><td><strong>Verification</strong></td><td><a href="https://push.org/blog/what-is-erc-8126/" target="_blank" rel="noopener noreferrer" class=""><strong>ERC-8126</strong></a></td><td><em>What security risk does this agent present now?</em></td></tr><tr><td><strong>Authority</strong></td><td><a href="https://push.org/blog/erc-8196-giving-ai-agents-permission-without-giving-away-control/" target="_blank" rel="noopener noreferrer" class=""><strong>ERC-8196</strong></a></td><td><em>What is this agent permitted to do?</em></td></tr></tbody></table>
+<p>Follow <a href="https://push.org/blog/9-tips-to-secure-your-ai-agents-from-getting-hacked/" target="_blank" rel="noopener noreferrer" class="">these 9 crucial safety tips</a> to ensure your agent never gets hacked!</p>]]></content>
+        <author>
+            <name>Push Chain</name>
+            <uri>https://x.com/PushChain</uri>
+        </author>
+        <category label="Maker Monday" term="Maker Monday"/>
+        <category label="Technical" term="Technical"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[9 Tips To Secure Your AI Agents From Getting Hacked]]></title>
         <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/9-tips-to-secure-your-ai-agents-from-getting-hacked/</id>
@@ -859,73 +966,5 @@ This is where Push Chain does it differently.</p>
         </author>
         <category label="Key Features" term="Key Features"/>
         <category label="Product" term="Product"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Push Chain Completes Hacken Security Audit, $100,000 Bug Bounty Launching Soon]]></title>
-        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/</id>
-        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/"/>
-        <updated>2026-06-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Push Chain is a complex system, it lets users from *any* chain, settled in one place. No bridges, gas in any token.]]></summary>
-        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Push Chain Completes Hacken Security Audit" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/assets/images/cover-image-9653b151e4dc016bec477925a12f4bd4.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain is a complex system - it lets users from <em>any</em> chain, settled in one place. No bridges, gas in any token. Behind the scenes it means coordinating contracts and infrastructure across several networks at once.</p>
-<p>A system with that many moving parts deserves rigorous, independent scrutiny to protect user funds, and launch with confidence. So we partnered with <a href="https://hacken.io/?utm_source=push_chain&amp;utm_medium=article&amp;utm_campaign=audits" target="_blank" rel="noopener noreferrer" class="">Hacken</a>, a leading web3 security firm that has audited major ecosystems including NEAR, Solana, MetaMask, BNB Chain, ByBit, Base and TON. Hacken’s smart contract audit combines senior-led code review, structured testing, and real-world exploit analysis – trusted by 1,500+ projects securing over $180B+ in digital assets.</p>
-<p>Between March and June 2026, Hacken conducted a full security audit program across Push Chain - covering our <em><strong>cross-chain gateway contracts on both EVM chains and Solana, our core contracts on Push Chain, and a protocol-level assessment of the Push Chain node itself.</strong></em></p>
-<p>Today we're sharing the results.</p>
-<p><strong>The most important result: no critical-severity findings were identified across any of the four audit engagements.</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="key-outcomes"><strong>Key Outcomes</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/#key-outcomes" class="hash-link" aria-label="Direct link to key-outcomes" title="Direct link to key-outcomes" translate="no">​</a></h2>
-<ul>
-<li class="">Zero critical-severity findings across any audit</li>
-<li class="">3 smart contract and full chain audit was completed across Push Chain infrastructure</li>
-<li class="">All High and Medium findings resolved, mitigated, or formally acknowledged</li>
-<li class="">Final audit reports delivered by Hacken</li>
-<li class="">Dual Defense bug bounty launching soon with rewards of up to <strong>$100,000</strong></li>
-</ul>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-security-audit-scope"><strong>The Security Audit Scope</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/#the-security-audit-scope" class="hash-link" aria-label="Direct link to the-security-audit-scope" title="Direct link to the-security-audit-scope" translate="no">​</a></h2>
-<p>The audit program spanned four separate engagements, each with its own scope, methodology, and report:</p>
-<ol>
-<li class=""><strong>EVM Gateway contracts.</strong> The <code>UniversalGateway</code> and <code>Vault</code> contracts deployed on external EVM chains such as Ethereum, Base, Arbitrum, etc. These are the contracts that accept user deposits, hold bridged assets in custody, enforce per-transaction and per-block value caps, and release funds on TSS authorization. This is the highest-value custody surface in the system.</li>
-<li class=""><strong>SVM Gateway contracts.</strong> The Solana-side gateway program, written in Rust with the Anchor framework. It mirrors the EVM gateway's role for Solana users - locking deposits in a PDA-controlled vault and releasing them through TSS-signed outbound operations.</li>
-<li class=""><strong>Core contracts.</strong> The contracts deployed on Push Chain that make universal execution work, including <code>UniversalCore</code>, the <code>UEAFactory</code> and <code>CEAFactory</code>, the Universal and Chain Executor Account implementations, and the PRC20 synthetic token standard.</li>
-<li class=""><strong>Push Chain node.</strong> A protocol-level assessment of the Cosmos SDK and EVM node (<code>pchaind</code>), covering the custom universal modules - registry, validator voting, on-chain execution, and threshold-signing coordination - and the EVM precompiles that let Solidity verify signatures from other chains.</li>
-</ol>
-<p>Across these engagements Hacken applied manual review by senior security researchers alongside property-based fuzzing and fork testing.</p>
-<p>The smart-contract suites carried strong automated coverage going into the audit, with line coverage above 95% on the SVM gateway and high branch coverage on the core and EVM contracts.</p>
-<p>The protocol-level review followed recognized standards including NIST SP 800-115 and the Penetration Testing Execution Standard.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="audit-findings"><strong>Audit Findings</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/#audit-findings" class="hash-link" aria-label="Direct link to audit-findings" title="Direct link to audit-findings" translate="no">​</a></h2>
-<p>The most important result first: <strong>No critical-severity issues in any of the four audits.</strong></p>
-<p>Across the three finalized smart-contract audits - EVM Gateway, SVM Gateway, and Core Contracts and Push Chain Node - every High and Medium severity finding was resolved, mitigated, or formally acknowledged before the reports were finalized.</p>
-<p>We treat that distinction honestly: most findings were fixed in code and re-verified by Hacken; a small number of low or informational issues were formally accepted as intended design decisions, with the reasoning documented; and a few were mitigated where a complete fix sat outside the audited scope.</p>
-<p>We don't view the findings that surfaced as a problem to hide. We view them as the entire point of the exercise. A few examples of how the review made the system stronger:</p>
-<ul>
-<li class=""><strong>Granular role separation across the contract suite.</strong> The audits prompted us to move to a production-grade access-control model - a layered role hierarchy where role management, configuration, operations, and pause authority are held by distinct roles rather than a single key, limiting the blast radius if any one key is ever compromised.</li>
-<li class=""><strong>Stronger custody and authorization guarantees.</strong> Findings on the SVM gateway led us to enforce canonical vault token accounts so bridged liquidity can't be fragmented, to authenticate previously unsigned cross-chain revert data, and to separate pause authority from unpause authority so re-enabling the system after an incident requires higher assurance.</li>
-<li class=""><strong>Safer administrative operations.</strong> We introduced two-step authority transfers so a privileged role can never be handed to an uncontrollable address by a single mistaken transaction, and we bounded protocol-fee configuration to remove the possibility of an unbounded fee.</li>
-</ul>
-<p>The full reports document every finding, its severity, and its resolution. We're publishing them so that anyone - users, builders, or other auditors - can read the complete picture rather than take our summary on faith. Specifically for builders, it means you're deploying on a chain whose universality layer has been reviewed by people outside our team. The parts of Push Chain you can't audit yourself - the cross-chain custody, the signature verification, the executor account model - are exactly the parts Hacken focused on.</p>
-<p>The review of the fixes done by the Push Chain team is now complete.</p>
-<p>After a final re-verification and extensive review, Hacken has now provided the Final Audit Reports.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="beyond-the-audit-a-bug-bounty-of-up-to-100000"><strong>Beyond the Audit: A Bug Bounty of Up to $100,000</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/#beyond-the-audit-a-bug-bounty-of-up-to-100000" class="hash-link" aria-label="Direct link to beyond-the-audit-a-bug-bounty-of-up-to-100000" title="Direct link to beyond-the-audit-a-bug-bounty-of-up-to-100000" translate="no">​</a></h2>
-<p>An audit is a point-in-time review of a specific commit. It is necessary, but it is not sufficient - and Hacken's own guidance is explicit that no project should rely on an audit alone.</p>
-<p>So alongside the completion of this audit program, we'll soon be launching a <strong>Hacken-hosted bug bounty for Push Chain, with rewards of up to $100,000</strong> for qualifying vulnerabilities. This turns security from a milestone into a standing invitation: the more eyes we have on the code as we move toward mainnet, the safer the system becomes for everyone building and transacting on it.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="whats-next"><strong>What's Next</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1244/blog/push-chain-completes-hacken-security-audit/#whats-next" class="hash-link" aria-label="Direct link to whats-next" title="Direct link to whats-next" translate="no">​</a></h2>
-<p>Now that the security audit program is complete, the work doesn't stop here.</p>
-<p>The audit and the bug bounty program that now sits alongside it are part of the same goal: ensuring that Push Chain's contracts and the chain itself remain secure, reliable, and dependable for everyone who builds and transacts on them.</p>
-<p>With security as a foundation, our focus now shifts to the ecosystem. We're working to onboard flagship applications so that when mainnet goes live, there are real products and use cases available from day one.</p>
-<p>The completion of this audit program marks an important milestone for Push Chain, bringing us one step closer toward our broader goal: making blockchain feel universal.</p>
-<p>The full audit reports are linked below - we encourage you to read them.</p>
-<p><em><a href="https://push.org/knowledge/audit" target="_blank" rel="noopener noreferrer" class="">Read the full Hacken audit reports</a></em></p>
-<ul>
-<li class=""><em><a href="https://hacken.io/audits/push-chain/sca-push-chain-evm-gateway-mar2026/" target="_blank" rel="noopener noreferrer" class="">EVM Gateway report</a></em></li>
-<li class=""><em><a href="https://hacken.io/audits/push-chain/sca-push-chain-svm-gateway-mar2026/" target="_blank" rel="noopener noreferrer" class="">SVM Gateway report</a></em></li>
-<li class=""><em><a href="https://hacken.io/audits/push-chain/sca-push-chain-core-contracts-mar2026/" target="_blank" rel="noopener noreferrer" class="">Core Contracts report</a></em></li>
-<li class=""><em><a href="https://hacken.io/audits/push-chain/l1-push-chain-blockchain-audit-apr2026/" target="_blank" rel="noopener noreferrer" class="">Push Chain node report </a></em></li>
-</ul>]]></content>
-        <author>
-            <name>Push Chain</name>
-            <uri>https://x.com/PushChain</uri>
-        </author>
-        <category label="Featured" term="Featured"/>
-        <category label="Product" term="Product"/>
-        <category label="Partnerships" term="Partnerships"/>
     </entry>
 </feed>

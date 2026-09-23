@@ -2,7 +2,7 @@
 title: "Track Universal Read"
 url: "https://pushchain.github.io/docs/chain/build/track-universal-read/"
 section: "build"
-lastUpdated: "2026-09-23T01:14:55+04:00"
+lastUpdated: "2026-09-23T13:14:19Z"
 description: "Track Universal Read | Build | Push Chain Docs"
 ---
 
