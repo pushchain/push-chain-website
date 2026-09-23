@@ -302,6 +302,60 @@ const arbTxHash = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+## Read Constants
+
+**_`PushChain.CONSTANTS.READ`_**
+
+Values used by [Read Universal State](/docs/chain/build/universal-read/). Use them to compare a read's status and outcome, and to find the contracts that receive reads on Push Chain.
+
+| Constant | Value | Description |
+| -------- | ----- | ----------- |
+| `PushChain.CONSTANTS.READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT` | `0x00000000000000000000000000000000000000b2` | Universal Read Registry. The default receiver when a read passes no callback; it stores every result by request ID |
+| `PushChain.CONSTANTS.READ.UNIVERSAL_CALLBACK_ADDRESSES.TESTNET_DONUT` | `0x00000000000000000000000000000000000000c2` | Universal Callback. Accepts read requests and delivers results to receivers |
+| `PushChain.CONSTANTS.READ.WEB2` | `web2:https` | Web2 read destination. Same as `PushChain.CONSTANTS.CHAIN.WEB2` |
+| `PushChain.CONSTANTS.READ.DEFAULT_EXPIRY_BLOCKS` | `300n` | Push blocks a request stays open before it expires |
+| `PushChain.CONSTANTS.READ.REGISTRY_CALLBACK_GAS` | `500000n` | Callback gas the registry receiver uses by default |
+| `PushChain.CONSTANTS.READ.MAX_CALLBACK_GAS_LIMIT` | `1000000n` | Highest callback gas a read can declare |
+
+**_`PushChain.CONSTANTS.READ.OUTCOME`_**
+
+One field that answers "did the read work". Check `outcome` before trusting `value`.
+
+| Constant | Meaning |
+| -------- | ------- |
+| `SUCCESS` | The source read succeeded, the callback ran, and `value` is set |
+| `SOURCE_ERROR` | The destination chain or URL returned an error. See `raw.errorCode` |
+| `CALLBACK_FAILED` | The receiver callback reverted or ran out of gas. See `callbackFailReason` |
+| `DECODE_FAILED` | The result arrived but did not match the expected shape. See `decodeError` |
+| `EXPIRED` | Validators did not agree before the request expired. The budget is refunded |
+| `FAILED` | The request was settled another way on-chain |
+| `ABORTED` | The request was aborted |
+| `PENDING` | The read has not finished yet |
+| `UNKNOWN` | Fulfilled, but delivery could not be confirmed because the fulfil receipt was unavailable |
+
+**_`PushChain.CONSTANTS.READ.STATUS`_** is the raw lifecycle status: `PENDING` (1), `VOTING` (2), `FULFILLED` (3), `EXPIRED` (4), `FAILED` (5), `ABORTED` (6). `FULFILLED` only means the result transaction landed, so prefer `OUTCOME`. **_`PushChain.CONSTANTS.READ.RESULT_STATUS`_** is the validators' result: `SUCCESS` (1) or `ERROR` (2).
+
+### Usage Examples
+
+```typescript
+import { PushChain } from '@pushchain/core';
+
+const READ = PushChain.CONSTANTS.READ;
+
+const result = await pushChainClient.universal.read('0x000000000000000000000000000000000000dEaD', {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+});
+
+if (result.outcome === READ.OUTCOME.SUCCESS) {
+  console.log('Balance:', result.value);
+} else {
+  console.log('Read did not succeed:', result.outcome);
+}
+
+// Where reads without a callback are stored
+console.log(READ.UNIVERSAL_READ_REGISTRY_ADDRESS.TESTNET_DONUT);
+```
+
 ## Common Patterns
 
 ### Chain Selection
