@@ -20,9 +20,17 @@ export default function NodeJSVirtualIDE({ repo = null, children }: Props) {
     .map((line) => (line.startsWith(' ') ? line.slice(2) : line))
     .join('\n');
 
+  // the snippet as authored, minus customProp flags, for copy / share
+  const sourceCode = userPassedCode
+    .split('\n')
+    .filter((line) => !/^\s*\/\/\s*customProp\w+=/.test(line))
+    .join('\n')
+    .trim();
+
   return (
     <Playground
       showLineNumbers
+      sourceCode={sourceCode}
       // pass everything your snippet needs into the scope
       scope={{
         ...ReactLiveScope,
@@ -550,7 +558,7 @@ function App() {
             // Remove trailing newlines and spaces before setting the code
             const cleaned = newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, '');
             setCode(cleaned);
-            if (typeof window !== 'undefined') window.__playgroundLiveCode = cleaned;
+            __setPlaygroundLiveCode(cleaned);
           }}
           style={newCodeDiv}
         />
