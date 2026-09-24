@@ -19,7 +19,7 @@ import {
   ItemV,
 } from '@site/src/css/SharedStyling';
 import clsx from 'clsx';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   FiCheck,
   FiChevronDown,
@@ -77,7 +77,7 @@ function Preview({ codeEnv }) {
   );
 }
 
-function ResultWithHeader({ title, codeEnv, hidden, code }) {
+function ResultWithHeader({ title, codeEnv, hidden, sourceCode, liveCodeRef }) {
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
 
@@ -106,10 +106,7 @@ function ResultWithHeader({ title, codeEnv, hidden, code }) {
 
   const handleCopy = async () => {
     try {
-      const liveEdited =
-        typeof window !== 'undefined' ? window.__playgroundLiveCode : null;
-      const match = code.match(/const\s+defaultCode\s*=\s*`([\s\S]*?)`;/);
-      const extractedCode = liveEdited ?? (match ? match[1] : '');
+      const extractedCode = liveCodeRef.current ?? sourceCode;
       await navigator.clipboard.writeText(extractedCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); // reset after 2s
@@ -133,10 +130,7 @@ function ResultWithHeader({ title, codeEnv, hidden, code }) {
 
   const handleShare = async (e) => {
     try {
-      const liveEdited =
-        typeof window !== 'undefined' ? window.__playgroundLiveCode : null;
-      const match = code.match(/const\s+defaultCode\s*=\s*`([\s\S]*?)`;/);
-      const extractedCode = liveEdited ?? (match ? match[1] : code);
+      const extractedCode = liveCodeRef.current ?? sourceCode;
       const compressedCode = compressCode(extractedCode);
       const ideType = codeEnv === CodingEnvironment.NODEJS ? 'node' : 'react';
       const shareUrl = `${window.location.origin}/docs/chain/code-snippet#code=${compressedCode}&ide=${ideType}`;
@@ -217,7 +211,7 @@ function ThemedLiveEditor({ code, className }) {
   );
 }
 
-function EditorWithHeader({ minimized, code, title, codeEnv }) {
+function EditorWithHeader({ minimized, code, title, codeEnv, liveCodeRef }) {
   const [minimizedState, setMinimizedState] = useState(minimized);
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
@@ -235,10 +229,7 @@ function EditorWithHeader({ minimized, code, title, codeEnv }) {
   const handleCopy = async (e) => {
     e.stopPropagation();
     try {
-      const currentCode =
-        typeof window !== 'undefined' && window.__playgroundLiveCode
-          ? window.__playgroundLiveCode
-          : code;
+      const currentCode = liveCodeRef.current ?? code;
       await navigator.clipboard.writeText(currentCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); // reset after 2s
@@ -276,10 +267,7 @@ function EditorWithHeader({ minimized, code, title, codeEnv }) {
   const handleShare = async (e) => {
     e.stopPropagation();
     try {
-      const currentCode =
-        typeof window !== 'undefined' && window.__playgroundLiveCode
-          ? window.__playgroundLiveCode
-          : code;
+      const currentCode = liveCodeRef.current ?? code;
       const compressedCode = compressCode(currentCode);
       const ideType = codeEnv === CodingEnvironment.NODEJS ? 'node' : 'react';
       const shareUrl = `${window.location.origin}/docs/chain/code-snippet#code=${compressedCode}&ide=${ideType}`;
@@ -405,9 +393,23 @@ function changeToExecutableCode(code, isNodeJSEnv) {
 export default function Playground({
   children: rawChildren,
   transformCode,
+  sourceCode,
+  scope,
   ...props
 }) {
   const [liveScope, setLiveScope] = useState(null);
+  // Latest edited code of THIS playground, read by copy / share. Kept per
+  // instance so one playground never copies or shares another's code.
+  const liveCodeRef = useRef(null);
+  const playgroundScope = useMemo(
+    () => ({
+      ...(scope ?? liveScope),
+      __setPlaygroundLiveCode: (code) => {
+        liveCodeRef.current = code;
+      },
+    }),
+    [scope, liveScope]
+  );
   const {
     siteConfig: { themeConfig },
   } = useDocusaurusContext();
@@ -516,8 +518,8 @@ export default function Playground({
         code={execCode}
         noInline={noInline}
         transformCode={(code) => {
-          if (!isNodeJSEnv && typeof window !== 'undefined')
-            window.__playgroundLiveCode = code;
+          if (!isNodeJSEnv)
+            liveCodeRef.current = code === execCode ? null : code;
           // Track React Live code execution
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'react_live_run', {
@@ -531,8 +533,8 @@ export default function Playground({
           return `${changeToExecutableCode(code, isNodeJSEnv)};`;
         }}
         theme={prismTheme}
-        scope={liveScope}
         {...props}
+        scope={playgroundScope}
       >
         {playgroundPosition === 'top' ? (
           <>
@@ -540,7 +542,8 @@ export default function Playground({
               title={isNodeJSEnv ? 'VIRTUAL NODE IDE' : 'LIVE APP PREVIEW'}
               codeEnv={codeEnv}
               hidden={hidden}
-              code={execCode}
+              sourceCode={sourceCode ?? displayCode}
+              liveCodeRef={liveCodeRef}
             />
             {!hidden && (
               <div
@@ -559,6 +562,7 @@ export default function Playground({
                     isNodeJSEnv ? 'VIRTUAL NODE IDE INNER' : 'REACT PLAYGROUND'
                   }
                   codeEnv={codeEnv}
+                  liveCodeRef={liveCodeRef}
                 />
               </div>
             )}
@@ -582,6 +586,7 @@ export default function Playground({
                     isNodeJSEnv ? 'VIRTUAL NODE IDE INNER' : 'REACT PLAYGROUND'
                   }
                   codeEnv={codeEnv}
+                  liveCodeRef={liveCodeRef}
                 />
               </div>
             )}
@@ -589,7 +594,8 @@ export default function Playground({
               title={isNodeJSEnv ? 'VIRTUAL NODE IDE' : 'LIVE APP PREVIEW'}
               codeEnv={codeEnv}
               hidden={hidden}
-              code={execCode}
+              sourceCode={sourceCode ?? displayCode}
+              liveCodeRef={liveCodeRef}
             />
           </>
         )}
