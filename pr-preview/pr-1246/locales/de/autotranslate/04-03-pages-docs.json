@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "pusd": {
+                  "title": "PUSD",
+                  "subtitle": "Ein stabiler Coin im Wert von 1:1, der USD-Liquidität aus allen <blockchain> kombiniert.",
+                  "ctatitle": "Mehr erfahren"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
