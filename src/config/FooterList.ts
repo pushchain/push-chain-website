@@ -33,6 +33,10 @@ export const FooterUrls = {
     href: '/docs',
     target: '_self' as const,
   },
+  'quick-start': {
+    href: '/docs',
+    target: '_self' as const,
+  },
   github: {
     href: 'https://github.com/pushchain',
     target: '_blank' as const,
@@ -84,9 +88,10 @@ export const FooterUrls = {
 };
 
 // Footer structure matching footer.json columns
+// Column order and contents follow the Push Core footer (Figma 49113:492).
 export const FooterList = {
-  resources: ['knowledge-base', 'blog', 'litepaper', 'push-scan', 'faucet'],
-  developers: ['get-started', 'docs', 'github', 'llms'],
-  community: ['push-portal', 'twitter', 'discord', 'telegram'],
-  help: ['support', 'security', 'contact-us', 'careers', 'brand-kit'],
+  resources: ['knowledge-base', 'blog', 'litepaper', 'brand-kit'],
+  developers: ['get-started', 'quick-start', 'github'],
+  community: ['push-portal', 'twitter', 'discord', 'reddit', 'telegram'],
+  products: ['push-scan', 'faucet'],
 };

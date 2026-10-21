@@ -81,16 +81,18 @@ const BarContainer = styled.div`
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 0 16px;
+  padding: 16px;
   box-sizing: border-box;
-  height: 58px;
+  height: 56px;
   cursor: pointer;
 
   background: linear-gradient(
     90deg,
-    #3524ed 0%,
+    #f898f0 0%,
+    #e670ee 25%,
     var(--ifm-color-custom-pink) 50%,
-    #3524ed 100%
+    #e670ee 75%,
+    #f898f0 100%
   );
   /* backdrop-filter: blur(calc(var(--blur-md, 24px) / 2)); */
 
@@ -203,7 +205,11 @@ const DismissBtn = styled.button`
   font-size: 18px;
   cursor: pointer;
   padding: 0;
-  height: 48px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default InfoBar;
