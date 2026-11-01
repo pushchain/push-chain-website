@@ -1,0 +1,148 @@
+[
+  {
+    "name": "marketplace-register",
+    "at": "2026-10-29T12:32:47.751Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "cardId": "6",
+    "txHash": "0x02d51439677d6f41f91c11542d396b16f1475276955925d0b2a343943b98035c"
+  },
+  {
+    "name": "marketplace-open",
+    "at": "2026-10-29T12:33:08.830Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "jobId": "10",
+    "wallet": "0x6CE619d4C5e2532EF9bD13AD9a01C38e75c4D52d",
+    "rulesId": "0xfea40f821dd79ba129b86b14bb7e6f6f862c4422ba77bbeb17fbe137f11c937c",
+    "txHash": "0x1c3335e03cd5a7a6a9c997e6b243f6ce7c847afa1fca7271910248104476768b"
+  },
+  {
+    "name": "marketplace-cancel-cleanup",
+    "at": "2026-10-29T12:33:39.984Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "cardId": "6",
+    "wallet": "0x6CE619d4C5e2532EF9bD13AD9a01C38e75c4D52d",
+    "jobId": "10",
+    "txHash": "0x6cbe0a13861908b3af313d4f4fca18016afa03a18b5f3ad58d8f38336583475d"
+  },
+  {
+    "name": "native-agent-send",
+    "at": "2026-10-29T12:34:27.817Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "wallet": "0x6c1451DaEC25a2aA4289EEFd4fc8f51156bb6082",
+    "rulesId": "0xba42e170e38c383895cb1b279311ca929350b620827d9047318aba96145e1305",
+    "tx": "0x71bf9103f202a508c235f4db997fc5753221990f80510c9d4f68c36101094ea6",
+    "block": "24768257"
+  },
+  {
+    "name": "create-bare",
+    "at": "2026-10-29T12:35:17.709Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "wallet": "0xd2469E37f1A2bDbA46777bC446995fB9643c752a",
+    "index": 104,
+    "tx": "0x87a3d39616151c5257a116a05b56f745c8d903cdb326f51ad361c84308062d26",
+    "block": "24768276"
+  },
+  {
+    "name": "create-with-rule",
+    "at": "2026-10-29T12:35:27.313Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "wallet": "0xb899876fCfcD94C78A1B3d71977b0ED19f4627A6",
+    "rulesIds": [
+      "0x05a3531ece872ac9735bc09ae41711374aed5be79218d4cee637269b1e6c7789"
+    ],
+    "tx": "0x94cdb1c95f34766657c8876b3af841abf99f796c4a387bd349c4157c0c7f0a4a",
+    "atomic": true
+  },
+  {
+    "name": "marketplace-funding-register",
+    "at": "2026-10-29T12:36:30.248Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "cardId": "7",
+    "txHash": "0x040f8fd6c1f5c1428633d4e8d5be389eb24d7e032f2f36d82fe3770fe9d79c8d"
+  },
+  {
+    "name": "marketplace-funding-agw-paid",
+    "at": "2026-10-29T12:39:00.416Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "cardId": "7",
+    "marketJobId": "11",
+    "plainJobId": "12",
+    "wallet": "0xa27A60050d13BF7Dc7f43FB6cB9Cd96D836544BB",
+    "depositHashes": [
+      "0x6d6b38ed01d1038110061c5bcb8720cf24d0106d63d75c5620a95ae443dea4c7",
+      "0x1fa18533c0d984418f5eca06b19debedd424f1862f6439030df024c0f2c67c35",
+      "0x8e914f8a6c67ee14beed203df572025ad80ba8cbcd116259c8b32d44087588dc"
+    ],
+    "fundingHash": "0x757554a7f6e4d8f327a0a9314ab929e265cc7cad73ae6bc88493f31357d7aa55",
+    "completionHash": "0x9e3894c27fe11880f7c35971e4b1b76c094aa9e7e567b7575662cb64c6802300",
+    "budget": "10000"
+  },
+  {
+    "name": "marketplace-funding-native-paid",
+    "at": "2026-10-29T12:39:56.627Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "jobId": "13",
+    "fundingHash": "0xc29c55d170689998d8d41a6483023906c44bc193626395fbd5f0e0f0bfd34c41",
+    "completionHash": "0x661e4d74a6912167fc70d108efec581eada53ae0c77000e7899b0a5a11776bc5",
+    "budget": "10000"
+  },
+  {
+    "name": "marketplace-funding-cleanup",
+    "at": "2026-10-29T12:40:35.298Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "cardId": "7",
+    "jobs": [
+      {
+        "jobId": "11",
+        "status": "Rejected"
+      },
+      {
+        "jobId": "12",
+        "status": "Completed"
+      },
+      {
+        "jobId": "13",
+        "status": "Completed"
+      }
+    ]
+  },
+  {
+    "name": "marketplace-paid-preview",
+    "at": "2026-10-29T12:41:21.639Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "pass": true,
+    "fees": {
+      "quoted": "1687500000000000",
+      "paid": "1687500000000000",
+      "newlyPaid": "1687500000000000"
+    },
+    "reads": [
+      {
+        "decoded": "0",
+        "requestId": "0x1f8d4a29233011b8356f03615f6d0bb8926572404c725e7bd3f171046e06cdf1",
+        "txHash": "0x550428123a281e81cdc7ed8ae551692390e3019fe77e0b848c90b7a058dbe620",
+        "outcome": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "name": "marketplace-preview-recovery",
+    "at": "2026-10-29T12:41:43.254Z",
+    "network": "TESTNET_DONUT",
+    "sourceCommit": "ffd567d3e49b2d27c6f50ad36093274dbac3090f",
+    "originalRequestId": "0x1f8d4a29233011b8356f03615f6d0bb8926572404c725e7bd3f171046e06cdf1",
+    "preparedReadRequestId": "0x4426e5377d28d260b6b4d9bd30946f3c92bc9f15586a137988e422d7be169c81",
+    "additionalPaymentOnResume": "0"
+  }
+]

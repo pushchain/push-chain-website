@@ -1,0 +1,48 @@
+---
+id: docs-chain-build-marketplace-troubleshooting
+title: Marketplace Troubleshooting
+hide_title: false
+slug: /chain/build/marketplace-troubleshooting
+displayed_sidebar: pushChainSidebar
+sidebar_position: 7
+---
+
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+
+<head><title>Marketplace Troubleshooting | Build | Push Chain Docs</title></head>
+
+:::note SDK checkpoint
+These examples target the Marketplace 2.1 SDK APIs in the 6.0.27-alpha.9 release. Confirm your installed package version before using them.
+:::
+
+## Preserve evidence before retrying
+
+Keep the reviewed plan, transaction hash, job ID, wallet, every `rulesIds` entry, deposit steps and paid-read request IDs. A failed receipt lookup is not proof that submission failed. Recover the original operation before sending another.
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Symptom | Action |
+| --- | --- |
+| Multi-rule opening/funding/deposit refused | Current hook binds one rule. Register/preview may support four; use a single-rule executable card. |
+| `OWNER_NOT_DEPLOYED` | Deploy the external owner's UEA before opening. |
+| `InvalidOwnerSignature` | Check the actual owner verifier, including EIP-7702 delegation; do not bypass simulation. |
+| `CEA_MISMATCH` or destination lookup failure | Check exact chain routing and RPC availability; do not substitute accounts. |
+| Card version changed | Preview again and obtain fresh review. |
+| Opening confirmation uncertain | Track saved hash and call `openJob(plan, { resume: tx })`. |
+| `DEPOSIT_INCOMPLETE` | Recover submitted steps and settle pending hashes before resuming. |
+| `HISTORY_UNAVAILABLE` | Restore authentic historical card/opening evidence. |
+| Evaluator quote or price changed | Re-review budget/hash/fee cap; never silently raise payment. |
+| `UNSUPPORTED_JOB_SPEC` | Inspect `jobSpecDecodeError`; unsupported formats remain readable as unavailable evaluation, but writes are refused. |
+| `WATCH_REORG` | Reload state and select a reviewed restart block. |
+
+</PushAPIReference>
+
+## Deployment compatibility
+
+Use UniversalMarketplace 2.1 on Push Donut with AGW v6, eUSD escrow and timing-free PRE/POST criteria. The default marketplace is `0x940744d96b14Bc030163C6084d602d57CE42ba48`. Older marketplace identifiers, signed plans and timing-first templates are not compatible. Rebuild plans against the current card/deployment.
+
+As checked in the November 1 SDK acceptance, the live cap is four rules per card, but the current hook binds only one rules ID. Opening, funding and depositing multi-rule jobs are gated. Cancellation considers all recorded permissions. Native Push and Solana rules are outside the marketplace card format, even though AGW has broader capabilities.
+
+No token-symbol alias, PUSD redemption or basket conversion is implied. eUSD is a separate demo payment token; PC pays gas and read budgets. JobSpec timing fields have been removed; card duration bounds and job expiry remain.
+
+See [funding and lifecycle](/docs/chain/build/marketplace-jobs/) and [paid-preview recovery](/docs/chain/build/marketplace-previews/). No client timeout cancels an on-chain request.

@@ -5387,7 +5387,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:6.0.26, @pushchain/core@npm:^6.0.26":
+"@pushchain/core@npm:6.0.27-alpha.9":
+  version: 6.0.27-alpha.9
+  resolution: "@pushchain/core@npm:6.0.27-alpha.9"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^2.0.0"
+    "@cosmjs/crypto": "npm:0.33.1"
+    "@cosmjs/encoding": "npm:0.33.1"
+    "@cosmjs/proto-signing": "npm:^0.33.1"
+    "@cosmjs/stargate": "npm:^0.33.1"
+    "@cosmjs/tendermint-rpc": "npm:0.33.1"
+    "@solana/web3.js": "npm:^1.68.0"
+    bs58: "npm:^4.0.0"
+    buffer: "npm:^6.0.3"
+    cosmjs-types: "npm:0.9.0"
+    tslib: "npm:^2.3.0"
+    viem: "npm:^2.27.2"
+  peerDependencies:
+    "@coral-xyz/anchor": ^0.31.0
+    ethers: ^6.0.0
+    tweetnacl: ^1.0.3
+  peerDependenciesMeta:
+    "@coral-xyz/anchor":
+      optional: true
+    ethers:
+      optional: true
+    tweetnacl:
+      optional: true
+  checksum: 10c0/c900fb5dec87b9066bb4ba6e96d0847e911d2e45671e7453189ac21f10b3eec1754f257474df5ded0eaa5a9fd47d7be0f7410d90f9b3cf68b850982221428294
+  languageName: node
+  linkType: hard
+
+"@pushchain/core@npm:^6.0.26":
   version: 6.0.26
   resolution: "@pushchain/core@npm:6.0.26"
   dependencies:
@@ -20196,7 +20227,7 @@ __metadata:
     "@modelcontextprotocol/sdk": "npm:^1.29.0"
     "@openzeppelin/merkle-tree": "npm:^1.0.8"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.6.2"
-    "@pushchain/core": "npm:6.0.26"
+    "@pushchain/core": "npm:6.0.27-alpha.9"
     "@pushchain/ui-kit": "npm:^6.0.26"
     "@radix-ui/react-dialog": "npm:^1.1.2"
     "@solana/web3.js": "npm:^1.98.2"

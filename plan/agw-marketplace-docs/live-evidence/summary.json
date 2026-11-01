@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-29",
+  "sdk": "1076106b",
+  "smoke": {
+    "passed": 8,
+    "skipped": 3,
+    "ownerPCDecrease": "0.262146896"
+  },
+  "fundingAndPreview": {
+    "passed": 3,
+    "skipped": 3,
+    "ownerPCDecrease": "0.600307560375"
+  },
+  "exactWebsiteQuickstart": {
+    "passed": true,
+    "ownerPCDecrease": "0.052155641625"
+  },
+  "presetReadOnly": {
+    "passed": 6
+  },
+  "presetExecution": {
+    "passed": 0,
+    "failed": 6,
+    "ownerPCDecrease": "0.050023625",
+    "reason": "Destination-account lookup failure and Donut eth_getCode RPC timeouts; no preset-created or delivered evidence"
+  },
+  "totalOwnerPCDecrease": "0.964633723",
+  "note": "Balance decreases include funds left in fresh test accounts/wallets, not just network fees. No automated evaluator rollout tested."
+}
