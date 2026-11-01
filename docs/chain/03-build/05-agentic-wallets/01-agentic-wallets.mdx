@@ -1,0 +1,24 @@
+---
+id: docs-chain-build-agentic-wallets
+title: Agentic Wallets
+hide_title: false
+slug: /chain/build/agentic-wallets
+displayed_sidebar: pushChainSidebar
+sidebar_position: 1
+---
+
+<head><title>Agentic Wallets | Build | Push Chain Docs</title></head>
+
+:::note SDK version
+These examples use `@pushchain/core@6.0.27-alpha.9` with AGW v6 on Push Donut. They do not execute automatically.
+:::
+
+## Overview
+
+Agentic Wallets (AGWs) separate ownership from delegated execution on Push Donut. The owner creates the wallet and grants or removes permissions. The agent signs calls within those permissions and cannot be the owner.
+
+An external signer's Universal Executor Account (UEA) is its Push identity. The AGW is a separate contract holding its own Push assets and PC. A destination Chain Executor Account (CEA) holds assets and executes calls on that destination. Use the agent's Push address in a rule, including its UEA when it signs from another chain.
+
+Funding an AGW is separate from creating it. Review asset addresses, raw-unit caps, expiry and PC requirements before transferring funds. Permission does not imply a sufficient balance.
+
+Read [Connect and manage wallets](/docs/chain/build/agentic-wallet-management/), [Rules](/docs/chain/build/agentic-rules/), [Presets](/docs/chain/build/agentic-presets/), then [Execution and recovery](/docs/chain/build/agentic-execution/). Reuse [client initialization](/docs/chain/build/initialize-push-chain-client/) for signer setup.

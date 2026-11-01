@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-29T12:34:23.317Z",
+  "readOnly": true,
+  "cases": [
+    {
+      "preset": "DEXES",
+      "chain": "eip155:11155111",
+      "block": "12019536",
+      "wrapsNativeEth": true,
+      "routerWeth9": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+      "quotes": [
+        {
+          "fee": 100,
+          "usdcOut": "35258"
+        },
+        {
+          "fee": 500,
+          "usdcOut": "34799"
+        },
+        {
+          "fee": 3000,
+          "usdcOut": "35034"
+        },
+        {
+          "fee": 10000,
+          "usdcOut": "34141"
+        }
+      ]
+    },
+    {
+      "preset": "DEXES",
+      "chain": "eip155:84532",
+      "block": "51776987",
+      "wrapsNativeEth": true,
+      "routerWeth9": "0x4200000000000000000000000000000000000006",
+      "quotes": [
+        {
+          "fee": 100,
+          "usdcOut": "2337"
+        },
+        {
+          "fee": 500,
+          "usdcOut": "2024"
+        },
+        {
+          "fee": 3000,
+          "usdcOut": "1873"
+        },
+        {
+          "fee": 10000,
+          "usdcOut": "2150"
+        }
+      ]
+    },
+    {
+      "preset": "DEXES",
+      "chain": "eip155:421614",
+      "block": "324012265",
+      "wrapsNativeEth": true,
+      "routerWeth9": "0x980B62Da83eFf3D4576C647993b0c1D7faf17c73",
+      "quotes": [
+        {
+          "fee": 500,
+          "usdcOut": "0"
+        },
+        {
+          "fee": 3000,
+          "usdcOut": "23"
+        },
+        {
+          "fee": 10000,
+          "usdcOut": "24"
+        }
+      ]
+    },
+    {
+      "preset": "LENDING",
+      "chain": "eip155:11155111",
+      "block": "12019537",
+      "wrapsNativeEth": true,
+      "wethIsReserve": true
+    },
+    {
+      "preset": "LENDING",
+      "chain": "eip155:84532",
+      "block": "51777018",
+      "wrapsNativeEth": true,
+      "wethIsReserve": true
+    },
+    {
+      "preset": "LENDING",
+      "chain": "eip155:421614",
+      "block": "324012282",
+      "wrapsNativeEth": true,
+      "wethIsReserve": true
+    }
+  ]
+}
