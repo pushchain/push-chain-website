@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Audit done. Mainnet next 👀 Read the full audit report.",
+      "button-text": "Push Chain Audit Report",
+      "button-title": "Push Chain Audit Report",
+      "button-aria-label": "Get Started!. You can check it out here",
+      "image-alt": "Get Started!",
+      "close-button-title": "Close toast notification",
+      "close-button-aria-label": "Dismiss Push Chain toast notification",
+      "container-aria-label": "Push Chain toast notification"
+    }
+  }
+}

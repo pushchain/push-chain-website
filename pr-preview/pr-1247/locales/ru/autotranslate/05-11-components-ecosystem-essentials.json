@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "Изучите необходимые приложения testnet",
+      "apps": {
+        "pc-faucet": {
+          "name": "Кран $PC",
+          "description": "Заберите свои тестовые токены PC здесь"
+        },
+        "push-bridge": {
+          "name": "Push Bridge",
+          "description": "Переводите токены между блокчейнами"
+        },
+        "simulate-tx": {
+          "name": "Смоделировать транзакцию",
+          "description": "Симулировать универсальную транзакцию"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Обозреватель блоков блокчейна Push Chain"
+        },
+        "wallet": {
+          "name": "Кошелёк",
+          "description": "Универсальный кошелёк Push Chain"
+        }
+      }
+    }
+  }
+}

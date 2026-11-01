@@ -1,0 +1,117 @@
+---
+title: "Uniswap and Aave Presets"
+url: "https://pushchain.github.io/docs/chain/build/agentic-presets/"
+section: "build"
+lastUpdated: "2026-11-01T17:05:31+05:30"
+description: "Uniswap and Aave Presets | Build | Push Chain Docs"
+---
+
+# Uniswap and Aave Presets
+
+SDK version
+
+These examples use `@pushchain/core@6.0.27-alpha.9` with AGW v6 on Push Donut. They do not execute automatically.
+
+## Overview
+
+`PushChain.utils.agentic` contains `presets.list/get`. The categories are `AGENTIC.PRESETS.CATEGORY.DEXES`, `LENDING` and `STAKING`. The catalog contains only presets that ran live on the Donut testnets:
+
+-   DEXES: Uniswap V3 on Sepolia, Base Sepolia and Arbitrum Sepolia.
+-   LENDING: Aave V3 on Sepolia, Base Sepolia and Arbitrum Sepolia.
+-   STAKING: no entries yet. Hide categories with empty `chains` lists.
+
+Every preset sends only native ETH from Push. The agent wraps it into WETH on the destination chain as the first call of the same transaction, then uses the app. Catalog availability describes supported permissions; execution still requires working routes, balances and liquidity.
+
+```ts
+import { PushChain } from '@pushchain/core';
+import type { Address, Hex } from 'viem';
+const { presets } = PushChain.utils.agentic.presets.list({ type: 'CATEGORY' });
+const availablePresets = presets.filter(preset => preset.chains.length > 0);
+const { rules: reviewTemplates } = PushChain.utils.agentic.presets.get(
+  PushChain.CONSTANTS.AGENTIC.PRESETS.CATEGORY.DEXES,
+);
+// Each rule sends native ETH from Push with the SDK's limits, a 20 PC gas
+// ceiling and a seven-day expiry. Supply the agent to get complete Rule[].
+const configuredPreset = PushChain.utils.agentic.presets.get(
+  PushChain.CONSTANTS.AGENTIC.PRESETS.CATEGORY.LENDING,
+  { chainNamespace: 'eip155:11155111', agent: '0x0000000000000000000000000000000000001234' },
+);
+// Pass configuredPreset.rules directly to create.
+
+function filledPreset(agent: Address, maxPerCall: bigint, maxTotal: bigint) {
+  return PushChain.utils.agentic.presets.get(
+    PushChain.CONSTANTS.AGENTIC.PRESETS.CATEGORY.DEXES,
+    {
+      chainNamespace: 'eip155:84532',
+      agent,
+      validUntil: Math.floor(Date.now() / 1000) + 3600,
+      assets: [
+        { token: PushChain.CONSTANTS.MOVEABLE.TOKEN.BASE_SEPOLIA.ETH, maxPerCall, maxTotal },
+      ],
+    },
+  );
+}
+```
+
+`get` returns `{ rules }`, one rule per chain, in the shape `create` takes. With an agent supplied, `rules` is typed as `Rule[]`; otherwise it is `PresetRuleTemplate[]` with a generated expiry and missing agent. An omitted gas budget uses the preset policy; an explicit zero remains zero.
+
+### What each preset allows
+
+Caps marked "ETH cap" equal the ETH asset's `maxPerCall`, in wei.
+
+| Preset | Allowed calls |
+| --- | --- |
+| DEXES | `WETH.deposit()` with `maxValue` = ETH cap; `WETH.approve(router, ≤ ETH cap)`; `exactInputSingle`/`exactOutputSingle` WETH → USDC with WETH and USDC pinned, recipient = wallet and input ≤ ETH cap; `USDC.approve(router, ≤ 10 USDC)`; the same two swaps USDC → WETH with input ≤ 10 USDC; `WETH.withdraw(≤ ETH cap)` to unwrap |
+| LENDING | `WETH.deposit()` with `maxValue` = ETH cap; `WETH.approve(pool, ≤ ETH cap)`; Aave `supply`, `withdraw`, `borrow`, `repay` with the asset pinned to the reserve WETH, the beneficiary pinned to the wallet and the amount ≤ ETH cap; `WETH.withdraw(≤ ETH cap)` |
+
+| Network | Uniswap router | DEX WETH / USDC | Aave pool | Aave WETH reserve |
+| --- | --- | --- | --- | --- |
+| Sepolia | `0x3bFA…Ae48E` | canonical WETH `0xfff9…6B14` / Circle USDC `0x1c7D…7238` | `0x6Ae4…8951` | Aave WETH `0xC558…9c3c` |
+| Base Sepolia | `0x94cC…2bc4` | WETH `0x4200…0006` / Circle USDC `0x036C…CF7e` | `0x8bAB…aE27` | WETH `0x4200…0006` |
+| Arbitrum Sepolia | `0x101F…663E` | WETH `0x980B…7c73` / Circle USDC `0x75fa…AA4d` | `0xBfC9…2Eff` | Aave WETH `0x1dF4…053D` |
+
+Each router's `WETH9()` is the DEX WETH it pins. Circle USDC is used only on the destination and is never sent from Push by these presets. The fee tier is not pinned: obtain a current quote before selecting it. The abbreviated addresses above are for identification only; inspect full addresses in the returned rules. Templates describe permissions, not current liquidity or guaranteed execution. Presets do not sign, fetch app ABIs or modify wallets.
+
+### Limits and overrides
+
+| Setting | Default |
+| --- | --- |
+| ETH per Push outbound and per allowed call | 0.001 ETH |
+| ETH sent from Push in total | 0.01 ETH |
+| USDC per swap on the destination chain | 10 USDC (fixed in the returned rule) |
+| Gas ceiling | 20 PC per outbound |
+| Expiry | seven days from the get call |
+
+Pass `assets` to set the ETH limits. Each selected chain needs exactly one native ETH asset, written as the zero address or the chain's `MOVEABLE.TOKEN.<CHAIN>.ETH`, with positive `maxPerCall` and `maxTotal`. A non-ETH token, a missing or zero limit, an empty array or a selected chain without an asset throws `INVALID_RULE`. Assets must name their chain unless a single chain filter is supplied. Call `get` again after changing a limit: the wrap value, approvals and operation pins all follow `maxPerCall`. To change the 10 USDC swap limit, edit the returned rule before `create`.
+
+The 20 PC gas ceiling is not a flat fee or a reservation. Actual sends obtain a fresh quote and remain subject to the rule cap; unused destination gas is refunded.
+
+### Configure and regenerate
+
+```ts
+async function createConfiguredDex(
+  client: PushChain, agent: Address, maxPerCall: bigint, maxTotal: bigint,
+) {
+  const configured = filledPreset(agent, maxPerCall, maxTotal);
+  return client.agentic.create('My DEX agent', { rules: configured.rules });
+}
+
+async function replaceConfiguredDex(
+  client: PushChain, wallet: Address, rulesId: Hex,
+  agent: Address, maxPerCall: bigint, maxTotal: bigint,
+) {
+  // Re-run get after editing limits so every cap in allowedCalls follows them.
+  const configured = filledPreset(agent, maxPerCall, maxTotal);
+  return client.agentic.wallet(wallet).rules.update({
+    rules: [{ rulesId, rule: configured.rules[0] }],
+  });
+}
+```
+
+Save the preset category and editable inputs in the UI if subsequent edits should regenerate the preset. On-chain rules do not retain preset provenance or display metadata. A regenerated result is a replacement: do not append it to the old allowedCalls. An update creates a new rulesId and resets counters. When replacing a rule, review the new allowance in addition to the amounts already spent under the previous grant.
+
+### Enforcement scope
+
+**A per-call limit applies to each allowed contract call, not the sum of several calls in one transaction. `maxTotal` is the cumulative Push-outbound amount, including outbounds whose destination execution later fails; it is not lifetime turnover on the destination.** These statements also hold for tokens already in the wallet's destination account, such as USDC from an earlier swap. Destination lifetime or batch-total accounting requires contract support.
+
+The contract allows at most 32 pins across a universal rule. A DEX preset uses 8 calls and 21 pins, and a LENDING preset 7 calls and 15 pins. Expansion fails explicitly if an edited rule exceeds the ceiling; no restrictions are silently dropped. Custom rules remain possible through the normal rule API.

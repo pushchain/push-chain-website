@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "knowledge": {
+      "audit": {
+        "seo": {},
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "ज्ञान आधार"
+          },
+          "blocks": {
+            "sections": {
+              "audit-reports": {
+                "items": {}
+              },
+              "reports": {
+                "items": {
+                  "audit-report-1": {},
+                  "audit-report-2": {
+                    "title": "ब्लॉकचेन कॉन्ट्रैक्ट सुरक्षा विश्लेषण रिपोर्ट"
+                  },
+                  "audit-report-3": {
+                    "title": "<1>ब्लॉकचेन सुरक्षा विश्लेषण रिपोर्ट</1>"
+                  },
+                  "audit-report-4": {
+                    "title": "एसवीएम गेटवे सिक्योरिटी एनालिसिस रिपोर्ट"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+---
+title: "AgentCards and JobSpec Templates"
+url: "https://pushchain.github.io/docs/chain/build/marketplace-cards/"
+section: "build"
+lastUpdated: "2026-11-01T17:05:31+05:30"
+description: "AgentCards and JobSpec Templates | Build | Push Chain Docs"
+---
+
+# AgentCards and JobSpec Templates
+
+SDK checkpoint
+
+These examples target the Marketplace 2.1 SDK APIs in the 6.0.27-alpha.9 release. Confirm your installed package version before using them.
+
+## Author a card
+
+Use verified destination addresses and raw token units. Approval calls require spender and maximum-amount pins. Transfers must pin their recipient to `WALLET`. Per-chain wallet markers resolve to that chain's CEA.
+
+```ts
+import { PushChain, type AgentCardInput, type AgentCardRules } from '@pushchain/core';
+import { parseAbi, type Address } from 'viem';
+
+function authorCard(app: Address, token: Address, receiptToken: Address) {
+  const { WALLET, PRINCIPAL, JOB } = PushChain.CONSTANTS.AGENTIC;
+  const read = PushChain.utils.job.prepareRead({
+    chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+    target: receiptToken,
+    abi: parseAbi(['function balanceOf(address) view returns (uint256)']),
+    functionName: 'balanceOf',
+    args: [WALLET],
+  });
+  const jobSpecTemplate = PushChain.utils.job.buildJobSpecTemplate({
+    reads: [read],
+    checks: [{ left: [0], right: [], evaluation: JOB.EVALUATION.COMPARE,
+      operation: JOB.OPERATION.GREATER_OR_EQUAL, target: { principalBps: 9990n } }],
+    logic: 'ALL',
+  });
+  const rules: AgentCardRules = [{
+    chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+    assets: [{ token, maxPerCall: PRINCIPAL, maxTotal: PRINCIPAL }],
+    maxGasPerCall: 10n ** 18n,
+    allowedCalls: [
+      { target: token, selector: 'approve(address,uint256)', pins: [{arg: 0, expected: app}, {arg: 1, max: PRINCIPAL}] },
+      { target: app, selector: 'supply(address,uint256,address,uint16)', pins: [{arg: 0, expected: token}, {arg: 1, max: PRINCIPAL}, {arg: 2, expected: WALLET}] },
+    ],
+  }];
+  PushChain.utils.market.validateAgentCardRules(rules);
+  return { rules, jobSpecTemplate };
+}
+async function register(provider: PushChain, card: AgentCardInput, app: Address, token: Address, receiptToken: Address) {
+  return provider.market.agent.register(card, authorCard(app, token, receiptToken));
+}
+```
+
+The example compares the receipt-token balance with 99.9% of the principal in raw units. Use it only when the receipt token and principal have compatible decimals and a one-to-one accounting relationship; otherwise author a criterion that represents the actual conversion. It does not calculate an exchange rate.
+
+A template has reads, checks, logic and parameter bounds. Reads default to POST\_EXECUTION; explicit PRE\_EXECUTION reads capture funding-time state. Check sides are arrays of read indexes. Logic uses COMPARE leaves (numeric value zero), ALL, ANY or AT\_LEAST. Criteria have no embedded execution deadlines. The marketplace builder always resolves criteria with `allowedMutability = NONE`.
+
+The SDK validates evaluable criteria before signing even though the marketplace contract can store templates that an evaluator later rejects. Paid previews incur read fees and require explicit historical block numbers for PRE reads. Unknown or failed reads never count as a passing condition. Preview recovery can reuse authenticated request IDs without paying again.
+
+## Provider management
+
+`provider.market.agent.card()` returns the connected provider's card or `undefined`. Registration and updates return `{ cardId, version, tx }`. Refresh previews after a version changes. Deactivation prevents new openings; it does not cancel existing jobs.
+
+```ts
+async function updateCard(provider: PushChain, cardId: bigint,
+  card: AgentCardInput, authored: ReturnType<typeof authorCard>) {
+  const result = await provider.market.agent.update(cardId, card, authored);
+  console.log('Save update hash:', result.tx.hash);
+  await result.tx.wait();
+  return result;
+}
+async function deactivate(provider: PushChain, cardId: bigint) {
+  const tx = await provider.market.agent.setActive(cardId, false);
+  console.log('Save hash:', tx.hash);
+  return tx.wait();
+}
+```
+
+| Required card field | Type / units | Meaning |
+| --- | --- | --- |
+| `jobType` | string | Name hashed on write; reads preserve canonical bytes32. |
+| `metadataURI`, `metadataHash` | string, Hex | Metadata location and content commitment. |
+| `providerFee` | bigint, eUSD raw units | Reference price, separate from principal. |
+| `paymentToken` | Address | Donut eUSD `0x8E1eD40770cd197c80048cB3a86D3c8173cd560D`. |
+| `minDuration`, `maxDuration` | number, seconds | Job duration bounds. |
+
+`AgentCardRules` is an ordered array. Each entry supplies `chain`, `assets`, `maxGasPerCall` and `allowedCalls`. Exactly one asset has `maxTotal: PRINCIPAL` across the entire array. Return values expose `chains` and `maxRulesPerCard`; there is no listing-level `chain`, principal range, `minExecuteWindow` or `settleWindow`.

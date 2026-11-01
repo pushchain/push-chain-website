@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "lfpush": {
+      "seo": {
+        "title": "Let's Push — Инициатива сообщества",
+        "description": "Инициативы сообщества Push, публикации и многое другое.",
+        "og-title": "Let's Push - Инициатива сообщества для Push Chain",
+        "og-description": "Сообщество и акции для Push Chain.",
+        "twitter-title": "Let's Push | Инициатива сообщества",
+        "twitter-description": "Узнайте о сообществе Push и инициативах для Push Chain."
+      },
+      "hero-section": {
+        "title": "Давайте попробуем!",
+        "description": "Сообщество LF Push — отмечаем ваши достижения и помощь другим. Делитесь своими победами, отмечайте <hashtag>#LFPush</hashtag> или <mention>@PushChain</mention>, и мы их поддержим."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Поделитесь своей победой",
+          "join-community": "Присоединиться к сообществу",
+          "learn-more": "Подробнее"
+        },
+        "meta": {
+          "tweet-alt": "Твит от участника сообщества Push Chain",
+          "loading-alt": "Загрузка новых твитов сообщества"
+        },
+        "tweets-counter": "{{count}} Твитов и ещё больше!",
+        "loading": "Загружаем больше твитов...",
+        "end-message": "Вы достигли конца! 🎉"
+      }
+    }
+  }
+}

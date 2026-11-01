@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Cult - Hợp đồng máu dành cho người sáng tạo",
+      "title": "Hướng dẫn dành cho Người theo đạo\n",
+      "title-aria-label": "Hướng dẫn và yêu cầu dành cho những người theo đạo Push Cult",
+      "discord-link-text": "Tham gia cộng đồng trên Discord",
+      "discord-link-title": "Tham gia kênh #push-cult của Push Chain Discord",
+      "discord-link-aria-label": "Mở cộng đồng Discord trong tab mới",
+      "explore-more-text": "Xem Pact đầy đủ",
+      "explore-more-title": "Đọc toàn bộ bản tuyên ngôn và chi tiết chương trình của Push Cult",
+      "explore-more-aria-label": "Xem thêm bài đăng blog Push Cult đầy đủ",
+      "accordion-aria-label": "Hướng dẫn và yêu cầu của Push Cult",
+      "answer-aria-label": "Trả lời câu hỏi - ",
+      "qnas": {
+        "qna1": {
+          "question": "Push Cult là gì?",
+          "answer": "<1>Push Cult là một chương trình được tuyển chọn kỹ lưỡng, chỉ dành cho <2>50 nhà sáng tạo ưu tú</2> những người mang đến tín hiệu thuần túy, không phải spam.</1><1>Chúng tôi thưởng cho những người có tầm nhìn dẫn dắt đàn của họ bằng sự thật, thông qua các chuỗi, video hoặc bài viết kết nối thực sự với khán giả.</1><1>50 Đệ tử hàng đầu chia sẻ <2>20.000.000 PC tiền thưởng</2> dựa trên tác động đo lường được.</1>",
+          "discord-url-title": "Tham gia cộng đồng Push Chain trên Discord.",
+          "support-url-title": "Tìm hiểu thêm về chương trình."
+        },
+        "qna2": {
+          "question": "Ai nên đăng ký?",
+          "answer": "<1><2>Những người sáng tạo:</2> đã và đang sản xuất hướng dẫn, chuỗi bài viết hoặc giải thích với một lượng khán giả tương tác (không nhất thiết phải lớn).</1><1><2>Quan tâm đến:</2> việc truyền tải sự rõ ràng hơn là cường điệu, xây dựng di sản hơn là lợi nhuận nhanh chóng.</1><1><2>Muốn là người tiên phong:</2> truyền bá thời đại Thực thi Tổng quát của Push Chain và đưa những người tin tưởng bước vào Season 3.</1><1>Nếu bạn chỉ tìm kiếm lợi nhuận nhanh chóng, hãy rời đi. Nếu bạn muốn xây dựng một di sản, <3>hãy tiến lên</3>.</1>",
+          "scan-url-title": "Ứng tuyển tham gia Push Cult",
+          "support-url-title": "Đọc bản tuyên ngôn đầy đủ."
+        },
+        "qna3": {
+          "question": "Đệ tử được chọn lọc và đánh giá như thế nào?",
+          "answer": "<1>Chúng tôi giới hạn số lượng thành viên ở mức <2>50 Đệ Tử</2> để đảm bảo sự tập trung. Sự tham gia được đổi mới hàng tuần dựa trên <2>Điểm Tín Nghĩa</2>.</1><1><2>Điểm Tín Nghĩa</2> kết hợp: Tín hiệu (phạm vi tiếp cận), Tập hợp (số lượng người mới tin nhập cuộc), Đức tin (giữ chân), và Thủ công (đánh giá thủ công).</1><1>Nếu bạn không đạt đủ ngưỡng, bạn sẽ được thay thế. Những người sáng tạo xuất sắc cạnh tranh về chất lượng, không phải số lượng.</1>",
+          "faucet-url-title": "Tìm hiểu về các tiêu chí đánh giá.",
+          "discord-url-title": "Đặt câu hỏi trên Discord."
+        },
+        "qna4": {
+          "question": "Các môn đệ thực sự làm gì?",
+          "answer": "<1>Tạo nội dung theo <2>định dạng của bạn</2>. Đó có thể là chuỗi bài viết, video, bài báo hoặc bất cứ thứ gì phù hợp với phong cách của bạn. Nhiệm vụ của bạn: giải thích các khái niệm về Push Chain, hướng dẫn Flock qua Testnet, chào đón những người tin tưởng vào Season 3.</1><1>Chúng tôi cung cấp: các nhiệm vụ hàng tuần, chủ đề và thông tin độc quyền trước khi công chúng biết đến. Bạn định hình câu chuyện.</1><1>Spam sẽ bị thiêu rụi. Chỉ có sự thật tồn tại.</1>",
+          "support-url-title": "Xem các ví dụ nội dung.",
+          "discord-url-title": "Tham gia Discord."
+        },
+        "qna5": {
+          "question": "Phần thưởng là gì?",
+          "answer": "<1><2>Những người xuất sắc nhất sẽ nhận được:</2> Vị trí đảm bảo từ tổng quỹ 20M $PC, cộng với Shiny Pass Siêu Hiếm (trên mainnet).</1><1><2>Shiny Pass cấp:</2> chia sẻ doanh thu từ phí chuỗi, tham gia phần thưởng validator, hệ số nhân staking và đặc quyền VIP trong hệ sinh thái.</1><1>Xếp hạng quyết định kết quả. Không có giải thưởng tham gia.</1>",
+          "docs-url-title": "Tìm hiểu về phần thưởng.",
+          "kb-url-title": "Đọc về tokenomics."
+        },
+        "qna6": {
+          "question": "Làm thế nào để tham gia?",
+          "answer": "<1>Cổng đã mở, hãy chứng minh sự tận tâm của bạn, <3>ứng tuyển ngay</3>.</1><1>Đăng ký sẽ cho bạn quyền truy cập vào chi tiết chương trình, cơ chế đánh giá và các bước khởi động ban đầu.</1><1>Từ đó, <2>thành tích quyết định mọi thứ</2>.</1>",
+          "contact-url-title": "Ứng tuyển vào Push Cult",
+          "github-url-title": "Đọc toàn bộ pact."
+        }
+      }
+    }
+  }
+}

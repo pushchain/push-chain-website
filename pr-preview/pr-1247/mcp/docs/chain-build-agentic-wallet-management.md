@@ -1,0 +1,149 @@
+---
+title: "Connect and Manage Wallets"
+url: "https://pushchain.github.io/docs/chain/build/agentic-wallet-management/"
+section: "build"
+lastUpdated: "2026-11-01T17:05:31+05:30"
+description: "Connect and Manage Wallets | Build | Push Chain Docs"
+---
+
+# Connect and Manage Wallets
+
+SDK version
+
+These examples use `@pushchain/core@6.0.27-alpha.9` with AGW v6 on Push Donut. They do not execute automatically.
+
+## Connect
+
+Use an application-managed key; examples do not load secrets or execute automatically.
+
+```ts
+import {
+  PushChain,
+  AgenticError,
+  AgenticRevertError,
+  type AuthoredRule,
+  type Rule,
+} from '@pushchain/core';
+import {
+  createWalletClient,
+  http,
+  parseEther,
+  encodeFunctionData,
+  erc20Abi,
+  type Address,
+  type Hex,
+} from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+
+type WalletTransaction = Awaited<ReturnType<PushChain['universal']['sendTransaction']>>;
+
+const NETWORK = PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT;
+const PUSH = PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT;
+const SEPOLIA = PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA;
+const ETH = PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.ETH;
+
+async function connectPush(key: Hex, wallet?: Address): Promise<PushChain> {
+  const walletClient = createWalletClient({
+    account: privateKeyToAccount(key),
+    transport: http('https://evm.donut.rpc.push.org/'),
+  });
+  const signer = await PushChain.utils.signer.toUniversalFromKeypair(
+    walletClient,
+    { chain: PUSH, library: PushChain.CONSTANTS.LIBRARY.ETHEREUM_VIEM },
+  );
+  return PushChain.initialize(signer, {
+    network: NETWORK,
+    ...(wallet ? { agenticWallet: wallet } : {}),
+  });
+}
+```
+
+## Create and manage rules
+
+Every chain uses `Rule.allowedCalls`. Omit `chainNamespace` for Push. The agent is always its Push address: a native EOA or an external signer's UEA. The owner cannot be its own agent.
+
+```ts
+async function createNative(owner: PushChain, agent: Address, token: Address, recipient: Address) {
+  const rule: Rule = {
+    agent,
+    validUntil: Math.floor(Date.now() / 1000) + 3600,
+    allowedCalls: [{
+      target: token,
+      selector: 'transfer(address,uint256)',
+      pins: [{ arg: 0, expected: recipient }, { arg: 1, max: 10n }],
+    }],
+  };
+  return owner.agentic.create('operations', { rules: [rule] });
+}
+
+async function manage(owner: PushChain, address: Address, id: Hex) {
+  const wallet = owner.agentic.wallet(address);
+  const record = await wallet.rules.get(id);
+  // Reads preserve the constraints needed by update.
+  const changed = await wallet.rules.update({
+    rules: [{ rulesId: id, rule: { ...record.rule, validUntil: record.validUntil + 3600 } }],
+  });
+  await wallet.setLabel('renamed'); // direct cosmetic write; no checkpoint
+  await wallet.rules.delete([changed.rules[0].rulesId]);
+  // Delete all requires an explicit target:
+  // await wallet.rules.delete({ all: true });
+  return wallet.info();
+}
+```
+
+`derive({ index? })` returns the predicted address, index and deployment state. `list()` enumerates the connected owner's wallets. A wallet handle provides `info`, `owner`, `checkpoints`, `setLabel`, and `rules.list/get/add/update/delete`. Deleted rules are not returned. Rule IDs may change during update.
+
+`create` and `rules.add` reject a duplicate agent/chain pair with `DUPLICATE_RULE`. Put several permitted calls in the same rule. Existing overlapping grants can still cause `AMBIGUOUS_RULE` when sending; the owner must resolve the overlap. The contract validates every actual agent call.
+
+On deployed v6, native rules allow at most **eight** calls, eight equality/maximum pins per call. Native value and call counters accumulate for reporting and atomic updates. A v6 MAX pin only bounds an individual call and does not increment amountSpent; that counter belongs to the separate internal amount meter.
+
+## Quickstart: create, grant and execute
+
+Use two distinct, application-managed Push Donut signers. `owner` pays creation gas; `agentSigner` authorizes the delegated call. Supply a verified Push Donut ERC-20 address and a recipient you control. `10n` is ten raw token units, not ten whole tokens. Creation does not fund the wallet.
+
+```ts
+async function startWallet(owner: PushChain, agentPushAddress: Address,
+  token: Address, recipient: Address) {
+  const created = await createNative(owner, agentPushAddress, token, recipient);
+  console.log('Save creation hash:', created.tx.hash);
+  return created;
+}
+
+async function executeApprovedTransfer(
+  agentSigner: Parameters<typeof PushChain.initialize>[0],
+  wallet: Address, token: Address, recipient: Address,
+) {
+  const agentClient = await PushChain.initialize(agentSigner, {
+    network: NETWORK, agenticWallet: wallet,
+  });
+  // Run only after the owner has explicitly funded the AGW and reviewed this call.
+  const tx = await agentClient.universal.sendTransaction({
+    to: token,
+    data: encodeFunctionData({ abi: erc20Abi, functionName: 'transfer', args: [recipient, 10n] }),
+    value: 0n,
+  });
+  console.log('Save execution hash:', tx.hash);
+  const receipt = await tx.wait();
+  console.log('Wallet and signer:', tx.from, tx.origin);
+  return receipt;
+}
+```
+
+First initialize the owner using `connectPush` above, then call `startWallet`. Review the returned wallet address and rule IDs. Separately transfer the intended ERC-20 balance and sufficient PC to that AGW using your owner wallet. Only then call `executeApprovedTransfer` with the agent signer and the same token/recipient. No funding is performed by these helpers. Inspect the receipt and token balance, and read `owner.agentic.wallet(wallet).rules.get(rulesId)` for recorded spend. A MAX argument pin restricts each transfer; it is not a cumulative token budget.
+
+## Wallet API
+
+| Method | Parameters / defaults | Result |
+| --- | --- | --- |
+| `agentic.derive({ index? })` | Optional owner wallet index | Predicted `address`, `index`, `deployed`; no transaction. |
+| `agentic.list()` | Connected owner | `{ wallets }`, including label, deployment and rule count. |
+| `agentic.create(label, { rules })` | Up to eight initial rules | `{ wallet, index, rulesIds, tx }`; atomic creation. |
+| `wallet.info()` / `owner()` | Wallet handle | Wallet metadata / `{ owner }`. |
+| `wallet.setLabel(label)` | At most 64 UTF-8 bytes; empty resets default | Transaction response; owner write. |
+| `wallet.checkpoints({ sinceBlock? })` | Optional bigint block | `{ checkpoints }` with kind, sequence and hash. |
+| `wallet.rules.list()` / `get(id)` | Enabled rules / one Hex ID | Records include policy and `spent`. Expired enabled grants remain visible. |
+| `wallet.rules.add(rules)` | Rule array | `{ rulesIds, tx }`. |
+| `wallet.rules.update({ rules })` | Entries `{ rulesId, rule }` | Replacement and replaced IDs plus `tx`; save new IDs. |
+| `wallet.rules.delete(ids)` | Explicit IDs or `{ all: true }` | Transaction response; removes authority. |
+
+Unknown or deleted IDs return `RULE_NOT_FOUND`. An `INDEX_RACE` requires rereading the owner's next slot. If an error retains a submitted hash, track it before creating again.

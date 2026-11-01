@@ -1,0 +1,15 @@
+{
+  "components": {
+    "typeform-support": {
+      "collapsed-text-for-support": "Ein Support-Ticket öffnen",
+      "expanded-title-for-support": "Brauchen Sie Hilfe? 👋",
+      "form": {
+        "buttons": {
+          "previous": "Vorheriger",
+          "submit": "Ticket absenden",
+          "submitting": "Wird gesendet..."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "components": {
+    "mailing-signup": {
+      "loading-submit-button": "Por favor, espera...",
+      "arrow-button-aria-label": "Suscríbete a la newsletter",
+      "arrow-button-title": "Suscríbete a las novedades de Push Chain",
+      "form-aria-label": "Formulario de suscripción al boletín"
+    }
+  }
+}

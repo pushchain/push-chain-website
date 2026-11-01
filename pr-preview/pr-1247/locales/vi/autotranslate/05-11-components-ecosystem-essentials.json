@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "Khám phá các ứng dụng cần thiết trên testnet",
+      "apps": {
+        "pc-faucet": {
+          "name": "Vòi PC",
+          "description": "Nhận <token> <testnet> $PC của bạn tại đây"
+        },
+        "push-bridge": {
+          "name": "Cầu Push",
+          "description": "Cầu nối <token> giữa các <blockchain>"
+        },
+        "simulate-tx": {
+          "name": "Mô phỏng giao dịch",
+          "description": "Mô phỏng một giao dịch universal"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Trình khám phá blockchain của Push Chain"
+        },
+        "wallet": {
+          "name": "Ví",
+          "description": "Ví universal của Push Chain"
+        }
+      }
+    }
+  }
+}

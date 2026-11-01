@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Never Miss an Update",
+      "text": "Sign up and stay up to date with ecosystem announcements, giveaways and more.",
+      "email-input": "Your Email",
+      "email-input-placeholder": "Enter your email address",
+      "email-input-title": "Subscribe to Push Chain newsletter for updates",
+      "email-input-aria-label": "Email address for newsletter subscription",
+      "submit-button": "Sign Up",
+      "submit-button-title": "Subscribe to Push Chain newsletter",
+      "submit-button-aria-label": "Subscribe to newsletter",
+      "loading-submit-button": "Please Wait...",
+      "arrow-button-aria-label": "Subscribe to newsletter",
+      "arrow-button-title": "Subscribe to Push Chain updates",
+      "form-aria-label": "Newsletter subscription form",
+      "success-message-aria-label": "Subscription successful",
+      "error-message-aria-label": "Subscription error message"
+    }
+  }
+}

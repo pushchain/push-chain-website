@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "네트워크 업데이트",
+          "description": "Push Chain 네트워크 상태에 대한 실시간 업데이트를 확인하세요. 중단, 유지 보수 및 해결된 문제에 대한 정보를 놓치지 마세요.",
+          "og-title": "Push Chain 네트워크 업데이트 - 네트워크 상태",
+          "og-description": "Push Chain 네트워크 업데이트, 유지 보수 기간, 서비스 업데이트를 추적하세요. 실시간 상태 정보를 받아보세요.",
+          "twitter-title": "Push Chain 네트워크 업데이트",
+          "twitter-description": "Push Chain 네트워크 상태 및 유지보수에 대한 실시간 업데이트."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "지식 기반",
+            "donut-testnet": "Donut Testnet",
+            "report": "네트워크 업데이트"
+          },
+          "blocks": {
+            "title": "네트워크 업데이트",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "콘텐츠"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "체인 업그레이드 - 토큰 리밸런싱 - 100억 PC 토큰",
+                "items": {
+                  "status-heading": "## 상태",
+                  "status-timeline": "2026년 2월 25일 - 시작<br />2026년 2월 25일 - ✅ 완료",
+                  "overview-heading": "## 개요",
+                  "overview-text": "Push Chain이 PC <token> 총 공급량을 75T+ <token>에서 약 100억 <token>으로 줄이는 <token> 재조정 제안을 실행했습니다. 이 업그레이드는 testnet 초기 단계의 기술적 부채를 해결하고 chain을 mainnet과 유사한 환경으로 준비합니다.",
+                  "why-heading": "### 왜 이렇게 했나요?",
+                  "why-text": "Push Chain testnet 초기에는 PC 토큰에 대한 소각 및 발행 프로세스가 없었습니다. 이로 인해 유니버설 트랜잭션의 가격 계산이 극도로 낮아졌고, 소수의 토큰 보유자가 막대한 토큰 공급량(조 단위)을 축적할 수 있었습니다. 이는 mainnet 출시 전에 수정되어야 할 불균형한 토큰 경제를 초래했습니다.",
+                  "why-necessary": "토큰 재조정은 다음과 같은 이유로 필요했습니다:",
+                  "reason-mainnet": "- 메인넷과 유사한 환경 준비",
+                  "reason-season3": "- 시즌 3 보상 분배 활성화",
+                  "reason-tech-debt": "- 오래된 테스트넷 초기 기술 부채 제거",
+                  "reason-token-economy": "- 공정하고 지속 가능한 토큰 이코노미 구축",
+                  "what-changed-heading": "### 무엇이 변경되었나요?",
+                  "what-changed-text": "이 제안은 총 117만 8천 개의 주소 중 상위 1,950개의 <token> 지갑에 영향을 미쳤습니다. 1,100 $PC <token> 이상(수조 개 포함)을 보유한 지갑은 1,100~2,000 $PC <token> 사이를 보유하도록 재조정되었습니다.",
+                  "key-changes-heading": "**주요 변경 사항:**",
+                  "change-supply": "- 총 공급량이 75T+에서 약 10B PC 토큰으로 감소했습니다.",
+                  "change-wallets": "- 상위 1,950개 <token> 지갑이 1,100~2,000 $PC <token> 범위로 재조정됨",
+                  "change-percentage": "- 총 주소의 0.17% (117.8만 개 중 1,950개)에만 영향을 미칩니다.",
+                  "change-unaffected": "- 99.83%의 사용자는 영향을 받지 않습니다.",
+                  "why-not-informed-heading": "### 왜 사용자들에게 미리 알리지 않았나요?",
+                  "why-not-informed-text": "사용자에게 미리 알리지 않아 토큰 재분배를 다른 <token> 지갑으로 옮기는 악의적인 행위를 방지했습니다. 이 보안 조치는 재분배 프로세스의 무결성을 보장하고 시스템 조작을 예방했습니다.",
+                  "validator-period": "현재 testnet validator 제안 기간은 풀 분산형 validator 소유권이 구현되기 전에 이러한 예외적인 경우를 제거하는 데 도움이 되도록 5분으로 설정되어 있습니다.",
+                  "why-52t-heading": "### 왜 여전히 52T 공급량을 보나요?",
+                  "why-52t-text": "재조정은 2단계 접근 방식입니다. 토큰은 현재 팀이 제어하는 <token> 지갑에 수집되어 곧 소각될 예정입니다.",
+                  "how-affect-heading": "### 저에게는 어떤 영향을 미치나요?",
+                  "affect-majority": "**대부분의 99.83% 사용자:** 이 변경 사항은 영향을 미치지 않습니다. 귀하의 <wallet> 잔액은 변경되지 않습니다.",
+                  "affect-top-wallets": "**영향을 받은 <wallet> (상위 1,950개):** <wallet>에 1,100개 이상의 $PC <token> (또는 조 단위)를 보유하고 있었다면 잔액이 1,100~2,000개 $PC <token> 범위로 재조정되었습니다.",
+                  "need-help-heading": "**도움이 필요하신가요?**",
+                  "need-help-text": "이 재조정으로 인해 영향을 받았다고 생각되거나 질문이나 우려 사항이 있으시면 Discord에서 Push Chain 팀에 문의하여 도움을 받으세요."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

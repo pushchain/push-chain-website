@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Присоединяйтесь к Push Cult - Примите Клятву",
+      "expanded-title": "Клятва",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "Какой у вас адрес электронной почты? 📧",
+            "subtitle": "Нам нужен ваш email для связи с вами",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "Какой у вас X (Twitter) ник?",
+            "subtitle": "Нам интересно посмотреть на ваш контент и активность",
+            "placeholder": "@yourhandle"
+          },
+          "telegram-id": {
+            "title": "Какой у вас ID в Telegram?",
+            "subtitle": "Мы используем Telegram для прямой связи с Последователями",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "Поделитесь своим лучшим контентом",
+            "subtitle": "Ссылка на вашу лучшую ветку, видео или статью, демонстрирующую вашу работу",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Поделитесь своим видением",
+            "subtitle": "Расскажите нам о вашем контенте, аудитории и причинах, по которым вы хотите присоединиться",
+            "placeholder": "Расскажите нам о вашем контенте, аудитории и причинах, по которым вы хотите присоединиться к Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "Далее",
+          "previous": "Назад",
+          "submit": "Отправить заявку",
+          "submitting": "Отправка..."
+        },
+        "validation": {
+          "email-required": "Пожалуйста, введите email",
+          "email-invalid": "Пожалуйста, введите корректный адрес электронной почты",
+          "x-username-required": "Имя пользователя X обязательно для заполнения",
+          "telegram-id-required": "ID Telegram обязателен",
+          "best-content-required": "Ссылка на лучший контент обязательна",
+          "best-content-invalid": "Пожалуйста, введите корректный URL",
+          "message-required": "Сообщение обязательно",
+          "default": "Это поле обязательно для заполнения"
+        },
+        "success": {
+          "title": "Заявка отправлена!",
+          "message-before-link": "Присоединяйтесь",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "и следите за",
+          "channel-name": "#push-cult",
+          "message-end": "канал для дальнейших действий.",
+          "button": "Отправить ещё одну заявку"
+        },
+        "progress": {
+          "step-counter": "{{current}} из {{total}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Netzwerk-Updates",
+          "description": "Echtzeit-Netzwerkstatus-Updates für Push Chain. Bleibe über Ausfälle, Wartungsarbeiten und behobene Probleme informiert.",
+          "og-title": "Push Chain Network Updates - Netzwerkstatus",
+          "og-description": "Verfolge Netzwerk-Updates, Wartungsfenster und Service-Updates von Push Chain. Erhalte Echtzeit-Statusinformationen.",
+          "twitter-title": "Push Chain Netzwerk-Updates",
+          "twitter-description": "Aktuelle Informationen zum Status und zur Wartung des Push Chain Netzwerks."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Wissensdatenbank",
+            "donut-testnet": "Donut Testnet",
+            "report": "Netzwerk-Updates"
+          },
+          "blocks": {
+            "title": "Netzwerk-Updates",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "Inhalt"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "Blockchain Upgrade - Token Rebalancing - 10 Milliarden PC Tokens",
+                "items": {
+                  "status-heading": "## Status",
+                  "status-timeline": "25. Feb 2026 - Gestartet<br />25. Feb 2026 - ✅ Abgeschlossen",
+                  "overview-heading": "## Überblick",
+                  "overview-text": "Push Chain hat einen Token-Rebalancing-Vorschlag ausgeführt, um das Gesamtangebot an PC <token> von über 75 Billionen <token> auf ungefähr 10 Milliarden <token> zu reduzieren. Dieses Upgrade behebt einen technischen Fehler aus den frühen Tagen des <testnet> und bereitet die <blockchain> auf eine <mainnet>-ähnliche Umgebung vor.",
+                  "why-heading": "### Warum wurde dies getan?",
+                  "why-text": "In den frühen Tagen des Push Chain <testnet> gab es keinen Burn- und Mint-Prozess für <token> Tokens. Dies führte zu extrem niedrigen Preisberechnungen für <universal> Transaktionen und ermöglichte es einer Handvoll <token> Haltern, massive <token> Vorräte anzuhäufen (bis zu Billionen). Dies schuf eine unausgewogene <token>ökonomie, die vor dem Start des <mainnet> korrigiert werden musste.",
+                  "why-necessary": "Die Neuausrichtung war notwendig, um:",
+                  "reason-mainnet": "- Bereiten Sie sich auf eine mainnet-ähnliche Umgebung vor",
+                  "reason-season3": "- Saison 3 Belohnungsverteilung aktivieren",
+                  "reason-tech-debt": "- Entferne alte technische Schulden aus frühen <testnet>s",
+                  "reason-token-economy": "- Eine faire und nachhaltige Tokenökonomie etablieren",
+                  "what-changed-heading": "### Was hat sich geändert?",
+                  "what-changed-text": "Der Vorschlag betraf die Top 1.950 <wallet> von insgesamt 1.178M Adressen. <wallet>, die 1.100 $PC <token> oder mehr besaßen (einschließlich derer mit Billionen), wurden so neu ausbalanciert, dass sie zwischen 1.100 und 2.000 $PC <token> halten.",
+                  "key-changes-heading": "**Wichtige Änderungen:**",
+                  "change-supply": "- Gesamtmenge reduziert von 75T+ auf ~10B PC Token",
+                  "change-wallets": "- Die Top 1.950 <wallet> wurden auf einen Bereich von 1.100–2.000 <token> angepasst.",
+                  "change-percentage": "- Betrifft nur 0,17 % aller Adressen (1.950 von 1,178 Mio.)",
+                  "change-unaffected": "- 99,83% der Nutzer sind nicht betroffen",
+                  "why-not-informed-heading": "### Warum wurden die Nutzer nicht im Voraus informiert?",
+                  "why-not-informed-text": "Benutzer wurden nicht im Voraus benachrichtigt, um zu verhindern, dass böswillige Akteure <token> vor der Neuausrichtung auf andere <wallet> verteilen. Diese Sicherheitsmaßnahme gewährleistete die Integrität des Neuausrichtungsprozesses und verhinderte Manipulationen des Systems.",
+                  "validator-period": "Die Testnet-Validator-Vorschlagsperiode ist aktuell auf 5 Minuten eingestellt, um Edge Cases wie diese zu vermeiden, bevor die vollständige dezentrale Validator-Eigentümerschaft implementiert wird.",
+                  "why-52t-heading": "### Warum sehe ich noch immer ein Angebot von 52T?",
+                  "why-52t-text": "Die Umverteilung erfolgt in zwei Phasen. Die <token> werden jetzt in einem vom Team kontrollierten <wallet> gesammelt und bald verbrannt.",
+                  "how-affect-heading": "### Wie wirkt sich das auf mich aus?",
+                  "affect-majority": "**Für 99,83% der Nutzer:** Diese Änderung hat keinen Einfluss auf Sie. Ihr <wallet> bleibt unverändert.",
+                  "affect-top-wallets": "**Für betroffene Wallets (Top 1.950):** Wenn deine Wallet 1.100+ PC <token> (oder Billionen) hielt, wurde dein Guthaben in den Bereich von 1.100–2.000 PC <token> neu ausbalanciert.",
+                  "need-help-heading": "**Brauchen Sie Hilfe?**",
+                  "need-help-text": "Wenn Sie glauben, von dieser Neuausrichtung betroffen zu sein und Fragen oder Bedenken haben, wenden Sie sich bitte an das Push Chain Team auf Discord, um Hilfe zu erhalten."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

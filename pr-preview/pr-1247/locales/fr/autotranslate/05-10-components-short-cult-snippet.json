@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Cult - Pact de sang pour les créateurs",
+      "title": "Disciple\nDirectives",
+      "title-aria-label": "Directives et exigences pour les disciples de Push Cult",
+      "discord-link-text": "Rejoignez la communauté sur Discord",
+      "discord-link-title": "Rejoignez le salon #push-cult du Discord de Push Chain",
+      "discord-link-aria-label": "Ouvrir la communauté Discord dans un nouvel onglet",
+      "explore-more-text": "Voir Pact complet",
+      "explore-more-title": "Lisez le manifeste complet du Push Cult et les détails du programme",
+      "explore-more-aria-label": "Accéder à l'article complet du blog Push Cult",
+      "accordion-aria-label": "Directives et exigences de la communauté Push",
+      "answer-aria-label": "Réponse à la question - ",
+      "qnas": {
+        "qna1": {
+          "question": "Qu'est-ce que Push Cult ?",
+          "answer": "<1>Push Cult est un programme sélectionné et sur invitation pour <2>50 créateurs d'élite</2> qui fournissent un signal pur, pas de spam.</1><1>Nous récompensons les visionnaires qui guident leur communauté avec vérité, à travers des fils de discussion, des vidéos ou des articles qui connectent réellement avec le public.</1><1>Les 50 Disciples les plus performants se partagent une prime de <2>20,000,000 PC</2> basée sur un impact mesurable.</1>",
+          "discord-url-title": "Rejoignez le Discord de Push Chain.",
+          "support-url-title": "En savoir plus sur le programme."
+        },
+        "qna2": {
+          "question": "Qui devrait postuler ?",
+          "answer": "<1><2>Créateurs qui:</2> produisent déjà des guides, des fils de discussion ou des explications avec un public engagé (pas nécessairement énorme).</1><1><2>Se soucient de:</2> diffuser de la clarté plutôt que de l'engouement, de construire un héritage plutôt que de réaliser des profits rapides.</1><1><2>Veulent être pionniers:</2> évangéliser l'ère Universal Execution de Push Chain et intégrer des adeptes à la saison 3.</1><1>Si vous cherchez un profit rapide, faites marche arrière. Si vous cherchez à construire un héritage, <3>avancez</3>.</1>",
+          "scan-url-title": "Postuler pour rejoindre Push Cult",
+          "support-url-title": "Lisez le manifeste complet."
+        },
+        "qna3": {
+          "question": "Comment les Disciples sont-ils sélectionnés et évalués ?",
+          "answer": "<1>Nous limitons le nombre à <2>50 Disciples</2> pour garantir la concentration. La participation est renouvelée chaque semaine en fonction de votre <2>Score de Dévotion</2>.</1><1><2>Score de Dévotion</2> combine : Signal (portée), Rassemblement (nouveaux croyants intégrés), Foi (rétention) et Artisanat (examen manuel).</1><1>Si vous passez en dessous du seuil, vous êtes remplacé. Les grands créateurs sont en compétition sur la qualité, pas sur la quantité.</1>",
+          "faucet-url-title": "Découvrez les critères d'évaluation.",
+          "discord-url-title": "Posez vos questions sur Discord."
+        },
+        "qna4": {
+          "question": "Que font réellement les Disciples ?",
+          "answer": "<1>Créez du contenu dans <2>votre format</2>. Cela peut être des fils de discussion, des vidéos, des articles ou ce qui correspond à votre style. Votre mission : expliquer les concepts de Push Chain, guider le Troupeau à travers Testnet, initier les croyants à la Saison 3.</1><1>Nous fournissons : des missions hebdomadaires, des thèmes et des informations privilégiées avant qu'elles ne soient publiques. Vous façonnez le récit.</1><1>Le spam brûle en cendres. Seule la vérité survit.</1>",
+          "support-url-title": "Voir des exemples de contenu.",
+          "discord-url-title": "Rejoignez le Discord."
+        },
+        "qna5": {
+          "question": "Quelles sont les récompenses ?",
+          "answer": "<1><2>Les meilleurs participants reçoivent :</2> Une allocation garantie du pool de 20M $PC, ainsi qu’un Pass Brillant Ultra Rare (sur le mainnet).</1><1><2>Le Pass Brillant donne droit à :</2> une part des revenus des frais de chaine, une participation aux récompenses des validateurs, des multiplicateurs de staking et des avantages exclusifs pour l'écosystème.</1><1>Le rang détermine la récolte. Il n’y a pas de trophées de participation.</1>",
+          "docs-url-title": "Découvrez les récompenses.",
+          "kb-url-title": "Lire la tokenomics."
+        },
+        "qna6": {
+          "question": "Comment puis-je rejoindre ?",
+          "answer": "<1>Les portes sont ouvertes, prouvez votre dévouement, <3>inscrivez-vous maintenant</3>.</1><1>L'inscription vous donne accès aux détails du programme, aux mécanismes d'évaluation et aux premières étapes d'intégration.</1><1>À partir de là, <2>la performance détermine tout</2>.</1>",
+          "contact-url-title": "Candidature au Push Cult",
+          "github-url-title": "Lisez le pacte complet."
+        }
+      }
+    }
+  }
+}

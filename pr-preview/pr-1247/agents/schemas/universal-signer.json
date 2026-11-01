@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/universal-signer.json",
+  "title": "UniversalSigner",
+  "description": "UniversalAccount extended with signing capabilities. Created via PushChain.utils.signer.toUniversal() or PushChain.utils.signer.toUniversalFromKeypair().",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "universal-account.json"
+    }
+  ],
+  "properties": {
+    "account": {
+      "type": "object",
+      "description": "The underlying UniversalAccount",
+      "properties": {
+        "address": {
+          "type": "string",
+          "description": "The wallet address"
+        },
+        "chain": {
+          "type": "string",
+          "description": "CAIP-10 namespace chain identifier"
+        }
+      },
+      "required": ["address", "chain"]
+    },
+    "signerId": {
+      "type": "string",
+      "description": "Identifier for the signer type (e.g., 'CustomGeneratedSigner', 'Ethers', 'Viem')",
+      "status": "inferred"
+    },
+    "signMessage": {
+      "description": "Function to sign a message. Type: (message: Uint8Array) => Promise<Uint8Array>",
+      "status": "documented"
+    },
+    "signAndSendTransaction": {
+      "description": "Function to sign and send a transaction. Type: (unsignedTx: Uint8Array) => Promise<Uint8Array>",
+      "status": "documented"
+    },
+    "signTypedData": {
+      "description": "Function to sign EIP-712 typed data. Type: (typedDataArgs: { domain, types, value }) => Promise<Uint8Array>",
+      "status": "documented"
+    }
+  },
+  "required": ["account", "signMessage", "signAndSendTransaction", "signTypedData"],
+  "additionalProperties": true,
+  "examples": [
+    {
+      "account": {
+        "address": "0x32DE7d63C654d18F1382f5a30Ef69CB86b399ac7",
+        "chain": "eip155:11155111"
+      },
+      "signMessage": "[Function: signMessage]",
+      "signAndSendTransaction": "[Function: signAndSendTransaction]",
+      "signTypedData": "[Function: signTypedData]"
+    }
+  ],
+  "creationMethods": {
+    "fromEthers": {
+      "method": "PushChain.utils.signer.toUniversal(ethersSigner)",
+      "description": "Convert ethers.js Wallet or Signer to UniversalSigner",
+      "status": "documented"
+    },
+    "fromViem": {
+      "method": "PushChain.utils.signer.toUniversal(viemWalletClient)",
+      "description": "Convert viem WalletClient to UniversalSigner",
+      "status": "documented"
+    },
+    "fromSolanaKeypair": {
+      "method": "PushChain.utils.signer.toUniversalFromKeypair(keypair, { chain, library })",
+      "description": "Convert Solana Keypair to UniversalSigner",
+      "status": "documented"
+    },
+    "custom": {
+      "method": "PushChain.utils.signer.construct(account, { signMessage, signAndSendTransaction, signTypedData })",
+      "description": "Create UniversalSigner skeleton from custom signing functions, then pass to toUniversal()",
+      "status": "documented"
+    }
+  }
+}

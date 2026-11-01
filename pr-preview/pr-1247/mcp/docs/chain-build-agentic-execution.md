@@ -1,0 +1,47 @@
+---
+title: "Execution and Recovery"
+url: "https://pushchain.github.io/docs/chain/build/agentic-execution/"
+section: "build"
+lastUpdated: "2026-11-01T17:05:31+05:30"
+description: "Execution and Recovery | Build | Push Chain Docs"
+---
+
+# Execution and Recovery
+
+SDK version
+
+These examples use `@pushchain/core@6.0.27-alpha.9` with AGW v6 on Push Donut. They do not execute automatically.
+
+## Execute as the agent
+
+Initialize a second client with the agent signer and `agenticWallet: address`. Use `agentClient.universal.sendTransaction` with the permitted target and encoded call. The wallet must already hold the assets and PC required by the transaction. Preserve the returned transaction hash before waiting; inspect destination execution as well as the Push receipt. See [Universal Transactions](/push-chain-website/pr-preview/pr-1247/docs/chain/build/send-universal-transaction/).
+
+## Spend, checkpoints and execution
+
+`rules.get/list` return `spent`. Universal spend contains one entry per asset in stored order. A single native call has scalar value/amount/call counters. Several native calls return `spent.actions`, with each entry identified by target and selector; unrelated token amounts are not summed.
+
+Connect with `PushChain.initialize(signer, { agenticWallet: address })` to send from the wallet. Signer identity determines the owner or agent door. Native agent arrays are atomic and every call passes policy checks. `from` cannot be overridden. Responses identify the wallet as `from` and signer as `origin`, including wait/replay results.
+
+Updates assert existing spend, delete the old rule and grant its replacement atomically. Native updates assert each action separately: a rule with N native actions records N+4 checkpoints on current v6. Agent execution records no owner checkpoint. Direct `setLabel` records none.
+
+## Displaying errors in the UI
+
+Use `userMessage` for `AgenticError` and `AgenticRevertError`. Keep `code`, `message`, `hint`, `details`, `decodedError` and `cause` for diagnostics or application-specific translations. Unknown exceptions should get a neutral fallback instead of raw RPC/ABI text.
+
+```ts
+import { AgenticError, AgenticRevertError } from '@pushchain/core';
+function walletErrorText(error: unknown): string {
+  if (error instanceof AgenticError || error instanceof AgenticRevertError) {
+    return error.userMessage;
+  }
+  return 'The request could not be completed. Check wallet activity before trying again.';
+}
+```
+
+Creation and rule-preparation errors include a zero-based `details.ruleIndex` when a rule can be identified, with `assetIndex`, `callIndex` and `field` where available. The UI message uses a one-based rule number. Use these details to show the error on the relevant rule instead of only in a footer. Read/receipt failures preserve their causes and transaction hashes; do not automatically retry a submitted transaction whose outcome is unknown.
+
+`TOKEN_ROUTE_UNAVAILABLE` means an asset cannot be resolved for transfers from Push. Choose a token with a supported route on this network, or wait for a verified PRC20 route for that exact token address. Changing a symbol does not create a route. Display `error.userMessage`.
+
+A DEX condition-limit failure reports `details.reason = 'RULE_CONSTRAINT_LIMIT'`, `actual`, `limit` and `callCount`. Conditions here are generated input checks (for example token, recipient and amount checks), rather than the number of visible function names. A stock DEX preset contains eight allowed-call entries and twenty-one conditions. Appending the same call list again makes forty-two conditions. The SDK rejects this; it does not deduplicate, remove conditions or split authority automatically. Preserve per-chain rules and regenerate after edits rather than appending generated calls.
+
+For the review screen, show the actual network (including testnet name), selected token addresses and limits. Label maxGasPerCall as a maximum PC gas budget, not a guaranteed fee or execution gas-unit count. maxTotal meters cumulative Push outbounds, including outbounds whose destination execution later fails; it is not a lifetime destination-spend limit. Destination pins and maxValue limit each call separately.

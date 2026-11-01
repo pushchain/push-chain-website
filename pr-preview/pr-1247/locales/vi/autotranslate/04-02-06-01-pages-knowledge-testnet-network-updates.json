@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Cập nhật Mạng lưới",
+          "description": "Cập nhật trạng thái mạng Push Chain theo thời gian thực. Luôn cập nhật thông tin về sự cố, bảo trì và các vấn đề đã được giải quyết.",
+          "og-title": "Cập nhật Mạng Push Chain - Tình trạng Mạng",
+          "og-description": "Theo dõi các bản cập nhật mạng Push Chain, thời gian bảo trì và cập nhật dịch vụ. Nhận thông tin trạng thái theo thời gian thực.",
+          "twitter-title": "Cập nhật Mạng Push Chain",
+          "twitter-description": "Cập nhật trực tiếp về trạng thái và bảo trì mạng Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Cơ sở kiến thức",
+            "donut-testnet": "Donut Testnet",
+            "report": "Cập nhật Mạng lưới"
+          },
+          "blocks": {
+            "title": "Cập nhật Mạng lưới",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "nội dung"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "Nâng cấp blockchain - Tái cân bằng Token - 10 Tỷ PC Token",
+                "items": {
+                  "status-heading": "## Tình trạng",
+                  "status-timeline": "Ngày 25 tháng 2 năm 2026 - Bắt đầu<br />Ngày 25 tháng 2 năm 2026 - ✅ Hoàn thành",
+                  "overview-heading": "## Tổng quan",
+                  "overview-text": "Push Chain đã thực hiện đề xuất tái cân bằng <token> nhằm giảm tổng nguồn cung <token> từ hơn 75 nghìn tỷ <token> xuống còn khoảng 10 tỷ <token>. Việc nâng cấp này giải quyết một khoản nợ kỹ thuật từ những ngày đầu của <testnet> và chuẩn bị cho <blockchain> một môi trường tương tự như <mainnet>.",
+                  "why-heading": "### Tại sao việc này được thực hiện?",
+                  "why-text": "Ở những ngày đầu của Push Chain <testnet>, chưa có cơ chế đốt và tạo PC <token>. Điều này dẫn đến việc tính toán giá rất thấp cho các giao dịch <universal> và cho phép một số ít người nắm giữ số lượng <token> khổng lồ (lên tới hàng tỷ). Điều này tạo ra một nền kinh tế <token> mất cân bằng cần được điều chỉnh trước khi ra mắt <mainnet>.",
+                  "why-necessary": "Việc tái cân bằng là cần thiết để:",
+                  "reason-mainnet": "- Chuẩn bị cho môi trường tương tự mainnet",
+                  "reason-season3": "- Kích hoạt phân phối phần thưởng Mùa 3",
+                  "reason-tech-debt": "- Loại bỏ khoản nợ kỹ thuật cũ từ giai đoạn testnet ban đầu",
+                  "reason-token-economy": "- Thiết lập một nền kinh tế <token> công bằng và bền vững",
+                  "what-changed-heading": "### Có gì thay đổi?",
+                  "what-changed-text": "Đề xuất ảnh hưởng đến 1.950 <wallet> hàng đầu trong tổng số 1.178 triệu địa chỉ. Các <wallet> nắm giữ 1.100 <token> trở lên (bao gồm cả những <wallet> nắm giữ hàng nghìn tỷ) đã được tái cân bằng để nắm giữ từ 1.100-2.000 <token>.",
+                  "key-changes-heading": "**Thay đổi chính:**",
+                  "change-supply": "- Tổng nguồn cung giảm từ 75T+ xuống còn khoảng 10B PC <token>",
+                  "change-wallets": "- 1,950 ví hàng đầu được tái cân bằng trong phạm vi 1,100-2,000 <token>.",
+                  "change-percentage": "- Chỉ ảnh hưởng đến 0.17% tổng số địa chỉ (1.950 trên tổng số 1.178 triệu)",
+                  "change-unaffected": "- Khoảng 99.83% người dùng không bị ảnh hưởng",
+                  "why-not-informed-heading": "### Tại sao người dùng không được thông báo trước?",
+                  "why-not-informed-text": "Người dùng không được thông báo trước để ngăn chặn các tác nhân độc hại phân phối lại <token> đến các <wallet> khác trước khi tái cân bằng. Biện pháp bảo mật này đảm bảo tính toàn vẹn của quy trình tái cân bằng và ngăn chặn các hành vi gian lận.",
+                  "validator-period": "Thời gian đề xuất validator trên testnet hiện được đặt là 5 phút để giúp loại bỏ các trường hợp đặc biệt như thế này trước khi triển khai quyền sở hữu validator phi tập trung hoàn toàn.",
+                  "why-52t-heading": "### Tại sao tôi vẫn thấy nguồn cung 52T?",
+                  "why-52t-text": "Việc tái cân bằng là một cách tiếp cận hai giai đoạn. Các <token> hiện được thu thập vào một ví do nhóm kiểm soát và sẽ sớm bị đốt.",
+                  "how-affect-heading": "### Nó ảnh hưởng đến tôi như thế nào?",
+                  "affect-majority": "**Đối với 99.83% người dùng:** Thay đổi này không ảnh hưởng đến bạn. Số dư ví của bạn vẫn không thay đổi.",
+                  "affect-top-wallets": "**Đối với các ví bị ảnh hưởng (top 1,950):** Nếu ví của bạn nắm giữ 1,100+ token PC (hoặc hàng nghìn tỷ), số dư của bạn đã được tái cân bằng về phạm vi 1,100-2,000 token PC.",
+                  "need-help-heading": "**Cần trợ giúp?**",
+                  "need-help-text": "Nếu bạn tin rằng mình bị ảnh hưởng bởi việc tái cân bằng này và có bất kỳ câu hỏi hoặc lo ngại nào, vui lòng liên hệ với nhóm Push Chain trên Discord để được hỗ trợ."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

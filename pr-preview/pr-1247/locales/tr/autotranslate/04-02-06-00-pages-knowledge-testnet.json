@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "network-updates": {
+                "title": "Ağ Güncellemeleri",
+                "items": {
+                  "chain-upgrade-token-rebalance": {
+                    "title": "Zincir Yükseltmesi - Token Dengelemesi - Donut Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

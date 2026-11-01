@@ -1,0 +1,51 @@
+---
+title: "Discover, Review and Open Jobs"
+url: "https://pushchain.github.io/docs/chain/build/marketplace-opening/"
+section: "build"
+lastUpdated: "2026-11-01T17:05:31+05:30"
+description: "Discover, Review and Open Jobs | Build | Push Chain Docs"
+---
+
+# Discover, Review and Open Jobs
+
+SDK checkpoint
+
+These examples target the Marketplace 2.1 SDK APIs in the 6.0.27-alpha.9 release. Confirm your installed package version before using them.
+
+## Discover and inspect
+
+Use `client.market.cards({ chain?, provider?, active? })` for summaries and `client.market.card(cardId)` for full rules and criteria. Review every chain, token address, permission, fee and condition. A verified flag applies to a particular card version.
+
+## Preview and open
+
+```ts
+import { PushChain, type JobPlan } from '@pushchain/core';
+async function previewJob(owner: PushChain, cardId: bigint) {
+  const plan = await owner.market.preview(cardId, {
+    principal: 100_000_000n,
+    expiredAt: Math.floor(Date.now() / 1000) + 7200,
+  });
+  return plan;
+}
+// Invoke only after the saved plan has been reviewed.
+async function openReviewed(owner: PushChain, plan: JobPlan) {
+  return owner.market.openJob(plan);
+}
+async function recoverOpening(owner: PushChain, plan: JobPlan, hash: string) {
+  const tx = await owner.universal.trackTransaction(hash);
+  return owner.market.openJob(plan, { resume: tx });
+}
+```
+
+Opening deploys or reuses an AGW and executes an owner-signed batch: each permission grant followed by kernel job creation. It transfers no principal or escrow. The SDK independently compares the batch, criteria, CEA derivations and signature domain, then simulates the signed request. External EVM owners need a deployed UEA and typed-data signing support. Contract/delegated owners need compatible signature verification.
+
+Results contain `jobId`, `wallet`, `rulesIds` and `tx`. Preserve the original plan and transaction hash if confirmation is uncertain. Recovery validates mined input, event content, wallet ownership and kernel/marketplace mappings without signing again.
+
+| Preview input | Type | Meaning |
+| --- | --- | --- |
+| `principal` | required bigint | Principal asset raw units. 100,000,000 means 100 only for a six-decimal token. |
+| `expiredAt` | required number | Unix seconds; validated against duration bounds. |
+| `params` | optional bigint array | Template parameter values. |
+| `walletIndex`, `deadline`, `label` | optional | Wallet selection, signature deadline and label. |
+
+The plan includes ordered `sessions`, resolved criteria, deposit estimates, intent and readable `mayDo`, `mayMove`, `judgedBy` and expiry entries. Display all entries and criteria logic before signing. `executeBy` is not an input. Multi-rule previews do not authorize multi-rule execution: opening rejects those plans under the current hook.

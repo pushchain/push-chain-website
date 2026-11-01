@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Tham gia Push Cult - Đưa ra Lời Thề",
+      "expanded-title": "Lời Thề",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "Email của bạn là gì? 📧",
+            "subtitle": "Chúng tôi cần thông tin này để liên hệ với bạn",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "Tên người dùng X (Twitter) của bạn là gì?",
+            "subtitle": "Chúng tôi muốn xem nội dung và mức độ tương tác của bạn",
+            "placeholder": "@tênngườidùngcủa bạn"
+          },
+          "telegram-id": {
+            "title": "ID Telegram của bạn là gì?",
+            "subtitle": "Chúng tôi sử dụng Telegram để liên lạc trực tiếp với những người theo đạo.",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "Chia sẻ nội dung hay nhất của bạn",
+            "subtitle": "Liên kết đến bài viết, video hoặc thread hay nhất của bạn để giới thiệu công việc của mình",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Chia sẻ tầm nhìn của bạn",
+            "subtitle": "Hãy cho chúng tôi biết về nội dung của bạn, đối tượng mục tiêu và lý do bạn muốn tham gia",
+            "placeholder": "Hãy cho chúng tôi biết về nội dung của bạn, đối tượng mục tiêu và lý do bạn muốn tham gia Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "Tiếp theo",
+          "previous": "Trước",
+          "submit": "Gửi Đơn Đăng Ký",
+          "submitting": "Đang gửi..."
+        },
+        "validation": {
+          "email-required": "Email là bắt buộc",
+          "email-invalid": "Vui lòng nhập địa chỉ email hợp lệ",
+          "x-username-required": "Tên người dùng X là bắt buộc",
+          "telegram-id-required": "Yêu cầu ID Telegram",
+          "best-content-required": "Yêu cầu liên kết nội dung tốt nhất",
+          "best-content-invalid": "Vui lòng nhập một URL hợp lệ",
+          "message-required": "Vui lòng nhập tin nhắn",
+          "default": "Trường này bắt buộc phải điền"
+        },
+        "success": {
+          "title": "Đã gửi đơn thành công!",
+          "message-before-link": "Tham gia",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "và theo dõi",
+          "channel-name": "#push-cult",
+          "message-end": "kênh để các bước tiếp theo.",
+          "button": "Gửi Đơn Ứng Tuyển Khác"
+        },
+        "progress": {
+          "step-counter": "{{current}} trên {{total}}"
+        }
+      }
+    }
+  }
+}

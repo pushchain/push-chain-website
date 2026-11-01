@@ -1,0 +1,46 @@
+---
+title: "Advanced PRE/POST Evaluators"
+url: "https://pushchain.github.io/docs/chain/build/marketplace-evaluator/"
+section: "build"
+lastUpdated: "2026-11-01T17:05:31+05:30"
+description: "Advanced PRE/POST Evaluators | Build | Push Chain Docs"
+---
+
+# Advanced PRE/POST Evaluators
+
+SDK checkpoint
+
+These examples target the Marketplace 2.1 SDK APIs in the 6.0.27-alpha.9 release. Confirm your installed package version before using them.
+
+## Default evaluation and custom deployments
+
+Marketplace 2.1 uses the compatible PRE/POST evaluator by default. Evaluation checks the authored criteria; a passing criterion does not by itself establish that an investment strategy succeeded.
+
+`client.job.withEvaluator({ profile: 'pre-post-v1', evaluator, hook, kernel?, startBlock? })` creates a scoped job namespace. It verifies code and matching wiring; it does not mutate the original client. A different kernel disables default marketplace mappings. Custom deployments must use the same reviewed PRE/POST format and compatible fund payload. Mutable replacement proposals remain unsupported by the SDK write flow.
+
+Job lists return snapshot state and evaluator facts without scanning submission history for each row. Use `job.status` or `job.watch` for deliverables. Unsupported criteria are reported as `evaluation.available = false`, reason `UNSUPPORTED_JOB_SPEC`, with `jobSpecDecodeError`; writes still refuse unsupported formats.
+
+Donut eUSD is the demo E2EPaymentToken with open test minting. It is not a routed USDC asset or a requirement to swap PC. Fund only the amounts needed for test escrow; production token behavior must be checked independently.
+
+## Configure a separate compatible stack
+
+```ts
+import { PushChain, type JobEvaluatorConfig, type PrePostJobSpec } from '@pushchain/core';
+import { keccak256 } from 'viem';
+
+async function fundCustom(client: PushChain, deployment: JobEvaluatorConfig,
+  jobId: bigint, rulesId: `0x${string}`, spec: PrePostJobSpec,
+  expectedBudget: bigint, maxReadFee: bigint) {
+  const jobs = client.job.withEvaluator(deployment);
+  const expectedSpecHash = keccak256(PushChain.utils.job.encodeJobSpec(spec));
+  return jobs.fund(jobId, {
+    rulesId, expectedBudget, evaluation: { expectedSpecHash, maxReadFee },
+  });
+}
+```
+
+Set `profile: 'pre-post-v1'`, verified evaluator/hook addresses, and optionally `kernel`, `startBlock`, `evaluatorCodeHash` and `hookCodeHash`. Check wiring and code before signing. `utils.job.prePost` and canonical `utils.job` use the same format. Old timing-first encodings are incompatible; do not convert signed bytes implicitly.
+
+Funding requires the reviewed criteria hash and budget. `maxReadFee` bounds the observed quote and additional PC sent, not future spending from existing prepaid balances. `prefundAmount` may add explicit headroom within the cap. Gas and later retries are separate.
+
+`submit({ deliverable, executionBlocks })` can guard against untracked or stale POST observations. `EXECUTION_BLOCK_NOT_TRACKED` and `TRACKED_HEIGHT_STALE` fail before signing. This guard does not add multi-rule funding support. `verify` selects snapshot recovery, evaluation retry or settlement; explicit actions are `retrySnapshot`, `retryEvaluation` and `settle`. Additional PC requires explicit `value` and `maxReadFee`.

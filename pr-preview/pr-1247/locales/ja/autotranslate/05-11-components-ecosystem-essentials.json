@@ -1,0 +1,29 @@
+{
+  "components": {
+    "ecosystem-essentials": {
+      "title": "テストネットの必須アプリをチェック",
+      "apps": {
+        "pc-faucet": {
+          "name": "PC Faucet",
+          "description": "ここでPC <testnet> <token>を入手できます"
+        },
+        "push-bridge": {
+          "name": "Push Bridge",
+          "description": "チェーン間でトークンをブリッジする"
+        },
+        "simulate-tx": {
+          "name": "取引をシミュレート",
+          "description": "ユニバーサル トランザクションをシミュレート"
+        },
+        "push-chain-scan": {
+          "name": "Push Chain Scan",
+          "description": "Push Chainのブロックチェーンエクスプローラー"
+        },
+        "wallet": {
+          "name": "ウォレット",
+          "description": "Push Chainのユニバーサルウォレット"
+        }
+      }
+    }
+  }
+}
