@@ -5,8 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from 'react';
-import clsx from 'clsx';
-import Translate from '@docusaurus/Translate';
 import Tag from '@theme/Tag';
 import styled from 'styled-components';
 
